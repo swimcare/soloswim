@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
 import { selectItems } from "../../slices/basketSlice";
+import { useRouter } from "next/router";
 
 function Header() {
+  const router = useRouter();
   const items = useSelector(selectItems);
 
   return (

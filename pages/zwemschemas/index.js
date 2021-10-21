@@ -3,18 +3,6 @@ import { products } from "../../products";
 import Image from "next/image";
 import ProductCards from "../../components/zwemschemas/ProductCards";
 
-const productList = products.map((product) => (
-  <li key={product.title}>
-    {product.title}
-    <Image
-      src={product.images[0]}
-      width={200}
-      height={200}
-      alt={product.title}
-    ></Image>
-  </li>
-));
-
 function index() {
   return (
     <div>
