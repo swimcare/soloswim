@@ -18,7 +18,7 @@ const productList = products.map((product) => (
 function index() {
   return (
     <div>
-      <h1 className="text-7xl mb-10">Zwemschema's</h1>
+      <h1 className="text-5xl mb-10">Zwemschema's</h1>
       <Link href="/" passHref>
         <a className="underline">Home</a>
       </Link>
