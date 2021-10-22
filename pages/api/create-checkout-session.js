@@ -13,6 +13,7 @@ export default async (req, res) => {
         name: item.title,
         images: [`${process.env.HOST}${item.images[0]}`], //deze komt nog niet helemaal goed door lijkt het
       },
+      tax_behavior: "inclusive",
     },
   }));
 
@@ -20,6 +21,9 @@ export default async (req, res) => {
     try {
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
+        shipping_address_collection: {
+          allowed_countries: ["NL"],
+        },
         success_url: `${process.env.HOST}/zwemschemas`, //add a success url
         cancel_url: `${process.env.HOST}/winkelwagen`, //add a cancel url
         payment_method_types: ["card", "ideal"],
