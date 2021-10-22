@@ -1,10 +1,38 @@
 import { selectItems, selectTotal } from "../slices/basketSlice";
 import { useSelector } from "react-redux";
 import WinkelwagenItem from "../components/winkelwagen/WinkelwagenItem";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+);
 
 function winkelwagen() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
+
+  const createCheckoutSession = async () => {
+    const stripe = await stripePromise;
+
+    console.log("calling backend to create checkout session...")
+    // Call the backend to create a checkout session...
+    const checkoutSession = await axios.post("/api/create-checkout-session", {
+      items,
+    });
+
+    console.log("redirect to stripe checkout...")
+    // Redirect user to stripe checkout
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+
+    if (result.error) {
+      alert(result.error.message);
+    }
+  };
 
   return (
     <div>
@@ -23,11 +51,13 @@ function winkelwagen() {
               />
             ))}
           </ul>
-          <div className="text-white max-w-md text-xs cursor-pointer bg-blue-700 rounded-full p-2 px-4">
-            <div>
-              <p className="hidden md:inline font-bold md:text-sm">Checkout</p>
-            </div>
-          </div>
+          <button
+            role="link"
+            onClick={createCheckoutSession}
+            className="bg-blue-500"
+          >
+            Afrekenen
+          </button>
         </div>
       ) : (
         <p>Geen producten</p>

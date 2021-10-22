@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { products } from "../../products";
-import Image from "next/image";
 import ProductCards from "../../components/zwemschemas/ProductCards";
 
 function index() {
