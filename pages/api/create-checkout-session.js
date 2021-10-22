@@ -11,7 +11,7 @@ export default async (req, res) => {
       unit_amount: item.price * 100,
       product_data: {
         name: item.title,
-        images: [`http://localhost:3000${item.images[0]}`], //deze komt nog niet helemaal goed door lijkt het
+        images: [`${process.env.HOST}${item.images[0]}`], //deze komt nog niet helemaal goed door lijkt het
       },
     },
   }));
@@ -22,16 +22,15 @@ export default async (req, res) => {
       const session = await stripe.checkout.sessions.create({
         success_url: `${process.env.HOST}/zwemschemas`, //add a success url
         cancel_url: `${process.env.HOST}/winkelwagen`, //add a cancel url
-        payment_method_types: ["card"],
+        payment_method_types: ["card", "ideal"],
+        shipping_rates: ["shr_1JJG3SJ6akcQoDMo4YnybOyU"],
         line_items: transformedItems,
         mode: "payment",
       });
-      console.log("created session");
 
       res.status(200).json({ id: session.id });
       //   res.redirect(303, session.url);
     } catch (err) {
-      console.log("error");
       res.status(err.statusCode || 500).json(err.message);
     }
   } else {
