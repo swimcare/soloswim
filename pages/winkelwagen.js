@@ -17,13 +17,13 @@ function winkelwagen() {
   const createCheckoutSession = async () => {
     const stripe = await stripePromise;
 
-    console.log("calling backend to create checkout session...")
+    console.log("calling backend to create checkout session...");
     // Call the backend to create a checkout session...
     const checkoutSession = await axios.post("/api/create-checkout-session", {
       items,
     });
 
-    console.log("redirect to stripe checkout...")
+    console.log("redirect to stripe checkout...");
     // Redirect user to stripe checkout
     const result = await stripe.redirectToCheckout({
       sessionId: checkoutSession.data.id,

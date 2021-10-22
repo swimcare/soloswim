@@ -11,16 +11,13 @@ export default async (req, res) => {
       unit_amount: item.price * 100,
       product_data: {
         name: item.title,
-        images: [item.images[0]], //deze komt nog niet helemaal goed door lijkt het
+        images: [`http://localhost:3000${item.images[0]}`], //deze komt nog niet helemaal goed door lijkt het
       },
-      tax_behavior: "inclusive",
     },
   }));
 
   if (req.method === "POST") {
     try {
-      console.log("try to create session");
-      console.log(stripe);
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
         success_url: `${process.env.HOST}/zwemschemas`, //add a success url
