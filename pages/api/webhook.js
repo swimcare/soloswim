@@ -1,5 +1,6 @@
 import { buffer } from "micro";
 
+
 // Establish connection to Stripe
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
