@@ -1,5 +1,6 @@
 import dbConnect from "../../lib/dbConnect";
 import User from "../../models/User";
+import Cup from "../../models/Cup";
 
 export default async function handler(req, res) {
   const { method } = req;
@@ -29,7 +30,7 @@ export default async function handler(req, res) {
       try {
         console.log("try to post data in database");
         console.log(req.body);
-        const user = await User.create(req.body);
+        const user = await Cup.create(req.body);
         res.status(201).json({ success: true, data: user });
       } catch (error) {
         console.log("database error: " + error);

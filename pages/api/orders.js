@@ -1,5 +1,6 @@
 import dbConnect from "../../lib/dbConnect";
 import Order from "../../models/Order";
+import CompletedOrder from "../../models/CompletedOrder";
 
 export default async function handler(req, res) {
   const { method } = req;
@@ -29,7 +30,7 @@ export default async function handler(req, res) {
       try {
         console.log("try to post data in database");
         console.log(req.body);
-        const order = await Order.create(req.body);
+        const order = await CompletedOrder.create(req.body);
         res.status(201).json({ success: true, data: order });
       } catch (error) {
         console.log("database error: " + error);
