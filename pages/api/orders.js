@@ -1,5 +1,5 @@
 import dbConnect from "../../lib/dbConnect";
-import User from "../../models/User";
+import Order from "../../models/Order";
 
 export default async function handler(req, res) {
   const { method } = req;
@@ -17,10 +17,10 @@ export default async function handler(req, res) {
     case "GET":
       try {
         console.log("try to get data from database");
-        const users = await User.find({});
-        console.log(User.db.name);
-        console.log(users);
-        res.status(200).json({ success: true, data: users });
+        const orders = await Order.find({});
+        console.log(Order.db.name);
+        console.log(orders);
+        res.status(200).json({ success: true, data: orders });
       } catch (error) {
         res.status(400).json({ success: false });
       }
@@ -29,8 +29,8 @@ export default async function handler(req, res) {
       try {
         console.log("try to post data in database");
         console.log(req.body);
-        const user = await User.create(req.body);
-        res.status(201).json({ success: true, data: user });
+        const order = await Order.create(req.body);
+        res.status(201).json({ success: true, data: order });
       } catch (error) {
         console.log("database error: " + error);
         res.status(400).json({ success: false });

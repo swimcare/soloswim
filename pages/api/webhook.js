@@ -12,17 +12,17 @@ const fulfillOrder = async (session) => {
   console.log("start fulfillment");
 
   try {
-    await axios.post(`${process.env.HOST}/api/users`, {
-      name: "Pietje",
+    await axios.post(`${process.env.HOST}/api/orders`, {
+      address: "Godfried van seijstlaan 27D1",
       email: "laurens@vr-house.nl",
     });
-    // await axios.get(`${process.env.HOST}/api/users`);
+    // await axios.get(`${process.env.HOST}/api/orders`);
   } catch (err) {
     console.log("an error occurred");
     console.log(err);
   } finally {
-    return console.log("Fulfilling order");
-    // return console.log("Fulfilling order", session);
+    // return console.log("Fulfilling order");
+    return console.log("Fulfilling order", session);
   }
 };
 
