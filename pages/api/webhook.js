@@ -1,6 +1,5 @@
 import { buffer } from "micro";
 import axios from "axios";
-import Order from "../../models/Order";
 
 // Establish connection to Stripe
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
@@ -21,6 +20,7 @@ const fulfillOrder = async (session) => {
       postal_code: session.shipping.address.postal_code,
       city: session.shipping.address.city,
       country: session.shipping.address.country,
+      products: JSON.parse(session.metadata.products)
     });
     // await axios.get(`${process.env.HOST}/api/orders`);
   } catch (err) {

@@ -30,6 +30,9 @@ export default async (req, res) => {
         shipping_rates: ["shr_1JJG3SJ6akcQoDMo4YnybOyU"],
         line_items: transformedItems,
         mode: "payment",
+        metadata: {
+          products: JSON.stringify(items.map((item) => item.title)),
+        },
       });
 
       res.status(200).json({ id: session.id });

@@ -10,6 +10,7 @@ const CompletedOrderSchema = new mongoose.Schema({
   postal_code: String,
   city: String,
   country: String,
+  products: [String],
 }, {strict: false})
 
 module.exports = mongoose.models.Completed_Order || mongoose.model('Completed_Order', CompletedOrderSchema)
