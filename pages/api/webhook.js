@@ -1,5 +1,5 @@
 import { buffer } from "micro";
-
+import axios from "axios";
 
 // Establish connection to Stripe
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
@@ -9,7 +9,21 @@ const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 console.log("established connection to stripe");
 
 const fulfillOrder = async (session) => {
-  return console.log("Fulfilling order", session);
+  console.log("start fulfillment");
+
+  try {
+    await axios.post(`${process.env.HOST}/api/users`, {
+      name: "Pietje",
+      email: "laurens@vr-house.nl",
+    });
+    // await axios.get(`${process.env.HOST}/api/users`);
+  } catch (err) {
+    console.log("an error occurred");
+    console.log(err);
+  } finally {
+    return console.log("Fulfilling order");
+    // return console.log("Fulfilling order", session);
+  }
 };
 
 export default async (req, res) => {

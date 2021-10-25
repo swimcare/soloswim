@@ -1,32 +1,46 @@
 // api/users.js
 
-import dbConnect from '../../lib/dbConnect'
-import User from '../../models/User'
+import dbConnect from "../../lib/dbConnect";
+import User from "../../models/User";
 
-export default async function handler (req, res) {
-  const { method } = req
+export default async function handler(req, res) {
+  const { method } = req;
 
-  await dbConnect()
+  console.log("connect to database");
+  try {
+    await dbConnect();
+  } catch (error) {
+    console.log("database error: " + error);
+  }
+
+  console.log("connected to database");
 
   switch (method) {
-    case 'GET':
+    case "GET":
       try {
-        const users = await User.find({})
-        res.status(200).json({ success: true, data: users })
+        console.log("try to get data from database");
+        const users = await User.find({});
+        console.log(User.db.name);
+        console.log(users);
+        res.status(200).json({ success: true, data: users });
       } catch (error) {
-        res.status(400).json({ success: false })
+        res.status(400).json({ success: false });
       }
-      break
-    case 'POST':
+      break;
+    case "POST":
       try {
-        const user = await User.create(req.body)
-        res.status(201).json({ success: true, data: user })
+        console.log("try to post data in database");
+        console.log(req.body);
+        const user = await User.create(req.body);
+        res.status(201).json({ success: true, data: user });
       } catch (error) {
-        res.status(400).json({ success: false })
+        console.log("database error: " + error);
+        res.status(400).json({ success: false });
       }
-      break
+      break;
     default:
-      res.status(400).json({ success: false })
-      break
+      console.log("database error: " + error);
+      res.status(400).json({ success: false });
+      break;
   }
 }
