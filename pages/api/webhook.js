@@ -13,8 +13,17 @@ const fulfillOrder = async (session) => {
 
   try {
     await axios.post(`${process.env.HOST}/api/orders`, {
-      address: "Godfried van seijstlaan 27D1",
-      email: "laurens@vr-house.nl",
+      shipping: {
+        address: {
+          line1: session.shipping.address.line1,
+          line2: session.shipping.address.line2,
+          postal_code: session.shipping.address.postal_code,
+          city: session.shipping.address.city,
+          country: session.shipping.address.country,
+        },
+        name: session.shipping.name,
+      },
+      email: session.customer_details.email,
     });
     // await axios.get(`${process.env.HOST}/api/orders`);
   } catch (err) {
