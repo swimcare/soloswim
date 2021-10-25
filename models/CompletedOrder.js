@@ -8,6 +8,7 @@ const CompletedOrderSchema = new mongoose.Schema({
   line1: String,
   line2: String,
   postal_code: String,
+  city: String,
   country: String,
 }, {strict: false})
 

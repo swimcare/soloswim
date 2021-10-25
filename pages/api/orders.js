@@ -1,5 +1,4 @@
 import dbConnect from "../../lib/dbConnect";
-import Order from "../../models/Order";
 import CompletedOrder from "../../models/CompletedOrder";
 
 export default async function handler(req, res) {
@@ -18,8 +17,7 @@ export default async function handler(req, res) {
     case "GET":
       try {
         console.log("try to get data from database");
-        const orders = await Order.find({});
-        console.log(Order.db.name);
+        const orders = await CompletedOrder.find({});
         console.log(orders);
         res.status(200).json({ success: true, data: orders });
       } catch (error) {

@@ -15,12 +15,12 @@ const fulfillOrder = async (session) => {
   try {
     await axios.post(`${process.env.HOST}/api/orders`, {
       name: session.shipping.name,
+      email: session.customer_details.email,
       line1: session.shipping.address.line1,
       line2: session.shipping.address.line2,
       postal_code: session.shipping.address.postal_code,
       city: session.shipping.address.city,
       country: session.shipping.address.country,
-      email: session.customer_details.email,
     });
     // await axios.get(`${process.env.HOST}/api/orders`);
   } catch (err) {
