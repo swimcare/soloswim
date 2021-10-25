@@ -31,7 +31,7 @@ export default async (req, res) => {
         line_items: transformedItems,
         mode: "payment",
         metadata: {
-          products: JSON.stringify(items.map((item) => item.title)),
+          products: JSON.stringify(items.map((item) => item.title + " " + item.level)),
         },
       });
 
