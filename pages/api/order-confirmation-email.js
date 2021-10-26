@@ -14,9 +14,14 @@ async function handler(req, res) {
   const data = {
     to: "l.c.vanroomen@gmail.com",
     from: "noreply@soloswim.nl",
-    subject: `Bedankt (name) voor je bestelling!`,
-    text: "Bedankt voor je bestelling bij Soloswim",
-    html: "<strong>We gaan voor je aan de slag!</strong>",
+    templateId: 'd-f674e623f6ea476bbb9b460e7810f913', //templates: dynamic tamplates sendgrid https://github.com/sendgrid/sendgrid-nodejs/blob/main/docs/use-cases/transactional-templates.md
+    dynamicTemplateData: {
+      subject: 'Bedankt voor je bestelling',
+      name: 'Laurenzor',
+    }
+    // subject: `Bedankt (name) voor je bestelling!`,
+    // text: "Bedankt voor je bestelling bij Soloswim",
+    // html: "<strong>We gaan voor je aan de slag!</strong>", 
   };
 
   mail
