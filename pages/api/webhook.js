@@ -8,6 +8,25 @@ const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 console.log("established connection to stripe");
 
+const sendOrderConfirmationEmail = async (session) => {
+  try {
+    console.log("posting request to sendgrid api")
+    await axios.post(`${process.env.HOST}/api/order-confirmation-email`, {
+      name: session.shipping.name,
+      email: session.customer_details.email,
+      line1: session.shipping.address.line1,
+      line2: session.shipping.address.line2,
+      postal_code: session.shipping.address.postal_code,
+      city: session.shipping.address.city,
+      country: session.shipping.address.country,
+      products: JSON.parse(session.metadata.products),
+    });
+  } catch (err) {
+    console.log("an error occurred");
+    console.log(err);
+  }
+};
+
 const fulfillOrder = async (session) => {
   console.log("start fulfillment");
 
@@ -20,7 +39,7 @@ const fulfillOrder = async (session) => {
       postal_code: session.shipping.address.postal_code,
       city: session.shipping.address.city,
       country: session.shipping.address.country,
-      products: JSON.parse(session.metadata.products)
+      products: JSON.parse(session.metadata.products),
     });
     // await axios.get(`${process.env.HOST}/api/orders`);
   } catch (err) {
@@ -55,6 +74,11 @@ export default async (req, res) => {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
 
+      sendOrderConfirmationEmail(session)
+        .then(() => console.log("order confirmation sent"))
+        .catch((err) => console.log(err));
+
+        console.log("going to fulfillOrder")
       // Fulfill the order...
       return fulfillOrder(session)
         .then(() => res.status(200))
