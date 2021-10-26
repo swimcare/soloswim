@@ -3,30 +3,41 @@ const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function handler(req, res) {
-  //   const message = `
-  //     Name: ${body.name}\r\n
-  //     Email: ${body.email}\r\n
-  //     Tel: ${body.tel}\r\n
-  //     Onderwerp: ${body.onderwerp}\r\n
-  //     Message: ${body.message}
-  //   `;
+
+  const order = {
+    name: req.body.sessionData.name,
+    email: req.body.sessionData.email,
+    line1: req.body.sessionData.line1,
+    line2: req.body.sessionData.line2,
+    postal_code: req.body.sessionData.postal_code,
+    city: req.body.sessionData.city,
+    country: req.body.sessionData.country,
+    products: req.body.sessionData.products,
+  };
 
   const data = {
     from: "noreply@soloswim.nl",
-    templateId: 'd-f674e623f6ea476bbb9b460e7810f913', //templates: dynamic tamplates sendgrid https://github.com/sendgrid/sendgrid-nodejs/blob/main/docs/use-cases/transactional-templates.md
-    personalizations: [{
-      to: {
-        name: 'Someone',
-        email: 'l.c.vanroomen@gmail.com'
+    templateId: "d-f674e623f6ea476bbb9b460e7810f913",
+    personalizations: [
+      {
+        to: {
+          name: `${order.name}`,
+          email: `${order.email}`,
+        },
+        dynamic_template_data: {
+          subject: "Bedankt voor je bestelling",
+          name: `${order.name}`,
+          line1: `${order.line1}`,
+          line2: `${order.line2}`,
+          postal_code: `${order.postal_code}`,
+          city: `${order.city}`,
+          country: `${order.country}`,
+        },
       },
-      dynamic_template_data: {
-        subject: 'Bedankt voor je bestelling',
-        name: 'Laurenzor',
-      }
-    }]
+    ],
     // subject: `Bedankt (name) voor je bestelling!`,
     // text: "Bedankt voor je bestelling bij Soloswim",
-    // html: "<strong>We gaan voor je aan de slag!</strong>", 
+    // html: "<strong>We gaan voor je aan de slag!</strong>",
   };
 
   mail
