@@ -35,10 +35,13 @@ async function handler(req, res) {
         },
       },
     ],
-    // subject: `Bedankt (name) voor je bestelling!`,
-    // text: "Bedankt voor je bestelling bij Soloswim",
-    // html: "<strong>We gaan voor je aan de slag!</strong>",
   };
+
+  // Checking to see whether line2 value is equal to null
+  if (data.personalizations[0].dynamic_template_data.line2 === "null"){
+    console.log("todo: remove null value before sending to sendgrid")
+    delete data.personalizations[0].dynamic_template_data.line2;
+  }
 
   mail
     .send(data)
