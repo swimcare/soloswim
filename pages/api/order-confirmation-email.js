@@ -16,9 +16,10 @@ async function handler(req, res) {
     templateId: 'd-f674e623f6ea476bbb9b460e7810f913', //templates: dynamic tamplates sendgrid https://github.com/sendgrid/sendgrid-nodejs/blob/main/docs/use-cases/transactional-templates.md
     personalizations: [{
       to: {
+        name: 'Someone',
         email: 'l.c.vanroomen@gmail.com'
       },
-      dynamicTemplateData: {
+      dynamic_template_data: {
         subject: 'Bedankt voor je bestelling',
         name: 'Laurenzor',
       }
