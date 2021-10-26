@@ -8,9 +8,11 @@ const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 console.log("established connection to stripe");
 
-const sendOrderConfirmationEmail = async (sessionData) => {
+const fulfillOrder = async (sessionData) => {
+  console.log("start fulfillment");
+
   try {
-    console.log("posting request to sendgrid api")
+    console.log("posting request to sendgrid api");
     await axios.post(`${process.env.HOST}/api/order-confirmation-email`, {
       sessionData,
     });
@@ -18,10 +20,8 @@ const sendOrderConfirmationEmail = async (sessionData) => {
     console.log("an error occurred");
     console.log(err);
   }
-};
 
-const fulfillOrder = async (sessionData) => {
-  console.log("start fulfillment");
+  console.log("moving on to storing order in database");
 
   try {
     await axios.post(`${process.env.HOST}/api/orders`, {
@@ -40,7 +40,7 @@ const fulfillOrder = async (sessionData) => {
     console.log(err);
   } finally {
     // return console.log("Fulfilling order");
-    return console.log("Fulfilling order", session);
+    return console.log("Fulfilling order", sessionData);
   }
 };
 
@@ -76,13 +76,8 @@ export default async (req, res) => {
         city: session.shipping.address.city,
         country: session.shipping.address.country,
         products: JSON.parse(session.metadata.products),
-      }
+      };
 
-      sendOrderConfirmationEmail(sessionData)
-        .then(() => console.log("order confirmation sent"))
-        .catch((err) => console.log(err));
-
-        console.log("going to fulfillOrder")
       // Fulfill the order...
       return fulfillOrder(sessionData)
         .then(() => res.status(200))
