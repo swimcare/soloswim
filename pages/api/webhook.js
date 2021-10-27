@@ -25,6 +25,7 @@ const fulfillOrder = async (sessionData) => {
 
   try {
     await axios.post(`${process.env.HOST}/api/orders`, {
+      order_number: sessionData.order_number,
       name: sessionData.name,
       email: sessionData.email,
       line1: sessionData.line1,
@@ -68,6 +69,7 @@ export default async (req, res) => {
       const session = event.data.object;
 
       const sessionData = {
+        order_number: null,
         name: session.shipping.name,
         email: session.customer_details.email,
         line1: session.shipping.address.line1,
@@ -77,6 +79,12 @@ export default async (req, res) => {
         country: session.shipping.address.country,
         products: JSON.parse(session.metadata.products),
       };
+
+      //generating the order number:
+      const orderid = require('order-id')('mysecret');
+      const id = orderid.generate();  
+      //adding the order number
+      sessionData.order_number = id;
 
       // Fulfill the order...
       return fulfillOrder(sessionData)

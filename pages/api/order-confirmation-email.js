@@ -24,7 +24,7 @@ async function handler(req, res) {
           email: `${order.email}`,
         },
         bcc: {
-          email: "info@soloswim.nl",
+          email: "l.c.vanroomen@gmail.com", //todo: replace for info@soloswim.nl
         },
         dynamic_template_data: {
           subject: `Bedankt voor je bestelling ${order.name}`,
@@ -41,7 +41,6 @@ async function handler(req, res) {
 
   // Checking to see whether line2 value is equal to null
   if (data.personalizations[0].dynamic_template_data.line2 === "null") {
-    console.log("todo: remove null value before sending to sendgrid");
     delete data.personalizations[0].dynamic_template_data.line2;
   }
 

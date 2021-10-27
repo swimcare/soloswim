@@ -3,6 +3,7 @@
 import mongoose from 'mongoose'
 
 const CompletedOrderSchema = new mongoose.Schema({
+  order_number: String,
   name: String,
   email: String,
   line1: String,
