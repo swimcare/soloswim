@@ -4,6 +4,7 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function handler(req, res) {
   const order = {
+    order_number: req.body.sessionData.order_number,
     name: req.body.sessionData.name,
     email: req.body.sessionData.email,
     line1: req.body.sessionData.line1,
@@ -28,6 +29,7 @@ async function handler(req, res) {
         },
         dynamic_template_data: {
           subject: `Bedankt voor je bestelling ${order.name}`,
+          order_number: `${order.order_number}`,
           name: `${order.name}`,
           line1: `${order.line1}`,
           line2: `${order.line2}`,
