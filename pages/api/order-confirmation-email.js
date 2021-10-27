@@ -3,7 +3,6 @@ const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function handler(req, res) {
-
   const order = {
     name: req.body.sessionData.name,
     email: req.body.sessionData.email,
@@ -24,8 +23,11 @@ async function handler(req, res) {
           name: `${order.name}`,
           email: `${order.email}`,
         },
+        bcc: {
+          email: "info@soloswim.nl",
+        },
         dynamic_template_data: {
-          subject: "Bedankt voor je bestelling",
+          subject: `Bedankt voor je bestelling ${order.name}`,
           name: `${order.name}`,
           line1: `${order.line1}`,
           line2: `${order.line2}`,
@@ -38,8 +40,8 @@ async function handler(req, res) {
   };
 
   // Checking to see whether line2 value is equal to null
-  if (data.personalizations[0].dynamic_template_data.line2 === "null"){
-    console.log("todo: remove null value before sending to sendgrid")
+  if (data.personalizations[0].dynamic_template_data.line2 === "null") {
+    console.log("todo: remove null value before sending to sendgrid");
     delete data.personalizations[0].dynamic_template_data.line2;
   }
 
