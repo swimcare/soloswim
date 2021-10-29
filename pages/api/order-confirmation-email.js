@@ -14,6 +14,8 @@ async function handler(req, res) {
     city: req.body.sessionData.city,
     country: req.body.sessionData.country,
     products: req.body.sessionData.products,
+    subtotal: req.body.sessionData.subtotal,
+    total: req.body.sessionData.total
   };
 
   const data = {
@@ -38,6 +40,8 @@ async function handler(req, res) {
           postal_code: `${order.postal_code}`,
           city: `${order.city}`,
           country: `${order.country}`,
+          subtotal: `${order.subtotal.toString()}`,
+          total: `${order.total.toString()}`
         },
       },
     ],
