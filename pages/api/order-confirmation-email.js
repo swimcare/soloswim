@@ -3,6 +3,9 @@ const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function handler(req, res) {
+
+  const shipping = req.body.sessionData.total - req.body.sessionData.subtotal;
+
   const order = {
     order_number: req.body.sessionData.order_number,
     order_date: req.body.sessionData.order_date,
@@ -15,7 +18,8 @@ async function handler(req, res) {
     country: req.body.sessionData.country,
     products: req.body.sessionData.products,
     subtotal: req.body.sessionData.subtotal,
-    total: req.body.sessionData.total
+    total: req.body.sessionData.total,
+    shipping: shipping
   };
 
   const data = {
@@ -40,8 +44,9 @@ async function handler(req, res) {
           postal_code: `${order.postal_code}`,
           city: `${order.city}`,
           country: `${order.country}`,
-          subtotal: `${order.subtotal.toLocaleString("nl-NL")}`,
-          total: `${order.total.toLocaleString("nl-NL")}`
+          subtotal: `${order.subtotal.toFixed(2)}`,
+          total: `${order.total.toFixed(2)}`,
+          shipping: `${order.shipping.toFixed(2)}`
         },
       },
     ],
