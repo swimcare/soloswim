@@ -70,6 +70,7 @@ export default async (req, res) => {
 
       const sessionData = {
         order_number: null,
+        order_date: null,
         name: session.shipping.name,
         email: session.customer_details.email,
         line1: session.shipping.address.line1,
@@ -85,6 +86,16 @@ export default async (req, res) => {
       const id = orderid.generate();  
       //adding the order number
       sessionData.order_number = id;
+
+      //generatring the date of today:
+      let today = new Date();
+      const dd = String(today.getDate()).padStart(2, '0');
+      const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      const yyyy = today.getFullYear();
+      
+      today = dd + '/' + mm + '/' + yyyy;
+      //adding the date
+      sessionData.order_date = today;
 
       // Fulfill the order...
       return fulfillOrder(sessionData)

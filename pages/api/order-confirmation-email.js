@@ -5,6 +5,7 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 async function handler(req, res) {
   const order = {
     order_number: req.body.sessionData.order_number,
+    order_date: req.body.sessionData.order_date,
     name: req.body.sessionData.name,
     email: req.body.sessionData.email,
     line1: req.body.sessionData.line1,
@@ -17,7 +18,7 @@ async function handler(req, res) {
 
   const data = {
     from: "noreply@soloswim.nl",
-    templateId: "d-f674e623f6ea476bbb9b460e7810f913",
+    templateId: "d-924d5ca262a4459493df9909ebe332d9",
     personalizations: [
       {
         to: {
@@ -30,6 +31,7 @@ async function handler(req, res) {
         dynamic_template_data: {
           subject: `Bedankt voor je bestelling ${order.name}`,
           order_number: `${order.order_number}`,
+          order_date: `${order.order_date}`,
           name: `${order.name}`,
           line1: `${order.line1}`,
           line2: `${order.line2}`,
