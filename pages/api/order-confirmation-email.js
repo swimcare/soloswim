@@ -40,8 +40,8 @@ async function handler(req, res) {
           postal_code: `${order.postal_code}`,
           city: `${order.city}`,
           country: `${order.country}`,
-          subtotal: `${order.subtotal.toString()}`,
-          total: `${order.total.toString()}`
+          subtotal: `${order.subtotal.toLocaleString("nl-NL")}`,
+          total: `${order.total.toLocaleString("nl-NL")}`
         },
       },
     ],

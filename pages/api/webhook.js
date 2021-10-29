@@ -73,6 +73,11 @@ export default async (req, res) => {
 
       console.log(session);
 
+      //convert total and subtotal to decimals
+      const subtotal = (session.amount_subtotal.toFixed(2))/100;
+      const total = (session.amount_total.toFixed(2))/100;
+      console.log("subtotal: " +subtotal);
+
       const sessionData = {
         order_number: null,
         order_date: null,
@@ -84,8 +89,8 @@ export default async (req, res) => {
         city: session.shipping.address.city,
         country: session.shipping.address.country,
         products: JSON.parse(session.metadata.products),
-        subtotal: session.amount_subtotal,
-        total: session.amount_total,
+        subtotal: subtotal,
+        total: total,
       };
 
       //generating the order number:
