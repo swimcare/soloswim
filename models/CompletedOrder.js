@@ -13,6 +13,8 @@ const CompletedOrderSchema = new mongoose.Schema({
   city: String,
   country: String,
   products: [String],
+  subtotal: Number,
+  total: Number,
 }, {strict: false})
 
 module.exports = mongoose.models.Completed_Order || mongoose.model('Completed_Order', CompletedOrderSchema)

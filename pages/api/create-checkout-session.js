@@ -11,11 +11,12 @@ export default async (req, res) => {
       unit_amount: item.price * 100,
       product_data: {
         name: item.title,
-        images: [`${process.env.HOST}${item.images[0]}`], //deze komt nog niet helemaal goed door lijkt het
+        images: [`${process.env.HOST}${item.images[0]}`], //deze komt nog niet helemaal goed door in stripe lijkt het, waarschijnlijk omdat het local is.
       },
       tax_behavior: "inclusive",
     },
   }));
+
 
   if (req.method === "POST") {
     try {

@@ -35,6 +35,8 @@ const fulfillOrder = async (sessionData) => {
       city: sessionData.city,
       country: sessionData.country,
       products: sessionData.products,
+      subtotal: sessionData.subtotal,
+      total: sessionData.total,
     });
     // await axios.get(`${process.env.HOST}/api/orders`);
   } catch (err) {
@@ -69,6 +71,8 @@ export default async (req, res) => {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
 
+      console.log(session);
+
       const sessionData = {
         order_number: null,
         order_date: null,
@@ -80,6 +84,8 @@ export default async (req, res) => {
         city: session.shipping.address.city,
         country: session.shipping.address.country,
         products: JSON.parse(session.metadata.products),
+        subtotal: session.amount_subtotal,
+        total: session.amount_total,
       };
 
       //generating the order number:
