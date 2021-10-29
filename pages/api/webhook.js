@@ -26,6 +26,7 @@ const fulfillOrder = async (sessionData) => {
   try {
     await axios.post(`${process.env.HOST}/api/orders`, {
       order_number: sessionData.order_number,
+      order_date: sessionData.order_date,
       name: sessionData.name,
       email: sessionData.email,
       line1: sessionData.line1,
