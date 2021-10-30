@@ -17,7 +17,6 @@ export default async (req, res) => {
     },
   }));
 
-
   if (req.method === "POST") {
     try {
       // Create Checkout Sessions from body params.
@@ -32,7 +31,13 @@ export default async (req, res) => {
         line_items: transformedItems,
         mode: "payment",
         metadata: {
-          products: JSON.stringify(items.map((item) => item.title + " " + item.level)),
+          products: JSON.stringify(
+            items.map((item) => ({
+              name: item.title,
+              price: item.price,
+              level: item.level,
+            }))
+          ),
         },
       });
 

@@ -6,7 +6,7 @@ const productSchema = new mongoose.Schema({
   level : String,
 });
 
-const CompletedOrderSchema = new mongoose.Schema({
+const OrderSchema = new mongoose.Schema({
   order_date: String,
   order_number: String,
   name: String,
@@ -21,4 +21,4 @@ const CompletedOrderSchema = new mongoose.Schema({
   total: Number,
 }, {strict: false})
 
-module.exports = mongoose.models.Completed_Order || mongoose.model('Completed_Order', CompletedOrderSchema)
+module.exports = mongoose.models.Order || mongoose.model('Order', OrderSchema)
