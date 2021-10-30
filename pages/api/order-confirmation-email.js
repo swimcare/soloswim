@@ -3,7 +3,6 @@ const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function handler(req, res) {
-
   const shipping = req.body.sessionData.total - req.body.sessionData.subtotal;
 
   const order = {
@@ -16,11 +15,13 @@ async function handler(req, res) {
     postal_code: req.body.sessionData.postal_code,
     city: req.body.sessionData.city,
     country: req.body.sessionData.country,
-    products: req.body.sessionData.products,
+    products: JSON.stringify(req.body.sessionData.products), 
     subtotal: req.body.sessionData.subtotal,
     total: req.body.sessionData.total,
-    shipping: shipping
+    shipping: shipping,
   };
+
+  console.log(order.products);
 
   const data = {
     from: "noreply@soloswim.nl",
@@ -46,7 +47,8 @@ async function handler(req, res) {
           country: `${order.country}`,
           subtotal: `${order.subtotal.toFixed(2)}`,
           total: `${order.total.toFixed(2)}`,
-          shipping: `${order.shipping.toFixed(2)}`
+          shipping: `${order.shipping.toFixed(2)}`,
+          products: `${order.products}`,
         },
       },
     ],
@@ -56,6 +58,8 @@ async function handler(req, res) {
   if (data.personalizations[0].dynamic_template_data.line2 === "null") {
     delete data.personalizations[0].dynamic_template_data.line2;
   }
+
+  console.log(data.personalizations[0].dynamic_template_data);
 
   mail
     .send(data)
