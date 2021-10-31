@@ -15,13 +15,18 @@ async function handler(req, res) {
     postal_code: req.body.sessionData.postal_code,
     city: req.body.sessionData.city,
     country: req.body.sessionData.country,
-    products: JSON.stringify(req.body.sessionData.products), 
+    products: JSON.stringify(req.body.sessionData.products),
     subtotal: req.body.sessionData.subtotal,
     total: req.body.sessionData.total,
     shipping: shipping,
   };
 
+  // const convertedProducts = [
+  //   { "name": "laurens", "price": "12.99", "level": "gevorderden" },
+  // ];
+
   console.log(order.products);
+  // console.log(convertedProducts);
 
   const data = {
     from: "noreply@soloswim.nl",
@@ -48,11 +53,13 @@ async function handler(req, res) {
           subtotal: `${order.subtotal.toFixed(2)}`,
           total: `${order.total.toFixed(2)}`,
           shipping: `${order.shipping.toFixed(2)}`,
-          products: `${order.products}`,
+          products: JSON.parse(order.products), //now it is a string, make sure it is handled as array (convert string to array)
         },
       },
     ],
   };
+
+  console.log(data.personalizations[0].dynamic_template_data.products);
 
   // Checking to see whether line2 value is equal to null
   if (data.personalizations[0].dynamic_template_data.line2 === "null") {
