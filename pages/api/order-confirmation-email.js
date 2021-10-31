@@ -21,13 +21,6 @@ async function handler(req, res) {
     shipping: shipping,
   };
 
-  // const convertedProducts = [
-  //   { "name": "laurens", "price": "12.99", "level": "gevorderden" },
-  // ];
-
-  console.log(order.products);
-  // console.log(convertedProducts);
-
   const data = {
     from: "noreply@soloswim.nl",
     templateId: "d-924d5ca262a4459493df9909ebe332d9",
@@ -53,7 +46,7 @@ async function handler(req, res) {
           subtotal: `${order.subtotal.toFixed(2)}`,
           total: `${order.total.toFixed(2)}`,
           shipping: `${order.shipping.toFixed(2)}`,
-          products: JSON.parse(order.products), //now it is a string, make sure it is handled as array (convert string to array)
+          products: JSON.parse(order.products),
         },
       },
     ],

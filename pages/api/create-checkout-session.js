@@ -27,7 +27,7 @@ export default async (req, res) => {
         success_url: `${process.env.HOST}/zwemschemas`, //add a success url
         cancel_url: `${process.env.HOST}/winkelwagen`, //add a cancel url
         payment_method_types: ["card", "ideal"],
-        shipping_rates: ["shr_1JJG3SJ6akcQoDMo4YnybOyU"],
+        shipping_rates: [process.env.SHIPPING_RATE_BRIEVENBUS],
         line_items: transformedItems,
         mode: "payment",
         metadata: {
