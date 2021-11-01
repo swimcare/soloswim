@@ -1,9 +1,11 @@
 import mongoose from 'mongoose'
 
 const productSchema = new mongoose.Schema({
+  id : Number,
   name : String,
   price : String, 
   level : String,
+  editie: Number,
 });
 
 const OrderSchema = new mongoose.Schema({

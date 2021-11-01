@@ -33,9 +33,11 @@ export default async (req, res) => {
         metadata: {
           products: JSON.stringify(
             items.map((item) => ({
+              id: item.id,
               name: item.title,
               price: item.price,
               level: item.level,
+              editie: item.editie,
             }))
           ),
         },
