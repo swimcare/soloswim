@@ -16,17 +16,17 @@ function Header() {
 
   return (
     <div className="sticky z-50">
-      <div className="grid grid-cols-10 w-full">
-        <div className="bg-soloswim-pink h-2"></div>
-        <div className="bg-soloswim-orange h-2"></div>
-        <div className="bg-soloswim-yellow h-2"></div>
-        <div className="bg-soloswim-green h-2"></div>
-        <div className="bg-soloswim-purple h-2"></div>
-        <div className="bg-soloswim-blue h-2"></div>
-        <div className="bg-soloswim-pink h-2"></div>
-        <div className="bg-soloswim-orange h-2"></div>
-        <div className="bg-soloswim-yellow h-2"></div>
-        <div className="bg-soloswim-green h-2"></div>
+      <div className="grid grid-cols-10 w-full bg-soloswim-green">
+        <div className="bg-soloswim-pink h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-orange h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-yellow h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-green h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-purple h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-blue h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-pink h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-orange h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-yellow h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-green h-2 -skew-x-12"></div>
       </div>
       <div
         className={`h-14 w-full drop-shadow-md ${
