@@ -68,7 +68,7 @@ function Header() {
             </Link>
           </div>
           {/* Mobile shopping cart icon TODO: add numbering, zie amazon */}
-          <div className="sm:hidden self-center hover:underline hover:cursor-pointer">
+          <div className="sm:hidden relative self-center hover:underline hover:cursor-pointer">
             <Link href="/winkelwagen">
               <a>
                 <ShoppingCartIcon
@@ -78,6 +78,11 @@ function Header() {
                 />
               </a>
             </Link>
+            {items.length > 0 && (
+              <span className="absolute top-0 right-0 translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
+                {items.length}
+              </span>
+            )}
           </div>
 
           {/* Navigation items Desktop */}
