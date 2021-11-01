@@ -11,6 +11,21 @@ module.exports = {
         grey: {
           light3: "#efede5",
         },
+        navy: {
+          light1: "#143f5f"
+        }
+      },
+      fontFamily: {
+        sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
+        lexend: [
+          "Lexend",
+          "ui-serif",
+          "Georgia",
+          "Cambria",
+          "Times New Roman",
+          "Times",
+          "serif",
+        ],
       },
     },
   },

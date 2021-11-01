@@ -11,7 +11,7 @@ function Header() {
       <div className="flex flex-row justify-between max-w-7xl mx-auto h-full items-center">
         <div className="">Logo</div>
         <div>
-          <ul className="flex flex-row space-x-10">
+          <ul className="flex flex-row space-x-10 font-lexend font-semibold text-navy-light1">
             <li>Zwemschema's</li>
             <li>Over Soloswim</li>
             <li>Contact</li>
