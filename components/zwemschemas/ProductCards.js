@@ -13,7 +13,7 @@ function ProductCards() {
   };
 
   const productList = products.map((product) => (
-    <li key={product.id} className="flex flex-col text-center">
+    <li key={product.id} className="flex flex-col text-center z-0">
       <Image
         src={product.images[0]}
         width={800}

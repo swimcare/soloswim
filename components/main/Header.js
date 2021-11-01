@@ -1,17 +1,21 @@
 import { useSelector } from "react-redux";
 import { selectItems } from "../../slices/basketSlice";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import { Fragment } from "react";
-import { ShoppingCartIcon, MenuIcon } from "@heroicons/react/outline";
+import { ShoppingCartIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import { useState } from "react";
 
 function Header() {
-  const router = useRouter();
   const items = useSelector(selectItems);
+  const [mobileMenuExtended, setMobileMenuExtended] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuExtended(!mobileMenuExtended);
+  };
 
   return (
-    <Fragment>
+    <div className="sticky z-50">
       <div className="grid grid-cols-10 w-full">
         <div className="bg-soloswim-pink h-2"></div>
         <div className="bg-soloswim-orange h-2"></div>
@@ -24,31 +28,54 @@ function Header() {
         <div className="bg-soloswim-yellow h-2"></div>
         <div className="bg-soloswim-green h-2"></div>
       </div>
-      <div className="bg-white h-14 w-full drop-shadow-md">
+      <div
+        className={`h-14 w-full drop-shadow-md ${
+          mobileMenuExtended ? "bg-main" : "bg-white"
+        }`}
+      >
         <div className="flex flex-row justify-between max-w-screen-2xl mx-auto h-full items-center px-3 sm:px-8">
-        <div className="sm:hidden self-center hover:underline hover:cursor-pointer">
-            <Link href="/">
-              <a>
-                <MenuIcon className="w-8 h-8 text-main" />
-              </a>
-            </Link>
+          {/* Mobile hamburger menu icon */}
+          <div
+            className="sm:hidden self-center hover:underline hover:cursor-pointer"
+            onClick={() => toggleMobileMenu()}
+          >
+            {mobileMenuExtended ? (
+              <XIcon className="w-8 h-8 text-white" />
+            ) : (
+              <MenuIcon className="w-8 h-8 text-main" />
+            )}
           </div>
+          {/* Soloswim logo */}
           <div className="w-32 sm:w-40">
             <Link href="/">
               <a>
-                <Image
-                  src="/images/logo/alt-logo-black-500x171.png"
-                  alt="Soloswim logo"
-                  width={500}
-                  height={171}
-                />
+                {!mobileMenuExtended ? (
+                  <Image
+                    src="/images/logo/alt-logo-black-500x171.png"
+                    alt="Soloswim logo black"
+                    width={500}
+                    height={171}
+                  />
+                ) : (
+                  <Image
+                    src="/images/logo/alt-logo-white-500x171.png"
+                    alt="Soloswim logo white"
+                    width={500}
+                    height={171}
+                  />
+                )}
               </a>
             </Link>
           </div>
+          {/* Mobile shopping cart icon TODO: add numbering, zie amazon */}
           <div className="sm:hidden self-center hover:underline hover:cursor-pointer">
             <Link href="/winkelwagen">
               <a>
-                <ShoppingCartIcon className="w-8 h-8 text-main" />
+                <ShoppingCartIcon
+                  className={`w-8 h-8 ${
+                    mobileMenuExtended ? "text-white" : "text-main"
+                  }`}
+                />
               </a>
             </Link>
           </div>
@@ -64,7 +91,6 @@ function Header() {
             <li className="self-center hover:underline">
               <Link href="/">Contact</Link>
             </li>
-            {/* Todo: Add href to winkelwagen, make it a link */}
             <li className="self-center hover:underline hover:cursor-pointer">
               <Link href="/winkelwagen">
                 <a>
@@ -77,8 +103,43 @@ function Header() {
             </li>
           </ul>
         </div>
+        {/* Mobile navigation menu extended */}
+        {mobileMenuExtended && (
+          <div className="sm:hidden bg-main text-white font-lexend font-bold text-xl pt-6 -translate-y-1">
+            <ul>
+              <Link href="/">
+                <a>
+                  <li className="py-3 border-b border-opacity-25">
+                    <span className="ml-3">Home</span>
+                  </li>
+                </a>
+              </Link>
+              <Link href="/zwemschemas">
+                <a>
+                  <li className="py-3 border-b border-opacity-25">
+                    <span className="ml-3">Zwemschema's</span>
+                  </li>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <li className="py-3 border-b border-opacity-25">
+                    <span className="ml-3">Over Soloswim</span>
+                  </li>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <li className="py-3 border-b border-opacity-25">
+                    <span className="ml-3">Contact</span>
+                  </li>
+                </a>
+              </Link>
+            </ul>
+          </div>
+        )}
       </div>
-    </Fragment>
+    </div>
   );
 }
 

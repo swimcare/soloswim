@@ -9,9 +9,18 @@ function index() {
         <a className="underline">Home</a>
       </Link>
       {/* {productList} */}
-      <ul className="grid grid-cols-3">
+      <ul className="grid grid-cols-3 z-0">
         <ProductCards />
       </ul>
+      <h1 className="text-3xl mb-10">Zwemschema's</h1>
+      <h1 className="text-3xl mb-10">Zwemschema's</h1>
+      <h1 className="text-3xl mb-10">Zwemschema's</h1>
+      <h1 className="text-3xl mb-10">Zwemschema's</h1>
+      <h1 className="text-3xl mb-10">Zwemschema's</h1>
+      <h1 className="text-3xl mb-10">Zwemschema's</h1>
+      <h1 className="text-3xl mb-10">Zwemschema's</h1>
+      <h1 className="text-3xl mb-10">Zwemschema's</h1>
+
     </div>
   );
 }
