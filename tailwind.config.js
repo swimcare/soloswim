@@ -12,9 +12,9 @@ module.exports = {
           light3: "#efede5",
         },
         navy: {
-          light1: "#143f5f"
+          light1: "#143f5f",
         },
-        soloswim:{
+        soloswim: {
           pink: "#FFCCDF",
           orange: "#FDC797",
           yellow: "#F7EDAE",
