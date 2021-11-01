@@ -46,7 +46,7 @@ function Header() {
             )}
           </div>
           {/* Soloswim logo */}
-          <div className="w-32 sm:w-40">
+          <div className="w-32 lg:w-40">
             <Link href="/">
               <a>
                 {!mobileMenuExtended ? (
@@ -76,17 +76,17 @@ function Header() {
                     mobileMenuExtended ? "text-white" : "text-main"
                   }`}
                 />
+                {items.length > 0 && (
+                  <span className="absolute top-0 right-0 translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
+                    {items.length}
+                  </span>
+                )}
               </a>
             </Link>
-            {items.length > 0 && (
-              <span className="absolute top-0 right-0 translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
-                {items.length}
-              </span>
-            )}
           </div>
 
           {/* Navigation items Desktop */}
-          <ul className="hidden sm:flex flex-row space-x-10 font-lexend font-semibold text-navy-light1 h-10">
+          <ul className="hidden sm:flex flex-row space-x-8 lg:space-x-10 font-lexend font-semibold text-navy-light1 h-10">
             <li className="self-center hover:underline">
               <Link href="/zwemschemas">Zwemschema's</Link>
             </li>
@@ -96,15 +96,31 @@ function Header() {
             <li className="self-center hover:underline">
               <Link href="/">Contact</Link>
             </li>
-            <li className="self-center hover:underline hover:cursor-pointer">
+            <li className="hidden md:block self-center hover:underline hover:cursor-pointer">
               <Link href="/winkelwagen">
                 <a>
                   <span className="inline-block mr-2 translate-y-1">
                     <ShoppingCartIcon className="w-5 h-5 text-main" />
                   </span>
-                  Winkelwagen ({items.length})
+                  <span>Winkelwagen ({items.length})</span>
                 </a>
               </Link>
+            </li>
+            <li className="md:hidden sm:relative self-center hover:underline hover:cursor-pointer">
+              <Link href="/winkelwagen">
+                <a>
+                  <ShoppingCartIcon
+                    className={`w-8 h-8 ${
+                      mobileMenuExtended ? "text-white" : "text-main"
+                    }`}
+                  />
+                </a>
+              </Link>
+              {items.length > 0 && (
+                <span className="absolute top-0 right-0 translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
+                  {items.length}
+                </span>
+              )}
             </li>
           </ul>
         </div>
