@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.5",
     "@reduxjs/toolkit": "^1.6.2",
     "@sendgrid/mail": "^7.5.0",
     "@stripe/stripe-js": "^1.20.3",

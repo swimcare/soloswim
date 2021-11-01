@@ -3,6 +3,8 @@ import { selectItems } from "../../slices/basketSlice";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { Fragment } from "react";
+import { ShoppingCartIcon
+} from "@heroicons/react/outline";
 
 function Header() {
   const router = useRouter();
@@ -33,12 +35,13 @@ function Header() {
             />
           </div>
           <div>
-            <ul className="flex flex-row space-x-10 font-lexend font-semibold text-navy-light1">
-              <li>Zwemschema's</li>
-              <li>Over Soloswim</li>
-              <li>Contact</li>
-              <li onClick={() => router.push("/winkelwagen")}>
-                Winkelwagen ({items.length})
+            <ul className="flex flex-row space-x-10 font-lexend font-semibold text-navy-light1 h-10">
+              <li className="self-center">Zwemschema's</li>
+              <li className="self-center">Over Soloswim</li>
+              <li className="self-center">Contact</li>
+              {/* Todo: Add href to winkelwagen, make it a link */}
+              <li className="self-center" onClick={() => router.push("/winkelwagen")}>
+                <span className="inline-block mr-2 translate-y-1"><ShoppingCartIcon className="w-5 h-5 text-main"/></span>Winkelwagen ({items.length})
               </li>
             </ul>
           </div>
