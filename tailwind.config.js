@@ -13,7 +13,15 @@ module.exports = {
         },
         navy: {
           light1: "#143f5f"
-        }
+        },
+        soloswim:{
+          pink: "#FFCCDF",
+          orange: "#FDC797",
+          yellow: "#F7EDAE",
+          green: "#D5E1BB",
+          purple: "#D3CEE6",
+          blue: "#B8D7EC",
+        },
       },
       fontFamily: {
         sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
