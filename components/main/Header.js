@@ -3,8 +3,8 @@ import { selectItems } from "../../slices/basketSlice";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { Fragment } from "react";
-import { ShoppingCartIcon
-} from "@heroicons/react/outline";
+import { ShoppingCartIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 
 function Header() {
   const router = useRouter();
@@ -36,12 +36,25 @@ function Header() {
           </div>
           <div>
             <ul className="flex flex-row space-x-10 font-lexend font-semibold text-navy-light1 h-10">
-              <li className="self-center">Zwemschema's</li>
-              <li className="self-center">Over Soloswim</li>
-              <li className="self-center">Contact</li>
+              <li className="self-center hover:underline">
+                <Link href="/zwemschemas">Zwemschema's</Link>
+              </li>
+              <li className="self-center hover:underline">
+                <Link href="/">Over Soloswim</Link>
+              </li>
+              <li className="self-center hover:underline">
+                <Link href="/">Contact</Link>
+              </li>
               {/* Todo: Add href to winkelwagen, make it a link */}
-              <li className="self-center" onClick={() => router.push("/winkelwagen")}>
-                <span className="inline-block mr-2 translate-y-1"><ShoppingCartIcon className="w-5 h-5 text-main"/></span>Winkelwagen ({items.length})
+              <li className="self-center hover:underline hover:cursor-pointer">
+                <Link href="/winkelwagen">
+                  <span>
+                    <span className="inline-block mr-2 translate-y-1">
+                      <ShoppingCartIcon className="w-5 h-5 text-main" />
+                    </span>
+                    Winkelwagen ({items.length})
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>
