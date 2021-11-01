@@ -37,6 +37,9 @@ function winkelwagen() {
       <h1 className="text-3xl">
         {items.length === 0 ? "Je Winkelwagen is leeg." : "Winkelwagen"}
       </h1>
+      <p>
+        Totaal: {total}
+      </p>
       {items.length ? (
         <div>
           <ul>
