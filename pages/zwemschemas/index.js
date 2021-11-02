@@ -1,9 +1,9 @@
 import Link from "next/link";
 import ProductCards from "../../components/zwemschemas/ProductCards";
 
-import { getSortedPostsData } from "../../lib/posts";
+import { getSortedProductsData } from "../../lib/products";
 
-function index({ allPostsData }) {
+function index({ allProductsData }) {
   return (
     <div>
       <h1 className="text-3xl mb-10">Zwemschema's</h1>
@@ -20,7 +20,7 @@ function index({ allPostsData }) {
       <section>
         <h2 className="text-xl">Blog</h2>
         <ul>
-          {allPostsData.map(({ id, date, title }) => (
+          {allProductsData.map(({ id, date, title }) => (
             <li key={id}>
               {title}
               <br />
@@ -38,10 +38,10 @@ function index({ allPostsData }) {
 export default index;
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allProductsData = getSortedProductsData();
   return {
     props: {
-      allPostsData,
+      allProductsData,
     },
   };
 }

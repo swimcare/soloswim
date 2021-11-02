@@ -1,30 +1,30 @@
 import { Fragment } from 'react'
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllProductIds, getproductData } from '../../lib/products'
 
 export async function getStaticProps({ params }) {
-  const postData = getPostData(params.id)
+  const productData = getproductData(params.id)
   return {
     props: {
-      postData
+      productData
     }
   }
 }
 
 
-export default function Zwemschema({ postData }) {
+export default function Zwemschema({ productData }) {
     return (
       <Fragment>
-        {postData.title}
+        {productData.title}
         <br />
-        {postData.id}
+        {productData.id}
         <br />
-        {postData.date}
+        {productData.date}
       </Fragment>
     )
   }
 
 export async function getStaticPaths() {
-    const paths = getAllPostIds()
+    const paths = getAllProductIds()
     return {
       paths,
       fallback: false
