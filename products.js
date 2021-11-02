@@ -1,3 +1,5 @@
+// old file, delete eventually
+
 export const products = [
   {
     "id": 1,
