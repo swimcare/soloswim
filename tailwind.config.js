@@ -38,6 +38,14 @@ module.exports = {
           "serif",
         ],
       },
+      lineHeight: {
+        "extra-loose": "2.5",
+        11: "3rem", //48px
+        12: "3.5rem", //56px
+        13: "4rem", //64px
+        14: "4.5rem", //72px
+        15: "5rem", //80px
+      },
     },
   },
   variants: {

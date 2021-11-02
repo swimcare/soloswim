@@ -4,7 +4,11 @@ import { getAllProductIds, getproductData } from "../../lib/products";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../../slices/basketSlice";
 import Image from "next/image";
-import { ClockIcon } from "@heroicons/react/outline";
+import {
+  CalendarIcon,
+  ClockIcon,
+  CreditCardIcon,
+} from "@heroicons/react/outline";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -39,8 +43,8 @@ export default function Zwemschema({ productData }) {
       <main>
         {/* First section, with image, description and button */}
         <section className="bg-white">
-          <div className="px-3 sm:px-8 max-w-screen-2xl mx-auto md:my-20">
-            <div className="flex flex-col md:flex-row">
+          <div className="px-3 sm:px-8 max-w-screen-xl mx-auto lg:my-20">
+            <div className="flex flex-col lg:flex-row">
               <div className="p-10 text-center w-full">
                 <Image
                   src={productData.images[0]}
@@ -49,31 +53,31 @@ export default function Zwemschema({ productData }) {
                   alt={productData.title}
                 ></Image>
               </div>
-              <div className="md:max-w-xl">
+              <div className="lg:max-w-xl">
                 <div className="mb-8">
-                  <h1 className="font-lexend font-bold md:font-extrabold text-navy-light1 text-3xl md:text-6xl my-2">
+                  <h1 className="font-lexend font-bold lg:font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
                     {productData.title}
                   </h1>
-                  <p className="font-bold text-navy-light1 text-lg my-2">
+                  <p className="font-bold text-navy-light1 text-lg lg:text-2xl my-2 lg:my-5">
                     € {productData.price}
                   </p>
-                  <p className="text-navy-light1 leading-7 my-2">
+                  <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-sm">
                     {productData.description}{" "}
                     <a
-                      className="uppercase font-bold hover:underline"
+                      className="uppercase font-bold hover:underline text-sm"
                       href="#watkrijgje"
                     >
                       Meer lezen
                     </a>
                   </p>
                 </div>
-                <div className="my-8">
+                <div className="my-8 lg:my-10">
                   <div className="flex flex-row justify-between items-center my-2">
-                    <p className="font-bold text-navy-light1 uppercase mr-8">
+                    <p className="font-bold text-navy-light1 uppercase mr-8 text-sm">
                       Niveau
                     </p>
                     <select
-                      className="border-gray-300 border-2 rounded-full p-2 px-4 w-full"
+                      className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-sm"
                       name="level"
                       id="level"
                       value={selectedOption}
@@ -85,7 +89,7 @@ export default function Zwemschema({ productData }) {
                     </select>
                   </div>
                   <a
-                    className="underline text-navy-light1 text-sm"
+                    className="underline text-navy-light1 text-xs"
                     href="#niveau"
                   >
                     Hoe weet ik mijn niveau?
@@ -96,15 +100,23 @@ export default function Zwemschema({ productData }) {
                     onClick={() => {
                       addItemToBasket(productData);
                     }}
-                    className="text-white font-bold uppercase w-full px-3 py-6 rounded-full bg-main tracking-wider shadow-2xl hover:bg-white hover:text-main border-4 border-main"
+                    className="text-white lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-2xl hover:bg-white hover:text-main border-4 border-main"
                   >
                     Toevoegen aan winkelwagen
                   </button>
-                  <div className="flex flex-row items-center justify-center space-x-2 my-2">
-                    <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
-                    <p className="text-navy-light1 text-xs">
-                      1 - 2 werkdagen levertijd
-                    </p>
+                  <div className="flex flex-row items-center justify-center space-x-2 my-4 lg:my-8">
+                      <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
+                      <p className="text-navy-light1 text-xs pr-5">
+                        1 - 2 werkdagen levertijd
+                      </p>
+                      <CreditCardIcon className="hidden sm:block h-8 w-8 text-slateblue-dark1" />
+                      <p className="hidden sm:block text-navy-light1 text-xs pr-5">
+                        Veilig online betalen
+                      </p>
+                      <CalendarIcon className="hidden sm:block h-8 w-8 text-slateblue-dark1" />
+                      <p className="hidden sm:block text-navy-light1 text-xs">
+                        14 dagen bedenktijd
+                      </p>
                   </div>
                 </div>
               </div>

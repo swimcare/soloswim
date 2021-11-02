@@ -42,7 +42,7 @@ function Header() {
           mobileMenuExtended ? "bg-main" : "bg-white"
         }`}
       >
-        <div className="flex flex-row justify-between max-w-screen-2xl mx-auto h-full items-center px-3 sm:px-8">
+        <div className="flex flex-row justify-between max-w-screen-xl mx-auto h-full items-center px-3 sm:px-8">
           {/* Mobile hamburger menu icon */}
           <div
             className="sm:hidden self-center hover:underline hover:cursor-pointer"
