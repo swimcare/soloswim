@@ -27,29 +27,36 @@ export default function Zwemschema({ productData }) {
       <Head>
         <title>{productData.title}</title>
       </Head>
-      {productData.title}
-      <br />
-      {productData.level}
-      <br />
 
-      <div className="">
-        <Image
-          src={productData.images[0]}
-          width={200}
-          height={200}
-          alt={productData.title}
-        ></Image>
-        <button
-          onClick={() => {
-            addItemToBasket(productData);
-          }}
-          className="text-white mx-auto p-3 rounded-full bg-blue-500"
-        >
-          Add to cart
-        </button>
-      </div>
+      {/* First section, with image, description and button */}
+      <section className="bg-white">
+        <div className="flex flex-col text-center">
+          <div>
+            <Image
+              src={productData.images[0]}
+              width={200}
+              height={200}
+              alt={productData.title}
+            ></Image>
+          </div>
+        </div>
 
-      <br />
+        {productData.title}
+        {productData.level}
+
+        <div>
+          <button
+            onClick={() => {
+              addItemToBasket(productData);
+            }}
+            className="text-white mx-auto p-3 rounded-full bg-blue-500"
+          >
+            Add to cart
+          </button>
+        </div>
+      </section>
+      {/* End of First section, with image, description and button */}
+
       <div dangerouslySetInnerHTML={{ __html: productData.contentHtml }} />
     </Fragment>
   );
