@@ -40,7 +40,7 @@ export default function Zwemschema({ productData }) {
         {/* First section, with image, description and button */}
         <section className="bg-white">
           <div className="px-3 sm:px-8 max-w-screen-2xl mx-auto md:my-20">
-            <div className="flex flex-col md:flex-row md:justify-between">
+            <div className="flex flex-col md:flex-row">
               <div className="p-10 text-center w-full">
                 <Image
                   src={productData.images[0]}
@@ -51,7 +51,7 @@ export default function Zwemschema({ productData }) {
               </div>
               <div className="md:max-w-xl">
                 <div className="mb-8">
-                  <h1 className="font-lexend font-bold text-navy-light1 text-3xl my-2">
+                  <h1 className="font-lexend font-bold md:font-extrabold text-navy-light1 text-3xl md:text-6xl my-2">
                     {productData.title}
                   </h1>
                   <p className="font-bold text-navy-light1 text-lg my-2">

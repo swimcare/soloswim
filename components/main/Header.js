@@ -35,7 +35,7 @@ function Header() {
         <div className="bg-soloswim-pink h-2 -skew-x-12"></div>
         <div className="bg-soloswim-orange h-2 -skew-x-12"></div>
         <div className="bg-soloswim-yellow h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-green h-2 -skew-x-12"></div>
+        <div className="bg-soloswim-green h-2"></div>
       </div>
       <div
         className={`h-14 w-full drop-shadow-md ${
