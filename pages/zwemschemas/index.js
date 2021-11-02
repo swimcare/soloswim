@@ -18,15 +18,13 @@ function index({ allProductsData }) {
 
       {/* Add this <section> tag below the existing <section> tag */}
       <section>
-        <h2 className="text-xl">Blog</h2>
+        <h2 className="text-xl">Schema's</h2>
         <ul>
           {allProductsData.map(({ id, date, title }) => (
             <li key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
+              <Link href={`/zwemschemas/${id}`}>
+                <a>{title}</a>
+              </Link>
             </li>
           ))}
         </ul>
