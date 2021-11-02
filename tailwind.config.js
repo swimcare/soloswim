@@ -10,6 +10,7 @@ module.exports = {
         main: "#2628cd",
         grey: {
           light3: "#efede5",
+          light4: "#f5f4ef",
         },
         navy: {
           light1: "#143f5f",

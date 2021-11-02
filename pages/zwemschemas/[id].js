@@ -9,6 +9,7 @@ import {
   ClockIcon,
   CreditCardIcon,
 } from "@heroicons/react/outline";
+import Wave from "../../components/svg/wave";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -41,9 +42,9 @@ export default function Zwemschema({ productData }) {
       </Head>
 
       <main>
-        {/* First section, with image, description and button */}
+        {/* SECTION 1 */}
         <section className="bg-white">
-          <div className="px-3 sm:px-8 max-w-screen-xl mx-auto lg:my-20">
+          <div className="px-3 sm:px-8 max-w-screen-xl mx-auto my-5 lg:my-20">
             <div className="flex flex-col lg:flex-row">
               <div className="p-10 text-center w-full">
                 <Image
@@ -105,25 +106,35 @@ export default function Zwemschema({ productData }) {
                     Toevoegen aan winkelwagen
                   </button>
                   <div className="flex flex-row items-center justify-center space-x-2 my-4 lg:my-8">
-                      <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
-                      <p className="text-navy-light1 text-xs pr-5">
-                        1 - 2 werkdagen levertijd
-                      </p>
-                      <CreditCardIcon className="hidden sm:block h-8 w-8 text-slateblue-dark1" />
-                      <p className="hidden sm:block text-navy-light1 text-xs pr-5">
-                        Veilig online betalen
-                      </p>
-                      <CalendarIcon className="hidden sm:block h-8 w-8 text-slateblue-dark1" />
-                      <p className="hidden sm:block text-navy-light1 text-xs">
-                        14 dagen bedenktijd
-                      </p>
+                    <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
+                    <p className="text-navy-light1 text-xs pr-5">
+                      1 - 2 werkdagen levertijd
+                    </p>
+                    <CreditCardIcon className="hidden sm:block h-8 w-8 text-slateblue-dark1" />
+                    <p className="hidden sm:block text-navy-light1 text-xs pr-5">
+                      Veilig online betalen
+                    </p>
+                    <CalendarIcon className="hidden sm:block h-8 w-8 text-slateblue-dark1" />
+                    <p className="hidden sm:block text-navy-light1 text-xs">
+                      14 dagen bedenktijd
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        {/* End of First section, with image, description and button */}
+
+        {/* SECTION 2 */}
+        <Wave fill="#f5f4ef" />
+        <section className="bg-grey-light4">
+          <h1 className="text-xl py-28">Wat krijg je</h1>
+        </section>
+        <div className="bg-grey-light4">
+          <Wave fill="#ffffff" />
+        </div>
+        <h1 className="text-xl py-28">Welk niveau past bij jou?</h1>
+
 
         {/* <div dangerouslySetInnerHTML={{ __html: productData.contentHtml }} /> */}
       </main>
