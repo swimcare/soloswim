@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux";
 import { selectItems } from "../../slices/basketSlice";
 import Image from "next/image";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { ShoppingCartIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/dist/client/router";
 
 function Header() {
   const items = useSelector(selectItems);
@@ -13,6 +14,14 @@ function Header() {
   const toggleMobileMenu = () => {
     setMobileMenuExtended(!mobileMenuExtended);
   };
+
+  // Close mobile menu on change of route
+  const router = useRouter();
+  useEffect(() => {
+    setMobileMenuExtended(false);
+    return () => {
+    }
+  }, [router]);
 
   return (
     <div className="sticky z-50">
