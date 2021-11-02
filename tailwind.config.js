@@ -14,6 +14,9 @@ module.exports = {
         navy: {
           light1: "#143f5f",
         },
+        slateblue: {
+          dark1: "#203e5c",
+        },
         soloswim: {
           pink: "#FFCCDF",
           orange: "#FDC797",

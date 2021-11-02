@@ -4,6 +4,7 @@ import { getAllProductIds, getproductData } from "../../lib/products";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../../slices/basketSlice";
 import Image from "next/image";
+import { ClockIcon } from "@heroicons/react/outline";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -22,7 +23,7 @@ export default function Zwemschema({ productData }) {
     dispatch(addToBasket(product));
   };
 
-    //   Bepalen van het niveau (alleen als level property wordt meegegeven aan de productData!)
+  //   Bepalen van het niveau (alleen als level property wordt meegegeven aan de productData!)
   const [selectedOption, setSelectedOption] = useState("Beginner");
   const setLevel = (level) => {
     setSelectedOption(level);
@@ -38,67 +39,75 @@ export default function Zwemschema({ productData }) {
       <main>
         {/* First section, with image, description and button */}
         <section className="bg-white">
-          <div className="px-3 sm:px-8">
-            <div className="flex flex-col">
-              <div className="p-10 text-center">
+          <div className="px-3 sm:px-8 max-w-screen-2xl mx-auto md:my-20">
+            <div className="flex flex-col md:flex-row md:justify-between">
+              <div className="p-10 text-center w-full">
                 <Image
                   src={productData.images[0]}
-                  width={200}
-                  height={200}
+                  width={400}
+                  height={400}
                   alt={productData.title}
                 ></Image>
               </div>
-              <div>
-                <h1 className="font-lexend font-bold text-navy-light1 text-3xl">
-                  {productData.title}
-                </h1>
-                <p className="font-bold text-navy-light1 text-lg">
-                  € {productData.price}
-                </p>
-                <p className="text-navy-light1 leading-7">
-                  {productData.description}{" "}
-                  <a className="uppercase font-bold" href="#watkrijgje">
-                    Meer lezen
-                  </a>
-                </p>
-              </div>
-              <div>
-                <div className="flex flex-row justify-between items-center">
-                  <p className="font-bold text-navy-light1 uppercase mr-8">
-                    Niveau
+              <div className="md:max-w-xl">
+                <div className="mb-8">
+                  <h1 className="font-lexend font-bold text-navy-light1 text-3xl my-2">
+                    {productData.title}
+                  </h1>
+                  <p className="font-bold text-navy-light1 text-lg my-2">
+                    € {productData.price}
                   </p>
-                  <select
-                    className="border-gray-300 border-2 rounded-full p-2 px-4 w-full"
-                    name="level"
-                    id="level"
-                    value={selectedOption}
-                    onChange={(e) => setLevel(e.target.value)}
-                  >
-                    <option value="Beginners">Beginners</option>
-                    <option value="Semi-gevorderden">Semi-gevorderden</option>
-                    <option value="Gevorderden">Gevorderden</option>
-                  </select>
+                  <p className="text-navy-light1 leading-7 my-2">
+                    {productData.description}{" "}
+                    <a
+                      className="uppercase font-bold hover:underline"
+                      href="#watkrijgje"
+                    >
+                      Meer lezen
+                    </a>
+                  </p>
                 </div>
-                <a
-                  className="underline text-navy-light1 text-sm"
-                  href="#niveau"
-                >
-                  Hoe weet ik mijn niveau?
-                </a>
+                <div className="my-8">
+                  <div className="flex flex-row justify-between items-center my-2">
+                    <p className="font-bold text-navy-light1 uppercase mr-8">
+                      Niveau
+                    </p>
+                    <select
+                      className="border-gray-300 border-2 rounded-full p-2 px-4 w-full"
+                      name="level"
+                      id="level"
+                      value={selectedOption}
+                      onChange={(e) => setLevel(e.target.value)}
+                    >
+                      <option value="Beginners">Beginners</option>
+                      <option value="Semi-gevorderden">Semi-gevorderden</option>
+                      <option value="Gevorderden">Gevorderden</option>
+                    </select>
+                  </div>
+                  <a
+                    className="underline text-navy-light1 text-sm"
+                    href="#niveau"
+                  >
+                    Hoe weet ik mijn niveau?
+                  </a>
+                </div>
+                <div className="flex flex-col text-center my-6">
+                  <button
+                    onClick={() => {
+                      addItemToBasket(productData);
+                    }}
+                    className="text-white font-bold uppercase w-full px-3 py-6 rounded-full bg-main tracking-wider shadow-2xl hover:bg-white hover:text-main border-4 border-main"
+                  >
+                    Toevoegen aan winkelwagen
+                  </button>
+                  <div className="flex flex-row items-center justify-center space-x-2 my-2">
+                    <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
+                    <p className="text-navy-light1 text-xs">
+                      1 - 2 werkdagen levertijd
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            {productData.level}
-
-            <div>
-              <button
-                onClick={() => {
-                  addItemToBasket(productData);
-                }}
-                className="text-white mx-auto p-3 rounded-full bg-blue-500"
-              >
-                Add to cart
-              </button>
             </div>
           </div>
         </section>
