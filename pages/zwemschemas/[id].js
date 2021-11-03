@@ -35,6 +35,9 @@ export default function Zwemschema({ productData }) {
     productData.level = level;
   };
 
+  // Bepalen van actieve tabjes (voor desktop enkel)
+  const [activeTab, setActiveTab] = useState(1);
+
   return (
     <Fragment>
       <Head>
@@ -44,7 +47,7 @@ export default function Zwemschema({ productData }) {
       <main>
         {/* SECTION 1 */}
         <section className="bg-white">
-          <div className="px-3 sm:px-8 max-w-screen-xl mx-auto my-5 lg:my-20">
+          <div className="px-3 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
             <div className="flex flex-col lg:flex-row">
               <div className="p-10 text-center w-full">
                 <Image
@@ -128,13 +131,64 @@ export default function Zwemschema({ productData }) {
         {/* SECTION 2 */}
         <Wave fill="#f5f4ef" />
         <section className="bg-grey-light4">
-          <h1 className="text-xl py-28">Wat krijg je</h1>
+          <div className="px-3 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+            <div className="w-full border-b border-grey-warm border-opacity-25">
+              <ul className="flex flex-row space-x-10 translate-y-0.5">
+                <li
+                  onClick={() => setActiveTab(1)}
+                  className={`${
+                    activeTab === 1
+                      ? "border-main text-main "
+                      : "border-none text-navy-light1"
+                  } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
+                >
+                  Wat krijg je
+                </li>
+                <li
+                  onClick={() => setActiveTab(2)}
+                  className={`${
+                    activeTab === 2
+                      ? "border-main text-main "
+                      : "border-none text-navy-light1"
+                  } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
+                >
+                  Bekijk inhoudsopgave
+                </li>
+                <li
+                  onClick={() => setActiveTab(3)}
+                  className={`${
+                    activeTab === 3
+                      ? "border-main text-main "
+                      : "border-none text-navy-light1"
+                  } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
+                >
+                  Wat heb je nodig
+                </li>
+                <li
+                  onClick={() => setActiveTab(4)}
+                  className={`${
+                    activeTab === 4
+                      ? "border-main text-main "
+                      : "border-none text-navy-light1"
+                  } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
+                >
+                  Reviews
+                </li>
+              </ul>
+            </div>
+            <div className="my-10">
+              {activeTab === 1 && <p>Tabje 1</p>}
+              {activeTab === 2 && <p>Tabje 2</p>}
+              {activeTab === 3 && <p>Tabje 3</p>}
+              {activeTab === 4 && <p>Tabje 4</p>}
+            </div>
+          </div>
         </section>
         <div className="bg-grey-light4">
           <Wave fill="#ffffff" />
         </div>
-        <h1 className="text-xl py-28">Welk niveau past bij jou?</h1>
 
+        <h1 className="text-xl py-28">Welk niveau past bij jou?</h1>
 
         {/* <div dangerouslySetInnerHTML={{ __html: productData.contentHtml }} /> */}
       </main>

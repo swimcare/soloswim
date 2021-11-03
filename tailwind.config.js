@@ -11,6 +11,7 @@ module.exports = {
         grey: {
           light3: "#efede5",
           light4: "#f5f4ef",
+          warm: "#707070"
         },
         navy: {
           light1: "#143f5f",
@@ -47,6 +48,12 @@ module.exports = {
         14: "4.5rem", //72px
         15: "5rem", //80px
       },
+      borderWidth: {
+       3: '3px',
+      },
+      translate: {
+        '0.5': '0.125rem', //2px
+       },
     },
   },
   variants: {
