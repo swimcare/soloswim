@@ -49,6 +49,7 @@ function winkelwagen() {
                 title={item.title}
                 images={item.images}
                 price={item.price}
+                level={item.level}
               />
             ))}
           </ul>
