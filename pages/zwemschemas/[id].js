@@ -53,7 +53,7 @@ export default function Zwemschema({ productData }) {
       <main>
         {/* SECTION 1 */}
         <section className="bg-white">
-          <div className="px-3 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
             <div className="flex flex-col lg:flex-row">
               <div className="p-10 text-center w-full">
                 <Image
@@ -137,7 +137,7 @@ export default function Zwemschema({ productData }) {
         {/* SECTION 2 */}
         <Wave fill="#f5f4ef" />
         <section className="bg-grey-light4">
-          <div className="px-3 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
             {/* Desktop tab systeem */}
             <div className="hidden md:block w-full border-b border-grey-warm border-opacity-25">
               <ul className="flex flex-row space-x-10 translate-y-0.5">
@@ -149,7 +149,7 @@ export default function Zwemschema({ productData }) {
                       : "border-none text-navy-light1"
                   } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
                 >
-                  Wat krijg je
+                  Wat krijg ik?
                 </li>
                 <li
                   onClick={() => setActiveTab(2)}
@@ -186,7 +186,7 @@ export default function Zwemschema({ productData }) {
             <div className="my-14">
               {/* Tab 1: Wat krijg je */}
               {(activeTab === 1 || width <= 768) && (
-                <div className="flex flex-row space-x-14">
+                <div className="flex flex-col md:flex-row md:space-x-14">
                   <div className="max-w-xl">
                     <Image
                       src={productData.images[0]}
@@ -196,20 +196,25 @@ export default function Zwemschema({ productData }) {
                     ></Image>
                   </div>
                   <div className="max-w-xl">
-                    <h2 className="text-main text-2xl font-lexend font-extrabold">
+                    <h2 className="hidden md:block text-main text-2xl font-lexend font-extrabold">
                       Borstcrawl kracht zwemtraining
                     </h2>
-                    <h2 className="text-navy-light1 text-2xl font-lexend font-extrabold my-2">
+                    <div className="md:hidden border-b-3 border-grey-warm border-opacity-25">
+                      <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
+                        Wat krijg ik?
+                      </h2>
+                    </div>
+                    <h2 className="hidden md:block text-navy-light1 text-2xl font-lexend font-extrabold my-2">
                       Word sterker, word sneller
                     </h2>
                     <div
-                      className="text-navy-light1 text-sm leading-6 my-5"
+                      className="text-navy-light1 text-sm leading-6 my-3 md:my-5"
                       dangerouslySetInnerHTML={{
                         __html: productData.contentHtml,
                       }}
                     />
                     <div>
-                      <ul className="list-disc ml-4 text-sm text-navy-light1 leading-8">
+                      <ul className="list-disc text-sm text-navy-light1 leading-8 list-inside">
                         <li>10 kracht zwemschema’s van 60 min</li>
                         <li>Inhoudsopgave en begrippenlijst inbegrepen</li>
                         <li>Volledig waterproof en van sterke kwaliteit</li>
@@ -226,7 +231,7 @@ export default function Zwemschema({ productData }) {
                 </div>
               )}
               {/* Tab 2: inhoudsopgave */}
-              {(activeTab === 2 || width <= 768) && <p>Tabje 2</p>}
+              {(activeTab === 2 || width <= 768) && <p>Tab 2: Bekijk inhoudsopgave</p>}
 
               {activeTab === 3 && <p>Tabje 3</p>}
               {activeTab === 4 && <p>Tabje 4</p>}
@@ -237,7 +242,7 @@ export default function Zwemschema({ productData }) {
           <Wave fill="#ffffff" />
         </div>
 
-        <h1 className="text-xl py-28">Welk niveau past bij jou?</h1>
+        <h1 className="text-xl py-28">Welk niveau past bij mij?</h1>
 
         {/* <div dangerouslySetInnerHTML={{ __html: productData.contentHtml }} /> */}
       </main>
