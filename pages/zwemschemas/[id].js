@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { getAllProductIds, getproductData } from "../../lib/products";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../../slices/basketSlice";
@@ -10,6 +10,7 @@ import {
   CreditCardIcon,
 } from "@heroicons/react/outline";
 import Wave from "../../components/svg/wave";
+import useWindowDimensions from "../../components/hooks/useWindowDimensions";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -37,6 +38,11 @@ export default function Zwemschema({ productData }) {
 
   // Bepalen van actieve tabjes (voor desktop enkel)
   const [activeTab, setActiveTab] = useState(1);
+
+  //bepalen window dimensies
+  const { height, width } = useWindowDimensions();
+  /* you can also use default values or alias to use only one prop: */
+  // const { height: windowHeight = 480 } useWindowDimensions();
 
   return (
     <Fragment>
@@ -133,7 +139,7 @@ export default function Zwemschema({ productData }) {
         <section className="bg-grey-light4">
           <div className="px-3 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
             {/* Desktop tab systeem */}
-            <div className="hidden lg:block w-full border-b border-grey-warm border-opacity-25">
+            <div className="hidden md:block w-full border-b border-grey-warm border-opacity-25">
               <ul className="flex flex-row space-x-10 translate-y-0.5">
                 <li
                   onClick={() => setActiveTab(1)}
@@ -179,7 +185,7 @@ export default function Zwemschema({ productData }) {
             </div>
             <div className="my-14">
               {/* Tab 1: Wat krijg je */}
-              {activeTab === 1 && (
+              {(activeTab === 1 || width <= 768) && (
                 <div className="flex flex-row space-x-14">
                   <div className="max-w-xl">
                     <Image
@@ -200,7 +206,6 @@ export default function Zwemschema({ productData }) {
                       className="text-navy-light1 text-sm leading-6 my-5"
                       dangerouslySetInnerHTML={{
                         __html: productData.contentHtml,
-
                       }}
                     />
                     <div>
@@ -210,7 +215,10 @@ export default function Zwemschema({ productData }) {
                         <li>Volledig waterproof en van sterke kwaliteit</li>
                         <li>Duidelijk omschreven oefeningen</li>
                         <li>Hersluitbare roestvrijstalen ring</li>
-                        <li>Verkrijgbaar voor beginners, semi-gevorderden of gevorderden</li>
+                        <li>
+                          Verkrijgbaar voor beginners, semi-gevorderden of
+                          gevorderden
+                        </li>
                         <li>Geschikt voor zowel een 25 als 50 meter bad</li>
                       </ul>
                     </div>
@@ -218,10 +226,8 @@ export default function Zwemschema({ productData }) {
                 </div>
               )}
               {/* Tab 2: inhoudsopgave */}
-              {activeTab === 2 && <p>Tabje 2</p>}
+              {(activeTab === 2 || width <= 768) && <p>Tabje 2</p>}
 
-
-              
               {activeTab === 3 && <p>Tabje 3</p>}
               {activeTab === 4 && <p>Tabje 4</p>}
             </div>
