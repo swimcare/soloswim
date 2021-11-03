@@ -132,6 +132,7 @@ export default function Zwemschema({ productData }) {
         <Wave fill="#f5f4ef" />
         <section className="bg-grey-light4">
           <div className="px-3 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+            {/* Desktop tab systeem */}
             <div className="w-full border-b border-grey-warm border-opacity-25">
               <ul className="flex flex-row space-x-10 translate-y-0.5">
                 <li
@@ -176,8 +177,46 @@ export default function Zwemschema({ productData }) {
                 </li>
               </ul>
             </div>
-            <div className="my-10">
-              {activeTab === 1 && <p>Tabje 1</p>}
+            <div className="my-14">
+              {activeTab === 1 && (
+                <div className="flex flex-row space-x-14">
+                  <div className="max-w-xl">
+                    <Image
+                      src={productData.images[0]}
+                      width={800}
+                      height={800}
+                      alt={productData.title}
+                    ></Image>
+                  </div>
+                  <div className="max-w-xl">
+                    <h2 className="text-main text-2xl font-lexend font-extrabold">
+                      Borstcrawl kracht zwemtraining
+                    </h2>
+                    <h2 className="text-navy-light1 text-2xl font-lexend font-extrabold my-2">
+                      Word sterker, word sneller
+                    </h2>
+                    <div
+                      className="text-navy-light1 text-sm leading-6 my-5"
+                      dangerouslySetInnerHTML={{
+                        __html: productData.contentHtml,
+
+                      }}
+                    />
+                    <div>
+                      <ul className="list-disc ml-4 text-sm text-navy-light1 leading-8">
+                        <li>10 kracht zwemschema’s van 60 min</li>
+                        <li>Inhoudsopgave en begrippenlijst inbegrepen</li>
+                        <li>Volledig waterproof en van sterke kwaliteit</li>
+                        <li>Duidelijk omschreven oefeningen</li>
+                        <li>Hersluitbare roestvrijstalen ring</li>
+                        <li>Verkrijgbaar voor beginners, semi-gevorderden of gevorderden</li>
+                        <li>Geschikt voor zowel een 25 als 50 meter bad</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {activeTab === 2 && <p>Tabje 2</p>}
               {activeTab === 3 && <p>Tabje 3</p>}
               {activeTab === 4 && <p>Tabje 4</p>}
