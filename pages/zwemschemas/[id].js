@@ -133,7 +133,7 @@ export default function Zwemschema({ productData }) {
         <section className="bg-grey-light4">
           <div className="px-3 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
             {/* Desktop tab systeem */}
-            <div className="w-full border-b border-grey-warm border-opacity-25">
+            <div className="hidden lg:block w-full border-b border-grey-warm border-opacity-25">
               <ul className="flex flex-row space-x-10 translate-y-0.5">
                 <li
                   onClick={() => setActiveTab(1)}
@@ -178,6 +178,7 @@ export default function Zwemschema({ productData }) {
               </ul>
             </div>
             <div className="my-14">
+              {/* Tab 1: Wat krijg je */}
               {activeTab === 1 && (
                 <div className="flex flex-row space-x-14">
                   <div className="max-w-xl">
@@ -216,8 +217,11 @@ export default function Zwemschema({ productData }) {
                   </div>
                 </div>
               )}
-
+              {/* Tab 2: inhoudsopgave */}
               {activeTab === 2 && <p>Tabje 2</p>}
+
+
+              
               {activeTab === 3 && <p>Tabje 3</p>}
               {activeTab === 4 && <p>Tabje 4</p>}
             </div>
