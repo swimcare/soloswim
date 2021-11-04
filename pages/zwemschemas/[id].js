@@ -105,30 +105,6 @@ export default function Zwemschema({ productData }) {
     );
   }
 
-  const AngleUpIcon = () => (
-    <svg
-      fill="white"
-      strokeWidth="0"
-      viewBox="0 0 320 512"
-      xmlns="http://www.w3.org/2000/svg"
-      className="mt-1 h-4"
-    >
-      <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" />
-    </svg>
-  );
-
-  const AngleDownIcon = () => (
-    <svg
-      stroke="currentColor"
-      fill="white"
-      strokeWidth="0"
-      viewBox="0 0 320 512"
-      xmlns="http://www.w3.org/2000/svg"
-      className="mt-1 h-4"
-    >
-      <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
-    </svg>
-  );
 
   return (
     <Fragment>
@@ -196,7 +172,7 @@ export default function Zwemschema({ productData }) {
                     onClick={() => {
                       addItemToBasket(productData);
                     }}
-                    className="text-white lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-2xl hover:bg-white hover:text-main border-4 border-main"
+                    className="text-white lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
                   >
                     Toevoegen aan winkelwagen
                   </button>
@@ -273,7 +249,7 @@ export default function Zwemschema({ productData }) {
               {/* Tab 1: Wat krijg je */}
               {(activeTab === 1 || width <= 768) && (
                 <div className="my-14 flex flex-col md:flex-row md:space-x-14">
-                  <div className="max-w-xl drop-shadow-custom2">
+                  <div className="max-w-xl shadow-custom2">
                     <Image
                       src={productData.images[0]}
                       width={800}
@@ -325,7 +301,7 @@ export default function Zwemschema({ productData }) {
                     </h2>
                   </div>
 
-                  {/* accordion test */}
+                  {/* accordion system */}
                   <Accordion defaultPanel="section-1">
                     <AccordionItem toggle="section-1">
                       Beginners bundel

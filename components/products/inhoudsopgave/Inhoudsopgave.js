@@ -13,10 +13,14 @@ function Inhoudsopgave({ inhoud, editie }) {
   ));
 
   return (
-    <div className="bg-white rounded-xl drop-shadow-custom1 px-2 py-4 md:p-10 text-navy-light1 max-w-4xl">
+      <div className="p-5">
+
+    <div className="bg-white rounded-xl shadow-custom1 px-2 py-4 md:p-10 text-navy-light1 max-w-4xl">
       {/* Inhoud elementen, todo: with a foreach loop or map function? also calculate the number */}
       {mappedInhoud}
     </div>
+
+      </div>
   );
 }
 

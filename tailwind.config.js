@@ -54,9 +54,9 @@ module.exports = {
       translate: {
         0.5: "0.125rem", //2px
       },
-      dropShadow: {
-        "custom1": "0 3px 20px rgba(0, 0, 0, 0.07)",
-        "custom2": "0 3px 15px rgba(0, 0, 0, 0.1)",
+      boxShadow: {
+        custom1: "0 3px 20px rgba(0, 0, 0, 0.07)",
+        custom2: "0 3px 15px rgba(0, 0, 0, 0.1)",
       },
     },
   },
