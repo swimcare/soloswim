@@ -9,6 +9,7 @@ import {
   ClockIcon,
   CreditCardIcon,
 } from "@heroicons/react/outline";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 import Wave from "../../components/svg/wave";
 import useWindowDimensions from "../../components/hooks/useWindowDimensions";
 
@@ -183,10 +184,10 @@ export default function Zwemschema({ productData }) {
                 </li>
               </ul>
             </div>
-            <div className="my-14">
+            <div>
               {/* Tab 1: Wat krijg je */}
               {(activeTab === 1 || width <= 768) && (
-                <div className="flex flex-col md:flex-row md:space-x-14">
+                <div className="my-14 flex flex-col md:flex-row md:space-x-14">
                   <div className="max-w-xl">
                     <Image
                       src={productData.images[0]}
@@ -231,7 +232,22 @@ export default function Zwemschema({ productData }) {
                 </div>
               )}
               {/* Tab 2: inhoudsopgave */}
-              {(activeTab === 2 || width <= 768) && <p>Tab 2: Bekijk inhoudsopgave</p>}
+              {(activeTab === 2 || width <= 768) && (
+                <div>
+                  <div className="md:hidden border-b-3 border-grey-warm border-opacity-25">
+                    <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
+                      Bekijk inhoudsopgave
+                    </h2>
+                  </div>
+                  <div className="flex flex-row space-x-2 items-center">
+                    <h3 className="font-lexend font-semibold text-lg text-navy-light1 my-3">
+                      Beginnersbundel
+                    </h3>
+                    <ChevronDownIcon className="h-5 w-5 text-navy-light1 stroke-1 stroke-current" />
+                    <ChevronUpIcon className="h-5 w-5 text-navy-light1 stroke-1 stroke-current" />
+                  </div>
+                </div>
+              )}
 
               {activeTab === 3 && <p>Tabje 3</p>}
               {activeTab === 4 && <p>Tabje 4</p>}
