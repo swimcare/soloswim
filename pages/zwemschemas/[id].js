@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { getAllProductIds, getproductData } from "../../lib/products";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../../slices/basketSlice";
@@ -70,8 +70,8 @@ export default function Zwemschema({ productData }) {
   const useAccordion = () => React.useContext(Context);
 
   const style = {
-    item: `block focus:outline-none bg-green-800 text-white border-b my-2 p-3`,
-    panel: `overflow-hidden md:overflow-x-hidden transition-height ease duration-300 text-gray-600`,
+    item: `inline-block focus:outline-none font-lexend font-semibold text-lg text-navy-light1 my-3`,
+    panel: `overflow-hidden md:overflow-x-hidden transition-height ease duration-300`,
   };
 
   function AccordionItem({ toggle, children }) {
@@ -79,8 +79,8 @@ export default function Zwemschema({ productData }) {
     return (
       <div role="button" onClick={toggleItem(toggle)} className={style.item}>
         {children}
-        <span className="float-right">
-          {selected === toggle ? <AngleUpIcon /> : <AngleDownIcon />}
+        <span className="float-right mt-1">
+          {selected === toggle ? <ChevronUpIcon className="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current" /> :                     <ChevronDownIcon className="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current" />}
         </span>
       </div>
     );
@@ -318,18 +318,11 @@ export default function Zwemschema({ productData }) {
                       Bekijk inhoudsopgave
                     </h2>
                   </div>
-                  <div className="flex flex-row space-x-2 items-center">
-                    <h3 className="font-lexend font-semibold text-lg text-navy-light1 my-3">
-                      Beginnersbundel
-                    </h3>
-                    <ChevronDownIcon className="h-5 w-5 text-navy-light1 stroke-1 stroke-current" />
-                    <ChevronUpIcon className="h-5 w-5 text-navy-light1 stroke-1 stroke-current" />
-                  </div>
 
                   {/* accordion test */}
                   <Accordion defaultPanel="section-1">
                     <AccordionItem toggle="section-1">
-                      Accordion Group Item #1
+                      Beginnersbundel
                     </AccordionItem>
                     <AccordionPanel id="section-1">
                       <p className="mb-4">
