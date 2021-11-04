@@ -11,7 +11,7 @@ module.exports = {
         grey: {
           light3: "#efede5",
           light4: "#f5f4ef",
-          warm: "#707070"
+          warm: "#707070",
         },
         navy: {
           light1: "#143f5f",
@@ -49,11 +49,15 @@ module.exports = {
         15: "5rem", //80px
       },
       borderWidth: {
-       3: '3px',
+        3: "3px",
       },
       translate: {
-        '0.5': '0.125rem', //2px
-       },
+        0.5: "0.125rem", //2px
+      },
+      dropShadow: {
+        "custom1": "0 3px 20px rgba(0, 0, 0, 0.07)",
+        "custom2": "0 3px 15px rgba(0, 0, 0, 0.1)",
+      },
     },
   },
   variants: {

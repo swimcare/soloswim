@@ -9,6 +9,7 @@ import {
   CalendarIcon,
   ClockIcon,
   CreditCardIcon,
+  EyeIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 import Wave from "../../components/svg/wave";
@@ -80,7 +81,11 @@ export default function Zwemschema({ productData }) {
       <div role="button" onClick={toggleItem(toggle)} className={style.item}>
         {children}
         <span className="float-right mt-1">
-          {selected === toggle ? <ChevronUpIcon className="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current" /> :                     <ChevronDownIcon className="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current" />}
+          {selected === toggle ? (
+            <ChevronUpIcon className="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current" />
+          ) : (
+            <ChevronDownIcon className="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current" />
+          )}
         </span>
       </div>
     );
@@ -267,7 +272,7 @@ export default function Zwemschema({ productData }) {
               {/* Tab 1: Wat krijg je */}
               {(activeTab === 1 || width <= 768) && (
                 <div className="my-14 flex flex-col md:flex-row md:space-x-14">
-                  <div className="max-w-xl">
+                  <div className="max-w-xl drop-shadow-custom2">
                     <Image
                       src={productData.images[0]}
                       width={800}
@@ -325,19 +330,51 @@ export default function Zwemschema({ productData }) {
                       Beginnersbundel
                     </AccordionItem>
                     <AccordionPanel id="section-1">
-                      <p className="mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                      <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto beatae vitae dicta sunt explicabo.
-                      </p>
+                      {/* Inhoudsopgave mobiel */}
+                      <div className="bg-white rounded-xl drop-shadow-custom1 px-2 py-4 text-navy-light1">
+                        {/* section */}
+                        <div className="flex flex-row gap-4 py-2">
+                          <div className="flex-none">
+                            <p className="font-semibold">1.1</p>
+                          </div>
+                          <div className="flex-grow text-sm">
+                            <p className="font-semibold mb-1">
+                              Kort maar krachtig
+                              <span className="text-xs font-normal text-main float-right translate-y-0.5">
+                                Preview
+                                <span className="float-left mr-1">
+                                  <EyeIcon className="h-4 w-4 text-main" />
+                                </span>
+                              </span>
+                            </p>
+                            <p className="float-left text-xs">[snelheid]</p>
+                          </div>
+                          <div className="text-xs translate-y-0.5">
+                            <p>2200 m</p>
+                          </div>
+                        </div>
+                        {/* section */}
+                        <div className="flex flex-row gap-4 py-2">
+                          <div className="flex-none">
+                            <p className="font-semibold">1.1</p>
+                          </div>
+                          <div className="flex-grow text-sm">
+                            <p className="font-semibold mb-1">
+                              Kort maar krachtig
+                              <span className="text-xs font-normal text-main float-right translate-y-0.5">
+                                Preview
+                                <span className="float-left mr-1">
+                                  <EyeIcon className="h-4 w-4 text-main" />
+                                </span>
+                              </span>
+                            </p>
+                            <p className="float-left text-xs">[snelheid]</p>
+                          </div>
+                          <div className="text-xs translate-y-0.5">
+                            <p>2200 m</p>
+                          </div>
+                        </div>
+                      </div>
                     </AccordionPanel>
                     <AccordionItem toggle="section-2">
                       Accordion Group Item #2
