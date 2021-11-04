@@ -14,6 +14,7 @@ import {
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 import Wave from "../../components/svg/wave";
 import useWindowDimensions from "../../components/hooks/useWindowDimensions";
+import ZwemschemaInhoud from "../../components/products/inhoudsopgave/ZwemschemaInhoud";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -332,54 +333,68 @@ export default function Zwemschema({ productData }) {
                     <AccordionPanel id="section-1">
                       {/* Inhoudsopgave mobiel */}
                       <div className="bg-white rounded-xl drop-shadow-custom1 px-2 py-4 md:p-10 text-navy-light1 max-w-4xl">
-                        {/* section */}
-                        <div className="flex flex-row gap-4 py-2">
-                          <div className="flex-none">
-                            <p className="font-semibold text-sm">1.1</p>
-                          </div>
-                          <div className="flex-grow text-sm md:border-b-2 md:mb-2">
-                            <p className="font-semibold mb-1">
-                              Kort maar krachtig{" "}
-                              <span className="hidden md:inline-block">
-                                [snelheid]
-                              </span>
-                              <span className="text-xs font-normal text-main float-right translate-y-0.5">
-                                Preview
-                                <span className="float-left mr-1">
-                                  <EyeIcon className="h-4 w-4 text-main" />
-                                </span>
-                                <span className="ml-4 text-xs translate-y-0.5 float-right text-navy-light1">
-                                  2200 m
-                                </span>
-                              </span>
-                            </p>
-                            <p className="text-xs md:hidden">[snelheid]</p>
-                          </div>
-                        </div>
-                      {/* section */}
-                      <div className="flex flex-row gap-4 py-2">
-                          <div className="flex-none">
-                            <p className="font-semibold text-sm">1.1</p>
-                          </div>
-                          <div className="flex-grow text-sm md:border-b-2">
-                            <p className="font-semibold mb-1">
-                              Kort maar krachtig{" "}
-                              <span className="hidden md:inline-block">
-                                [snelheid]
-                              </span>
-                              <span className="text-xs font-normal text-main float-right translate-y-0.5">
-                                Preview
-                                <span className="float-left mr-1">
-                                  <EyeIcon className="h-4 w-4 text-main" />
-                                </span>
-                                <span className="ml-4 text-xs translate-y-0.5 float-right text-navy-light1">
-                                  2200 m
-                                </span>
-                              </span>
-                            </p>
-                            <p className="text-xs md:hidden">[snelheid]</p>
-                          </div>
-                        </div>
+                        {/* Inhoud elementen, todo: add to .md file and import here, optionally with a foreach loop or map function? */}
+                        <ZwemschemaInhoud
+                          number="1.1"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                          preview
+                        />
+                        <ZwemschemaInhoud
+                          number="1.2"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
+                        <ZwemschemaInhoud
+                          number="1.2"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
+                        <ZwemschemaInhoud
+                          number="1.2"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
+                        <ZwemschemaInhoud
+                          number="1.2"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
+                        <ZwemschemaInhoud
+                          number="1.2"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
+                        <ZwemschemaInhoud
+                          number="1.2"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
+                        <ZwemschemaInhoud
+                          number="1.2"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
+                        <ZwemschemaInhoud
+                          number="1.2"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
+                        <ZwemschemaInhoud
+                          number="1.10"
+                          name="Trainingnaam 1"
+                          tags="[snelheid]"
+                          distance="2200"
+                        />
                       </div>
                     </AccordionPanel>
                     <AccordionItem toggle="section-2">
