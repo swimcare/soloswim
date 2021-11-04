@@ -219,7 +219,7 @@ export default function Zwemschema({ productData }) {
           </div>
         </section>
 
-        {/* SECTION 2 */}
+        {/* SECTION 2, TODO: consider tab system by https://kimia-ui.vercel.app/ if using different numers of tabs */}
         <Wave fill="#f5f4ef" />
         <section className="bg-grey-light4">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
@@ -331,47 +331,53 @@ export default function Zwemschema({ productData }) {
                     </AccordionItem>
                     <AccordionPanel id="section-1">
                       {/* Inhoudsopgave mobiel */}
-                      <div className="bg-white rounded-xl drop-shadow-custom1 px-2 py-4 text-navy-light1">
+                      <div className="bg-white rounded-xl drop-shadow-custom1 px-2 py-4 md:p-10 text-navy-light1 max-w-4xl">
                         {/* section */}
                         <div className="flex flex-row gap-4 py-2">
                           <div className="flex-none">
-                            <p className="font-semibold">1.1</p>
+                            <p className="font-semibold text-sm">1.1</p>
                           </div>
-                          <div className="flex-grow text-sm">
+                          <div className="flex-grow text-sm md:border-b-2 md:mb-2">
                             <p className="font-semibold mb-1">
-                              Kort maar krachtig
+                              Kort maar krachtig{" "}
+                              <span className="hidden md:inline-block">
+                                [snelheid]
+                              </span>
                               <span className="text-xs font-normal text-main float-right translate-y-0.5">
                                 Preview
                                 <span className="float-left mr-1">
                                   <EyeIcon className="h-4 w-4 text-main" />
                                 </span>
+                                <span className="ml-4 text-xs translate-y-0.5 float-right text-navy-light1">
+                                  2200 m
+                                </span>
                               </span>
                             </p>
-                            <p className="float-left text-xs">[snelheid]</p>
-                          </div>
-                          <div className="text-xs translate-y-0.5">
-                            <p>2200 m</p>
+                            <p className="text-xs md:hidden">[snelheid]</p>
                           </div>
                         </div>
-                        {/* section */}
-                        <div className="flex flex-row gap-4 py-2">
+                      {/* section */}
+                      <div className="flex flex-row gap-4 py-2">
                           <div className="flex-none">
-                            <p className="font-semibold">1.1</p>
+                            <p className="font-semibold text-sm">1.1</p>
                           </div>
-                          <div className="flex-grow text-sm">
+                          <div className="flex-grow text-sm md:border-b-2">
                             <p className="font-semibold mb-1">
-                              Kort maar krachtig
+                              Kort maar krachtig{" "}
+                              <span className="hidden md:inline-block">
+                                [snelheid]
+                              </span>
                               <span className="text-xs font-normal text-main float-right translate-y-0.5">
                                 Preview
                                 <span className="float-left mr-1">
                                   <EyeIcon className="h-4 w-4 text-main" />
                                 </span>
+                                <span className="ml-4 text-xs translate-y-0.5 float-right text-navy-light1">
+                                  2200 m
+                                </span>
                               </span>
                             </p>
-                            <p className="float-left text-xs">[snelheid]</p>
-                          </div>
-                          <div className="text-xs translate-y-0.5">
-                            <p>2200 m</p>
+                            <p className="text-xs md:hidden">[snelheid]</p>
                           </div>
                         </div>
                       </div>
