@@ -6,6 +6,32 @@ description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerd
 level: null
 editie: 1
 images: ["/images/zwemschemas/1-1.jpg"]
+inhoud:
+  {
+    beginners:
+      [
+        { title: "training1", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200" },
+      ],
+    semigevorderden:
+      [
+        { title: "training1", tags: "[snelheid] [kracht]", distance: "3200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "3200" },
+      ],
+    gevorderden:
+      [
+        { title: "training1", tags: "[snelheid] [kracht]", distance: "4200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "4200" },
+      ],
+  }
 ---
 
 10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **korte afstanden** op een **hogere intensiteit** moet zwemmen. Zo werk jij aan je kracht en word je een snellere zwemmer.

@@ -14,7 +14,7 @@ import {
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 import Wave from "../../components/svg/wave";
 import useWindowDimensions from "../../components/hooks/useWindowDimensions";
-import ZwemschemaInhoud from "../../components/products/inhoudsopgave/ZwemschemaInhoud";
+import Inhoudsopgave from "../../components/products/inhoudsopgave/Inhoudsopgave";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -235,7 +235,7 @@ export default function Zwemschema({ productData }) {
                       : "border-none text-navy-light1"
                   } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
                 >
-                  Wat krijg ik?
+                  Wat krijg je
                 </li>
                 <li
                   onClick={() => setActiveTab(2)}
@@ -287,7 +287,7 @@ export default function Zwemschema({ productData }) {
                     </h2>
                     <div className="md:hidden border-b-3 border-grey-warm border-opacity-25">
                       <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
-                        Wat krijg ik?
+                        Wat krijg je
                       </h2>
                     </div>
                     <h2 className="hidden md:block text-navy-light1 text-2xl font-lexend font-extrabold my-2">
@@ -321,118 +321,29 @@ export default function Zwemschema({ productData }) {
                 <div>
                   <div className="md:hidden border-b-3 border-grey-warm border-opacity-25">
                     <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
-                      Bekijk inhoudsopgave
+                      Inhoudsopgave
                     </h2>
                   </div>
 
                   {/* accordion test */}
                   <Accordion defaultPanel="section-1">
                     <AccordionItem toggle="section-1">
-                      Beginnersbundel
+                      Beginners bundel
                     </AccordionItem>
                     <AccordionPanel id="section-1">
-                      {/* Inhoudsopgave mobiel */}
-                      <div className="bg-white rounded-xl drop-shadow-custom1 px-2 py-4 md:p-10 text-navy-light1 max-w-4xl">
-                        {/* Inhoud elementen, todo: add to .md file and import here, optionally with a foreach loop or map function? */}
-                        <ZwemschemaInhoud
-                          number="1.1"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                          preview
-                        />
-                        <ZwemschemaInhoud
-                          number="1.2"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                        <ZwemschemaInhoud
-                          number="1.2"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                        <ZwemschemaInhoud
-                          number="1.2"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                        <ZwemschemaInhoud
-                          number="1.2"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                        <ZwemschemaInhoud
-                          number="1.2"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                        <ZwemschemaInhoud
-                          number="1.2"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                        <ZwemschemaInhoud
-                          number="1.2"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                        <ZwemschemaInhoud
-                          number="1.2"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                        <ZwemschemaInhoud
-                          number="1.10"
-                          name="Trainingnaam 1"
-                          tags="[snelheid]"
-                          distance="2200"
-                        />
-                      </div>
+                     <Inhoudsopgave inhoud={productData.inhoud.beginners} editie={productData.editie} /> 
                     </AccordionPanel>
                     <AccordionItem toggle="section-2">
-                      Accordion Group Item #2
+                      Semi-gevorderden bundel
                     </AccordionItem>
                     <AccordionPanel id="section-2">
-                      <p className="mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer nec odio. Praesent libero. Sed cursus ante
-                        dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
-                        imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce
-                        nec tellus sed augue semper porta.
-                      </p>
-                      <p>
-                        At vero eos et accusamus et iusto odio dignissimos
-                        ducimus qui blanditiis praesentium voluptatum deleniti
-                        atque corrupti quos dolores et quas molestias excepturi
-                        sint occaecati cupiditate non provident, similique sunt
-                        in culpa qui officia deserunt mollitia animi.
-                      </p>
+                    <Inhoudsopgave inhoud={productData.inhoud.semigevorderden} editie={productData.editie} /> 
                     </AccordionPanel>
                     <AccordionItem toggle="section-3">
-                      Accordion Group Item #3
+                    Gevorderden bundel
                     </AccordionItem>
                     <AccordionPanel id="section-3">
-                      <p className="mb-4">
-                        dales ligula in libero. Sed dignissim lacinia nunc.
-                        Curabitur tortor. Pellentesque nibh. Aenean quam. In
-                        scelerisque sem at dolor. Maecenas mattis. Sed convallis
-                        tristique sem. Proin ut ligula vel nunc egestas
-                        porttitor. Morbi lectus risus, iaculis.
-                      </p>
-                      <p>
-                        Nulla metus metus, ullamcorper vel, tincidunt sed,
-                        euismod in, nibh. Quisque volutpat condimentum velit.
-                        Class aptent taciti sociosqu ad litora torquent per
-                        conubia nostra, per inceptos himenaeos. Nam nec ante.
-                      </p>
+                    <Inhoudsopgave inhoud={productData.inhoud.gevorderden} editie={productData.editie} /> 
                     </AccordionPanel>
                   </Accordion>
                 </div>

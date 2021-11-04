@@ -10,7 +10,7 @@ function ZwemschemaInhoud(props) {
         <p className="font-semibold mb-1">
           {props.name}
           <span className="hidden md:inline-block ml-2 font-normal">{props.tags}</span>
-          {props.preview ? (
+          {props.previewItem === 1 ? (
             <span className="text-xs font-normal text-main float-right translate-y-0.5">
               Preview
               <span className="float-left mr-1">
