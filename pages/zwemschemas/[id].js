@@ -15,6 +15,8 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 import Wave from "../../components/svg/wave";
 import useWindowDimensions from "../../components/hooks/useWindowDimensions";
 import Inhoudsopgave from "../../components/products/inhoudsopgave/Inhoudsopgave";
+import Attribuut from "../../components/products/benodigdheden/Attribuut";
+import DubbelAttribuut from "../../components/products/benodigdheden/DubbelAttribuut";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -347,127 +349,88 @@ export default function Zwemschema({ productData }) {
                         Ieder niveau
                       </AccordionItem>
                       <AccordionPanel id="benodigdheden-ieder-niveau">
-                        <p className="text-navy-light1 mb-5">
+                        <p className="text-navy-light1">
                           Om het zwemmen comfortabel te maken.
                         </p>
-                        <div className="grid grid-cols-2 gap-6">
-                          <div className="bg-white rounded-xl col-span-2">
-                            <div className="flex flex-row my-5 justify-center gap-5">
-                              <Image
-                                src="/images/zwemschemas/benodigdheden/badpak.png"
-                                width={80}
-                                height={120}
-                                alt="badpak"
-                              ></Image>
-                              <Image
-                                src="/images/zwemschemas/benodigdheden/zwembril.png"
-                                width={120}
-                                height={120}
-                                alt="zwembril"
-                              ></Image>
-                            </div>
-                            <div className="text-center text-navy-light1 mb-8">
-                              <p>Sportieve zwemkleding</p>
-                            </div>
-                          </div>
-                          <div className="bg-white rounded-xl">
-                            <div className="text-center my-10">
-                              <Image
-                                src="/images/zwemschemas/benodigdheden/zwembril.png"
-                                width={120}
-                                height={120}
-                                alt="zwembril"
-                              ></Image>
-                              <div className="text-navy-light1">
-                                <p>Sportieve zwemkleding</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white rounded-xl">
-                            <div className="text-center my-10">
-                              <Image
-                                src="/images/zwemschemas/benodigdheden/zwembril.png"
-                                width={120}
-                                height={120}
-                                alt="zwembril"
-                              ></Image>
-                              <div className="text-navy-light1">
-                                <p>Sportieve zwemkleding</p>
-                              </div>
-                            </div>
-                          </div>
+                        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
+                          <DubbelAttribuut
+                            icon1="/images/zwemschemas/benodigdheden/badpak.png"
+                            alt1="badpak"
+                            icon2="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt2="zwembril"
+                            name="Sportieve zwemkleding"
+                          />
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Zwembril"
+                          />
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Badmuts (bij lang haar)"
+                          />
                         </div>
                       </AccordionPanel>
                       <AccordionItem toggle="benodigdheden-beginners">
                         Beginners
                       </AccordionItem>
                       <AccordionPanel id="benodigdheden-beginners">
-                        <p className="text-navy-light1 mb-5">
-                        Deze attributen komen voor in deze trainingsbundel, maar om meeste uit je training te halen (kan ook zonder gebruikt worden maar even aandikken dat je het nodig hebt)
+                        <p className="text-navy-light1">
+                          Deze attributen komen voor in deze trainingsbundel,
+                          maar om meeste uit je training te halen (kan ook
+                          zonder gebruikt worden maar even aandikken dat je het
+                          nodig hebt)
                         </p>
-                        <div className="grid grid-cols-2 gap-6">
-                          <div className="bg-white rounded-xl">
-                            <div className="text-center my-10">
-                              <Image
-                                src="/images/zwemschemas/benodigdheden/zwembril.png"
-                                width={120}
-                                height={120}
-                                alt="zwembril"
-                              ></Image>
-                              <div className="text-navy-light1">
-                                <p>Sportieve zwemkleding</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white rounded-xl">
-                            <div className="text-center my-10">
-                              <Image
-                                src="/images/zwemschemas/benodigdheden/zwembril.png"
-                                width={120}
-                                height={120}
-                                alt="zwembril"
-                              ></Image>
-                              <div className="text-navy-light1">
-                                <p>Sportieve zwemkleding</p>
-                              </div>
-                            </div>
-                          </div>
+                        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Plankje"
+                          />
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Pullbuoy"
+                          />
                         </div>
                       </AccordionPanel>
                       <AccordionItem toggle="benodigdheden-gevorderden">
                         Semi-gevorderden &amp; gevorderden
                       </AccordionItem>
                       <AccordionPanel id="benodigdheden-gevorderden">
-                      <p className="text-navy-light1 mb-5">
-                        Deze attributen komen voor in deze trainingsbundel, maar om meeste uit je training te halen (kan ook zonder gebruikt worden maar even aandikken dat je het nodig hebt)
+                        <p className="text-navy-light1">
+                          Deze attributen komen voor in deze trainingsbundel,
+                          maar om meeste uit je training te halen (kan ook
+                          zonder gebruikt worden maar even aandikken dat je het
+                          nodig hebt)
                         </p>
-                        <div className="grid grid-cols-2 gap-6">
-                          <div className="bg-white rounded-xl">
-                            <div className="text-center my-10">
-                              <Image
-                                src="/images/zwemschemas/benodigdheden/zwembril.png"
-                                width={120}
-                                height={120}
-                                alt="zwembril"
-                              ></Image>
-                              <div className="text-navy-light1">
-                                <p>Sportieve zwemkleding</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-white rounded-xl">
-                            <div className="text-center my-10">
-                              <Image
-                                src="/images/zwemschemas/benodigdheden/zwembril.png"
-                                width={120}
-                                height={120}
-                                alt="zwembril"
-                              ></Image>
-                              <div className="text-navy-light1">
-                                <p>Sportieve zwemkleding</p>
-                              </div>
-                            </div>
-                          </div>
+                        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Plankje"
+                          />
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Pullbuoy"
+                          />
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Peddels"
+                          />
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Zoomers"
+                          />
+                          <Attribuut
+                            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+                            alt="zwembril"
+                            name="Frontale snorkel (optioneel)"
+                          />
                         </div>
                       </AccordionPanel>
                     </Accordion>
