@@ -437,6 +437,8 @@ export default function Zwemschema({ productData }) {
                   </div>
                 </div>
               )}
+              {/* Tab 4: reviews */}
+              {(activeTab === 4 || width <= 768) && <p>Reviews here</p>}
             </div>
           </div>
         </section>
