@@ -342,28 +342,73 @@ export default function Zwemschema({ productData }) {
                   </div>
                   {/* accordion system (mobile+ users only)*/}
                   <div className="md:hidden">
-                  <Accordion defaultPanel="section-1">
-                    <AccordionItem toggle="section-1">
-                      Standaard benodigdheden
-                    </AccordionItem>
-                    <AccordionPanel id="section-1">
-                      <p>content 1</p>
-                    </AccordionPanel>
-                    <AccordionItem toggle="section-2">
-                      Beginners
-                    </AccordionItem>
-                    <AccordionPanel id="section-2">
-                      <p>content 2</p>
-                    </AccordionPanel>
-                    <AccordionItem toggle="section-3">
-                      Semi-gevorderden &amp; gevorderden
-                    </AccordionItem>
-                    <AccordionPanel id="section-3">
-                      <p>content 3</p>
-                    </AccordionPanel>
-                  </Accordion>
+                    <Accordion defaultPanel="section-1">
+                      <AccordionItem toggle="section-1">
+                        Standaard benodigdheden
+                      </AccordionItem>
+                      <AccordionPanel id="section-1">
+                        <div className="grid grid-cols-2 gap-6">
+                          <div className="bg-white rounded-xl col-span-2">
+                            <div className="flex flex-row my-5 justify-center gap-5">
+                              <Image
+                                src="/images/zwemschemas/benodigdheden/badpak.png"
+                                width={80}
+                                height={120}
+                                alt="badpak"
+                              ></Image>
+                              <Image
+                                src="/images/zwemschemas/benodigdheden/zwembril.png"
+                                width={120}
+                                height={120}
+                                alt="zwembril"
+                              ></Image>
+                            </div>
+                            <div className="text-center text-navy-light1 mb-8">
+                              <p>Sportieve zwemkleding</p>
+                            </div>
+                          </div>
+                          <div className="bg-white rounded-xl">
+                            <div className="text-center my-10">
+                              <Image
+                                src="/images/zwemschemas/benodigdheden/zwembril.png"
+                                width={120}
+                                height={120}
+                                alt="zwembril"
+                              ></Image>
+                              <div className="text-navy-light1">
+                                <p>Sportieve zwemkleding</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white rounded-xl">
+                            <div className="text-center my-10">
+                              <Image
+                                src="/images/zwemschemas/benodigdheden/zwembril.png"
+                                width={120}
+                                height={120}
+                                alt="zwembril"
+                              ></Image>
+                              <div className="text-navy-light1">
+                                <p>Sportieve zwemkleding</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </AccordionPanel>
+                      <AccordionItem toggle="section-2">
+                        Beginners
+                      </AccordionItem>
+                      <AccordionPanel id="section-2">
+                        <p>content 2</p>
+                      </AccordionPanel>
+                      <AccordionItem toggle="section-3">
+                        Semi-gevorderden &amp; gevorderden
+                      </AccordionItem>
+                      <AccordionPanel id="section-3">
+                        <p>content 3</p>
+                      </AccordionPanel>
+                    </Accordion>
                   </div>
-
                 </div>
               )}
             </div>
