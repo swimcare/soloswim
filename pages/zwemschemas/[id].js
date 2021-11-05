@@ -340,13 +340,16 @@ export default function Zwemschema({ productData }) {
                       Wat heb je nodig
                     </h2>
                   </div>
-                  {/* accordion system (mobile+ users only)*/}
-                  <div className="md:hidden">
-                    <Accordion defaultPanel="section-1">
-                      <AccordionItem toggle="section-1">
-                        Standaard benodigdheden
+                  {/* accordion system*/}
+                  <div className="">
+                    <Accordion defaultPanel="benodigdheden-ieder-niveau">
+                      <AccordionItem toggle="benodigdheden-ieder-niveau">
+                        Ieder niveau
                       </AccordionItem>
-                      <AccordionPanel id="section-1">
+                      <AccordionPanel id="benodigdheden-ieder-niveau">
+                        <p className="text-navy-light1 mb-5">
+                          Om het zwemmen comfortabel te maken.
+                        </p>
                         <div className="grid grid-cols-2 gap-6">
                           <div className="bg-white rounded-xl col-span-2">
                             <div className="flex flex-row my-5 justify-center gap-5">
@@ -395,17 +398,77 @@ export default function Zwemschema({ productData }) {
                           </div>
                         </div>
                       </AccordionPanel>
-                      <AccordionItem toggle="section-2">
+                      <AccordionItem toggle="benodigdheden-beginners">
                         Beginners
                       </AccordionItem>
-                      <AccordionPanel id="section-2">
-                        <p>content 2</p>
+                      <AccordionPanel id="benodigdheden-beginners">
+                        <p className="text-navy-light1 mb-5">
+                        Deze attributen komen voor in deze trainingsbundel, maar om meeste uit je training te halen (kan ook zonder gebruikt worden maar even aandikken dat je het nodig hebt)
+                        </p>
+                        <div className="grid grid-cols-2 gap-6">
+                          <div className="bg-white rounded-xl">
+                            <div className="text-center my-10">
+                              <Image
+                                src="/images/zwemschemas/benodigdheden/zwembril.png"
+                                width={120}
+                                height={120}
+                                alt="zwembril"
+                              ></Image>
+                              <div className="text-navy-light1">
+                                <p>Sportieve zwemkleding</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white rounded-xl">
+                            <div className="text-center my-10">
+                              <Image
+                                src="/images/zwemschemas/benodigdheden/zwembril.png"
+                                width={120}
+                                height={120}
+                                alt="zwembril"
+                              ></Image>
+                              <div className="text-navy-light1">
+                                <p>Sportieve zwemkleding</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </AccordionPanel>
-                      <AccordionItem toggle="section-3">
+                      <AccordionItem toggle="benodigdheden-gevorderden">
                         Semi-gevorderden &amp; gevorderden
                       </AccordionItem>
-                      <AccordionPanel id="section-3">
-                        <p>content 3</p>
+                      <AccordionPanel id="benodigdheden-gevorderden">
+                      <p className="text-navy-light1 mb-5">
+                        Deze attributen komen voor in deze trainingsbundel, maar om meeste uit je training te halen (kan ook zonder gebruikt worden maar even aandikken dat je het nodig hebt)
+                        </p>
+                        <div className="grid grid-cols-2 gap-6">
+                          <div className="bg-white rounded-xl">
+                            <div className="text-center my-10">
+                              <Image
+                                src="/images/zwemschemas/benodigdheden/zwembril.png"
+                                width={120}
+                                height={120}
+                                alt="zwembril"
+                              ></Image>
+                              <div className="text-navy-light1">
+                                <p>Sportieve zwemkleding</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bg-white rounded-xl">
+                            <div className="text-center my-10">
+                              <Image
+                                src="/images/zwemschemas/benodigdheden/zwembril.png"
+                                width={120}
+                                height={120}
+                                alt="zwembril"
+                              ></Image>
+                              <div className="text-navy-light1">
+                                <p>Sportieve zwemkleding</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </AccordionPanel>
                     </Accordion>
                   </div>
