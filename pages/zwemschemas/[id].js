@@ -303,29 +303,29 @@ export default function Zwemschema({ productData }) {
                   </div>
 
                   {/* accordion system */}
-                  <Accordion defaultPanel="section-1">
-                    <AccordionItem toggle="section-1">
+                  <Accordion defaultPanel="inhoud-beginners">
+                    <AccordionItem toggle="inhoud-beginners">
                       Beginners bundel
                     </AccordionItem>
-                    <AccordionPanel id="section-1">
+                    <AccordionPanel id="inhoud-beginners">
                       <Inhoudsopgave
                         inhoud={productData.inhoud.beginners}
                         editie={productData.editie}
                       />
                     </AccordionPanel>
-                    <AccordionItem toggle="section-2">
+                    <AccordionItem toggle="inhoud-semi-gevorderden">
                       Semi-gevorderden bundel
                     </AccordionItem>
-                    <AccordionPanel id="section-2">
+                    <AccordionPanel id="inhoud-semi-gevorderden">
                       <Inhoudsopgave
                         inhoud={productData.inhoud.semigevorderden}
                         editie={productData.editie}
                       />
                     </AccordionPanel>
-                    <AccordionItem toggle="section-3">
+                    <AccordionItem toggle="inhoud-gevorderden">
                       Gevorderden bundel
                     </AccordionItem>
-                    <AccordionPanel id="section-3">
+                    <AccordionPanel id="inhoud-gevorderden">
                       <Inhoudsopgave
                         inhoud={productData.inhoud.gevorderden}
                         editie={productData.editie}
