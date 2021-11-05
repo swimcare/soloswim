@@ -72,7 +72,7 @@ export default function Zwemschema({ productData }) {
   const useAccordion = () => React.useContext(Context);
 
   const style = {
-    item: `inline-block focus:outline-none font-lexend font-semibold text-lg text-navy-light1 my-3`,
+    item: `inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3`,
     panel: `overflow-hidden md:overflow-x-hidden transition-height ease duration-300`,
   };
 
@@ -104,7 +104,6 @@ export default function Zwemschema({ productData }) {
       </div>
     );
   }
-
 
   return (
     <Fragment>
@@ -294,7 +293,7 @@ export default function Zwemschema({ productData }) {
               )}
               {/* Tab 2: inhoudsopgave */}
               {(activeTab === 2 || width <= 768) && (
-                <div>
+                <div className="my-14">
                   <div className="md:hidden border-b-3 border-grey-warm border-opacity-25">
                     <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
                       Inhoudsopgave
@@ -307,26 +306,66 @@ export default function Zwemschema({ productData }) {
                       Beginners bundel
                     </AccordionItem>
                     <AccordionPanel id="section-1">
-                     <Inhoudsopgave inhoud={productData.inhoud.beginners} editie={productData.editie} /> 
+                      <Inhoudsopgave
+                        inhoud={productData.inhoud.beginners}
+                        editie={productData.editie}
+                      />
                     </AccordionPanel>
                     <AccordionItem toggle="section-2">
                       Semi-gevorderden bundel
                     </AccordionItem>
                     <AccordionPanel id="section-2">
-                    <Inhoudsopgave inhoud={productData.inhoud.semigevorderden} editie={productData.editie} /> 
+                      <Inhoudsopgave
+                        inhoud={productData.inhoud.semigevorderden}
+                        editie={productData.editie}
+                      />
                     </AccordionPanel>
                     <AccordionItem toggle="section-3">
-                    Gevorderden bundel
+                      Gevorderden bundel
                     </AccordionItem>
                     <AccordionPanel id="section-3">
-                    <Inhoudsopgave inhoud={productData.inhoud.gevorderden} editie={productData.editie} /> 
+                      <Inhoudsopgave
+                        inhoud={productData.inhoud.gevorderden}
+                        editie={productData.editie}
+                      />
                     </AccordionPanel>
                   </Accordion>
                 </div>
               )}
+              {/* Tab 3: benodigdheden */}
+              {(activeTab === 3 || width <= 768) && (
+                <div className="my-14">
+                  <div className="md:hidden border-b-3 border-grey-warm border-opacity-25">
+                    <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
+                      Wat heb je nodig
+                    </h2>
+                  </div>
+                  {/* accordion system (mobile+ users only)*/}
+                  <div className="md:hidden">
+                  <Accordion defaultPanel="section-1">
+                    <AccordionItem toggle="section-1">
+                      Standaard benodigdheden
+                    </AccordionItem>
+                    <AccordionPanel id="section-1">
+                      <p>content 1</p>
+                    </AccordionPanel>
+                    <AccordionItem toggle="section-2">
+                      Beginners
+                    </AccordionItem>
+                    <AccordionPanel id="section-2">
+                      <p>content 2</p>
+                    </AccordionPanel>
+                    <AccordionItem toggle="section-3">
+                      Semi-gevorderden &amp; gevorderden
+                    </AccordionItem>
+                    <AccordionPanel id="section-3">
+                      <p>content 3</p>
+                    </AccordionPanel>
+                  </Accordion>
+                  </div>
 
-              {activeTab === 3 && <p>Tabje 3</p>}
-              {activeTab === 4 && <p>Tabje 4</p>}
+                </div>
+              )}
             </div>
           </div>
         </section>
