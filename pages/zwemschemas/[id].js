@@ -21,6 +21,7 @@ import Inhoudsopgave from "../../components/products/inhoudsopgave/Inhoudsopgave
 import Attribuut from "../../components/products/benodigdheden/Attribuut";
 import DubbelAttribuut from "../../components/products/benodigdheden/DubbelAttribuut";
 import Tooltip from "../../components/general/Tooltip";
+import NiveauCard from "../../components/products/niveau/NiveauCard";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -138,10 +139,10 @@ export default function Zwemschema({ productData }) {
                   <p className="font-bold text-navy-light1 text-lg lg:text-2xl my-2 lg:my-5">
                     € {productData.price}
                   </p>
-                  <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-sm">
+                  <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-tiny">
                     {productData.description}{" "}
                     <a
-                      className="uppercase font-bold hover:underline text-sm"
+                      className="uppercase font-bold hover:underline text-tiny"
                       href="#watkrijgje"
                     >
                       Meer lezen
@@ -150,11 +151,11 @@ export default function Zwemschema({ productData }) {
                 </div>
                 <div className="my-8 lg:my-10">
                   <div className="flex flex-row justify-between items-center my-2">
-                    <p className="font-bold text-navy-light1 uppercase mr-8 text-sm">
+                    <p className="font-bold text-navy-light1 uppercase mr-8 text-tiny">
                       Niveau
                     </p>
                     <select
-                      className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-sm"
+                      className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
                       name="level"
                       id="level"
                       value={selectedOption}
@@ -275,13 +276,13 @@ export default function Zwemschema({ productData }) {
                       Word sterker, word sneller
                     </h2>
                     <div
-                      className="text-navy-light1 text-sm leading-6 my-3 md:my-5"
+                      className="text-navy-light1 text-tiny leading-6 my-3 md:my-5"
                       dangerouslySetInnerHTML={{
                         __html: productData.contentHtml,
                       }}
                     />
                     <div>
-                      <ul className="list-disc text-sm text-navy-light1 leading-8 list-inside">
+                      <ul className="list-disc text-tiny text-navy-light1 leading-8 list-inside">
                         <li>10 kracht zwemschema’s van 60 min</li>
                         <li>Inhoudsopgave en begrippenlijst inbegrepen</li>
                         <li>Volledig waterproof en van sterke kwaliteit</li>
@@ -450,13 +451,14 @@ export default function Zwemschema({ productData }) {
           <Wave fill="#ffffff" />
         </div>
 
-        <section className="">
+        {/* NIVEAU SECTION, todo: pull in information from .md files? */}
+        <section>
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
-            <div className="text-center text-navy-light1">
-              <h1 className="text-2xl font-lexend font-bold py-3">
-                Welk <span className="text-main">niveau</span> past bij jou
+            <div className="text-center lg:text-left text-navy-light1">
+              <h1 className="text-2xl sm:text-4xl lg:text-6xl font-lexend font-bold lg:font-extrabold py-3 lg:py-6">
+                Welk <span className="text-main">niveau</span> past bij mij?
               </h1>
-              <p className="text-sm leading-6">
+              <p className="text-tiny leading-6">
                 Het is geen ramp als je een iets te hoog of laag niveau kiest,
                 je bent dan iets langer of korter bezig met de training dan de
                 aangegeven tijd. Onderstaande indicaties kunnen je wel een
@@ -464,40 +466,39 @@ export default function Zwemschema({ productData }) {
                 passen/helpen met kiezen
               </p>
             </div>
-            <div className="flex flex-col my-5">
-              {/* Niveau card */}
-              <div className="bg-grey-light4 rounded-lg">
-                <h3 className="text-navy-light1 font-bold font-lexend text-2xl text-center py-3">
-                  Beginner
-                </h3>
-                <div className="px-3 pb-3">
-                  {/* item */}
-                  <div className="flex flex-row gap-4 py-2 text-sm text-navy-light1 leading-6">
-                    <CheckIcon className="flex-none h-6 w-6 text-main stroke-1 stroke-current" />
-                    <p>
-                      Je zwemt nog niet lang maar basis BC techniek onder knie.
-                    </p>
-                  </div>
-                  {/* item */}
-                  <div className="flex flex-row gap-4 py-2 text-sm text-navy-light1 leading-6">
-                    <CheckIcon className="flex-none h-6 w-6 text-main stroke-1 stroke-current" />
-                    <p>Je kunt 100m binnen …. min zwemmen</p>
-                  </div>
-                  {/* item */}
-                  <div className="flex flex-row gap-4 py-2 text-sm text-navy-light1 leading-6">
-                    <CheckIcon className="flex-none h-6 w-6 text-main stroke-1 stroke-current" />
-                    <p>
-                      4 x 50m op hoog tempo met 40 sec rust is geen probleem
-                    </p>
-                  </div>
-                  {/* item */}
-                  <div className="flex flex-row gap-4 py-2 text-sm text-navy-light1 leading-6">
-                    <CheckIcon className="flex-none h-6 w-6 text-main stroke-1 stroke-current" />
-                    <p>Een afstand van …m kun jij wel zwemmen</p>
-                  </div>
-                </div>
-              </div>
-              {/* End Niveau Card */}
+            <div className="flex flex-col lg:flex-row my-5 lg:my-14 gap-5 lg:gap-10">
+              <NiveauCard
+                title="Beginners"
+                text1="Je zwemt nog niet lang maar basis BC techniek onder knie"
+                text2="Je kunt 100m binnen …. min zwemmen"
+                text3="4 x 50m op hoog tempo met 40 sec rust is geen probleem"
+                text4="Een afstand van …m kun jij wel zwemmen"
+              />
+              <NiveauCard
+                title="Semi-gevorderden"
+                text1="Je zwemt nog niet lang maar basis BC techniek onder knie"
+                text2="Je kunt 100m binnen …. min zwemmen"
+                text3="4 x 50m op hoog tempo met 40 sec rust is geen probleem"
+                text4="Een afstand van …m kun jij wel zwemmen"
+              />
+              <NiveauCard
+                title="Gevorderden"
+                text1="Je zwemt nog niet lang maar basis BC techniek onder knie"
+                text2="Je kunt 100m binnen …. min zwemmen"
+                text3="4 x 50m op hoog tempo met 40 sec rust is geen probleem"
+                text4="Een afstand van …m kun jij wel zwemmen"
+              />
+            </div>
+            <div className="text-center text-navy-light1">
+              <p className="text-tiny leading-6">
+                Kom je er niet uit? Wij helpen je graag met het vaststellen van
+                jouw niveau, neem contact op en we helpen je snel aan jouw eigen
+                soloswim zwemtraining!
+              </p>
+              {/* Todo: link button to contact page */}
+              <button className="my-4 lg:my-6 text-white max-w-xs lg:text-lg font-bold uppercase w-full px-3 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main">
+                Neem contact op
+              </button>
             </div>
           </div>
         </section>

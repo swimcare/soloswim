@@ -17,6 +17,9 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      fontSize: {
+        tiny: "0.9375rem",
+      },
       colors: {
         transparent: "transparent",
         current: "currentColor",

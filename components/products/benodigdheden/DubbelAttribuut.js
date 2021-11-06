@@ -17,7 +17,7 @@ function DubbelAttribuut(props) {
           alt={props.alt2}
         ></Image>
       </div>
-      <div className="text-center text-navy-light1 mb-8 text-sm">{props.name}</div>
+      <div className="text-center text-navy-light1 mb-8 text-tiny">{props.name}</div>
     </div>
   );
 }
