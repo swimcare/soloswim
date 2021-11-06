@@ -9,9 +9,12 @@ import {
   CalendarIcon,
   ClockIcon,
   CreditCardIcon,
-  EyeIcon,
 } from "@heroicons/react/outline";
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
+import {
+  ChevronDownIcon,
+  ChevronUpIcon,
+  CheckIcon,
+} from "@heroicons/react/solid";
 import Wave from "../../components/svg/wave";
 import useWindowDimensions from "../../components/hooks/useWindowDimensions";
 import Inhoudsopgave from "../../components/products/inhoudsopgave/Inhoudsopgave";
@@ -446,9 +449,57 @@ export default function Zwemschema({ productData }) {
           <Wave fill="#ffffff" />
         </div>
 
-        <h1 className="text-xl py-28">Welk niveau past bij mij?</h1>
-
-        {/* <div dangerouslySetInnerHTML={{ __html: productData.contentHtml }} /> */}
+        <section className="">
+          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+            <div className="text-center text-navy-light1">
+              <h1 className="text-2xl font-lexend font-bold py-3">
+                Welk <span className="text-main">niveau</span> past bij jou
+              </h1>
+              <p className="text-sm leading-6">
+                Het is geen ramp als je een iets te hoog of laag niveau kiest,
+                je bent dan iets langer of korter bezig met de training dan de
+                aangegeven tijd. Onderstaande indicaties kunnen je wel een
+                richtlijn geven over welk niveau het beste bij je zou
+                passen/helpen met kiezen
+              </p>
+            </div>
+            <div className="flex flex-col my-5">
+              {/* Niveau card */}
+              <div className="bg-grey-light4 rounded-lg">
+                <h3 className="text-navy-light1 font-bold font-lexend text-2xl text-center py-3">
+                  Beginner
+                </h3>
+                <div className="px-3 pb-3">
+                  {/* item */}
+                  <div className="flex flex-row gap-4 py-2 text-sm text-navy-light1 leading-6">
+                    <CheckIcon className="flex-none h-6 w-6 text-main stroke-1 stroke-current" />
+                    <p>
+                      Je zwemt nog niet lang maar basis BC techniek onder knie.
+                    </p>
+                  </div>
+                  {/* item */}
+                  <div className="flex flex-row gap-4 py-2 text-sm text-navy-light1 leading-6">
+                    <CheckIcon className="flex-none h-6 w-6 text-main stroke-1 stroke-current" />
+                    <p>Je kunt 100m binnen …. min zwemmen</p>
+                  </div>
+                  {/* item */}
+                  <div className="flex flex-row gap-4 py-2 text-sm text-navy-light1 leading-6">
+                    <CheckIcon className="flex-none h-6 w-6 text-main stroke-1 stroke-current" />
+                    <p>
+                      4 x 50m op hoog tempo met 40 sec rust is geen probleem
+                    </p>
+                  </div>
+                  {/* item */}
+                  <div className="flex flex-row gap-4 py-2 text-sm text-navy-light1 leading-6">
+                    <CheckIcon className="flex-none h-6 w-6 text-main stroke-1 stroke-current" />
+                    <p>Een afstand van …m kun jij wel zwemmen</p>
+                  </div>
+                </div>
+              </div>
+              {/* End Niveau Card */}
+            </div>
+          </div>
+        </section>
       </main>
     </Fragment>
   );
