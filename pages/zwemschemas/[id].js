@@ -20,6 +20,7 @@ import useWindowDimensions from "../../components/hooks/useWindowDimensions";
 import Inhoudsopgave from "../../components/products/inhoudsopgave/Inhoudsopgave";
 import Attribuut from "../../components/products/benodigdheden/Attribuut";
 import DubbelAttribuut from "../../components/products/benodigdheden/DubbelAttribuut";
+import Tooltip from "../../components/general/Tooltip";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
