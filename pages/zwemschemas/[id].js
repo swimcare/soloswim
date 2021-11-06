@@ -10,17 +10,12 @@ import {
   ClockIcon,
   CreditCardIcon,
 } from "@heroicons/react/outline";
-import {
-  ChevronDownIcon,
-  ChevronUpIcon,
-  CheckIcon,
-} from "@heroicons/react/solid";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 import Wave from "../../components/svg/wave";
 import useWindowDimensions from "../../components/hooks/useWindowDimensions";
 import Inhoudsopgave from "../../components/products/inhoudsopgave/Inhoudsopgave";
 import Attribuut from "../../components/products/benodigdheden/Attribuut";
 import DubbelAttribuut from "../../components/products/benodigdheden/DubbelAttribuut";
-import Tooltip from "../../components/general/Tooltip";
 import NiveauCard from "../../components/products/niveau/NiveauCard";
 
 export async function getStaticProps({ params }) {
@@ -78,35 +73,30 @@ export default function Zwemschema({ productData }) {
   //custom hook to consume all accordion values
   const useAccordion = () => React.useContext(Context);
 
-  const style = {
-    item: `inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3`,
-    panel: `overflow-hidden md:overflow-x-hidden transition-height ease duration-300`,
-  };
-
-  function AccordionItem({ toggle, children }) {
+  function AccordionItem({ toggle, children, itemClass, iconClass }) {
     const [selected, toggleItem] = useAccordion();
     return (
-      <div role="button" onClick={toggleItem(toggle)} className={style.item}>
+      <div role="button" onClick={toggleItem(toggle)} className={itemClass}>
         {children}
         <span className="float-right mt-1">
           {selected === toggle ? (
-            <ChevronUpIcon className="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current" />
+            <ChevronUpIcon className={iconClass} />
           ) : (
-            <ChevronDownIcon className="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current" />
+            <ChevronDownIcon className={iconClass} />
           )}
         </span>
       </div>
     );
   }
 
-  function AccordionPanel({ children, id }) {
+  function AccordionPanel({ children, id, panelClass }) {
     const [selected] = useAccordion();
     const ref = React.useRef();
     const inlineStyle =
       selected === id ? { height: ref.current?.scrollHeight } : { height: 0 };
 
     return (
-      <div ref={ref} id={id} className={style.panel} style={inlineStyle}>
+      <div ref={ref} id={id} className={panelClass} style={inlineStyle}>
         {children}
       </div>
     );
@@ -309,28 +299,49 @@ export default function Zwemschema({ productData }) {
 
                   {/* accordion system */}
                   <Accordion defaultPanel="inhoud-beginners">
-                    <AccordionItem toggle="inhoud-beginners">
+                    <AccordionItem
+                      toggle="inhoud-beginners"
+                      itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
+                      iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                    >
                       Beginners bundel
                     </AccordionItem>
-                    <AccordionPanel id="inhoud-beginners">
+                    <AccordionPanel
+                      id="inhoud-beginners"
+                      panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
+                    >
                       <Inhoudsopgave
                         inhoud={productData.inhoud.beginners}
                         editie={productData.editie}
                       />
                     </AccordionPanel>
-                    <AccordionItem toggle="inhoud-semi-gevorderden">
+                    <AccordionItem
+                      toggle="inhoud-semi-gevorderden"
+                      itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
+                      iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                    >
                       Semi-gevorderden bundel
                     </AccordionItem>
-                    <AccordionPanel id="inhoud-semi-gevorderden">
+                    <AccordionPanel
+                      id="inhoud-semi-gevorderden"
+                      panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
+                    >
                       <Inhoudsopgave
                         inhoud={productData.inhoud.semigevorderden}
                         editie={productData.editie}
                       />
                     </AccordionPanel>
-                    <AccordionItem toggle="inhoud-gevorderden">
+                    <AccordionItem
+                      toggle="inhoud-gevorderden"
+                      itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
+                      iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                    >
                       Gevorderden bundel
                     </AccordionItem>
-                    <AccordionPanel id="inhoud-gevorderden">
+                    <AccordionPanel
+                      id="inhoud-gevorderden"
+                      panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
+                    >
                       <Inhoudsopgave
                         inhoud={productData.inhoud.gevorderden}
                         editie={productData.editie}
@@ -350,10 +361,17 @@ export default function Zwemschema({ productData }) {
                   {/* accordion system*/}
                   <div className="">
                     <Accordion defaultPanel="benodigdheden-ieder-niveau">
-                      <AccordionItem toggle="benodigdheden-ieder-niveau">
+                      <AccordionItem
+                        toggle="benodigdheden-ieder-niveau"
+                        itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
+                        iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                      >
                         Ieder niveau
                       </AccordionItem>
-                      <AccordionPanel id="benodigdheden-ieder-niveau">
+                      <AccordionPanel
+                        id="benodigdheden-ieder-niveau"
+                        panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
+                      >
                         <p className="text-navy-light1">
                           Om het zwemmen comfortabel te maken.
                         </p>
@@ -377,10 +395,17 @@ export default function Zwemschema({ productData }) {
                           />
                         </div>
                       </AccordionPanel>
-                      <AccordionItem toggle="benodigdheden-beginners">
+                      <AccordionItem
+                        toggle="benodigdheden-beginners"
+                        itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
+                        iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                      >
                         Beginners
                       </AccordionItem>
-                      <AccordionPanel id="benodigdheden-beginners">
+                      <AccordionPanel
+                        id="benodigdheden-beginners"
+                        panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
+                      >
                         <p className="text-navy-light1">
                           Deze attributen komen voor in deze trainingsbundel,
                           maar om meeste uit je training te halen (kan ook
@@ -400,10 +425,17 @@ export default function Zwemschema({ productData }) {
                           />
                         </div>
                       </AccordionPanel>
-                      <AccordionItem toggle="benodigdheden-gevorderden">
+                      <AccordionItem
+                        toggle="benodigdheden-gevorderden"
+                        itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
+                        iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                      >
                         Semi-gevorderden &amp; gevorderden
                       </AccordionItem>
-                      <AccordionPanel id="benodigdheden-gevorderden">
+                      <AccordionPanel
+                        id="benodigdheden-gevorderden"
+                        panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
+                      >
                         <p className="text-navy-light1">
                           Deze attributen komen voor in deze trainingsbundel,
                           maar om meeste uit je training te halen (kan ook
@@ -513,37 +545,58 @@ export default function Zwemschema({ productData }) {
             </div>
             <div className="flex flex-col">
               <Accordion defaultPanel="1">
-                <AccordionItem toggle="1">
+                <AccordionItem
+                  toggle="1"
+                  itemClass="inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-5 h-5 w-5 text-white stroke-1 stroke-current"
+                >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>
-                <AccordionPanel id="1">
+                <AccordionPanel
+                  id="1"
+                  panelClass="overflow-hidden text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                >
                   <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
                     aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum.{" "}
+                    justo duo dolores et ea rebum.
                   </p>
                 </AccordionPanel>
-                <AccordionItem toggle="2">
+                <AccordionItem
+                  toggle="2"
+                  itemClass="inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-5 h-5 w-5 text-white stroke-1 stroke-current"
+                >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>
-                <AccordionPanel id="2">
+                <AccordionPanel
+                  id="2"
+                  panelClass="overflow-hidden text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                >
                   <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
                     aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum.{" "}
+                    justo duo dolores et ea rebum.
                   </p>
                 </AccordionPanel>
-                <AccordionItem toggle="3">
+                <AccordionItem
+                  toggle="3"
+                  itemClass="inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-5 h-5 w-5 text-white stroke-1 stroke-current"
+                >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>
-                <AccordionPanel id="3">
+                <AccordionPanel
+                  id="3"
+                  panelClass="overflow-hidden text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                >
                   <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
                     aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum.{" "}
+                    justo duo dolores et ea rebum.
                   </p>
                 </AccordionPanel>
               </Accordion>
