@@ -1,19 +1,37 @@
 ---
-title: 'When to Use Static Generation v.s. Server-side Rendering'
-date: '2020-01-02'
+product_id: 1
+title: "Borstcrawl Kracht Zwemtraining"
+price: 12.99
+description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+level: null
+editie: 1
+images: ["/images/zwemschemas/1-1.jpg"]
+inhoud:
+  {
+    beginners:
+      [
+        { title: "training1", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200" },
+      ],
+    semigevorderden:
+      [
+        { title: "training1", tags: "[snelheid] [kracht]", distance: "3200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "3200" },
+      ],
+    gevorderden:
+      [
+        { title: "training1", tags: "[snelheid] [kracht]", distance: "4200" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "4200" },
+      ],
+  }
 ---
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
-
-You can use Static Generation for many types of pages, including:
-
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
-
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
-
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
-
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
+10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **korte afstanden** op een **hogere intensiteit** moet zwemmen. Zo werk jij aan je kracht en word je een snellere zwemmer.
