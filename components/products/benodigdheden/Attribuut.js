@@ -10,7 +10,7 @@ function Attribuut(props) {
             height={120}
             alt={props.alt}
           ></Image>
-          <div className="text-navy-light1 text-sm">
+          <div className="text-navy-light1 text-tiny">
             <p className="mx-2">{props.name}</p>
           </div>
         </div>

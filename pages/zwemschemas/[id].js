@@ -502,6 +502,54 @@ export default function Zwemschema({ productData }) {
             </div>
           </div>
         </section>
+
+        {/* FAQ SECTION, todo: pull in information from .md files? */}
+        <section className="bg-main">
+          <div className="px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+            <div className="text-white border-b border-opacity-40 pb-6">
+              <h3 className="w-40 font-lexend text-2xl font-bold">
+                Veelgestelde vragen
+              </h3>
+            </div>
+            <div className="flex flex-col">
+              <Accordion defaultPanel="1">
+                <AccordionItem toggle="1">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+                </AccordionItem>
+                <AccordionPanel id="1">
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.{" "}
+                  </p>
+                </AccordionPanel>
+                <AccordionItem toggle="2">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+                </AccordionItem>
+                <AccordionPanel id="2">
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.{" "}
+                  </p>
+                </AccordionPanel>
+                <AccordionItem toggle="3">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+                </AccordionItem>
+                <AccordionPanel id="3">
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.{" "}
+                  </p>
+                </AccordionPanel>
+              </Accordion>
+            </div>
+          </div>
+        </section>
       </main>
     </Fragment>
   );
