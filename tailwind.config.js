@@ -37,7 +37,7 @@ module.exports = {
         },
         soloswim: {
           pink: "#FFCCDF",
-          orange: "#FDC797",
+          orange: "#FEC798",
           yellow: "#F7EDAE",
           green: "#D5E1BB",
           purple: "#D3CEE6",
