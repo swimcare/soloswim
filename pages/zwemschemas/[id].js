@@ -78,7 +78,7 @@ export default function Zwemschema({ productData }) {
     return (
       <div role="button" onClick={toggleItem(toggle)} className={itemClass}>
         {children}
-        <span className="float-right mt-1">
+        <span className="float-right">
           {selected === toggle ? (
             <ChevronUpIcon className={iconClass} />
           ) : (
@@ -302,7 +302,7 @@ export default function Zwemschema({ productData }) {
                     <AccordionItem
                       toggle="inhoud-beginners"
                       itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                      iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                      iconClass="mt-1 ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
                     >
                       Beginners bundel
                     </AccordionItem>
@@ -318,7 +318,7 @@ export default function Zwemschema({ productData }) {
                     <AccordionItem
                       toggle="inhoud-semi-gevorderden"
                       itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                      iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                      iconClass="mt-1 ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
                     >
                       Semi-gevorderden bundel
                     </AccordionItem>
@@ -334,7 +334,7 @@ export default function Zwemschema({ productData }) {
                     <AccordionItem
                       toggle="inhoud-gevorderden"
                       itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                      iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                      iconClass="mt-1 ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
                     >
                       Gevorderden bundel
                     </AccordionItem>
@@ -364,7 +364,7 @@ export default function Zwemschema({ productData }) {
                       <AccordionItem
                         toggle="benodigdheden-ieder-niveau"
                         itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                        iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                        iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current mt-1"
                       >
                         Ieder niveau
                       </AccordionItem>
@@ -398,7 +398,7 @@ export default function Zwemschema({ productData }) {
                       <AccordionItem
                         toggle="benodigdheden-beginners"
                         itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                        iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                        iconClass="mt-1 ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
                       >
                         Beginners
                       </AccordionItem>
@@ -428,7 +428,7 @@ export default function Zwemschema({ productData }) {
                       <AccordionItem
                         toggle="benodigdheden-gevorderden"
                         itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                        iconClass="ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
+                        iconClass="mt-1 ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
                       >
                         Semi-gevorderden &amp; gevorderden
                       </AccordionItem>
@@ -485,7 +485,7 @@ export default function Zwemschema({ productData }) {
 
         {/* NIVEAU SECTION, todo: pull in information from .md files? */}
         <section>
-          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:pt-20 lg:pb-10">
             <div className="text-center lg:text-left text-navy-light1">
               <h1 className="text-2xl sm:text-4xl lg:text-6xl font-lexend font-bold lg:font-extrabold py-3 lg:py-6">
                 Welk <span className="text-main">niveau</span> past bij mij?
@@ -536,27 +536,29 @@ export default function Zwemschema({ productData }) {
         </section>
 
         {/* FAQ SECTION, todo: pull in information from .md files? */}
-        <section className="bg-main">
-          <div className="px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
-            <div className="text-white border-b border-opacity-40 pb-6">
-              <h3 className="w-40 font-lexend text-2xl font-bold">
+        <section className="bg-main lg:bg-white">
+          <div className="px-8 max-w-screen-xl mx-auto py-5">
+            <div className="lg:bg-main lg:rounded-2xl lg:p-10">
+            <div className="text-white border-b border-opacity-40 pt-2 lg:pt-0 pb-6">
+              <h3 className="w-40 font-lexend text-2xl font-bold lg:font-extrabold lg:w-full lg:text-4xl">
                 Veelgestelde vragen
               </h3>
             </div>
-            <div className="flex flex-col">
-              <Accordion defaultPanel="1">
+            <div className="flex flex-col lg:flex-row lg:gap-10">
+              <div>
+              <Accordion defaultPanel="faq1">
                 <AccordionItem
-                  toggle="1"
-                  itemClass="inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-5 h-5 w-5 text-white stroke-1 stroke-current"
+                  toggle="faq1"
+                  itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
                 >
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+                  Lorem ipsum dolor sit a, conset d sadipscing elitr Lorem ipsum dolor sit a, conset d sadipscing elitr?
                 </AccordionItem>
                 <AccordionPanel
-                  id="1"
-                  panelClass="overflow-hidden text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                  id="faq1"
+                  panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
-                  <p>
+                  <p className="mb-3">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
                     aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -564,17 +566,17 @@ export default function Zwemschema({ productData }) {
                   </p>
                 </AccordionPanel>
                 <AccordionItem
-                  toggle="2"
-                  itemClass="inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-5 h-5 w-5 text-white stroke-1 stroke-current"
+                  toggle="faq2"
+                  itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
                 >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>
                 <AccordionPanel
-                  id="2"
-                  panelClass="overflow-hidden text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                  id="faq2"
+                  panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
-                  <p>
+                  <p className="mb-3">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
                     aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -582,17 +584,17 @@ export default function Zwemschema({ productData }) {
                   </p>
                 </AccordionPanel>
                 <AccordionItem
-                  toggle="3"
-                  itemClass="inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-5 h-5 w-5 text-white stroke-1 stroke-current"
+                  toggle="faq3"
+                  itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
                 >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>
                 <AccordionPanel
-                  id="3"
-                  panelClass="overflow-hidden text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                  id="faq3"
+                  panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
-                  <p>
+                  <p className="mb-3">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
                     aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -600,6 +602,67 @@ export default function Zwemschema({ productData }) {
                   </p>
                 </AccordionPanel>
               </Accordion>
+              </div>
+              <div>
+              <Accordion>
+                <AccordionItem
+                  toggle="faq4"
+                  itemClass="flex flex-row justify-between align-start inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                >
+                  Lorem ipsum dolor sit a, conset d sadipscing elitr?
+                </AccordionItem>
+                <AccordionPanel
+                  id="faq4"
+                  panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                >
+                  <p className="mb-3">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </AccordionPanel>
+                <AccordionItem
+                  toggle="faq5"
+                  itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                >
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+                </AccordionItem>
+                <AccordionPanel
+                  id="faq5"
+                  panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                >
+                  <p className="mb-3">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </AccordionPanel>
+                <AccordionItem
+                  toggle="faq6"
+                  itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
+                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                >
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+                </AccordionItem>
+                <AccordionPanel
+                  id="faq6"
+                  panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+                >
+                  <p className="mb-3">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum.
+                  </p>
+                </AccordionPanel>
+              </Accordion>
+              </div>
+            </div>
+
             </div>
           </div>
         </section>
