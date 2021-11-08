@@ -17,6 +17,9 @@ import Inhoudsopgave from "../../components/products/inhoudsopgave/Inhoudsopgave
 import Attribuut from "../../components/products/benodigdheden/Attribuut";
 import DubbelAttribuut from "../../components/products/benodigdheden/DubbelAttribuut";
 import NiveauCard from "../../components/products/niveau/NiveauCard";
+import { Accordion } from "../../components/hooks/Accordion";
+import AccordionItem from "../../components/general/AccordionItem";
+import AccordionPanel from "../../components/general/AccordionPanel";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -49,58 +52,6 @@ export default function Zwemschema({ productData }) {
   const { height, width } = useWindowDimensions();
   /* you can also use default values or alias to use only one prop: */
   // const { height: windowHeight = 480 } useWindowDimensions();
-
-  //accordion logic
-  const Context = React.createContext({});
-
-  function Accordion({ children, defaultPanel }) {
-    const [selected, setSelected] = React.useState(defaultPanel || "");
-
-    const toggleItem = React.useCallback(
-      (id) => () => {
-        setSelected((prevState) => (prevState !== id ? id : ""));
-      },
-      []
-    );
-
-    const values = React.useMemo(
-      () => [selected, toggleItem],
-      [selected, toggleItem]
-    );
-    return <Context.Provider value={values}>{children}</Context.Provider>;
-  }
-
-  //custom hook to consume all accordion values
-  const useAccordion = () => React.useContext(Context);
-
-  function AccordionItem({ toggle, children, itemClass, iconClass }) {
-    const [selected, toggleItem] = useAccordion();
-    return (
-      <div role="button" onClick={toggleItem(toggle)} className={itemClass}>
-        {children}
-        <span className="float-right">
-          {selected === toggle ? (
-            <ChevronUpIcon className={iconClass} />
-          ) : (
-            <ChevronDownIcon className={iconClass} />
-          )}
-        </span>
-      </div>
-    );
-  }
-
-  function AccordionPanel({ children, id, panelClass }) {
-    const [selected] = useAccordion();
-    const ref = React.useRef();
-    const inlineStyle =
-      selected === id ? { height: ref.current?.scrollHeight } : { height: 0 };
-
-    return (
-      <div ref={ref} id={id} className={panelClass} style={inlineStyle}>
-        {children}
-      </div>
-    );
-  }
 
   return (
     <Fragment>
