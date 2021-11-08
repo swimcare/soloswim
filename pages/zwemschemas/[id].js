@@ -536,7 +536,7 @@ export default function Zwemschema({ productData }) {
         </section>
 
         {/* FAQ SECTION, todo: pull in information from .md files? */}
-        <section className="bg-main lg:bg-white">
+        <section className="bg-main lg:bg-white pb-12 lg:pb-20">
           <div className="px-8 max-w-screen-xl mx-auto py-5">
             <div className="lg:bg-main lg:rounded-2xl lg:p-10">
               <div className="text-white border-b border-opacity-40 pt-2 lg:pt-0 pb-6">
@@ -668,32 +668,42 @@ export default function Zwemschema({ productData }) {
         </section>
 
         {/* TESTERS EN COACHES SECTION */}
-        <section className="bg-soloswim-orange">
-          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-16 lg:py-20">
+        <section className="bg-soloswim-orange lg:pb-20">
+          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
             <div className="bg-white rounded-2xl p-5 py-8 text-center">
-              <h3 className="text-main font-lexend font-bold text-3xl tracking-wide">
-                Gevalideerd door ervaren zwemcoaches
-              </h3>
-              <h3 className="text-slateblue-dark1 font-lexend font-bold text-3xl tracking-wide">
-                &amp; getest door zwemmers van alle niveau’s
-              </h3>
-              <div className="w-32 mx-auto my-5">
-                <Image
-                  className="rounded-full"
-                  src="/images/zwemschemas/coaches/grandpa.jpg"
-                  width={900}
-                  height={900}
-                  alt="coach"
-                ></Image>
+              <div className="font-lexend font-bold lg:font-extrabold text-3xl lg:text-4xl tracking-wide">
+                <h3 className="text-main lg:my-4">
+                  Gevalideerd door ervaren zwemcoaches
+                </h3>
+                <h3 className="text-slateblue-dark1 lg:my-4">
+                  &amp; getest door zwemmers van alle niveau’s
+                </h3>
               </div>
-              <div>
-                <p className="text-navy-light1 text-tiny leading-7 mx-5">
-                  Wij zijn continu bezig met nieuwe bundels maken en huidige
-                  verbeteren. Help ons product verbeteren en wordt Soloswim
-                  testers
-                </p>
-                <p className="text-main font-semibold text-tiny mt-4">G.K. van der Vaart</p>
-                <p className="text-navy-light1 font-semibold text-xs italic">LZPC de Haaien</p>
+              <div className="py-3 lg:py-5 max-w-2xl mx-auto">
+                <div className="w-32 mx-auto my-5 lg:mt-2 lg:mb-0">
+                  <Image
+                    className="rounded-full"
+                    src="/images/zwemschemas/coaches/grandpa.jpg"
+                    width={900}
+                    height={900}
+                    alt="coach"
+                  ></Image>
+                </div>
+                <div className="relative px-4 py-5 lg:py-3">
+                  <p className="font-lexend text-grey-warm text-7xl absolute left-0 top-0 -translate-y-2 lg:-translate-y-0">"</p>
+                  <p className="font-lexend text-grey-warm text-7xl absolute right-0 top-0 -translate-y-2 lg:-translate-y-0">" </p>
+                  <p className="text-navy-light1 text-tiny leading-7 mx-5">
+                    Wij zijn continu bezig met nieuwe bundels maken en huidige
+                    verbeteren. Help ons product verbeteren en wordt Soloswim
+                    testers
+                  </p>
+                  <p className="text-main font-semibold text-tiny mt-4">
+                    G.K. van der Vaart
+                  </p>
+                  <p className="text-navy-light1 font-semibold text-xs italic">
+                    Trainer LZPC de Haaien
+                  </p>
+                </div>
               </div>
             </div>
           </div>
