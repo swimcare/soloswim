@@ -1,7 +1,7 @@
 ---
-product_id: "BCK1"
-title: "Borstcrawl Kracht Zwemtraining"
-price: 12.99
+product_id: "BCD1"
+title: "Borstcrawl Duur Zwemtraining"
+price: 12.49
 description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 level: null
 editie: 1

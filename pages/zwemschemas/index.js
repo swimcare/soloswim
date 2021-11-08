@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { getSortedProductsData } from "../../lib/products";
 
@@ -22,20 +23,41 @@ function index({ allProductsData }) {
               de combo
             </p>
           </div>
+          <div>
+            <ul className="flex flex-col gap-5 my-10 md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-3">
+              {allProductsData.map(({ id, title, images, price }) => (
+                <Link href={`/zwemschemas/${id}`} passHref>
+                  <li
+                    key={id}
+                    className="bg-grey-light4 rounded-2xl hover:cursor-pointer hover:ring-4 hover:ring-main py-5"
+                  >
+                    <div>
+                      <div className="inline-block bg-white mb-6 rounded-r-md px-3">
+                        <p className="text-navy-light1 text-tiny">Recreanten</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="w-4/6 mx-auto">
+                          <Image
+                            src={images[0]}
+                            width={400}
+                            height={400}
+                            alt={title}
+                          ></Image>
+                        </div>
+                        <div className="text-grey-dark1 px-8 mx-auto mt-10">
+                          <a className="font-bold uppercase">
+                            {title}
+                          </a>
+                          <p className="text-tiny mt-1">€ {price}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </Link>
+              ))}
+            </ul>
+          </div>
         </div>
-      </section>
-
-      {/* Add this <section> tag below the existing <section> tag */}
-      <section>
-        <ul>
-          {allProductsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/zwemschemas/${id}`}>
-                <a>{title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
       </section>
     </main>
   );

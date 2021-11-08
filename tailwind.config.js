@@ -28,6 +28,7 @@ module.exports = {
           light3: "#efede5",
           light4: "#f5f4ef",
           warm: "#707070",
+          dark1: "#414342",
         },
         navy: {
           light1: "#143f5f",
