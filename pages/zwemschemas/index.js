@@ -2,12 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { getSortedProductsData } from "../../lib/products";
+import Faq from "../../components/products/Faq";
 
 function index({ allProductsData }) {
   return (
     <main>
       <section>
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-8 lg:py-20">
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-8 lg:pt-20">
           <div>
             <h1 className="text-main font-lexend font-extrabold text-3xl lg:text-6xl my-2 lg:my-6">
               De zwembundels van Soloswim
@@ -45,9 +46,7 @@ function index({ allProductsData }) {
                           ></Image>
                         </div>
                         <div className="text-grey-dark1 px-8 mx-auto mt-10">
-                          <a className="font-bold uppercase">
-                            {title}
-                          </a>
+                          <a className="font-bold uppercase">{title}</a>
                           <p className="text-tiny mt-1">€ {price}</p>
                         </div>
                       </div>
@@ -59,6 +58,9 @@ function index({ allProductsData }) {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION, todo: pull in information from .md files? */}
+      <Faq />
     </main>
   );
 }
