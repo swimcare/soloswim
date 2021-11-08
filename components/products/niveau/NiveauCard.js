@@ -3,7 +3,7 @@ import { CheckIcon } from "@heroicons/react/solid";
 function NiveauCard({title, text1, text2, text3, text4}) {
   return (
     <div className="bg-grey-light4 rounded-lg max-w-lg mx-auto">
-      <h3 className="text-navy-light1 font-bold lg:font-extrabold font-lexend text-2xl text-center py-3 lg:py-5">
+      <h3 className="text-navy-light1 font-bold lg:font-extrabold font-lexend lg:text-2xl text-center py-3 lg:py-5">
         {title}
       </h3>
       <div className="px-3 pb-3 text-tiny">

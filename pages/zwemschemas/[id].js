@@ -123,7 +123,7 @@ export default function Zwemschema({ productData }) {
               </div>
               <div className="lg:max-w-xl">
                 <div className="mb-8">
-                  <h1 className="font-lexend font-bold lg:font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
+                  <h1 className="font-lexend font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
                     {productData.title}
                   </h1>
                   <p className="font-bold text-navy-light1 text-lg lg:text-2xl my-2 lg:my-5">
@@ -487,7 +487,7 @@ export default function Zwemschema({ productData }) {
         <section>
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:pt-20 lg:pb-10">
             <div className="text-center lg:text-left text-navy-light1">
-              <h1 className="text-2xl sm:text-4xl lg:text-6xl font-lexend font-bold lg:font-extrabold py-3 lg:py-6">
+              <h1 className="text-2xl sm:text-4xl lg:text-6xl font-lexend font-extrabold py-3 lg:py-6">
                 Welk <span className="text-main">niveau</span> past bij mij?
               </h1>
               <p className="text-tiny leading-6">
@@ -540,7 +540,7 @@ export default function Zwemschema({ productData }) {
           <div className="px-8 max-w-screen-xl mx-auto py-5">
             <div className="lg:bg-main lg:rounded-2xl lg:p-10">
               <div className="text-white border-b border-opacity-40 pt-2 lg:pt-0 pb-6">
-                <h3 className="w-40 font-lexend text-2xl font-bold lg:font-extrabold lg:w-full lg:text-4xl">
+                <h3 className="w-40 font-lexend text-2xl font-extrabold lg:w-full lg:text-4xl">
                   Veelgestelde vragen
                 </h3>
               </div>
@@ -671,7 +671,7 @@ export default function Zwemschema({ productData }) {
         <section className="bg-soloswim-orange lg:pb-20">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
             <div className="bg-white rounded-2xl p-5 py-8 text-center">
-              <div className="font-lexend font-bold lg:font-extrabold text-3xl lg:text-4xl tracking-wide">
+              <div className="font-lexend font-extrabold text-3xl lg:text-4xl tracking-wide">
                 <h3 className="text-main lg:my-4">
                   Gevalideerd door ervaren zwemcoaches
                 </h3>
@@ -712,16 +712,21 @@ export default function Zwemschema({ productData }) {
             </div>
           </div>
         </section>
-        {/* INSTAGRAM SECTION */}
-        <section className="lg:pb-20">
+
+
+        {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
+        {/* <section className="lg:pb-20">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
             <div className="text-center">
-              <h2 className="text-main font-lexend font-bold text-3xl leading-10">
+              <h2 className="text-main font-lexend font-extrabold lg:text-6xl text-3xl leading-10">
                 Volg ons op Instagram!
               </h2>
             </div>
           </div>
-        </section>
+        </section> */}
+
+
+
       </main>
     </Fragment>
   );
