@@ -690,8 +690,12 @@ export default function Zwemschema({ productData }) {
                   ></Image>
                 </div>
                 <div className="relative px-4 py-5 lg:py-3">
-                  <p className="font-lexend text-grey-warm text-7xl absolute left-0 top-0 -translate-y-2 lg:-translate-y-0">"</p>
-                  <p className="font-lexend text-grey-warm text-7xl absolute right-0 top-0 -translate-y-2 lg:-translate-y-0">" </p>
+                  <p className="font-lexend text-grey-warm text-7xl absolute left-0 top-0 -translate-y-2 lg:-translate-y-0">
+                    "
+                  </p>
+                  <p className="font-lexend text-grey-warm text-7xl absolute right-0 top-0 -translate-y-2 lg:-translate-y-0">
+                    "{" "}
+                  </p>
                   <p className="text-navy-light1 text-tiny leading-7 mx-5">
                     Wij zijn continu bezig met nieuwe bundels maken en huidige
                     verbeteren. Help ons product verbeteren en wordt Soloswim
@@ -705,6 +709,16 @@ export default function Zwemschema({ productData }) {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* INSTAGRAM SECTION */}
+        <section className="lg:pb-20">
+          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
+            <div className="text-center">
+              <h2 className="text-main font-lexend font-bold text-3xl leading-10">
+                Volg ons op Instagram!
+              </h2>
             </div>
           </div>
         </section>
