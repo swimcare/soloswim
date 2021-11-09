@@ -21,7 +21,9 @@ function WinkelwagenItem(props) {
         <div className="w-32 my-2">
           <div className="hover:cursor-pointer">
             <Link href={`/producten/${props.id}`}>
-              <Image src={props.images[0]} width={300} height={300} />
+              <a>
+                <Image src={props.images[0]} width={300} height={300} />
+              </a>
             </Link>
           </div>
         </div>

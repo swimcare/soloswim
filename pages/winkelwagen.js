@@ -3,9 +3,8 @@ import { useSelector } from "react-redux";
 import WinkelwagenItem from "../components/winkelwagen/WinkelwagenItem";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
-import Image from "next/image";
-import { CheckIcon } from "@heroicons/react/solid";
 import Link from "next/link";
+import NumberFormat from "react-number-format";
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -71,7 +70,14 @@ function winkelwagen() {
                     Verzendkosten
                     <span className="text-xs font-normal"> (incl. BTW)</span>
                   </p>
-                  <p>€3,95</p>
+                  <p>
+                    <NumberFormat
+                      value="3,95"
+                      decimalSeparator=","
+                      displayType="text"
+                      prefix={"€"}
+                    />
+                  </p>
                 </div>
                 <div className="flex flex-row justify-between my-3 font-semibold font-lexend text-tiny md:text-lg">
                   <p>
