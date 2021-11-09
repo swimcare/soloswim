@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CheckIcon } from "@heroicons/react/solid";
 import Link from "next/link";
+import NumberFormat from "react-number-format";
 
 function WinkelwagenItem(props) {
   return (
@@ -29,7 +30,14 @@ function WinkelwagenItem(props) {
         </div>
         <div className="my-2">
           <p className="font-lexend text-tiny md:text-lg font-semibold">
-            €{props.price}
+            <NumberFormat
+              value={props.price}
+              decimalSeparator=","
+              displayType="text"
+              prefix={"€ "}
+              decimalScale={2}
+              fixedDecimalScale={true}
+            />
           </p>
           <div className="flex flex-row justify-between text-2xl">
             {/* todo add onclick event to buttons */}

@@ -67,7 +67,7 @@ function winkelwagen() {
                     value="11,95"
                     decimalSeparator=","
                     displayType="text"
-                    prefix={"€"}
+                    prefix={"€ "}
                     decimalScale={2}
                     fixedDecimalScale={true}
                   />
@@ -82,7 +82,7 @@ function winkelwagen() {
                       value="3,95"
                       decimalSeparator=","
                       displayType="text"
-                      prefix={"€"}
+                      prefix={"€ "}
                       decimalScale={2}
                       fixedDecimalScale={true}
                     />
@@ -98,7 +98,7 @@ function winkelwagen() {
                       value={total + 3.95}
                       decimalSeparator=","
                       displayType="text"
-                      prefix={"€"}
+                      prefix={"€ "}
                       decimalScale={2}
                       fixedDecimalScale={true}
                     />

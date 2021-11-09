@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { getSortedProductsData } from "../../lib/products";
 import Faq from "../../components/products/Faq";
+import NumberFormat from "react-number-format";
 
 function index({ allProductsData }) {
   return (
@@ -50,7 +51,16 @@ function index({ allProductsData }) {
                           </div>
                           <div className="text-grey-dark1 px-8 mx-auto mt-10">
                             <p className="font-bold uppercase">{title}</p>
-                            <p className="text-tiny mt-1">€ {price}</p>
+                            <p className="text-tiny mt-1">
+                              <NumberFormat
+                                value={price}
+                                decimalSeparator=","
+                                displayType="text"
+                                prefix={"€ "}
+                                decimalScale={2}
+                                fixedDecimalScale={true}
+                              />
+                            </p>
                           </div>
                         </div>
                       </div>

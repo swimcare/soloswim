@@ -20,6 +20,7 @@ import { Accordion } from "../../components/hooks/Accordion";
 import AccordionItem from "../../components/general/AccordionItem";
 import AccordionPanel from "../../components/general/AccordionPanel";
 import Faq from "../../components/products/Faq";
+import NumberFormat from "react-number-format";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -78,7 +79,14 @@ export default function Zwemschema({ productData }) {
                     {productData.title}
                   </h1>
                   <p className="font-bold text-navy-light1 text-lg lg:text-2xl my-2 lg:my-5">
-                    € {productData.price}
+                    <NumberFormat
+                      value={productData.price}
+                      decimalSeparator=","
+                      displayType="text"
+                      prefix={"€ "}
+                      decimalScale={2}
+                      fixedDecimalScale={true}
+                    />
                   </p>
                   <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-tiny">
                     {productData.description}{" "}
