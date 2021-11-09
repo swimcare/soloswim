@@ -78,7 +78,7 @@ function winkelwagen() {
                     Totaal
                     <span className="text-xs font-normal"> (incl. BTW)</span>
                   </p>
-                  <p>€{total + 3.95}</p>
+                  <p>€{(total + 3.95).toFixed(2)}</p>
                 </div>
               </div>
               <div className="pb-12 pt-4">
@@ -123,48 +123,6 @@ function winkelwagen() {
           )}
         </div>
       </section>
-
-      {/* <h1 className="text-3xl">
-        {items.length === 0 ? "Je Winkelwagen is leeg." : "Winkelwagen"}
-      </h1>
-      <p>Totaal: {total}</p>
-      {items.length ? (
-        <div>
-          <ul>
-            {items.map((item, i) => (
-              <WinkelwagenItem
-                key={i}
-                title={item.title}
-                images={item.images}
-                price={item.price}
-                level={item.level}
-              />
-            ))}
-          </ul>
-          <button
-            role="link"
-            onClick={createCheckoutSession}
-            className="bg-blue-500"
-          >
-            Afrekenen
-          </button>
-        </div>
-      ) : (
-        <p>Geen producten</p>
-      )} */}
-
-      {/* {items.map((item, i) => (
-        <WinkelwagenItem
-          key={i}
-          id={item.id}
-          name={item.name}
-          price={item.price}
-          description={item.description}
-          category={item.category}
-          image={item.image}
-          slug={item.slug}
-        />
-      ))} */}
     </main>
   );
 }
