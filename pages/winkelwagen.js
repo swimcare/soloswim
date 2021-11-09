@@ -50,6 +50,7 @@ function winkelwagen() {
                 {items.map((item, i) => (
                   <WinkelwagenItem
                     key={i}
+                    id={item.id}
                     title={item.title}
                     images={item.images}
                     price={item.price}

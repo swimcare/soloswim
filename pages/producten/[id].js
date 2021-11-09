@@ -115,7 +115,8 @@ export default function Zwemschema({ productData }) {
                   </a>
                 </div>
                 <div className="text-center my-6">
-                  <button role="button"
+                  <button
+                    role="button"
                     onClick={() => {
                       addItemToBasket(productData);
                     }}

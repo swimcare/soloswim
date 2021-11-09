@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CheckIcon } from "@heroicons/react/solid";
+import Link from "next/link";
 
 function WinkelwagenItem(props) {
   return (
@@ -7,12 +8,22 @@ function WinkelwagenItem(props) {
       <div className="flex flex-row flex-wrap justify-between mx-4">
         <div className="w-full">
           <h2 className="font-semibold font-lexend md:text-lg text-base leading-5">
-            {props.title}
+            <Link href={`/producten/${props.id}`}>
+              <a>{props.title}</a>
+            </Link>
           </h2>
-          <h3 className="text-xs md:text-sm my-1">{props.level}</h3>
+          <h3 className="text-xs md:text-sm my-1">
+            <Link href={`/producten/${props.id}`}>
+              <a>{props.level}</a>
+            </Link>
+          </h3>
         </div>
         <div className="w-32 my-2">
-          <Image src={props.images[0]} width={300} height={300} />
+          <div className="hover:cursor-pointer">
+            <Link href={`/producten/${props.id}`}>
+              <Image src={props.images[0]} width={300} height={300} />
+            </Link>
+          </div>
         </div>
         <div className="my-2">
           <p className="font-lexend text-tiny md:text-lg font-semibold">
