@@ -114,8 +114,8 @@ export default function Zwemschema({ productData }) {
                     Hoe weet ik mijn niveau?
                   </a>
                 </div>
-                <div className="flex flex-col text-center my-6">
-                  <button
+                <div className="text-center my-6">
+                  <button role="button"
                     onClick={() => {
                       addItemToBasket(productData);
                     }}

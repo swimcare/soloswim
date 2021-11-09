@@ -97,7 +97,7 @@ function Header() {
           {/* Navigation items Desktop */}
           <ul className="hidden sm:flex flex-row space-x-8 lg:space-x-10 font-lexend font-semibold text-navy-light1 h-10">
             <li className="self-center hover:underline">
-              <Link href="/zwemschemas">Zwemschema's</Link>
+              <Link href="/producten">Zwemschema's</Link>
             </li>
             <li className="self-center hover:underline">
               <Link href="/">Over Soloswim</Link>
@@ -144,7 +144,7 @@ function Header() {
                   </li>
                 </a>
               </Link>
-              <Link href="/zwemschemas">
+              <Link href="/producten">
                 <a>
                   <li className="py-3 border-b border-opacity-25">
                     <span className="ml-3">Zwemschema's</span>

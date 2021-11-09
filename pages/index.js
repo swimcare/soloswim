@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Fragment>
       <h1 className="text-3xl mb-10 bg-gray-50">Hoofdpagina</h1>
-      <Link href="/zwemschemas" passHref>
+      <Link href="/producten" passHref>
         <a className="underline">Zwemschema's</a>
       </Link>
     </Fragment>

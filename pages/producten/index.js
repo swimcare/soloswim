@@ -11,7 +11,7 @@ function index({ allProductsData }) {
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-8 lg:pt-20">
           <div>
             <h1 className="text-main font-lexend font-extrabold text-3xl lg:text-6xl my-2 lg:my-6">
-              De zwembundels van Soloswim
+              De zwemschema's van Soloswim
             </h1>
             <h2 className="text-navy-light1 font-lexend font-extrabold text-xl lg:text-4xl my-2 lg:my-4">
               Ondertitel
@@ -27,7 +27,7 @@ function index({ allProductsData }) {
           <div>
             <ul className="flex flex-col gap-5 my-10 md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-3">
               {allProductsData.map(({ id, title, images, price }) => (
-                <Link href={`/zwemschemas/${id}`} passHref>
+                <Link href={`/producten/${id}`} passHref>
                   <li
                     key={id}
                     className="bg-grey-light4 rounded-2xl hover:cursor-pointer hover:ring-4 hover:ring-main py-5"
