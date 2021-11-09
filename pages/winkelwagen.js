@@ -15,6 +15,7 @@ const stripePromise = loadStripe(
 function winkelwagen() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
+  const shipping = 3.95;
 
   const createCheckoutSession = async () => {
     const stripe = await stripePromise;
@@ -64,7 +65,7 @@ function winkelwagen() {
                     <span className="text-xs font-normal"> (incl. BTW)</span>
                   </p>
                   <NumberFormat
-                    value="11,95"
+                    value={total}
                     decimalSeparator=","
                     displayType="text"
                     prefix={"€ "}
@@ -79,7 +80,7 @@ function winkelwagen() {
                   </p>
                   <p>
                     <NumberFormat
-                      value="3,95"
+                      value={shipping}
                       decimalSeparator=","
                       displayType="text"
                       prefix={"€ "}
