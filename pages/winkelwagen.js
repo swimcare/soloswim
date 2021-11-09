@@ -63,7 +63,14 @@ function winkelwagen() {
                     Subtotaal
                     <span className="text-xs font-normal"> (incl. BTW)</span>
                   </p>
-                  <p>€11,99</p>
+                  <NumberFormat
+                    value="11,95"
+                    decimalSeparator=","
+                    displayType="text"
+                    prefix={"€"}
+                    decimalScale={2}
+                    fixedDecimalScale={true}
+                  />
                 </div>
                 <div className="flex flex-row justify-between my-3 font-semibold font-lexend text-tiny md:text-lg">
                   <p>
@@ -76,6 +83,8 @@ function winkelwagen() {
                       decimalSeparator=","
                       displayType="text"
                       prefix={"€"}
+                      decimalScale={2}
+                      fixedDecimalScale={true}
                     />
                   </p>
                 </div>
@@ -84,7 +93,16 @@ function winkelwagen() {
                     Totaal
                     <span className="text-xs font-normal"> (incl. BTW)</span>
                   </p>
-                  <p>€{(total + 3.95).toFixed(2)}</p>
+                  <p>
+                    <NumberFormat
+                      value={total + 3.95}
+                      decimalSeparator=","
+                      displayType="text"
+                      prefix={"€"}
+                      decimalScale={2}
+                      fixedDecimalScale={true}
+                    />
+                  </p>
                 </div>
               </div>
               <div className="pb-12 pt-4">
