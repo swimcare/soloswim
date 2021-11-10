@@ -21,6 +21,7 @@ import AccordionItem from "../../components/general/AccordionItem";
 import AccordionPanel from "../../components/general/AccordionPanel";
 import Faq from "../../components/products/Faq";
 import NumberFormat from "react-number-format";
+import Modal from "../../components/general/Modal";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -47,6 +48,8 @@ export default function Zwemschema({ productData }) {
     };
     // Sending the product as an action to the REDUX store... the basket slice
     dispatch(addToBasket(filteredProductData));
+    // opening the winkelwagen modal
+    toggleModal();
   };
 
   //   Bepalen van het niveau (alleen als level property wordt meegegeven aan de productData!)
@@ -64,6 +67,13 @@ export default function Zwemschema({ productData }) {
   /* you can also use default values or alias to use only one prop: */
   // const { height: windowHeight = 480 } useWindowDimensions();
 
+  // Winkelwagen modal functionality
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
+
+  const toggleModal = () => {
+    setModalIsOpen(!modalIsOpen);
+  };
+
   return (
     <Fragment>
       <Head>
@@ -71,6 +81,51 @@ export default function Zwemschema({ productData }) {
       </Head>
 
       <main>
+        {/* WINKELWAGEN MODAL */}
+        <Modal isOpen={modalIsOpen} toggle={toggleModal}>
+          <div className="items-start justify-between p-4 border-b border-gray-300">
+            <div className="text-2xl md:text-3xl font-light">
+              <h1>Modal title</h1>
+            </div>
+          </div>
+          <div className="flex-shrink flex-grow p-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+            
+          </div>
+          <div className="flex flex-wrap items-center justify-end p-3 border-t border-gray-300">
+            <button
+              onClick={toggleModal}
+              className="text-white focus:outline-none m-1.5 rounded px-6 py-2 font-medium bg-red-500"
+            >
+              Close
+            </button>
+            <button
+              onClick={toggleModal}
+              className="text-white focus:outline-none m-1.5 rounded px-6 py-2 font-medium bg-blue-600"
+            >
+              Confirm
+            </button>
+          </div>
+        </Modal>
         {/* SECTION 1 */}
         <section className="bg-white">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
