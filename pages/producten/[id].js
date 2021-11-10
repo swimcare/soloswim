@@ -36,7 +36,8 @@ export default function Zwemschema({ productData }) {
 
   const addItemToBasket = (product) => {
     const filteredProductData = {
-      id: product.product_id,
+      product_id: product.product_id,
+      id: product.id,
       title: product.title,
       level: product.level,
       editie: product.editie,

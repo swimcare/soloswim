@@ -51,6 +51,7 @@ function winkelwagen() {
                   <WinkelwagenItem
                     key={i}
                     id={item.id}
+                    product_id={item.product_id}
                     title={item.title}
                     editie={item.editie}
                     images={item.images}

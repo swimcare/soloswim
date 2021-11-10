@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { addToBasket, removeFromBasket } from "../../slices/basketSlice";
 
 
-function WinkelwagenItem({ i, id, title, price, level, description, images }) {
+function WinkelwagenItem({ i, id, title, price, editie, level, description, images, product_id }) {
   const dispatch = useDispatch();
 
   const removeItemFromBasket = () => {
@@ -17,6 +17,7 @@ function WinkelwagenItem({ i, id, title, price, level, description, images }) {
   const addItemToBasket = () => {
     const product = {
       id,
+      product_id,
       title,
       level,
       editie,
@@ -66,7 +67,7 @@ function WinkelwagenItem({ i, id, title, price, level, description, images }) {
           </p>
           <div className="flex flex-row justify-between text-2xl">
             {/* todo add onclick event to buttons */}
-            <button role="button" className="hover:font-bold">
+            <button role="button" onClick={addItemToBasket} className="hover:font-bold">
               +
             </button>
             <button role="button" className="hover:font-bold">
