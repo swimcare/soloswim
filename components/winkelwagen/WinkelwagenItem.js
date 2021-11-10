@@ -11,7 +11,7 @@ function WinkelwagenItem({ i, id, title, price, editie, level, description, imag
 
   const removeItemFromBasket = () => {
     // remove the item from redux
-    dispatch(removeFromBasket({ id }));
+    dispatch(removeFromBasket({ id, level }));
   };
 
   const addItemToBasket = () => {
