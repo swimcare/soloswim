@@ -52,9 +52,11 @@ function winkelwagen() {
                     key={i}
                     id={item.id}
                     title={item.title}
+                    editie={item.editie}
                     images={item.images}
                     price={item.price}
                     level={item.level}
+                    description={item.description}
                   />
                 ))}
               </ul>

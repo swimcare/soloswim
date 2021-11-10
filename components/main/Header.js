@@ -97,13 +97,13 @@ function Header() {
           {/* Navigation items Desktop */}
           <ul className="hidden sm:flex flex-row space-x-8 lg:space-x-10 font-lexend font-semibold text-navy-light1 h-10">
             <li className="self-center hover:underline">
-              <Link href="/producten">Zwemschema's</Link>
+              <Link href="/producten"><a>Zwemschema's</a></Link>
             </li>
             <li className="self-center hover:underline">
-              <Link href="/">Over Soloswim</Link>
+              <Link href="/"><a>Over Soloswim</a></Link>
             </li>
             <li className="self-center hover:underline">
-              <Link href="/">Contact</Link>
+              <Link href="/"><a>Contact</a></Link>
             </li>
             <li className="hidden md:block self-center hover:underline hover:cursor-pointer">
               <Link href="/winkelwagen">

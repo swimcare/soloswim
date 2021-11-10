@@ -35,8 +35,17 @@ export default function Zwemschema({ productData }) {
   const dispatch = useDispatch();
 
   const addItemToBasket = (product) => {
+    const filteredProductData = {
+      id: product.product_id,
+      title: product.title,
+      level: product.level,
+      editie: product.editie,
+      price: product.price,
+      description: product.description,
+      images: product.images,
+    };
     // Sending the product as an action to the REDUX store... the basket slice
-    dispatch(addToBasket(product));
+    dispatch(addToBasket(filteredProductData));
   };
 
   //   Bepalen van het niveau (alleen als level property wordt meegegeven aan de productData!)
