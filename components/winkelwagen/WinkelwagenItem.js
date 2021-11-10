@@ -66,7 +66,6 @@ function WinkelwagenItem({ i, id, title, price, editie, level, description, imag
             />
           </p>
           <div className="flex flex-row justify-between text-2xl">
-            {/* todo add onclick event to buttons */}
             <button role="button" onClick={addItemToBasket} className="hover:font-bold">
               +
             </button>
@@ -86,6 +85,7 @@ function WinkelwagenItem({ i, id, title, price, editie, level, description, imag
           </div>
           <button
             role="button"
+            onClick={removeItemFromBasket}
             className="text-main hover:underline font-semibold"
           >
             Verwijder
