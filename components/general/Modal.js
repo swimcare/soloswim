@@ -53,10 +53,10 @@ function Modal({ children, isOpen, toggle }) {
       {isOpen && (
         <>
           <div className="fixed top-0 left-0 z-30 w-screen h-screen bg-black opacity-50" />
-          <div className="fixed top-0 overflow-y-auto left-0 z-40 w-full h-full m-0">
+          <div className="fixed top-0 overflow-y-auto mx-auto inset-x-0 z-40 w-full h-full m-0 max-w-4xl">
             <div
               aria-modal={true}
-              className="mt-12 mx-8 pb-6 md:m-auto md:w-6/12 lg:w-4/12 md:pt-12 focus:outline-none"
+              className="mt-12 mx-8 pb-6 md:m-auto md:w-8/12 lg:w-8/12 md:pt-12 focus:outline-none"
               ref={ref}
               role="dialogue"
               tabIndex={-1}

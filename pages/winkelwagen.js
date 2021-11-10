@@ -142,7 +142,7 @@ function winkelwagen() {
                       role="link"
                       className="text-white lg:text-lg font-bold uppercase w-full px-3 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
                     >
-                      Bekijk producten
+                      Naar producten
                     </button>
                   </a>
                 </Link>
