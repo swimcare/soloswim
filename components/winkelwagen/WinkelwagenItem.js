@@ -70,7 +70,7 @@ function WinkelwagenItem({ i, id, title, price, editie, level, description, imag
             <button role="button" onClick={addItemToBasket} className="hover:font-bold">
               +
             </button>
-            <button role="button" className="hover:font-bold">
+            <button role="button" onClick={removeItemFromBasket} className="hover:font-bold">
               -
             </button>
           </div>
