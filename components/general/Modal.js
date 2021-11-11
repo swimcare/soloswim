@@ -1,21 +1,21 @@
 import { useEffect, useRef } from "react";
-import Portal from '@reach/portal';
-
+import Portal from "@reach/portal";
 
 function Modal({ children, isOpen, toggle }) {
   const ref = useRef();
 
-  // close modal on click outside
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (!ref.current?.contains(event.target)) {
-        if (!isOpen) return;
-        toggle(false);
-      }
-    };
-    window.addEventListener("click", handleOutsideClick);
-    return () => window.removeEventListener("click", handleOutsideClick);
-  }, [isOpen, ref, toggle]);
+  // close modal on click outside NOT WORKING, CLOSES THE MODAL IMMEDIATELY AFTER OPENING
+  // useEffect(() => {
+  //   console.log("close modal on click outside")
+  //   const handleOutsideClick = (event) => {
+  //     if (!ref.current?.contains(event.target)) {
+  //       if (!isOpen) return;
+  //       toggle(false);
+  //     }
+  //   };
+  //   window.addEventListener("click", handleOutsideClick);
+  //   return () => window.removeEventListener("click", handleOutsideClick);
+  // }, [isOpen, ref, toggle]);
 
   // close modal when you click on "ESC" key
   useEffect(() => {
@@ -61,7 +61,9 @@ function Modal({ children, isOpen, toggle }) {
               role="dialogue"
               tabIndex={-1}
             >
-              <div className="animate-modal relative flex flex-col bg-white pointer-events-auto">{children}</div>
+              <div className="animate-modal relative flex flex-col bg-white pointer-events-auto">
+                {children}
+              </div>
             </div>
           </div>
         </>
