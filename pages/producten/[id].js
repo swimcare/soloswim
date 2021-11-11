@@ -149,18 +149,20 @@ export default function Zwemschema({ productData }) {
         {/* SECTION 1 */}
 
         <section className="bg-white">
-          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
-            <div className="flex flex-col lg:flex-row">
-              <div className="p-10 text-center max-w-lg flex-1">
+          <div className="md:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+            <div className="flex flex-row flex-wrap md:flex-nowrap justify-between gap-10">
+              <div className="w-full md:max-w-sm mx-auto md:flex-grow md:w-32 pt-8 md:pt-5">
                 <Carousel
                   showStatus={false}
                   showIndicators={false}
                   renderThumbs={renderCustomThumbs}
+                  thumbWidth={80}
+                  infiniteLoop
                 >
                   {formattedProductImages}
                 </Carousel>
               </div>
-              <div className="w-full">
+              <div className="md:max-w-xl md:flex-1 px-5 sm:px-8 md:px-0">
                 <div className="mb-8">
                   <h1 className="font-lexend font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
                     {productData.title}
