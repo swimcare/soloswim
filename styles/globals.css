@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+}
+
+@layer components {
+}
+
+@tailwind utilities;
+
+
+.carousel .control-arrow:hover, .carousel.carousel-slider .control-arrow:active{
+  background: none !important;
+}
