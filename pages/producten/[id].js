@@ -81,10 +81,23 @@ export default function Zwemschema({ productData }) {
   // Return an array with all the images, rendered as normal img tag.
   const renderCustomThumbs = () => {
     const thumbList = productData.images.map((image) => {
-      return <img key={image} src={image} alt="hoi" />;
+      return <img key={image} src={image} alt={productData.title} />;
     });
     return thumbList;
   };
+
+    const formattedProductImages = productData.images.map((image) => {
+      return (
+        <div key={image}>
+          <Image
+            src={image}
+            width={400}
+            height={400}
+            alt={productData.title}
+          ></Image>
+        </div>
+      );
+    });
 
   return (
     <Fragment>
@@ -138,42 +151,16 @@ export default function Zwemschema({ productData }) {
         <section className="bg-white">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
             <div className="flex flex-col lg:flex-row">
-              <div className="p-10 text-center w-full">
-                <Carousel showThumbs={true} renderThumbs={renderCustomThumbs}>
-                  {/* todo: use map function for this below: */}
-                  <div>
-                    <Image
-                      src={productData.images[0]}
-                      width={400}
-                      height={400}
-                      alt={productData.title}
-                    ></Image>
-                  </div>
-                  <div>
-                    <Image
-                      src={productData.images[1]}
-                      width={400}
-                      height={400}
-                      alt={productData.title}
-                    ></Image>
-                  </div>
-                  <div>
-                    <Image
-                      src={productData.images[2]}
-                      width={400}
-                      height={400}
-                      alt={productData.title}
-                    ></Image>
-                  </div>
+              <div className="p-10 text-center max-w-lg flex-1">
+                <Carousel
+                  showStatus={false}
+                  showIndicators={false}
+                  renderThumbs={renderCustomThumbs}
+                >
+                  {formattedProductImages}
                 </Carousel>
-                {/* <Image
-                  src={productData.images[0]}
-                  width={400}
-                  height={400}
-                  alt={productData.title}
-                ></Image> */}
               </div>
-              <div className="lg:max-w-xl">
+              <div className="w-full">
                 <div className="mb-8">
                   <h1 className="font-lexend font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
                     {productData.title}

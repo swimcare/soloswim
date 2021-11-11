@@ -10,6 +10,15 @@ images:
     "/images/zwemschemas/1-1.jpg",
     "/images/zwemschemas/2-1.jpg",
     "/images/zwemschemas/3-1.png",
+    "/images/zwemschemas/2-1(2).jpg",
+    "/images/zwemschemas/2-1(3).jpg",
+    "/images/zwemschemas/2-1(4).jpg",
+    "/images/zwemschemas/2-1(5).jpg",
+    "/images/zwemschemas/2-1(6).jpg",
+    "/images/zwemschemas/2-1(7).jpg",
+    "/images/zwemschemas/2-1(8).jpg",
+    "/images/zwemschemas/2-1(9).jpg",
+    "/images/zwemschemas/2-1(10).jpg",
   ]
 inhoud:
   {
