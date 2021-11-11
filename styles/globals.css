@@ -9,7 +9,50 @@
 
 @tailwind utilities;
 
+/* customizations for react-responsive carousel */
 
-.carousel .control-arrow:hover, .carousel.carousel-slider .control-arrow:active{
-  background: none !important;
+.carousel.carousel-slider {
+  overflow: inherit !important;
+}
+
+.carousel .control-next.control-arrow,
+.carousel .control-next.control-arrow:hover {
+  background-color: transparent !important;
+  /* right: -146px !important; */
+}
+
+.carousel .control-prev.control-arrow,
+.carousel .control-prev.control-arrow:hover {
+  background-color: transparent !important;
+  /* left: -146px!important; */
+}
+
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  opacity: 0.75 !important;
+  padding: 0px 5px 0px 5px !important;
+}
+.carousel:hover .control-arrow:hover,
+.carousel.carousel-slider:hover .control-arrow:hover {
+  opacity: 1 !important;
+}
+
+.carousel .control-next.control-arrow:before {
+  content: "" !important;
+  border: solid #2628cd !important;
+  border-width: 0 3px 3px 0 !important;
+  display: inline-block !important;
+  padding: 3px !important;
+  transform: rotate(-45deg) !important;
+  -webkit-transform: rotate(-45deg) !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  content: "" !important;
+  border: solid #2628cd !important;
+  border-width: 0 3px 3px 0 !important;
+  display: inline-block !important;
+  padding: 3px !important;
+  transform: rotate(135deg) !important;
+  -webkit-transform: rotate(135deg) !important;
 }
