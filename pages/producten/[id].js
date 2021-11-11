@@ -182,8 +182,7 @@ export default function Zwemschema({ productData }) {
                   renderThumbs={renderCustomThumbs}
                   thumbWidth={80}
                   infiniteLoop
-                  renderArrowNext={ArrowRight}
-                  renderArrowPrev={ArrowLeft}
+                  showArrows={false}
                 >
                   {formattedProductImages}
                 </Carousel>
