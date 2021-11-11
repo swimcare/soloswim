@@ -167,17 +167,13 @@ export default function Zwemschema({ productData }) {
         </Modal>
 
         {/* SECTION 1 */}
-
         <SectionProductDescription
           renderCustomThumbs={renderCustomThumbs}
-          formattedProductImages={formattedProductImages}
-          title={productData.title}
-          price={productData.price}
-          description={productData.description}
           selectedOption={selectedOption}
           setLevel={setLevel}
           productData={productData}
           addItemToBasket={addItemToBasket}
+          formattedProductImages={formattedProductImages}
         />
         
 

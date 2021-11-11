@@ -1,9 +1,20 @@
-import { CalendarIcon, ClockIcon, CreditCardIcon } from "@heroicons/react/outline";
+import {
+  CalendarIcon,
+  ClockIcon,
+  CreditCardIcon,
+} from "@heroicons/react/outline";
 import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-function SectionProductDescription(props) {
+function SectionProductDescription({
+  productData,
+  formattedProductImages,
+  renderCustomThumbs,
+  selectedOption,
+  setLevel,
+  addItemToBasket,
+}) {
   return (
     <section className="bg-white">
       <div className="md:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
@@ -12,22 +23,22 @@ function SectionProductDescription(props) {
             <Carousel
               showStatus={false}
               showIndicators={false}
-              renderThumbs={props.renderCustomThumbs}
+              renderThumbs={renderCustomThumbs}
               thumbWidth={80}
               infiniteLoop
               showArrows={false}
             >
-              {props.formattedProductImages}
+              {formattedProductImages}
             </Carousel>
           </div>
           <div className="md:max-w-xl md:flex-1 px-5 sm:px-8 md:px-0">
             <div className="mb-8">
               <h1 className="font-lexend font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
-                {props.title}
+                {productData.title}
               </h1>
               <p className="font-bold text-navy-light1 text-lg lg:text-2xl my-2 lg:my-5">
                 <NumberFormat
-                  value={props.price}
+                  value={productData.price}
                   decimalSeparator=","
                   displayType="text"
                   prefix={"€ "}
@@ -36,7 +47,7 @@ function SectionProductDescription(props) {
                 />
               </p>
               <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-tiny">
-                {props.description}{" "}
+                {productData.description}{" "}
                 <a
                   className="uppercase font-bold hover:underline text-tiny"
                   href="#watkrijgje"
@@ -54,8 +65,8 @@ function SectionProductDescription(props) {
                   className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
                   name="level"
                   id="level"
-                  value={props.selectedOption}
-                  onChange={(e) => props.setLevel(e.target.value)}
+                  value={selectedOption}
+                  onChange={(e) => setLevel(e.target.value)}
                 >
                   <option value="Beginners">Beginners</option>
                   <option value="Semi-gevorderden">Semi-gevorderden</option>
@@ -70,7 +81,7 @@ function SectionProductDescription(props) {
               <button
                 role="button"
                 onClick={() => {
-                  props.addItemToBasket(props.productData);
+                  addItemToBasket(productData);
                 }}
                 className="text-white lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
               >
