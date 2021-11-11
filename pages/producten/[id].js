@@ -23,6 +23,8 @@ import Faq from "../../components/products/Faq";
 import NumberFormat from "react-number-format";
 import Modal from "../../components/general/Modal";
 import Link from "next/link";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -75,6 +77,15 @@ export default function Zwemschema({ productData }) {
     setModalIsOpen(!modalIsOpen);
   };
 
+  // React responsive carousel (images slider)
+  // Return an array with all the images, rendered as normal img tag.
+  const renderCustomThumbs = () => {
+    const thumbList = productData.images.map((image) => {
+      return <img key={image} src={image} alt="hoi" />;
+    });
+    return thumbList;
+  };
+
   return (
     <Fragment>
       <Head>
@@ -123,16 +134,44 @@ export default function Zwemschema({ productData }) {
           </div>
         </Modal>
         {/* SECTION 1 */}
+
         <section className="bg-white">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
             <div className="flex flex-col lg:flex-row">
               <div className="p-10 text-center w-full">
-                <Image
+                <Carousel showThumbs={true} renderThumbs={renderCustomThumbs}>
+                  {/* todo: use map function for this below: */}
+                  <div>
+                    <Image
+                      src={productData.images[0]}
+                      width={400}
+                      height={400}
+                      alt={productData.title}
+                    ></Image>
+                  </div>
+                  <div>
+                    <Image
+                      src={productData.images[1]}
+                      width={400}
+                      height={400}
+                      alt={productData.title}
+                    ></Image>
+                  </div>
+                  <div>
+                    <Image
+                      src={productData.images[2]}
+                      width={400}
+                      height={400}
+                      alt={productData.title}
+                    ></Image>
+                  </div>
+                </Carousel>
+                {/* <Image
                   src={productData.images[0]}
                   width={400}
                   height={400}
                   alt={productData.title}
-                ></Image>
+                ></Image> */}
               </div>
               <div className="lg:max-w-xl">
                 <div className="mb-8">
