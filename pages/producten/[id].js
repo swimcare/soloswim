@@ -25,6 +25,7 @@ import Modal from "../../components/general/Modal";
 import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -99,12 +100,25 @@ export default function Zwemschema({ productData }) {
     );
   });
 
-  // Render custom arrows
+  // Render custom arrows for Carousel
   const ArrowRight = (onClick) => {
-    const pointer = "👈";
     return (
-      <button className="control-arrow control-next float-right bg-none" onClick={onClick}>
-        {pointer}
+      <button
+        className="z-30 right-0 top-0 bottom-0 absolute box-border float-right opacity-75 hover:opacity-100 text-main"
+        onClick={onClick}
+      >
+        <ChevronRightIcon className="h-8 w-8" />
+      </button>
+    );
+  };
+
+  const ArrowLeft = (onClick) => {
+    return (
+      <button
+        className="z-30 left-0 top-0 bottom-0 absolute box-border float-left opacity-75 hover:opacity-100 text-main"
+        onClick={onClick}
+      >
+        <ChevronLeftIcon className="h-8 w-8" />
       </button>
     );
   };
@@ -618,6 +632,7 @@ export default function Zwemschema({ productData }) {
                   autoPlay
                   interval={8000}
                   renderArrowNext={ArrowRight}
+                  renderArrowPrev={ArrowLeft}
                 >
                   {/* coach item */}
                   <div className="md:px-10 px-4">
