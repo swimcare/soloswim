@@ -53,10 +53,6 @@ export default function Zwemschema({ productData }) {
     setModalIsOpen(!modalIsOpen);
   };
 
-
-
-
-
   return (
     <Fragment>
       <Head>
@@ -80,7 +76,8 @@ export default function Zwemschema({ productData }) {
 
         <SectionProductTabs productData={productData} />
 
-        <SectionNiveauInfo />
+        {productData.niveaus && <SectionNiveauInfo />}
+
 
         <SectionFaq />
 

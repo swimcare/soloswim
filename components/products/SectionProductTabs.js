@@ -7,10 +7,11 @@ import AccordionItem from "../general/AccordionItem";
 import AccordionPanel from "../general/AccordionPanel";
 import DubbelAttribuut from "./benodigdheden/DubbelAttribuut";
 import Attribuut from "./benodigdheden/Attribuut";
-import Inhoudsopgave from "../products/inhoudsopgave/Inhoudsopgave"
+import Inhoudsopgave from "../products/inhoudsopgave/Inhoudsopgave";
+import SubSectionInhoudsopgaveNiveaus from "./inhoudsopgave/SubSectionInhoudsopgaveNiveaus";
+import SubSectionInhoudsopgave from "./inhoudsopgave/SubSectionInhoudsopgave";
 
-
-function SectionProductTabs({productData}) {
+function SectionProductTabs({ productData }) {
   // Bepalen van actieve tabjes (voor desktop enkel)
   const [activeTab, setActiveTab] = useState(1);
 
@@ -116,67 +117,14 @@ function SectionProductTabs({productData}) {
                 </div>
               </div>
             )}
-            {/* Tab 2: inhoudsopgave */}
-            {(activeTab === 2 || width <= 768) && (
-              <div className="my-14">
-                <div className="md:hidden border-b-3 border-grey-warm border-opacity-25">
-                  <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
-                    Inhoudsopgave
-                  </h2>
-                </div>
-
-                {/* accordion system */}
-                <Accordion defaultPanel="inhoud-beginners">
-                  <AccordionItem
-                    toggle="inhoud-beginners"
-                    itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                    iconClass="mt-1 ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
-                  >
-                    Beginners bundel
-                  </AccordionItem>
-                  <AccordionPanel
-                    id="inhoud-beginners"
-                    panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
-                  >
-                    <Inhoudsopgave
-                      inhoud={productData.inhoud.beginners}
-                      editie={productData.editie}
-                    />
-                  </AccordionPanel>
-                  <AccordionItem
-                    toggle="inhoud-semi-gevorderden"
-                    itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                    iconClass="mt-1 ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
-                  >
-                    Semi-gevorderden bundel
-                  </AccordionItem>
-                  <AccordionPanel
-                    id="inhoud-semi-gevorderden"
-                    panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
-                  >
-                    <Inhoudsopgave
-                      inhoud={productData.inhoud.semigevorderden}
-                      editie={productData.editie}
-                    />
-                  </AccordionPanel>
-                  <AccordionItem
-                    toggle="inhoud-gevorderden"
-                    itemClass="inline-block focus:outline-none font-lexend font-semibold text-base xs:text-lg text-navy-light1 my-3"
-                    iconClass="mt-1 ml-5 h-5 w-5 text-navy-light1 stroke-1 stroke-current"
-                  >
-                    Gevorderden bundel
-                  </AccordionItem>
-                  <AccordionPanel
-                    id="inhoud-gevorderden"
-                    panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
-                  >
-                    <Inhoudsopgave
-                      inhoud={productData.inhoud.gevorderden}
-                      editie={productData.editie}
-                    />
-                  </AccordionPanel>
-                </Accordion>
-              </div>
+            {/* TAB 2: INHOUDSOPGAVE */}
+            {/* Met niveaus: */}
+            {(activeTab === 2 || width <= 768) && (productData.niveaus) && (
+              <SubSectionInhoudsopgaveNiveaus productData={productData} />
+            )}
+            {/* Indien product geen niveaus bevat: */}
+            {(activeTab === 2 || width <= 768) && (!productData.niveaus) && (
+              <SubSectionInhoudsopgave productData={productData} />
             )}
             {/* Tab 3: benodigdheden */}
             {(activeTab === 3 || width <= 768) && (
