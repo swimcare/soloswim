@@ -28,7 +28,7 @@ export default function Zwemschema({ productData }) {
       product_id: product.product_id,
       id: product.id,
       title: product.title,
-      level: product.level,
+      type: product.type,
       editie: product.editie,
       price: product.price,
       description: product.description,
@@ -40,7 +40,7 @@ export default function Zwemschema({ productData }) {
     toggleModal();
   };
 
-  //   Bepalen van het niveau (alleen als level property wordt meegegeven aan de productData!)
+  //   Bepalen van het niveau (alleen als type property wordt meegegeven aan de productData!)
   const [selectedOption, setSelectedOption] = useState();
 
   // Winkelwagen modal functionality

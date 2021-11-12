@@ -3,7 +3,7 @@ product_id: "BCC100"
 title: "Borstcrawl 100m leren zwemmen"
 price: 12.49
 description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
-level: "25 meter zwembad"
+type: "25 meter zwembad"
 images:
   [
     "/images/zwemschemas/1-1.jpg",

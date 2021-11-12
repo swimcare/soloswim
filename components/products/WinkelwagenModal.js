@@ -24,7 +24,7 @@ function WinkelwagenModal({ productData, modalIsOpen, toggleModal }) {
               <p>{productData.title}</p>
             </h2>
             <h3 className="text-xs md:text-sm my-1">
-              <p>{productData.level}</p>
+              <p>{productData.type}</p>
             </h3>
           </div>
         </div>

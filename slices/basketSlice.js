@@ -16,7 +16,7 @@ export const basketSlice = createSlice({
       const index = state.items.findIndex(
         (basketItem) =>
           basketItem.id === action.payload.id &&
-          basketItem.level === action.payload.level
+          basketItem.type === action.payload.type
       );
 
       let newBasket = [...state.items];

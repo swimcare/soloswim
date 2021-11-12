@@ -36,7 +36,7 @@ export default async (req, res) => {
               id: item.product_id,
               name: item.title,
               price: item.price,
-              level: item.level,
+              type: item.type,
               editie: item.editie,
             }))
           ),

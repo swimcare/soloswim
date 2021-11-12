@@ -36,9 +36,9 @@ function SectionProductDescription({
     return thumbList;
   };
 
-  const setLevel = (level) => {
-    setSelectedOption(level);
-    productData.level = level;
+  const setType = (type) => {
+    setSelectedOption(type);
+    productData.type = type;
   };
 
   return (
@@ -90,10 +90,10 @@ function SectionProductDescription({
                 {productData.niveaus ? (
                   <select
                     className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
-                    name="level"
-                    id="level"
+                    name="type"
+                    id="type"
                     value={selectedOption}
-                    onChange={(e) => setLevel(e.target.value)}
+                    onChange={(e) => setType(e.target.value)}
                   >
                     <option value="Beginners">Beginners</option>
                     <option value="Semi-gevorderden">Semi-gevorderden</option>
@@ -102,10 +102,10 @@ function SectionProductDescription({
                 ) : (
                   <select
                     className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
-                    name="level"
-                    id="level"
+                    name="type"
+                    id="type"
                     value={selectedOption}
-                    onChange={(e) => setLevel(e.target.value)}
+                    onChange={(e) => setType(e.target.value)}
                   >
                     <option value="25 meter zwembad">25 meter zwembad</option>
                     <option value="50 meter zwembad">50 meter zwembad</option>

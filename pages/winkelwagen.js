@@ -56,7 +56,7 @@ function winkelwagen() {
                     editie={item.editie}
                     images={item.images}
                     price={item.price}
-                    level={item.level}
+                    type={item.type}
                     description={item.description}
                   />
                 ))}

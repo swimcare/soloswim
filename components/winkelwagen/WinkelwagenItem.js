@@ -6,12 +6,12 @@ import { useDispatch } from "react-redux";
 import { addToBasket, removeFromBasket } from "../../slices/basketSlice";
 
 
-function WinkelwagenItem({ i, id, title, price, editie, level, description, images, product_id }) {
+function WinkelwagenItem({ i, id, title, price, editie, type, description, images, product_id }) {
   const dispatch = useDispatch();
 
   const removeItemFromBasket = () => {
     // remove the item from redux
-    dispatch(removeFromBasket({ id, level }));
+    dispatch(removeFromBasket({ id, type }));
   };
 
   const addItemToBasket = () => {
@@ -19,7 +19,7 @@ function WinkelwagenItem({ i, id, title, price, editie, level, description, imag
       id,
       product_id,
       title,
-      level,
+      type,
       editie,
       price,
       description,
@@ -41,7 +41,7 @@ function WinkelwagenItem({ i, id, title, price, editie, level, description, imag
           </h2>
           <h3 className="text-xs md:text-sm my-1">
             <Link href={`/producten/${id}`}>
-              <a>{level}</a>
+              <a>{type}</a>
             </Link>
           </h3>
         </div>

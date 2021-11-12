@@ -4,7 +4,7 @@ const productSchema = new mongoose.Schema({
   id : String,
   name : String,
   price : Number, 
-  level : String,
+  type : String,
   editie: Number,
 });
 
