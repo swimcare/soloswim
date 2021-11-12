@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { getSortedProductsData } from "../../lib/products";
-import Faq from "../../components/products/Faq";
+import SectionFaq from "../../components/products/SectionFaq";
 import NumberFormat from "react-number-format";
 
 function index({ allProductsData }) {
@@ -74,7 +74,7 @@ function index({ allProductsData }) {
       </section>
 
       {/* FAQ SECTION, todo: pull in information from .md files? */}
-      <Faq />
+      <SectionFaq />
     </main>
   );
 }
