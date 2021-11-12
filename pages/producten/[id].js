@@ -4,10 +4,7 @@ import { Fragment, useState } from "react";
 import { getAllProductIds, getproductData } from "../../lib/products";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../../slices/basketSlice";
-import Image from "next/image";
 import SectionFaq from "../../components/products/SectionFaq";
-import Modal from "../../components/general/Modal";
-import Link from "next/link";
 import SectionProductDescription from "../../components/products/SectionProductDescription";
 import SectionProductTabs from "../../components/products/SectionProductTabs";
 import SectionNiveauInfo from "../../components/products/SectionNiveauInfo";
@@ -76,7 +73,9 @@ export default function Zwemschema({ productData }) {
 
         <SectionProductTabs productData={productData} />
 
-        {productData.niveaus && <SectionNiveauInfo />}
+        {productData.niveaus ? <SectionNiveauInfo /> : (
+          <div className="lg:h-20"></div>
+        )}
 
 
         <SectionFaq />

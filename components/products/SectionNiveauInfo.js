@@ -3,7 +3,7 @@ import NiveauCard from "./niveau/NiveauCard";
 function SectionNiveauInfo() {
   return (
     <section>
-      <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:pt-20 lg:pb-10">
+      <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 pt-16 lg:pt-20 pb-24 lg:pb-0">
         <div className="text-center lg:text-left text-navy-light1">
           <h1 className="text-2xl sm:text-4xl lg:text-6xl font-lexend font-extrabold py-3 lg:py-6">
             Welk <span className="text-main">niveau</span> past bij mij?

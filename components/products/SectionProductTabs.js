@@ -255,8 +255,13 @@ function SectionProductTabs({ productData }) {
           </div>
         </div>
       </section>
-      <div className="bg-grey-light4">
-        <Wave fill="#ffffff" />
+      {/* Wave: has to be white on desktop */}
+      <div className="bg-grey-light4 hidden lg:block">
+          <Wave fill="#ffffff" />
+      </div>
+       {/* Wave: has to be blue on mobile if "niveaus info section" isn't there */}
+      <div className="bg-grey-light4 lg:hidden">
+          {productData.niveaus ? <Wave fill="#ffffff" /> : <Wave fill="#2628cd" />}
       </div>
     </Fragment>
   );

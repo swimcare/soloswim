@@ -4,7 +4,7 @@ import { Accordion } from "../hooks/Accordion";
 
 function SectionFaq() {
   return (
-    <section className="bg-main lg:bg-white pb-12 lg:pb-20">
+    <section className="bg-main lg:bg-white pt-5 lg:pt-10 pb-12 lg:pb-32">
       <div className="px-8 max-w-screen-xl mx-auto py-5">
         <div className="lg:bg-main lg:rounded-2xl lg:p-10">
           <div className="text-white border-b border-opacity-40 pt-2 lg:pt-0 pb-6">
