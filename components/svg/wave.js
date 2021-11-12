@@ -1,4 +1,4 @@
-function wave(props) {
+function Wave(props) {
   return (
     <svg
       version="1.1"
@@ -21,4 +21,4 @@ function wave(props) {
   );
 }
 
-export default wave;
+export default Wave;
