@@ -2,7 +2,7 @@ import AccordionItem from "../general/AccordionItem";
 import AccordionPanel from "../general/AccordionPanel";
 import { Accordion } from "../hooks/Accordion";
 
-function Faq() {
+function SectionFaq() {
   return (
     <section className="bg-main lg:bg-white pb-12 lg:pb-20">
       <div className="px-8 max-w-screen-xl mx-auto py-5">
@@ -137,4 +137,4 @@ function Faq() {
   );
 }
 
-export default Faq;
+export default SectionFaq;
