@@ -34,26 +34,30 @@ function SectionProductTabs({ productData }) {
               >
                 Wat krijg je
               </li>
-              <li
-                onClick={() => setActiveTab(2)}
-                className={`${
-                  activeTab === 2
-                    ? "border-main text-main "
-                    : "border-none text-navy-light1"
-                } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
-              >
-                Bekijk inhoudsopgave
-              </li>
-              <li
-                onClick={() => setActiveTab(3)}
-                className={`${
-                  activeTab === 3
-                    ? "border-main text-main "
-                    : "border-none text-navy-light1"
-                } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
-              >
-                Wat heb je nodig
-              </li>
+              {!productData.isAccessoire && (
+                <li
+                  onClick={() => setActiveTab(2)}
+                  className={`${
+                    activeTab === 2
+                      ? "border-main text-main "
+                      : "border-none text-navy-light1"
+                  } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
+                >
+                  Bekijk inhoudsopgave
+                </li>
+              )}
+              {!productData.isAccessoire && (
+                <li
+                  onClick={() => setActiveTab(3)}
+                  className={`${
+                    activeTab === 3
+                      ? "border-main text-main "
+                      : "border-none text-navy-light1"
+                  } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
+                >
+                  Wat heb je nodig
+                </li>
+              )}
               <li
                 onClick={() => setActiveTab(4)}
                 className={`${
@@ -115,15 +119,19 @@ function SectionProductTabs({ productData }) {
             )}
             {/* TAB 2: INHOUDSOPGAVE */}
             {/* Met niveaus: */}
-            {(activeTab === 2 || width <= 768) && productData.niveaus && (
-              <SubSectionInhoudsopgaveNiveaus productData={productData} />
-            )}
+            {(activeTab === 2 || width <= 768) &&
+              productData.niveaus &&
+              !productData.isAccessoire && (
+                <SubSectionInhoudsopgaveNiveaus productData={productData} />
+              )}
             {/* Indien product geen niveaus bevat: */}
-            {(activeTab === 2 || width <= 768) && !productData.niveaus && (
-              <SubSectionInhoudsopgave productData={productData} />
-            )}
+            {(activeTab === 2 || width <= 768) &&
+              !productData.niveaus &&
+              !productData.isAccessoire && (
+                <SubSectionInhoudsopgave productData={productData} />
+              )}
             {/* TAB 3: BENODIGDHEDEN */}
-            {(activeTab === 3 || width <= 768) && (
+            {(activeTab === 3 || width <= 768) && !productData.isAccessoire && (
               <div className="my-14">
                 <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
                   <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
