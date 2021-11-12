@@ -1,15 +1,18 @@
 import Modal from "../general/Modal";
 import Image from "next/image";
 import Link from "next/link";
+import { XIcon } from "@heroicons/react/solid";
 
-
-function WinkelwagenModal({productData, modalIsOpen, toggleModal}) {
+function WinkelwagenModal({ productData, modalIsOpen, toggleModal }) {
   return (
     <Modal isOpen={modalIsOpen} toggle={toggleModal}>
-      <div className="items-start justify-between p-4 border-b border-gray-300 bg-main">
-        <div className="text-xl font-lexend font-semibold text-white">
+      <div className="flex justify-between border-b border-gray-300 bg-main rounded-t-2xl">
+        <div className="p-4 text-xl font-lexend font-semibold text-white">
           <h1>Het product is toegevoegd aan je winkelwagen</h1>
         </div>
+        <button type="button" className="self-start m-3" onClick={toggleModal}>
+          <XIcon className="h-6 w-6 text-white" />
+        </button>
       </div>
       <div className="flex-shrink flex-grow p-4">
         <div className="flex flex-row gap-5 my-5">

@@ -61,7 +61,7 @@ function Modal({ children, isOpen, toggle }) {
               role="dialogue"
               tabIndex={-1}
             >
-              <div className="animate-modal relative flex flex-col bg-white pointer-events-auto">
+              <div className="animate-modal relative flex flex-col bg-white pointer-events-auto rounded-2xl">
                 {children}
               </div>
             </div>
