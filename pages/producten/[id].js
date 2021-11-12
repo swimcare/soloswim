@@ -44,7 +44,8 @@ export default function Zwemschema({ productData }) {
   };
 
   //   Bepalen van het niveau (alleen als level property wordt meegegeven aan de productData!)
-  const [selectedOption, setSelectedOption] = useState("Beginner");
+  const [selectedOption, setSelectedOption] = useState();
+
   const setLevel = (level) => {
     setSelectedOption(level);
     productData.level = level;
@@ -57,27 +58,9 @@ export default function Zwemschema({ productData }) {
     setModalIsOpen(!modalIsOpen);
   };
 
-  // React responsive carousel (images slider)
-  // Return an array with all the images, rendered as normal img tag.
-  const renderCustomThumbs = () => {
-    const thumbList = productData.images.map((image) => {
-      return <img key={image} src={image} alt={productData.title} />;
-    });
-    return thumbList;
-  };
 
-  const formattedProductImages = productData.images.map((image) => {
-    return (
-      <div key={image}>
-        <Image
-          src={image}
-          width={400}
-          height={400}
-          alt={productData.title}
-        ></Image>
-      </div>
-    );
-  });
+
+
 
   return (
     <Fragment>
@@ -94,12 +77,10 @@ export default function Zwemschema({ productData }) {
         />
 
         <SectionProductDescription
-          renderCustomThumbs={renderCustomThumbs}
           selectedOption={selectedOption}
           setLevel={setLevel}
           productData={productData}
           addItemToBasket={addItemToBasket}
-          formattedProductImages={formattedProductImages}
         />
 
         <SectionProductTabs productData={productData} />

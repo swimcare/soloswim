@@ -5,16 +5,37 @@ import {
 } from "@heroicons/react/outline";
 import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
+import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 function SectionProductDescription({
   productData,
-  formattedProductImages,
-  renderCustomThumbs,
   selectedOption,
   setLevel,
   addItemToBasket,
 }) {
+  const formattedProductImages = productData.images.map((image) => {
+    return (
+      <div key={image}>
+        <Image
+          src={image}
+          width={400}
+          height={400}
+          alt={productData.title}
+        ></Image>
+      </div>
+    );
+  });
+
+    // React responsive carousel (images slider)
+  // Return an array with all the images, rendered as normal img tag.
+  const renderCustomThumbs = () => {
+    const thumbList = productData.images.map((image) => {
+      return <img key={image} src={image} alt={productData.title} />;
+    });
+    return thumbList;
+  };
+
   return (
     <section className="bg-white">
       <div className="md:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
