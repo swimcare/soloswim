@@ -46,11 +46,6 @@ export default function Zwemschema({ productData }) {
   //   Bepalen van het niveau (alleen als level property wordt meegegeven aan de productData!)
   const [selectedOption, setSelectedOption] = useState();
 
-  const setLevel = (level) => {
-    setSelectedOption(level);
-    productData.level = level;
-  };
-
   // Winkelwagen modal functionality
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
@@ -78,7 +73,7 @@ export default function Zwemschema({ productData }) {
 
         <SectionProductDescription
           selectedOption={selectedOption}
-          setLevel={setLevel}
+          setSelectedOption={setSelectedOption}
           productData={productData}
           addItemToBasket={addItemToBasket}
         />

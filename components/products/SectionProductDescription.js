@@ -11,7 +11,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 function SectionProductDescription({
   productData,
   selectedOption,
-  setLevel,
+  setSelectedOption,
   addItemToBasket,
 }) {
   const formattedProductImages = productData.images.map((image) => {
@@ -34,6 +34,11 @@ function SectionProductDescription({
       return <img key={image} src={image} alt={productData.title} />;
     });
     return thumbList;
+  };
+
+  const setLevel = (level) => {
+    setSelectedOption(level);
+    productData.level = level;
   };
 
   return (
