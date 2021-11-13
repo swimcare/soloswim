@@ -100,69 +100,77 @@ function SectionProductDescription({
                   //   <option value="Gevorderden">Gevorderden</option>
                   // </select>
                   <div className="my-2 flex flex-col lg:flex-row gap-2 lg:gap-6">
-                  <label
-                    className="text-tiny items-center hover:cursor-pointer"
-                    onChange={(e) => setType(e.target.value)}
-                  >
-                    <input
-                      className="hover:cursor-pointer"
-                      type="radio"
-                      value="Beginners"
-                      name="type"
-                    />
-                    <span class="ml-2">Beginners</span>
-                  </label>
-                  <label
-                    className="text-tiny items-center hover:cursor-pointer"
-                    onChange={(e) => setType(e.target.value)}
-                  >
-                    <input
-                      className="hover:cursor-pointer"
-                      type="radio"
-                      value="Semi-gevorderden"
-                      name="type"
-                    />
-                    <span class="ml-2">Semi-gevorderden</span>
-                  </label>
-                  <label
-                    className="text-tiny items-center hover:cursor-pointer"
-                    onChange={(e) => setType(e.target.value)}
-                  >
-                    <input
-                      className="hover:cursor-pointer"
-                      type="radio"
-                      value="Gevorderden"
-                      name="type"
-                    />
-                    <span class="ml-2">Gevorderden</span>
-                  </label>
-                </div>
-                ) : (
-                  <div className="my-2 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-6">
                     <label
                       className="text-tiny items-center hover:cursor-pointer"
                       onChange={(e) => setType(e.target.value)}
                     >
                       <input
                         className="hover:cursor-pointer"
+                        type="radio"
+                        value="Beginners"
+                        name="type"
+                      />
+                      <span class="ml-2">Beginners</span>
+                    </label>
+                    <label
+                      className="text-tiny items-center hover:cursor-pointer"
+                      onChange={(e) => setType(e.target.value)}
+                    >
+                      <input
+                        className="hover:cursor-pointer"
+                        type="radio"
+                        value="Semi-gevorderden"
+                        name="type"
+                      />
+                      <span class="ml-2">Semi-gevorderden</span>
+                    </label>
+                    <label
+                      className="text-tiny items-center hover:cursor-pointer"
+                      onChange={(e) => setType(e.target.value)}
+                    >
+                      <input
+                        className="hover:cursor-pointer"
+                        type="radio"
+                        value="Gevorderden"
+                        name="type"
+                      />
+                      <span class="ml-2">Gevorderden</span>
+                    </label>
+                  </div>
+                ) : (
+                  <div className="my-2 text-xs font-bold flex flex-row gap-2 md:gap-4">
+                    <div>
+                      <input
+                        className="appearance-none fixed"
                         type="radio"
                         value="25 meter zwembad"
+                        id="25m"
                         name="type"
+                        onChange={(e) => setType(e.target.value)}
                       />
-                      <span class="ml-2">25 meter zwembad</span>
-                    </label>
-                    <label
-                      className="text-tiny items-center hover:cursor-pointer"
-                      onChange={(e) => setType(e.target.value)}
-                    >
+                      <label
+                        for="25m"
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block hover:border-gray-500 p-3 ${productData.type === "25 meter zwembad" ? "border-main" :  "border-gray-200"}`}
+                      >
+                        25 meter bad
+                      </label>
+                    </div>
+                    <div>
                       <input
-                        className="hover:cursor-pointer"
+                        className="appearance-none fixed"
                         type="radio"
                         value="50 meter zwembad"
+                        id="50m"
                         name="type"
+                        onChange={(e) => setType(e.target.value)}
                       />
-                      <span class="ml-2">50 meter zwembad</span>
-                    </label>
+                      <label
+                        for="50m"
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block hover:border-gray-500 p-3 ${productData.type === "50 meter zwembad" ? "border-main" :  "border-gray-200"}`}
+                      >
+                        50 meter bad
+                      </label>
+                    </div>
                   </div>
                 )}
                 {productData.niveaus ? (
