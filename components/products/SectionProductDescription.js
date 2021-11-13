@@ -85,22 +85,60 @@ function SectionProductDescription({
             {productData.type && (
               <div className="my-8 lg:my-10">
                 <p className="font-bold text-navy-light1 uppercase mr-8 text-tiny">
-                  {productData.niveaus ? "Niveau*" : "Variant*"}
+                  {productData.niveaus ? "Niveau" : "Variant*"}
                 </p>
                 {productData.niveaus ? (
-                  <select
-                    className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
-                    name="type"
-                    id="type"
-                    value={selectedOption}
+                  // <select
+                  //   className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
+                  //   name="type"
+                  //   id="type"
+                  //   value={selectedOption}
+                  //   onChange={(e) => setType(e.target.value)}
+                  // >
+                  //   <option value="Beginners">Beginners</option>
+                  //   <option value="Semi-gevorderden">Semi-gevorderden</option>
+                  //   <option value="Gevorderden">Gevorderden</option>
+                  // </select>
+                  <div className="my-2 flex flex-col lg:flex-row gap-2 lg:gap-6">
+                  <label
+                    className="text-tiny items-center hover:cursor-pointer"
                     onChange={(e) => setType(e.target.value)}
                   >
-                    <option value="Beginners">Beginners</option>
-                    <option value="Semi-gevorderden">Semi-gevorderden</option>
-                    <option value="Gevorderden">Gevorderden</option>
-                  </select>
+                    <input
+                      className="hover:cursor-pointer"
+                      type="radio"
+                      value="Beginners"
+                      name="type"
+                    />
+                    <span class="ml-2">Beginners</span>
+                  </label>
+                  <label
+                    className="text-tiny items-center hover:cursor-pointer"
+                    onChange={(e) => setType(e.target.value)}
+                  >
+                    <input
+                      className="hover:cursor-pointer"
+                      type="radio"
+                      value="Semi-gevorderden"
+                      name="type"
+                    />
+                    <span class="ml-2">Semi-gevorderden</span>
+                  </label>
+                  <label
+                    className="text-tiny items-center hover:cursor-pointer"
+                    onChange={(e) => setType(e.target.value)}
+                  >
+                    <input
+                      className="hover:cursor-pointer"
+                      type="radio"
+                      value="Gevorderden"
+                      name="type"
+                    />
+                    <span class="ml-2">Gevorderden</span>
+                  </label>
+                </div>
                 ) : (
-                  <div className="my-2">
+                  <div className="my-2 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-6">
                     <label
                       className="text-tiny items-center hover:cursor-pointer"
                       onChange={(e) => setType(e.target.value)}
@@ -114,7 +152,7 @@ function SectionProductDescription({
                       <span class="ml-2">25 meter zwembad</span>
                     </label>
                     <label
-                      className="text-tiny items-center hover:cursor-pointer ml-6"
+                      className="text-tiny items-center hover:cursor-pointer"
                       onChange={(e) => setType(e.target.value)}
                     >
                       <input
@@ -132,7 +170,7 @@ function SectionProductDescription({
                     className="underline text-navy-light1 text-xs"
                     href="#niveau"
                   >
-                    *Hoe weet ik mijn niveau?
+                    Hoe weet ik mijn niveau?
                   </a>
                 ) : (
                   <p className="text-navy-light1 text-xs">
