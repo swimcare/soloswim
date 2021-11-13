@@ -84,45 +84,59 @@ function SectionProductDescription({
             </div>
             {productData.type && (
               <div className="my-8 lg:my-10">
-                <div className="flex flex-row justify-between items-center my-2">
-                  <p className="font-bold text-navy-light1 uppercase mr-8 text-tiny">
-                    {productData.niveaus ? "Niveau" : "Variant"}
-                  </p>
-                  {productData.niveaus ? (
-                    <select
-                      className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
-                      name="type"
-                      id="type"
-                      value={selectedOption}
+                <p className="font-bold text-navy-light1 uppercase mr-8 text-tiny">
+                  {productData.niveaus ? "Niveau*" : "Variant*"}
+                </p>
+                {productData.niveaus ? (
+                  <select
+                    className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
+                    name="type"
+                    id="type"
+                    value={selectedOption}
+                    onChange={(e) => setType(e.target.value)}
+                  >
+                    <option value="Beginners">Beginners</option>
+                    <option value="Semi-gevorderden">Semi-gevorderden</option>
+                    <option value="Gevorderden">Gevorderden</option>
+                  </select>
+                ) : (
+                  <div className="my-2">
+                    <label
+                      className="text-tiny items-center hover:cursor-pointer"
                       onChange={(e) => setType(e.target.value)}
                     >
-                      <option value="Beginners">Beginners</option>
-                      <option value="Semi-gevorderden">Semi-gevorderden</option>
-                      <option value="Gevorderden">Gevorderden</option>
-                    </select>
-                  ) : (
-                    <select
-                      className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
-                      name="type"
-                      id="type"
-                      value={selectedOption}
+                      <input
+                        className="hover:cursor-pointer"
+                        type="radio"
+                        value="25 meter zwembad"
+                        name="type"
+                      />
+                      <span class="ml-2">25 meter zwembad</span>
+                    </label>
+                    <label
+                      className="text-tiny items-center hover:cursor-pointer ml-6"
                       onChange={(e) => setType(e.target.value)}
                     >
-                      <option value="25 meter zwembad">25 meter zwembad</option>
-                      <option value="50 meter zwembad">50 meter zwembad</option>
-                    </select>
-                  )}
-                </div>
+                      <input
+                        className="hover:cursor-pointer"
+                        type="radio"
+                        value="50 meter zwembad"
+                        name="type"
+                      />
+                      <span class="ml-2">50 meter zwembad</span>
+                    </label>
+                  </div>
+                )}
                 {productData.niveaus ? (
                   <a
                     className="underline text-navy-light1 text-xs"
                     href="#niveau"
                   >
-                    Hoe weet ik mijn niveau?
+                    *Hoe weet ik mijn niveau?
                   </a>
                 ) : (
                   <p className="text-navy-light1 text-xs">
-                    Bestel een schema voor het formaat van het zwembad waar jij
+                    *Bestel een schema voor het formaat van het zwembad waar jij
                     graag zwemt (25m of 50m). Zwem je in beide? Ga dan voor de
                     50m bad bundel.
                   </p>

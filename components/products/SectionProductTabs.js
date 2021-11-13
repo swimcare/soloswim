@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import Wave from "../svg/Wave";
+import Wave from "../svg/Wave"
 import Image from "next/image";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import SubSectionInhoudsopgaveNiveaus from "./inhoudsopgave/SubSectionInhoudsopgaveNiveaus";
