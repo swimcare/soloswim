@@ -197,9 +197,9 @@ function SectionProductDescription({
                 {productData.niveaus ? (
                   <a
                     className="underline text-navy-light1 text-xs"
-                    href="#niveau"
+                    href="#welk-niveau-past-bij-mij"
                   >
-                    Hoe weet ik mijn niveau?
+                    Welk niveau past bij mij?
                   </a>
                 ) : (
                   <p className="text-navy-light1 text-xs">
@@ -217,7 +217,7 @@ function SectionProductDescription({
                 onClick={() => {
                   addItemToBasket(productData);
                 }}
-                className="text-white lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+                className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
               >
                 Toevoegen aan winkelwagen
               </button>
