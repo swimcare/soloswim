@@ -4,6 +4,7 @@ title: "Borstcrawl Combi Zwemtraining"
 price: 12.99
 description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 niveaus: true
+isCombi: true
 type: "Beginners"
 editie: 1
 images: ["/images/zwemschemas/1-1.jpg"]
@@ -20,17 +21,6 @@ inhoud:
         { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
         { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
         { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
       ],
     semigevorderden:
       [
