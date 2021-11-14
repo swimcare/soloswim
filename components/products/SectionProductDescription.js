@@ -149,8 +149,8 @@ function SectionProductDescription({
                         onChange={(e) => setType(e.target.value)}
                       />
                       <label
-                        for="25m"
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block hover:border-gray-500 p-3 ${productData.type === "25 meter zwembad" ? "border-main" :  "border-gray-200"}`}
+                        htmlFor="25m"
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${productData.type === "25 meter zwembad" ? "border-main" :  "border-gray-200 hover:border-gray-500"}`}
                       >
                         25 meter bad
                       </label>
@@ -165,8 +165,8 @@ function SectionProductDescription({
                         onChange={(e) => setType(e.target.value)}
                       />
                       <label
-                        for="50m"
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block hover:border-gray-500 p-3 ${productData.type === "50 meter zwembad" ? "border-main" :  "border-gray-200"}`}
+                        htmlFor="50m"
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${productData.type === "50 meter zwembad" ? "border-main" :  "border-gray-200 hover:border-gray-500"}`}
                       >
                         50 meter bad
                       </label>
