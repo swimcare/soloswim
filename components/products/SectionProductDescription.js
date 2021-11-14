@@ -84,58 +84,71 @@ function SectionProductDescription({
             </div>
             {productData.type && (
               <div className="my-8 lg:my-10">
-                <p className="font-bold text-navy-light1 uppercase mr-8 text-tiny">
+                <p className="font-bold text-navy-light1 uppercase text-tiny">
                   {productData.niveaus ? "Niveau" : "Variant*"}
                 </p>
                 {productData.niveaus ? (
-                  // <select
-                  //   className="border-gray-300 border-2 rounded-full p-2 px-4 w-full text-tiny"
-                  //   name="type"
-                  //   id="type"
-                  //   value={selectedOption}
-                  //   onChange={(e) => setType(e.target.value)}
-                  // >
-                  //   <option value="Beginners">Beginners</option>
-                  //   <option value="Semi-gevorderden">Semi-gevorderden</option>
-                  //   <option value="Gevorderden">Gevorderden</option>
-                  // </select>
-                  <div className="my-2 flex flex-col lg:flex-row gap-2 lg:gap-6">
-                    <label
-                      className="text-tiny items-center hover:cursor-pointer"
-                      onChange={(e) => setType(e.target.value)}
-                    >
+                  <div className="my-2 text-xs font-bold flex flex-row flex-wrap gap-2 md:gap-3 lg:gap-4">
+                    <div>
                       <input
-                        className="hover:cursor-pointer"
+                        className="appearance-none fixed"
                         type="radio"
                         value="Beginners"
+                        id="Beginners"
                         name="type"
+                        onChange={(e) => setType(e.target.value)}
                       />
-                      <span class="ml-2">Beginners</span>
-                    </label>
-                    <label
-                      className="text-tiny items-center hover:cursor-pointer"
-                      onChange={(e) => setType(e.target.value)}
-                    >
+                      <label
+                        htmlFor="Beginners"
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                          productData.type === "Beginners"
+                            ? "border-main"
+                            : "border-gray-200 hover:border-gray-500"
+                        }`}
+                      >
+                        Beginners
+                      </label>
+                    </div>
+                    <div>
                       <input
-                        className="hover:cursor-pointer"
+                        className="appearance-none fixed"
                         type="radio"
                         value="Semi-gevorderden"
+                        id="Semi-gevorderden"
                         name="type"
+                        onChange={(e) => setType(e.target.value)}
                       />
-                      <span class="ml-2">Semi-gevorderden</span>
-                    </label>
-                    <label
-                      className="text-tiny items-center hover:cursor-pointer"
-                      onChange={(e) => setType(e.target.value)}
-                    >
+                      <label
+                        htmlFor="Semi-gevorderden"
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                          productData.type === "Semi-gevorderden"
+                            ? "border-main"
+                            : "border-gray-200 hover:border-gray-500"
+                        }`}
+                      >
+                        Semi-gevorderden
+                      </label>
+                    </div>
+                    <div>
                       <input
-                        className="hover:cursor-pointer"
+                        className="appearance-none fixed"
                         type="radio"
                         value="Gevorderden"
+                        id="Gevorderden"
                         name="type"
+                        onChange={(e) => setType(e.target.value)}
                       />
-                      <span class="ml-2">Gevorderden</span>
-                    </label>
+                      <label
+                        htmlFor="Gevorderden"
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                          productData.type === "Gevorderden"
+                            ? "border-main"
+                            : "border-gray-200 hover:border-gray-500"
+                        }`}
+                      >
+                        Gevorderden
+                      </label>
+                    </div>
                   </div>
                 ) : (
                   <div className="my-2 text-xs font-bold flex flex-row gap-2 md:gap-4">
@@ -150,7 +163,11 @@ function SectionProductDescription({
                       />
                       <label
                         htmlFor="25m"
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${productData.type === "25 meter zwembad" ? "border-main" :  "border-gray-200 hover:border-gray-500"}`}
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                          productData.type === "25 meter zwembad"
+                            ? "border-main"
+                            : "border-gray-200 hover:border-gray-500"
+                        }`}
                       >
                         25 meter bad
                       </label>
@@ -166,7 +183,11 @@ function SectionProductDescription({
                       />
                       <label
                         htmlFor="50m"
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${productData.type === "50 meter zwembad" ? "border-main" :  "border-gray-200 hover:border-gray-500"}`}
+                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                          productData.type === "50 meter zwembad"
+                            ? "border-main"
+                            : "border-gray-200 hover:border-gray-500"
+                        }`}
                       >
                         50 meter bad
                       </label>
