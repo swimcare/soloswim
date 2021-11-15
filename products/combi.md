@@ -11,27 +11,581 @@ images: ["/images/zwemschemas/1-1.jpg"]
 inhoud:
   {
     beginners:
-      [
-        { title: "training1", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200", type: "kracht trainingen" },
-      ],
+      {
+        techniek:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+          ],
+        kracht:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+          ],
+        duur:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+          ],
+      },
     semigevorderden:
-      [
-        { title: "training1", tags: "[snelheid] [kracht]", distance: "3200", type: "kracht" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "3200", type: "kracht" },
-      ],
+      {
+        techniek:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+          ],
+        kracht:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+          ],
+        duur:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+          ],
+      },
     gevorderden:
-      [
-        { title: "training1", tags: "[snelheid] [kracht]", distance: "4200", type: "kracht" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "4200", type: "kracht" },
-      ],
+      {
+        techniek:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "techniek trainingen",
+            },
+          ],
+        kracht:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "kracht trainingen",
+            },
+          ],
+        duur:
+          [
+            {
+              title: "training1",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+            {
+              title: "training2",
+              tags: "[snelheid] [kracht]",
+              distance: "2200",
+              type: "duur trainingen",
+            },
+          ],
+      },
   }
 ---
 

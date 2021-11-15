@@ -17,7 +17,9 @@ function Inhoudsopgave({ inhoud, editie }) {
       <div className="bg-white rounded-xl shadow-custom1 px-2 py-4 md:p-10 text-navy-light1 max-w-4xl">
         {/* only valid for combi... */}
         <div className="text-center mb-2">
-          <p className="uppercase">{inhoud[0].type ? inhoud[0].type : "Inhoudsopgave"}</p>
+          <p className="uppercase">
+            {inhoud[0].type ? inhoud[0].type : "Zwemtrainingen uit deze bundel"}
+          </p>
         </div>
 
         {mappedInhoud}

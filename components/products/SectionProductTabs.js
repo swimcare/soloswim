@@ -2,7 +2,6 @@ import { Fragment, useState } from "react";
 import Wave from "../svg/Wave"
 import Image from "next/image";
 import useWindowDimensions from "../hooks/useWindowDimensions";
-import SubSectionInhoudsopgaveNiveaus from "./inhoudsopgave/SubSectionInhoudsopgaveNiveaus";
 import SubSectionInhoudsopgave from "./inhoudsopgave/SubSectionInhoudsopgave";
 import SubSectionBenodigdhedenNiveaus from "./benodigdheden/SubSectionBenodigdhedenNiveaus";
 import SubSectionBenodigdheden from "./benodigdheden/SubSectionBenodigheden";
@@ -118,15 +117,7 @@ function SectionProductTabs({ productData }) {
               </div>
             )}
             {/* TAB 2: INHOUDSOPGAVE */}
-            {/* Met niveaus: */}
             {(activeTab === 2 || width <= 768) &&
-              productData.niveaus &&
-              !productData.isAccessoire && (
-                <SubSectionInhoudsopgaveNiveaus productData={productData} />
-              )}
-            {/* Indien product geen niveaus bevat: */}
-            {(activeTab === 2 || width <= 768) &&
-              !productData.niveaus &&
               !productData.isAccessoire && (
                 <SubSectionInhoudsopgave productData={productData} />
               )}
