@@ -6,12 +6,23 @@ export default function Home() {
     <Fragment>
       <section className="h-screen-navbar translate-y-0">
         <div className="relative h-full">
-            <Image
+          <div className="hidden xl:block">
+          <Image
               src="/images/home/header.png"
               alt="soloswim"
               layout="fill"
               objectFit="cover"
             />
+          </div>
+          <div className="xl:hidden">
+          <Image
+              src="/images/home/header-small.png"
+              alt="soloswim"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+
           <div className="grid grid-cols-5 w-full md:w-5/6 lg:w-4/6 h-full absolute -translate-x-36 md:-translate-x-48 lg:-translate-x-64 xl:-translate-x-48">
             <div className="bg-soloswim-pink skew-x-20"></div>
             <div className="bg-soloswim-orange skew-x-20 -translate-x-1"></div>
