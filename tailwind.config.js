@@ -59,8 +59,7 @@ module.exports = {
         ],
       },
       height: {
-        "screen-navbar": "calc(100vh - 64px)",
-        "screen-80": "80vh",
+        "screen-navbar": "calc(100vh - 54px)",
       },
       lineHeight: {
         "extra-loose": "2.5",

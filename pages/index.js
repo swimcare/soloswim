@@ -1,13 +1,13 @@
-import { Fragment } from "react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <Fragment>
+    <main>
+      {/* HERO */}
       <section className="h-screen-navbar translate-y-0">
         <div className="relative h-full">
           <div className="hidden xl:block">
-          <Image
+            <Image
               src="/images/home/header.png"
               alt="soloswim"
               layout="fill"
@@ -15,7 +15,7 @@ export default function Home() {
             />
           </div>
           <div className="xl:hidden">
-          <Image
+            <Image
               src="/images/home/header-small.png"
               alt="soloswim"
               layout="fill"
@@ -56,6 +56,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION 1 */}
+      <section className="bg-grey-light4">
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-10 lg:py-20">
+          <div>
+            <h2 className="text-main font-lexend font-extrabold text-2xl">
+              Herbruikbare zwemschema's
+            </h2>
+            <h3 className="text-navy-light1 font-lexend font-bold text-lg my-2">
+              Voor tijdens het banenzwemmen
+            </h3>
+          </div>
+          <div className="bg-white p-5 mt-16 rounded-2xl relative">
+            <div className="absolute top-0 -translate-x-5 -translate-y-20 w-full">
+              <Image
+                src="/images/home/bundels2.png"
+                width={543}
+                height={433}
+                alt="bundels"
+              />
+            </div>
+            <ul className="mt-36">
+              <li className="py-4">
+                <h4 className="font-bold text-navy-light1 tracking-wide">
+                  Zorgvuldig samengestelde bundels voor alle niveau’s
+                </h4>
+                <p className="text-navy-light1 text-tiny my-2">
+                  Bestaande uit 10 uitdagende trainingen
+                </p>
+              </li>
+              <li className="py-4">
+                <h4 className="font-bold text-navy-light1 tracking-wide">
+                  Verschillende thema’s
+                </h4>
+                <p className="text-navy-light1 text-tiny my-2">
+                  Van techniek-, kracht- of duur trainingen tot swimfit voor
+                  ontspanning
+                </p>
+              </li>
+              <li className="py-4">
+                <h4 className="font-bold text-navy-light1 tracking-wide">
+                  Gevarieerde oefeningen
+                </h4>
+                <p className="text-navy-light1 text-tiny my-2">
+                  Die het zwemmen leuker maken en je vooruit helpen
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
       {/* <section className="lg:pb-20">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
@@ -66,6 +117,6 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-    </Fragment>
+    </main>
   );
 }
