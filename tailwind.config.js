@@ -78,6 +78,7 @@ module.exports = {
       },
       skew: {
         25: "-25deg",
+        20: "-20deg",
       },
     },
   },
