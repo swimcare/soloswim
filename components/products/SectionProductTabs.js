@@ -1,10 +1,10 @@
 import { Fragment, useState } from "react";
-import Wave from "../svg/Wave"
 import Image from "next/image";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import SubSectionInhoudsopgave from "./inhoudsopgave/SubSectionInhoudsopgave";
 import SubSectionBenodigdhedenNiveaus from "./benodigdheden/SubSectionBenodigdhedenNiveaus";
 import SubSectionBenodigdheden from "./benodigdheden/SubSectionBenodigheden";
+import Wave from "../svg/Wave";
 
 function SectionProductTabs({ productData }) {
   // Bepalen van actieve tabjes (voor desktop enkel)

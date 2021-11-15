@@ -58,8 +58,9 @@ module.exports = {
           "serif",
         ],
       },
-      height:{
+      height: {
         "screen-navbar": "calc(100vh - 64px)",
+        "screen-80": "80vh",
       },
       lineHeight: {
         "extra-loose": "2.5",
