@@ -1,13 +1,20 @@
-import Link from "next/link";
 import { Fragment } from "react";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <Fragment>
-      <h1 className="text-3xl mb-10 bg-gray-50">Hoofdpagina</h1>
-      <Link href="/producten" passHref>
-        <a className="underline">Zwemschema's</a>
-      </Link>
+      <section className="h-screen translate-y-0">
+        <div className="relative h-full">
+          <Image
+            src="/images/home/header.png"
+            alt="soloswim"
+            layout="fill"
+            objectFit="cover"
+          />
+          <div className="bg-green-400 w-4/6 h-full absolute"></div>
+        </div>
+      </section>
 
       {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
       {/* <section className="lg:pb-20">

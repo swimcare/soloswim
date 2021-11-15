@@ -24,7 +24,7 @@ function Header() {
   }, [router]);
 
   return (
-    <div className="sticky z-30">
+    <header className="sticky z-30">
       <div className="grid grid-cols-10 w-full bg-soloswim-green">
         <div className="bg-soloswim-pink h-2 -skew-x-12"></div>
         <div className="bg-soloswim-orange h-2 -skew-x-12"></div>
@@ -169,7 +169,7 @@ function Header() {
           </div>
         )}
       </div>
-    </div>
+    </header>
   );
 }
 
