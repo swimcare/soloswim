@@ -20,13 +20,13 @@ export default function Home() {
             <div className="bg-soloswim-blue skew-x-20 -translate-x-4"></div>
             <div className="bg-soloswim-pink skew-x-20 -translate-x-5"></div>
           </div>
-          <div className="absolute w-4/6 top-1/2 transform -translate-y-1/2">
+          <div className="absolute w-7/12 top-1/2 transform -translate-y-1/2">
             <div className="xl:ml-24">
               <h3 className="font-lexend font-extrabold text-5xl text-navy-light1">
                 Soloswim introduceert:
               </h3>
             </div>
-            <div className="bg-white py-16 rounded-r-3xl">
+            <div className="bg-white py-10 my-10 rounded-r-3xl">
               <h1 className="xl:ml-24 text-main font-lexend font-extrabold text-7xl leading-tight">
                 Waterproof Zwemschema's
               </h1>
