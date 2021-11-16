@@ -35,7 +35,7 @@ module.exports = {
           light1: "#143f5f",
         },
         slateblue: {
-          dark1: "#203e5c",
+          dark1: "#203E5C",
         },
         soloswim: {
           pink: "#FFCCDF",

@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 1 */}
+      {/* SECTION 1: Herbruikbare zwemschema's */}
       <section className="bg-grey-light4">
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
           <div>
@@ -117,6 +117,59 @@ export default function Home() {
         <WaveSvg fill="#fff" />
       </section>
 
+      {/* SECTION 2: zo ziet een zwemschema eruit */}
+      <section>
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
+          <h2 className="font-lexend text-slateblue-dark1 font-extrabold text-3xl text-center mx-10">
+            Zo ziet een zwemschema eruit
+          </h2>
+          <h3 className="font-lexend my-2 text-main font-extrabold text-xl text-center mx-10">
+            Lekker duidelijk
+          </h3>
+          <div className="bg-grey-light4 rounded-2xl my-10 p-7">
+            <div>
+              <Image
+                src="/images/zwemschemas/3-1.png"
+                width={400}
+                height={400}
+                alt="zwemschema"
+              />
+            </div>
+            <ul>
+              <li className="font-bold my-6">
+                <h4 className="text-main text-xl leading-relaxed">Titel</h4>
+                <p className="text-md text-navy-light1 leading-relaxed">
+                  Een pakkende titel met focuspunten
+                </p>
+              </li>
+              <li className="font-bold my-6 opacity-50">
+                <h4 className="text-main text-xl leading-relaxed">Info</h4>
+                <p className="text-md text-navy-light1 leading-relaxed">
+                  De duur, afstand en benodigdheden
+                </p>
+              </li>
+              <li className="font-bold my-6 opacity-50">
+                <h4 className="text-main text-xl leading-relaxed">Inzwemmen</h4>
+                <p className="text-md text-navy-light1 leading-relaxed">
+                Een goede warming-up
+                </p>
+              </li>
+              <li className="font-bold my-6 opacity-50">
+                <h4 className="text-main text-xl leading-relaxed">Kern</h4>
+                <p className="text-md text-navy-light1 leading-relaxed">
+                Verschillende opdrachten
+                </p>
+              </li>
+              <li className="font-bold my-6 opacity-50">
+                <h4 className="text-main text-xl leading-relaxed">Uitzwemmen</h4>
+                <p className="text-md text-navy-light1 leading-relaxed">
+                Een cooling-down
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
       {/* <section className="lg:pb-20">
