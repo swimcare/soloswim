@@ -16,11 +16,11 @@ function SectionProductDescription({
 }) {
   const formattedProductImages = productData.images.map((image) => {
     return (
-      <div key={image}>
+      <div className="h-96" key={image}>
         <Image
           src={image}
-          width={400}
-          height={400}
+          layout="fill"
+          objectFit="contain"
           alt={productData.title}
         ></Image>
       </div>
