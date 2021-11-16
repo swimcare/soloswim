@@ -6,9 +6,9 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    const slideID = setTimeout(() => nextSlide(), 3000)
+    const slideID = setTimeout(() => nextSlide(), 2000);
     return () => {
-      clearTimeout(slideID)
+      clearTimeout(slideID);
     };
   }, [currentSlide]);
 
@@ -17,11 +17,10 @@ export default function Home() {
   };
 
   const nextSlide = () => {
-    if (currentSlide <= 3){
-      setCurrentSlide(currentSlide+1);
+    if (currentSlide <= 3) {
+      setCurrentSlide(currentSlide + 1);
     } else {
       setCurrentSlide(0);
-
     }
   };
 
@@ -36,6 +35,7 @@ export default function Home() {
               alt="soloswim"
               layout="fill"
               objectFit="cover"
+              priority
             />
           </div>
           <div className="xl:hidden">
@@ -44,6 +44,7 @@ export default function Home() {
               alt="soloswim"
               layout="fill"
               objectFit="cover"
+              priority
             />
           </div>
 
@@ -151,68 +152,114 @@ export default function Home() {
           </h3>
           <div className="sm:flex sm:flex-row my-10 max-w-5xl mx-auto">
             <div className="hidden sm:block my-auto sm:translate-x-5 z-20">
-              <Image
-                src="/images/home/bundel-front.png"
-                width={350}
-                height={476}
-                alt="zwemschema"
-              />
+              <div className={`${currentSlide === 0 ? "block" : "hidden"}`}>
+                <Image
+                  src="/images/home/bundel-front.png"
+                  width={350}
+                  height={476}
+                  alt="zwemschema"
+                  priority
+                />
+              </div>
+              <div className={`${currentSlide === 1 ? "block" : "hidden"}`}>
+                <Image
+                  src="/images/home/bundel-front2.png"
+                  width={350}
+                  height={476}
+                  alt="zwemschema"
+                  priority
+                />
+              </div>
+              <div className={`${currentSlide === 2 ? "block" : "hidden"}`}>
+                <Image
+                  src="/images/home/bundel-front3.png"
+                  width={350}
+                  height={476}
+                  alt="zwemschema"
+                  priority
+                />
+              </div>
+              <div className={`${currentSlide === 3 ? "block" : "hidden"}`}>
+                <Image
+                  src="/images/home/bundel-front4.png"
+                  width={350}
+                  height={476}
+                  alt="zwemschema"
+                  priority
+                />
+              </div>
+              <div className={`${currentSlide === 4 ? "block" : "hidden"}`}>
+                <Image
+                  src="/images/home/bundel-front5.png"
+                  width={350}
+                  height={476}
+                  alt="zwemschema"
+                  priority
+                />
+              </div>
             </div>
             <div className="flex-grow my-auto sm:-translate-x-5">
               <div className="bg-grey-light4 rounded-2xl sm:rounded-l-none p-7 sm:py-2 lg:pr-24 flex flex-col">
                 <div className="text-center sm:hidden mx-16">
-                  {currentSlide === 0 && (
+                  <div className={`${currentSlide === 0 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
                     />
-                  )}
+                  </div>
 
-                  {currentSlide === 1 && (
+                  <div className={`${currentSlide === 1 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front2.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
                     />
-                  )}
-                  {currentSlide === 2 && (
+                  </div>
+                  <div className={`${currentSlide === 2 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front3.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
                     />
-                  )}
-                  {currentSlide === 3 && (
+                  </div>
+                  <div className={`${currentSlide === 3 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front4.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
                     />
-                  )}
-                  {currentSlide === 4 && (
+                  </div>
+                  <div className={`${currentSlide === 4 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front5.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
                     />
-                  )}
+                  </div>
                 </div>
                 <ul className="my-3 lg:my-6 flex flex-col gap-4 sm:gap-3 md:gap-5 lg:gap-6 max-w-sm sm:pl-10 md:pl-0 sm:ml-auto md:mx-auto">
-                  <li className="font-bold" onClick={() => changeSlide(0)}>
+                  <li
+                    className={`font-bold hover:cursor-pointer ${
+                      currentSlide === 0 ? "opacity-100" : "opacity-50"
+                    }`}
+                    onMouseOver={() => changeSlide(0)}
+                  >
                     <h4 className="text-main text-sm leading-relaxed">Titel</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
                       Een pakkende titel met focuspunten
                     </p>
                   </li>
                   <li
-                    className="font-bold opacity-50"
-                    onClick={() => changeSlide(1)}
+                    className={`font-bold hover:cursor-pointer ${
+                      currentSlide === 1 ? "opacity-100" : "opacity-50"
+                    }`}
+                    onMouseOver={() => changeSlide(1)}
                   >
                     <h4 className="text-main text-sm leading-relaxed">Info</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
@@ -220,8 +267,10 @@ export default function Home() {
                     </p>
                   </li>
                   <li
-                    className="font-bold opacity-50"
-                    onClick={() => changeSlide(2)}
+                    className={`font-bold hover:cursor-pointer ${
+                      currentSlide === 2 ? "opacity-100" : "opacity-50"
+                    }`}
+                    onMouseOver={() => changeSlide(2)}
                   >
                     <h4 className="text-main text-sm leading-relaxed">
                       Inzwemmen
@@ -231,8 +280,10 @@ export default function Home() {
                     </p>
                   </li>
                   <li
-                    className="font-bold opacity-50"
-                    onClick={() => changeSlide(3)}
+                    className={`font-bold hover:cursor-pointer ${
+                      currentSlide === 3 ? "opacity-100" : "opacity-50"
+                    }`}
+                    onMouseOver={() => changeSlide(3)}
                   >
                     <h4 className="text-main text-sm leading-relaxed">Kern</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
@@ -240,8 +291,10 @@ export default function Home() {
                     </p>
                   </li>
                   <li
-                    className="font-bold opacity-50"
-                    onClick={() => changeSlide(4)}
+                    className={`font-bold hover:cursor-pointer ${
+                      currentSlide === 4 ? "opacity-100" : "opacity-50"
+                    }`}
+                    onMouseOver={() => changeSlide(4)}
                   >
                     <h4 className="text-main text-sm leading-relaxed">
                       Uitzwemmen
