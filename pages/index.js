@@ -60,15 +60,15 @@ export default function Home() {
       <section className="bg-grey-light4">
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-10 lg:py-20">
           <div>
-            <h2 className="text-main font-lexend font-extrabold text-2xl">
+            <h2 className="text-main font-lexend font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Herbruikbare zwemschema's
             </h2>
-            <h3 className="text-navy-light1 font-lexend font-bold text-lg my-2">
+            <h3 className="text-navy-light1 font-lexend font-bold md:font-extrabold text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl my-2 md:my-5">
               Voor tijdens het banenzwemmen
             </h3>
           </div>
-          <div className="bg-white p-5 mt-16 rounded-2xl relative">
-            <div className="absolute top-0 -translate-x-5 -translate-y-20 w-full">
+          <div className="bg-white shadow-custom3 p-5 mt-16 rounded-2xl flex flex-col sm:flex-row sm:w-5/6 lg:w-3/4 relative">
+            <div className="-translate-y-20 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:translate-x-1/2 sm:w-60 md:w-72 lg:w-auto">
               <Image
                 src="/images/home/bundels2.png"
                 width={543}
@@ -76,29 +76,29 @@ export default function Home() {
                 alt="bundels"
               />
             </div>
-            <ul className="mt-36">
+            <ul className="-translate-y-20 sm:translate-y-0 -mb-20 sm:mb-0 sm:w-3/4 md:max-w-md">
               <li className="py-4">
-                <h4 className="font-bold text-navy-light1 tracking-wide">
+                <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Zorgvuldig samengestelde bundels voor alle niveau’s
                 </h4>
-                <p className="text-navy-light1 text-tiny my-2">
+                <p className="text-navy-light1 text-tiny my-2 lg:text-base">
                   Bestaande uit 10 uitdagende trainingen
                 </p>
               </li>
               <li className="py-4">
-                <h4 className="font-bold text-navy-light1 tracking-wide">
+                <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Verschillende thema’s
                 </h4>
-                <p className="text-navy-light1 text-tiny my-2">
+                <p className="text-navy-light1 text-tiny my-2 lg:text-base">
                   Van techniek-, kracht- of duur trainingen tot swimfit voor
                   ontspanning
                 </p>
               </li>
               <li className="py-4">
-                <h4 className="font-bold text-navy-light1 tracking-wide">
+                <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Gevarieerde oefeningen
                 </h4>
-                <p className="text-navy-light1 text-tiny my-2">
+                <p className="text-navy-light1 text-tiny my-2 lg:text-base">
                   Die het zwemmen leuker maken en je vooruit helpen
                 </p>
               </li>
