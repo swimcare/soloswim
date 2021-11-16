@@ -4,7 +4,7 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 import SubSectionInhoudsopgave from "./inhoudsopgave/SubSectionInhoudsopgave";
 import SubSectionBenodigdhedenNiveaus from "./benodigdheden/SubSectionBenodigdhedenNiveaus";
 import SubSectionBenodigdheden from "./benodigdheden/SubSectionBenodigheden";
-import Wave from "../svg/Wave";
+// import Wave from "../svg/Wave";
 
 function SectionProductTabs({ productData }) {
   // Bepalen van actieve tabjes (voor desktop enkel)
@@ -17,7 +17,7 @@ function SectionProductTabs({ productData }) {
 
   return (
     <Fragment>
-      <Wave fill="#f5f4ef" />
+      {/* <Wave fill="#f5f4ef" /> */}
       <section className="bg-grey-light4">
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
           {/* Desktop tab systeem */}
@@ -142,17 +142,17 @@ function SectionProductTabs({ productData }) {
         </div>
       </section>
       {/* Wave: has to be white on desktop */}
-      <div className="bg-grey-light4 hidden lg:block">
+      {/* <div className="bg-grey-light4 hidden lg:block">
         <Wave fill="#ffffff" />
-      </div>
+      </div> */}
       {/* Wave: has to be blue on mobile if "niveaus info section" isn't there */}
-      <div className="bg-grey-light4 lg:hidden">
+      {/* <div className="bg-grey-light4 lg:hidden">
         {productData.niveaus ? (
           <Wave fill="#ffffff" />
         ) : (
           <Wave fill="#2628cd" />
         )}
-      </div>
+      </div> */}
     </Fragment>
   );
 }
