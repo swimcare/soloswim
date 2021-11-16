@@ -104,6 +104,14 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          <div className="text-center sm:text-left my-10 lg:my-20">
+            <button
+              role="button"
+              className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+            >
+              Bekijk ons aanbod
+            </button>
+          </div>
         </div>
       </section>
 
