@@ -119,54 +119,70 @@ export default function Home() {
 
       {/* SECTION 2: zo ziet een zwemschema eruit */}
       <section>
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
-          <h2 className="font-lexend text-slateblue-dark1 font-extrabold text-3xl text-center mx-10">
+        <div className="px-5 sm:px-3 max-w-screen-xl mx-auto py-20 lg:py-32">
+          <h2 className="font-lexend text-slateblue-dark1 font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mx-10">
             Zo ziet een zwemschema eruit
           </h2>
-          <h3 className="font-lexend my-2 text-main font-extrabold text-xl text-center mx-10">
+          <h3 className="font-lexend my-2 text-main font-extrabold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center mx-10">
             Lekker duidelijk
           </h3>
-          <div className="bg-grey-light4 rounded-2xl my-10 p-7">
-            <div>
+          <div className="sm:flex sm:flex-row my-10 max-w-5xl mx-auto">
+            <div className="hidden sm:block my-auto sm:translate-x-5 z-20">
               <Image
-                src="/images/zwemschemas/3-1.png"
-                width={400}
-                height={400}
+                src="/images/home/bundel-front.png"
+                width={350}
+                height={476}
                 alt="zwemschema"
               />
             </div>
-            <ul>
-              <li className="font-bold my-6">
-                <h4 className="text-main text-xl leading-relaxed">Titel</h4>
-                <p className="text-md text-navy-light1 leading-relaxed">
-                  Een pakkende titel met focuspunten
-                </p>
-              </li>
-              <li className="font-bold my-6 opacity-50">
-                <h4 className="text-main text-xl leading-relaxed">Info</h4>
-                <p className="text-md text-navy-light1 leading-relaxed">
-                  De duur, afstand en benodigdheden
-                </p>
-              </li>
-              <li className="font-bold my-6 opacity-50">
-                <h4 className="text-main text-xl leading-relaxed">Inzwemmen</h4>
-                <p className="text-md text-navy-light1 leading-relaxed">
-                Een goede warming-up
-                </p>
-              </li>
-              <li className="font-bold my-6 opacity-50">
-                <h4 className="text-main text-xl leading-relaxed">Kern</h4>
-                <p className="text-md text-navy-light1 leading-relaxed">
-                Verschillende opdrachten
-                </p>
-              </li>
-              <li className="font-bold my-6 opacity-50">
-                <h4 className="text-main text-xl leading-relaxed">Uitzwemmen</h4>
-                <p className="text-md text-navy-light1 leading-relaxed">
-                Een cooling-down
-                </p>
-              </li>
-            </ul>
+            <div className="flex-grow my-auto sm:-translate-x-5">
+              <div className="bg-grey-light4 rounded-2xl sm:rounded-l-none p-7 sm:py-2 lg:pr-24 flex flex-col">
+                <div className="text-center sm:hidden mx-16">
+                  <Image
+                    src="/images/home/bundel-front.png"
+                    width={350}
+                    height={476}
+                    alt="zwemschema"
+                  />
+                </div>
+                <ul className="my-3 lg:my-6 flex flex-col gap-4 sm:gap-3 md:gap-5 lg:gap-6 max-w-sm sm:pl-10 md:pl-0 sm:ml-auto md:mx-auto">
+                  <li className="font-bold">
+                    <h4 className="text-main text-sm leading-relaxed">Titel</h4>
+                    <p className="text-md text-navy-light1 leading-relaxed">
+                      Een pakkende titel met focuspunten
+                    </p>
+                  </li>
+                  <li className="font-bold opacity-50">
+                    <h4 className="text-main text-sm leading-relaxed">Info</h4>
+                    <p className="text-md text-navy-light1 leading-relaxed">
+                      De duur, afstand en benodigdheden
+                    </p>
+                  </li>
+                  <li className="font-bold opacity-50">
+                    <h4 className="text-main text-sm leading-relaxed">
+                      Inzwemmen
+                    </h4>
+                    <p className="text-md text-navy-light1 leading-relaxed">
+                      Een goede warming-up
+                    </p>
+                  </li>
+                  <li className="font-bold opacity-50">
+                    <h4 className="text-main text-sm leading-relaxed">Kern</h4>
+                    <p className="text-md text-navy-light1 leading-relaxed">
+                      Verschillende opdrachten
+                    </p>
+                  </li>
+                  <li className="font-bold opacity-50">
+                    <h4 className="text-main text-sm leading-relaxed">
+                      Uitzwemmen
+                    </h4>
+                    <p className="text-md text-navy-light1 leading-relaxed">
+                      Een cooling-down
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
