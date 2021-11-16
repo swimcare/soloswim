@@ -1,7 +1,30 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import WaveSvg from "../components/main/WaveSvg";
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const slideID = setTimeout(() => nextSlide(), 3000)
+    return () => {
+      clearTimeout(slideID)
+    };
+  }, [currentSlide]);
+
+  const changeSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    if (currentSlide <= 3){
+      setCurrentSlide(currentSlide+1);
+    } else {
+      setCurrentSlide(0);
+
+    }
+  };
+
   return (
     <main>
       {/* HERO */}
@@ -57,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 1: Herbruikbare zwemschema's */}
+      {/* SECTION 1: Herbruikbare zwemschema's TODO: consider building this like section 2 is setup */}
       <section className="bg-grey-light4">
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
           <div>
@@ -138,27 +161,68 @@ export default function Home() {
             <div className="flex-grow my-auto sm:-translate-x-5">
               <div className="bg-grey-light4 rounded-2xl sm:rounded-l-none p-7 sm:py-2 lg:pr-24 flex flex-col">
                 <div className="text-center sm:hidden mx-16">
-                  <Image
-                    src="/images/home/bundel-front.png"
-                    width={350}
-                    height={476}
-                    alt="zwemschema"
-                  />
+                  {currentSlide === 0 && (
+                    <Image
+                      src="/images/home/bundel-front.png"
+                      width={350}
+                      height={476}
+                      alt="zwemschema"
+                    />
+                  )}
+
+                  {currentSlide === 1 && (
+                    <Image
+                      src="/images/home/bundel-front2.png"
+                      width={350}
+                      height={476}
+                      alt="zwemschema"
+                    />
+                  )}
+                  {currentSlide === 2 && (
+                    <Image
+                      src="/images/home/bundel-front3.png"
+                      width={350}
+                      height={476}
+                      alt="zwemschema"
+                    />
+                  )}
+                  {currentSlide === 3 && (
+                    <Image
+                      src="/images/home/bundel-front4.png"
+                      width={350}
+                      height={476}
+                      alt="zwemschema"
+                    />
+                  )}
+                  {currentSlide === 4 && (
+                    <Image
+                      src="/images/home/bundel-front5.png"
+                      width={350}
+                      height={476}
+                      alt="zwemschema"
+                    />
+                  )}
                 </div>
                 <ul className="my-3 lg:my-6 flex flex-col gap-4 sm:gap-3 md:gap-5 lg:gap-6 max-w-sm sm:pl-10 md:pl-0 sm:ml-auto md:mx-auto">
-                  <li className="font-bold">
+                  <li className="font-bold" onClick={() => changeSlide(0)}>
                     <h4 className="text-main text-sm leading-relaxed">Titel</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
                       Een pakkende titel met focuspunten
                     </p>
                   </li>
-                  <li className="font-bold opacity-50">
+                  <li
+                    className="font-bold opacity-50"
+                    onClick={() => changeSlide(1)}
+                  >
                     <h4 className="text-main text-sm leading-relaxed">Info</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
                       De duur, afstand en benodigdheden
                     </p>
                   </li>
-                  <li className="font-bold opacity-50">
+                  <li
+                    className="font-bold opacity-50"
+                    onClick={() => changeSlide(2)}
+                  >
                     <h4 className="text-main text-sm leading-relaxed">
                       Inzwemmen
                     </h4>
@@ -166,13 +230,19 @@ export default function Home() {
                       Een goede warming-up
                     </p>
                   </li>
-                  <li className="font-bold opacity-50">
+                  <li
+                    className="font-bold opacity-50"
+                    onClick={() => changeSlide(3)}
+                  >
                     <h4 className="text-main text-sm leading-relaxed">Kern</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
                       Verschillende opdrachten
                     </p>
                   </li>
-                  <li className="font-bold opacity-50">
+                  <li
+                    className="font-bold opacity-50"
+                    onClick={() => changeSlide(4)}
+                  >
                     <h4 className="text-main text-sm leading-relaxed">
                       Uitzwemmen
                     </h4>
