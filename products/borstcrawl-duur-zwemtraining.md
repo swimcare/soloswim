@@ -6,6 +6,7 @@ description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerd
 niveaus: true
 type: "Beginners"
 editie: 1
+color: "yellow"
 images:
   [
     "/images/zwemschemas/1-1.jpg",

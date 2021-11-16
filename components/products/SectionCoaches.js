@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
-function SectionCoaches() {
+function SectionCoaches({ color, isCombi }) {
   // Render custom arrows for Carousel
   const ArrowRight = (onClick) => {
     return (
@@ -28,8 +28,29 @@ function SectionCoaches() {
   };
 
   return (
-    <section className="bg-soloswim-orange lg:pb-20">
-      <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
+    <section
+      className={`${
+        color && !isCombi && color !== "multicolor"
+          ? "bg-soloswim-" + color
+          : "bg-soloswim-orange"
+      } relative overflow-x-hidden`}
+    >
+      {color === "multicolor" && (
+        <div className="grid sm:grid-cols-10 grid-cols-6 md:w-125 sm:w-140 w-200 h-full absolute lg:-translate-x-44 sm:-translate-x-32 -translate-x-44">
+          <div className="bg-soloswim-orange skew-x-20"></div>
+          <div className="bg-soloswim-yellow skew-x-20 -translate-x-1"></div>
+          <div className="bg-soloswim-green skew-x-20 -translate-x-2"></div>
+          <div className="bg-soloswim-purple skew-x-20 -translate-x-3"></div>
+          <div className="bg-soloswim-blue skew-x-20 -translate-x-4"></div>
+          <div className="bg-soloswim-pink skew-x-20 -translate-x-5"></div>
+          <div className="hidden sm:block bg-soloswim-orange skew-x-20 -translate-x-6"></div>
+          <div className="hidden sm:block bg-soloswim-yellow skew-x-20 -translate-x-7"></div>
+          <div className="hidden sm:block bg-soloswim-green skew-x-20 -translate-x-8"></div>
+          <div className="hidden sm:block bg-soloswim-purple skew-x-20 -translate-x-9"></div>
+        </div>
+      )}
+
+      <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32 relative">
         <div className="bg-white rounded-2xl py-8 text-center">
           <div className="px-5 font-lexend font-extrabold text-3xl lg:text-4xl tracking-wide">
             <h3 className="text-main lg:my-4">

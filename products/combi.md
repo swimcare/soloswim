@@ -7,6 +7,7 @@ niveaus: true
 isCombi: true
 type: "Beginners"
 editie: 1
+color: "green-orange-yellow"
 images: ["/images/zwemschemas/1-1.jpg"]
 inhoud:
   {

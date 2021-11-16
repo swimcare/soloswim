@@ -80,7 +80,7 @@ export default function Zwemschema({ productData }) {
 
         <SectionFaq />
 
-        <SectionCoaches />
+        <SectionCoaches color={productData.color} isCombi={productData.isCombi} />
       </main>
     </Fragment>
   );

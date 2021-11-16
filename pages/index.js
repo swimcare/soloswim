@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import WaveSvg from "../components/main/WaveSvg";
+import SectionCoaches from "../components/products/SectionCoaches";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -48,12 +49,13 @@ export default function Home() {
             />
           </div>
 
-          <div className="grid grid-cols-5 w-full md:w-5/6 lg:w-4/6 h-full absolute -translate-x-36 md:-translate-x-48 lg:-translate-x-64 xl:-translate-x-48">
-            <div className="bg-soloswim-pink skew-x-20"></div>
-            <div className="bg-soloswim-orange skew-x-20 -translate-x-1"></div>
-            <div className="bg-soloswim-yellow skew-x-20 -translate-x-2"></div>
-            <div className="bg-soloswim-green skew-x-20 -translate-x-3"></div>
+          <div className="grid grid-cols-6 w-full md:w-5/6 lg:w-4/6 h-full absolute -translate-x-56 md:-translate-x-48 lg:-translate-x-64 xl:-translate-x-48">
+            <div className="bg-soloswim-orange skew-x-20"></div>
+            <div className="bg-soloswim-yellow skew-x-20 -translate-x-1"></div>
+            <div className="bg-soloswim-green skew-x-20 -translate-x-2"></div>
+            <div className="bg-soloswim-purple skew-x-20 -translate-x-3"></div>
             <div className="bg-soloswim-blue skew-x-20 -translate-x-4"></div>
+            <div className="bg-soloswim-pink skew-x-20 -translate-x-5"></div>
           </div>
           <div className="absolute w-full px-3 pt-16 md:pt-0 md:px-0 lg:w-7/12 md:w-9/12 md:top-1/2 md:transform md:-translate-y-1/2">
             <div className="md:ml-7 xl:ml-24">
@@ -61,7 +63,7 @@ export default function Home() {
                 Soloswim introduceert:
               </h3>
             </div>
-            <div className="bg-white px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
+            <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
               <h1 className="md:ml-4 xl:ml-20 max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
                 Waterproof Zwemschema's
               </h1>
@@ -101,7 +103,7 @@ export default function Home() {
                 alt="bundels"
               />
             </div>
-            <ul className="-translate-y-20 sm:translate-y-0 -mb-20 sm:mb-0 sm:w-3/4 md:max-w-md">
+            <ul className="-translate-y-20 sm:translate-y-0 -mb-20 sm:mb-0 sm:w-3/4 md:max-w-md lg:ml-6">
               <li className="py-4">
                 <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Zorgvuldig samengestelde bundels voor alle niveau’s
@@ -309,6 +311,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section 3: Coaches */}
+      <SectionCoaches color="multicolor" />
+
+      <div className="h-screen">
+        hoi
+      </div>
 
       {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
       {/* <section className="lg:pb-20">

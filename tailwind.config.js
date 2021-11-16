@@ -61,6 +61,11 @@ module.exports = {
       height: {
         "screen-navbar": "calc(100vh - 54px)",
       },
+      width: {
+        "125": "125%",
+        "140": "140%",
+        "200": "200%",
+      },
       lineHeight: {
         "extra-loose": "2.5",
         11: "3rem", //48px
