@@ -1,4 +1,5 @@
 import Image from "next/image";
+import WaveSvg from "../components/main/WaveSvg";
 
 export default function Home() {
   return (
@@ -58,7 +59,7 @@ export default function Home() {
 
       {/* SECTION 1 */}
       <section className="bg-grey-light4">
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-10 lg:py-20">
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
           <div>
             <h2 className="text-main font-lexend font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Herbruikbare zwemschema's
@@ -104,7 +105,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="text-center sm:text-left my-10 lg:my-20">
+          <div className="text-center sm:text-left my-10 lg:mt-20">
             <button
               role="button"
               className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
@@ -113,7 +114,9 @@ export default function Home() {
             </button>
           </div>
         </div>
+        <WaveSvg fill="#fff" />
       </section>
+
 
       {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
       {/* <section className="lg:pb-20">
