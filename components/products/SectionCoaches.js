@@ -30,10 +30,10 @@ function SectionCoaches({ color, isCombi }) {
   return (
     <section
       className={`${
-        color && !isCombi && color !== "multicolor"
+        color && !isCombi && color !== "multicolor" && color !== "green-orange-yellow"
           ? "bg-soloswim-" + color
           : "bg-soloswim-orange"
-      } relative overflow-x-hidden`}
+      } relative overflow-x-hidden mb-20`}
     >
       {color === "multicolor" && (
         <div className="grid sm:grid-cols-10 grid-cols-6 md:w-125 sm:w-140 w-200 h-full absolute lg:-translate-x-44 sm:-translate-x-32 -translate-x-44">
@@ -47,6 +47,20 @@ function SectionCoaches({ color, isCombi }) {
           <div className="hidden sm:block bg-soloswim-yellow skew-x-20 -translate-x-7"></div>
           <div className="hidden sm:block bg-soloswim-green skew-x-20 -translate-x-8"></div>
           <div className="hidden sm:block bg-soloswim-purple skew-x-20 -translate-x-9"></div>
+        </div>
+      )}
+      {color === "green-orange-yellow" && (
+        <div className="grid lg:grid-cols-10 grid-cols-6 md:w-125 sm:w-140 w-200 h-full absolute lg:-translate-x-44 sm:-translate-x-32 -translate-x-44">
+          <div className="bg-soloswim-orange skew-x-20"></div>
+          <div className="bg-soloswim-yellow skew-x-20 -translate-x-1"></div>
+          <div className="bg-soloswim-green skew-x-20 -translate-x-2"></div>
+          <div className="bg-soloswim-orange skew-x-20 -translate-x-3"></div>
+          <div className="bg-soloswim-yellow skew-x-20 -translate-x-4"></div>
+          <div className="bg-soloswim-green skew-x-20 -translate-x-5"></div>
+          <div className="hidden lg:block bg-soloswim-orange skew-x-20 -translate-x-6"></div>
+          <div className="hidden lg:block bg-soloswim-yellow skew-x-20 -translate-x-7"></div>
+          <div className="hidden lg:block bg-soloswim-green skew-x-20 -translate-x-8"></div>
+          <div className="hidden lg:block bg-soloswim-orange skew-x-20 -translate-x-9"></div>
         </div>
       )}
 
