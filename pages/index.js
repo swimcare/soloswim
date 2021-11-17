@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import FullWidthImageCard from "../components/home/FullWidthImageCard";
 import WaveSvg from "../components/main/WaveSvg";
 import SectionCoaches from "../components/products/SectionCoaches";
 
@@ -312,85 +313,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Coaches */}
+      {/* SECTION 3: COACHES */}
       <SectionCoaches color="multicolor" />
 
+      {/* SECTION 4: WAAROM SOLOSWIM */}
       <section className="bg-grey-light4">
-        <div className="px-5 sm:px-3 max-w-screen-xl mx-auto pt-20 pb-6 lg:pt-32">
-          <h2 className="font-lexend font-extrabold text-3xl text-main">
+        <div className="px-5 max-w-screen-xl mx-auto pt-20 pb-6 lg:pt-32">
+          <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-main">
             Waarom Soloswim
           </h2>
-          <h2 className="font-lexend font-extrabold text-xl text-navy-light1 my-2">
+          <h2 className="font-lexend font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-navy-light1 my-2 lg:my-5">
             Een aantal voordelen op een rijtje
           </h2>
         </div>
-        <div className="flex flex-col px-5 sm:px-0 pb-20 lg:pb-32 gap-7 sm:gap-10 lg:gap-14">
-          {/* waarom item */}
-          <div className="flex flex-col sm:flex-row max-w-4xl lg:max-w-9/10">
-            <div className="relative leading-none flex-none w-full h-60 sm:h-80 lg:h-88 2xl:h-96 sm:flex sm:items-stretch sm:w-2/6 md:w-5/12">
-              <Image
-                className="rounded-t-xl sm:rounded-none"
-                src="/images/home/waarom-soloswim-1.png"
-                layout="fill"
-                objectFit="cover"
-                alt="Doelgericht banenzwemmen"
-              />
-            </div>
-            <div className="bg-white shadow-custom3 rounded-b-xl sm:rounded-b-none sm:rounded-r-xl sm:mr-5 p-5 px-10 lg:p-11 xl:px-16 xl:py-14 flex flex-col gap-2 sm:gap-4 lg:gap-8">
-              <div className="flex flex-row gap-5 items-center">
-                <div>
-                  <p className="text-6xl lg:text-7xl text-navy-light1 font-lexend">01</p>
-                </div>
-                <div>
-                  <h3 className="text-main font-bold lg:font-extrabold lg:text-2xl text-lg">
-                    Doelgericht banenzwemmen
-                  </h3>
-                </div>
-              </div>
-              <div>
-                <p className="text-base leading-normal text-navy-light1 my-2">
-                  Met onze gestructureerde zwemschema’s hoef je niet meer na te
+        <div className="flex flex-col px-5 sm:px-0 pb-20 lg:pb-32 gap-7 sm:gap-10 lg:gap-14 lg:my-8">
+          <FullWidthImageCard
+            img="/images/home/waarom-soloswim-1.png"
+            number="01"
+            title="Doelgericht banenzwemmen"
+            text="Met onze gestructureerde zwemschema’s hoef je niet meer na te
                   denken over wat je gaat zwemmen. Hierdoor kun jij je volledig
                   richten op het uitvoeren van de training zodat jij met een
                   voldaan gevoel het zwembad verlaat, wat je doel met zwemmen
-                  ook is!
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* waarom item */}
-          <div className="flex flex-col sm:flex-row max-w-4xl lg:max-w-9/10 ml-auto">
-            <div className="sm:order-2 relative leading-none flex-none w-full h-60 sm:h-80 lg:h-88 2xl:h-96 sm:flex sm:items-stretch sm:w-2/6 md:w-5/12">
-              <Image
-                className="rounded-t-xl sm:rounded-none"
-                src="/images/home/waarom-soloswim-1.png"
-                layout="fill"
-                objectFit="cover"
-                alt="Doelgericht banenzwemmen"
-              />
-            </div>
-            <div className="bg-white shadow-custom3 rounded-b-xl sm:rounded-b-none sm:rounded-l-xl sm:ml-5 p-5 px-10 lg:p-11 xl:px-16 xl:py-14 flex flex-col gap-2 sm:gap-4 lg:gap-8">
-              <div className="flex flex-row gap-5 items-center">
-                <div>
-                <p className="text-6xl lg:text-7xl text-navy-light1 font-lexend">02</p>
-                </div>
-                <div>
-                <h3 className="text-main font-bold lg:font-extrabold lg:text-2xl text-lg">
-                    Breed aanbod aan zwemschema’s
-                  </h3>
-                </div>
-              </div>
-              <div>
-                <p className="text-base leading-normal text-navy-light1 my-2">
-                  Op wat voor manier je ook zwemt, met ons brede aanbod hebben
-                  wij zwemschema’s voor iedere zwemmer. Of je nou een fanatieke
-                  triatleet bent, nog helemaal geen zwemervaring hebt maar graag
-                  borstcrawl wilt leren zwemmen of gewoon lekker relaxed
-                  baantjes wilt trekken, er is voor ieder wat wils!
-                </p>
-              </div>
-            </div>
-          </div>
+                  ook is!"
+          />
+          <FullWidthImageCard
+            img="/images/home/waarom-soloswim-2.png"
+            number="02"
+            title="Breed aanbod aan zwemschema’s"
+            text="Op wat voor manier je ook zwemt, met ons brede aanbod hebben wij zwemschema’s voor iedere zwemmer. Of je nou een fanatieke triatleet bent, nog helemaal geen zwemervaring hebt maar graag borstcrawl wilt leren zwemmen of gewoon lekker relaxed baantjes wilt trekken, er is voor ieder wat wils!"
+            alignRight
+          />
+          <FullWidthImageCard
+            img="/images/home/waarom-soloswim-3.png"
+            number="03"
+            title="Waterproof en herbruikbaar"
+            text="Onze zwemschema’s zijn gemaakt van sterk materiaal en volledig waterproof. Hierdoor zijn papieren zwemschema’s die snel vergaan overbodig. Dus kies een bundel uit, stop hem in je zwemtas en gebruik hem keer op keer!"
+          />
+          <FullWidthImageCard
+            img="/images/home/waarom-soloswim-4.png"
+            number="04"
+            title="En misschien wel het belangrijkste: meer plezier tijdens het zwemmen!"
+            text="Elk schema bevat gevarieerde en uitdagende zwemoefeningen waardoor het banenzwemmen nooit saai wordt. Laat je verassen want geen schema is hetzelfde! Het voltooien van een schema geeft een heerlijk gevoel, zo ervaar jij nog meer plezier tijdens het banenzwemmen."
+            alignRight
+          />
         </div>
       </section>
 
