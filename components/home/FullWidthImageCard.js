@@ -9,7 +9,7 @@ function FullWidthImageCard({ img, number, title, text, alignRight }) {
           src={img}
           layout="fill"
           objectFit="cover"
-          alt="Doelgericht banenzwemmen"
+          alt={title}
         />
       </div>
       <div className={`bg-white shadow-custom3 rounded-b-xl sm:rounded-b-none ${alignRight ? "sm:rounded-l-xl sm:ml-5" : "sm:rounded-r-xl sm:mr-5"} p-5 sm:px-7 md:px-10 lg:p-11 2xl:px-16 2xl:py-14 flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-8`}>

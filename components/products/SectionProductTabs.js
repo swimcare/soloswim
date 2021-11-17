@@ -22,7 +22,7 @@ function SectionProductTabs({ productData }) {
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
           {/* Desktop tab systeem */}
           <div className="hidden md:block w-full border-b border-grey-warm border-opacity-25">
-            <ul className="flex flex-row space-x-10 translate-y-0.5">
+            <ul className="flex flex-row space-x-10 transform translate-y-0.5">
               <li
                 onClick={() => setActiveTab(1)}
                 className={`${

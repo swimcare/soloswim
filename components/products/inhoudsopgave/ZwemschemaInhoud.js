@@ -11,17 +11,17 @@ function ZwemschemaInhoud(props) {
           {props.name}
           <span className="hidden md:inline-block ml-2 font-normal">{props.tags}</span>
           {props.previewItem === 1 ? (
-            <span className="text-xs font-normal text-main float-right translate-y-0.5">
+            <span className="text-xs font-normal text-main float-right transform translate-y-0.5">
               Preview
               <span className="float-left mr-1">
                 <EyeIcon className="h-4 w-4 text-main" />
               </span>
-              <span className="ml-4 text-xs translate-y-0.5 float-right text-navy-light1">
+              <span className="ml-4 text-xs transform translate-y-0.5 float-right text-navy-light1">
                 {props.distance} m
               </span>
             </span>
           ) : (
-            <span className="font-normal ml-4 text-xs translate-y-0.5 float-right text-navy-light1">
+            <span className="font-normal ml-4 text-xs transform translate-y-0.5 float-right text-navy-light1">
               {props.distance} m
             </span>
           )}

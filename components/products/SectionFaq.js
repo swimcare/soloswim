@@ -18,7 +18,7 @@ function SectionFaq() {
                 <AccordionItem
                   toggle="faq1"
                   itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                  iconClass="ml-3 h-8 w-8 text-white transform -translate-y-1"
                 >
                   Lorem ipsum dolor sit a, conset d sadipscing elitr Lorem ipsum
                   dolor sit a, conset d sadipscing elitr?
@@ -37,7 +37,7 @@ function SectionFaq() {
                 <AccordionItem
                   toggle="faq2"
                   itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                  iconClass="ml-3 h-8 w-8 text-white transform -translate-y-1"
                 >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>
@@ -55,7 +55,7 @@ function SectionFaq() {
                 <AccordionItem
                   toggle="faq3"
                   itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                  iconClass="ml-3 h-8 w-8 text-white transform -translate-y-1"
                 >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>
@@ -77,7 +77,7 @@ function SectionFaq() {
                 <AccordionItem
                   toggle="faq4"
                   itemClass="flex flex-row justify-between align-start inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                  iconClass="ml-3 h-8 w-8 text-white transform -translate-y-1"
                 >
                   Lorem ipsum dolor sit a, conset d sadipscing elitr?
                 </AccordionItem>
@@ -95,7 +95,7 @@ function SectionFaq() {
                 <AccordionItem
                   toggle="faq5"
                   itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                  iconClass="ml-3 h-8 w-8 text-white transform -translate-y-1"
                 >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>
@@ -113,7 +113,7 @@ function SectionFaq() {
                 <AccordionItem
                   toggle="faq6"
                   itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
-                  iconClass="ml-3 h-8 w-8 text-white -translate-y-1"
+                  iconClass="ml-3 h-8 w-8 text-white transform -translate-y-1"
                 >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
                 </AccordionItem>

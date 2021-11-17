@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import FullWidthImageCard from "../components/home/FullWidthImageCard";
+import IconCard from "../components/home/IconCard";
 import WaveSvg from "../components/main/WaveSvg";
 import SectionCoaches from "../components/products/SectionCoaches";
 
@@ -29,7 +30,7 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="h-screen-navbar translate-y-0">
+      <section className="h-screen-navbar transform translate-y-0">
         <div className="relative h-full">
           <div className="hidden xl:block">
             <Image
@@ -50,13 +51,13 @@ export default function Home() {
             />
           </div>
 
-          <div className="grid grid-cols-6 w-full md:w-5/6 lg:w-4/6 h-full absolute -translate-x-56 md:-translate-x-48 lg:-translate-x-64 xl:-translate-x-48">
+          <div className="grid grid-cols-6 w-full md:w-5/6 lg:w-4/6 h-full absolute transform -translate-x-56 md:-translate-x-48 lg:-translate-x-64 xl:-translate-x-48">
             <div className="bg-soloswim-orange skew-x-20"></div>
-            <div className="bg-soloswim-yellow skew-x-20 -translate-x-1"></div>
-            <div className="bg-soloswim-green skew-x-20 -translate-x-2"></div>
-            <div className="bg-soloswim-purple skew-x-20 -translate-x-3"></div>
-            <div className="bg-soloswim-blue skew-x-20 -translate-x-4"></div>
-            <div className="bg-soloswim-pink skew-x-20 -translate-x-5"></div>
+            <div className="bg-soloswim-yellow skew-x-20 transform -translate-x-1"></div>
+            <div className="bg-soloswim-green skew-x-20 transform -translate-x-2"></div>
+            <div className="bg-soloswim-purple skew-x-20 transform -translate-x-3"></div>
+            <div className="bg-soloswim-blue skew-x-20 transform -translate-x-4"></div>
+            <div className="bg-soloswim-pink skew-x-20 transform -translate-x-5"></div>
           </div>
           <div className="absolute w-full px-3 pt-16 md:pt-0 md:px-0 lg:w-7/12 md:w-9/12 md:top-1/2 md:transform md:-translate-y-1/2">
             <div className="md:ml-7 xl:ml-24">
@@ -96,7 +97,7 @@ export default function Home() {
             </h3>
           </div>
           <div className="bg-white shadow-custom3 p-5 mt-16 rounded-2xl flex flex-col sm:flex-row sm:w-5/6 lg:w-3/4 relative">
-            <div className="-translate-y-20 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:translate-x-1/2 sm:w-60 md:w-72 lg:w-auto">
+            <div className=" transform -translate-y-20 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:translate-x-1/2 sm:w-60 md:w-72 lg:w-auto">
               <Image
                 src="/images/home/bundels2.png"
                 width={543}
@@ -104,7 +105,7 @@ export default function Home() {
                 alt="bundels"
               />
             </div>
-            <ul className="-translate-y-20 sm:translate-y-0 -mb-20 sm:mb-0 sm:w-3/4 md:max-w-md lg:ml-6">
+            <ul className=" transform -translate-y-20 sm:translate-y-0 -mb-20 sm:mb-0 sm:w-3/4 md:max-w-md lg:ml-6">
               <li className="py-4">
                 <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Zorgvuldig samengestelde bundels voor alle niveau’s
@@ -154,7 +155,7 @@ export default function Home() {
             Lekker duidelijk
           </h3>
           <div className="sm:flex sm:flex-row my-10 max-w-5xl mx-auto">
-            <div className="hidden sm:block my-auto sm:translate-x-5 z-20">
+            <div className="hidden sm:block my-auto transform sm:translate-x-5 z-20">
               <div className={`${currentSlide === 0 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/bundel-front.png"
@@ -201,7 +202,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex-grow my-auto sm:-translate-x-5">
+            <div className="flex-grow my-auto transform sm:-translate-x-5">
               <div className="bg-grey-light4 rounded-2xl sm:rounded-l-none p-7 sm:py-2 lg:pr-24 flex flex-col">
                 <div className="text-center sm:hidden mx-16">
                   <div className={`${currentSlide === 0 ? "block" : "hidden"}`}>
@@ -326,7 +327,7 @@ export default function Home() {
             Een aantal voordelen op een rijtje
           </h2>
         </div>
-        <div className="flex flex-col px-5 sm:px-0 pb-20 lg:pb-32 gap-7 sm:gap-10 lg:gap-14 lg:my-8">
+        <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:my-8">
           <FullWidthImageCard
             img="/images/home/waarom-soloswim-1.png"
             number="01"
@@ -357,6 +358,16 @@ export default function Home() {
             text="Elk schema bevat gevarieerde en uitdagende zwemoefeningen waardoor het banenzwemmen nooit saai wordt. Laat je verassen want geen schema is hetzelfde! Het voltooien van een schema geeft een heerlijk gevoel, zo ervaar jij nog meer plezier tijdens het banenzwemmen."
             alignRight
           />
+        </div>
+        <div className="px-5 max-w-screen-xl mx-auto my-12 lg:my-32">
+          <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
+            Oké, nog een paar extra voordelen!
+          </h2>
+          <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
+            <IconCard img="/images/home/no-app-needed.png" title="Geen app nodig" />
+            <IconCard img="/images/home/no-subscription.png" title="Geen abbonnements kosten" />
+            <IconCard img="/images/home/no-printer.png" title="Geen printer nodig" />
+          </div>
         </div>
       </section>
 

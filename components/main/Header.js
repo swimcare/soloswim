@@ -86,7 +86,7 @@ function Header() {
                   }`}
                 />
                 {items.length > 0 && (
-                  <span className="absolute top-0 right-0 translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
+                  <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
                     {items.length}
                   </span>
                 )}
@@ -108,7 +108,7 @@ function Header() {
             <li className="hidden md:block self-center hover:underline hover:cursor-pointer">
               <Link href="/winkelwagen">
                 <a>
-                  <span className="inline-block mr-2 translate-y-1">
+                  <span className="inline-block mr-2 transform translate-y-1">
                     <ShoppingCartIcon className="w-5 h-5 text-main" />
                   </span>
                   <span>Winkelwagen ({items.length})</span>
@@ -126,7 +126,7 @@ function Header() {
                 </a>
               </Link>
               {items.length > 0 && (
-                <span className="absolute top-0 right-0 translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
+                <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
                   {items.length}
                 </span>
               )}
@@ -135,7 +135,7 @@ function Header() {
         </div>
         {/* Mobile navigation menu extended */}
         {mobileMenuExtended && (
-          <div className="sm:hidden bg-main text-white font-lexend font-bold text-xl pt-6 -translate-y-1">
+          <div className="sm:hidden bg-main text-white font-lexend font-bold text-xl pt-6 transform -translate-y-1">
             <ul>
               <Link href="/">
                 <a>
