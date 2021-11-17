@@ -33,7 +33,7 @@ function SectionCoaches({ color, isCombi }) {
         color && !isCombi && color !== "multicolor" && color !== "green-orange-yellow"
           ? "bg-soloswim-" + color
           : "bg-soloswim-orange"
-      } relative overflow-x-hidden mb-20`}
+      } relative overflow-x-hidden`}
     >
       {color === "multicolor" && (
         <div className="grid sm:grid-cols-10 grid-cols-6 md:w-125 sm:w-140 w-200 h-full absolute lg:-translate-x-44 sm:-translate-x-32 -translate-x-44">

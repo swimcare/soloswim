@@ -315,9 +315,84 @@ export default function Home() {
       {/* Section 3: Coaches */}
       <SectionCoaches color="multicolor" />
 
-      <div className="h-screen">
-        hoi
-      </div>
+      <section className="bg-grey-light4">
+        <div className="px-5 sm:px-3 max-w-screen-xl mx-auto pt-20 pb-6 lg:pt-32">
+          <h2 className="font-lexend font-extrabold text-3xl text-main">
+            Waarom Soloswim
+          </h2>
+          <h2 className="font-lexend font-extrabold text-xl text-navy-light1 my-2">
+            Een aantal voordelen op een rijtje
+          </h2>
+        </div>
+        <div className="flex flex-col px-5 sm:px-0 pb-20 lg:pb-32 gap-7 sm:gap-10">
+          {/* waarom item */}
+          <div className="flex flex-col sm:flex-row">
+            <div className="relative leading-none flex-none w-full h-60 sm:h-80 sm:flex sm:items-stretch sm:w-2/6">
+              <Image
+                className="rounded-t-xl sm:rounded-none"
+                src="/images/home/waarom-soloswim-1.png"
+                layout="fill"
+                objectFit="cover"
+                alt="Doelgericht banenzwemmen"
+              />
+            </div>
+            <div className="bg-white rounded-b-xl sm:rounded-b-none sm:rounded-r-xl sm:mr-5 p-5 px-10">
+              <div className="flex flex-row gap-5 items-center mb-4 sm:mb-8">
+                <div>
+                  <p className="text-6xl text-navy-light1 font-lexend">01</p>
+                </div>
+                <div>
+                  <h3 className="text-main font-bold text-lg">
+                    Doelgericht banenzwemmen
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <p className="text-base leading-normal text-navy-light1 my-2">
+                  Met onze gestructureerde zwemschema’s hoef je niet meer na te
+                  denken over wat je gaat zwemmen. Hierdoor kun jij je volledig
+                  richten op het uitvoeren van de training zodat jij met een
+                  voldaan gevoel het zwembad verlaat, wat je doel met zwemmen
+                  ook is!
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* waarom item */}
+          <div className="flex flex-col sm:flex-row">
+            <div className="relative leading-none flex-none w-full h-60 sm:h-80 sm:flex sm:items-stretch sm:w-2/6">
+              <Image
+                className="rounded-t-xl sm:rounded-none"
+                src="/images/home/waarom-soloswim-1.png"
+                layout="fill"
+                objectFit="cover"
+                alt="Doelgericht banenzwemmen"
+              />
+            </div>
+            <div className="bg-white rounded-b-xl sm:rounded-b-none sm:rounded-r-xl sm:mr-5 p-5 px-10">
+              <div className="flex flex-row gap-5 items-center mb-4 sm:mb-8">
+                <div>
+                  <p className="text-6xl text-navy-light1 font-lexend">01</p>
+                </div>
+                <div>
+                  <h3 className="text-main font-bold text-lg">
+                    Doelgericht banenzwemmen
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <p className="text-base leading-normal text-navy-light1 my-2">
+                  Met onze gestructureerde zwemschema’s hoef je niet meer na te
+                  denken over wat je gaat zwemmen. Hierdoor kun jij je volledig
+                  richten op het uitvoeren van de training zodat jij met een
+                  voldaan gevoel het zwembad verlaat, wat je doel met zwemmen
+                  ook is!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
       {/* <section className="lg:pb-20">
