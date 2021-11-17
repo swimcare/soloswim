@@ -1,5 +1,8 @@
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import FullWidthImageCard from "../components/home/FullWidthImageCard";
 import IconCard from "../components/home/IconCard";
 import WaveSvg from "../components/main/WaveSvg";
@@ -32,7 +35,7 @@ export default function Home() {
       {/* HERO */}
       <section className="h-screen-navbar transform translate-y-0">
         <div className="relative h-full">
-          <div className="hidden xl:block">
+          <div className="hidden sm:block">
             <Image
               src="/images/home/header.png"
               alt="soloswim"
@@ -41,7 +44,7 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="xl:hidden">
+          <div className="sm:hidden">
             <Image
               src="/images/home/header-small.png"
               alt="soloswim"
@@ -327,7 +330,7 @@ export default function Home() {
             Een aantal voordelen op een rijtje
           </h2>
         </div>
-        <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:my-8">
+        <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:py-8">
           <FullWidthImageCard
             img="/images/home/waarom-soloswim-1.png"
             number="01"
@@ -359,14 +362,92 @@ export default function Home() {
             alignRight
           />
         </div>
-        <div className="px-5 max-w-screen-xl mx-auto my-12 lg:my-32">
+        <div className="px-5 max-w-screen-xl mx-auto py-12 lg:py-32">
           <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
             Oké, nog een paar extra voordelen!
           </h2>
           <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
-            <IconCard img="/images/home/no-app-needed.png" title="Geen app nodig" />
-            <IconCard img="/images/home/no-subscription.png" title="Geen abbonnements kosten" />
-            <IconCard img="/images/home/no-printer.png" title="Geen printer nodig" />
+            <IconCard
+              img="/images/home/no-app-needed.png"
+              title="Geen app nodig"
+            />
+            <IconCard
+              img="/images/home/no-subscription.png"
+              title="Geen abbonnements kosten"
+            />
+            <IconCard
+              img="/images/home/no-printer.png"
+              title="Geen printer nodig"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div className="bg-grey-light4">
+        <WaveSvg fill="#2628cd" />
+      </div>
+
+      {/* SECTION 4: REVIEWS */}
+      <section className="bg-main">
+        <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
+          <h2 className="-mx-2 font-lexend font-extrabold text-3xl leading-normal text-center text-white">
+            Reacties van Soloswim gebruikers
+          </h2>
+          <div className="-mx-2">
+            <Carousel
+              showStatus={false}
+              showIndicators={false}
+              showThumbs={false}
+              renderArrowNext={(onClickHandler) => (
+                <button
+                  className="absolute right-0 top-0 transform h-full z-20"
+                  type="button"
+                  onClick={onClickHandler}
+                >
+                  <ArrowRightIcon className="w-7 h-7 text-white" />
+                </button>
+              )}
+              renderArrowPrev={(onClickHandler) => (
+                <button
+                  className="absolute left-0 top-0 transform h-full z-20"
+                  type="button"
+                  onClick={onClickHandler}
+                >
+                  <ArrowLeftIcon className="w-7 h-7 text-white" />
+                </button>
+              )}
+            >
+              <div className="mx-8">
+                <div className="bg-white rounded-2xl shadow-custom3 p-5 text-left">
+                  <div className="flex flex-col">
+                    <h3>Dit is zo leuk</h3>
+                    <span>XXXXX</span>
+                    <p>
+                      VAltiud zelf willen leren zwemmen?? Dat kan! Volg je zelf
+                      al een borstcrawl cursus? Dan is een soloswim schema de
+                      ideale aanvulling!
+                    </p>
+                    <h4>Claudia</h4>
+                  </div>
+                </div>
+              </div>
+              <div className="mx-8">
+                <div className="bg-white rounded-2xl shadow-custom3 p-5 text-left">
+                  <div className="flex flex-col">
+                    <h3>Dit is zo leuk</h3>
+                    <span>XXXXX</span>
+                    <p>
+                      VAltiud zelf willen leren zwemmen?? Dat kan! Volg je zelf
+                      al een borstcrawl cursus? Dan is een soloswim schema de
+                      ideale aanvulling!
+                    </p>
+                    <h4>Claudia</h4>
+                  </div>
+                </div>
+              </div>
+
+              
+            </Carousel>
           </div>
         </div>
       </section>
