@@ -69,6 +69,7 @@ module.exports = {
       },
       maxWidth: {
         "9/10": "90%",
+        "8/10": "80%",
       },
       lineHeight: {
         "extra-loose": "2.5",
