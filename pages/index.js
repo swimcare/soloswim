@@ -324,10 +324,10 @@ export default function Home() {
             Een aantal voordelen op een rijtje
           </h2>
         </div>
-        <div className="flex flex-col px-5 sm:px-0 pb-20 lg:pb-32 gap-7 sm:gap-10">
+        <div className="flex flex-col px-5 sm:px-0 pb-20 lg:pb-32 gap-7 sm:gap-10 lg:gap-14">
           {/* waarom item */}
-          <div className="flex flex-col sm:flex-row">
-            <div className="relative leading-none flex-none w-full h-60 sm:h-80 sm:flex sm:items-stretch sm:w-2/6">
+          <div className="flex flex-col sm:flex-row max-w-4xl lg:max-w-9/10">
+            <div className="relative leading-none flex-none w-full h-60 sm:h-80 lg:h-88 2xl:h-96 sm:flex sm:items-stretch sm:w-2/6 md:w-5/12">
               <Image
                 className="rounded-t-xl sm:rounded-none"
                 src="/images/home/waarom-soloswim-1.png"
@@ -336,13 +336,13 @@ export default function Home() {
                 alt="Doelgericht banenzwemmen"
               />
             </div>
-            <div className="bg-white shadow-custom3 rounded-b-xl sm:rounded-b-none sm:rounded-r-xl sm:mr-5 p-5 px-10">
-              <div className="flex flex-row gap-5 items-center mb-4 sm:mb-8">
+            <div className="bg-white shadow-custom3 rounded-b-xl sm:rounded-b-none sm:rounded-r-xl sm:mr-5 p-5 px-10 lg:p-11 xl:px-16 xl:py-14 flex flex-col gap-2 sm:gap-4 lg:gap-8">
+              <div className="flex flex-row gap-5 items-center">
                 <div>
-                  <p className="text-6xl text-navy-light1 font-lexend">01</p>
+                  <p className="text-6xl lg:text-7xl text-navy-light1 font-lexend">01</p>
                 </div>
                 <div>
-                  <h3 className="text-main font-bold text-lg">
+                  <h3 className="text-main font-bold lg:font-extrabold lg:text-2xl text-lg">
                     Doelgericht banenzwemmen
                   </h3>
                 </div>
@@ -359,8 +359,8 @@ export default function Home() {
             </div>
           </div>
           {/* waarom item */}
-          <div className="flex flex-col sm:flex-row">
-            <div className="sm:order-2 relative leading-none flex-none w-full h-60 sm:h-80 sm:flex sm:items-stretch sm:w-2/6">
+          <div className="flex flex-col sm:flex-row max-w-4xl lg:max-w-9/10 ml-auto">
+            <div className="sm:order-2 relative leading-none flex-none w-full h-60 sm:h-80 lg:h-88 2xl:h-96 sm:flex sm:items-stretch sm:w-2/6 md:w-5/12">
               <Image
                 className="rounded-t-xl sm:rounded-none"
                 src="/images/home/waarom-soloswim-1.png"
@@ -369,13 +369,13 @@ export default function Home() {
                 alt="Doelgericht banenzwemmen"
               />
             </div>
-            <div className="bg-white shadow-custom3 rounded-b-xl sm:rounded-b-none sm:rounded-l-xl sm:ml-5 p-5 px-10">
-              <div className="flex flex-row gap-5 items-center mb-4 sm:mb-8">
+            <div className="bg-white shadow-custom3 rounded-b-xl sm:rounded-b-none sm:rounded-l-xl sm:ml-5 p-5 px-10 lg:p-11 xl:px-16 xl:py-14 flex flex-col gap-2 sm:gap-4 lg:gap-8">
+              <div className="flex flex-row gap-5 items-center">
                 <div>
-                  <p className="text-6xl text-navy-light1 font-lexend">02</p>
+                <p className="text-6xl lg:text-7xl text-navy-light1 font-lexend">02</p>
                 </div>
                 <div>
-                  <h3 className="text-main font-bold text-lg">
+                <h3 className="text-main font-bold lg:font-extrabold lg:text-2xl text-lg">
                     Breed aanbod aan zwemschema’s
                   </h3>
                 </div>

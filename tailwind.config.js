@@ -60,11 +60,15 @@ module.exports = {
       },
       height: {
         "screen-navbar": "calc(100vh - 54px)",
+        88: "22rem",
       },
       width: {
-        "125": "125%",
-        "140": "140%",
-        "200": "200%",
+        125: "125%",
+        140: "140%",
+        200: "200%",
+      },
+      maxWidth: {
+        "9/10": "90%",
       },
       lineHeight: {
         "extra-loose": "2.5",
@@ -83,7 +87,7 @@ module.exports = {
       boxShadow: {
         custom1: "0 3px 20px rgba(0, 0, 0, 0.07)",
         custom2: "0 3px 15px rgba(0, 0, 0, 0.1)",
-        custom3: "0 3px 30px #0000000D"
+        custom3: "0 3px 30px #0000000D",
       },
       skew: {
         25: "-25deg",
