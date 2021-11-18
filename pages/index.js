@@ -434,6 +434,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="bg-main">
+        <WaveSvg fill="#fff" />
+      </div>
+
       {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
       {/* <section className="lg:pb-20">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
