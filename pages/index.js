@@ -509,18 +509,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 7: STAPPEN BESTELLEN */}
+      <div className="bg-main">
+        <WaveSvg fill="#FFF" />
+      </div>
+
+      {/* SECTION 7: STAPPEN BESTELLEN + KIES JOUW BUNDEL UIT */}
       <section>
+        {/* STAPPEN BESTELLEN */}
         <div className="px-5 max-w-screen-xl mx-auto py-12 lg:py-32">
           <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
             Doe mij maar zo'n schema!
           </h2>
           <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
-            <IconCard
-              color="bg-grey-light4"
-              img="/images/home/stap1.png"
-              title="Selecteer een trainingsbundel die bij jou past"
-            />
+            {/* Custom icon card */}
+            <div className="bg-grey-light4 rounded-2xl w-full max-w-sm mx-auto h-56">
+              <div className="flex flex-col text-center">
+                <div className="relative transform -translate-y-16 w-52 h-48 mx-auto">
+                  <Image
+                    src="/images/home/stap1.png"
+                    layout="fill"
+                    objectFit="contain"
+                    objectPosition="bottom"
+                    alt="Selecteer een trainingsbundel die bij jou past"
+                  />
+                </div>
+                <h3 className="text-navy-light1 font-semibold mx-4 transform -translate-y-10">
+                  Selecteer een trainingsbundel die bij jou past
+                </h3>
+              </div>
+            </div>
+            {/* End custom icon card */}
             <IconCard
               color="bg-grey-light4"
               img="/images/home/stap2.png"
@@ -550,6 +568,7 @@ export default function Home() {
               Nu nog eentje uitzoeken!
             </p>
           </div>
+          {/* KIES JOUW BUNDEL UIT*/}
           <div className="flex flex-col my-8">
             <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-main">
               Er is een Soloswim bundel die bij jou past
@@ -569,11 +588,12 @@ export default function Home() {
             </div>
             <div>slider</div>
             <button
-                  role="button"
-                  className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                >
-                  Bekijk alle producten
-                </button>          </div>
+              role="button"
+              className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+            >
+              Bekijk alle producten
+            </button>{" "}
+          </div>
         </div>
       </section>
 
