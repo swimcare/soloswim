@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import FullWidthImageCard from "../components/home/FullWidthImageCard";
 import IconCard from "../components/home/IconCard";
+import ReviewCard from "../components/home/ReviewCard";
 import WaveSvg from "../components/main/WaveSvg";
 import SectionCoaches from "../components/products/SectionCoaches";
 
@@ -393,8 +394,9 @@ export default function Home() {
           <h2 className="-mx-2 font-lexend font-extrabold text-3xl leading-normal text-center text-white">
             Reacties van Soloswim gebruikers
           </h2>
-          <div className="-mx-2">
+          <div className="-mx-2 my-12">
             <Carousel
+              infiniteLoop
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
@@ -417,36 +419,16 @@ export default function Home() {
                 </button>
               )}
             >
-              <div className="mx-8">
-                <div className="bg-white rounded-2xl shadow-custom3 p-5 text-left">
-                  <div className="flex flex-col">
-                    <h3>Dit is zo leuk</h3>
-                    <span>XXXXX</span>
-                    <p>
-                      VAltiud zelf willen leren zwemmen?? Dat kan! Volg je zelf
-                      al een borstcrawl cursus? Dan is een soloswim schema de
-                      ideale aanvulling!
-                    </p>
-                    <h4>Claudia</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="mx-8">
-                <div className="bg-white rounded-2xl shadow-custom3 p-5 text-left">
-                  <div className="flex flex-col">
-                    <h3>Dit is zo leuk</h3>
-                    <span>XXXXX</span>
-                    <p>
-                      VAltiud zelf willen leren zwemmen?? Dat kan! Volg je zelf
-                      al een borstcrawl cursus? Dan is een soloswim schema de
-                      ideale aanvulling!
-                    </p>
-                    <h4>Claudia</h4>
-                  </div>
-                </div>
-              </div>
-
-              
+              <ReviewCard
+                title="Dit is zo leuk!"
+                text="VAltiud zelf willen leren zwemmen?? Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
+                name="Kees"
+              />
+              <ReviewCard
+                title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
+                text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
+                name="Kees"
+              />
             </Carousel>
           </div>
         </div>
