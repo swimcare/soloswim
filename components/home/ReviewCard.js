@@ -40,11 +40,11 @@ function ReviewCard({ text, title, name }) {
   }, [containerRef]);
 
   return (
-    <div className="mx-8 h-full">
-      <div className="bg-white rounded-2xl shadow-custom3 p-5 text-left h-full">
-        <div className="flex flex-col gap-4 my-4">
+    <div className="mx-10 md:mx-0 h-full md:h-auto md:w-1/3">
+      <div className="bg-white rounded-2xl shadow-custom3 p-5 lg:p-3 lg:px-7 text-left h-full">
+        <div className="flex flex-col gap-1 my-4">
           <h3 className="text-lg text-main font-bold">{title}</h3>
-          <div className="flex flex-row transform -translate-x-1">
+          <div className="flex flex-row transform -translate-x-1 mb-3 mt-1">
             <StarIcon className="h-6 w-6 text-gold-dark1" />
             <StarIcon className="h-6 w-6 text-gold-dark1" />
             <StarIcon className="h-6 w-6 text-gold-dark1" />
@@ -54,7 +54,7 @@ function ReviewCard({ text, title, name }) {
           <div>
             <p
               ref={containerRef}
-              className={`leading-loose ${clamped && "line-clamp-5 clamp"}`}
+              className={`leading-7 ${clamped && "line-clamp-5 clamp"}`}
             >
               {text}
             </p>
@@ -63,7 +63,7 @@ function ReviewCard({ text, title, name }) {
             )}
           </div>
 
-          <h4 className="text-main font-bold">{name}</h4>
+          <h4 className="text-main font-bold mt-4">{name}</h4>
         </div>
       </div>
     </div>
