@@ -321,7 +321,7 @@ export default function Home() {
       {/* SECTION 3: COACHES */}
       <SectionCoaches color="multicolor" />
 
-      {/* SECTION 4: WAAROM SOLOSWIM */}
+      {/* SECTION 5: WAAROM SOLOSWIM */}
       <section className="bg-grey-light4">
         <div className="px-5 max-w-screen-xl mx-auto pt-20 pb-6 lg:pt-32">
           <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-main">
@@ -371,14 +371,17 @@ export default function Home() {
             <IconCard
               img="/images/home/no-app-needed.png"
               title="Geen app nodig"
+              shadow
             />
             <IconCard
               img="/images/home/no-subscription.png"
               title="Geen abbonnements kosten"
+              shadow
             />
             <IconCard
               img="/images/home/no-printer.png"
               title="Geen printer nodig"
+              shadow
             />
           </div>
         </div>
@@ -388,7 +391,7 @@ export default function Home() {
         <WaveSvg fill="#2628cd" />
       </div>
 
-      {/* SECTION 4: REVIEWS */}
+      {/* SECTION 6: REVIEWS */}
       <section className="bg-main">
         <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
           <h2 className="-mx-2 font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl leading-normal text-center text-white">
@@ -506,9 +509,31 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-main">
-        <WaveSvg fill="#fff" />
-      </div>
+      {/* SECTION 7: STAPPEN BESTELLEN */}
+      <section>
+        <div className="px-5 max-w-screen-xl mx-auto py-12 lg:py-32">
+          <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
+            Doe mij maar zo'n schema!
+          </h2>
+          <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
+            <IconCard
+              color="bg-grey-light4"
+              img="/images/home/stap1.png"
+              title="Selecteer een trainingsbundel die bij jou past"
+            />
+            <IconCard
+              color="bg-grey-light4"
+              img="/images/home/stap2.png"
+              title="Ontvang de bundel bij jou thuis"
+            />
+            <IconCard
+              color="bg-grey-light4"
+              img="/images/home/stap3.png"
+              title="Stop hem in je zwemtas en volg het schema vanuit het bad"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* INSTAGRAM SECTION todo: add to homepage, not product pages*/}
       {/* <section className="lg:pb-20">
