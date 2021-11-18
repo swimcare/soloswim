@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import Carousel from "react-multi-carousel";
+import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import FullWidthImageCard from "../components/home/FullWidthImageCard";
 import HomeProductItemCard from "../components/home/HomeProductItemCard";
@@ -32,6 +32,30 @@ export default function Home() {
     } else {
       setCurrentSlide(0);
     }
+  };
+
+  // react multi carousel
+  const responsive = {
+    xldesktop: {
+      breakpoint: { max: 3000, min: 1850 },
+      items: 4,
+      partialVisibilityGutter: 50, // this is needed to tell the amount of px that should be visible.
+    },
+    desktop: {
+      breakpoint: { max: 1850, min: 1024 },
+      items: 3,
+      partialVisibilityGutter: 100, // this is needed to tell the amount of px that should be visible.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      // partialVisibilityGutter: 20, // this is needed to tell the amount of px that should be visible.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      // partialVisibilityGutter: 20, // this is needed to tell the amount of px that should be visible.
+    },
   };
 
   return (
@@ -571,11 +595,16 @@ export default function Home() {
               Nu nog eentje uitzoeken!
             </p>
           </div>
-          {/* KIES JOUW BUNDEL UIT*/}
-          <div className="flex flex-col my-8">
-            <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-main">
-              Er is een Soloswim bundel die bij jou past
-            </h2>
+        </div>
+
+        {/*         <div className="px-5 max-w-screen-xl mx-auto py-12 lg:py-32">
+         */}
+        {/* KIES JOUW BUNDEL UIT*/}
+        <div className="flex flex-col my-8">
+          <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-main max-w-screen-xl mx-auto px-5">
+            Er is een Soloswim bundel die bij jou past
+          </h2>
+          <div className="max-w-screen-xl w-full px-5 mx-auto">
             <div className="flex flex-row justify-between my-4">
               <h3 className="font-lexend font-extrabold text-2xl sm:text-3xl lg:text-4xl text-navy-light1 my-auto">
                 Wat jouw niveau ook is
@@ -589,21 +618,40 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-row gap-5">
-              <HomeProductItemCard />
-              <HomeProductItemCard />
-              <HomeProductItemCard />
-              <HomeProductItemCard />
-              <HomeProductItemCard />
-            </div>
-
-            <button
-              role="button"
-              className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-            >
-              Bekijk alle producten
-            </button>
           </div>
+          <div className="ml-5 xl:w-[calc(1280px+((100%-1280px)/2)-20px)] xl:ml-auto">
+            <MultiCarousel
+              swipeable={false}
+              draggable={false}
+              showDots={true}
+              responsive={responsive}
+              // ssr={true} // means to render carousel on server-side.
+              infinite={false}
+              // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+              autoPlaySpeed={1000}
+              keyBoardControl={true}
+              partialVisbile={true}
+              // customTransition="all .5"
+              // transitionDuration={500}
+              // containerClass="carousel-container"
+              // removeArrowOnDeviceType={["tablet", "mobile"]}
+              // deviceType={this.props.deviceType}
+              // dotListClass="custom-dot-list-style"
+              // itemClass="carousel-item-padding-40-px"
+            >
+              <HomeProductItemCard />
+              <HomeProductItemCard />
+              <HomeProductItemCard />
+              <HomeProductItemCard />
+              <HomeProductItemCard />
+            </MultiCarousel>
+          </div>
+          <button
+            role="button"
+            className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+          >
+            Bekijk alle producten
+          </button>
         </div>
       </section>
 
