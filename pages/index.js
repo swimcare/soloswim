@@ -587,17 +587,6 @@ export default function Home() {
                 </button>
               </div>
             </div>
-
-            <button
-              role="button"
-              className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-            >
-              Bekijk alle producten
-            </button>
-          </div>
-        </div>
-        <div className="relative overflow-hidden h-96 w-full">
-          <div className="absolute">
             <div className="flex flex-row gap-5">
               <HomeProductItemCard />
               <HomeProductItemCard />
@@ -605,6 +594,13 @@ export default function Home() {
               <HomeProductItemCard />
               <HomeProductItemCard />
             </div>
+
+            <button
+              role="button"
+              className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+            >
+              Bekijk alle producten
+            </button>
           </div>
         </div>
       </section>
