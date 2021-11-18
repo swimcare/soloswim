@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import FullWidthImageCard from "../components/home/FullWidthImageCard";
+import HomeProductItemCard from "../components/home/HomeProductItemCard";
 import IconCard from "../components/home/IconCard";
 import ReviewCard from "../components/home/ReviewCard";
 import WaveSvg from "../components/main/WaveSvg";
@@ -586,28 +587,24 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="bg-grey-light4 rounded-3xl border-5 border-soloswim-orange h-96 w-80 pt-10 px-10">
-              <div className="flex flex-col h-full">
-                <div className="relative h-56 flex-shrink-0">
-                  <Image
-                    src="/images/home/bundel-front.png"
-                    layout="fill"
-                    objectFit="contain"
-                    alt="zwemschema"
-                  />
-                </div>
-                <div className="my-6 text-center">
-                  <h4 className="text-navy-light1 font-bold uppercase">100 meter borstcrarwl leren zwemmen</h4>
-                  <p className="text-sm text-navy-light1">€ 9,99</p>
-                </div>
-              </div>
-            </div>
+
             <button
               role="button"
               className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
             >
               Bekijk alle producten
             </button>
+          </div>
+        </div>
+        <div className="relative overflow-hidden h-96 w-full">
+          <div className="absolute">
+            <div className="flex flex-row gap-5">
+              <HomeProductItemCard />
+              <HomeProductItemCard />
+              <HomeProductItemCard />
+              <HomeProductItemCard />
+              <HomeProductItemCard />
+            </div>
           </div>
         </div>
       </section>
