@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import FullWidthImageCard from "../components/home/FullWidthImageCard";
 import HomeProductItemCard from "../components/home/HomeProductItemCard";
 import IconCard from "../components/home/IconCard";
