@@ -36,25 +36,39 @@ export default function Home() {
 
   // react multi carousel
   const responsive = {
-    xldesktop: {
-      breakpoint: { max: 3000, min: 1850 },
+    xl3: {
+      breakpoint: { max: 3000, min: 2000 },
+      items: 5,
+      // partialVisibilityGutter: 10, // this is needed to tell the amount of px that should be visible.
+    },
+    xl2: {
+      breakpoint: { max: 2000, min: 1400 },
       items: 4,
-      partialVisibilityGutter: 50, // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 10, // this is needed to tell the amount of px that should be visible.
     },
-    desktop: {
-      breakpoint: { max: 1850, min: 1024 },
+    xl: {
+      breakpoint: { max: 1400, min: 960 },
       items: 3,
-      partialVisibilityGutter: 100, // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 40, // this is needed to tell the amount of px that should be visible.
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
+    lg: {
+      breakpoint: { max: 960, min: 700 },
       items: 2,
-      // partialVisibilityGutter: 20, // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 70, // this is needed to tell the amount of px that should be visible.
+    },
+    md: {
+      breakpoint: { max: 700, min: 568 },
+      items: 2,
+    },
+    sm: {
+      breakpoint: { max: 568, min: 430 },
+      items: 1,
+      partialVisibilityGutter: 135, // this is needed to tell the amount of px that should be visible.
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 430, min: 0 },
       items: 1,
-      // partialVisibilityGutter: 20, // this is needed to tell the amount of px that should be visible.
+      // partialVisibilityGutter: 0, // this is needed to tell the amount of px that should be visible.
     },
   };
 
@@ -541,9 +555,9 @@ export default function Home() {
       </div>
 
       {/* SECTION 7: STAPPEN BESTELLEN + KIES JOUW BUNDEL UIT */}
-      <section>
+      <section className="py-12 lg:py-32">
         {/* STAPPEN BESTELLEN */}
-        <div className="px-5 max-w-screen-xl mx-auto py-12 lg:py-32">
+        <div className="px-5 max-w-screen-xl mx-auto">
           <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
             Doe mij maar zo'n schema!
           </h2>
@@ -597,8 +611,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/*         <div className="px-5 max-w-screen-xl mx-auto py-12 lg:py-32">
-         */}
         {/* KIES JOUW BUNDEL UIT*/}
         <div className="flex flex-col my-8">
           <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-main max-w-screen-xl mx-auto px-5">
@@ -621,16 +633,17 @@ export default function Home() {
           </div>
           <div className="ml-5 xl:w-[calc(1280px+((100%-1280px)/2)-20px)] xl:ml-auto">
             <MultiCarousel
-              swipeable={false}
+              swipeable={true}
               draggable={false}
-              showDots={true}
+              showDots={false}
               responsive={responsive}
               // ssr={true} // means to render carousel on server-side.
               infinite={false}
               // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-              autoPlaySpeed={1000}
+              // autoPlaySpeed={1000}
               keyBoardControl={true}
-              partialVisbile={true}
+              partialVisible={true}
+              centerMode={false}
               // customTransition="all .5"
               // transitionDuration={500}
               // containerClass="carousel-container"
