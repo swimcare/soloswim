@@ -398,27 +398,32 @@ export default function Home() {
           <div className="-mx-2 my-12 md:hidden">
             <Carousel
               infiniteLoop
+              autoPlay
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
-              renderArrowNext={(onClickHandler) => (
-                <button
-                  className="absolute right-0 top-0 transform h-full z-20"
-                  type="button"
-                  onClick={onClickHandler}
-                >
-                  <ArrowRightIcon className="w-7 h-7 text-white" />
-                </button>
-              )}
-              renderArrowPrev={(onClickHandler) => (
-                <button
-                  className="absolute left-0 top-0 transform h-full z-20"
-                  type="button"
-                  onClick={onClickHandler}
-                >
-                  <ArrowLeftIcon className="w-7 h-7 text-white" />
-                </button>
-              )}
+              renderArrowNext={(onClickHandler, hasNext) =>
+                hasNext && (
+                  <button
+                    className="absolute right-0 top-0 transform h-full z-20"
+                    type="button"
+                    onClick={onClickHandler}
+                  >
+                    <ArrowRightIcon className="w-7 h-7 text-white" />
+                  </button>
+                )
+              }
+              renderArrowPrev={(onClickHandler, hasPrev) =>
+                hasPrev && (
+                  <button
+                    className="absolute left-0 top-0 transform h-full z-20"
+                    type="button"
+                    onClick={onClickHandler}
+                  >
+                    <ArrowLeftIcon className="w-7 h-7 text-white" />
+                  </button>
+                )
+              }
             >
               <div className="h-full">
                 <ReviewCard
@@ -450,28 +455,34 @@ export default function Home() {
           <div className="hidden md:block my-12 max-w-6xl lg:mx-auto">
             <Carousel
               infiniteLoop
+              autoPlay
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
-              renderArrowNext={(onClickHandler) => (
-                <button
-                  className="absolute right-0 top-0 transform h-full z-20"
-                  type="button"
-                  onClick={onClickHandler}
-                >
-                  <ArrowRightIcon className="w-7 h-7 text-white" />
-                </button>
-              )}
-              renderArrowPrev={(onClickHandler) => (
-                <button
-                  className="absolute left-0 top-0 transform h-full z-20"
-                  type="button"
-                  onClick={onClickHandler}
-                >
-                  <ArrowLeftIcon className="w-7 h-7 text-white" />
-                </button>
-              )}
+              renderArrowPrev={(onClickHandler, hasNext) =>
+                hasNext && (
+                  <button
+                    className="absolute right-0 top-0 transform h-full z-20"
+                    type="button"
+                    onClick={onClickHandler}
+                  >
+                    <ArrowRightIcon className="w-7 h-7 text-white" />
+                  </button>
+                )
+              }
+              renderArrowPrev={(onClickHandler, hasPrev) =>
+                hasPrev && (
+                  <button
+                    className="absolute left-0 top-0 transform h-full z-20"
+                    type="button"
+                    onClick={onClickHandler}
+                  >
+                    <ArrowLeftIcon className="w-7 h-7 text-white" />
+                  </button>
+                )
+              }
             >
+              {/* Group of 3 reviews */}
               <div className="flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
                 <ReviewCard
                   title="Dit is zo leuk!"
@@ -489,6 +500,7 @@ export default function Home() {
                   name="Kees"
                 />
               </div>
+              {/* End group of 3 reviews */}
             </Carousel>
           </div>
         </div>
