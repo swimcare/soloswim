@@ -84,6 +84,7 @@ module.exports = {
       },
       borderWidth: {
         3: "3px",
+        5: "5px",
       },
       translate: {
         0.5: "0.125rem", //2px
