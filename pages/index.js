@@ -421,7 +421,7 @@ export default function Home() {
             >
               <ReviewCard
                 title="Dit is zo leuk!"
-                text="VAltiud zelf willen leren zwemmen?? Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
+                text="VAltiud zeenchema de ideale aanvulling! "
                 name="Kees"
               />
               <ReviewCard

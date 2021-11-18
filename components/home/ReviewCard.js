@@ -40,8 +40,8 @@ function ReviewCard({ text, title, name }) {
   }, [containerRef]);
 
   return (
-    <div className="mx-8">
-      <div className="bg-white rounded-2xl shadow-custom3 p-5 text-left">
+    <div className="mx-8 h-full">
+      <div className="bg-white rounded-2xl shadow-custom3 p-5 text-left h-full">
         <div className="flex flex-col gap-4 my-4">
           <h3 className="text-lg text-main font-bold">{title}</h3>
           <div className="flex flex-row transform -translate-x-1">
