@@ -391,10 +391,11 @@ export default function Home() {
       {/* SECTION 4: REVIEWS */}
       <section className="bg-main">
         <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
-          <h2 className="-mx-2 font-lexend font-extrabold text-3xl leading-normal text-center text-white">
+          <h2 className="-mx-2 font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl leading-normal text-center text-white">
             Reacties van Soloswim gebruikers
           </h2>
-          <div className="-mx-2 my-12 md:mx-0 lg:mx-5">
+          {/* MOBILE REVIEWS (TOT EN MET SM BREAKPOINT) */}
+          <div className="-mx-2 my-12 md:hidden">
             <Carousel
               infiniteLoop
               showStatus={false}
@@ -419,30 +420,59 @@ export default function Home() {
                 </button>
               )}
             >
-              <div className="md:hidden h-full">
+              <div className="h-full">
                 <ReviewCard
                   title="Dit is zo leuk!"
                   text="VAltiud zeenchema de ideale aanvulling! "
                   name="Kees"
                 />
               </div>
-              <div className="md:hidden h-full">
+              <div className="h-full">
                 <ReviewCard
                   title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
                   text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
                   name="Kees"
-                />=
+                />
+                =
               </div>
 
-              <div className="md:hidden h-full">
+              <div className="h-full">
                 <ReviewCard
                   title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
                   text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
                   name="Kees"
-                />=
+                />
+                =
               </div>
-
-              <div className="hidden md:flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
+            </Carousel>
+          </div>
+          {/* DESKTOP REVIEWS (VANAF MD BREAKPOINT) */}
+          <div className="hidden md:block my-12 max-w-6xl lg:mx-auto">
+            <Carousel
+              infiniteLoop
+              showStatus={false}
+              showIndicators={false}
+              showThumbs={false}
+              renderArrowNext={(onClickHandler) => (
+                <button
+                  className="absolute right-0 top-0 transform h-full z-20"
+                  type="button"
+                  onClick={onClickHandler}
+                >
+                  <ArrowRightIcon className="w-7 h-7 text-white" />
+                </button>
+              )}
+              renderArrowPrev={(onClickHandler) => (
+                <button
+                  className="absolute left-0 top-0 transform h-full z-20"
+                  type="button"
+                  onClick={onClickHandler}
+                >
+                  <ArrowLeftIcon className="w-7 h-7 text-white" />
+                </button>
+              )}
+            >
+              <div className="flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
                 <ReviewCard
                   title="Dit is zo leuk!"
                   text="VAltiud zeenchema de ideale aanvulling! "
