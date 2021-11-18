@@ -532,6 +532,48 @@ export default function Home() {
               title="Stop hem in je zwemtas en volg het schema vanuit het bad"
             />
           </div>
+          <div className="flex flex-row max-w-xl md:max-w-full mx-auto">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="94"
+              height="94"
+              viewBox="0 0 133.108 133.598"
+            >
+              <path
+                id="Arrow-right_3"
+                d="M89.122,91.516A173.036,173.036,0,0,1,61.2,96.265q-8.729.406-17.47.014a3.048,3.048,0,0,1-2.988-2.269,2.774,2.774,0,0,1,1.789-3.143,45.473,45.473,0,0,1,8.371-.584,117.439,117.439,0,0,0,22.434-2c-4.865-1.427-9.64-3.115-14.4-4.789C46.794,79.2,34.8,74,24.943,66.146A74.831,74.831,0,0,1,2.573,32.889,66.112,66.112,0,0,1,1.027,2.88,2.95,2.95,0,0,1,3.019.23,3.474,3.474,0,0,1,6.49.824c1.545,1.33.671,3.308.577,4.983a77.313,77.313,0,0,0-.449,13.176,64.338,64.338,0,0,0,20.31,40.135C38.82,69.782,54.582,75.341,70.889,80.786c3.508,1.206,7.075,2.258,10.6,3.414a11.447,11.447,0,0,1,1.967.693C74.92,77.024,65.395,70.065,57.564,61.571a2.935,2.935,0,0,1-.374-3.943,3.671,3.671,0,0,1,4.164-1.165c4.924,3.772,9.486,9.6,15.3,13.722,5.52,4.475,10.79,9.208,15.852,14.107C95.517,87.667,93.6,90.86,89.122,91.516Z"
+                transform="matrix(0.799, 0.602, -0.602, 0.799, 58.07, 0.004)"
+                fill="#143f5f"
+              />
+            </svg>
+            <p className="md:hidden my-auto font-semibold text-tiny text-navy-light1 transform -translate-x-6">
+              Nu nog eentje uitzoeken!
+            </p>
+          </div>
+          <div className="flex flex-col my-8">
+            <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-main">
+              Er is een Soloswim bundel die bij jou past
+            </h2>
+            <div className="flex flex-row justify-between my-4">
+              <h3 className="font-lexend font-extrabold text-2xl sm:text-3xl lg:text-4xl text-navy-light1 my-auto">
+                Wat jouw niveau ook is
+              </h3>
+              <div className="hidden md:block my-auto flex-shrink-0">
+                <button
+                  role="button"
+                  className="text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                >
+                  Bekijk alle producten
+                </button>
+              </div>
+            </div>
+            <div>slider</div>
+            <button
+                  role="button"
+                  className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                >
+                  Bekijk alle producten
+                </button>          </div>
         </div>
       </section>
 
