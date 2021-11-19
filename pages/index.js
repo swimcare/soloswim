@@ -732,7 +732,7 @@ export default function Home() {
             </div>
           </div>
           {/* Over ons card */}
-          <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl  lg:max-w-9/10 2xl:max-w-8/10">
+          <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
             <div className="lg:hidden mx-5 leading-none text-zero">
               <Image
                 className="rounded-t-xl lg:rounded-none"
@@ -742,7 +742,7 @@ export default function Home() {
                 alt="Oprichters soloswim"
               />
             </div>
-            <div className="hidden lg:flex relative leading-none flex-none h-96 2xl:h-96 items-stretch w-5/12">
+            <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
               <Image
                 className="rounded-t-xl sm:rounded-none"
                 src="/images/home/soloswim-oprichters.png"
@@ -751,7 +751,7 @@ export default function Home() {
                 alt="Oprichters soloswim"
               />
             </div>
-            <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
+            <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
               <div>
                 <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
                   Handgemaakt in Nederland door zwemmers
@@ -775,13 +775,21 @@ export default function Home() {
                   we belangrijk!
                 </p>
               </div>
+              <div className="lg:inline-block hidden my-6">
+                <button
+                  role="button"
+                  className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                >
+                  Meer over ons
+                </button>
+              </div>
             </div>
             <div className="inline-block lg:hidden mx-auto my-6">
               <button
                 role="button"
                 className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
               >
-                Over ons
+                Meer over ons
               </button>
             </div>
           </div>
