@@ -722,7 +722,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
-                  >250 km
+                &gt;250 km
                 </p>
                 <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
                   aan zwemkilometers
@@ -804,12 +804,38 @@ export default function Home() {
           <h2 className="mx-auto max-w-5xl font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold text-center">
             Waarom wij zo van zwemmen houden!
           </h2>
-          <div className="my-5 lg:mx-20 lg:my-20 flex flex-col lg:justify-between gap-5 lg:gap-10 lg:flex-row text-slateblue-dark1 text-center">
-            <SimpleIconCard />
-            <SimpleIconCard />
-            <SimpleIconCard />
+          <div className="my-5 md:my-10 lg:my-20 flex flex-row flex-wrap justify-around gap-5 lg:gap-10 text-slateblue-dark1 text-center">
+            <SimpleIconCard
+              icon="/images/home/waarom-zwemmen1.png"
+              title="Blessurevrij sporten"
+              text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
+            />
+            <SimpleIconCard
+              icon="/images/home/waarom-zwemmen2.png"
+              title="Voor alle leeftijden"
+              text="Je ziet het meteen als je het zwembad inloopt: zwemmen is voor jong en oud! Je kunt het zo zwaar (of licht) maken als je zelf wilt."
+            />
+            <SimpleIconCard
+              icon="/images/home/waarom-zwemmen3.png"
+              title="Goed voor je gezondheid"
+              text="Longproblemen, hart- en vaatziekten of revalideren? Ga zwemmen is wat doktoren met goede reden zeggen!"
+            />
+            <SimpleIconCard
+              icon="/images/home/waarom-zwemmen4.png"
+              title="Toegankelijk"
+              text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
+            />
+            <SimpleIconCard
+              icon="/images/home/waarom-zwemmen5.png"
+              title="Full body workout"
+              text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
+            />
+            <SimpleIconCard
+              icon="/images/home/waarom-zwemmen6.png"
+              title="Blessurevrij sporten"
+              text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
+            />
           </div>
-          <div className="flex flex-col lg:flex-row"></div>
         </div>
       </section>
 
