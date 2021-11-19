@@ -11,6 +11,8 @@ import IconCard from "../components/home/IconCard";
 import ReviewCard from "../components/home/ReviewCard";
 import WaveSvg from "../components/main/WaveSvg";
 import SectionCoaches from "../components/products/SectionCoaches";
+import MultiColorBg from "../components/home/MultiColorBg";
+import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -696,6 +698,20 @@ export default function Home() {
           >
             Bekijk alle producten
           </button>
+        </div>
+      </section>
+
+      {/* SECTION 8: OVER ONS */}
+      <section className="relative overflow-x-hidden h-96">
+        <MultiColorBg />
+
+        {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32 relative"> */}
+        <div className="relative h-full flex flex-col justify-between">
+          <WaveExtendedSvg fill="#fff" />
+          <div>hoi</div>
+          <div className="transform rotate-180">
+            <WaveExtendedSvg fill="#fff" />
+          </div>
         </div>
       </section>
 
