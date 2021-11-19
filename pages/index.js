@@ -631,7 +631,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="ml-5 xl:w-[calc(1280px+((100%-1280px)/2)-20px)] xl:ml-auto">
+          <div className="ml-5 xl:w-[calc(1280px+((100%-1280px)/2)-20px)] xl:ml-auto my-5 md:my-10">
             <MultiCarousel
               swipeable={true}
               draggable={false}
@@ -652,11 +652,42 @@ export default function Home() {
               // dotListClass="custom-dot-list-style"
               // itemClass="carousel-item-padding-40-px"
             >
-              <HomeProductItemCard />
-              <HomeProductItemCard />
-              <HomeProductItemCard />
-              <HomeProductItemCard />
-              <HomeProductItemCard />
+              {/* todo: update href links to actual products */}
+              <HomeProductItemCard
+                title="BC complete zwemtraining"
+                img="/images/home/bundel-front.png"
+                price="12,99"
+                borderColor="border-soloswim-orange"
+                href="/producten"
+              />
+              <HomeProductItemCard
+                title="BC complete zwemtraining"
+                img="/images/home/bundel-front2.png"
+                price="12,99"
+                borderColor="border-soloswim-yellow"
+                href="/producten"
+              />
+              <HomeProductItemCard
+                title="BC complete zwemtraining"
+                img="/images/home/bundel-front3.png"
+                price="12,99"
+                borderColor="border-soloswim-blue"
+                href="/producten"
+              />
+              <HomeProductItemCard
+                title="BC complete zwemtraining"
+                img="/images/home/bundel-front4.png"
+                price="29,99"
+                borderColor="border-t-soloswim-orange border-b-soloswim-green border-l-soloswim-yellow border-r-soloswim-yellow"
+                href="/producten"
+              />
+              <HomeProductItemCard
+                title="BC complete zwemtraining"
+                img="/images/home/bundel-front5.png"
+                price="12,99"
+                borderColor="border-soloswim-pink"
+                href="/producten"
+              />
             </MultiCarousel>
           </div>
           <button
