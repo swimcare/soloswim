@@ -702,13 +702,80 @@ export default function Home() {
       </section>
 
       {/* SECTION 8: OVER ONS */}
-      <section className="relative overflow-x-hidden h-96">
+      <section className="relative overflow-x-hidden">
         <MultiColorBg />
 
         {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32 relative"> */}
         <div className="relative h-full flex flex-col justify-between">
           <WaveExtendedSvg fill="#fff" />
-          <div>hoi</div>
+          <div className="px-5 max-w-screen-xl mx-auto pt-20 lg:pt-32">
+            <h2 className="font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold">
+              Cijfers waar we trots op zijn!
+            </h2>
+            <div className="my-5 md:my-10 lg:my-20 flex flex-col gap-4 md:flex-row md:justify-evenly md:text-center">
+              <div>
+                <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
+                  100
+                </p>
+                <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
+                  Unieke zwemschema's
+                </p>
+              </div>
+              <div>
+                <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
+                  >250 km
+                </p>
+                <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
+                  aan zwemkilometers
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Over ons card */}
+          <div className="my-5 pb-20 lg:pb-32 flex flex-col sm:flex-row max-w-4xl lg:max-w-9/10 2xl:max-w-8/10">
+            <div className="relative leading-none flex-none mx-5 h-64 sm:h-80 lg:h-88 2xl:h-96 sm:flex sm:items-stretch sm:w-2/6 md:w-5/12">
+              <Image
+                className="rounded-t-xl sm:rounded-none"
+                src="/images/home/soloswim-oprichters.png"
+                layout="fill"
+                objectFit="cover"
+                alt="Oprichters soloswim"
+              />
+            </div>
+            <div className="bg-white mx-5 shadow-custom3 rounded-b-xl sm:rounded-b-none p-6 sm:px-7 md:px-10 lg:p-11 2xl:px-16 2xl:py-14 flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-8">
+              <div>
+                <h3 className="text-navy-light1 font-lexend font-bold text-lg leading-tight">
+                  Handgemaakt in Nederland door zwemmers
+                </h3>
+              </div>
+              <div>
+                <p className="text-base leading-relaxed text-navy-light1 my-1">
+                  Zwommen eerst bij clubs, nu kan dat niet echt meer (te oud).
+                  Dus gingen we zelf zwemmen en maakten we onze eigen trainingen
+                  op papier. Ons probleem → na 1 keer gebruik vergingen onze
+                  trainingen en dat vonden we zonde. Daarnaast hadden we het
+                  idee om een database van trainingen te maken zodat we ze niet
+                  elkaar hoefde te bedenken. Plus daarnaast merkten we dat veel
+                  mensen ons vroegen wat we aan het doen waren of waar we voor
+                  zwommen (door het papiertje) en dat ze dat een goed idee
+                  vonden of leuk vonden omdat ze zelf maar wat deden. Toen ging
+                  er een lampje branden en bedachten we de waterproof
+                  zwemtraining. We zijn gelijk aan de slag gegaan (hele terug
+                  reis van de mont Ventoux naar Nederland het idee uitgewerkt)
+                  en zoveel maanden later rolde de site/product uit.
+                </p>
+              </div>
+            </div>
+            <div className="inline-block mx-auto my-6">
+              <button
+                role="button"
+                className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+              >
+                Shop nu
+              </button>
+            </div>
+          </div>
+          {/* Einde over on card */}
           <div className="transform rotate-180">
             <WaveExtendedSvg fill="#fff" />
           </div>
