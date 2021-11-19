@@ -13,6 +13,7 @@ import WaveSvg from "../components/main/WaveSvg";
 import SectionCoaches from "../components/products/SectionCoaches";
 import MultiColorBg from "../components/home/MultiColorBg";
 import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
+import SimpleIconCard from "../components/home/SimpleIconCard";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -704,8 +705,6 @@ export default function Home() {
       {/* SECTION 8: OVER ONS */}
       <section className="relative overflow-x-hidden">
         <MultiColorBg />
-
-        {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32 relative"> */}
         <div className="relative h-full flex flex-col justify-between">
           <WaveExtendedSvg fill="#fff" />
           <div className="px-5 max-w-screen-xl mx-auto pt-20 lg:pt-32">
@@ -757,7 +756,7 @@ export default function Home() {
                   Handgemaakt in Nederland door zwemmers
                 </h3>
               </div>
-              <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-snug">
+              <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
                 <p className="">
                   Papier en water gaan niet zo goed samen, niet gek dat onze
                   handgeschreven zwemtrainingen in de prullenbak terecht kwamen.
@@ -797,6 +796,20 @@ export default function Home() {
           <div className="transform rotate-180">
             <WaveExtendedSvg fill="#fff" />
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
+          <h2 className="mx-auto max-w-5xl font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold text-center">
+            Waarom wij zo van zwemmen houden!
+          </h2>
+          <div className="my-5 lg:mx-20 lg:my-20 flex flex-col lg:justify-between gap-5 lg:gap-10 lg:flex-row text-slateblue-dark1 text-center">
+            <SimpleIconCard />
+            <SimpleIconCard />
+            <SimpleIconCard />
+          </div>
+          <div className="flex flex-col lg:flex-row"></div>
         </div>
       </section>
 
