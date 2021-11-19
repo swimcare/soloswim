@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       fontSize: {
         tiny: "0.9375rem",
+        zero: "0rem",
       },
       colors: {
         transparent: "transparent",
@@ -73,7 +74,8 @@ module.exports = {
       maxWidth: {
         "9/10": "90%",
         "8/10": "80%",
-        "s": "22rem",
+        95: "95%",
+        s: "22rem",
       },
       lineHeight: {
         "extra-loose": "2.5",

@@ -732,8 +732,17 @@ export default function Home() {
             </div>
           </div>
           {/* Over ons card */}
-          <div className="my-5 pb-20 lg:pb-32 flex flex-col sm:flex-row max-w-4xl lg:max-w-9/10 2xl:max-w-8/10">
-            <div className="relative leading-none flex-none mx-5 h-64 sm:h-80 lg:h-88 2xl:h-96 sm:flex sm:items-stretch sm:w-2/6 md:w-5/12">
+          <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl  lg:max-w-9/10 2xl:max-w-8/10">
+            <div className="lg:hidden mx-5 leading-none text-zero">
+              <Image
+                className="rounded-t-xl lg:rounded-none"
+                src="/images/home/soloswim-oprichters.png"
+                width={996}
+                height={772}
+                alt="Oprichters soloswim"
+              />
+            </div>
+            <div className="hidden lg:flex relative leading-none flex-none h-96 2xl:h-96 items-stretch w-5/12">
               <Image
                 className="rounded-t-xl sm:rounded-none"
                 src="/images/home/soloswim-oprichters.png"
@@ -742,36 +751,37 @@ export default function Home() {
                 alt="Oprichters soloswim"
               />
             </div>
-            <div className="bg-white mx-5 shadow-custom3 rounded-b-xl sm:rounded-b-none p-6 sm:px-7 md:px-10 lg:p-11 2xl:px-16 2xl:py-14 flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-8">
+            <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
               <div>
-                <h3 className="text-navy-light1 font-lexend font-bold text-lg leading-tight">
+                <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
                   Handgemaakt in Nederland door zwemmers
                 </h3>
               </div>
-              <div>
-                <p className="text-base leading-relaxed text-navy-light1 my-1">
-                  Zwommen eerst bij clubs, nu kan dat niet echt meer (te oud).
-                  Dus gingen we zelf zwemmen en maakten we onze eigen trainingen
-                  op papier. Ons probleem → na 1 keer gebruik vergingen onze
-                  trainingen en dat vonden we zonde. Daarnaast hadden we het
-                  idee om een database van trainingen te maken zodat we ze niet
-                  elkaar hoefde te bedenken. Plus daarnaast merkten we dat veel
-                  mensen ons vroegen wat we aan het doen waren of waar we voor
-                  zwommen (door het papiertje) en dat ze dat een goed idee
-                  vonden of leuk vonden omdat ze zelf maar wat deden. Toen ging
-                  er een lampje branden en bedachten we de waterproof
-                  zwemtraining. We zijn gelijk aan de slag gegaan (hele terug
-                  reis van de mont Ventoux naar Nederland het idee uitgewerkt)
-                  en zoveel maanden later rolde de site/product uit.
+              <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-snug">
+                <p className="">
+                  Papier en water gaan niet zo goed samen, niet gek dat onze
+                  handgeschreven zwemtrainingen in de prullenbak terecht kwamen.
+                  Zonde vonden we! Met een duidelijke missie gingen we aan de
+                  slag en ruim een halfjaar later was Soloswim geboren!
+                </p>
+                <p className="mt-4">
+                  We maken al onze bundels zelf met veel zorg; van het
+                  ontwikkelen van de trainingen tot het uitprinten en
+                  plastificeren van de bundels. Made in the Netherlands, daar
+                  zijn we trots op! Houd ons in de gaten want we zijn continu
+                  bezig met het uitbreiden van onze zwemschema’s. Zo komt er
+                  binnenkort een bundel voor recreanten (swimfit) en een bundel
+                  met verschillende slagen uit. Voor ieder wat wils, dat vinden
+                  we belangrijk!
                 </p>
               </div>
             </div>
-            <div className="inline-block mx-auto my-6">
+            <div className="inline-block lg:hidden mx-auto my-6">
               <button
                 role="button"
                 className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
               >
-                Shop nu
+                Over ons
               </button>
             </div>
           </div>
