@@ -82,7 +82,7 @@ export default function Home() {
         <div className="relative h-full">
           <div className="hidden sm:block">
             <Image
-              src="/images/home/header.png"
+              src="/images/home/header-desktop.png"
               alt="soloswim"
               layout="fill"
               objectFit="cover"

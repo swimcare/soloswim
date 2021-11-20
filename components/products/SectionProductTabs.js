@@ -73,11 +73,11 @@ function SectionProductTabs({ productData }) {
             {/* Tab 1: Wat krijg je */}
             {(activeTab === 1 || width <= 768) && (
               <div className="my-14 flex flex-col md:flex-row md:space-x-14">
-                <div className="max-w-xl shadow-custom2">
+                <div className="max-w-xl shadow-custom4">
                   <Image
-                    src={productData.images[0]}
-                    width={800}
-                    height={800}
+                    src={productData.tab1_image}
+                    width={740}
+                    height={789}
                     alt={productData.title}
                   ></Image>
                 </div>

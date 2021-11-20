@@ -7,7 +7,15 @@ niveaus: true
 type: "Beginners"
 editie: 1
 color: "green"
-images: ["/images/zwemschemas/1-1.jpg"]
+images:
+  [
+    "/images/zwemschemas/bct1/1.png",
+    "/images/zwemschemas/bct1/2.png",
+    "/images/zwemschemas/bct1/3.png",
+    "/images/zwemschemas/bct1/4.png",
+    "/images/zwemschemas/bct1/5.png",
+  ]
+tab1_image: "/images/zwemschemas/bct1/tab1.png"
 inhoud:
   {
     beginners:
@@ -25,13 +33,33 @@ inhoud:
       ],
     semigevorderden:
       [
-        { title: "training1", tags: "[snelheid] [kracht]", distance: "3200", type: "kracht" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "3200", type: "kracht" },
+        {
+          title: "training1",
+          tags: "[snelheid] [kracht]",
+          distance: "3200",
+          type: "kracht",
+        },
+        {
+          title: "training2",
+          tags: "[snelheid] [kracht]",
+          distance: "3200",
+          type: "kracht",
+        },
       ],
     gevorderden:
       [
-        { title: "training1", tags: "[snelheid] [kracht]", distance: "4200", type: "kracht" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "4200", type: "kracht" },
+        {
+          title: "training1",
+          tags: "[snelheid] [kracht]",
+          distance: "4200",
+          type: "kracht",
+        },
+        {
+          title: "training2",
+          tags: "[snelheid] [kracht]",
+          distance: "4200",
+          type: "kracht",
+        },
       ],
   }
 ---

@@ -96,6 +96,7 @@ module.exports = {
         custom1: "0 3px 20px rgba(0, 0, 0, 0.07)",
         custom2: "0 3px 15px rgba(0, 0, 0, 0.1)",
         custom3: "0 3px 30px #0000000D",
+        custom4: "0 3px 20px #00000029",
       },
       skew: {
         25: "-25deg",
