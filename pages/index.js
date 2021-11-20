@@ -453,8 +453,6 @@ export default function Home() {
           {/* MOBILE REVIEWS (TOT EN MET SM BREAKPOINT) */}
           <div className="-mx-2 my-12 md:hidden">
             <Carousel
-              infiniteLoop
-              autoPlay
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
@@ -494,28 +492,44 @@ export default function Home() {
                   text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
                   name="Kees"
                 />
-                =
               </div>
-
               <div className="h-full">
                 <ReviewCard
                   title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
                   text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
                   name="Kees"
                 />
-                =
+              </div>
+              <div className="h-full">
+                <ReviewCard
+                  title="Dit is zo leuk!"
+                  text="VAltiud zeenchema de ideale aanvulling! "
+                  name="Kees"
+                />
+              </div>
+              <div className="h-full">
+                <ReviewCard
+                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
+                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
+                  name="Kees"
+                />
+              </div>
+              <div className="h-full">
+                <ReviewCard
+                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
+                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                  name="Kees"
+                />
               </div>
             </Carousel>
           </div>
           {/* DESKTOP REVIEWS (VANAF MD BREAKPOINT) */}
           <div className="hidden md:block my-12 max-w-6xl lg:mx-auto">
             <Carousel
-              infiniteLoop
-              autoPlay
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
-              renderArrowPrev={(onClickHandler, hasNext) =>
+              renderArrowNext={(onClickHandler, hasNext) =>
                 hasNext && (
                   <button
                     className="absolute right-0 top-0 transform h-full z-20"
@@ -538,6 +552,25 @@ export default function Home() {
                 )
               }
             >
+              {/* Group of 3 reviews */}
+              <div className="flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
+                <ReviewCard
+                  title="Dit is zo leuk!"
+                  text="VAltiud zeenchema de ideale aanvulling! "
+                  name="Kees"
+                />
+                <ReviewCard
+                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
+                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
+                  name="Kees"
+                />
+                <ReviewCard
+                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
+                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                  name="Kees"
+                />
+              </div>
+              {/* End group of 3 reviews */}
               {/* Group of 3 reviews */}
               <div className="flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
                 <ReviewCard
