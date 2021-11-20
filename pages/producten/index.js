@@ -37,7 +37,7 @@ function index({ allProductsData }) {
                       <div>
                         <div className="inline-block bg-white mb-6 rounded-r-md px-3">
                           <p className="text-navy-light1 text-tiny">
-                            Recreanten
+                            Product-tag
                           </p>
                         </div>
                         <div className="text-center">
