@@ -9,19 +9,13 @@ editie: 1
 color: "yellow"
 images:
   [
-    "/images/zwemschemas/1-1.jpg",
-    "/images/zwemschemas/2-1.jpg",
-    "/images/zwemschemas/3-1.png",
-    "/images/zwemschemas/2-1(2).jpg",
-    "/images/zwemschemas/2-1(3).jpg",
-    "/images/zwemschemas/2-1(4).jpg",
-    "/images/zwemschemas/2-1(5).jpg",
-    "/images/zwemschemas/2-1(6).jpg",
-    "/images/zwemschemas/2-1(7).jpg",
-    "/images/zwemschemas/2-1(8).jpg",
-    "/images/zwemschemas/2-1(9).jpg",
-    "/images/zwemschemas/2-1(10).jpg",
+    "/images/zwemschemas/bcd1/1.png",
+    "/images/zwemschemas/bcd1/2.png",
+    "/images/zwemschemas/bcd1/3.png",
+    "/images/zwemschemas/bcd1/4.png",
+    "/images/zwemschemas/bcd1/5.png",
   ]
+tab1_image: "/images/zwemschemas/bct1/tab1.png"
 inhoud:
   {
     beginners:

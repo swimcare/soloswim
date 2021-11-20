@@ -41,7 +41,7 @@ function index({ allProductsData }) {
                           </p>
                         </div>
                         <div className="text-center">
-                          <div className="w-4/6 mx-auto">
+                          <div className="w-5/6 mx-auto">
                             <Image
                               src={images[0]}
                               width={400}
