@@ -7,6 +7,7 @@ import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { useState } from "react";
 
 function SectionProductDescription({
   productData,
@@ -27,6 +28,8 @@ function SectionProductDescription({
     );
   });
 
+  const [selectedPhoto, setSelectedPhoto] = useState(0);
+
   // React responsive carousel (images slider)
   // Return an array with all the images, rendered as normal img tag.
   const renderCustomThumbs = () => {
@@ -36,16 +39,17 @@ function SectionProductDescription({
     return thumbList;
   };
 
-  const setType = (type) => {
+  const setType = (type, id) => {
     setSelectedOption(type);
     productData.type = type;
+    setSelectedPhoto(+id);
   };
 
   return (
     <section className="bg-white">
       <div className="md:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
         <div className="flex flex-row flex-wrap md:flex-nowrap justify-between gap-10">
-          <div className="w-full max-w-sm mx-auto md:flex-grow md:w-32 pt-8 md:pt-5">
+          <div className="w-full max-w-sm mx-auto md:flex-grow md:w-32 pt-8 md:pt-5 hover:cursor-pointer">
             <Carousel
               showStatus={false}
               showIndicators={false}
@@ -53,6 +57,8 @@ function SectionProductDescription({
               thumbWidth={80}
               infiniteLoop
               showArrows={false}
+              selectedItem={selectedPhoto}
+              emulateTouch={true}
             >
               {formattedProductImages}
             </Carousel>
@@ -94,12 +100,12 @@ function SectionProductDescription({
                         className="appearance-none fixed"
                         type="radio"
                         value="Beginners"
-                        id="Beginners"
+                        id="1"
                         name="type"
-                        onChange={(e) => setType(e.target.value)}
+                        onChange={(e) => setType(e.target.value, e.target.id)}
                       />
                       <label
-                        htmlFor="Beginners"
+                        htmlFor="1"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
                           productData.type === "Beginners"
                             ? "border-main"
@@ -114,12 +120,12 @@ function SectionProductDescription({
                         className="appearance-none fixed"
                         type="radio"
                         value="Semi-gevorderden"
-                        id="Semi-gevorderden"
+                        id="2"
                         name="type"
-                        onChange={(e) => setType(e.target.value)}
+                        onChange={(e) => setType(e.target.value, e.target.id)}
                       />
                       <label
-                        htmlFor="Semi-gevorderden"
+                        htmlFor="2"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
                           productData.type === "Semi-gevorderden"
                             ? "border-main"
@@ -134,12 +140,12 @@ function SectionProductDescription({
                         className="appearance-none fixed"
                         type="radio"
                         value="Gevorderden"
-                        id="Gevorderden"
+                        id="3"
                         name="type"
-                        onChange={(e) => setType(e.target.value)}
+                        onChange={(e) => setType(e.target.value, e.target.id)}
                       />
                       <label
-                        htmlFor="Gevorderden"
+                        htmlFor="3"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
                           productData.type === "Gevorderden"
                             ? "border-main"
@@ -157,12 +163,12 @@ function SectionProductDescription({
                         className="appearance-none fixed"
                         type="radio"
                         value="25 meter zwembad"
-                        id="25m"
+                        id="1"
                         name="type"
-                        onChange={(e) => setType(e.target.value)}
+                        onChange={(e) => setType(e.target.value, e.target.id)}
                       />
                       <label
-                        htmlFor="25m"
+                        htmlFor="1"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
                           productData.type === "25 meter zwembad"
                             ? "border-main"
@@ -177,12 +183,12 @@ function SectionProductDescription({
                         className="appearance-none fixed"
                         type="radio"
                         value="50 meter zwembad"
-                        id="50m"
+                        id="2"
                         name="type"
-                        onChange={(e) => setType(e.target.value)}
+                        onChange={(e) => setType(e.target.value, e.target.id)}
                       />
                       <label
-                        htmlFor="50m"
+                        htmlFor="2"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
                           productData.type === "50 meter zwembad"
                             ? "border-main"
