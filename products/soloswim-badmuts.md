@@ -6,11 +6,13 @@ description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerd
 isAccessoire: true
 images:
   [
-    "/images/zwemschemas/1-1.jpg",
-    "/images/zwemschemas/2-1.jpg",
-    "/images/zwemschemas/3-1.png",
-    "/images/zwemschemas/2-1(2).jpg",
+    "/images/zwemschemas/bm1/1.png",
+    # "/images/zwemschemas/bm1/2.png",
+    # "/images/zwemschemas/bm1/3.png",
+    # "/images/zwemschemas/bm1/4.png",
+    # "/images/zwemschemas/bm1/5.png",
   ]
+tab1_image: "/images/zwemschemas/bct1/tab1.png"
 
 ---
 

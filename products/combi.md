@@ -1,14 +1,22 @@
 ---
 product_id: "BCC1"
 title: "Borstcrawl Combi Zwemtraining"
-price: 12.99
+price: 29.99
 description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 niveaus: true
 isCombi: true
 type: "Beginners"
 editie: 1
 color: "green-orange-yellow"
-images: ["/images/zwemschemas/1-1.jpg"]
+images:
+  [
+    "/images/zwemschemas/bcd1/1.png",
+    "/images/zwemschemas/bcd1/2.png",
+    "/images/zwemschemas/bcd1/3.png",
+    "/images/zwemschemas/bcd1/4.png",
+    "/images/zwemschemas/bcd1/5.png",
+  ]
+tab1_image: "/images/zwemschemas/bct1/tab1.png"
 inhoud:
   {
     beginners:
