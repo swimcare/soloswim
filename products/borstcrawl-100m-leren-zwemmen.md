@@ -17,8 +17,8 @@ inhoud:
   {
     beginners:
       [
-        { title: "training1", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "Ter land, ter zee en in de lucht", tags: "[snelheid] [armen] [keerpunten]", distance: "2400" },
+        { title: "training2", tags: "[snelheid] [kracht]", distance: "2300" },
         { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
         { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
         { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },

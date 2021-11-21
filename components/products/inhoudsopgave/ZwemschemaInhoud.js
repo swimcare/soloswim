@@ -9,7 +9,7 @@ function ZwemschemaInhoud(props) {
       <div className="flex-grow text-tiny md:border-b-2 md:mb-2">
         <p className="font-semibold mb-1">
           {props.name}
-          <span className="hidden md:inline-block ml-2 font-normal">{props.tags}</span>
+          <span className="hidden md:inline-block ml-2 font-normal text-xs">{props.tags}</span>
           {props.previewItem === 1 ? (
             <span className="text-xs font-normal text-main float-right transform translate-y-0.5">
               Preview
@@ -26,7 +26,7 @@ function ZwemschemaInhoud(props) {
             </span>
           )}
         </p>
-        <p className="text-xs md:hidden">[snelheid]</p>
+        <p className="text-xs md:hidden">{props.tags}</p>
       </div>
     </div>
   );
