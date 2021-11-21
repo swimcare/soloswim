@@ -56,3 +56,10 @@
   transform: rotate(135deg) !important;
   -webkit-transform: rotate(135deg) !important;
 }
+
+/* thumbnails carousel */
+
+.carousel .thumb{
+  padding: 0px !important;
+  border-radius: 5px !important;
+}

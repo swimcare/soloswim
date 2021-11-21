@@ -17,7 +17,7 @@ function SectionProductDescription({
 }) {
   const formattedProductImages = productData.images.map((image) => {
     return (
-      <div className="h-96" key={image}>
+      <div className="h-96 relative" key={image}>
         <Image
           src={image}
           layout="fill"
