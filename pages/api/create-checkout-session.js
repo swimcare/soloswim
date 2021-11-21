@@ -25,7 +25,7 @@ export default async (req, res) => {
           allowed_countries: ["NL"],
         },
         success_url: `${process.env.HOST}/bestelling-voltooid`,
-        cancel_url: `${process.env.HOST}/winkelwagen`, //add a cancel url
+        cancel_url: `${process.env.HOST}/bestelling-mislukt`,
         payment_method_types: ["card", "ideal"],
         shipping_rates: [process.env.SHIPPING_RATE_BRIEVENBUS],
         line_items: transformedItems,
