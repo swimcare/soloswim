@@ -82,16 +82,17 @@ export default function Home() {
         <div className="relative h-full overflow-hidden">
           <div className="hidden xl:block">
             <Image
-              src="/images/home/header-desktop.png"
+              src="/images/home/header-desktop.jpg"
               alt="soloswim"
               layout="fill"
               objectFit="cover"
               priority
+              quality={100}
             />
           </div>
           <div className="hidden sm:block xl:hidden">
             <Image
-              src="/images/home/header-tablet.png"
+              src="/images/home/header-tablet.jpg"
               alt="soloswim"
               layout="fill"
               objectFit="cover"
@@ -100,7 +101,7 @@ export default function Home() {
           </div>
           <div className="sm:hidden">
             <Image
-              src="/images/home/header-small.png"
+              src="/images/home/header-small.jpg"
               alt="soloswim"
               layout="fill"
               objectFit="cover"
