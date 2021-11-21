@@ -47,9 +47,9 @@ function SectionProductDescription({
 
   return (
     <section className="bg-white">
-      <div className="md:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+      <div className="md:px-8 max-w-screen-xl mx-auto pb-10 md:py-10 lg:py-20">
         <div className="flex flex-row flex-wrap md:flex-nowrap justify-between gap-10">
-          <div className="w-full max-w-sm mx-auto md:flex-grow md:w-32 pt-8 md:pt-5 hover:cursor-pointer">
+          <div className="w-full max-w-sm mx-auto md:flex-grow md:w-32 md:pt-5 hover:cursor-pointer">
             <Carousel
               showStatus={false}
               showIndicators={false}
