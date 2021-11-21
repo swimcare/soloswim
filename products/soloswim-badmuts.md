@@ -13,6 +13,7 @@ images:
     # "/images/zwemschemas/bm1/5.png",
   ]
 tab1_image: "/images/zwemschemas/bct1/tab1.png"
+card_info: "Leuk voor erbij!"
 
 ---
 

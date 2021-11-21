@@ -38,7 +38,7 @@ function SectionNiveauInfo() {
             text4="Een afstand van …m kun jij wel zwemmen"
           />
         </div>
-        <div className="text-center text-navy-light1">
+        <div className="text-center text-navy-light1 max-w-2xl mx-auto">
           <p className="text-tiny leading-6">
             Kom je er niet uit? Wij helpen je graag met het vaststellen van jouw
             niveau, neem contact op en we helpen je snel aan jouw eigen soloswim

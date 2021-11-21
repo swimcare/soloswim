@@ -27,7 +27,7 @@ function index({ allProductsData }) {
           </div>
           <div>
             <ul className="flex flex-col gap-5 my-10 md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-3">
-              {allProductsData.map(({ id, title, images, price }) => (
+              {allProductsData.map(({ id, title, images, price, card_info }) => (
                 <li
                   key={id}
                   className="bg-grey-light4 rounded-2xl hover:cursor-pointer hover:ring-4 hover:ring-main py-5"
@@ -35,9 +35,9 @@ function index({ allProductsData }) {
                   <Link href={`/producten/${id}`}>
                     <a>
                       <div>
-                        <div className="inline-block bg-white mb-6 rounded-r-md px-3">
+                        <div className="inline-block bg-white mb-6 rounded-r-md px-3 py-1">
                           <p className="text-navy-light1 text-tiny">
-                            Product-tag
+                            {card_info ? card_info : "Keuze uit 3 niveaus"}
                           </p>
                         </div>
                         <div className="text-center">

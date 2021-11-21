@@ -13,6 +13,7 @@ images:
     "/images/zwemschemas/bcc100/4.png",
   ]
 tab1_image: "/images/zwemschemas/bct1/tab1.png"
+card_info: "Borstcrawl cursus voor beginners"
 inhoud:
   {
     beginners:
