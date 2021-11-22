@@ -17,7 +17,7 @@ function SectionProductDescription({
 }) {
   const formattedProductImages = productData.images.map((image) => {
     return (
-      <div className="h-96 relative" key={image}>
+      <div className="h-96 lg:h-[calc(32rem)] relative" key={image}>
         <Image
           src={image}
           layout="fill"
@@ -44,12 +44,13 @@ function SectionProductDescription({
     productData.type = type;
     setSelectedPhoto(+id);
   };
+  
 
   return (
     <section className="bg-white">
       <div className="md:px-8 max-w-screen-xl mx-auto pb-10 md:py-10 lg:py-20">
         <div className="flex flex-row flex-wrap md:flex-nowrap justify-between gap-10">
-          <div className="w-full max-w-sm mx-auto md:flex-grow md:w-32 md:pt-5 hover:cursor-pointer">
+          <div className="w-full md:max-w-sm lg:max-w-md xl:max-w-lg mx-auto md:flex-grow md:w-32 md:mt-4 lg:-mt-6 xl:mt-6 hover:cursor-pointer">
             <Carousel
               showStatus={false}
               showIndicators={false}

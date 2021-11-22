@@ -15,7 +15,7 @@ images:
     "/images/zwemschemas/bck1/4.png",
     "/images/zwemschemas/bck1/5.png",
   ]
-tab1_image: "/images/zwemschemas/bct1/tab1.png"
+tab1_image: "/images/zwemschemas/bck1/6.png"
 inhoud:
   {
     beginners:

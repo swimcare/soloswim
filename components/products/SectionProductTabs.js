@@ -5,6 +5,7 @@ import SubSectionInhoudsopgave from "./inhoudsopgave/SubSectionInhoudsopgave";
 import SubSectionBenodigdhedenNiveaus from "./benodigdheden/SubSectionBenodigdhedenNiveaus";
 import SubSectionBenodigdheden from "./benodigdheden/SubSectionBenodigheden";
 import WaveSvg from "../main/WaveSvg";
+import WaveExtendedSvg from "../main/WaveExtendedSvg";
 
 function SectionProductTabs({ productData }) {
   // Bepalen van actieve tabjes (voor desktop enkel)
@@ -17,9 +18,12 @@ function SectionProductTabs({ productData }) {
 
   return (
     <Fragment>
-      <WaveSvg fill="#f5f4ef" />
+      <div className="hidden md:block">
+        <WaveSvg fill="#f5f4ef" />
+      </div>
+
       <section className="bg-grey-light4">
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 lg:py-20">
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto md:py-5 lg:py-20">
           {/* Desktop tab systeem */}
           <div className="hidden md:block w-full border-b border-grey-warm border-opacity-25">
             <ul className="flex flex-row space-x-10 transform translate-y-0.5">
@@ -72,16 +76,23 @@ function SectionProductTabs({ productData }) {
           <div>
             {/* Tab 1: Wat krijg je */}
             {(activeTab === 1 || width <= 768) && (
-              <div className="my-14 flex flex-col md:flex-row md:space-x-14">
-                <div className="max-w-xl shadow-custom4">
-                  <Image
-                    src={productData.tab1_image}
-                    width={740}
-                    height={789}
-                    alt={productData.title}
-                  ></Image>
+              <div className="md:my-14 flex flex-col md:flex-row md:space-x-14 gap-5 md:gap-0">
+                <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
+                  <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-full relative mx-auto">
+                    <Image
+                      className="md:rounded-xl"
+                      src={productData.tab1_image}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                      alt={productData.title}
+                    ></Image>
+                    <div className="md:hidden relative">
+                      <WaveExtendedSvg fill="#fff" />
+                    </div>
+                  </div>
                 </div>
-                <div className="max-w-xl">
+                <div className="w-full">
                   <h2 className="hidden md:block text-main text-2xl font-lexend font-extrabold">
                     Borstcrawl kracht zwemtraining
                   </h2>
@@ -117,10 +128,9 @@ function SectionProductTabs({ productData }) {
               </div>
             )}
             {/* TAB 2: INHOUDSOPGAVE */}
-            {(activeTab === 2 || width <= 768) &&
-              !productData.isAccessoire && (
-                <SubSectionInhoudsopgave productData={productData} />
-              )}
+            {(activeTab === 2 || width <= 768) && !productData.isAccessoire && (
+              <SubSectionInhoudsopgave productData={productData} />
+            )}
             {/* TAB 3: BENODIGDHEDEN */}
             {(activeTab === 3 || width <= 768) && !productData.isAccessoire && (
               <div className="my-14">

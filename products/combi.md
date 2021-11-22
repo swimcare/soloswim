@@ -10,13 +10,13 @@ editie: 1
 color: "green-orange-yellow"
 images:
   [
-    "/images/zwemschemas/bcd1/1.png",
-    "/images/zwemschemas/bcd1/2.png",
-    "/images/zwemschemas/bcd1/3.png",
-    "/images/zwemschemas/bcd1/4.png",
-    "/images/zwemschemas/bcd1/5.png",
+    "/images/zwemschemas/bcc1/1.png",
+    "/images/zwemschemas/bcc1/2.png",
+    "/images/zwemschemas/bcc1/3.png",
+    "/images/zwemschemas/bcc1/4.png",
+    "/images/zwemschemas/bcc1/5.png",
   ]
-tab1_image: "/images/zwemschemas/bct1/tab1.png"
+tab1_image: "/images/zwemschemas/bcc1/6.png"
 inhoud:
   {
     beginners:

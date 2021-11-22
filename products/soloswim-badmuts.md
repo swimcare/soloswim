@@ -7,12 +7,10 @@ isAccessoire: true
 images:
   [
     "/images/zwemschemas/bm1/1.png",
-    # "/images/zwemschemas/bm1/2.png",
-    # "/images/zwemschemas/bm1/3.png",
-    # "/images/zwemschemas/bm1/4.png",
-    # "/images/zwemschemas/bm1/5.png",
+    "/images/zwemschemas/bm1/2.png",
+    "/images/zwemschemas/bm1/3.png",
   ]
-tab1_image: "/images/zwemschemas/bct1/tab1.png"
+tab1_image: "/images/zwemschemas/bm1/4.png"
 card_info: "Leuk voor erbij!"
 
 ---

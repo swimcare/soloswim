@@ -1,5 +1,5 @@
 ---
-product_id: "BCC100"
+product_id: "BCL100"
 title: "Borstcrawl 100m leren zwemmen"
 price: 12.99
 description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
@@ -7,12 +7,12 @@ type: "25 meter zwembad"
 color: "blue"
 images:
   [
-    "/images/zwemschemas/bcc100/1.png",
-    "/images/zwemschemas/bcc100/2.png",
-    "/images/zwemschemas/bcc100/3.png",
-    "/images/zwemschemas/bcc100/4.png",
+    "/images/zwemschemas/bcl100/1.png",
+    "/images/zwemschemas/bcl100/2.png",
+    "/images/zwemschemas/bcl100/3.png",
+    "/images/zwemschemas/bcl100/4.png",
   ]
-tab1_image: "/images/zwemschemas/bct1/tab1.png"
+tab1_image: "/images/zwemschemas/bcl100/5.png"
 card_info: "Borstcrawl cursus voor beginners"
 inhoud:
   {
