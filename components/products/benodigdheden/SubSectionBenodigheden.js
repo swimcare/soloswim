@@ -14,18 +14,16 @@ function SubSectionBenodigdheden() {
           <DubbelAttribuut
             icon1="/images/zwemschemas/benodigdheden/badpak.png"
             alt1="badpak"
-            icon2="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt2="zwembril"
+            icon2="/images/zwemschemas/benodigdheden/zwembroek.png"
+            alt2="zwembroek"
             name="Sportieve zwemkleding"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
             name="Zwembril"
           />
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/badmuts.png"
             name="Badmuts (bij lang haar)"
           />
         </div>
@@ -35,12 +33,12 @@ function SubSectionBenodigdheden() {
         <p className="text-navy-light1">Handig om zelf te hebben, evt in zwembad lenen.</p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+            icon="/images/zwemschemas/benodigdheden/plankje.png"
             alt="zwembril"
             name="Plankje"
           />
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
+            icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             alt="zwembril"
             name="Pullbuoy"
           />

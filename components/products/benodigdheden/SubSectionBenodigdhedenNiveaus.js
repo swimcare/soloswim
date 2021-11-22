@@ -23,18 +23,16 @@ function SubSectionBenodigdhedenNiveaus() {
           <DubbelAttribuut
             icon1="/images/zwemschemas/benodigdheden/badpak.png"
             alt1="badpak"
-            icon2="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt2="zwembril"
+            icon2="/images/zwemschemas/benodigdheden/zwembroek.png"
+            alt2="zwembroek"
             name="Sportieve zwemkleding"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
             name="Zwembril"
           />
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/badmuts.png"
             name="Badmuts (bij lang haar)"
           />
         </div>
@@ -57,13 +55,12 @@ function SubSectionBenodigdhedenNiveaus() {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/plankje.png"
+            alt="plankje"
             name="Plankje"
           />
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             name="Pullbuoy"
           />
         </div>
@@ -86,28 +83,23 @@ function SubSectionBenodigdhedenNiveaus() {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/plankje.png"
             name="Plankje"
           />
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             name="Pullbuoy"
           />
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/handpeddels.png"
             name="Peddels"
           />
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/zoomers.png"
             name="Zoomers"
           />
           <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            alt="zwembril"
+            icon="/images/zwemschemas/benodigdheden/snorkel.png"
             name="Frontale snorkel (optioneel)"
           />
         </div>

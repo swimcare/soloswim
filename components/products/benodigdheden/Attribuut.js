@@ -1,21 +1,26 @@
 import Image from "next/image";
 
 function Attribuut(props) {
-    return (
-        <div className="bg-white rounded-xl shadow-custom1">
-        <div className="text-center mt-5 mb-2">
+  return (
+    <div className="bg-white rounded-xl shadow-custom1">
+      <div className="">
+        <div className="text-center h-20 w-20 relative mx-auto my-8">
           <Image
             src={props.icon}
-            width={120}
-            height={120}
-            alt={props.alt}
+            layout="fill"
+            objectFit="contain"
+            objectPosition="center"
+            alt={props.name}
           ></Image>
-          <div className="text-navy-light1 text-tiny">
+        </div>
+        <div>
+          <div className="text-navy-light1 text-tiny text-center my-5">
             <p className="mx-2">{props.name}</p>
           </div>
         </div>
       </div>
-    )
+    </div>
+  );
 }
 
-export default Attribuut
+export default Attribuut;
