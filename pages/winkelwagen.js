@@ -55,6 +55,7 @@ function winkelwagen() {
                     title={item.title}
                     editie={item.editie}
                     images={item.images}
+                    winkelwagen_images={item.winkelwagen_images}
                     price={item.price}
                     type={item.type}
                     description={item.description}

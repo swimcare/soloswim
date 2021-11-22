@@ -5,8 +5,18 @@ import NumberFormat from "react-number-format";
 import { useDispatch } from "react-redux";
 import { addToBasket, removeFromBasket } from "../../slices/basketSlice";
 
-
-function WinkelwagenItem({ i, id, title, price, editie, type, description, images, product_id }) {
+function WinkelwagenItem({
+  i,
+  id,
+  title,
+  price,
+  editie,
+  type,
+  description,
+  images,
+  winkelwagen_images,
+  product_id,
+}) {
   const dispatch = useDispatch();
 
   const removeItemFromBasket = () => {
@@ -24,10 +34,21 @@ function WinkelwagenItem({ i, id, title, price, editie, type, description, image
       price,
       description,
       images,
+      winkelwagen_images,
     };
 
     //push item into redux
     dispatch(addToBasket(product));
+  };
+
+  const typeNumber = () => {
+    if (type === "Beginners" || type === "25 meter zwembad") {
+      return 0;
+    } else if (type === "Semi-gevorderden" || type === "50 meter zwembad") {
+      return 1;
+    } else {
+      return 2;
+    }
   };
 
   return (
@@ -45,11 +66,19 @@ function WinkelwagenItem({ i, id, title, price, editie, type, description, image
             </Link>
           </h3>
         </div>
-        <div className="w-32 my-2">
+        <div className="w-52 my-2">
           <div className="hover:cursor-pointer">
             <Link href={`/producten/${id}`}>
               <a>
-                <Image src={images[0]} width={300} height={300} />
+                <Image
+                  src={
+                    type && winkelwagen_images
+                      ? winkelwagen_images[typeNumber()]
+                      : images[0]
+                  }
+                  width={300}
+                  height={300}
+                />
               </a>
             </Link>
           </div>
@@ -66,10 +95,18 @@ function WinkelwagenItem({ i, id, title, price, editie, type, description, image
             />
           </p>
           <div className="flex flex-row justify-between text-2xl">
-            <button role="button" onClick={addItemToBasket} className="hover:font-bold">
+            <button
+              role="button"
+              onClick={addItemToBasket}
+              className="hover:font-bold"
+            >
               +
             </button>
-            <button role="button" onClick={removeItemFromBasket} className="hover:font-bold">
+            <button
+              role="button"
+              onClick={removeItemFromBasket}
+              className="hover:font-bold"
+            >
               -
             </button>
           </div>

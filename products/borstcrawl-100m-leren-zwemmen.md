@@ -13,6 +13,7 @@ images:
     "/images/zwemschemas/bcl100/4.png",
   ]
 tab1_image: "/images/zwemschemas/bcl100/5.png"
+winkelwagen_images: ["/images/zwemschemas/bcl100/cart/1.png", "/images/zwemschemas/bcl100/cart/2.png"]
 card_info: "Borstcrawl cursus voor beginners"
 inhoud:
   {

@@ -33,6 +33,7 @@ export default function Zwemschema({ productData }) {
       price: product.price,
       description: product.description,
       images: product.images,
+      winkelwagen_images: product.winkelwagen_images,
     };
     // Sending the product as an action to the REDUX store... the basket slice
     dispatch(addToBasket(filteredProductData));
@@ -73,14 +74,18 @@ export default function Zwemschema({ productData }) {
 
         <SectionProductTabs productData={productData} />
 
-        {productData.niveaus ? <SectionNiveauInfo /> : (
+        {productData.niveaus ? (
+          <SectionNiveauInfo />
+        ) : (
           <div className="lg:h-20"></div>
         )}
 
-
         <SectionFaq />
 
-        <SectionCoaches color={productData.color} isCombi={productData.isCombi} />
+        <SectionCoaches
+          color={productData.color}
+          isCombi={productData.isCombi}
+        />
       </main>
     </Fragment>
   );
