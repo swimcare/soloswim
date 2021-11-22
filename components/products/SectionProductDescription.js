@@ -34,7 +34,7 @@ function SectionProductDescription({
   // Return an array with all the images, rendered as normal img tag.
   const renderCustomThumbs = () => {
     const thumbList = productData.images.map((image) => {
-      return <img key={image} src={image} alt={productData.title} />;
+      return <img className="rounded-sm" key={image} src={image} alt={productData.title} />;
     });
     return thumbList;
   };
@@ -48,9 +48,9 @@ function SectionProductDescription({
 
   return (
     <section className="bg-white">
-      <div className="md:px-8 max-w-screen-xl mx-auto pb-10 md:py-10 lg:py-20">
+      <div className="md:px-8 max-w-screen-xl mx-auto pb-10 md:py-10">
         <div className="flex flex-row flex-wrap md:flex-nowrap justify-between gap-10">
-          <div className="w-full md:max-w-sm lg:max-w-md xl:max-w-lg mx-auto md:flex-grow md:w-32 md:mt-4 lg:-mt-6 xl:mt-6 hover:cursor-pointer">
+          <div className="w-full md:max-w-sm lg:max-w-md xl:max-w-xl md:flex-grow md:w-32 md:mt-4 lg:-mt-6 xl:mt-6 hover:cursor-pointer">
             <Carousel
               showStatus={false}
               showIndicators={false}
@@ -64,7 +64,7 @@ function SectionProductDescription({
               {formattedProductImages}
             </Carousel>
           </div>
-          <div className="md:max-w-xl md:flex-1 px-5 sm:px-8 md:px-0">
+          <div className="md:max-w-xl md:flex-1 px-5 sm:px-8 md:px-0 md:my-5">
             <div className="mb-8">
               <h1 className="font-lexend font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
                 {productData.title}
