@@ -16,6 +16,7 @@ images:
     "/images/zwemschemas/bck1/5.png",
   ]
 tab1_image: "/images/zwemschemas/bck1/6.png"
+winkelwagen_images: ["/images/zwemschemas/bck1/cart/1.png", "/images/zwemschemas/bck1/cart/2.png", "/images/zwemschemas/bck1/cart/3.png"]
 inhoud:
   {
     beginners:

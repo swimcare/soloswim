@@ -4,6 +4,18 @@ import Link from "next/link";
 import { XIcon } from "@heroicons/react/solid";
 
 function WinkelwagenModal({ productData, modalIsOpen, toggleModal }) {
+
+
+  const typeNumber = () => {
+    if (productData.type==="Beginners"){
+      return 0;
+    } else if (productData.type==="Semi-gevorderden") {
+      return 1;
+    } else {
+      return 2;
+    }
+  }
+
   return (
     <Modal isOpen={modalIsOpen} toggle={toggleModal}>
       <div className="flex justify-between border-b border-gray-300 bg-main rounded-t-2xl">
@@ -17,7 +29,7 @@ function WinkelwagenModal({ productData, modalIsOpen, toggleModal }) {
       <div className="flex-shrink flex-grow p-4">
         <div className="flex flex-row gap-5 my-5">
           <div className="w-16">
-            <Image src={productData.images[0]} width={300} height={300} />
+            <Image src={productData.type && productData.winkelwagen_images ? productData.winkelwagen_images[typeNumber()] : productData.images[0]} width={300} height={300} />
           </div>
           <div>
             <h2 className="font-semibold font-lexend md:text-lg text-base leading-5">
