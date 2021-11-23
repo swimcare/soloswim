@@ -157,7 +157,7 @@ export default function Home() {
           <div className="bg-white shadow-custom3 p-5 mt-16 rounded-2xl flex flex-col sm:flex-row sm:w-5/6 lg:w-3/4 relative">
             <div className=" transform -translate-y-20 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:translate-x-1/2 sm:w-60 md:w-72 lg:w-auto">
               <Image
-                src="/images/zwemschemas/bct1/tab1.png"
+                src="/images/zwemschemas/bct1/6.png"
                 width={543}
                 height={543}
                 alt="bundels"

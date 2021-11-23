@@ -1,8 +1,21 @@
 ---
 product_id: "BCT1"
 title: "Borstcrawl Techniek Zwemtraining"
+subtitle: "Zwem mooier, zwem makkelijker"
 price: 12.99
-description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+description: "Wil je graag makkelijker en technisch beter borstcrawl leren zwemmen? Deze 10 gevarieerde zwemschema’s van 60 minuten bevatten technische zwemoefeningen die je helpen je slag te verbeteren! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+features: [
+    "10 techniek zwemschema’s van 60 min",
+    "Kies zelf steeds een leuk schema uit (er is geen vaste volgorde in deze bundel)",
+    "Inhoudsopgave en begrippenlijst inbegrepen",
+    "Volledig waterproof en van sterke kwaliteit",
+    "Duidelijk omschreven technische zwemoefeningen",
+    "Inclusief QR codes die doorlinken naar een korte uitleg video voor iedere training",
+    "Hersluitbare roestvrijstalen ring",
+    "Verkrijgbaar voor beginners, semi-gevorderden of
+    gevorderden",
+    "Geschikt voor zowel een 25 als 50 meter bad",
+  ]
 niveaus: true
 type: "Beginners"
 editie: 1
@@ -70,4 +83,4 @@ inhoud:
   }
 ---
 
-10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **korte afstanden** op een **hogere intensiteit** moet zwemmen. Zo werk jij aan je kracht en word je een snellere zwemmer.
+10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk korte tot **middellange afstanden** op een **rustig tempo** moet zwemmen. Zo werk jij aan je techniek en word je een betere zwemmer.

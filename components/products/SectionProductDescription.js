@@ -83,7 +83,7 @@ function SectionProductDescription({
                 {productData.description}{" "}
                 <a
                   className="uppercase font-bold hover:underline text-tiny"
-                  href="#watkrijgje"
+                  href="#wat-krijg-je"
                 >
                   Meer lezen
                 </a>

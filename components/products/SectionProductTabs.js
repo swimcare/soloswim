@@ -16,6 +16,14 @@ function SectionProductTabs({ productData }) {
   /* you can also use default values or alias to use only one prop: */
   // const { height: windowHeight = 480 } useWindowDimensions();
 
+  // bulletpoint features
+
+  const mappedBulletpoints = () => {
+    return productData.features.map((feature, index) => (
+      <li key={index}>{feature}</li>
+    ));
+  };
+
   return (
     <Fragment>
       <div className="hidden md:block">
@@ -76,8 +84,8 @@ function SectionProductTabs({ productData }) {
           <div>
             {/* Tab 1: Wat krijg je */}
             {(activeTab === 1 || width <= 768) && (
-              <div className="md:my-14 flex flex-col md:flex-row md:space-x-14 gap-5 md:gap-0">
-                <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
+              <div id="wat-krijg-je" className="md:my-14 flex flex-col md:flex-row md:space-x-14 gap-5 md:gap-0">
+                <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg md:min-h-[600px] w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
                   <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-full relative mx-auto">
                     <Image
                       className="md:rounded-xl"
@@ -94,7 +102,7 @@ function SectionProductTabs({ productData }) {
                 </div>
                 <div className="w-full">
                   <h2 className="hidden md:block text-main text-2xl font-lexend font-extrabold">
-                    Borstcrawl kracht zwemtraining
+                    {productData.title}
                   </h2>
                   <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
                     <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
@@ -102,7 +110,7 @@ function SectionProductTabs({ productData }) {
                     </h2>
                   </div>
                   <h2 className="hidden md:block text-navy-light1 text-2xl font-lexend font-extrabold my-2">
-                    Word sterker, word sneller
+                    {productData.subtitle ? productData.subtitle : ""}
                   </h2>
                   <div
                     className="text-navy-light1 text-tiny leading-6 my-3 md:my-5"
@@ -110,20 +118,13 @@ function SectionProductTabs({ productData }) {
                       __html: productData.contentHtml,
                     }}
                   />
-                  <div>
-                    <ul className="list-disc text-tiny text-navy-light1 leading-8 list-inside">
-                      <li>10 kracht zwemschema’s van 60 min</li>
-                      <li>Inhoudsopgave en begrippenlijst inbegrepen</li>
-                      <li>Volledig waterproof en van sterke kwaliteit</li>
-                      <li>Duidelijk omschreven oefeningen</li>
-                      <li>Hersluitbare roestvrijstalen ring</li>
-                      <li>
-                        Verkrijgbaar voor beginners, semi-gevorderden of
-                        gevorderden
-                      </li>
-                      <li>Geschikt voor zowel een 25 als 50 meter bad</li>
-                    </ul>
-                  </div>
+                  {productData.features && (
+                    <div>
+                      <ul className="list-disc text-tiny text-navy-light1 leading-8 list-inside">
+                        {mappedBulletpoints()}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
             )}

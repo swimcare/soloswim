@@ -1,8 +1,21 @@
 ---
 product_id: "BCL100"
 title: "Borstcrawl 100m leren zwemmen"
+subtitle: "Zelf borstcrawl leren"
 price: 12.99
 description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+features: [
+    "10 zwemschema’s van ongeveer 60 min",
+    "Een gestructureerd plan om zelfstandig 100m borstcrawl te leren zwemmen",
+    "Inhoudsopgave en begrippenlijst inbegrepen",
+    "Volledig waterproof en van sterke kwaliteit",
+    "Duidelijk omschreven (technische) zwemoefeningen",
+    "Inclusief QR codes die doorlinken naar een korte uitleg video voor iedere training",
+    "Hersluitbare roestvrijstalen ring",
+    "Verkrijgbaar voor beginners, semi-gevorderden of
+    gevorderden",
+    "Verkrijgbaar voor een 25 of 50 meter bad",
+  ]
 type: "25 meter zwembad"
 color: "blue"
 images:
@@ -13,7 +26,11 @@ images:
     "/images/zwemschemas/bcl100/4.png",
   ]
 tab1_image: "/images/zwemschemas/bcl100/5.png"
-winkelwagen_images: ["/images/zwemschemas/bcl100/cart/1.png", "/images/zwemschemas/bcl100/cart/2.png"]
+winkelwagen_images:
+  [
+    "/images/zwemschemas/bcl100/cart/1.png",
+    "/images/zwemschemas/bcl100/cart/2.png",
+  ]
 card_info: "Borstcrawl cursus voor beginners"
 inhoud:
   {
@@ -37,4 +54,4 @@ inhoud:
   }
 ---
 
-10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **korte afstanden** op een **hogere intensiteit** moet zwemmen. Zo werk jij aan je kracht en word je een snellere zwemmer.
+10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je houding, ademhaling of armen en bestaat uit een warming up, een kern en een cooling down. Wanneer je een zwemschema zonder problemen hebt voltooid binnen de aangegeven tijd ben je klaar voor het volgende schema. Zo werk jij op een **gestructureerde manier** aan je borstcrawl en kun je uiteindelijk 100m borstcrawl netjes afleggen **zonder uitgeput** te raken!
