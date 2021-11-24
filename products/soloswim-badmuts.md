@@ -2,7 +2,14 @@
 product_id: "BM1"
 title: "De Soloswim badmuts"
 price: 12.49
-description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+description: "Spread the word met de officiële Soloswim badmuts! Gemaakt van sterk, flexibel en fijn siliconen materiaal wat zorgt voor een comfortabele pasvorm. Het dragen van een badmuts tijdens het zwemmen beschermt je haar en zorgt voor een verminderde weerstand waardoor je nog sneller zult zwemmen."
+features:
+  [
+    "Het Soloswim logo is gedrukt aan de zijkanten",
+    "Gemaakt van sterk, flexibel en fijn silicone materiaal",
+    "Geschikt voor zowel kort als lang haar",
+    "Je kunt je zwembril zowel onder als over de badmuts dragen",
+  ]
 isAccessoire: true
 images:
   [
@@ -12,7 +19,6 @@ images:
   ]
 tab1_image: "/images/zwemschemas/bm1/4.png"
 card_info: "Leuk voor erbij!"
-
 ---
 
-10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **korte afstanden** op een **hogere intensiteit** moet zwemmen. Zo werk jij aan je kracht en word je een snellere zwemmer.
+De Soloswim badmuts is gemaakt van een rubberachtige stof: **siliconen materiaal**. Het is een badmuts die wat dikker is en ook wat strakker aansluit op je hoofd. Hierdoor blijft hij goed zitten tijdens het zwemmen en heeft hij een **langere levensduur** dan bijvoorbeeld een latex badmuts. Vanwege het materiaal is het geen probleem als de badmuts vochtig blijft na je zwemmoment, je kunt hem gerust in je zwemtas laten zonder dat hij zal beschimmelen. Je kunt deze badmuts **gemakkelijk opzetten** doordat deze goed flexibel is en je door zijn stevigheid hard aan kunt trekken. Het opzetten van de badmuts gaat het makkelijkste als zowel de badmuts als je haar nog droog is. Het kan in het begin even onwennig zijn als je nog nooit een badmuts hebt gedragen, maar na een paar keer merk je dat het dragen van een badmuts alleen maar voordelen heeft!

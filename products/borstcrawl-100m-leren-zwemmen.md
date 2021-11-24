@@ -3,7 +3,7 @@ product_id: "BCL100"
 title: "Borstcrawl 100m leren zwemmen"
 subtitle: "Zelf borstcrawl leren"
 price: 12.99
-description: "Wil je graag krachtiger en sneller zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+description: "Wil je graag borstcrawl leren zwemmen? Met deze 10 opbouwende zwemschema’s van 60 minuten kun je zelfstandig de borstcrawl leren! Uiteindelijk kun je 100m borstcrawl zwemmen met de juiste basis techniek, inclusief de ademhaling. De schema's zijn volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 features: [
     "10 zwemschema’s van ongeveer 60 min",
     "Een gestructureerd plan om zelfstandig 100m borstcrawl te leren zwemmen",
