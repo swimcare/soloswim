@@ -1,4 +1,5 @@
 module.exports = {
+  // FOR HANDLING SVG IMPORTS
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -7,8 +8,24 @@ module.exports = {
 
     return config;
   },
+  // DATABASE URL
   env: {
     MONGODB_URL:
       "mongodb+srv://dbsoloswim:QEvPUarNGk3cWyS8@cluster0.g3azr.mongodb.net/soloswim?retryWrites=true&w=majority",
+  },
+  // REDIRECT URLS FOR QR CODES ON TRAINING SCHEDULES
+  async redirects() {
+    return [
+      {
+        source: "/BCK1B1",
+        destination: "https://www.google.nl",
+        permanent: false,
+      },
+      {
+        source: "/BCK1G1",
+        destination: "https://www.laurensvanroomen.nl",
+        permanent: false,
+      },
+    ];
   },
 };
