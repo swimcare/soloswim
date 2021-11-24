@@ -149,7 +149,7 @@ export default function Home() {
 
       {/* SECTION 1: Herbruikbare zwemschema's TODO: consider building this like section 2 is setup */}
       <section className="bg-grey-light4">
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 lg:pb-10">
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 sm:pb-10">
           <div>
             <h2 className="text-main font-lexend font-extrabold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Herbruikbare zwemschema's
@@ -159,11 +159,11 @@ export default function Home() {
             </h3>
           </div>
         </div>
-        <div className="mx-5 sm:mx-0 md:w-5/6 lg:w-3/4">
+        <div className="mx-5 sm:mx-0 lg:w-3/4">
           <WaveSvg fill="#fff" />
         </div>
-        <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row md:w-5/6 lg:w-3/4 relative">
-          <div className="transform -translate-y-40 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 md:translate-x-1/2 sm:w-52 md:w-72 lg:w-auto">
+        <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row lg:w-3/4 relative">
+          <div className="transform -translate-y-40 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 lg:translate-x-1/2 sm:w-52 md:w-72 md:mr-10 lg:mr-0 lg:w-auto">
             <div className="h-[30rem] max-w-screen-xs md:max-w-none lg:w-96">
               {/* rounded maken in photoshop/emily */}
               <Image
@@ -177,7 +177,7 @@ export default function Home() {
           </div>
 
           <ul className=" transform -translate-y-36 sm:translate-y-0 -mb-36 sm:mb-0 sm:w-full xl:ml-[calc((((133%)-1280px)/2)+20px+1rem)]">
-            <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
               <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
               <div>
                 <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
@@ -188,7 +188,7 @@ export default function Home() {
                 </p>
               </div>
             </li>
-            <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
               <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
               <div>
                 <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
@@ -213,7 +213,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className="mx-5 sm:mx-0 md:w-5/6 lg:w-3/4">
+        <div className="mx-5 sm:mx-0 lg:w-3/4">
           <WaveExtendedSvg fill="#fff" />
         </div>
         {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-10"> */}
