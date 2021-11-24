@@ -159,11 +159,11 @@ export default function Home() {
             </h3>
           </div>
         </div>
-        <div className="mx-5 sm:mx-0 sm:w-5/6 lg:w-3/4">
+        <div className="mx-5 sm:mx-0 md:w-5/6 lg:w-3/4">
           <WaveSvg fill="#fff" />
         </div>
-        <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row sm:w-5/6 lg:w-3/4 relative">
-          <div className="transform -translate-y-40 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:translate-x-1/2 sm:w-52 md:w-72 lg:w-auto">
+        <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row md:w-5/6 lg:w-3/4 relative">
+          <div className="transform -translate-y-40 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 md:translate-x-1/2 sm:w-52 md:w-72 lg:w-auto">
             <div className="h-[30rem] max-w-screen-xs md:max-w-none lg:w-96">
               {/* rounded maken in photoshop/emily */}
               <Image
@@ -213,7 +213,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className="mx-5 sm:mx-0 sm:w-5/6 lg:w-3/4">
+        <div className="mx-5 sm:mx-0 md:w-5/6 lg:w-3/4">
           <WaveExtendedSvg fill="#fff" />
         </div>
         {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-10"> */}
