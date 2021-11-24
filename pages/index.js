@@ -1,4 +1,8 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/solid";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  CheckIcon,
+} from "@heroicons/react/solid";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
@@ -145,60 +149,82 @@ export default function Home() {
 
       {/* SECTION 1: Herbruikbare zwemschema's TODO: consider building this like section 2 is setup */}
       <section className="bg-grey-light4">
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-20 lg:py-32">
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 lg:pb-10">
           <div>
-            <h2 className="text-main font-lexend font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="text-main font-lexend font-extrabold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Herbruikbare zwemschema's
             </h2>
             <h3 className="text-navy-light1 font-lexend font-bold md:font-extrabold text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl my-2 md:my-5">
               Voor tijdens het banenzwemmen
             </h3>
           </div>
-          <div className="bg-white shadow-custom3 p-5 mt-16 rounded-2xl flex flex-col sm:flex-row sm:w-5/6 lg:w-3/4 relative">
-            <div className=" transform -translate-y-20 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:translate-x-1/2 sm:w-60 md:w-72 lg:w-auto">
+        </div>
+        <div className="mx-5 sm:mx-0 sm:w-5/6 lg:w-3/4">
+          <WaveSvg fill="#fff" />
+        </div>
+        <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row sm:w-5/6 lg:w-3/4 relative">
+          <div className="transform -translate-y-40 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:translate-x-1/2 sm:w-52 md:w-72 lg:w-auto">
+            <div className="h-[30rem] max-w-screen-xs md:max-w-none lg:w-96">
+              {/* rounded maken in photoshop/emily */}
               <Image
-                src="/images/zwemschemas/bct1/6.png"
-                width={543}
-                height={543}
-                alt="bundels"
+                src="/images/home/intro1.png"
+                layout="fill"
+                objectFit="contain"
+                objectPosition="center"
+                alt="Soloswim zwemschema's"
               />
             </div>
-            <ul className=" transform -translate-y-20 sm:translate-y-0 -mb-20 sm:mb-0 sm:w-3/4 md:max-w-md lg:ml-6">
-              <li className="py-4">
+          </div>
+
+          <ul className=" transform -translate-y-36 sm:translate-y-0 -mb-36 sm:mb-0 sm:w-full xl:ml-[calc((((133%)-1280px)/2)+20px+1rem)]">
+            <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
+              <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+              <div>
                 <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Zorgvuldig samengestelde bundels voor alle niveau’s
                 </h4>
                 <p className="text-navy-light1 text-tiny my-2 lg:text-base">
                   Bestaande uit 10 uitdagende trainingen
                 </p>
-              </li>
-              <li className="py-4">
+              </div>
+            </li>
+            <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
+              <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+              <div>
                 <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Verschillende thema’s
                 </h4>
                 <p className="text-navy-light1 text-tiny my-2 lg:text-base">
                   Van techniek-, kracht- of duur trainingen tot swimfit voor
                   ontspanning
-                </p>
-              </li>
-              <li className="py-4">
+                </p>{" "}
+              </div>
+            </li>
+            <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
+              <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+              <div>
                 <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Gevarieerde oefeningen
                 </h4>
                 <p className="text-navy-light1 text-tiny my-2 lg:text-base">
                   Die het zwemmen leuker maken en je vooruit helpen
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div className="text-center sm:text-left my-10 lg:mt-20">
-            <button
-              role="button"
-              className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-            >
-              Bekijk ons aanbod
-            </button>
-          </div>
+                </p>{" "}
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="mx-5 sm:mx-0 sm:w-5/6 lg:w-3/4">
+          <WaveExtendedSvg fill="#fff" />
+        </div>
+        {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-10"> */}
+
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32">
+          <button
+            role="button"
+            className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+          >
+            Bekijk ons aanbod
+          </button>
         </div>
         <WaveSvg fill="#fff" />
       </section>
@@ -765,7 +791,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
-                &gt;250 km
+                  &gt;250 km
                 </p>
                 <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
                   aan zwemkilometers
