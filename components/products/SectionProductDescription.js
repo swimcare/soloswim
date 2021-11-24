@@ -80,7 +80,7 @@ function SectionProductDescription({
                 />
               </p>
               <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-tiny">
-                {productData.description}{" "}
+                {productData.description}
                 <a
                   className="uppercase font-bold hover:underline text-tiny"
                   href="#wat-krijg-je"
