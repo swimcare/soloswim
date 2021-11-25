@@ -18,7 +18,7 @@ function SubSectionBenodigdhedenNiveaus() {
         id="benodigdheden-ieder-niveau"
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
-        <p className="text-navy-light1">Om het zwemmen comfortabel te maken.</p>
+        <p className="text-navy-light1">Deze dingen heb je zeker nodig.</p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <DubbelAttribuut
             icon1="/images/zwemschemas/benodigdheden/badpak.png"

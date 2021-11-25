@@ -1,20 +1,20 @@
-const position = {
+const positions = {
     top: 'bottom-full',
     bottom: 'top-full',
   };
 
-function Tooltip(props) {
+function Tooltip({textClassname, className, iconClassName, position, title, content }) {
   return (
-    <div className={`${props.textClassname} group cursor-pointer relative w-28 text-center`}>
-      {props.title}
+    <div className={`${textClassname} group cursor-pointer relative text-center`}>
+      {title}
       <div
-        className={`${position[props.position]} ${
-          props.className
+        className={`${positions[position]} ${
+          className
         } opacity-0 text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 -left-1/2 ml-14 px-3 pointer-events-none`}
       >
-        {props.children}
+        {content}
         <svg
-          className={`${props.iconClassName} absolute h-2 w-full left-0 top-full`}
+          className={`${iconClassName} absolute h-2 w-full left-0 top-full`}
           x="0px"
           y="0px"
           viewBox="0 0 255 255"

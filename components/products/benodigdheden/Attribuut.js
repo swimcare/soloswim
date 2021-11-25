@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Tooltip from "../../general/Tooltip";
 
 function Attribuut(props) {
   return (
@@ -19,6 +20,15 @@ function Attribuut(props) {
           </div>
         </div>
       </div>
+        <Tooltip
+          textClassname="text-main"
+          className="bg-black w-full text-white"
+          iconClassName="text-black"
+          position="top"
+          title="Hover me"
+          content="the content is very interesting for halluciationsmatters and short words"
+        >
+        </Tooltip>
     </div>
   );
 }
