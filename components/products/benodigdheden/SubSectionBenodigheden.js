@@ -38,8 +38,7 @@ function SubSectionBenodigdheden() {
           Extra benodigdheden
         </h3>
         <p className="text-navy-light1">
-          Een plankje en pullbuoy komt veel voor tijdens de oefeningen in de
-          [borstcrawl kracht zwemtraining] bundel voor beginners. Je kunt het
+          Een plankje en pullbuoy komt veel voor tijdens de oefeningen in deze bundel. Je kunt het
           zonder deze attributen doen, maar wij raden het sterk aan deze wel te
           gebruiken. Het helpt je enorm bij het uitvoeren van de oefeningen en
           je haalt meer uit de training. Je koopt ze online voor een paar

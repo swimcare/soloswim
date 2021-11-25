@@ -55,7 +55,7 @@ function SubSectionBenodigdhedenNiveaus() {
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
         <p className="text-navy-light1">
-        Een plankje en pullbuoy komt veel voor tijdens de oefeningen in de [borstcrawl kracht zwemtraining] bundel voor beginners. Je kunt het zonder deze attributen doen, maar wij raden het sterk aan deze wel te gebruiken. Het helpt je enorm bij het uitvoeren van de oefeningen en je haalt meer uit de training. Je koopt ze online voor een paar tientjes of je vraagt aan de badmeester of je ze kunt lenen.
+        Een plankje en pullbuoy komt veel voor tijdens de oefeningen in deze bundel voor beginners. Je kunt het zonder deze attributen doen, maar wij raden het sterk aan deze wel te gebruiken. Het helpt je enorm bij het uitvoeren van de oefeningen en je haalt meer uit de training. Je koopt ze online voor een paar tientjes of je vraagt aan de badmeester of je ze kunt lenen.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <Attribuut
@@ -82,8 +82,7 @@ function SubSectionBenodigdhedenNiveaus() {
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
         <p className="text-navy-light1">
-          Onderstaande attributen komen voor tijdens de oefeningen in de
-          [borstcrawl kracht zwemtraining] bundels voor semi-gevorderden en
+          Onderstaande attributen komen voor tijdens de oefeningen in deze bundel, voor de niveaus semi-gevorderden en
           gevorderden. Ze helpen je bij het uitvoeren van bepaalde oefeningen en
           helpen je te focussen op bepaalde onderdelen van het zwemmen. We raden
           je aan om in ieder geval een plankje en pullbuoy te gebruiken, omdat
