@@ -83,8 +83,11 @@ function SectionProductTabs({ productData }) {
           </div>
           <div>
             {/* Tab 1: Wat krijg je */}
-            {(activeTab === 1 || width <= 768) && (
-              <div id="wat-krijg-je" className="md:my-14 flex flex-col md:flex-row md:space-x-14 gap-5 md:gap-0">
+            {(activeTab === 1 || width < 768) && (
+              <div
+                id="wat-krijg-je"
+                className="md:my-14 flex flex-col md:flex-row md:space-x-14 gap-5 md:gap-0"
+              >
                 <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg md:min-h-[600px] w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
                   <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-full relative mx-auto">
                     <Image
@@ -129,11 +132,11 @@ function SectionProductTabs({ productData }) {
               </div>
             )}
             {/* TAB 2: INHOUDSOPGAVE */}
-            {(activeTab === 2 || width <= 768) && !productData.isAccessoire && (
-              <SubSectionInhoudsopgave productData={productData} />
+            {(activeTab === 2 || width < 768) && !productData.isAccessoire && (
+                <SubSectionInhoudsopgave productData={productData} />
             )}
             {/* TAB 3: BENODIGDHEDEN */}
-            {(activeTab === 3 || width <= 768) && !productData.isAccessoire && (
+            {(activeTab === 3 || width < 768) && !productData.isAccessoire && (
               <div className="my-14">
                 <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
                   <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
@@ -148,7 +151,7 @@ function SectionProductTabs({ productData }) {
               </div>
             )}
             {/* Tab 4: reviews */}
-            {(activeTab === 4 || width <= 768) && <p>Reviews here</p>}
+            {(activeTab === 4 || width < 768) && <p>Reviews here</p>}
           </div>
         </div>
       </section>
