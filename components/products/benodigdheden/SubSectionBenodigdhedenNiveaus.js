@@ -18,8 +18,10 @@ function SubSectionBenodigdhedenNiveaus() {
         id="benodigdheden-ieder-niveau"
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
-        <p className="text-navy-light1">Deze dingen heb je zeker nodig.</p>
-        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
+        <p className="text-navy-light1 min-h-[3rem]">
+          Deze dingen heb je zeker nodig.
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5 items-stretch">
           <DubbelAttribuut
             icon1="/images/zwemschemas/benodigdheden/badpak.png"
             alt1="badpak"
@@ -30,10 +32,13 @@ function SubSectionBenodigdhedenNiveaus() {
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/zwembril.png"
             name="Zwembril"
+            tooltipText="Voorkomt water in je ogen tijdens het zwemmen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/badmuts.png"
-            name="Badmuts (bij lang haar)"
+            name="Badmuts"
+            tooltipText="Bescherm je haar tegen chloor en verlaag weerstand."
+            bestelButton="/producten/soloswim-badmuts"
           />
         </div>
       </AccordionPanel>
@@ -49,19 +54,18 @@ function SubSectionBenodigdhedenNiveaus() {
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
         <p className="text-navy-light1">
-          Deze attributen komen voor in deze trainingsbundel, maar om meeste uit
-          je training te halen (kan ook zonder gebruikt worden maar even
-          aandikken dat je het nodig hebt)
+        Een plankje en pullbuoy komt veel voor tijdens de oefeningen in de [borstcrawl kracht zwemtraining] bundel voor beginners. Je kunt het zonder deze attributen doen, maar wij raden het sterk aan deze wel te gebruiken. Het helpt je enorm bij het uitvoeren van de oefeningen en je haalt meer uit de training. Je koopt ze online voor een paar tientjes of je vraagt aan de badmeester of je ze kunt lenen.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/plankje.png"
-            alt="plankje"
-            name="Plankje"
+            name="Zwemplankje"
+            tooltipText="Geeft extra drijfvermogen om specifiek je benen te trainen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             name="Pullbuoy"
+            tooltipText="Geeft extra drijfvermogen om specifiek je armen te trainen."
           />
         </div>
       </AccordionPanel>
@@ -77,30 +81,39 @@ function SubSectionBenodigdhedenNiveaus() {
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
         <p className="text-navy-light1">
-          Deze attributen komen voor in deze trainingsbundel, maar om meeste uit
-          je training te halen (kan ook zonder gebruikt worden maar even
-          aandikken dat je het nodig hebt)
+          Onderstaande attributen komen voor tijdens de oefeningen in de
+          [borstcrawl kracht zwemtraining] bundels voor semi-gevorderden en
+          gevorderden. Ze helpen je bij het uitvoeren van bepaalde oefeningen en
+          helpen je te focussen op bepaalde onderdelen van het zwemmen. We raden
+          je aan om in ieder geval een plankje en pullbuoy te gebruiken, omdat
+          deze attributen vaak voorkomen in de zwemschema’s. Je kunt het ook
+          proberen te lenen in het zwembad. Handpeddels en zoomers (korte zwemvliezen) raden wij ook aan om te hebben, maar je zou het ook zonder kunnen uitvoeren. 
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/plankje.png"
-            name="Plankje"
+            name="Zwemplankje"
+            tooltipText="Geeft extra drijfvermogen om specifiek je benen te trainen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             name="Pullbuoy"
+            tooltipText="Geeft extra drijfvermogen om specifiek je armen te trainen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/handpeddels.png"
-            name="Peddels"
+            name="Handpeddels"
+            tooltipText="Helpt je sneller te zwemmen door opbouwen van kracht en ondersteunen van de techniek."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/zoomers.png"
             name="Zoomers"
+            tooltipText="Helpt je met de beenslag techniek en geeft je extra snelheid waardoor het zwemmen makkelijker wordt."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/snorkel.png"
             name="Frontale snorkel (optioneel)"
+            tooltipText="Houd je niet bezig met de ademhaling, maar focus je 100% op de rest van de techniek."
           />
         </div>
       </AccordionPanel>

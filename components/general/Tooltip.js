@@ -5,12 +5,12 @@ const positions = {
 
 function Tooltip({textClassname, className, iconClassName, position, title, content }) {
   return (
-    <div className={`${textClassname} group cursor-pointer relative text-center`}>
+    <div className={`${textClassname} group cursor-pointer relative text-center overflow-visible`}>
       {title}
       <div
         className={`${positions[position]} ${
           className
-        } opacity-0 text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 -left-1/2 ml-14 px-3 pointer-events-none`}
+        } opacity-0 text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 left-1/2 transform -translate-x-1/2 px-3 pointer-events-none`}
       >
         {content}
         <svg
