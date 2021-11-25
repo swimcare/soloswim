@@ -28,11 +28,12 @@ function SubSectionBenodigdhedenNiveaus() {
             icon2="/images/zwemschemas/benodigdheden/zwembroek.png"
             alt2="zwembroek"
             name="Sportieve zwemkleding"
+            tooltipText="Draag zwemkleding geschikt voor banenzwemmen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/zwembril.png"
             name="Zwembril"
-            tooltipText="Voorkomt water in je ogen tijdens het zwemmen."
+            tooltipText="Voorkom water in je ogen tijdens het zwemmen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/badmuts.png"
@@ -60,12 +61,12 @@ function SubSectionBenodigdhedenNiveaus() {
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/plankje.png"
             name="Zwemplankje"
-            tooltipText="Geeft extra drijfvermogen om specifiek je benen te trainen."
+            tooltipText="Geeft je extra drijfvermogen om specifiek je benen te trainen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             name="Pullbuoy"
-            tooltipText="Geeft extra drijfvermogen om specifiek je armen te trainen."
+            tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
           />
         </div>
       </AccordionPanel>
@@ -93,12 +94,12 @@ function SubSectionBenodigdhedenNiveaus() {
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/plankje.png"
             name="Zwemplankje"
-            tooltipText="Geeft extra drijfvermogen om specifiek je benen te trainen."
+            tooltipText="Geeft je extra drijfvermogen om specifiek je benen te trainen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             name="Pullbuoy"
-            tooltipText="Geeft extra drijfvermogen om specifiek je armen te trainen."
+            tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/handpeddels.png"
