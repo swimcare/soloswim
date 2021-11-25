@@ -804,7 +804,7 @@ export default function Home() {
             <div className="lg:hidden mx-5 leading-none text-zero">
               <Image
                 className="rounded-t-xl lg:rounded-none"
-                src="/images/home/soloswim-oprichters.png"
+                src="/images/home/oprichters-soloswim.png"
                 width={996}
                 height={772}
                 alt="Oprichters soloswim"
@@ -813,7 +813,7 @@ export default function Home() {
             <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
               <Image
                 className="rounded-t-xl sm:rounded-none"
-                src="/images/home/soloswim-oprichters.png"
+                src="/images/home/oprichters-soloswim.png"
                 layout="fill"
                 objectFit="cover"
                 alt="Oprichters soloswim"
