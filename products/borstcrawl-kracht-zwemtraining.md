@@ -1,4 +1,5 @@
 ---
+number: 4
 product_id: "BCK1"
 title: "Borstcrawl Kracht Zwemtraining"
 subtitle: "Word sterker, word sneller"

@@ -1,4 +1,5 @@
 ---
+number: 6
 product_id: "BM1"
 title: "De Soloswim badmuts"
 price: 12.49

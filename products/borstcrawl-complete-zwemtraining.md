@@ -1,4 +1,5 @@
 ---
+number: 2
 product_id: "BCC1"
 title: "Borstcrawl Complete Zwemtraining"
 subtitle: "Het beste van 3 werelden"

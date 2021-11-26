@@ -1,4 +1,5 @@
 ---
+number: 3
 product_id: "BCT1"
 title: "Borstcrawl Techniek Zwemtraining"
 subtitle: "Zwem mooier, zwem makkelijker"

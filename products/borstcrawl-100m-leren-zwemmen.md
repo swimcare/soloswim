@@ -1,4 +1,5 @@
 ---
+number: 1
 product_id: "BCL100"
 title: "Borstcrawl 100m leren zwemmen"
 subtitle: "Zelf borstcrawl leren"
