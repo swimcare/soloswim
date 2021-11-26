@@ -69,7 +69,7 @@ function SectionProductTabs({ productData }) {
                   Wat heb je nodig
                 </li>
               )}
-              <li
+              {/* <li
                 onClick={() => setActiveTab(4)}
                 className={`${
                   activeTab === 4
@@ -78,7 +78,7 @@ function SectionProductTabs({ productData }) {
                 } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
               >
                 Reviews
-              </li>
+              </li> */}
             </ul>
           </div>
           <div>
@@ -151,7 +151,7 @@ function SectionProductTabs({ productData }) {
               </div>
             )}
             {/* Tab 4: reviews */}
-            {(activeTab === 4 || width < 768) && <p>Reviews here</p>}
+            {/* {(activeTab === 4 || width < 768) && <p>Reviews here</p>} */}
           </div>
         </div>
       </section>
