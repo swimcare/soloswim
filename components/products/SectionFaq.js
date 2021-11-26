@@ -14,7 +14,7 @@ function SectionFaq() {
           </div>
           <div className="flex flex-col lg:flex-row lg:gap-10">
             <Accordion defaultPanel="faq1">
-              <div className="lg:w-1/2">
+              <div className="lg:flex-1">
                 <AccordionItem
                   toggle="faq1"
                   itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
@@ -160,7 +160,7 @@ function SectionFaq() {
                   </p>
                 </AccordionPanel>
               </div>
-              <div className="lg:w-1/2">
+              <div className="lg:flex-1">
                 <AccordionItem
                   toggle="faq8"
                   itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
