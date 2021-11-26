@@ -17,7 +17,7 @@ function SectionReviewsMain() {
             showThumbs={false}
             autoPlay
             infiniteLoop
-            interval={5000}
+            interval={10000}
             renderArrowNext={(onClickHandler, hasNext) =>
               hasNext && (
                 <button
@@ -62,27 +62,6 @@ function SectionReviewsMain() {
                 name="Loes"
               />
             </div>
-            <div className="h-full">
-              <ReviewCard
-                title="Dit is zo leuk!"
-                text="VAltiud zeenchema de ideale aanvulling! "
-                name="Kees"
-              />
-            </div>
-            <div className="h-full">
-              <ReviewCard
-                title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
-                name="Kees"
-              />
-            </div>
-            <div className="h-full">
-              <ReviewCard
-                title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-                name="Kees"
-              />
-            </div>
           </Carousel>
         </div>
         {/* DESKTOP REVIEWS (VANAF MD BREAKPOINT) */}
@@ -91,12 +70,9 @@ function SectionReviewsMain() {
             showStatus={false}
             autoPlay
             infiniteLoop
-            interval={5000}
+            interval={10000}
             showIndicators={false}
             showThumbs={false}
-            onChange={() => {
-                console.log("changed")
-            }}
             renderArrowNext={(onClickHandler, hasNext) =>
               hasNext && (
                 <button
@@ -141,20 +117,20 @@ function SectionReviewsMain() {
             {/* End group of 3 reviews */}
             {/* Group of 3 reviews */}
             <div className="flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
-              <ReviewCard
-                title="Dit is zo leuk!"
-                text="VAltiud zeenchema de ideale aanvulling! "
-                name="Kees"
+            <ReviewCard
+                title="Ideaal om zelf mee te trainen!"
+                text="Afgelopen weekend voor het eerst gebruik gemaakt van een gevorderden training van Soloswim. Trainingen hebben inhoudelijk een goede structuur en zijn ideaal om zelf mee te trainen!"
+                name="Marek Spit"
               />
               <ReviewCard
-                title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
-                name="Kees"
+                title="Ik ben fan!"
+                text="Als ervaren solo zwemmer is het altijd weer een gedoe om een leuke training te bedenken; je hebt alles al wel eens gehad. De trainingen van Soloswim zijn dan ook een uitkomst! Een uitdagend trainings pakket, afgestemd op je wensen. De trainingen zijn afwisselend en uitdagend. Er is veel keus, denk aan techniek, kracht en uithoudingsvermogen. Verschillende niveaus. Je kunt de trainingen ook combineren. Ik heb een pakket van 10 kracht traingen, semi gevorderd en zwem deze in 45 min (meeste staat uur voor). Het team is daarnaast mega toegankelijk en staat open voor vragen of input. Ik ben fan!"
+                name="Anouk Bosma"
               />
               <ReviewCard
-                title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-                name="Kees"
+                title="Goed te volgen voor een beginner."
+                text="De soloswim trainingen zijn goed opgebouwd en ook voor een beginner goed te volgen. Ik merk dat het elke zwemtraining beter gaat! Zeker een aanrader!"
+                name="Loes"
               />
             </div>
             {/* End group of 3 reviews */}

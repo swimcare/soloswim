@@ -73,6 +73,9 @@ function SectionCoaches({ color, isCombi }) {
               renderArrowNext={ArrowRight}
               renderArrowPrev={ArrowLeft}
               swipeable={false}
+              autoPlay
+              infiniteLoop
+              interval={10000}
             >
               {/* coach item */}
               <div className="md:px-10 px-4">
