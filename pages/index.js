@@ -467,8 +467,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-grey-light4 overflow-x-hidden">
-        <div className="transform translate-y-[1px] rotate-180 w-screen">
+      <div className="bg-grey-light4">
+        <div className="transform translate-y-1 rotate-180">
           <WaveExtendedSvg fill="#2628cd" />
         </div>
       </div>
@@ -625,7 +625,7 @@ export default function Home() {
       </section>
 
       <div className="bg-main transform -translate-y-1 rotate-180">
-        <div className="transform translate-y-[-1px] w-screen">
+        <div className="transform translate-y-[-1px]">
           <WaveExtendedSvg fill="#fff" />
         </div>
       </div>
@@ -866,7 +866,7 @@ export default function Home() {
             </div>
           </div>
           {/* Einde over on card */}
-          <div className="transform rotate-180 translate-y-[1px] w-screen">
+          <div className="transform rotate-180">
             <WaveExtendedSvg fill="#fff" />
           </div>
         </div>
