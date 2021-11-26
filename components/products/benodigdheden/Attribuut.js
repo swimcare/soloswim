@@ -22,7 +22,7 @@ function Attribuut({ icon, name, tooltipText, bestelButton }) {
             </div>
           </div>
           {bestelButton && (
-            <div className="my-5 mt-auto">
+            <div className="my-5 mt-auto text-center">
               <Link href={bestelButton}>
                 <a>
                   <button

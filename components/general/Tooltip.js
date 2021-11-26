@@ -5,7 +5,7 @@ const positions = {
 
 function Tooltip({textClassname, className, iconClassName, position, title, content }) {
   return (
-    <div className={`${textClassname} group relative text-center overflow-visible`}>
+    <div className={`${textClassname} group relative overflow-visible`}>
       {title}
       <div
         className={`${positions[position]} ${
