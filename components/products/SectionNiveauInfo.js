@@ -1,4 +1,6 @@
 import NiveauCard from "./niveau/NiveauCard";
+import parse from "html-react-parser";
+
 
 function SectionNiveauInfo({title}) {
   return (
@@ -10,30 +12,29 @@ function SectionNiveauInfo({title}) {
           </h1>
           <p className="text-tiny leading-6">
           Voor de bundel "{title}" kun je kiezen uit de onderstaande niveaus. Kies een niveau dat het beste bij je past. Bij twijfel is het verstandig een niveau lager te kiezen, je kunt altijd later nog een niveau opschuiven als je toe bent aan meer uitdaging.
-
           </p>
         </div>
         <div className="flex flex-col lg:flex-row my-5 lg:my-14 gap-5 lg:gap-10">
           <NiveauCard
             title="Beginners"
-            text1="Je zwemt nog niet zo lang borstcrawl maar hebt de basis techniek aardig onder de knie."
-            text2={`Je kunt ${title === "Borstcrawl Kracht Zwemtraining" ? "200" : "100"}m borstcrawl achter elkaar zwemmen en dit gaat je goed af`}
-            text3="Je kunt een zwemtraining van 60 minuten volhouden waarbij je alleen maar borstcrawl zwemt (met veel rust tussen de afstanden door)"
+            text1={parse(`Je zwemt nog niet zo lang borstcrawl maar hebt de <span classname="font-semibold">basis techniek</span> aardig onder de knie en kunt dit een hele training vasthouden.`)}
+            text2={parse(`Je kunt <span classname="font-semibold">100m</span> borstcrawl binnen een tijd van <span classname="font-semibold">2 minuten en 20 seconden</span> zwemmen.`)} 
+            text3={parse(`Je kunt <span classname="font-semibold">100m</span> borstcrawl achter elkaar zwemmen en dit gaat je af zonder problemen. Een afstand van <span classname="font-semibold">${title === "Borstcrawl Kracht Zwemtraining" && "200" || title === "Borstcrawl Techniek Zwemtraining" && "200" || title === "Borstcrawl Duur Zwemtraining" && "500" || title === "Borstcrawl Complete Zwemtraining" && "800"}m</span> kun je ook volhouden (of zie je als een mooie uitdaging, dit is de langste afstand die je achter elkaar zwemt uit deze bundel).`)}
           />
           <NiveauCard
             title="Semi-gevorderden"
-            text1="Je zwemt al aardig lang regelmatig borstcrawl (>1 jaar) en dit gaat je over het algemeen goed af."
-            text2={`Je kunt 100m borstcrawl binnen een tijd van 1 minuut en ${title === "Borstcrawl Kracht Zwemtraining" ? "20" : "30"} seconden zwemmen`} 
-            text3={`Je kunt een afstand van ${title === "Borstcrawl Kracht Zwemtraining" ? "200" : "100"}m achter elkaar borstcrawl zwemmen`}
+            text1={parse(`Je zwemt al een tijdje <span classname="font-semibold">regelmatig borstcrawl</span> (>1 jaar) en dit gaat je over het algemeen goed af.`)}
+            text2={parse(`Je kunt <span classname="font-semibold">100m</span> borstcrawl binnen een tijd van <span classname="font-semibold">1 minuut en 50 seconden</span> zwemmen.`)} 
+            text3={parse(`Je kunt een afstand van <span classname="font-semibold">${title === "Borstcrawl Kracht Zwemtraining" && "300" || title === "Borstcrawl Techniek Zwemtraining" && "400" || title === "Borstcrawl Duur Zwemtraining" && "800" || title === "Borstcrawl Complete Zwemtraining" && "800"}m</span> achter elkaar borstcrawl zwemmen (dit is de langste afstand die je achter elkaar zwemt uit deze bundel).`)}
           />
           <NiveauCard
             title="Gevorderden"
-            text1="Je zwemt al jaren borstcrawl en dit gaat je zeer goed af."
-            text2={`Je kunt 100m borstcrawl binnen een tijd van 1 minuut en ${title === "Borstcrawl Kracht Zwemtraining" ? "20" : "30"} seconden zwemmen`} 
-            text3={`Je kunt een afstand van ${title === "Borstcrawl Kracht Zwemtraining" ? "200" : "100"}m achter elkaar borstcrawl zwemmen`}
+            text1={parse(`Je zwemt al jaren borstcrawl en dit gaat je <span classname="font-semibold">zeer goed</span> af.`)}
+            text2={parse(`Je kunt 100m borstcrawl binnen een tijd van <span classname="font-semibold">1 minuut en 20 seconden</span> zwemmen.`)} 
+            text3={parse(`Je kunt een afstand van <span classname="font-semibold">${title === "Borstcrawl Kracht Zwemtraining" && "300" || title === "Borstcrawl Techniek Zwemtraining" && "400" || title === "Borstcrawl Duur Zwemtraining" && "1500" || title === "Borstcrawl Complete Zwemtraining" && "1500"}m</span> achter elkaar borstcrawl zwemmen (dit is de langste afstand die je achter elkaar zwemt uit deze bundel).`)}
           />
         </div>
-        <div className="text-center text-navy-light1 max-w-2xl mx-auto">
+        <div className="text-center text-navy-light1 max-w-4xl mx-auto">
           <p className="text-tiny leading-6">
           Het is geen ramp als je kiest voor een iets te hoog of laag niveau, je bent dan iets langer of korter bezig met een schema dan de aangegeven tijd. Kom je er helemaal niet uit met kiezen? Wij helpen je graag met het vaststellen van jouw niveau, neem contact met ons op en we helpen je snel aan een Soloswim bundel die bij je past!
           </p>
