@@ -468,9 +468,7 @@ export default function Home() {
       </section>
 
       <div className="bg-grey-light4">
-        <div className="transform translate-y-1 rotate-180">
-          <WaveExtendedSvg fill="#2628cd" />
-        </div>
+        <WaveSvg fill="#2628cd" />
       </div>
 
       {/* SECTION 6: REVIEWS */}
@@ -624,10 +622,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-main transform -translate-y-1 rotate-180">
-        <div className="transform translate-y-[-1px]">
-          <WaveExtendedSvg fill="#fff" />
-        </div>
+      <div className="bg-main">
+        <WaveSvg fill="#FFF" />
       </div>
 
       {/* SECTION 7: STAPPEN BESTELLEN + KIES JOUW BUNDEL UIT */}
