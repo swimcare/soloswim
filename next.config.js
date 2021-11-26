@@ -17,6 +17,11 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: "/review",
+        destination: "https://g.page/r/CRxat-X_lZvOEAg/review",
+        permanent: false,
+      },
+      {
         source: "/BCK1B1",
         destination: "https://www.google.nl",
         permanent: false,

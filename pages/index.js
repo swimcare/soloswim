@@ -1,23 +1,18 @@
-import {
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  CheckIcon,
-} from "@heroicons/react/solid";
+import { CheckIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import FullWidthImageCard from "../components/home/FullWidthImageCard";
 import HomeProductItemCard from "../components/home/HomeProductItemCard";
 import IconCard from "../components/home/IconCard";
-import ReviewCard from "../components/home/ReviewCard";
 import WaveSvg from "../components/main/WaveSvg";
 import SectionCoaches from "../components/products/SectionCoaches";
 import MultiColorBg from "../components/home/MultiColorBg";
 import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
 import SimpleIconCard from "../components/home/SimpleIconCard";
+import SectionReviewsMain from "../components/home/SectionReviewsMain";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -472,155 +467,7 @@ export default function Home() {
       </div>
 
       {/* SECTION 6: REVIEWS */}
-      <section className="bg-main">
-        <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
-          <h2 className="-mx-2 font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl leading-normal text-center text-white">
-            Reacties van Soloswim gebruikers
-          </h2>
-          {/* MOBILE REVIEWS (TOT EN MET SM BREAKPOINT) */}
-          <div className="-mx-2 my-12 md:hidden">
-            <Carousel
-              showStatus={false}
-              showIndicators={false}
-              showThumbs={false}
-              renderArrowNext={(onClickHandler, hasNext) =>
-                hasNext && (
-                  <button
-                    className="absolute right-0 top-0 transform h-full z-20"
-                    type="button"
-                    onClick={onClickHandler}
-                  >
-                    <ArrowRightIcon className="w-7 h-7 text-white" />
-                  </button>
-                )
-              }
-              renderArrowPrev={(onClickHandler, hasPrev) =>
-                hasPrev && (
-                  <button
-                    className="absolute left-0 top-0 transform h-full z-20"
-                    type="button"
-                    onClick={onClickHandler}
-                  >
-                    <ArrowLeftIcon className="w-7 h-7 text-white" />
-                  </button>
-                )
-              }
-            >
-              <div className="h-full">
-                <ReviewCard
-                  title="Dit is zo leuk!"
-                  text="VAltiud zeenchema de ideale aanvulling! "
-                  name="Kees"
-                />
-              </div>
-              <div className="h-full">
-                <ReviewCard
-                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
-                  name="Kees"
-                />
-              </div>
-              <div className="h-full">
-                <ReviewCard
-                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-                  name="Kees"
-                />
-              </div>
-              <div className="h-full">
-                <ReviewCard
-                  title="Dit is zo leuk!"
-                  text="VAltiud zeenchema de ideale aanvulling! "
-                  name="Kees"
-                />
-              </div>
-              <div className="h-full">
-                <ReviewCard
-                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
-                  name="Kees"
-                />
-              </div>
-              <div className="h-full">
-                <ReviewCard
-                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-                  name="Kees"
-                />
-              </div>
-            </Carousel>
-          </div>
-          {/* DESKTOP REVIEWS (VANAF MD BREAKPOINT) */}
-          <div className="hidden md:block my-12 max-w-6xl lg:mx-auto">
-            <Carousel
-              showStatus={false}
-              showIndicators={false}
-              showThumbs={false}
-              renderArrowNext={(onClickHandler, hasNext) =>
-                hasNext && (
-                  <button
-                    className="absolute right-0 top-0 transform h-full z-20"
-                    type="button"
-                    onClick={onClickHandler}
-                  >
-                    <ArrowRightIcon className="w-7 h-7 text-white" />
-                  </button>
-                )
-              }
-              renderArrowPrev={(onClickHandler, hasPrev) =>
-                hasPrev && (
-                  <button
-                    className="absolute left-0 top-0 transform h-full z-20"
-                    type="button"
-                    onClick={onClickHandler}
-                  >
-                    <ArrowLeftIcon className="w-7 h-7 text-white" />
-                  </button>
-                )
-              }
-            >
-              {/* Group of 3 reviews */}
-              <div className="flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
-                <ReviewCard
-                  title="Dit is zo leuk!"
-                  text="VAltiud zeenchema de ideale aanvulling! "
-                  name="Kees"
-                />
-                <ReviewCard
-                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
-                  name="Kees"
-                />
-                <ReviewCard
-                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-                  name="Kees"
-                />
-              </div>
-              {/* End group of 3 reviews */}
-              {/* Group of 3 reviews */}
-              <div className="flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
-                <ReviewCard
-                  title="Dit is zo leuk!"
-                  text="VAltiud zeenchema de ideale aanvulling! "
-                  name="Kees"
-                />
-                <ReviewCard
-                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling!"
-                  name="Kees"
-                />
-                <ReviewCard
-                  title="Dit is zo leuk! Dit is zo leuk! Dit is zo leuk!"
-                  text="VAltiud zelf willen leren zwemmen?? lf willen leren zwemmen. Dat kan! Volg je zelf al een borstcrawl cursus? Dan is een soloswim zelf al een borstcrawl cursus? Dan is een soloswim schema de ideale aanvulling! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-                  name="Kees"
-                />
-              </div>
-              {/* End group of 3 reviews */}
-            </Carousel>
-          </div>
-        </div>
-      </section>
+      <SectionReviewsMain />
 
       <div className="bg-main">
         <WaveSvg fill="#FFF" />
