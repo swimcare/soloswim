@@ -100,10 +100,10 @@ function Header() {
               <Link href="/producten"><a>Zwemschema's</a></Link>
             </li>
             <li className="self-center hover:underline">
-              <Link href="/"><a>Over Soloswim</a></Link>
+              <Link href="/over-ons"><a>Over Soloswim</a></Link>
             </li>
             <li className="self-center hover:underline">
-              <Link href="/"><a>Contact</a></Link>
+              <Link href="/contact"><a>Contact</a></Link>
             </li>
             <li className="hidden md:block self-center hover:underline hover:cursor-pointer">
               <Link href="/winkelwagen">

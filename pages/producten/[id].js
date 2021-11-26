@@ -8,7 +8,6 @@ import SectionFaq from "../../components/products/SectionFaq";
 import SectionProductDescription from "../../components/products/SectionProductDescription";
 import SectionProductTabs from "../../components/products/SectionProductTabs";
 import SectionNiveauInfo from "../../components/products/SectionNiveauInfo";
-import SectionCoaches from "../../components/products/SectionCoaches";
 import WinkelwagenModal from "../../components/products/WinkelwagenModal";
 
 export async function getStaticProps({ params }) {
@@ -82,10 +81,12 @@ export default function Zwemschema({ productData }) {
 
         <SectionFaq />
 
-        <SectionCoaches
+        {/* SectionCoaches when ready */}
+        {/* <SectionCoaches
           color={productData.color}
           isCombi={productData.isCombi}
-        />
+        /> */}
+        
       </main>
     </Fragment>
   );

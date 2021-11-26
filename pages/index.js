@@ -8,11 +8,11 @@ import FullWidthImageCard from "../components/home/FullWidthImageCard";
 import HomeProductItemCard from "../components/home/HomeProductItemCard";
 import IconCard from "../components/home/IconCard";
 import WaveSvg from "../components/main/WaveSvg";
-import SectionCoaches from "../components/products/SectionCoaches";
 import MultiColorBg from "../components/home/MultiColorBg";
 import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
 import SimpleIconCard from "../components/home/SimpleIconCard";
 import SectionReviewsMain from "../components/home/SectionReviewsMain";
+import Link from "next/link";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -131,12 +131,16 @@ export default function Home() {
               </h2>
             </div>
             <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
-              <button
-                role="button"
-                className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-              >
-                Shop nu
-              </button>
+              <Link href="/producten">
+                <a>
+                  <button
+                    role="button"
+                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                  >
+                    Shop nu
+                  </button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -214,12 +218,16 @@ export default function Home() {
         {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-10"> */}
 
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32">
-          <button
-            role="button"
-            className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-          >
-            Bekijk ons aanbod
-          </button>
+          <Link href="/producten">
+            <a>
+              <button
+                role="button"
+                className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+              >
+                Bekijk ons aanbod
+              </button>
+            </a>
+          </Link>
         </div>
         <WaveSvg fill="#fff" />
       </section>
@@ -394,7 +402,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: COACHES */}
-      <SectionCoaches color="multicolor" />
+      {/* <SectionCoaches color="multicolor" /> */}
 
       {/* SECTION 5: WAAROM SOLOSWIM */}
       <section className="bg-grey-light4">
@@ -541,12 +549,16 @@ export default function Home() {
                 Wat jouw niveau ook is
               </h3>
               <div className="hidden md:block my-auto flex-shrink-0">
-                <button
-                  role="button"
-                  className="text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                >
-                  Bekijk alle producten
-                </button>
+                <Link href="/producten">
+                  <a>
+                    <button
+                      role="button"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                    >
+                      Bekijk alle producten
+                    </button>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -558,54 +570,45 @@ export default function Home() {
               responsive={responsive}
               // ssr={true} // means to render carousel on server-side.
               infinite={false}
-              // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-              // autoPlaySpeed={1000}
               keyBoardControl={true}
               partialVisible={true}
               centerMode={false}
-              // customTransition="all .5"
-              // transitionDuration={500}
-              // containerClass="carousel-container"
-              // removeArrowOnDeviceType={["tablet", "mobile"]}
-              // deviceType={this.props.deviceType}
-              // dotListClass="custom-dot-list-style"
-              // itemClass="carousel-item-padding-40-px"
             >
               {/* todo: update href links to actual products */}
               <HomeProductItemCard
-                title="BC complete zwemtraining"
-                img="/images/home/bundel-front.png"
-                price="12,99"
-                borderColor="border-soloswim-orange"
-                href="/producten"
-              />
-              <HomeProductItemCard
-                title="BC complete zwemtraining"
-                img="/images/home/bundel-front2.png"
-                price="12,99"
-                borderColor="border-soloswim-yellow"
-                href="/producten"
-              />
-              <HomeProductItemCard
-                title="BC complete zwemtraining"
-                img="/images/home/bundel-front3.png"
+                title="Borstcrawl 100m leren zwemmen"
+                img="/images/zwemschemas/bcl100/1.png"
                 price="12,99"
                 borderColor="border-soloswim-blue"
-                href="/producten"
+                href="/producten/borstcrawl-100m-leren-zwemmen"
               />
               <HomeProductItemCard
-                title="BC complete zwemtraining"
-                img="/images/home/bundel-front4.png"
+                title="Borstcrawl complete zwemtraining"
+                img="/images/zwemschemas/bcc1/1.png"
                 price="29,99"
                 borderColor="border-t-soloswim-orange border-b-soloswim-green border-l-soloswim-yellow border-r-soloswim-yellow"
-                href="/producten"
+                href="/producten/borstcrawl-complete-zwemtraining"
               />
               <HomeProductItemCard
-                title="BC complete zwemtraining"
-                img="/images/home/bundel-front5.png"
+                title="Borstcrawl techniek zwemtraining"
+                img="/images/zwemschemas/bct1/1.png"
                 price="12,99"
-                borderColor="border-soloswim-pink"
-                href="/producten"
+                borderColor="border-soloswim-green"
+                href="/producten/borstcrawl-techniek-zwemtraining"
+              />
+              <HomeProductItemCard
+                title="Borstcrawl kracht zwemtraining"
+                img="/images/zwemschemas/bck1/1.png"
+                price="12,99"
+                borderColor="border-soloswim-orange"
+                href="/producten/borstcrawl-kracht-zwemtraining"
+              />
+              <HomeProductItemCard
+                title="Borstcrawl duur zwemtraining"
+                img="/images/zwemschemas/bcd1/1.png"
+                price="12,99"
+                borderColor="border-soloswim-yellow"
+                href="/producten/borstcrawl-duur-zwemtraining"
               />
             </MultiCarousel>
           </div>
@@ -691,12 +694,16 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:inline-block hidden my-6">
-                <button
-                  role="button"
-                  className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                >
-                  Meer over ons
-                </button>
+                <Link href="/over-ons">
+                  <a>
+                    <button
+                      role="button"
+                      className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                    >
+                      Meer over ons
+                    </button>
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="inline-block lg:hidden mx-auto my-6">
