@@ -80,9 +80,8 @@ export default function Zwemschema({ productData }) {
             productData={productData}
           />
         ) : (
-          <div className="lg:h-20"></div>
+          <div className="lg:h-20 bg-grey-light4 lg:bg-white"></div>
         )}
-
         <SectionFaq />
 
         {/* SectionCoaches when ready */}

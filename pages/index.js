@@ -612,12 +612,16 @@ export default function Home() {
               />
             </MultiCarousel>
           </div>
-          <button
-            role="button"
-            className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-          >
-            Bekijk alle producten
-          </button>
+          <Link href="/producten">
+            <a>
+              <button
+                role="button"
+                className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+              >
+                Bekijk alle producten
+              </button>
+            </a>
+          </Link>
         </div>
       </section>
 
@@ -707,12 +711,16 @@ export default function Home() {
               </div>
             </div>
             <div className="inline-block lg:hidden mx-auto my-6">
-              <button
-                role="button"
-                className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-              >
-                Meer over ons
-              </button>
+              <Link href="/producten">
+                <a>
+                  <button
+                    role="button"
+                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                  >
+                    Meer over ons
+                  </button>
+                </a>
+              </Link>
             </div>
           </div>
           {/* Einde over on card */}
