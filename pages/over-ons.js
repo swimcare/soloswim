@@ -12,9 +12,7 @@ function overOns() {
               Over Soloswim
             </h1>
             <p className="text-navy-light1 font-lexend font-semibold text-lg lg:text-2xl my-1 md:my-3 italic">
-              Hoe herken ik een Soloswimmer? …. Zwemt zelfstandig zijn
-              zwemtraining met een leuke kleurtjes bundel op de rand…. --
-              beetje raar om hier mee te beginnen bij "over soloswim"
+              Lees hier onze missie, ons verhaal en over het onstaan van Soloswim.
             </p>
           </div>
           <div className="my-5 lg:mt-10">
@@ -28,7 +26,7 @@ function overOns() {
                 color="bg-grey-light4"
               />
               <IconCard
-                title="Iets aanbieden voor mensen die niet bij een club willen zwemmen --> Iedereen helpen aan uitdagende zwemtrainingen: Soloswim bundels in alle zwembaden in de hele wereld!"
+                title="Zwemschema's voor elk type zwemmer!"
                 img="/images/over-ons/missie2.png"
                 color="bg-grey-light4"
               />
