@@ -64,6 +64,7 @@ function Header() {
                     alt="Soloswim logo black"
                     width={500}
                     height={171}
+                    priority
                   />
                 ) : (
                   <Image
@@ -71,6 +72,7 @@ function Header() {
                     alt="Soloswim logo white"
                     width={500}
                     height={171}
+                    priority
                   />
                 )}
               </a>
@@ -151,14 +153,14 @@ function Header() {
                   </li>
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/over-ons">
                 <a>
                   <li className="py-3 border-b border-opacity-25">
                     <span className="ml-3">Over Soloswim</span>
                   </li>
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/contact">
                 <a>
                   <li className="py-3 border-b border-opacity-25">
                     <span className="ml-3">Contact</span>
