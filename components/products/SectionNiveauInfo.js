@@ -2,7 +2,7 @@ import NiveauCard from "./niveau/NiveauCard";
 import parse from "html-react-parser";
 import Link from "next/link";
 
-function SectionNiveauInfo({ title }) {
+function SectionNiveauInfo({ title, addItemToBasket, productData }) {
   return (
     <section id="welk-niveau-past-bij-mij">
       <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 pt-16 lg:pt-20 pb-24 lg:pb-0">
@@ -20,6 +20,8 @@ function SectionNiveauInfo({ title }) {
 
         <div className="flex flex-col lg:flex-row my-5 lg:my-14 gap-5 lg:gap-10">
           <NiveauCard
+            addItemToBasket={addItemToBasket}
+            productData={productData}
             tooltip
             title="Beginners"
             text1={parse(
@@ -38,6 +40,8 @@ function SectionNiveauInfo({ title }) {
             )}
           />
           <NiveauCard
+            addItemToBasket={addItemToBasket}
+            productData={productData}
             title="Semi-gevorderden"
             text1={parse(
               `Je zwemt al een tijdje <span classname="font-semibold">regelmatig borstcrawl</span> (>1 jaar) en dit gaat je over het algemeen goed af.`
@@ -55,6 +59,8 @@ function SectionNiveauInfo({ title }) {
             )}
           />
           <NiveauCard
+            addItemToBasket={addItemToBasket}
+            productData={productData}
             title="Gevorderden"
             text1={parse(
               `Je zwemt al jaren borstcrawl en dit gaat je <span classname="font-semibold">zeer goed</span> af.`

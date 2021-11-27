@@ -1,7 +1,19 @@
-import { CheckIcon, InformationCircleIcon } from "@heroicons/react/outline";
+import {
+  CheckIcon,
+  InformationCircleIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/outline";
 import Tooltip from "../../general/Tooltip";
 
-function NiveauCard({ title, text1, text2, text3, tooltip }) {
+function NiveauCard({
+  title,
+  text1,
+  text2,
+  text3,
+  tooltip,
+  addItemToBasket,
+  productData,
+}) {
   return (
     <div className="bg-grey-light4 rounded-lg max-w-lg mx-auto flex-1">
       <div className="flex flex-col gap-2 items-stretch h-full">
@@ -41,8 +53,17 @@ function NiveauCard({ title, text1, text2, text3, tooltip }) {
           </div>
         </div>
         <div className="text-center mt-auto">
-          <button className="mb-4 lg:mb-6 text-white text-sm font-bold uppercase px-5 py-2 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main">
-            Selecteer
+          <button
+            onClick={() => {
+              productData.type = title;
+              addItemToBasket(productData);
+            }}
+            className="mb-4 lg:mb-6 w-52 text-white text-xs font-bold uppercase px-5 py-2 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+          >
+            <span>
+              <ShoppingCartIcon className="w-4 h-4 float-left mt-[calc(-1px)]" />
+            </span>{" "}
+            in winkelwagen
           </button>
         </div>
       </div>

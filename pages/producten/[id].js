@@ -74,7 +74,11 @@ export default function Zwemschema({ productData }) {
         <SectionProductTabs productData={productData} />
 
         {productData.niveaus ? (
-          <SectionNiveauInfo title={productData.title} />
+          <SectionNiveauInfo
+            title={productData.title}
+            addItemToBasket={addItemToBasket}
+            productData={productData}
+          />
         ) : (
           <div className="lg:h-20"></div>
         )}
@@ -86,7 +90,6 @@ export default function Zwemschema({ productData }) {
           color={productData.color}
           isCombi={productData.isCombi}
         /> */}
-
       </main>
     </Fragment>
   );
