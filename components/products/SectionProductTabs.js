@@ -83,7 +83,7 @@ function SectionProductTabs({ productData }) {
           </div>
           <div>
             {/* Tab 1: Wat krijg je */}
-            {(activeTab === 1 || width < 768) && (
+            {(activeTab === 1 || productData.isAccessoire || width < 768) && (
               <div
                 id="wat-krijg-je"
                 className="md:my-14 flex flex-col md:flex-row md:space-x-14 gap-5 md:gap-0"

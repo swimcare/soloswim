@@ -29,7 +29,7 @@ function Attribuut({ icon, name, tooltipText, bestelButton }) {
                     role="button"
                     className="text-white disabled:opacity-50 text-xs font-semibold uppercase px-3 py-1 rounded-full bg-main tracking-wider shadow-md hover:bg-transparent hover:text-main border-2 border-main"
                   >
-                    Bestel
+                    Bekijk
                   </button>
                 </a>
               </Link>
