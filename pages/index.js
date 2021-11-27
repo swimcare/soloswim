@@ -744,27 +744,27 @@ export default function Home() {
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen2.png"
               title="Voor alle leeftijden"
-              text="Je ziet het meteen als je het zwembad inloopt: zwemmen is voor jong en oud! Je kunt het zo zwaar (of licht) maken als je zelf wilt."
+              text="Je ziet het meteen als je het zwembad inloopt: zwemmen is voor jong en oud! Je bepaalt zelf namelijk hoe zwaar (of licht) je het maakt."
             />
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen3.png"
-              title="Goed voor je gezondheid"
+              title="Goed voor je lichaam"
               text="Longproblemen, hart- en vaatziekten of revalideren? Ga zwemmen is wat doktoren met goede reden zeggen!"
             />
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen4.png"
               title="Toegankelijk"
-              text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
+              text="Iedereen heeft badkleding in de kast liggen en zwembaden zijn er in overvloed, dus niets houd je tegen om een duik te nemen!"
             />
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen5.png"
               title="Full body workout"
-              text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
+              text="Bij zwemmen worden vrijwel alle spieren aan het werk gezet! Tegelijkertijd is het ook nog eens één van de beste manieren om je conditie te verbeteren."
             />
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen6.png"
               title="Blessurevrij sporten"
-              text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
+              text="Rustig zwemmen is ontspannend en stress verlagend. Lever je meer inspanning dan wordt zwemmen meditatief omdat er geen ruimte is voor overbodige gedachten."
             />
           </div>
         </div>
