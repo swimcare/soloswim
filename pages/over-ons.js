@@ -12,8 +12,9 @@ function overOns() {
               Over Soloswim
             </h1>
             <p className="text-navy-light1 font-lexend font-semibold text-lg lg:text-2xl my-1 md:my-3 italic">
-              Kenmerkend voor een Soloswimmer: …. Zwemt zelfstandig zijn
-              zwemtraining met een leuke kleurtjes bundel op de rand….
+              Hoe herken ik een Soloswimmer? …. Zwemt zelfstandig zijn
+              zwemtraining met een leuke kleurtjes bundel op de rand…. -->
+              beetje raar om hier mee te beginnen bij "over soloswim"
             </p>
           </div>
           <div className="my-5 lg:mt-10">
@@ -22,17 +23,17 @@ function overOns() {
             </h2>
             <div className="flex flex-col md:flex-row gap-10 md:gap-2 lg:gap-10 my-12 lg:mt-20">
               <IconCard
-                title="Het zwemmen leuker maken"
+                title="Banenzwemmen leuker maken!"
                 img="/images/over-ons/missie1.png"
                 color="bg-grey-light4"
               />
               <IconCard
-                title="Iets aanbieden voor mensen die niet bij een club willen zwemmen"
+                title="Iets aanbieden voor mensen die niet bij een club willen zwemmen --> Iedereen helpen aan uitdagende zwemtrainingen: Soloswim bundels in alle zwembaden in de hele wereld!"
                 img="/images/over-ons/missie2.png"
                 color="bg-grey-light4"
               />
               <IconCard
-                title="Onze kennis delen"
+                title="Onze kennis over zwemmen delen!"
                 img="/images/over-ons/missie3.png"
                 color="bg-grey-light4"
               />
@@ -68,19 +69,18 @@ function overOns() {
             </div>
             <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
               <p>
-                Sinds de dag dat we elkaar ontmoet hebben is zwemmen de rode
-                draad door ons leven (het klinkt een beetje cliché maar het is
-                echt zo). We hebben elkaar ontmoet ik het zwembad (precies zo
-                als op de foto hiernaast) en zijn nu getrouwd met golven
-                gegraveerd op onze trouwringen. En dat is niet voor niets, we
-                zijn allebei gek op zwemmen!
+                Sinds de dag dat we elkaar ontmoet hebben is zwemmen een
+                belangrijk onderdeel in ons leven. We hebben elkaar ontmoet ik
+                het zwembad (ongeveer zoals op de foto hiernaast) en zijn nu
+                getrouwd met golven gegraveerd in onze trouwringen. En dat is
+                niet voor niets, we zijn allebei gek op zwemmen!
               </p>
               <p className="mt-5">
                 Wij houden van zwemmen omdat het ons hoofd leeg maakt, een
-                full-body workout is zonder onszelf te blesseren en het gewoon
-                heerlijk is door het water te glijden. Puur omdat we er gelukkig
+                full-body workout is zonder dat we ons lichaam overbelasten en het een
+                heerlijk gevoel is om door het water te glijden. We doen het vooral omdat we er gelukkig
                 van worden. En dat willen we graag delen met andere
-                banenzwemmers doormidel van onze leuke en uitdagende
+                banenzwemmers doormiddel van onze leuke en uitdagende
                 zwemschema’s!
               </p>
             </div>
@@ -129,23 +129,23 @@ function overOns() {
               Het ontstaan van Soloswim
             </h2>
             <h3 className="font-lexend font-bold sm:font-extrabold text-2xl md:text-3xl lg:text-4xl text-navy-light1 my-2 lg:my-5">
-              Een droom
+              Een droomproject
             </h3>
           </div>
           <div className="bg-grey-light4 rounded-2xl px-5 lg:px-10 text-base leading-relaxed text-navy-light1 lg:leading-normal">
             <div className="">
               <p className="py-5 lg:hidden">
-                Sinds we niet meer bij een club zwemmen (zo’n 3 jaar nu) maken
-                we onze eigen zwemtrainingen om zelf te doen tijdens het
+              Sinds we niet meer bij een club zwemmen maken
+                wij onze eigen zwemtrainingen om zelf te doen tijdens het
                 banenzwemmen. We zijn een ondernemend stel en afgelopen voorjaar
                 waren we opzoek naar een nieuw project om ons volledig op te
-                storten. Het werd mei en we gingen een maand op pad (in onze
+                storten. In mei 2021 gingen we een maand op pad (in onze
                 zelfgebouwde camperbus) om de Cote d’Azur te verkennen; genoeg
-                tijd om op een nieuw idee te broeden, hoopten we! Het was er
+                tijd om een nieuw idee te bedenken, dat hoopte we stiekem! Het was er
                 prachtig, we genoten van de natuur en zwommen veel in de zee.
-                Maar we misten ook iets, we misten ons 25m zwembad waar we onze
+                Maar we miste ook iets; een 25-meter zwembad waar we onze
                 baantjes in konden zwemmen (ja dat kan ook in de zee hoor ik je
-                denken, maar ik (Emily) ben een bang voor kwallen en haaien dus
+                denken, maar ik, Emily, ben een bang voor kwallen en haaien dus
                 ik was al heel trots als ik kopje onder was geweest).
               </p>
               <div className="lg:float-right lg:pl-7 lg:pt-7">
@@ -158,36 +158,36 @@ function overOns() {
                 />
               </div>
               <p className="hidden lg:block pt-7">
-                Sinds we niet meer bij een club zwemmen (zo’n 3 jaar nu) maken
-                we onze eigen zwemtrainingen om zelf te doen tijdens het
+                Sinds we niet meer bij een club zwemmen maken
+                wij onze eigen zwemtrainingen om zelf te doen tijdens het
                 banenzwemmen. We zijn een ondernemend stel en afgelopen voorjaar
                 waren we opzoek naar een nieuw project om ons volledig op te
-                storten. Het werd mei en we gingen een maand op pad (in onze
+                storten. In mei 2021 gingen we een maand op pad (in onze
                 zelfgebouwde camperbus) om de Cote d’Azur te verkennen; genoeg
-                tijd om op een nieuw idee te broeden, hoopten we! Het was er
+                tijd om een nieuw idee te bedenken, dat hoopte we stiekem! Het was er
                 prachtig, we genoten van de natuur en zwommen veel in de zee.
-                Maar we misten ook iets, we misten ons 25m zwembad waar we onze
+                Maar we miste ook iets; een 25-meter zwembad waar we onze
                 baantjes in konden zwemmen (ja dat kan ook in de zee hoor ik je
-                denken, maar ik (Emily) ben een bang voor kwallen en haaien dus
+                denken, maar ik, Emily, ben een bang voor kwallen en haaien dus
                 ik was al heel trots als ik kopje onder was geweest).
               </p>
               <p className="py-5">
                 Het leuke van een camper is dat je overal kunt gaan staan en
                 gaan waar je maar wilt. Dus we zeiden de zee gedag en gingen op
-                pad naar een 25m buitenzwembad. En die vonden we onder de voet
+                zoek naar een buitenzwembad geschikt voor banenzwemmen. En die vonden we onder de voet
                 van de Mont Ventoux (Laurens wilde die ook heel graag op fietsen
-                dus het was niet helemaal toevallig). Oh wat waren we blij met
+                dus dat kwam mooi uit). Oh wat waren we blij met
                 dat zwembad, het voelde alsof we in het paradijs waren beland!
-                We schreven gauw onze trainingkjes en sprongen direct het
-                zwembad in toen hij de volgende dag open ging. Dagenlang zwommen
+                We schreven snel onze eigen zwemschema's en sprongen direct het
+                zwembad in toen hij de volgende dag open ging. Dagen achter elkaar zwommen
                 we wel 2 tot 3 keer per dag (en verloren dus ook aardig wat
-                handgeschreven trainingen). Het zal je dus ook niet verbazen dat
-                ons idee voor Soloswim ontstond langs het paradijsachtige
-                zwembad onder de voet van de Mont Ventoux! Net op de valreep
+                handgeschreven zwemschema's). Het is dus niet gek dat
+                ons idee voor Soloswim is ontstaan bij het paradijsachtige
+                zwembad onder de voet van de Mont Ventoux! Net op de valreep,
                 want het was de allerlaatste dag van onze reis, ons geluk kon
-                niet op! We hadden eindelijk het project gevonden waar we ons op
-                konden storten.: het werd onze missie onze trainingen te
-                digitaliseren en waterproof te maken!.
+                niet op! We hadden eindelijk het project gevonden waar we ons helemaal op
+                konden storten: het werd onze missie om onze zwemschema's te
+                digitaliseren, waterproof te maken en te delen met anderen!
               </p>
             </div>
           </div>
@@ -196,7 +196,7 @@ function overOns() {
       <section>
         <div className="px-16 sm:px-8 max-w-screen-xl mx-auto py-12 lg:pb-32 text-center">
           <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-2xl md:text-3xl lg:text-4xl">
-            Neem contact met ons op
+            Heb je ideeën, wil je samenwerken of heb je een vraag?
           </h3>
           <div className="my-5">
             <Link href="/contact">
