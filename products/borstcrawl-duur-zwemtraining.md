@@ -7,7 +7,6 @@ price: 12.99
 description: "Wil je graag langere afstanden borstcrawl op een lekker tempo leren zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten werk je aan een beter uithoudingsvermogen! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 features: [
     "10 duur zwemschema’s van 60 min",
-    "Kies zelf steeds een leuk schema uit (er is geen vaste volgorde in deze bundel)",
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven zwemoefeningen",
@@ -84,4 +83,4 @@ inhoud:
   }
 ---
 
-10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je ademhaling en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **middellange tot lange afstanden** op een **rustig tot gematigd tempo** moet zwemmen. Zo werk jij aan je uithoudingsvermogen en word je een betere langeafstand zwemmer.
+10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **middellange tot lange afstanden** op een **rustig tot gematigd tempo** moet zwemmen. Zo werk jij aan je uithoudingsvermogen en word je een betere langeafstand zwemmer.

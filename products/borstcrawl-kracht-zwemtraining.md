@@ -7,7 +7,6 @@ price: 12.99
 description: "Wil je graag krachtiger en sneller borstcrawl zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 features: [
     "10 kracht zwemschema’s van 60 min",
-    "Kies zelf steeds een leuk schema uit (er is geen vaste volgorde in deze bundel)",
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven zwemoefeningen",
@@ -84,4 +83,4 @@ inhoud:
   }
 ---
 
-10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **korte afstanden** op een **hogere intensiteit** moet zwemmen. Zo werk jij aan je kracht en word je een snellere zwemmer.
+10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt (zoals houding, ademhaling of armen) en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk **korte afstanden** op een **hogere intensiteit** moet zwemmen. Zo werk jij aan je kracht en word je een snellere zwemmer.

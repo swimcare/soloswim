@@ -13,7 +13,7 @@ function overOns() {
             </h1>
             <p className="text-navy-light1 font-lexend font-semibold text-lg lg:text-2xl my-1 md:my-3 italic">
               Hoe herken ik een Soloswimmer? …. Zwemt zelfstandig zijn
-              zwemtraining met een leuke kleurtjes bundel op de rand…. -->
+              zwemtraining met een leuke kleurtjes bundel op de rand…. --
               beetje raar om hier mee te beginnen bij "over soloswim"
             </p>
           </div>

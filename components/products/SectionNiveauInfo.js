@@ -11,10 +11,11 @@ function SectionNiveauInfo({ title, addItemToBasket, productData }) {
             Welk <span className="text-main">niveau</span> past bij mij?
           </h1>
           <p className="text-tiny leading-6">
-            Voor de bundel "{title}" kun je kiezen uit de onderstaande niveaus.
-            Kies een niveau dat het beste bij je past. Bij twijfel is het
-            verstandig een niveau lager te kiezen, je kunt altijd later nog een
-            niveau opschuiven als je toe bent aan meer uitdaging.
+            Voor de bundel "{title}" kun je kiezen uit onderstaande niveaus. We
+            hebben een aantal richtlijnen per niveau opgesteld zodat jij het
+            niveau kan kiezen wat het best bij je past. Bij twijfel adviseren we
+            een niveau lager te kiezen, je kunt altijd nog een niveau opschuiven
+            als je toe bent aan meer uitdaging.
           </p>
         </div>
 
@@ -25,7 +26,7 @@ function SectionNiveauInfo({ title, addItemToBasket, productData }) {
             tooltip
             title="Beginners"
             text1={parse(
-              `Je zwemt nog niet zo lang borstcrawl maar hebt de <span classname="font-semibold">basis techniek</span> aardig onder de knie en kunt dit een hele training vasthouden.`
+              `Je zwemt nog niet zo lang borstcrawl maar hebt de <span classname="font-semibold">basis techniek</span> aardig onder de knie.`
             )}
             text2={parse(
               `Je kunt <span classname="font-semibold">100m</span> borstcrawl binnen een tijd van <span classname="font-semibold">2 minuten en 20 seconden</span> zwemmen.`
@@ -35,7 +36,7 @@ function SectionNiveauInfo({ title, addItemToBasket, productData }) {
                 (title === "Borstcrawl Kracht Zwemtraining" && "200") ||
                 (title === "Borstcrawl Techniek Zwemtraining" && "200") ||
                 (title === "Borstcrawl Duur Zwemtraining" && "500") ||
-                (title === "Borstcrawl Complete Zwemtraining" && "800")
+                (title === "Borstcrawl Complete Zwemtraining" && "500")
               }m</span> kun je ook volhouden (of zie je als een mooie uitdaging, dit is de langste afstand die je achter elkaar zwemt uit deze bundel).`
             )}
           />
@@ -80,11 +81,12 @@ function SectionNiveauInfo({ title, addItemToBasket, productData }) {
         </div>
         <div className="text-center text-navy-light1 max-w-4xl mx-auto">
           <p className="text-tiny leading-6">
-            Het is geen ramp als je kiest voor een iets te hoog of laag niveau,
-            je bent dan iets langer of korter bezig met een schema dan de
-            aangegeven tijd. Kom je er helemaal niet uit met kiezen? Wij helpen
-            je graag met het vaststellen van jouw niveau, neem contact met ons
-            op en we helpen je snel aan een Soloswim bundel die bij je past!
+            Het is geen ramp als je kiest voor een iets te hoog of te laag
+            niveau, je bent dan iets langer of korter bezig met een schema dan
+            de aangegeven tijd. Kom je er niet helemaal uit met kiezen? We
+            helpen je graag met het vaststellen van jouw niveau, neem contact
+            met ons op en we helpen je snel aan een Soloswim bundel die bij je
+            past!
           </p>
           <Link href="/contact">
             <a>

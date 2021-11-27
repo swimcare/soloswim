@@ -1,8 +1,9 @@
 import {
-  CheckIcon,
   InformationCircleIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
+import { CheckIcon } from "@heroicons/react/solid"
+
 import Tooltip from "../../general/Tooltip";
 
 function NiveauCard({

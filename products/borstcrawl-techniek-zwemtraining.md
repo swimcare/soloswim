@@ -7,7 +7,6 @@ price: 12.99
 description: "Wil je graag makkelijker en technisch beter borstcrawl leren zwemmen? Deze 10 gevarieerde zwemschema’s van 60 minuten bevatten technische zwemoefeningen die je helpen je slag te verbeteren! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 features: [
     "10 techniek zwemschema’s van 60 min",
-    "Kies zelf steeds een leuk schema uit (er is geen vaste volgorde in deze bundel)",
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven technische zwemoefeningen",
@@ -84,4 +83,4 @@ inhoud:
   }
 ---
 
-10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt zoals je armen, benen of je houding en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk korte tot **middellange afstanden** op een **rustig tempo** moet zwemmen. Zo werk jij aan je techniek en word je een betere zwemmer.
+10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt (zoals houding, ademhaling of armen) en bestaat uit een warming up, een kern en een cooling down. De schema’s bevatten gevarieerde oefeningen waarbij je voornamelijk korte tot **middellange afstanden** op een **rustig tempo** moet zwemmen. Zo werk jij aan je techniek en word je een betere zwemmer.

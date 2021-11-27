@@ -19,7 +19,7 @@ function SubSectionBenodigdhedenNiveaus() {
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
         <p className="text-navy-light1 min-h-[3rem]">
-          Deze dingen heb je zeker nodig.
+          Dit zijn de basis benodigdheden voor iedere zwemmer.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5 items-stretch">
           <DubbelAttribuut
@@ -54,8 +54,11 @@ function SubSectionBenodigdhedenNiveaus() {
         id="benodigdheden-beginners"
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
-        <p className="text-navy-light1">
-        Een plankje en pullbuoy komt veel voor tijdens de oefeningen in deze bundel voor beginners. Je kunt het zonder deze attributen doen, maar wij raden het sterk aan deze wel te gebruiken. Het helpt je enorm bij het uitvoeren van de oefeningen en je haalt meer uit de training. Je koopt ze online voor een paar tientjes of je vraagt aan de badmeester of je ze kunt lenen.
+        <p className="text-navy-light1 min-h-[4rem]">
+          Misschien ben je nog niet zo bekent met het plankje en de pullbuoy,
+          maar deze attributen helpen je enorm voorruit als je de borstcrawl
+          wilt leren zwemmen. Je kunt ze voor een paar tientjes al kopen of je
+          vraagt aan de badmeester of je ze kunt lenen.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <Attribuut
@@ -81,13 +84,11 @@ function SubSectionBenodigdhedenNiveaus() {
         id="benodigdheden-gevorderden"
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
-        <p className="text-navy-light1">
-          Onderstaande attributen komen voor tijdens de oefeningen in deze bundel, voor de niveaus semi-gevorderden en
-          gevorderden. Ze helpen je bij het uitvoeren van bepaalde oefeningen en
-          helpen je te focussen op bepaalde onderdelen van het zwemmen. We raden
-          je aan om in ieder geval een plankje en pullbuoy te gebruiken, omdat
-          deze attributen vaak voorkomen in de zwemschema’s. Je kunt het ook
-          proberen te lenen in het zwembad. Handpeddels en zoomers (korte zwemvliezen) raden wij ook aan om te hebben, maar je zou het ook zonder kunnen uitvoeren. 
+        <p className="text-navy-light1 min-h-[6rem]">
+          Onderstaande attributen helpen je bij het uitvoeren van de
+          zwemoefeningen. Je kunt ze voor een paar tientjes al kopen, een
+          plankje en pullbuoy kun je in de meeste zwembaden ook lenen als je
+          hier naar vraagt.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5">
           <Attribuut
