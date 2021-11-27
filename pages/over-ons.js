@@ -23,17 +23,17 @@ function overOns() {
             <div className="flex flex-col md:flex-row gap-10 md:gap-2 lg:gap-10 my-12 lg:mt-20">
               <IconCard
                 title="Het zwemmen leuker maken"
-                img="/images/home/no-app-needed.png"
+                img="/images/over-ons/missie1.png"
                 color="bg-grey-light4"
               />
               <IconCard
                 title="Iets aanbieden voor mensen die niet bij een club willen zwemmen"
-                img="/images/home/no-app-needed.png"
+                img="/images/over-ons/missie2.png"
                 color="bg-grey-light4"
               />
               <IconCard
                 title="Onze kennis delen"
-                img="/images/home/no-app-needed.png"
+                img="/images/over-ons/missie3.png"
                 color="bg-grey-light4"
               />
             </div>
