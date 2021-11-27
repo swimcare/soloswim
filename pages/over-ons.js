@@ -6,21 +6,21 @@ function overOns() {
   return (
     <main>
       <section>
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-12 lg:py-32">
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-12 lg:py-20">
           <div>
-            <h1 className="text-navy-light1 font-lexend font-extrabold text-3xl">
+            <h1 className="text-navy-light1 font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Over Soloswim
             </h1>
-            <p className="text-navy-light1 font-lexend font-bold md:font-extrabold text-lg my-1 italic">
+            <p className="text-navy-light1 font-lexend font-semibold text-lg lg:text-2xl my-1 md:my-3 italic">
               Kenmerkend voor een Soloswimmer: …. Zwemt zelfstandig zijn
               zwemtraining met een leuke kleurtjes bundel op de rand….
             </p>
           </div>
-          <div className="my-5">
-            <h2 className="text-main font-lexend font-extrabold text-2xl">
+          <div className="my-5 lg:mt-10">
+            <h2 className="text-main font-lexend font-extrabold text-2xl sm:text-3xl md:text-4xl">
               Onze missie
             </h2>
-            <div className="flex flex-col gap-10 my-12">
+            <div className="flex flex-col md:flex-row gap-10 md:gap-2 lg:gap-10 my-12 lg:mt-20">
               <IconCard
                 title="Het zwemmen leuker maken"
                 img="/images/home/no-app-needed.png"
@@ -41,28 +41,28 @@ function overOns() {
         </div>
       </section>
       <section>
-        <div className="my-5 mx-auto lg:mx-0 lg:mr-10 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
+        <div className="mb-5 mt-24 lg:mt-0 mx-auto lg:mx-0 lg:mr-10 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
           <div className="lg:hidden mx-5 leading-none text-zero">
             <Image
               className="rounded-t-xl lg:rounded-none"
-              src="/images/home/oprichters-soloswim.png"
-              width={996}
-              height={772}
-              alt="Oprichters soloswim"
+              src="/images/over-ons/over-ons.png"
+              width={1016}
+              height={645}
+              alt="Ons verhaal"
             />
           </div>
           <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
             <Image
               className="rounded-t-xl sm:rounded-none"
-              src="/images/home/oprichters-soloswim.png"
+              src="/images/over-ons/over-ons.png"
               layout="fill"
               objectFit="cover"
-              alt="Oprichters soloswim"
+              alt="Ons verhaal"
             />
           </div>
-          <div className="bg-grey-light4  mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
+          <div className="bg-grey-light4 mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
             <div>
-              <h3 className="text-main font-lexend font-bold lg:font-extrabold text-2xl">
+              <h3 className="text-main font-lexend font-bold lg:font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                 Ons verhaal
               </h3>
             </div>
@@ -110,8 +110,69 @@ function overOns() {
             <h2 className="text-main font-lexend font-extrabold text-3xl">
               Het ontstaan van Soloswim
             </h2>
-            <h3 className="font-lexend font-bold text-2xl text-navy-light1 my-2">Een droom</h3>
+            <h3 className="font-lexend font-bold text-2xl text-navy-light1 my-2">
+              Een droom
+            </h3>
           </div>
+          <div className="bg-grey-light4 rounded-2xl px-5 text-base leading-relaxed text-navy-light1 lg:leading-normal">
+            <p className="py-5">
+              Sinds we niet meer bij een club zwemmen (zo’n 3 jaar nu) maken we
+              onze eigen zwemtrainingen om zelf te doen tijdens het
+              banenzwemmen. We zijn een ondernemend stel en afgelopen voorjaar
+              waren we opzoek naar een nieuw project om ons volledig op te
+              storten. Het werd mei en we gingen een maand op pad (in onze
+              zelfgebouwde camperbus) om de Cote d’Azur te verkennen; genoeg
+              tijd om op een nieuw idee te broeden, hoopten we! Het was er
+              prachtig, we genoten van de natuur en zwommen veel in de zee. Maar
+              we misten ook iets, we misten ons 25m zwembad waar we onze
+              baantjes in konden zwemmen (ja dat kan ook in de zee hoor ik je
+              denken, maar ik (Emily) ben een bang voor kwallen en haaien dus ik
+              was al heel trots als ik kopje onder was geweest).
+            </p>
+            <div>
+              <Image
+                className="rounded-t-xl sm:rounded-none"
+                src="/images/home/oprichters-soloswim.png"
+                width={604}
+                height={403}
+                alt="Oprichters soloswim"
+              />
+            </div>
+
+            <p className="py-5">
+              Het leuke van een camper is dat je overal kunt gaan staan en gaan
+              waar je maar wilt. Dus we zeiden de zee gedag en gingen op pad
+              naar een 25m buitenzwembad. En die vonden we onder de voet van de
+              Mont Ventoux (Laurens wilde die ook heel graag op fietsen dus het
+              was niet helemaal toevallig). Oh wat waren we blij met dat
+              zwembad, het voelde alsof we in het paradijs waren beland! We
+              schreven gauw onze trainingkjes en sprongen direct het zwembad in
+              toen hij de volgende dag open ging. Dagenlang zwommen we wel 2 tot
+              3 keer per dag (en verloren dus ook aardig wat handgeschreven
+              trainingen). Het zal je dus ook niet verbazen dat ons idee voor
+              Soloswim ontstond langs het paradijsachtige zwembad onder de voet
+              van de Mont Ventoux! Net op de valreep want het was de
+              allerlaatste dag van onze reis, ons geluk kon niet op! We hadden
+              eindelijk het project gevonden waar we ons op konden storten.: het
+              werd onze missie onze trainingen te digitaliseren en waterproof te
+              maken!.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="px-16 sm:px-8 max-w-screen-xl mx-auto py-12 lg:py-32 text-center">
+          <h3 className="text-navy-light1 font-lexend font-bold text-2xl">Neem contact met ons op</h3>
+          <div className="my-5">
+          <Link href="/contact">
+            <a>
+              <button className="my-4 lg:my-6 text-white max-w-xs lg:text-lg font-bold uppercase w-full px-3 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main">
+                Neem contact op
+              </button>
+            </a>
+          </Link>
+          </div>
+
         </div>
       </section>
     </main>
