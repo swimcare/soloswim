@@ -1,32 +1,8 @@
 import NiveauCard from "./niveau/NiveauCard";
 import parse from "html-react-parser";
-import Tooltip from "../general/Tooltip";
 import Link from "next/link";
 
-
 function SectionNiveauInfo({ title }) {
-  const card = () => {
-    return (
-      <NiveauCard
-        title="Beginners"
-        text1={parse(
-          `Je zwemt nog niet zo lang borstcrawl maar hebt de <span classname="font-semibold">basis techniek</span> aardig onder de knie en kunt dit een hele training vasthouden.`
-        )}
-        text2={parse(
-          `Je kunt <span classname="font-semibold">100m</span> borstcrawl binnen een tijd van <span classname="font-semibold">2 minuten en 20 seconden</span> zwemmen.`
-        )}
-        text3={parse(
-          `Je kunt <span classname="font-semibold">100m</span> borstcrawl achter elkaar zwemmen en dit gaat je af zonder problemen. Een afstand van <span classname="font-semibold">${
-            (title === "Borstcrawl Kracht Zwemtraining" && "200") ||
-            (title === "Borstcrawl Techniek Zwemtraining" && "200") ||
-            (title === "Borstcrawl Duur Zwemtraining" && "500") ||
-            (title === "Borstcrawl Complete Zwemtraining" && "800")
-          }m</span> kun je ook volhouden (of zie je als een mooie uitdaging, dit is de langste afstand die je achter elkaar zwemt uit deze bundel).`
-        )}
-      />
-    );
-  };
-
   return (
     <section id="welk-niveau-past-bij-mij">
       <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 pt-16 lg:pt-20 pb-24 lg:pb-0">
@@ -41,18 +17,26 @@ function SectionNiveauInfo({ title }) {
             niveau opschuiven als je toe bent aan meer uitdaging.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row my-5 lg:my-14 gap-5 lg:gap-10">
-          <div className="flex-1">
-            <Tooltip
-              textClassname="text-main"
-              className="bg-main w-full text-white"
-              iconClassName="text-main border-white"
-              position="top"
-              title={card()}
-              content="Beginners niveau te hoog gegrepen? Bekijk onze 100m borstcrawl leren zwemmen bundel!"
-            ></Tooltip>
-          </div>
 
+        <div className="flex flex-col lg:flex-row my-5 lg:my-14 gap-5 lg:gap-10">
+          <NiveauCard
+            tooltip
+            title="Beginners"
+            text1={parse(
+              `Je zwemt nog niet zo lang borstcrawl maar hebt de <span classname="font-semibold">basis techniek</span> aardig onder de knie en kunt dit een hele training vasthouden.`
+            )}
+            text2={parse(
+              `Je kunt <span classname="font-semibold">100m</span> borstcrawl binnen een tijd van <span classname="font-semibold">2 minuten en 20 seconden</span> zwemmen.`
+            )}
+            text3={parse(
+              `Je kunt <span classname="font-semibold">100m</span> borstcrawl achter elkaar zwemmen en dit gaat je af zonder problemen. Een afstand van <span classname="font-semibold">${
+                (title === "Borstcrawl Kracht Zwemtraining" && "200") ||
+                (title === "Borstcrawl Techniek Zwemtraining" && "200") ||
+                (title === "Borstcrawl Duur Zwemtraining" && "500") ||
+                (title === "Borstcrawl Complete Zwemtraining" && "800")
+              }m</span> kun je ook volhouden (of zie je als een mooie uitdaging, dit is de langste afstand die je achter elkaar zwemt uit deze bundel).`
+            )}
+          />
           <NiveauCard
             title="Semi-gevorderden"
             text1={parse(

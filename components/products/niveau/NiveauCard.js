@@ -1,12 +1,28 @@
-import { CheckIcon } from "@heroicons/react/solid";
+import { CheckIcon, InformationCircleIcon } from "@heroicons/react/outline";
+import Tooltip from "../../general/Tooltip";
 
-function NiveauCard({ title, text1, text2, text3 }) {
+function NiveauCard({ title, text1, text2, text3, tooltip }) {
   return (
     <div className="bg-grey-light4 rounded-lg max-w-lg mx-auto flex-1">
       <div className="flex flex-col gap-2 items-stretch h-full">
-        <h3 className="text-navy-light1 font-bold lg:font-extrabold font-lexend lg:text-2xl text-center py-3 lg:py-5">
-          {title}
-        </h3>
+        <div className="flex flex-row justify-center gap-2">
+          <h3 className="text-navy-light1 font-bold lg:font-extrabold font-lexend lg:text-2xl text-center py-3 lg:py-5">
+            {title}
+          </h3>
+          {tooltip && (
+            <div className="inline-block my-auto hover:cursor-pointer">
+              <Tooltip
+                textClassname="text-main text-center"
+                className="bg-main text-white w-60"
+                iconClassName="text-main border-white"
+                position="top"
+                title={<InformationCircleIcon className="h-6 w-6 text-main" />}
+                content="Beginners niveau te hoog gegrepen? Bekijk onze 100m borstcrawl leren zwemmen bundel!"
+              ></Tooltip>
+            </div>
+          )}
+        </div>
+
         <div className="px-3 pb-3 text-tiny">
           {/* item */}
           <div className="flex flex-row gap-4 py-2 text-tiny text-navy-light1 leading-6">
