@@ -19,10 +19,9 @@ function index({ allProductsData }) {
             </h2>
             <p className="text-navy-light1 text-tiny leading-6">
               Bij Soloswim vind je zwemtrainingen waarmee jij nog meer uit je
-              zwemmoment kunt halen. Zwem je graag lange afstanden, of hou je
-              meer van explosiviteit? Bekijk ons diverse aanbod en ga gauw aan
-              de slag met jouw eigen Soloswim bundel! Moeite met kiezen? Ga voor
-              de combo
+              zwemmoment kunt halen. Zwem je graag lange afstanden, hou je meer
+              van explosiviteit of ben je nog maar net begonnen? Bekijk ons
+              diverse aanbod en ga snel aan de slag met jouw eigen bundel!
             </p>
           </div>
           <div>
@@ -77,7 +76,9 @@ function index({ allProductsData }) {
               >
                 <div>
                   <div className="mb-6 py-1 text-center">
-                    <p className="text-navy-light1 font-lexend font-extrabold text-3xl">Coming soon!</p>
+                    <p className="text-navy-light1 font-lexend font-extrabold text-3xl">
+                      Coming soon!
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-5/6 mx-auto">
@@ -102,7 +103,9 @@ function index({ allProductsData }) {
               >
                 <div>
                   <div className="mb-6 py-1 text-center">
-                    <p className="text-navy-light1 font-lexend font-extrabold text-3xl">Coming soon!</p>
+                    <p className="text-navy-light1 font-lexend font-extrabold text-3xl">
+                      Coming soon!
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-5/6 mx-auto">

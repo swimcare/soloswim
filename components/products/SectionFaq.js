@@ -28,17 +28,19 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    Bij de techniektrainingen werk je aan het netjes uitvoeren
-                    van je slag. Door middel van speciale techniekoefeningen
-                    tijdens het zwemmen ga je technisch beter zwemmen. Bij de
-                    krachttrainingen wordt er gewerkt aan je explosiviteit,
-                    snelheid en spieropbouw. Deze zwemschema’s bestaan vooral
-                    uit setjes met korte afstanden. Bij de duurtrainingen ligt
-                    de focus op het verbeteren van je conditie en opbouwen van
-                    je duurvermogen. Vanzelfsprekend zijn hier de afstanden die
-                    je zwemt in een training wat langer. Het type training kun
-                    je herkennen aan de kleur: groen staat voor techniek, oranje
-                    voor kracht en geel voor duurtraining.
+                    Met techniektraining werk je aan het verbeteren van je slag
+                    waardoor je netter en efficiënter leert zwemmen. De
+                    zwemoefeningen worden hier veelal op een rustig tempo
+                    uitgevoerd zodat je je helemaal kunt focussen op je
+                    techniek. Bij de krachttrainingen wordt er gewerkt aan je
+                    explosiviteit, snelheid en spieropbouw. Deze zwemschema’s
+                    bestaan vooral uit setjes met korte afstanden die op een
+                    hoger tempo worden uitgevoerd. Bij de duurtrainingen ligt de
+                    focus op het verbeteren van je conditie en opbouwen van je
+                    duurvermogen. Vanzelfsprekend zijn hier de afstanden die je
+                    zwemt wat langer. Verder kun je het type training herkennen
+                    aan de kleur: groen staat voor techniek, oranje voor kracht
+                    en geel voor duurtraining.
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -53,11 +55,11 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    De complete bundel is een grotere bundel met maar liefst 30
-                    zwemschema’s. Het is een samenvoeging van de techniek,
-                    kracht en duurtrainingen van een bepaald niveau. Ideaal als
-                    je van afwisseling houd en alle drie aspecten aan bod wilt
-                    laten komen tijdens het zwemmen!
+                    De complete bundel is een samenvoeging van de techniek-,
+                    kracht- en duurtrainingen van een specifiek niveau. Dit is
+                    dan ook een grotere bundel bestaande uit maar liefst 30
+                    zwemschema’s. Ideaal als je van afwisseling houdt en alle
+                    drie aspecten aan bod wilt laten komen tijdens het zwemmen!
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -74,8 +76,8 @@ function SectionFaq() {
                   <p className="mb-3 text-tiny">
                     Bijna alle zwembundels die we aanbieden hebben geen
                     specifieke volgorde, je kunt gewoon een training uitzoeken
-                    waar je op dat moment zin in hebt. De borstcrawl leren
-                    zwemmen is een uitzondering hierop, deze bundel heeft een
+                    waar je op dat moment zin in hebt. De “borstcrawl leren
+                    zwemmen” is een uitzondering hierop, deze bundel heeft een
                     duidelijke volgorde. Begin bij training 1 en ga door naar de
                     volgende training als je alle oefeningen onder de knie hebt
                     of als je ruim binnen de aangegeven tijd de training kunt
@@ -96,13 +98,14 @@ function SectionFaq() {
                   <p className="mb-3 text-tiny">
                     We bieden zwemschema’s aan voor alle niveaus (van mensen met
                     nul zwemervaring, beginners, semi-gevorderden tot
-                    gevorderden). Op iedere productpagina kun je terug vinden
-                    voor welke niveaus de bundel geschikt is en welk niveau bij
-                    jou past. Heb je geen ambitie om borstcrawl te leren zwemmen
-                    en zwem je baantjes puur om te bewegen en voor je plezier?
-                    Houdt ons in de gaten want er komt binnenkort een nieuwe
-                    bundel aan genaamd “Swimfit”, met hele leuke zwemoefeningen
-                    voor recreatieve zwemmers!
+                    gevorderden). Op de productpagina kun je vinden voor welk
+                    niveau de bundel geschikt is en geven we handvaten welk
+                    niveau je moet kiezen. Heb je geen ambitie om de borstcrawl
+                    te leren zwemmen, zwem je baantjes puur om te bewegen en
+                    voor je plezier? Houd ons in de gaten want binnenkort
+                    verschijnt de nieuwe bundel genaamd “Swimfit” in ons
+                    assortiment, met heel veel leuke zwemoefeningen voor
+                    recreatieve zwemmers!
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -119,7 +122,8 @@ function SectionFaq() {
                   <p className="mb-3 text-tiny">
                     Elke bundel bestaat uit 10 zwemschema’s, met uitzondering
                     van de complete bundel. Deze bevat 30 zwemschema’s omdat dit
-                    een samenvoeging is van 3 bundels: techniek, kracht en duur.
+                    een samenvoeging is van de 3 bundels: techniek, kracht en
+                    duur.
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -136,8 +140,9 @@ function SectionFaq() {
                   <p className="mb-3 text-tiny">
                     Ja dat kan! Vandaar de naam Soloswim. Onze bundels zijn zo
                     gemaakt dat je zelfstandig een zwemschema kunt volgen zonder
-                    dat je een coach nodig hebt. Zwem je graag met een vriend of
-                    vriendin? Dan is het leuk om samen een training te volgen.
+                    dat je een trainer op kant nodig hebt. Zwem je graag met een
+                    vriend of vriendin? Je kunt natuurlijk altijd samen een
+                    trainingen volgen, wel zo gezellig!
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -152,10 +157,10 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    Het ligt eraan wat je doel is met zwemmen. Zwem je voor je
-                    plezier, dan ga je niet zo vaak als je leuk vindt? Wil je
-                    graag beter en sneller leren zwemmen, dan raden we aan om
-                    minimaal 2 keer in de week te zwemmen. Zwemmen is een
+                    Dit ligt een beetje aan je doel met zwemmen. Zwem je voor je
+                    plezier, dan ga je zo vaak als je leuk vindt! Wil je graag
+                    beter en sneller leren zwemmen, dan raden we aan om minimaal
+                    2 keer in de week te zwemmen. Zwemmen is namelijk een
                     technische sport wat veel oefening vereist.
                   </p>
                 </AccordionPanel>
@@ -173,8 +178,8 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    Maak de pagina’s na iedere zwemsessie schoon door deze af te
-                    nemen met je handdoek.
+                    Je kunt de pagina’s drogen met een handdoek na gebruik, zo
+                    blijft je bundel mooi en fris!
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -182,8 +187,7 @@ function SectionFaq() {
                   itemClass="flex flex-row justify-between inline-block focus:outline-none font-lexend font-bold text-tiny text-white my-3"
                   iconClass="ml-3 h-8 w-8 text-white transform -translate-y-1"
                 >
-                  Maak de pagina’s na iedere zwemsessie schoon door deze af te
-                  nemen met je handdoek.
+                  Is er korting mogelijk bij grote afname?
                 </AccordionItem>
                 <AccordionPanel
                   id="faq9"
@@ -224,7 +228,7 @@ function SectionFaq() {
                 >
                   <p className="mb-3 text-tiny">
                     Na het plaatsen van je bestelling kun je binnen 1 tot 2
-                    werkdagen de bestelling thuis verwachten.
+                    werkdagen je bestelling thuis verwachten.
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -239,10 +243,7 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    De verzendkosten die wij rekenen zijn altijd € 3,95. Mocht
-                    de bestelling niet door de brievenbus passen dan versturen
-                    wij dit als pakket zonder dat wij hier extra kosten voor
-                    rekenen.
+                  Wij rekenen € 3,95 verzendkosten voor elke bestelling (ook bij grotere bestellingen die als pakket verstuurt moeten worden).
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -257,11 +258,7 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    e hebt tot 14 dagen na ontvangst van een bestelling de
-                    mogelijkheid om deze als retour aan te melden. Nadat de
-                    bestelling geretourneerd is wordt het volledige
-                    aankoopbedrag teruggestort. Bekijk voor meer informatie de
-                    pagina over verzending & retourneren.
+                  Je hebt tot 14 dagen na ontvangst van je bestelling de mogelijkheid om deze als retour aan te melden. Nadat de bestelling geretourneerd is wordt het volledige aankoopbedrag teruggestort. Bekijk voor meer informatie de pagina over verzending &amp; retourneren.
                   </p>
                 </AccordionPanel>
               </div>
