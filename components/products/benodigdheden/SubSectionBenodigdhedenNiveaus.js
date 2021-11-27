@@ -38,7 +38,7 @@ function SubSectionBenodigdhedenNiveaus() {
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/badmuts.png"
             name="Badmuts"
-            tooltipText="Bescherm je haar tegen chloor en verlaag weerstand."
+            tooltipText="Praktisch voor als je lang haar hebt."
             bestelButton="/producten/soloswim-badmuts"
           />
         </div>

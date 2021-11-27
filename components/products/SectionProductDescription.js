@@ -34,7 +34,14 @@ function SectionProductDescription({
   // Return an array with all the images, rendered as normal img tag.
   const renderCustomThumbs = () => {
     const thumbList = productData.images.map((image) => {
-      return <img className="rounded-sm" key={image} src={image} alt={productData.title} />;
+      return (
+        <img
+          className="rounded-sm"
+          key={image}
+          src={image}
+          alt={productData.title}
+        />
+      );
     });
     return thumbList;
   };
@@ -44,7 +51,6 @@ function SectionProductDescription({
     productData.type = type;
     setSelectedPhoto(+id);
   };
-  
 
   return (
     <section className="bg-white">
@@ -210,9 +216,9 @@ function SectionProductDescription({
                   </a>
                 ) : (
                   <p className="text-navy-light1 text-xs">
-                    *Bestel een schema voor het formaat van het zwembad waar jij
-                    graag zwemt (25m of 50m). Zwem je in beide? Ga dan voor de
-                    50m bad bundel.
+                    *Bestel de bundel die past bij de lengte van het zwembad waar jij
+                    in zwemt (25m of 50m). Zwem je in beide? Ga dan voor de 50m
+                    bad variant.
                   </p>
                 )}
               </div>
