@@ -15,24 +15,33 @@ import SectionReviewsMain from "../components/home/SectionReviewsMain";
 import Link from "next/link";
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [productSlide, setCurrentSlide] = useState(0);
+  const [introSlide, setIntroSlide] = useState(0);
 
   useEffect(() => {
-    const slideID = setTimeout(() => nextSlide(), 2000);
+    const slideID = setTimeout(() => nextSlide(4, productSlide, setCurrentSlide), 2000);
     return () => {
       clearTimeout(slideID);
     };
-  }, [currentSlide]);
+  }, [productSlide]);
+
+  useEffect(() => {
+    const slideID = setTimeout(() => nextSlide(3, introSlide, setIntroSlide), 2000);
+    return () => {
+      clearTimeout(slideID);
+    };
+  }, [introSlide]);
+
 
   const changeSlide = (index) => {
     setCurrentSlide(index);
   };
 
-  const nextSlide = () => {
-    if (currentSlide <= 3) {
-      setCurrentSlide(currentSlide + 1);
+  const nextSlide = (slides, target, targetSetter) => {
+    if (target <= (slides-1)) {
+      targetSetter(target + 1);
     } else {
-      setCurrentSlide(0);
+      targetSetter(0);
     }
   };
 
@@ -243,7 +252,7 @@ export default function Home() {
           </h3>
           <div className="sm:flex sm:flex-row my-10 max-w-5xl mx-auto">
             <div className="hidden sm:block my-auto transform sm:translate-x-5 z-20">
-              <div className={`${currentSlide === 0 ? "block" : "hidden"}`}>
+              <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/bundel-front.png"
                   width={350}
@@ -252,7 +261,7 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className={`${currentSlide === 1 ? "block" : "hidden"}`}>
+              <div className={`${productSlide === 1 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/bundel-front2.png"
                   width={350}
@@ -261,7 +270,7 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className={`${currentSlide === 2 ? "block" : "hidden"}`}>
+              <div className={`${productSlide === 2 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/bundel-front3.png"
                   width={350}
@@ -270,7 +279,7 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className={`${currentSlide === 3 ? "block" : "hidden"}`}>
+              <div className={`${productSlide === 3 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/bundel-front4.png"
                   width={350}
@@ -279,7 +288,7 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className={`${currentSlide === 4 ? "block" : "hidden"}`}>
+              <div className={`${productSlide === 4 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/bundel-front5.png"
                   width={350}
@@ -292,7 +301,7 @@ export default function Home() {
             <div className="flex-grow my-auto transform sm:-translate-x-5">
               <div className="bg-grey-light4 rounded-2xl sm:rounded-l-none p-7 sm:py-2 lg:pr-24 flex flex-col">
                 <div className="text-center sm:hidden mx-16">
-                  <div className={`${currentSlide === 0 ? "block" : "hidden"}`}>
+                  <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front.png"
                       width={350}
@@ -301,7 +310,7 @@ export default function Home() {
                     />
                   </div>
 
-                  <div className={`${currentSlide === 1 ? "block" : "hidden"}`}>
+                  <div className={`${productSlide === 1 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front2.png"
                       width={350}
@@ -309,7 +318,7 @@ export default function Home() {
                       alt="zwemschema"
                     />
                   </div>
-                  <div className={`${currentSlide === 2 ? "block" : "hidden"}`}>
+                  <div className={`${productSlide === 2 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front3.png"
                       width={350}
@@ -317,7 +326,7 @@ export default function Home() {
                       alt="zwemschema"
                     />
                   </div>
-                  <div className={`${currentSlide === 3 ? "block" : "hidden"}`}>
+                  <div className={`${productSlide === 3 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front4.png"
                       width={350}
@@ -325,7 +334,7 @@ export default function Home() {
                       alt="zwemschema"
                     />
                   </div>
-                  <div className={`${currentSlide === 4 ? "block" : "hidden"}`}>
+                  <div className={`${productSlide === 4 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/bundel-front5.png"
                       width={350}
@@ -337,7 +346,7 @@ export default function Home() {
                 <ul className="my-3 lg:my-6 flex flex-col gap-4 sm:gap-3 md:gap-5 lg:gap-6 max-w-sm sm:pl-10 md:pl-0 sm:ml-auto md:mx-auto">
                   <li
                     className={`font-bold hover:cursor-pointer ${
-                      currentSlide === 0 ? "opacity-100" : "opacity-50"
+                      productSlide === 0 ? "opacity-100" : "opacity-50"
                     }`}
                     onMouseOver={() => changeSlide(0)}
                   >
@@ -348,7 +357,7 @@ export default function Home() {
                   </li>
                   <li
                     className={`font-bold hover:cursor-pointer ${
-                      currentSlide === 1 ? "opacity-100" : "opacity-50"
+                      productSlide === 1 ? "opacity-100" : "opacity-50"
                     }`}
                     onMouseOver={() => changeSlide(1)}
                   >
@@ -359,7 +368,7 @@ export default function Home() {
                   </li>
                   <li
                     className={`font-bold hover:cursor-pointer ${
-                      currentSlide === 2 ? "opacity-100" : "opacity-50"
+                      productSlide === 2 ? "opacity-100" : "opacity-50"
                     }`}
                     onMouseOver={() => changeSlide(2)}
                   >
@@ -372,7 +381,7 @@ export default function Home() {
                   </li>
                   <li
                     className={`font-bold hover:cursor-pointer ${
-                      currentSlide === 3 ? "opacity-100" : "opacity-50"
+                      productSlide === 3 ? "opacity-100" : "opacity-50"
                     }`}
                     onMouseOver={() => changeSlide(3)}
                   >
@@ -383,7 +392,7 @@ export default function Home() {
                   </li>
                   <li
                     className={`font-bold hover:cursor-pointer ${
-                      currentSlide === 4 ? "opacity-100" : "opacity-50"
+                      productSlide === 4 ? "opacity-100" : "opacity-50"
                     }`}
                     onMouseOver={() => changeSlide(4)}
                   >
