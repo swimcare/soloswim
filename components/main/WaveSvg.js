@@ -5,7 +5,7 @@ function WaveSvg(props) {
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 1920 60"
+        viewBox="0 0 1920 59"
       >
         <path
           id="XMLID_5_"
