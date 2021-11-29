@@ -6,7 +6,7 @@ import Inhoudsopgave from "./Inhoudsopgave";
 
 function SubSectionInhoudsopgave({ productData }) {
   return (
-    <div className="my-12 md:my-0">
+    <div className="my-12 md:my-10">
       <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
         <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
           Inhoudsopgave

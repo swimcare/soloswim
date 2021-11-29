@@ -13,7 +13,7 @@ function Inhoudsopgave({ inhoud, editie }) {
   ));
 
   return (
-    <div className="mb-3 md:p-5 md:my-5">
+    <div className="mb-3 md:p-5">
       <div className="bg-white rounded-xl shadow-custom1 p-4 sm:p-6 md:p-10 text-navy-light1 max-w-4xl">
         {/* only valid for combi... */}
         <div className="text-center mb-2">

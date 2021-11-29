@@ -137,7 +137,7 @@ function SectionProductTabs({ productData }) {
             )}
             {/* TAB 3: BENODIGDHEDEN */}
             {(activeTab === 3 || width < 768) && !productData.isAccessoire && (
-              <div className="py-14 lg:py-0">
+              <div className="py-14 lg:py-10">
                 <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
                   <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
                     Wat heb je nodig
