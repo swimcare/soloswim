@@ -12,7 +12,7 @@ function overOns() {
               Over Soloswim
             </h1>
             <p className="text-navy-light1 font-lexend font-semibold text-lg lg:text-2xl my-1 md:my-3 italic">
-              Lees hier onze missie, ons verhaal en over het onstaan van Soloswim.
+              Lees hier over onze missie, ons verhaal en het onstaan van Soloswim.
             </p>
           </div>
           <div className="my-5 lg:mt-10">
@@ -65,7 +65,7 @@ function overOns() {
                 Ons verhaal
               </h3>
             </div>
-            <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
+            <div className="text-base leading-relaxed text-navy-light1 my-3 lg:leading-normal">
               <p>
                 Sinds de dag dat we elkaar ontmoet hebben is zwemmen een
                 belangrijk onderdeel in ons leven. We hebben elkaar ontmoet ik
@@ -122,7 +122,7 @@ function overOns() {
 
       <section>
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto -mt-5 lg:pb-32">
-          <div className="mx-5">
+          <div className="mx-5 lg:mx-10">
             <h2 className="text-main font-lexend font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
               Het ontstaan van Soloswim
             </h2>

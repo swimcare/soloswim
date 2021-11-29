@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     const slideID = setTimeout(
       () => nextSlide(3, introSlide, setIntroSlide),
-      2000
+      4000
     );
     return () => {
       clearTimeout(slideID);
@@ -225,7 +225,7 @@ export default function Home() {
             <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
               <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
               <div>
-                <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Zorgvuldig samengestelde bundels voor alle niveau’s
                 </h4>
                 <p className="text-navy-light1 text-tiny my-2 lg:text-base">
@@ -236,7 +236,7 @@ export default function Home() {
             <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
               <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
               <div>
-                <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Verschillende thema’s
                 </h4>
                 <p className="text-navy-light1 text-tiny my-2 lg:text-base">
@@ -248,7 +248,7 @@ export default function Home() {
             <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
               <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
               <div>
-                <h4 className="font-bold text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                   Gevarieerde oefeningen
                 </h4>
                 <p className="text-navy-light1 text-tiny my-2 lg:text-base">
@@ -400,7 +400,7 @@ export default function Home() {
                   >
                     <h4 className="text-main text-sm leading-relaxed">Info</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
-                      De duur, afstand en benodigdheden
+                      Informatie over de zwemtraining
                     </p>
                   </li>
                   <li

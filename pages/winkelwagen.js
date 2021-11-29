@@ -135,7 +135,7 @@ function winkelwagen() {
                   Voeg snel iets toe aan je winkelwagen om af te kunnen rekenen.
                 </h3>
               </div>
-              <div className="pb-12 pt-4 max-w-lg mx-auto">
+              <div className="pb-12 pt-8 max-w-lg mx-auto">
                 <Link href="/producten" passHref>
                   {/* todo: add Link element */}
                   <a>

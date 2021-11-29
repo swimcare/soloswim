@@ -19,7 +19,7 @@ function Footer() {
       <div className="bg-grey-light4">
         <div className="flex flex-col md:flex-row md:justify-between md:px-5 max-w-6xl mx-auto gap-6 py-8 lg:py-20">
           <div className="text-center">
-            <h4 className="text-main font-bold font-lexend text-xl mb-3 md:mb-5">
+            <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
               Info
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
@@ -48,7 +48,7 @@ function Footer() {
             </ul>
           </div>
           <div className="text-center">
-          <h4 className="text-main font-bold font-lexend text-xl mb-3 md:mb-5">
+          <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
               Contact
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
@@ -60,7 +60,7 @@ function Footer() {
             </ul>
           </div>
           <div className="text-center">
-          <h4 className="text-main font-bold font-lexend text-xl mb-3 md:mb-5">
+          <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
               Volg ons
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-row gap-1 justify-center">
@@ -77,7 +77,7 @@ function Footer() {
             </ul>
           </div>
           <div className="text-center">
-          <h4 className="text-main font-bold font-lexend text-xl mb-3 md:mb-5">
+          <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
               Locatie
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">

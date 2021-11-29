@@ -20,7 +20,7 @@ function FullWidthImageCard({ img, number, title, text, alignRight }) {
             </p>
           </div>
           <div>
-            <h3 className="text-main font-bold lg:font-extrabold lg:text-xl 2xl:text-2xl text-lg">
+            <h3 className="text-main font-bold lg:font-extrabold lg:text-2xl text-lg">
               {title}
             </h3>
           </div>

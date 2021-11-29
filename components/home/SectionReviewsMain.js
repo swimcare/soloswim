@@ -65,7 +65,7 @@ function SectionReviewsMain() {
           </Carousel>
         </div>
         {/* DESKTOP REVIEWS (VANAF MD BREAKPOINT) */}
-        <div className="hidden md:block my-12 max-w-6xl lg:mx-auto">
+        <div className="hidden md:block my-24 max-w-6xl lg:mx-auto">
           <Carousel
             showStatus={false}
             autoPlay
