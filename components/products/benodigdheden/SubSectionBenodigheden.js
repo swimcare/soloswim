@@ -6,7 +6,7 @@ function SubSectionBenodigdheden() {
   return (
     <Fragment>
       <div className="my-2">
-        <h3 className="text-navy-light1 font-lexend font-semibold text-base xs:text-lg">
+        <h3 className="text-navy-light1 font-lexend font-semibold text-base xs:text-lg mb-2">
           Voor iedere banenzwemmer
         </h3>
         <p className="text-navy-light1">
