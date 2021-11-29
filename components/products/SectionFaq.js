@@ -74,14 +74,14 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    Bijna alle zwembundels die we aanbieden hebben geen
-                    specifieke volgorde, je kunt gewoon een training uitzoeken
-                    waar je op dat moment zin in hebt. De “borstcrawl leren
-                    zwemmen” is een uitzondering hierop, deze bundel heeft een
-                    duidelijke volgorde. Begin bij training 1 en ga door naar de
-                    volgende training als je alle oefeningen onder de knie hebt
-                    of als je ruim binnen de aangegeven tijd de training kunt
-                    voltooien.
+                    De zwemschema's in de bundels hebben geen specifieke
+                    volgorde, je kunt gewoon een training uitzoeken waar je op
+                    dat moment zin in hebt. De bundel “100 meter borstcrawl
+                    leren zwemmen” is een uitzondering hierop, deze bundel heeft
+                    een duidelijke volgorde. Begin bij training 1 en ga door
+                    naar de volgende training als je alle oefeningen onder de
+                    knie hebt of als je ruim binnen de aangegeven tijd de
+                    training kunt voltooien.
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -96,8 +96,8 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    We bieden zwemschema’s aan voor alle niveaus (van mensen met
-                    nul zwemervaring, beginners, semi-gevorderden tot
+                    We bieden zwemschema’s aan voor alle niveaus (van mensen
+                    zonder zwemervaring, beginners, semi-gevorderden tot
                     gevorderden). Op de productpagina kun je vinden voor welk
                     niveau de bundel geschikt is en geven we handvaten welk
                     niveau je moet kiezen. Heb je geen ambitie om de borstcrawl
@@ -138,11 +138,11 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    Ja dat kan! Vandaar de naam Soloswim. Onze bundels zijn zo
+                    Ja, dat kan! Vandaar de naam Soloswim. Onze bundels zijn zo
                     gemaakt dat je zelfstandig een zwemschema kunt volgen zonder
                     dat je een trainer op kant nodig hebt. Zwem je graag met een
                     vriend of vriendin? Je kunt natuurlijk altijd samen een
-                    trainingen volgen, wel zo gezellig!
+                    training volgen, wel zo gezellig!
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -157,11 +157,11 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    Dit ligt een beetje aan je doel met zwemmen. Zwem je voor je
+                    Dit ligt er een beetje aan wat je doel is van het zwemmen. Zwem je voor je
                     plezier, dan ga je zo vaak als je leuk vindt! Wil je graag
                     beter en sneller leren zwemmen, dan raden we aan om minimaal
                     2 keer in de week te zwemmen. Zwemmen is namelijk een
-                    technische sport wat veel oefening vereist.
+                    technische sport die veel oefening vereist.
                   </p>
                 </AccordionPanel>
               </div>
@@ -243,7 +243,9 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                  Wij rekenen € 3,95 verzendkosten voor elke bestelling (ook bij grotere bestellingen die als pakket verstuurt moeten worden).
+                    Wij rekenen € 3,95 verzendkosten voor elke bestelling (ook
+                    bij grotere bestellingen die als pakket verstuurd moeten
+                    worden).
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -258,7 +260,11 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                  Je hebt tot 14 dagen na ontvangst van je bestelling de mogelijkheid om deze als retour aan te melden. Nadat de bestelling geretourneerd is wordt het volledige aankoopbedrag teruggestort. Bekijk voor meer informatie de pagina over verzending &amp; retourneren.
+                    Je hebt tot 14 dagen na ontvangst van je bestelling de
+                    mogelijkheid om deze als retour aan te melden. Nadat de
+                    bestelling geretourneerd is wordt het volledige
+                    aankoopbedrag teruggestort. Bekijk voor meer informatie de
+                    pagina over verzending &amp; retourneren.
                   </p>
                 </AccordionPanel>
               </div>

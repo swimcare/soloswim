@@ -105,7 +105,7 @@ function SectionReviewsMain() {
               />
               <ReviewCard
                 title="Ik ben fan!"
-                text="Als ervaren solo zwemmer is het altijd weer een gedoe om een leuke training te bedenken; je hebt alles al wel eens gehad. De trainingen van Soloswim zijn dan ook een uitkomst! Een uitdagend trainings pakket, afgestemd op je wensen. De trainingen zijn afwisselend en uitdagend. Er is veel keus, denk aan techniek, kracht en uithoudingsvermogen. Verschillende niveaus. Je kunt de trainingen ook combineren. Ik heb een pakket van 10 kracht traingen, semi gevorderd en zwem deze in 45 min (meeste staat uur voor). Het team is daarnaast mega toegankelijk en staat open voor vragen of input. Ik ben fan!"
+                text="Als ervaren solo zwemmer is het altijd weer een gedoe om een leuke training te bedenken; je hebt alles al wel eens gehad. De trainingen van Soloswim zijn dan ook een uitkomst! Een uitdagend trainingspakket, afgestemd op je wensen. De trainingen zijn afwisselend en uitdagend. Er is veel keus, denk aan techniek, kracht en uithoudingsvermogen. Verschillende niveaus. Je kunt de trainingen ook combineren. Ik heb een pakket van 10 kracht traingen, semi gevorderd en zwem deze in 45 min (meeste staat uur voor). Het team is daarnaast mega toegankelijk en staat open voor vragen of input. Ik ben fan!"
                 name="Anouk Bosma"
               />
               <ReviewCard

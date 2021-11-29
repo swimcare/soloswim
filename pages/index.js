@@ -160,7 +160,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 1: Herbruikbare zwemschema's TODO: consider building this like section 2 is setup */}
+      {/* SECTION 1: */}
       <section className="bg-grey-light4">
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 sm:pb-10">
           <div>
@@ -168,7 +168,7 @@ export default function Home() {
               Herbruikbare zwemschema's
             </h2>
             <h3 className="text-navy-light1 font-lexend font-bold md:font-extrabold text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl my-2 md:my-5">
-              Voor tijdens het banenzwemmen
+              Voor iedere banenzwemmer
             </h3>
           </div>
         </div>
@@ -465,9 +465,8 @@ export default function Home() {
             img="/images/home/waarom-soloswim-1.png"
             number="01"
             title="Doelgericht banenzwemmen"
-            text="Met onze gestructureerde zwemschema’s hoef je niet meer na te
-                  denken over wat je gaat zwemmen. Hierdoor kun jij je volledig
-                  richten op het uitvoeren van de training zodat jij met een
+            text="Met onze gestructureerde zwemschema’s hoef je niet zelf te bedenken wat voor invulling je geeft aan je zwemmoment. Hierdoor kun jij je volledig
+                  richten op het uitvoeren van een doelgerichte training zodat jij met een
                   voldaan gevoel het zwembad verlaat, wat je doel met zwemmen
                   ook is!"
           />
@@ -475,20 +474,20 @@ export default function Home() {
             img="/images/home/waarom-soloswim-2.png"
             number="02"
             title="Breed aanbod aan zwemschema’s"
-            text="Op wat voor manier je ook zwemt, met ons brede aanbod hebben wij zwemschema’s voor iedere zwemmer. Of je nou een fanatieke triatleet bent, nog helemaal geen zwemervaring hebt maar graag borstcrawl wilt leren zwemmen of gewoon lekker relaxed baantjes wilt trekken, er is voor ieder wat wils!"
+            text="Op wat voor manier je ook zwemt, met ons brede aanbod hebben wij zwemschema’s voor iedere zwemmer. Of je nu een fanatieke triatleet bent, nog helemaal geen zwemervaring hebt maar graag borstcrawl wilt leren of gewoon lekker relaxed baantjes wilt trekken, er is voor ieder wat wils!"
             alignRight
           />
           <FullWidthImageCard
             img="/images/home/waarom-soloswim-3.png"
             number="03"
             title="Waterproof en herbruikbaar"
-            text="Onze zwemschema’s zijn gemaakt van sterk materiaal en volledig waterproof. Hierdoor zijn papieren zwemschema’s die snel vergaan overbodig. Dus kies een bundel uit, stop hem in je zwemtas en gebruik hem keer op keer!"
+            text="Onze zwemschema’s zijn gemaakt van sterk materiaal en volledig waterproof. Hierdoor zijn papieren zwemschema's die snel nat worden verleden tijd. Dus kies een bundel uit, stop hem in je zwemtas en gebruik hem keer op keer!"
           />
           <FullWidthImageCard
             img="/images/home/waarom-soloswim-4.png"
             number="04"
             title="En misschien wel het belangrijkste: meer plezier tijdens het zwemmen!"
-            text="Elk schema bevat gevarieerde en uitdagende zwemoefeningen waardoor het banenzwemmen nooit saai wordt. Laat je verassen want geen schema is hetzelfde! Het voltooien van een schema geeft een heerlijk gevoel, zo ervaar jij nog meer plezier tijdens het banenzwemmen."
+            text="Elk schema bevat gevarieerde en uitdagende zwemoefeningen waardoor het banenzwemmen nooit saai wordt. Laat je verrassen want geen schema is hetzelfde! Het voltooien van een schema geeft een heerlijk gevoel, zo ervaar jij nog meer plezier tijdens het banenzwemmen."
             alignRight
           />
         </div>
@@ -504,7 +503,7 @@ export default function Home() {
             />
             <IconCard
               img="/images/home/no-subscription.png"
-              title="Geen abbonnements kosten"
+              title="Geen abonnements kosten"
               shadow
             />
             <IconCard
@@ -795,12 +794,12 @@ export default function Home() {
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen3.png"
               title="Goed voor je lichaam"
-              text="Longproblemen, hart- en vaatziekten of revalideren? Ga zwemmen is wat doktoren met goede reden zeggen!"
+              text="Longproblemen, hart- en vaatziekten of revalideren? &quot;Ga zwemmen.&quot; Is wat artsen met goede reden zeggen!"
             />
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen4.png"
               title="Toegankelijk"
-              text="Iedereen heeft badkleding in de kast liggen en zwembaden zijn er in overvloed, dus niets houd je tegen om een duik te nemen!"
+              text="Iedereen heeft badkleding in de kast liggen en zwembaden zijn er in overvloed, dus niets houdt je tegen om een duik te nemen!"
             />
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen5.png"
@@ -810,7 +809,7 @@ export default function Home() {
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen6.png"
               title="Blessurevrij sporten"
-              text="Rustig zwemmen is ontspannend en stress verlagend. Lever je meer inspanning dan wordt zwemmen meditatief omdat er geen ruimte is voor overbodige gedachten."
+              text="Rustig zwemmen is ontspannend en stressverlagend. Lever je meer inspanning dan wordt zwemmen meditatief omdat er geen ruimte is voor overbodige gedachten."
             />
           </div>
         </div>
