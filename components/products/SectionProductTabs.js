@@ -34,7 +34,7 @@ function SectionProductTabs({ productData }) {
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto md:py-5 lg:py-20">
           {/* Desktop tab systeem */}
           <div className="hidden md:block w-full border-b border-grey-warm border-opacity-25">
-            <ul className="flex flex-row space-x-10 transform translate-y-0.5">
+            <ul className="flex flex-row transform translate-y-0.5">
               <li
                 onClick={() => setActiveTab(1)}
                 className={`${
@@ -52,7 +52,7 @@ function SectionProductTabs({ productData }) {
                     activeTab === 2
                       ? "border-main text-main "
                       : "border-none text-navy-light1"
-                  } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
+                  } border-b-3 pb-3 px-9 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
                 >
                   Bekijk inhoudsopgave
                 </li>
@@ -64,7 +64,7 @@ function SectionProductTabs({ productData }) {
                     activeTab === 3
                       ? "border-main text-main "
                       : "border-none text-navy-light1"
-                  } border-b-3 pb-3 pr-6 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
+                  } border-b-3 pb-3 px-9 font-lexend font-semibold text-lg hover:cursor-pointer hover:text-main`}
                 >
                   Wat heb je nodig
                 </li>
