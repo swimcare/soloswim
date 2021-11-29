@@ -4,14 +4,14 @@ product_id: "BCL100"
 title: "Borstcrawl 100m leren zwemmen"
 subtitle: "Zelf borstcrawl leren"
 price: 12.99
-description: "Altijd al de borstcrawl willen leren zwemmen? Dan is dit je kans! Doormiddel van 10 opbouwende zwemschema’s van ieder 60 minuten kun je zelfstandig werken aan de basis elementen van de borstcrawl. Zo leer jij een 100m borstcrawl zwemmen met de juiste basis techniek. De schema's zijn volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+description: "Altijd al de borstcrawl willen leren zwemmen? Dan is dit je kans! Door middel van 10 opbouwende zwemschema’s van ieder 60 minuten kun je zelfstandig werken aan de basiselementen van de borstcrawl. Zo leer jij een 100m borstcrawl zwemmen met de juiste basistechniek. De schema's zijn volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 features: [
     "10 zwemschema’s van ongeveer 60 min",
     "Een gestructureerd plan om zelfstandig 100m borstcrawl te leren zwemmen",
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven (technische) zwemoefeningen",
-    "Inclusief QR codes die doorlinken naar een korte uitleg video voor iedere training",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor een 25 of 50 meter bad",
   ]
@@ -36,7 +36,7 @@ inhoud:
     beginners:
       [
         {
-          title: "Ter land, ter zee en in de lucht",
+          title: "Te land, ter zee en in de lucht",
           tags: "[snelheid] [armen] [keerpunten]",
           distance: "2400",
         },

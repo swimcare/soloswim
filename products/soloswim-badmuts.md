@@ -9,7 +9,6 @@ features:
     "Het Soloswim logo is aanwezig op allebei de zijkanten",
     "Gemaakt van sterk, flexibel en fijn silicone materiaal",
     "Geschikt voor zowel kort als lang haar",
-    "Je kunt je zwembril zowel onder als over de badmuts dragen",
   ]
 isAccessoire: true
 images:

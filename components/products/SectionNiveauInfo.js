@@ -26,7 +26,7 @@ function SectionNiveauInfo({ title, addItemToBasket, productData }) {
             tooltip
             title="Beginners"
             text1={parse(
-              `Je zwemt nog niet zo lang borstcrawl maar hebt de <span classname="font-semibold">basis techniek</span> aardig onder de knie.`
+              `Je zwemt nog niet zo lang borstcrawl maar hebt de <span classname="font-semibold">basistechniek</span> aardig onder de knie.`
             )}
             text2={parse(
               `Je kunt <span classname="font-semibold">100m</span> borstcrawl binnen een tijd van <span classname="font-semibold">2 minuten en 20 seconden</span> zwemmen.`

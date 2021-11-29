@@ -19,7 +19,7 @@ function SubSectionBenodigdhedenNiveaus() {
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
         <p className="text-navy-light1 min-h-[3rem]">
-          Dit zijn de basis benodigdheden voor iedere zwemmer.
+          Dit zijn de basisbenodigdheden voor iedere zwemmer.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 p-5 items-stretch">
           <DubbelAttribuut
@@ -55,7 +55,7 @@ function SubSectionBenodigdhedenNiveaus() {
         panelClass="overflow-hidden md:overflow-x-hidden transition-height ease duration-300"
       >
         <p className="text-navy-light1 min-h-[4rem]">
-          Misschien ben je nog niet zo bekent met het plankje en de pullbuoy,
+          Misschien ben je nog niet zo bekend met het plankje en de pullbuoy,
           maar deze attributen helpen je enorm voorruit als je de borstcrawl
           wilt leren zwemmen. Je kunt ze voor een paar tientjes al kopen of je
           vraagt aan de badmeester of je ze kunt lenen.

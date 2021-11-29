@@ -69,7 +69,7 @@ function overOns() {
               <p>
                 Sinds de dag dat we elkaar ontmoet hebben is zwemmen een
                 belangrijk onderdeel in ons leven. We hebben elkaar ontmoet ik
-                het zwembad (ongeveer zoals op de foto hiernaast) en zijn nu
+                het zwembad (ongeveer zoals op de foto) en zijn nu
                 getrouwd met golven gegraveerd in onze trouwringen. En dat is
                 niet voor niets, we zijn allebei gek op zwemmen!
               </p>
@@ -78,7 +78,7 @@ function overOns() {
                 full-body workout is zonder dat we ons lichaam overbelasten en het een
                 heerlijk gevoel is om door het water te glijden. We doen het vooral omdat we er gelukkig
                 van worden. En dat willen we graag delen met andere
-                banenzwemmers doormiddel van onze leuke en uitdagende
+                banenzwemmers door middel van onze leuke en uitdagende
                 zwemschema’s!
               </p>
             </div>
@@ -136,14 +136,13 @@ function overOns() {
               Sinds we niet meer bij een club zwemmen maken
                 wij onze eigen zwemtrainingen om zelf te doen tijdens het
                 banenzwemmen. We zijn een ondernemend stel en afgelopen voorjaar
-                waren we opzoek naar een nieuw project om ons volledig op te
+                waren we op zoek naar een leuke nieuwe uitdaging om ons volledig op te
                 storten. In mei 2021 gingen we een maand op pad (in onze
-                zelfgebouwde camperbus) om de Cote d’Azur te verkennen; genoeg
-                tijd om een nieuw idee te bedenken, dat hoopte we stiekem! Het was er
+                zelfgebouwde camperbus) om de Cote d’Azur te verkennen. Het was er
                 prachtig, we genoten van de natuur en zwommen veel in de zee.
-                Maar we miste ook iets; een 25-meter zwembad waar we onze
-                baantjes in konden zwemmen (ja dat kan ook in de zee hoor ik je
-                denken, maar ik, Emily, ben een bang voor kwallen en haaien dus
+                Maar we misten ook iets; een 25-meter zwembad waar we onze
+                baantjes in konden zwemmen (ja, dat kan ook in de zee hoor ik je
+                denken, maar ik, Emily, ben een beetje bang voor kwallen en haaien dus
                 ik was al heel trots als ik kopje onder was geweest).
               </p>
               <div className="lg:float-right lg:pl-7 lg:pt-7">
@@ -159,25 +158,23 @@ function overOns() {
                 Sinds we niet meer bij een club zwemmen maken
                 wij onze eigen zwemtrainingen om zelf te doen tijdens het
                 banenzwemmen. We zijn een ondernemend stel en afgelopen voorjaar
-                waren we opzoek naar een nieuw project om ons volledig op te
+                waren we op zoek naar een leuke nieuwe uitdaging om ons volledig op te
                 storten. In mei 2021 gingen we een maand op pad (in onze
-                zelfgebouwde camperbus) om de Cote d’Azur te verkennen; genoeg
-                tijd om een nieuw idee te bedenken, dat hoopte we stiekem! Het was er
+                zelfgebouwde camperbus) om de Cote d’Azur te verkennen. Het was er
                 prachtig, we genoten van de natuur en zwommen veel in de zee.
-                Maar we miste ook iets; een 25-meter zwembad waar we onze
-                baantjes in konden zwemmen (ja dat kan ook in de zee hoor ik je
-                denken, maar ik, Emily, ben een bang voor kwallen en haaien dus
+                Maar we misten ook iets; een 25-meter zwembad waar we onze
+                baantjes in konden zwemmen (ja, dat kan ook in de zee hoor ik je
+                denken, maar ik, Emily, ben een beetje bang voor kwallen en haaien dus
                 ik was al heel trots als ik kopje onder was geweest).
               </p>
               <p className="py-5">
-                Het leuke van een camper is dat je overal kunt gaan staan en
-                gaan waar je maar wilt. Dus we zeiden de zee gedag en gingen op
-                zoek naar een buitenzwembad geschikt voor banenzwemmen. En die vonden we onder de voet
+                Het leuke van een camper is dat je overal kunt gaan staan waar je maar wilt. Dus we zeiden de zee gedag en gingen op
+                zoek naar een buitenzwembad, geschikt voor banenzwemmen. En die vonden we onder de voet
                 van de Mont Ventoux (Laurens wilde die ook heel graag op fietsen
                 dus dat kwam mooi uit). Oh wat waren we blij met
                 dat zwembad, het voelde alsof we in het paradijs waren beland!
                 We schreven snel onze eigen zwemschema's en sprongen direct het
-                zwembad in toen hij de volgende dag open ging. Dagen achter elkaar zwommen
+                zwembad in toen het de volgende dag open ging. Dagen achter elkaar zwommen
                 we wel 2 tot 3 keer per dag (en verloren dus ook aardig wat
                 handgeschreven zwemschema's). Het is dus niet gek dat
                 ons idee voor Soloswim is ontstaan bij het paradijsachtige

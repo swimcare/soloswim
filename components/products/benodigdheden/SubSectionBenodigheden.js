@@ -10,7 +10,7 @@ function SubSectionBenodigdheden() {
           Voor iedere banenzwemmer
         </h3>
         <p className="text-navy-light1">
-          Misschien ben je nog niet zo bekent met het plankje en de pullbuoy,
+          Misschien ben je nog niet zo bekend met het plankje en de pullbuoy,
           maar deze attributen helpen je enorm voorruit als je de borstcrawl
           wilt leren zwemmen. Je koopt ze online voor een paar tientjes of je
           vraagt aan de badmeester of je ze kunt lenen.

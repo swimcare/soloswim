@@ -4,13 +4,13 @@ product_id: "BCC1"
 title: "Borstcrawl Complete Zwemtraining"
 subtitle: "Het beste van 3 werelden"
 price: 29.99
-description: "Houd je van afwisselende trainingen en wil je graag een algehele betere borstcrawl zwemmer worden? Met deze 30 gevarieerde zwemschema’s van 60 minuten werk je aan je techniek, kracht en duurvermogen! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+description: "Houd je van afwisselende trainingen en wil je graag een betere borstcrawlzwemmer worden? Met deze 30 gevarieerde zwemschema’s van 60 minuten werk je aan je techniek, kracht en duurvermogen! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 features: [
     "30 techniek-, kracht- en duur zwemschema’s van ieder 60 min",
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven (technische) zwemoefeningen",
-    "Inclusief QR codes die doorlinken naar een korte uitleg video voor iedere training",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor beginners, semi-gevorderden of
     gevorderden",

@@ -79,6 +79,9 @@ function index({ allProductsData }) {
                     <p className="text-navy-light1 font-lexend font-extrabold text-3xl">
                       Coming soon!
                     </p>
+                    <p className="text-tiny font-semibold text-navy-light1">
+                      (Begin 2022)
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-5/6 mx-auto">
@@ -105,6 +108,9 @@ function index({ allProductsData }) {
                   <div className="mb-6 py-1 text-center">
                     <p className="text-navy-light1 font-lexend font-extrabold text-3xl">
                       Coming soon!
+                    </p>
+                    <p className="text-tiny font-semibold text-navy-light1">
+                      (Voorjaar 2022)
                     </p>
                   </div>
                   <div className="text-center">
