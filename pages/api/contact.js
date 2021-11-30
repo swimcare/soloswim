@@ -1,4 +1,4 @@
-const mail = require("@sendgrid/mail");
+import mail from "@sendgrid/mail";
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -14,7 +14,7 @@ async function handler(req, res) {
   `;
 
   const data = {
-    to: "noreply@soloswim.nl",
+    to: "info@soloswim.nl",
     from: "noreply@soloswim.nl",
     subject: `${body.onderwerp}`,
     text: message,

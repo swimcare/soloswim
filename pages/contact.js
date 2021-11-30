@@ -31,6 +31,7 @@ function contact() {
     })
       .then((res) => {
         clearForm();
+        console.log(res.status)
         if (res.status == "200") {
           router.push("/bericht-verzonden");
         } else {
