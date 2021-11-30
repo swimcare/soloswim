@@ -164,7 +164,7 @@ function SectionProductTabs({ productData }) {
         {productData.niveaus ? (
           <WaveSvg fill="#ffffff" />
         ) : (
-          <WaveSvg fill="#2628cd" />
+          <WaveSvg fill="#2528D5" />
         )}
       </div>
     </Fragment>

@@ -516,7 +516,7 @@ export default function Home() {
       </section>
 
       <div className="bg-grey-light4">
-        <WaveSvg fill="#2628cd" />
+        <WaveSvg fill="#2528D5" />
       </div>
 
       {/* SECTION 6: REVIEWS */}

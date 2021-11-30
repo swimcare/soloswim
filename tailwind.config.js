@@ -24,7 +24,7 @@ module.exports = {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        main: "#2628cd",
+        main: "#2528D5",
         grey: {
           light3: "#efede5",
           light4: "#f5f4ef",
@@ -42,9 +42,9 @@ module.exports = {
           dark1: "#EFBE4A",
         },
         soloswim: {
-          pink: "#FFCCDF",
+          pink: "#fecbdf",
           orange: "#FEC798",
-          yellow: "#F7EDAE",
+          yellow: "#f6eeae",
           green: "#D5E1BB",
           purple: "#D3CEE6",
           blue: "#B8D7EC",
