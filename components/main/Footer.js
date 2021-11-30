@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {} from "@heroicons/react/solid";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -48,7 +49,7 @@ function Footer() {
             </ul>
           </div>
           <div className="text-center">
-          <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
+            <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
               Contact
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
@@ -60,24 +61,34 @@ function Footer() {
             </ul>
           </div>
           <div className="text-center">
-          <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
+            <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
               Volg ons
             </h4>
-            <ul className="text-tiny text-navy-light1 flex flex-row gap-1 justify-center">
+            <ul className="text-tiny text-navy-light1 flex flex-row gap-3 justify-center">
               <li>
-                <Link href="/">
-                  <a>IG</a>
-                </Link>
+                <a
+                  className="text-navy-light1 text-xl hover:text-main"
+                  target="_blank"
+                  href="https://www.instagram.com/soloswim.nl/"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram />
+                </a>
               </li>
               <li>
-                <Link href="/">
-                  <a>FB</a>
-                </Link>
+                <a
+                  className="text-navy-light1 text-xl hover:text-main"
+                  target="_blank"
+                  href="https://www.facebook.com/soloswim.nl"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook />
+                </a>
               </li>
             </ul>
           </div>
           <div className="text-center">
-          <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
+            <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
               Locatie
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
@@ -89,7 +100,9 @@ function Footer() {
           </div>
         </div>
         <div className="text-center py-5">
-          <p className="text-tiny text-navy-light1">© 2021 Media Modes | KVK: 75986272 | BTW: NL860468379B01</p>
+          <p className="text-tiny text-navy-light1">
+            © 2021 Media Modes | KVK: 75986272 | BTW: NL860468379B01
+          </p>
         </div>
       </div>
     </footer>
