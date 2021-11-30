@@ -19,33 +19,31 @@ const fulfillOrder = async (sessionData) => {
     console.log(err);
   }
 
-  return;
+  console.log("moving on to storing order in database");
 
-  // console.log("moving on to storing order in database");
-
-  // try {
-  //   await axios.post(`${process.env.HOST}/api/orders`, {
-  //     order_number: sessionData.order_number,
-  //     order_date: sessionData.order_date,
-  //     name: sessionData.name,
-  //     email: sessionData.email,
-  //     line1: sessionData.line1,
-  //     line2: sessionData.line2,
-  //     postal_code: sessionData.postal_code,
-  //     city: sessionData.city,
-  //     country: sessionData.country,
-  //     products: sessionData.products,
-  //     subtotal: sessionData.subtotal,
-  //     total: sessionData.total,
-  //   });
-  //   // await axios.get(`${process.env.HOST}/api/orders`);
-  // } catch (err) {
-  //   console.log("an error occurred");
-  //   console.log(err);
-  // } finally {
-  //   // return console.log("Fulfilling order");
-  //   return console.log("Fulfilling order", sessionData);
-  // }
+  try {
+    await axios.post(`${process.env.HOST}/api/orders`, {
+      order_number: sessionData.order_number,
+      order_date: sessionData.order_date,
+      name: sessionData.name,
+      email: sessionData.email,
+      line1: sessionData.line1,
+      line2: sessionData.line2,
+      postal_code: sessionData.postal_code,
+      city: sessionData.city,
+      country: sessionData.country,
+      products: sessionData.products,
+      subtotal: sessionData.subtotal,
+      total: sessionData.total,
+    });
+    // await axios.get(`${process.env.HOST}/api/orders`);
+  } catch (err) {
+    console.log("an error occurred");
+    console.log(err);
+  } finally {
+    // return console.log("Fulfilling order");
+    return console.log("Fulfilling order", sessionData);
+  }
 };
 
 export default async (req, res) => {
@@ -106,7 +104,7 @@ export default async (req, res) => {
 
       // Fulfill the order...
       return fulfillOrder(sessionData)
-        .then(() => res.status(200).end())
+        .then(() => res.status(200).end("success"))
         .catch((err) => res.status(400).send(`Webhook Error: ${err.message}`));
     }
   }

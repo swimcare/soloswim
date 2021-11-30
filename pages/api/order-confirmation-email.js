@@ -65,7 +65,7 @@ async function handler(req, res) {
     .send(data)
     .then((response) => {
       if (response[0].statusCode == "202") {
-        res.status(200).end();
+        res.status(200).end("ok");
       } else {
         res.status(response[0].statusCode).end();
       }
