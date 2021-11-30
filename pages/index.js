@@ -291,7 +291,7 @@ export default function Home() {
             <div className="hidden sm:block my-auto transform sm:translate-x-5 z-20">
               <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
                 <Image
-                  src="/images/home/bundel-front.png"
+                  src="/images/home/schema1.png"
                   width={350}
                   height={476}
                   alt="zwemschema"
@@ -300,7 +300,7 @@ export default function Home() {
               </div>
               <div className={`${productSlide === 1 ? "block" : "hidden"}`}>
                 <Image
-                  src="/images/home/bundel-front2.png"
+                  src="/images/home/schema2.png"
                   width={350}
                   height={476}
                   alt="zwemschema"
@@ -309,7 +309,7 @@ export default function Home() {
               </div>
               <div className={`${productSlide === 2 ? "block" : "hidden"}`}>
                 <Image
-                  src="/images/home/bundel-front3.png"
+                  src="/images/home/schema3.png"
                   width={350}
                   height={476}
                   alt="zwemschema"
@@ -318,7 +318,7 @@ export default function Home() {
               </div>
               <div className={`${productSlide === 3 ? "block" : "hidden"}`}>
                 <Image
-                  src="/images/home/bundel-front4.png"
+                  src="/images/home/schema4.png"
                   width={350}
                   height={476}
                   alt="zwemschema"
@@ -327,7 +327,7 @@ export default function Home() {
               </div>
               <div className={`${productSlide === 4 ? "block" : "hidden"}`}>
                 <Image
-                  src="/images/home/bundel-front5.png"
+                  src="/images/home/schema5.png"
                   width={350}
                   height={476}
                   alt="zwemschema"
@@ -340,7 +340,7 @@ export default function Home() {
                 <div className="text-center sm:hidden mx-16">
                   <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
                     <Image
-                      src="/images/home/bundel-front.png"
+                      src="/images/home/schema1.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
@@ -349,7 +349,7 @@ export default function Home() {
 
                   <div className={`${productSlide === 1 ? "block" : "hidden"}`}>
                     <Image
-                      src="/images/home/bundel-front2.png"
+                      src="/images/home/schema2.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
@@ -357,7 +357,7 @@ export default function Home() {
                   </div>
                   <div className={`${productSlide === 2 ? "block" : "hidden"}`}>
                     <Image
-                      src="/images/home/bundel-front3.png"
+                      src="/images/home/schema3.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
@@ -365,7 +365,7 @@ export default function Home() {
                   </div>
                   <div className={`${productSlide === 3 ? "block" : "hidden"}`}>
                     <Image
-                      src="/images/home/bundel-front4.png"
+                      src="/images/home/schema4.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
@@ -373,7 +373,7 @@ export default function Home() {
                   </div>
                   <div className={`${productSlide === 4 ? "block" : "hidden"}`}>
                     <Image
-                      src="/images/home/bundel-front5.png"
+                      src="/images/home/schema5.png"
                       width={350}
                       height={476}
                       alt="zwemschema"
@@ -387,9 +387,9 @@ export default function Home() {
                     }`}
                     onMouseOver={() => changeSlide(0)}
                   >
-                    <h4 className="text-main text-sm leading-relaxed">Titel</h4>
+                    <h4 className="text-main text-sm leading-relaxed">Info</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
-                      Een pakkende titel met focuspunten
+                      Informatie over de zwemtraining
                     </p>
                   </li>
                   <li
@@ -398,9 +398,9 @@ export default function Home() {
                     }`}
                     onMouseOver={() => changeSlide(1)}
                   >
-                    <h4 className="text-main text-sm leading-relaxed">Info</h4>
+                    <h4 className="text-main text-sm leading-relaxed">Titel</h4>
                     <p className="text-md text-navy-light1 leading-relaxed">
-                      Informatie over de zwemtraining
+                      Een pakkende titel met focuspunten
                     </p>
                   </li>
                   <li
@@ -794,7 +794,7 @@ export default function Home() {
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen3.png"
               title="Goed voor je lichaam"
-              text="Longproblemen, hart- en vaatziekten of revalideren? &quot;Ga zwemmen.&quot; Is wat artsen met goede reden zeggen!"
+              text='Longproblemen, hart- en vaatziekten of revalideren? "Ga zwemmen." Is wat artsen met goede reden zeggen!'
             />
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen4.png"
