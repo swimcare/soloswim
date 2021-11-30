@@ -66,7 +66,7 @@ export default async (req, res) => {
       return res.status(400).send(`Webhook error: ${err.message}`);
     }
 
-    // Handle the checkout.session.completed event
+    // Handle the checkout.session.completed event (todo: add other events like payment failed and log that somehow or something)
 
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
