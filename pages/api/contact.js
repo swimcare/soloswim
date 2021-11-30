@@ -14,7 +14,7 @@ async function handler(req, res) {
   `;
 
   const data = {
-    to: "info@soloswim.nl",
+    to: "noreply@soloswim.nl",
     from: "noreply@soloswim.nl",
     subject: `${body.onderwerp}`,
     text: message,
