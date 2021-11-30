@@ -39,16 +39,36 @@ inhoud:
   {
     beginners:
       [
-        { title: "training1", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training2", tags: "[snelheid] [kracht]", distance: "2200" },
-        { title: "training10", tags: "[snelheid] [kracht]", distance: "2200" },
+        { title: "Hoog die elleboog", tags: "[armen]", distance: "1500" },
+        {
+          title: "Oefening baart kunst",
+          tags: "[ademhaling]",
+          distance: "1500",
+        },
+        {
+          title: "Aanspannen die handel",
+          tags: "[benen] [houding]",
+          distance: "1600",
+        },
+        {
+          title: "Het tempo opvoeren",
+          tags: "[armen] [benen]",
+          distance: "1500",
+        },
+        {
+          title: "Als een locomotief",
+          tags: "[armen] [houding]",
+          distance: "1500",
+        },
+        { title: "Aan de winnende hand", tags: "[armen]", distance: "1500" },
+        {
+          title: "Push your limits",
+          tags: "[ademhaling] [houding]",
+          distance: "1400",
+        },
+        { title: "Gratis meters", tags: "[armen] [houding]", distance: "1500" },
+        { title: "Als een motorboot", tags: "[benen]", distance: "1500" },
+        { title: "The final countdown", tags: "[armen]", distance: "1450" },
       ],
     semigevorderden:
       [
@@ -61,23 +81,59 @@ inhoud:
         { title: "Tot in de puntjes", tags: "[armen]", distance: "2200" },
         { title: "Split screen", tags: "[armen]", distance: "1900" },
         { title: "De juiste insteek", tags: "[armen]", distance: "2100" },
-        { title: "Appeltjes plukken", tags: "[benen] [houding]", distance: "1900" },
+        {
+          title: "Appeltjes plukken",
+          tags: "[benen] [houding]",
+          distance: "1900",
+        },
         { title: "Swimtastic", tags: "[armen] [houding]", distance: "2200" },
-        { title: "Een training met inhoud", tags: "[ademhaling] [keerpunten]", distance: "1950" },
+        {
+          title: "Een training met inhoud",
+          tags: "[ademhaling] [keerpunten]",
+          distance: "1950",
+        },
         { title: "Bring it all", tags: "[armen] [benen]", distance: "2100" },
         { title: "Wat drijf jou", tags: "[benen] [houding]", distance: "1800" },
       ],
     gevorderden:
       [
         { title: "Aan de slag!", tags: "[armen]", distance: "2700" },
-        { title: "Adem in, adem uit", tags: "[ademhaling] [houding]", distance: "2600" },
-        { title: "Laat je plankje maar thuis", tags: "[benen] [houding]", distance: "2400" },
-        { title: "Heup, schouders, hoofd en steek… ", tags: "[armen]", distance: "2800" },
-        { title: "Knap staaltje techniek", tags: "[armen] [houding]", distance: "2700" },
-        { title: "Een dolfijne training", tags: "[benen] [houding]", distance: "2800" },
+        {
+          title: "Adem in, adem uit",
+          tags: "[ademhaling] [houding]",
+          distance: "2600",
+        },
+        {
+          title: "Laat je plankje maar thuis",
+          tags: "[benen] [houding]",
+          distance: "2400",
+        },
+        {
+          title: "Heup, schouders, hoofd en steek… ",
+          tags: "[armen]",
+          distance: "2800",
+        },
+        {
+          title: "Knap staaltje techniek",
+          tags: "[armen] [houding]",
+          distance: "2700",
+        },
+        {
+          title: "Een dolfijne training",
+          tags: "[benen] [houding]",
+          distance: "2800",
+        },
         { title: "Water pakken", tags: "[armen]", distance: "2500" },
-        { title: "Zwabberend door het water", tags: "[armen] [houding]", distance: "2600" },
-        { title: "Als een potlood door het water", tags: "[benen] [houding] [landtraining]", distance: "2100" },
+        {
+          title: "Zwabberend door het water",
+          tags: "[armen] [houding]",
+          distance: "2600",
+        },
+        {
+          title: "Als een potlood door het water",
+          tags: "[benen] [houding] [landtraining]",
+          distance: "2100",
+        },
         { title: "Slordigheidsfoutjes", tags: "[armen]", distance: "2600" },
       ],
   }
