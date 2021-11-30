@@ -9,7 +9,6 @@ const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 console.log("established connection to stripe");
 
 const fulfillOrder = async (sessionData) => {
-
   try {
     await axios.post(`${process.env.HOST}/api/order-confirmation-email`, {
       sessionData,
@@ -23,19 +22,9 @@ const fulfillOrder = async (sessionData) => {
 
   try {
     await axios.post(`${process.env.HOST}/api/orders`, {
-      order_number: sessionData.order_number,
-      order_date: sessionData.order_date,
-      name: sessionData.name,
-      email: sessionData.email,
-      line1: sessionData.line1,
-      line2: sessionData.line2,
-      postal_code: sessionData.postal_code,
-      city: sessionData.city,
-      country: sessionData.country,
-      products: sessionData.products,
-      subtotal: sessionData.subtotal,
-      total: sessionData.total,
+      sessionData,
     });
+
     // await axios.get(`${process.env.HOST}/api/orders`);
   } catch (err) {
     console.log("an error occurred");
@@ -68,12 +57,12 @@ export default async (req, res) => {
       const session = event.data.object;
 
       //convert total and subtotal to decimals
-      const subtotal = (session.amount_subtotal.toFixed(2))/100;
-      const total = (session.amount_total.toFixed(2))/100;
+      const subtotal = session.amount_subtotal.toFixed(2) / 100;
+      const total = session.amount_total.toFixed(2) / 100;
 
       const sessionData = {
-        order_number: null,
-        order_date: null,
+        order_number: session.metadata.order_number,
+        order_date: session.metadata.order_date,
         name: session.shipping.name,
         email: session.customer_details.email,
         line1: session.shipping.address.line1,
@@ -85,22 +74,6 @@ export default async (req, res) => {
         subtotal: subtotal,
         total: total,
       };
-
-      //generating the order number:
-      const orderid = require('order-id')('mysecret');
-      const id = orderid.generate();  
-      //adding the order number
-      sessionData.order_number = id;
-
-      //generatring the date of today:
-      let today = new Date();
-      const dd = String(today.getDate()).padStart(2, '0');
-      const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-      const yyyy = today.getFullYear();
-      
-      today = dd + '/' + mm + '/' + yyyy;
-      //adding the date
-      sessionData.order_date = today;
 
       // Fulfill the order...
       return fulfillOrder(sessionData)

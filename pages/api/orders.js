@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       try {
         console.log("try to post data in database");
         console.log(req.body);
-        const order = await Order.create(req.body);
+        const order = await Order.create(req.body.sessionData);
         res.status(201).json({ success: true, data: order });
       } catch (error) {
         console.log("database error: " + error);

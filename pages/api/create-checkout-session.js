@@ -1,6 +1,17 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export default async (req, res) => {
+  //generating the order number:
+  const orderid = require("order-id")("mysecret");
+  const id = orderid.generate();
+
+  //generatring the date of today:
+  let today = new Date();
+  const dd = String(today.getDate()).padStart(2, "0");
+  const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  const yyyy = today.getFullYear();
+  today = dd + "/" + mm + "/" + yyyy;
+
   const { items } = req.body;
 
   const transformedItems = items.map((item) => ({
@@ -40,6 +51,8 @@ export default async (req, res) => {
               editie: item.editie,
             }))
           ),
+          order_number: id,
+          order_date: today,
         },
       });
 
