@@ -61,19 +61,18 @@ async function handler(req, res) {
 
   console.log(data.personalizations[0].dynamic_template_data);
 
-  mail
+   mail
     .send(data)
     .then((response) => {
       if (response[0].statusCode == "202") {
-        res.status(200).json({ status: "OK" });
+        res.status(200).end();
       } else {
-        res.status(response[0].statusCode).json({ status: "NOT OK" });
+        res.status(response[0].statusCode).end();
       }
     })
     .catch((error) => {
       console.log(error);
-      res.status(response[0].statusCode).json({ status: "NOT OK" });
-      return resolve();
+      res.status(response[0].statusCode).end();
     });
 }
 
