@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import { Fragment, useState } from "react";
 import { getAllProductIds, getproductData } from "../../lib/products";
@@ -44,7 +43,7 @@ export default function Zwemschema({ productData }) {
   const [selectedOption, setSelectedOption] = useState();
 
   // Winkelwagen modal functionality
-  const [modalIsOpen, setModalIsOpen] = React.useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
@@ -57,7 +56,7 @@ export default function Zwemschema({ productData }) {
       </Head>
 
       <main>
-        {/* WINKELWAGEN MODAL --> make winkelwagenModal component for this */}
+        {/* WINKELWAGEN MODAL */}
         <WinkelwagenModal
           productData={productData}
           toggleModal={toggleModal}
