@@ -9,14 +9,14 @@ const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 console.log("established connection to stripe");
 
 const fulfillOrder = async (sessionData) => {
-  try {
-    await axios.post(`${process.env.HOST}/api/order-confirmation-email`, {
-      sessionData,
-    });
-  } catch (err) {
-    console.log("an error occurred");
-    console.log(err);
-  }
+  // try {
+  //   await axios.post(`${process.env.HOST}/api/order-confirmation-email`, {
+  //     sessionData,
+  //   });
+  // } catch (err) {
+  //   console.log("an error occurred");
+  //   console.log(err);
+  // }
 
   console.log("moving on to storing order in database");
 
