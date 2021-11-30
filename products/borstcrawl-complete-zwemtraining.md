@@ -47,6 +47,7 @@ inhoud:
               tags: "[snelheid] [kracht]",
               distance: "2200",
               type: "techniek trainingen",
+              preview: "/images/home/bundel-front.png",
             },
             {
               title: "training2",
@@ -110,6 +111,7 @@ inhoud:
               tags: "[snelheid] [kracht]",
               distance: "2200",
               type: "kracht trainingen",
+              preview: "/images/home/bundel-front.png",
             },
             {
               title: "training2",

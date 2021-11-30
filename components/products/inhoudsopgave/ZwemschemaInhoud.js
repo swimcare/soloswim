@@ -23,19 +23,21 @@ function ZwemschemaInhoud(props) {
             <span className="hidden md:inline-block ml-2 font-normal text-xs">
               {props.tags}
             </span>
-            {props.previewItem === 1 ? (
-              <button
-                onClick={toggleModal}
-                className="text-xs font-normal text-main float-right transform translate-y-0.5"
-              >
-                Preview
-                <span className="float-left mr-1">
-                  <EyeIcon className="h-4 w-4 text-main" />
-                </span>
+            {props.preview ? (
+              <span className=" float-right text-xs font-normal">
+                <button
+                  onClick={toggleModal}
+                  className="text-main transform translate-y-0.5 hover:underline"
+                >
+                  Preview
+                  <span className="float-left mr-1">
+                    <EyeIcon className="h-4 w-4 text-main" />
+                  </span>{" "}
+                </button>
                 <span className="ml-4 text-xs transform translate-y-0.5 float-right text-navy-light1">
                   {props.distance} m
                 </span>
-              </button>
+              </span>
             ) : (
               <span className="font-normal ml-4 text-xs transform translate-y-0.5 float-right text-navy-light1">
                 {props.distance} m
@@ -45,7 +47,12 @@ function ZwemschemaInhoud(props) {
           <p className="text-xs md:hidden">{props.tags}</p>
         </div>
       </div>
-      <Modal isOpen={previewModalIsOpen} toggle={toggleModal}>
+      <Modal
+        isOpen={previewModalIsOpen}
+        toggle={toggleModal}
+        fullHeight
+        extraClasses="max-w-5xl h-full"
+      >
         <div className="flex justify-between border-b border-gray-300 bg-main rounded-t-2xl">
           <div className="p-4 text-xl font-lexend font-semibold text-white">
             <h1>
@@ -61,10 +68,10 @@ function ZwemschemaInhoud(props) {
           </button>
         </div>
 
-        <div className="h-[400px] p-4">
+        <div className="h-full p-4">
           <div className="w-full h-full relative">
             <Image
-              src="/images/home/bundel-front.png"
+              src={props.preview}
               layout="fill"
               objectFit="contain"
               objectPosition="center"

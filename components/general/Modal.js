@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Portal from "@reach/portal";
 
-function Modal({ children, isOpen, toggle }) {
+function Modal({ children, isOpen, toggle, extraClasses, fullHeight }) {
   const ref = useRef();
 
   // close modal on click outside NOT WORKING, CLOSES THE MODAL IMMEDIATELY AFTER OPENING
@@ -53,15 +53,15 @@ function Modal({ children, isOpen, toggle }) {
       {isOpen && (
         <>
           <div className="fixed top-0 left-0 z-30 w-screen h-screen bg-black opacity-50" />
-          <div className="fixed top-0 overflow-y-auto mx-auto inset-x-0 z-40 w-full h-full m-0 max-w-4xl">
+          <div className={`fixed top-0 overflow-y-auto mx-auto inset-x-0 z-40 w-full px-5 py-5 ${fullHeight && "h-screen"}`}>
             <div
               aria-modal={true}
-              className="mt-12 mx-8 pb-6 md:m-auto md:w-8/12 lg:w-8/12 md:pt-12 focus:outline-none"
+              className={`${extraClasses} py-7 m-auto focus:outline-none`}
               ref={ref}
               role="dialogue"
               tabIndex={-1}
             >
-              <div className="animate-modal relative flex flex-col bg-white pointer-events-auto rounded-2xl">
+              <div className="animate-modal relative flex flex-col bg-white pointer-events-auto rounded-2xl h-full">
                 {children}
               </div>
             </div>

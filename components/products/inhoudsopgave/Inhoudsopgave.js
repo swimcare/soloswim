@@ -9,6 +9,7 @@ function Inhoudsopgave({ inhoud, editie }) {
       tags={training.tags}
       distance={training.distance}
       previewItem={index + 1}
+      preview={training.preview}
     />
   ));
 

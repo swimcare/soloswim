@@ -15,7 +15,7 @@ function WinkelwagenModal({ productData, modalIsOpen, toggleModal }) {
   };
 
   return (
-    <Modal isOpen={modalIsOpen} toggle={toggleModal}>
+    <Modal isOpen={modalIsOpen} toggle={toggleModal} extraClasses="max-w-2xl">
       <div className="flex justify-between border-b border-gray-300 bg-main rounded-t-2xl">
         <div className="p-4 text-xl font-lexend font-semibold text-white">
           <h1>Het product is toegevoegd aan je winkelwagen</h1>
