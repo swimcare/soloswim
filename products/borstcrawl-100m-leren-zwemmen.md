@@ -39,6 +39,7 @@ inhoud:
           title: "Een stevige basis",
           tags: "[houding]",
           distance: "1000",
+          preview: "/images/zwemschemas/bcl100/preview.png"
         },
         { title: "Adembenemend", tags: "[houding] [ademhaling]", distance: "1000" },
         { title: "Loslaten", tags: "[houding] [ademhaling]", distance: "1100" },

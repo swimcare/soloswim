@@ -39,7 +39,7 @@ inhoud:
   {
     beginners:
       [
-        { title: "Hoog die elleboog", tags: "[armen]", distance: "1500" },
+        { title: "Hoog die elleboog", tags: "[armen]", distance: "1500", preview: "/images/zwemschemas/bct1/preview1.png" },
         {
           title: "Oefening baart kunst",
           tags: "[ademhaling]",
@@ -72,7 +72,7 @@ inhoud:
       ],
     semigevorderden:
       [
-        { title: "Watergevoel", tags: "[armen]", distance: "2000" },
+        { title: "Watergevoel", tags: "[armen]", distance: "2000", preview: "/images/zwemschemas/bct1/preview2.png" },
         {
           title: "Even de benen strekken",
           tags: "[benen] [houding]",
@@ -97,7 +97,7 @@ inhoud:
       ],
     gevorderden:
       [
-        { title: "Aan de slag!", tags: "[armen]", distance: "2700" },
+        { title: "Aan de slag!", tags: "[armen]", distance: "2700", preview: "/images/zwemschemas/bct1/preview3.png" },
         {
           title: "Adem in, adem uit",
           tags: "[ademhaling] [houding]",

@@ -39,7 +39,7 @@ inhoud:
   {
     beginners:
       [
-        { title: "De pyramide over", tags: "[armen] [lange afstand]", distance: "1900" },
+        { title: "De pyramide over", tags: "[armen] [lange afstand]", distance: "1900", preview: "/images/zwemschemas/bcd1/preview1.png" },
         { title: "Vinger toppen eerst", tags: "[armen] [ademhaling]", distance: "1700" },
         { title: "Spartelen met die benen", tags: "[benen]", distance: "1600" },
         { title: "Doe mij maar een longvergroting", tags: "[ademhaling] [lange afstand]", distance: "1800" },
@@ -52,7 +52,7 @@ inhoud:
       ],
     semigevorderden:
       [
-        { title: "Kieuwen kweken", tags: "[ademhaling]", distance: "2250" },
+        { title: "Kieuwen kweken", tags: "[ademhaling]", distance: "2250", preview: "/images/zwemschemas/bcd1/preview2.png" },
         { title: "Hello legday", tags: "[benen]", distance: "2200" },
         { title: "Goodbye kipfilets", tags: "[armen]", distance: "2300" },
         { title: "Focus", tags: "[armen] [benen]", distance: "2200" },
@@ -65,7 +65,7 @@ inhoud:
       ],
     gevorderden:
       [
-        { title: "Lang, hoog en krachtig", tags: "[armen]", distance: "2900" },
+        { title: "Lang, hoog en krachtig", tags: "[armen]", distance: "2900", preview: "/images/zwemschemas/bcd1/preview3.png" },
         { title: "Happen naar adem", tags: "[ademhaling]", distance: "2850" },
         { title: "Powerbenen", tags: "[ademhaling] [benen]", distance: "3000" },
         { title: "Doorhalen die handen", tags: "[armen]", distance: "2900" },
