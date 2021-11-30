@@ -175,6 +175,7 @@ inhoud:
               tags: "[snelheid] [kracht]",
               distance: "2200",
               type: "duur trainingen",
+              preview: "/images/home/bundel-front.png",
             },
             {
               title: "training2",

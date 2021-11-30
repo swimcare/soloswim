@@ -45,6 +45,11 @@ function SubSectionBenodigdheden() {
             name="Pullbuoy"
             tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
           />
+          <Attribuut
+            icon="/images/zwemschemas/benodigdheden/zoomers.png"
+            name="Zoomers (optioneel)"
+            tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
+            />
         </div>
       </div>
     </Fragment>

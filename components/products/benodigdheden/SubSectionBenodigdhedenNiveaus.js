@@ -4,7 +4,7 @@ import { Accordion } from "../../hooks/Accordion";
 import Attribuut from "./Attribuut";
 import DubbelAttribuut from "./DubbelAttribuut";
 
-function SubSectionBenodigdhedenNiveaus() {
+function SubSectionBenodigdhedenNiveaus({ color }) {
   return (
     <Accordion defaultPanel="benodigdheden-ieder-niveau">
       <AccordionItem
@@ -71,6 +71,14 @@ function SubSectionBenodigdhedenNiveaus() {
             name="Pullbuoy"
             tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
           />
+          {color === "green" ||
+            (color === "green-orange-yellow" && (
+              <Attribuut
+                icon="/images/zwemschemas/benodigdheden/zoomers.png"
+                name="Zoomers (optioneel)"
+                tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
+              />
+            ))}
         </div>
       </AccordionPanel>
       <AccordionItem

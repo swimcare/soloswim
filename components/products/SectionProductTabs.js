@@ -144,7 +144,7 @@ function SectionProductTabs({ productData }) {
                   </h2>
                 </div>
                 {productData.niveaus ? (
-                  <SubSectionBenodigdhedenNiveaus />
+                  <SubSectionBenodigdhedenNiveaus color={productData.color} />
                 ) : (
                   <SubSectionBenodigdheden />
                 )}
