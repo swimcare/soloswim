@@ -67,18 +67,16 @@ inhoud:
       ],
     gevorderden:
       [
-        {
-          title: "training1",
-          tags: "[snelheid] [kracht]",
-          distance: "4200",
-          type: "kracht",
-        },
-        {
-          title: "training2",
-          tags: "[snelheid] [kracht]",
-          distance: "4200",
-          type: "kracht",
-        },
+        { title: "Kort maar krachtig", tags: "[snelheid]", distance: "2200" },
+        { title: "Arme armen", tags: "[armen]", distance: "2500" },
+        { title: "Benen, benen, benen", tags: "[benen]", distance: "1950" },
+        { title: "Te land, ter zee en in de lucht", tags: "[landtraining]", distance: "2050" },
+        { title: "Wrik er op los", tags: "[armen]", distance: "2300" },
+        { title: "Race tegen de klok", tags: "[armen] [benen] [snelheid]", distance: "2450" },
+        { title: "Lekker peddelen", tags: "[armen] [snelheid]", distance: "2400" },
+        { title: "Zoomen door het water", tags: "[benen]", distance: "2500" },
+        { title: "Hardcore", tags: "[benen] [houding] [landtraining]", distance: "2100" },
+        { title: "80 koprollen", tags: "[keerpunten]", distance: "2500" },
       ],
   }
 ---
