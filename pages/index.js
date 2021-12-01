@@ -13,6 +13,9 @@ import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
 import SimpleIconCard from "../components/home/SimpleIconCard";
 import SectionReviewsMain from "../components/home/SectionReviewsMain";
 import Link from "next/link";
+import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
+import Bounce from "react-reveal/Bounce";
 
 export default function Home() {
   const [productSlide, setCurrentSlide] = useState(0);
@@ -137,24 +140,28 @@ export default function Home() {
               </h3>
             </div>
             <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
-              <h1 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
-                Waterproof Zwemschema's
-              </h1>
-              <h2 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] font-lexend font-bold lg:font-extrabold text-navy-light1 text-lg md:text-xl lg:text-3xl my-4">
-                Om zelf te volgen vanuit het zwembad
-              </h2>
+              <Slide left>
+                <h1 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
+                  Waterproof Zwemschema's
+                </h1>
+                <h2 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] font-lexend font-bold lg:font-extrabold text-navy-light1 text-lg md:text-xl lg:text-3xl my-4">
+                  Om zelf te volgen vanuit het zwembad
+                </h2>
+              </Slide>
             </div>
             <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
-              <Link href="/producten">
-                <a>
-                  <button
-                    role="button"
-                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                  >
-                    Shop nu
-                  </button>
-                </a>
-              </Link>
+              <Bounce left>
+                <Link href="/producten">
+                  <a>
+                    <button
+                      role="button"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                    >
+                      Shop nu
+                    </button>
+                  </a>
+                </Link>
+              </Bounce>
             </div>
           </div>
         </div>
@@ -163,14 +170,16 @@ export default function Home() {
       {/* SECTION 1: */}
       <section className="bg-grey-light4">
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 sm:pb-10">
-          <div>
-            <h2 className="text-main font-lexend font-extrabold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-              Herbruikbare zwemschema's
-            </h2>
-            <h3 className="text-navy-light1 font-lexend font-bold md:font-extrabold text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl my-2 md:my-5">
-              Voor iedere banenzwemmer
-            </h3>
-          </div>
+          <Fade bottom>
+            <div>
+              <h2 className="text-main font-lexend font-extrabold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                Herbruikbare zwemschema's
+              </h2>
+              <h3 className="text-navy-light1 font-lexend font-bold md:font-extrabold text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl my-2 md:my-5">
+                Voor iedere banenzwemmer
+              </h3>
+            </div>
+          </Fade>
         </div>
         <div className="mx-5 sm:mx-0 lg:w-3/4">
           <WaveSvg fill="#fff" />
@@ -222,40 +231,44 @@ export default function Home() {
           </div>
 
           <ul className=" transform -translate-y-36 sm:translate-y-0 -mb-36 sm:mb-0 sm:w-full xl:ml-[calc((((133%)-1280px)/2)+20px+1rem)]">
-            <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
-              <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+            <Slide left cascade>
               <div>
-                <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
-                  Zorgvuldig samengestelde bundels voor alle niveau’s
-                </h4>
-                <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                  Bestaande uit 10 uitdagende trainingen
-                </p>
+                <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
+                  <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                      Zorgvuldig samengestelde bundels voor alle niveau’s
+                    </h4>
+                    <p className="text-navy-light1 text-tiny my-2 lg:text-base">
+                      Bestaande uit 10 uitdagende trainingen
+                    </p>
+                  </div>
+                </li>
+                <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
+                  <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                      Verschillende thema’s
+                    </h4>
+                    <p className="text-navy-light1 text-tiny my-2 lg:text-base">
+                      Van techniek-, kracht- of duur trainingen tot swimfit voor
+                      ontspanning
+                    </p>
+                  </div>
+                </li>
+                <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
+                  <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                      Gevarieerde oefeningen
+                    </h4>
+                    <p className="text-navy-light1 text-tiny my-2 lg:text-base">
+                      Die het zwemmen leuker maken en je vooruit helpen
+                    </p>
+                  </div>
+                </li>
               </div>
-            </li>
-            <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
-              <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
-              <div>
-                <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
-                  Verschillende thema’s
-                </h4>
-                <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                  Van techniek-, kracht- of duur trainingen tot swimfit voor
-                  ontspanning
-                </p>{" "}
-              </div>
-            </li>
-            <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
-              <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
-              <div>
-                <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
-                  Gevarieerde oefeningen
-                </h4>
-                <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                  Die het zwemmen leuker maken en je vooruit helpen
-                </p>{" "}
-              </div>
-            </li>
+            </Slide>
           </ul>
         </div>
         <div className="mx-5 sm:mx-0 lg:w-3/4">
@@ -264,16 +277,18 @@ export default function Home() {
         {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-10"> */}
 
         <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32">
-          <Link href="/producten">
-            <a>
-              <button
-                role="button"
-                className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-              >
-                Bekijk ons aanbod
-              </button>
-            </a>
-          </Link>
+          <Bounce left>
+            <Link href="/producten">
+              <a>
+                <button
+                  role="button"
+                  className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                >
+                  Bekijk ons aanbod
+                </button>
+              </a>
+            </Link>
+          </Bounce>
         </div>
         <WaveSvg fill="#fff" />
       </section>
@@ -281,12 +296,14 @@ export default function Home() {
       {/* SECTION 2: zo ziet een zwemschema eruit */}
       <section>
         <div className="px-5 sm:px-3 max-w-screen-xl mx-auto py-20 lg:py-32">
-          <h2 className="font-lexend text-slateblue-dark1 font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mx-10">
-            Zo ziet een zwemschema eruit
-          </h2>
-          <h3 className="font-lexend my-2 text-main font-extrabold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center mx-10">
-            Lekker duidelijk
-          </h3>
+          <Fade bottom>
+            <h2 className="font-lexend text-slateblue-dark1 font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mx-10">
+              Zo ziet een zwemschema eruit
+            </h2>
+            <h3 className="font-lexend my-2 text-main font-extrabold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center mx-10">
+              Lekker duidelijk
+            </h3>
+          </Fade>
           <div className="sm:flex sm:flex-row my-10 max-w-5xl mx-auto">
             <div className="hidden sm:block my-auto transform sm:translate-x-5 z-20">
               <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
@@ -380,6 +397,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
+
                 <ul className="my-3 lg:my-6 flex flex-col gap-4 sm:gap-3 md:gap-5 lg:gap-6 max-w-sm sm:pl-10 md:pl-0 sm:ml-auto md:mx-auto">
                   <li
                     className={`font-bold hover:cursor-pointer ${
@@ -453,65 +471,77 @@ export default function Home() {
       {/* SECTION 5: WAAROM SOLOSWIM */}
       <section className="bg-grey-light4">
         <div className="px-5 max-w-screen-xl mx-auto pt-20 pb-6 lg:pt-32">
-          <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-main">
-            Waarom Soloswim
-          </h2>
-          <h2 className="font-lexend font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-navy-light1 my-2 lg:my-5">
-            Een aantal voordelen op een rijtje
-          </h2>
+          <Fade bottom>
+            <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-main">
+              Waarom Soloswim
+            </h2>
+            <h2 className="font-lexend font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-navy-light1 my-2 lg:my-5">
+              Een aantal voordelen op een rijtje
+            </h2>
+          </Fade>
         </div>
         <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:py-8">
-          <FullWidthImageCard
-            img="/images/home/waarom-soloswim-1.png"
-            number="01"
-            title="Doelgericht banenzwemmen"
-            text="Met onze gestructureerde zwemschema's hoef je niet meer zelf je zwemtraining te bedenken. Hierdoor kun jij je volledig
+          <Slide left>
+            <FullWidthImageCard
+              img="/images/home/waarom-soloswim-1.png"
+              number="01"
+              title="Doelgericht banenzwemmen"
+              text="Met onze gestructureerde zwemschema's hoef je niet meer zelf je zwemtraining te bedenken. Hierdoor kun jij je volledig
                   richten op het uitvoeren van een doelgerichte training zodat jij met een
                   voldaan gevoel het zwembad verlaat, wat je doel met zwemmen
                   ook is!"
-          />
-          <FullWidthImageCard
-            img="/images/home/waarom-soloswim-2.png"
-            number="02"
-            title="Breed aanbod aan zwemschema’s"
-            text="Op wat voor manier je ook zwemt, met ons brede aanbod hebben wij zwemschema’s voor iedere zwemmer. Of je nu een fanatieke triatleet bent, nog helemaal geen zwemervaring hebt maar graag borstcrawl wilt leren of gewoon lekker relaxed baantjes wilt trekken, er is voor ieder wat wils!"
-            alignRight
-          />
-          <FullWidthImageCard
-            img="/images/home/waarom-soloswim-3.png"
-            number="03"
-            title="Waterproof en herbruikbaar"
-            text="Onze zwemschema’s zijn gemaakt van sterk materiaal en volledig waterproof. Hierdoor zijn papieren zwemschema's die snel nat worden verleden tijd. Dus kies een bundel uit, stop hem in je zwemtas en gebruik hem keer op keer!"
-          />
-          <FullWidthImageCard
-            img="/images/home/waarom-soloswim-4.png"
-            number="04"
-            title="En misschien wel het belangrijkste: meer plezier tijdens het zwemmen!"
-            text="Elk schema bevat gevarieerde en uitdagende zwemoefeningen waardoor het banenzwemmen nooit saai wordt. Laat je verrassen want geen schema is hetzelfde! Het voltooien van een schema geeft een heerlijk gevoel, zo ervaar jij nog meer plezier tijdens het banenzwemmen."
-            alignRight
-          />
+            />
+          </Slide>
+          <Slide right>
+            <FullWidthImageCard
+              img="/images/home/waarom-soloswim-2.png"
+              number="02"
+              title="Breed aanbod aan zwemschema’s"
+              text="Op wat voor manier je ook zwemt, met ons brede aanbod hebben wij zwemschema’s voor iedere zwemmer. Of je nu een fanatieke triatleet bent, nog helemaal geen zwemervaring hebt maar graag borstcrawl wilt leren of gewoon lekker relaxed baantjes wilt trekken, er is voor ieder wat wils!"
+              alignRight
+            />
+          </Slide>
+          <Slide left>
+            <FullWidthImageCard
+              img="/images/home/waarom-soloswim-3.png"
+              number="03"
+              title="Waterproof en herbruikbaar"
+              text="Onze zwemschema’s zijn gemaakt van sterk materiaal en volledig waterproof. Hierdoor zijn papieren zwemschema's die snel nat worden verleden tijd. Dus kies een bundel uit, stop hem in je zwemtas en gebruik hem keer op keer!"
+            />
+          </Slide>
+          <Slide right>
+            <FullWidthImageCard
+              img="/images/home/waarom-soloswim-4.png"
+              number="04"
+              title="En misschien wel het belangrijkste: meer plezier tijdens het zwemmen!"
+              text="Elk schema bevat gevarieerde en uitdagende zwemoefeningen waardoor het banenzwemmen nooit saai wordt. Laat je verrassen want geen schema is hetzelfde! Het voltooien van een schema geeft een heerlijk gevoel, zo ervaar jij nog meer plezier tijdens het banenzwemmen."
+              alignRight
+            />
+          </Slide>
         </div>
         <div className="px-5 max-w-screen-xl mx-auto py-12 lg:py-32">
           <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
             Oké, nog een paar extra voordelen!
           </h2>
-          <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
-            <IconCard
-              img="/images/home/no-app-needed.png"
-              title="Geen app nodig"
-              shadow
-            />
-            <IconCard
-              img="/images/home/no-subscription.png"
-              title="Geen abonnements kosten"
-              shadow
-            />
-            <IconCard
-              img="/images/home/no-printer.png"
-              title="Geen printer nodig"
-              shadow
-            />
-          </div>
+          <Fade bottom>
+            <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
+              <IconCard
+                img="/images/home/no-app-needed.png"
+                title="Geen app nodig"
+                shadow
+              />
+              <IconCard
+                img="/images/home/no-subscription.png"
+                title="Geen abonnements kosten"
+                shadow
+              />
+              <IconCard
+                img="/images/home/no-printer.png"
+                title="Geen printer nodig"
+                shadow
+              />
+            </div>
+          </Fade>
         </div>
       </section>
 
@@ -530,27 +560,32 @@ export default function Home() {
       <section className="py-12 lg:py-32">
         {/* STAPPEN BESTELLEN */}
         <div className="px-5 max-w-screen-xl mx-auto">
-          <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
-            Doe mij maar zo'n schema!
-          </h2>
+          <Fade bottom>
+            <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
+              Doe mij maar zo'n schema!
+            </h2>
+          </Fade>
           <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
             {/* Custom icon card */}
-            <div className="bg-grey-light4 rounded-2xl w-full max-w-sm mx-auto h-56">
-              <div className="flex flex-col text-center">
-                <div className="relative transform -translate-y-16 w-52 h-48 mx-auto">
-                  <Image
-                    src="/images/home/stap1.png"
-                    layout="fill"
-                    objectFit="contain"
-                    objectPosition="bottom"
-                    alt="Selecteer een trainingsbundel die bij jou past"
-                  />
+            <Fade bottom>
+              <div className="bg-grey-light4 rounded-2xl w-full max-w-sm mx-auto h-56">
+                <div className="flex flex-col text-center">
+                  <div className="relative transform -translate-y-16 w-52 h-48 mx-auto">
+                    <Image
+                      src="/images/home/stap1.png"
+                      layout="fill"
+                      objectFit="contain"
+                      objectPosition="bottom"
+                      alt="Selecteer een trainingsbundel die bij jou past"
+                    />
+                  </div>
+                  <h3 className="text-navy-light1 font-semibold mx-4 transform -translate-y-10">
+                    Selecteer een trainingsbundel die bij jou past
+                  </h3>
                 </div>
-                <h3 className="text-navy-light1 font-semibold mx-4 transform -translate-y-10">
-                  Selecteer een trainingsbundel die bij jou past
-                </h3>
               </div>
-            </div>
+            </Fade>
+
             {/* End custom icon card */}
             <IconCard
               color="bg-grey-light4"
@@ -563,6 +598,7 @@ export default function Home() {
               title="Stop hem in je zwemtas en volg het schema vanuit het bad"
             />
           </div>
+
           <div className="flex flex-row max-w-xl md:max-w-full mx-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -676,78 +712,98 @@ export default function Home() {
         <div className="relative h-full flex flex-col justify-between">
           <WaveExtendedSvg fill="#fff" />
           <div className="px-5 max-w-screen-xl mx-auto pt-20 lg:pt-32">
-            <h2 className="font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold">
-              Cijfers waar we trots op zijn!
-            </h2>
+            <Fade bottom>
+              <h2 className="font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold">
+                Cijfers waar we trots op zijn!
+              </h2>
+            </Fade>
             <div className="my-5 md:my-10 lg:my-20 flex flex-col gap-4 md:flex-row md:justify-evenly md:text-center">
-              <div>
-                <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
-                  100
-                </p>
-                <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
-                  Unieke zwemschema's
-                </p>
-              </div>
-              <div>
-                <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
-                  &gt;250 km
-                </p>
-                <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
-                  aan zwemkilometers
-                </p>
-              </div>
+              <Fade bottom>
+                <div>
+                  <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
+                    100
+                  </p>
+                  <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
+                    Unieke zwemschema's
+                  </p>
+                </div>
+              </Fade>
+              <Fade bottom>
+                <div>
+                  <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
+                    &gt;250 km
+                  </p>
+                  <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
+                    aan zwemkilometers
+                  </p>
+                </div>
+              </Fade>
             </div>
           </div>
           {/* Over ons card */}
-          <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
-            <div className="lg:hidden mx-5 leading-none text-zero">
-              <Image
-                className="rounded-t-xl lg:rounded-none"
-                src="/images/home/oprichters-soloswim.png"
-                width={996}
-                height={772}
-                alt="Oprichters soloswim"
-              />
-            </div>
-            <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
-              <Image
-                className="rounded-t-xl sm:rounded-none"
-                src="/images/home/oprichters-soloswim.png"
-                layout="fill"
-                objectFit="cover"
-                alt="Oprichters soloswim"
-              />
-            </div>
-            <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
-              <div>
-                <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
-                  Handgemaakt in Nederland door zwemmers
-                </h3>
+          <Slide left>
+            <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
+              <div className="lg:hidden mx-5 leading-none text-zero">
+                <Image
+                  className="rounded-t-xl lg:rounded-none"
+                  src="/images/home/oprichters-soloswim.png"
+                  width={996}
+                  height={772}
+                  alt="Oprichters soloswim"
+                />
               </div>
-              <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
-                <p className="">
-                  Papier en water gaan niet zo goed samen, niet gek dat onze
-                  handgeschreven zwemtrainingen in de prullenbak terecht kwamen.
-                  Zonde vonden we! Met een duidelijke missie gingen we aan de
-                  slag en ruim een halfjaar later was Soloswim geboren!
-                </p>
-                <p className="mt-4">
-                  We maken al onze bundels zelf met veel zorg; van het
-                  ontwikkelen van de trainingen tot het uitprinten en
-                  plastificeren van de bundels. Made in the Netherlands, daar
-                  zijn we trots op! Houd ons in de gaten want we zijn continu
-                  bezig met het uitbreiden van onze zwemschema’s. Zo komt er
-                  binnenkort een bundel voor recreanten (swimfit) en een bundel
-                  met verschillende slagen uit. Voor ieder wat wils, dat vinden
-                  we belangrijk!
-                </p>
+              <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
+                <Image
+                  className="rounded-t-xl sm:rounded-none"
+                  src="/images/home/oprichters-soloswim.png"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Oprichters soloswim"
+                />
               </div>
-              <div className="lg:inline-block hidden my-6">
-                <Link href="/over-ons">
+              <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
+                <div>
+                  <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
+                    Handgemaakt in Nederland door zwemmers
+                  </h3>
+                </div>
+                <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
+                  <p className="">
+                    Papier en water gaan niet zo goed samen, niet gek dat onze
+                    handgeschreven zwemtrainingen in de prullenbak terecht
+                    kwamen. Zonde vonden we! Met een duidelijke missie gingen we
+                    aan de slag en ruim een halfjaar later was Soloswim geboren!
+                  </p>
+                  <p className="mt-4">
+                    We maken al onze bundels zelf met veel zorg; van het
+                    ontwikkelen van de trainingen tot het uitprinten en
+                    plastificeren van de bundels. Made in the Netherlands, daar
+                    zijn we trots op! Houd ons in de gaten want we zijn continu
+                    bezig met het uitbreiden van onze zwemschema’s. Zo komt er
+                    binnenkort een bundel voor recreanten (swimfit) en een
+                    bundel met verschillende slagen uit. Voor ieder wat wils,
+                    dat vinden we belangrijk!
+                  </p>
+                </div>
+                <div className="lg:inline-block hidden my-6">
+                  <Link href="/over-ons">
+                    <a>
+                      <button
+                        role="button"
+                        className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                      >
+                        Meer over ons
+                      </button>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="inline-block lg:hidden mx-auto my-6">
+                <Link href="/producten">
                   <a>
                     <button
                       role="button"
-                      className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
                     >
                       Meer over ons
                     </button>
@@ -755,19 +811,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="inline-block lg:hidden mx-auto my-6">
-              <Link href="/producten">
-                <a>
-                  <button
-                    role="button"
-                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                  >
-                    Meer over ons
-                  </button>
-                </a>
-              </Link>
-            </div>
-          </div>
+          </Slide>
           {/* Einde over on card */}
           <div className="transform rotate-180">
             <WaveExtendedSvg fill="#fff" />
@@ -777,9 +821,11 @@ export default function Home() {
 
       <section>
         <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
-          <h2 className="mx-auto max-w-5xl font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold text-center">
-            Waarom wij zo van zwemmen houden!
-          </h2>
+          <Fade bottom>
+            <h2 className="mx-auto max-w-5xl font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold text-center">
+              Waarom wij zo van zwemmen houden!
+            </h2>
+          </Fade>
           <div className="my-5 md:my-10 lg:my-20 flex flex-row flex-wrap justify-around gap-5 lg:gap-10 text-slateblue-dark1 text-center">
             <SimpleIconCard
               icon="/images/home/waarom-zwemmen1.png"

@@ -27,6 +27,7 @@
     "react-number-format": "^4.8.0",
     "react-redux": "^7.2.5",
     "react-responsive-carousel": "^3.2.22",
+    "react-reveal": "^1.2.2",
     "remark": "^13.0.0",
     "remark-html": "^13.0.2",
     "stripe": "^8.184.0"
