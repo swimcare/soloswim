@@ -25,7 +25,7 @@ function Footer() {
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
               <li>
-                <Link href="/">
+                <Link href="/producten/#faq">
                   <a className="hover:underline">FAQ</a>
                 </Link>
               </li>
@@ -98,6 +98,11 @@ function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="text-center">
+          <p className="text-xs text-navy-light1 italic">
+            Alle foto's zijn gemaakt in Zwembad Brandenburg in Bilthoven en Zwembad De Krommerijn in Utrecht
+          </p>
         </div>
         <div className="text-center py-5">
           <p className="text-tiny text-navy-light1">
