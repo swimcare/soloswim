@@ -70,7 +70,7 @@ inhoud:
         { title: "Powerbenen", tags: "[ademhaling] [benen]", distance: "3000" },
         { title: "Doorhalen die handen", tags: "[armen]", distance: "2900" },
         { title: "Baantjes tellen", tags: "[lange afstand]", distance: "2900" },
-        { title: "De pyramide op", tags: "[ademhaling]", distance: "2900" },
+        { title: "Een treetje hoger", tags: "[ademhaling]", distance: "2900" },
         { title: "Benen festijn", tags: "[benen]", distance: "2800" },
         { title: "1 op X", tags: "[ademhaling] [armen]", distance: "2900" },
         { title: "Constant is key", tags: "[snelheid]", distance: "2900" },
