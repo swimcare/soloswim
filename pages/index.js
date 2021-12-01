@@ -465,7 +465,7 @@ export default function Home() {
             img="/images/home/waarom-soloswim-1.png"
             number="01"
             title="Doelgericht banenzwemmen"
-            text="Met onze gestructureerde zwemschema’s hoef je niet zelf te bedenken wat voor invulling je geeft aan je zwemmoment. Hierdoor kun jij je volledig
+            text="Met onze gestructureerde zwemschema's hoef je niet meer zelf je zwemtraining te bedenken. Hierdoor kun jij je volledig
                   richten op het uitvoeren van een doelgerichte training zodat jij met een
                   voldaan gevoel het zwembad verlaat, wat je doel met zwemmen
                   ook is!"

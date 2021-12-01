@@ -1,13 +1,19 @@
-function privacyPolicy() {
+function algemeneVoorwaarden() {
   return (
     <section className="bg-grey-light4">
       <div className="px-5 sm:px-8 mx-auto max-w-3xl py-20 lg:py-32">
         <h1 className="text-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-lexend font-extrabold my-5">
-          Privacybeleid Media Modes
+          Algemene Voorwaarden
         </h1>
         <h2 className="text-2xl font-lexend font-extrabold my-5 text-navy-light1">
-          Over ons privacybeleid
+          Inhoudsopgave
         </h2>
+        <h3 className="text-main text-lg font-lexend font-bold">
+         Artikel 1 - Definities
+        </h3>
+        <h3 className="text-main text-lg font-lexend font-bold">
+        Artikel 2 - Identiteit van de ondernemer
+        </h3>
         <p className="text-navy-light1">
           Media Modes geeft veel om uw privacy. Wij verwerken daarom uitsluitend
           gegevens die wij nodig hebben voor (het verbeteren van) onze
@@ -95,29 +101,29 @@ function privacyPolicy() {
           toegestaan.
         </p>
         {/* <h3 className="text-main text-lg font-lexend font-bold my-5">
-          Beoordelingen
-        </h3>
-        <h4 className="text-main text-base font-lexend font-bold mb-2 mt-5">
-          Webwinkelkeur
-        </h4>
-        <p className="text-navy-light1">
-          Voor het afhandelen van een de betalingen in onze webwinkel
-          maken wij gebruik van het platform van Stripe. Stripe verwerkt uw
-          naam, adres en woonplaatsgegevens en uw betaalgegevens zoals uw
-          bankrekening- of creditcardnummer. Stripe heeft passende technische en
-          organisatorische maatregelen genomen om uw persoonsgegevens te
-          beschermen. Stripe behoudt zich het recht voor uw gegevens te
-          gebruiken om de dienstverlening verder te verbeteren en in het kader
-          daarvan (geanonimiseerde) gegevens met derden te delen. Stripe deelt
-          in het geval van een aanvraag voor een uitgestelde betaling
-          (kredietfaciliteit) persoonsgegevens en informatie met betrekking tot
-          uw financiële positie met kredietbeoordelaars. Alle hierboven genoemde
-          waarborgen met betrekking tot de bescherming van uw persoonsgegevens
-          zijn eveneens van toepassing op de onderdelen van Stripe's
-          dienstverlening waarvoor zij derden inschakelen. Stripe bewaart uw
-          gegevens niet langer dan op grond van de wettelijke termijnen is
-          toegestaan
-        </p> */}
+            Beoordelingen
+          </h3>
+          <h4 className="text-main text-base font-lexend font-bold mb-2 mt-5">
+            Webwinkelkeur
+          </h4>
+          <p className="text-navy-light1">
+            Voor het afhandelen van een de betalingen in onze webwinkel
+            maken wij gebruik van het platform van Stripe. Stripe verwerkt uw
+            naam, adres en woonplaatsgegevens en uw betaalgegevens zoals uw
+            bankrekening- of creditcardnummer. Stripe heeft passende technische en
+            organisatorische maatregelen genomen om uw persoonsgegevens te
+            beschermen. Stripe behoudt zich het recht voor uw gegevens te
+            gebruiken om de dienstverlening verder te verbeteren en in het kader
+            daarvan (geanonimiseerde) gegevens met derden te delen. Stripe deelt
+            in het geval van een aanvraag voor een uitgestelde betaling
+            (kredietfaciliteit) persoonsgegevens en informatie met betrekking tot
+            uw financiële positie met kredietbeoordelaars. Alle hierboven genoemde
+            waarborgen met betrekking tot de bescherming van uw persoonsgegevens
+            zijn eveneens van toepassing op de onderdelen van Stripe's
+            dienstverlening waarvoor zij derden inschakelen. Stripe bewaart uw
+            gegevens niet langer dan op grond van de wettelijke termijnen is
+            toegestaan
+          </p> */}
         <h3 className="text-main text-lg font-lexend font-bold mt-10 mb-5">
           Verzenden en logistiek
         </h3>
@@ -150,20 +156,20 @@ function privacyPolicy() {
           doeleinden dan hierboven beschreven.
         </p>
         {/* <h3 className="text-main text-lg font-lexend font-bold mt-10 mb-5">
-          Externe verkoopkanalen
-        </h3>
-        <h4 className="text-main text-base font-lexend font-bold mb-2 mt-5">
-          Bol.com
-        </h4>
-        <p className="text-navy-light1">
-          Wij verkopen (een deel van) onze artikelen via het platform van
-          Bol.com. Als u via dit platform een bestelling plaatst dan deelt
-          Bol.com uw bestel- en persoonsgegevens met ons. Wij gebruiken deze
-          gegevens om uw bestelling af te handelen. Wij gaan vertrouwelijk met
-          uw gegevens om en hebben passende technische en organisatorische
-          maatregelen getroffen om uw gegevens te beschermen tegen verlies en
-          ongeoorloofd gebruik.
-        </p> */}
+            Externe verkoopkanalen
+          </h3>
+          <h4 className="text-main text-base font-lexend font-bold mb-2 mt-5">
+            Bol.com
+          </h4>
+          <p className="text-navy-light1">
+            Wij verkopen (een deel van) onze artikelen via het platform van
+            Bol.com. Als u via dit platform een bestelling plaatst dan deelt
+            Bol.com uw bestel- en persoonsgegevens met ons. Wij gebruiken deze
+            gegevens om uw bestelling af te handelen. Wij gaan vertrouwelijk met
+            uw gegevens om en hebben passende technische en organisatorische
+            maatregelen getroffen om uw gegevens te beschermen tegen verlies en
+            ongeoorloofd gebruik.
+          </p> */}
         <h2 className="text-2xl font-lexend font-extrabold my-5 text-navy-light1">
           Doel van de gegevensverwerking
         </h2>
@@ -351,7 +357,8 @@ function privacyPolicy() {
           Media Modes
         </h3>
         <p className="text-navy-light1">
-          Godfried van Seijstlaan 27 D1 3703BR Zeist Nederland T 06 19 89 90 10 E info@soloswim.nl
+          Godfried van Seijstlaan 27 D1 3703BR Zeist Nederland T 06 19 89 90 10
+          E info@soloswim.nl
         </p>
         <h3 className="text-main text-lg font-lexend font-bold mt-10 mb-5">
           Contactpersoon voor privacyzaken
@@ -362,4 +369,4 @@ function privacyPolicy() {
   );
 }
 
-export default privacyPolicy;
+export default algemeneVoorwaarden;
