@@ -31,7 +31,7 @@ async function handler(req, res) {
           email: `${order.email}`,
         },
         bcc: {
-          email: "l.c.vanroomen@gmail.com", //todo: replace for info@soloswim.nl
+          email: "info@soloswim.nl",
         },
         dynamic_template_data: {
           subject: `Bedankt voor je bestelling ${order.name}`,
