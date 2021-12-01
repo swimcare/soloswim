@@ -741,71 +741,56 @@ export default function Home() {
             </div>
           </div>
           {/* Over ons card */}
-          <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
-            <Slide left>
-              <div>
-                <div className="lg:hidden mx-5 leading-none text-zero">
-                  <Image
-                    className="rounded-t-xl lg:rounded-none"
-                    src="/images/home/oprichters-soloswim.png"
-                    width={996}
-                    height={772}
-                    alt="Oprichters soloswim"
-                  />
+          <Slide left>
+            <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
+              <div className="lg:hidden mx-5 leading-none text-zero">
+                <Image
+                  className="rounded-t-xl lg:rounded-none"
+                  src="/images/home/oprichters-soloswim.png"
+                  width={996}
+                  height={772}
+                  alt="Oprichters soloswim"
+                />
+              </div>
+              <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
+                <Image
+                  className="rounded-t-xl sm:rounded-none"
+                  src="/images/home/oprichters-soloswim.png"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Oprichters soloswim"
+                />
+              </div>
+              <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
+                <div>
+                  <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
+                    Handgemaakt in Nederland door zwemmers
+                  </h3>
                 </div>
-                <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
-                  <Image
-                    className="rounded-t-xl sm:rounded-none"
-                    src="/images/home/oprichters-soloswim.png"
-                    layout="fill"
-                    objectFit="cover"
-                    alt="Oprichters soloswim"
-                  />
+                <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
+                  <p className="">
+                    Papier en water gaan niet zo goed samen, niet gek dat onze
+                    handgeschreven zwemtrainingen in de prullenbak terecht
+                    kwamen. Zonde vonden we! Met een duidelijke missie gingen we
+                    aan de slag en ruim een halfjaar later was Soloswim geboren!
+                  </p>
+                  <p className="mt-4">
+                    We maken al onze bundels zelf met veel zorg; van het
+                    ontwikkelen van de trainingen tot het uitprinten en
+                    plastificeren van de bundels. Made in the Netherlands, daar
+                    zijn we trots op! Houd ons in de gaten want we zijn continu
+                    bezig met het uitbreiden van onze zwemschema’s. Zo komt er
+                    binnenkort een bundel voor recreanten (swimfit) en een
+                    bundel met verschillende slagen uit. Voor ieder wat wils,
+                    dat vinden we belangrijk!
+                  </p>
                 </div>
-                <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
-                  <div>
-                    <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
-                      Handgemaakt in Nederland door zwemmers
-                    </h3>
-                  </div>
-                  <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
-                    <p className="">
-                      Papier en water gaan niet zo goed samen, niet gek dat onze
-                      handgeschreven zwemtrainingen in de prullenbak terecht
-                      kwamen. Zonde vonden we! Met een duidelijke missie gingen
-                      we aan de slag en ruim een halfjaar later was Soloswim
-                      geboren!
-                    </p>
-                    <p className="mt-4">
-                      We maken al onze bundels zelf met veel zorg; van het
-                      ontwikkelen van de trainingen tot het uitprinten en
-                      plastificeren van de bundels. Made in the Netherlands,
-                      daar zijn we trots op! Houd ons in de gaten want we zijn
-                      continu bezig met het uitbreiden van onze zwemschema’s. Zo
-                      komt er binnenkort een bundel voor recreanten (swimfit) en
-                      een bundel met verschillende slagen uit. Voor ieder wat
-                      wils, dat vinden we belangrijk!
-                    </p>
-                  </div>
-                  <div className="lg:inline-block hidden my-6">
-                    <Link href="/over-ons">
-                      <a>
-                        <button
-                          role="button"
-                          className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                        >
-                          Meer over ons
-                        </button>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-                <div className="inline-block lg:hidden mx-auto my-6">
-                  <Link href="/producten">
+                <div className="lg:inline-block hidden my-6">
+                  <Link href="/over-ons">
                     <a>
                       <button
                         role="button"
-                        className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                        className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
                       >
                         Meer over ons
                       </button>
@@ -813,8 +798,20 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </Slide>
-          </div>
+              <div className="inline-block lg:hidden mx-auto my-6">
+                <Link href="/producten">
+                  <a>
+                    <button
+                      role="button"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                    >
+                      Meer over ons
+                    </button>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </Slide>
           {/* Einde over on card */}
           <div className="transform rotate-180">
             <WaveExtendedSvg fill="#fff" />
