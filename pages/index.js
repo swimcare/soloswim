@@ -139,7 +139,7 @@ export default function Home() {
                 Soloswim introduceert:
               </h3>
             </div>
-            <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none overflow-x-hidden">
+            <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
               <Slide left>
                 <h1 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
                   Waterproof Zwemschema's
@@ -149,7 +149,7 @@ export default function Home() {
                 </h2>
               </Slide>
             </div>
-            <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)] overflow-x-hidden">
+            <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
               <Bounce left>
                 <Link href="/producten">
                   <a>
@@ -741,7 +741,7 @@ export default function Home() {
             </div>
           </div>
           {/* Over ons card */}
-          <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl overflow-x-hidden">
+          <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
             <Slide left>
               <div>
                 <div className="lg:hidden mx-5 leading-none text-zero">
