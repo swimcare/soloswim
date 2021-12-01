@@ -139,7 +139,7 @@ export default function Home() {
                 Soloswim introduceert:
               </h3>
             </div>
-            <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
+            <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none overflow-x-hidden">
               <Slide left>
                 <h1 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
                   Waterproof Zwemschema's
@@ -149,7 +149,7 @@ export default function Home() {
                 </h2>
               </Slide>
             </div>
-            <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
+            <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)] overflow-x-hidden">
               <Bounce left>
                 <Link href="/producten">
                   <a>
@@ -230,7 +230,7 @@ export default function Home() {
             </div>
           </div>
 
-          <ul className=" transform -translate-y-36 sm:translate-y-0 -mb-36 sm:mb-0 sm:w-full xl:ml-[calc((((133%)-1280px)/2)+20px+1rem)]">
+          <ul className=" transform -translate-y-36 sm:translate-y-0 -mb-36 sm:mb-0 sm:w-full xl:ml-[calc((((133%)-1280px)/2)+20px+1rem)] overflow-x-hidden">
             <Slide left cascade>
               <div>
                 <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
@@ -251,8 +251,8 @@ export default function Home() {
                       Verschillende thema’s
                     </h4>
                     <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                      Van techniek-, kracht- of duur trainingen tot swimfit (coming soon) voor
-                      ontspanning
+                      Van techniek-, kracht- of duur trainingen tot swimfit
+                      (coming soon) voor ontspanning
                     </p>
                   </div>
                 </li>
@@ -276,7 +276,7 @@ export default function Home() {
         </div>
         {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-10"> */}
 
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32">
+        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32 overflow-x-hidden">
           <Bounce left>
             <Link href="/producten">
               <a>
@@ -480,7 +480,7 @@ export default function Home() {
             </h2>
           </Fade>
         </div>
-        <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:py-8">
+        <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:py-8 overflow-x-hidden">
           <Slide left>
             <FullWidthImageCard
               img="/images/home/waarom-soloswim-1.png"
@@ -741,56 +741,71 @@ export default function Home() {
             </div>
           </div>
           {/* Over ons card */}
-          <Slide left>
-            <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
-              <div className="lg:hidden mx-5 leading-none text-zero">
-                <Image
-                  className="rounded-t-xl lg:rounded-none"
-                  src="/images/home/oprichters-soloswim.png"
-                  width={996}
-                  height={772}
-                  alt="Oprichters soloswim"
-                />
-              </div>
-              <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
-                <Image
-                  className="rounded-t-xl sm:rounded-none"
-                  src="/images/home/oprichters-soloswim.png"
-                  layout="fill"
-                  objectFit="cover"
-                  alt="Oprichters soloswim"
-                />
-              </div>
-              <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
-                <div>
-                  <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
-                    Handgemaakt in Nederland door zwemmers
-                  </h3>
+          <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl overflow-x-hidden">
+            <Slide left>
+              <div>
+                <div className="lg:hidden mx-5 leading-none text-zero">
+                  <Image
+                    className="rounded-t-xl lg:rounded-none"
+                    src="/images/home/oprichters-soloswim.png"
+                    width={996}
+                    height={772}
+                    alt="Oprichters soloswim"
+                  />
                 </div>
-                <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
-                  <p className="">
-                    Papier en water gaan niet zo goed samen, niet gek dat onze
-                    handgeschreven zwemtrainingen in de prullenbak terecht
-                    kwamen. Zonde vonden we! Met een duidelijke missie gingen we
-                    aan de slag en ruim een halfjaar later was Soloswim geboren!
-                  </p>
-                  <p className="mt-4">
-                    We maken al onze bundels zelf met veel zorg; van het
-                    ontwikkelen van de trainingen tot het uitprinten en
-                    plastificeren van de bundels. Made in the Netherlands, daar
-                    zijn we trots op! Houd ons in de gaten want we zijn continu
-                    bezig met het uitbreiden van onze zwemschema’s. Zo komt er
-                    binnenkort een bundel voor recreanten (swimfit) en een
-                    bundel met verschillende slagen uit. Voor ieder wat wils,
-                    dat vinden we belangrijk!
-                  </p>
+                <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
+                  <Image
+                    className="rounded-t-xl sm:rounded-none"
+                    src="/images/home/oprichters-soloswim.png"
+                    layout="fill"
+                    objectFit="cover"
+                    alt="Oprichters soloswim"
+                  />
                 </div>
-                <div className="lg:inline-block hidden my-6">
-                  <Link href="/over-ons">
+                <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
+                  <div>
+                    <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
+                      Handgemaakt in Nederland door zwemmers
+                    </h3>
+                  </div>
+                  <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
+                    <p className="">
+                      Papier en water gaan niet zo goed samen, niet gek dat onze
+                      handgeschreven zwemtrainingen in de prullenbak terecht
+                      kwamen. Zonde vonden we! Met een duidelijke missie gingen
+                      we aan de slag en ruim een halfjaar later was Soloswim
+                      geboren!
+                    </p>
+                    <p className="mt-4">
+                      We maken al onze bundels zelf met veel zorg; van het
+                      ontwikkelen van de trainingen tot het uitprinten en
+                      plastificeren van de bundels. Made in the Netherlands,
+                      daar zijn we trots op! Houd ons in de gaten want we zijn
+                      continu bezig met het uitbreiden van onze zwemschema’s. Zo
+                      komt er binnenkort een bundel voor recreanten (swimfit) en
+                      een bundel met verschillende slagen uit. Voor ieder wat
+                      wils, dat vinden we belangrijk!
+                    </p>
+                  </div>
+                  <div className="lg:inline-block hidden my-6">
+                    <Link href="/over-ons">
+                      <a>
+                        <button
+                          role="button"
+                          className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                        >
+                          Meer over ons
+                        </button>
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="inline-block lg:hidden mx-auto my-6">
+                  <Link href="/producten">
                     <a>
                       <button
                         role="button"
-                        className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                        className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
                       >
                         Meer over ons
                       </button>
@@ -798,20 +813,8 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="inline-block lg:hidden mx-auto my-6">
-                <Link href="/producten">
-                  <a>
-                    <button
-                      role="button"
-                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                    >
-                      Meer over ons
-                    </button>
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </Slide>
+            </Slide>
+          </div>
           {/* Einde over on card */}
           <div className="transform rotate-180">
             <WaveExtendedSvg fill="#fff" />
