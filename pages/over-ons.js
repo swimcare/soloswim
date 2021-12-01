@@ -68,7 +68,7 @@ function overOns() {
             <div className="text-base leading-relaxed text-navy-light1 my-3 lg:leading-normal">
               <p>
                 Sinds de dag dat we elkaar ontmoet hebben is zwemmen een
-                belangrijk onderdeel in ons leven. We hebben elkaar ontmoet ik
+                belangrijk onderdeel in ons leven. We hebben elkaar ontmoet in
                 het zwembad (ongeveer zoals op de foto) en zijn nu
                 getrouwd met golven gegraveerd in onze trouwringen. En dat is
                 niet voor niets, we zijn allebei gek op zwemmen!
