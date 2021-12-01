@@ -184,7 +184,7 @@ export default function Home() {
         <div className="mx-5 sm:mx-0 lg:w-3/4">
           <WaveSvg fill="#fff" />
         </div>
-        <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row lg:w-3/4 relative overflow-x-hidden">
+        <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row lg:w-3/4 relative">
           <div className="transform -translate-y-40 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 lg:translate-x-1/2 sm:w-52 md:w-72 md:mr-10 lg:mr-0 lg:w-auto">
             <div
               className={`${
