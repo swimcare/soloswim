@@ -305,12 +305,13 @@ export default function Home() {
             </h3>
           </Fade>
           <div className="sm:flex sm:flex-row my-10 max-w-5xl mx-auto">
-            <div className="hidden sm:block my-auto transform sm:translate-x-5 z-20">
+            <div className="hidden sm:block my-auto transform translate-x-5 z-20 w-1/2 md:w-5/12 h-[500px]">
               <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/schema1.png"
-                  width={350}
-                  height={476}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                   alt="zwemschema"
                   priority
                 />
@@ -318,8 +319,9 @@ export default function Home() {
               <div className={`${productSlide === 1 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/schema2.png"
-                  width={350}
-                  height={476}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                   alt="zwemschema"
                   priority
                 />
@@ -327,8 +329,9 @@ export default function Home() {
               <div className={`${productSlide === 2 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/schema3.png"
-                  width={350}
-                  height={476}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                   alt="zwemschema"
                   priority
                 />
@@ -336,8 +339,9 @@ export default function Home() {
               <div className={`${productSlide === 3 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/schema4.png"
-                  width={350}
-                  height={476}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                   alt="zwemschema"
                   priority
                 />
@@ -345,8 +349,9 @@ export default function Home() {
               <div className={`${productSlide === 4 ? "block" : "hidden"}`}>
                 <Image
                   src="/images/home/schema5.png"
-                  width={350}
-                  height={476}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                   alt="zwemschema"
                   priority
                 />
@@ -354,7 +359,7 @@ export default function Home() {
             </div>
             <div className="flex-grow my-auto transform sm:-translate-x-5">
               <div className="bg-grey-light4 rounded-2xl sm:rounded-l-none p-7 sm:py-2 lg:pr-24 flex flex-col">
-                <div className="text-center sm:hidden mx-16">
+                <div className="text-center sm:hidden w-full max-w-xs">
                   <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
                     <Image
                       src="/images/home/schema1.png"
