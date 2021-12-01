@@ -30,17 +30,17 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/privacy-policy">
                   <a className="hover:underline">Privacy Policy</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/algemene-voorwaarden">
                   <a className="hover:underline">Algemene voorwaarden</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/verzending-en-retourneren">
                   <a className="hover:underline">
                     Verzending &amp; retourneren
                   </a>

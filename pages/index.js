@@ -251,7 +251,7 @@ export default function Home() {
                       Verschillende thema’s
                     </h4>
                     <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                      Van techniek-, kracht- of duur trainingen tot swimfit voor
+                      Van techniek-, kracht- of duur trainingen tot swimfit (coming soon) voor
                       ontspanning
                     </p>
                   </div>
