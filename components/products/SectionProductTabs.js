@@ -123,7 +123,7 @@ function SectionProductTabs({ productData }) {
                   />
                   {productData.features && (
                     <div>
-                      <ul className="list-disc text-tiny text-navy-light1 leading-8 list-inside">
+                      <ul className="list-disc list-outside text-tiny text-navy-light1 leading-8">
                         {mappedBulletpoints()}
                       </ul>
                     </div>
