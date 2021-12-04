@@ -1,6 +1,7 @@
 import { MailIcon } from "@heroicons/react/solid";
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
-import { useState, useRef } from "react";
+import { useState, useRef, Fragment } from "react";
 import * as ga from "../lib/ga/index";
 
 function contact() {
@@ -63,6 +64,37 @@ function contact() {
   };
 
   return (
+    <Fragment>
+    <NextSeo
+        title="Soloswim | Contact"
+        description="Neem contact op met Soloswim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/images/favicons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "/images/favicons/apple-touch-icon.png",
+          },
+        ]}
+        openGraph={{
+          type: "website",
+          url: "https://www.soloswim.nl",
+          title: "Soloswim | Waterproof zwemschema's",
+          description: "Neem contact op met Soloswim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
+          locale: "nl_NL",
+          site_name: "Soloswim | Contact",
+          images: [
+            {
+              url: "/images/home/header-OG.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Soloswim",
+            },
+          ],
+        }}
+      />
     <main>
       <section className="bg-grey-light4">
         <div className="px-5 sm:px-8 mx-auto max-w-3xl py-20 lg:py-32 text-center">
@@ -146,7 +178,7 @@ function contact() {
           </form>
         </div>
       </section>
-    </main>
+    </main></Fragment>
   );
 }
 

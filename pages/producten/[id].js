@@ -9,6 +9,7 @@ import SectionProductTabs from "../../components/products/SectionProductTabs";
 import SectionNiveauInfo from "../../components/products/SectionNiveauInfo";
 import WinkelwagenModal from "../../components/products/WinkelwagenModal";
 import * as ga from "../../lib/ga/index";
+import { NextSeo } from "next-seo";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -66,9 +67,36 @@ export default function Zwemschema({ productData }) {
 
   return (
     <Fragment>
-      <Head>
-        <title>{productData.title}</title>
-      </Head>
+      <NextSeo
+        title={`Soloswim | ${productData.title}`}
+        description={productData.description}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/images/favicons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "/images/favicons/apple-touch-icon.png",
+          },
+        ]}
+        openGraph={{
+          type: "website",
+          url: "https://www.soloswim.nl",
+          title: "Soloswim | " + productData.title,
+          description: productData.description,
+          locale: "nl_NL",
+          site_name: "Soloswim | Waterproof zwemschema's",
+          images: [
+            {
+              url: "/images/home/header-OG.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Soloswim",
+            },
+          ],
+        }}
+      />
 
       <main>
         {/* WINKELWAGEN MODAL */}

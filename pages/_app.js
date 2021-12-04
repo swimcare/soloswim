@@ -7,6 +7,7 @@ import "../styles/globals.css";
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as ga from '../lib/ga'
+import { DefaultSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -28,6 +29,37 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
+      <DefaultSeo
+         title="Soloswim | Waterproof zwemschema's"
+         description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
+         additionalLinkTags={[
+           {
+             rel: "icon",
+             href: "/images/favicons/favicon.ico",
+           },
+           {
+             rel: "apple-touch-icon",
+             href: "/images/favicons/apple-touch-icon.png",
+           },
+         ]}
+         openGraph={{
+          type: "website",
+          url: "https://www.soloswim.nl",
+          title: "Soloswim | Waterproof zwemschema's",
+          description:
+            "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
+          locale: "nl_NL",
+          site_name: "Soloswim | Waterproof zwemschema's",
+          images: [
+            {
+              url: "/images/home/header-OG.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Soloswim",
+            },
+          ],
+        }}
+      />
       <Header />
       <Component {...pageProps} />
       <Footer />
