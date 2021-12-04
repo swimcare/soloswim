@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as ga from '../lib/ga'
 import { DefaultSeo } from "next-seo";
+import ScrollToTop from "../components/general/ScrollToTop";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -62,6 +63,7 @@ function MyApp({ Component, pageProps }) {
       />
       <Header />
       <Component {...pageProps} />
+      <ScrollToTop />
       <Footer />
     </Provider>
   );
