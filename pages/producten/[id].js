@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Fragment, useState } from "react";
 import { getAllProductIds, getproductData } from "../../lib/products";
 import { useDispatch } from "react-redux";
