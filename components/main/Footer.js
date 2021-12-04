@@ -99,12 +99,12 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center mx-5">
           <p className="text-xs text-navy-light1 italic">
-            Alle foto's zijn gemaakt in Zwembad Brandenburg in Bilthoven en Zwembad De Krommerijn in Utrecht
+            <i>Alle foto's zijn gemaakt in Zwembad Brandenburg in Bilthoven en Zwembad De Krommerijn in Utrecht</i>
           </p>
         </div>
-        <div className="text-center py-5">
+        <div className="text-center py-5 mx-5">
           <p className="text-tiny text-navy-light1">
             © 2021 Media Modes | KVK: 75986272 | BTW: NL860468379B01
           </p>
