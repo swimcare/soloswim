@@ -8,6 +8,7 @@ import SectionProductDescription from "../../components/products/SectionProductD
 import SectionProductTabs from "../../components/products/SectionProductTabs";
 import SectionNiveauInfo from "../../components/products/SectionNiveauInfo";
 import WinkelwagenModal from "../../components/products/WinkelwagenModal";
+import * as ga from "../../lib/ga/index";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -35,6 +36,8 @@ export default function Zwemschema({ productData }) {
     };
     // Sending the product as an action to the REDUX store... the basket slice
     dispatch(addToBasket(filteredProductData));
+    // Google analytics event
+    addToCartGA(product);
     // opening the winkelwagen modal
     toggleModal();
   };
@@ -47,6 +50,18 @@ export default function Zwemschema({ productData }) {
 
   const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
+  };
+
+  const addToCartGA = (product) => {
+    ga.event({
+      action: "add_to_cart",
+      params: {
+        id: product.product_id,
+        name: product.title,
+        type: product.type,
+        price: product.price,
+      },
+    });
   };
 
   return (

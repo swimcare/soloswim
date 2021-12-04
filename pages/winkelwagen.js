@@ -5,6 +5,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Link from "next/link";
 import NumberFormat from "react-number-format";
+import * as ga from "../lib/ga/index";
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -17,7 +18,19 @@ function winkelwagen() {
   const total = useSelector(selectTotal);
   const shipping = 3.95;
 
+  // Google analytics event
+  const checkoutGA = () => {
+    ga.event({
+      action: "begin_checkout",
+      params: {
+        price: total,
+        shipping: shipping,
+      },
+    });
+  };
+
   const createCheckoutSession = async () => {
+    checkoutGA();
     const stripe = await stripePromise;
 
     // Call the backend to create a checkout session...

@@ -1,6 +1,7 @@
 import { MailIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { useState, useRef } from "react";
+import * as ga from "../lib/ga/index";
 
 function contact() {
   const [name, setName] = useState("");
@@ -14,6 +15,19 @@ function contact() {
 
   const router = useRouter();
 
+  // Google analytics event
+  const contactGA = (data) => {
+    ga.event({
+      action: "contact_form",
+      params: {
+        name: data.name,
+        email: data.email,
+        tel: data.tel,
+        onderwerp: data.onderwerp,
+        message: data.message,
+      },
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +38,7 @@ function contact() {
       onderwerp,
       message,
     };
-    console.log(data);
+    contactGA(data);
     fetch("/api/contact", {
       method: "post",
       body: JSON.stringify(data),
