@@ -101,7 +101,7 @@ function SectionFaq() {
                     gevorderden). Op de productpagina kun je vinden voor welk
                     niveau de bundel geschikt is en geven we handvaten welk
                     niveau je moet kiezen. Heb je geen ambitie om de borstcrawl
-                    te leren zwemmen, zwem je baantjes puur om te bewegen en
+                    te leren zwemmen, maar zwem je baantjes puur om te bewegen en
                     voor je plezier? Houd ons in de gaten want binnenkort
                     verschijnt de nieuwe bundel genaamd “Swimfit” in ons
                     assortiment, met heel veel leuke zwemoefeningen voor
