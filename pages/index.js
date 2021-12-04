@@ -1,6 +1,6 @@
 import { CheckIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -16,6 +16,7 @@ import Link from "next/link";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
+import { NextSeo } from "next-seo";
 
 export default function Home() {
   const [productSlide, setCurrentSlide] = useState(0);
@@ -92,6 +93,38 @@ export default function Home() {
   };
 
   return (
+    <Fragment>
+    <NextSeo
+        title="Soloswim | Waterproof zwemschema's"
+        description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/images/favicons/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "/images/favicons/apple-touch-icon.png",
+          },
+        ]}
+        openGraph={{
+          type: "website",
+          url: "https://www.soloswim.nl",
+          title: "Soloswim | Waterproof zwemschema's",
+          description:
+            "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
+          locale: "nl_NL",
+          site_name: "Soloswim | Waterproof zwemschema's",
+          images: [
+            {
+              url: "/images/home/header-OG.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Soloswim",
+            },
+          ],
+        }}
+      />
     <main>
       {/* HERO */}
       <section className="h-screen-navbar transform translate-y-0">
@@ -877,5 +910,6 @@ export default function Home() {
           </div>
         </section> */}
     </main>
+    </Fragment>
   );
 }
