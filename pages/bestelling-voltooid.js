@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+import { Fragment } from "react";
 
 
 function bestellingVoltooid() {
