@@ -909,7 +909,7 @@ export default function Home() {
               />
               <SimpleIconCard
                 icon="/images/home/waarom-zwemmen6.png"
-                title="Blessurevrij sporten"
+                title="Goed voor je geest"
                 text="Rustig zwemmen is ontspannend en stressverlagend. Lever je meer inspanning dan wordt zwemmen meditatief omdat er geen ruimte is voor overbodige gedachten."
               />
             </div>
