@@ -43,7 +43,7 @@ function algemeneVoorwaarden() {
             <p>
               <br />{" "}
             </p>
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 <strong>Bedenktijd:</strong>&nbsp;de termijn waarbinnen de
                 consument gebruik kan maken van zijn herroepingsrecht;
@@ -131,7 +131,7 @@ Artikel 2 - Identiteit van de ondernemer</h3>
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
 Artikel 3 - Toepasselijkheid</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 Deze algemene voorwaarden zijn van toepassing op elk aanbod van
                 de ondernemer en op elke tot stand gekomen overeenkomst op
@@ -198,7 +198,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 4 - Het aanbod</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 Indien een aanbod een beperkte geldigheidsduur heeft of onder
                 voorwaarden geschiedt, wordt dit nadrukkelijk in het aanbod
@@ -242,7 +242,7 @@ Artikel 3 - Toepasselijkheid</h3>
                 <br />{" "}
               </li>
 
-              <ol className="list-disc list-inside">
+              <ol className="list-disc list-outside ml-5">
                 <li className="my-5">de prijs inclusief belastingen;</li>
 
                 <li className="my-5">de eventuele kosten van verzending;</li>
@@ -305,7 +305,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 5 - De overeenkomst</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 De overeenkomst komt, onder voorbehoud van het bepaalde in lid
                 4, tot stand op het moment van aanvaarding door de consument van
@@ -348,7 +348,7 @@ Artikel 3 - Toepasselijkheid</h3>
                 <br />{" "}
               </li>
 
-              <ol className="list-disc list-inside">
+              <ol className="list-disc list-outside ml-5">
                 <li className="my-5">
                   het bezoekadres van de vestiging van de ondernemer waar de
                   consument met klachten terecht kan;
@@ -379,7 +379,7 @@ Artikel 3 - Toepasselijkheid</h3>
               </ol>
             </ol>
 
-            <ol className="list-decimal" start="6">
+            <ol className="list-decimal list-outside ml-5" start="6">
               <li className="my-5">
                 In geval van een duurtransactie is de bepaling in het vorige lid
                 slechts van toepassing op de eerste levering.
@@ -400,7 +400,7 @@ Artikel 3 - Toepasselijkheid</h3>
             <p>
               <br />{" "}
             </p>
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 Bij de aankoop van producten heeft de consument de mogelijkheid
                 de overeenkomst zonder opgave van redenen te ontbinden gedurende
@@ -449,7 +449,7 @@ Artikel 3 - Toepasselijkheid</h3>
             <p>
               <br />{" "}
             </p>
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 Bij levering van diensten heeft de consument de mogelijkheid de
                 overeenkomst zonder opgave van redenen te ontbinden gedurende
@@ -467,7 +467,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 7 - Kosten in geval van herroeping</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 Indien de consument gebruik maakt van zijn herroepingsrecht,
                 komen ten hoogste de kosten van terugzending voor zijn rekening.
@@ -501,7 +501,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 8 - Uitsluiting herroepingsrecht</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 De ondernemer kan het herroepingsrecht van de consument
                 uitsluiten voor producten zoals omschreven in lid 2 en 3. De
@@ -516,7 +516,7 @@ Artikel 3 - Toepasselijkheid</h3>
                 <br />{" "}
               </li>
 
-              <ol className="list-disc list-inside">
+              <ol className="list-disc list-outside ml-5">
                 <li className="my-5">
                   die door de ondernemer tot stand zijn aangebracht
                   overeenkomstig specificaties van de consument;
@@ -547,14 +547,14 @@ Artikel 3 - Toepasselijkheid</h3>
               </ol>
             </ol>
 
-            <ol className="list-decimal" start="3">
+            <ol className="list-decimal list-outside ml-5" start="3">
               <li className="my-5">
                 Uitsluiting van het herroepingsrecht is slechts mogelijk voor
                 diensten:
                 <br />{" "}
               </li>
 
-              <ol className="list-disc list-inside">
+              <ol className="list-disc list-outside ml-5">
                 <li className="my-5">
                   betreffende logies, vervoer, restaurantbedrijf of
                   vrijetijdsbesteding te verrichten op een bepaalde datum of
@@ -573,7 +573,7 @@ Artikel 3 - Toepasselijkheid</h3>
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 9 - De prijs</h3>
 
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 De in het aanbod van producten of diensten genoemde prijzen zijn
                 inclusief btw.
@@ -590,7 +590,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 10 - Conformiteit en garantie</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 De ondernemer staat er voor in dat de producten en/of diensten
                 voldoen aan de overeenkomst, de in het aanbod vermelde
@@ -630,7 +630,7 @@ Artikel 3 - Toepasselijkheid</h3>
                 <br />{" "}
               </li>
 
-              <ol className="list-disc list-inside">
+              <ol className="list-disc list-outside ml-5">
                 <li className="my-5">
                   de consument de geleverde producten zelf heeft gerepareerd
                   en/of bewerkt of door derden heeft laten repareren en/of
@@ -655,7 +655,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 11 - Levering en uitvoering</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 De ondernemer zal de grootst mogelijke zorgvuldigheid in acht
                 nemen bij het in ontvangst nemen en bij de uitvoering van
@@ -718,7 +718,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 12 - Betaling</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 Voor zover niet anders is overeengekomen, dienen de door de
                 consument verschuldigde bedragen te worden voldaan binnen 7
@@ -743,7 +743,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 13 - Klachtenregeling</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 De ondernemer beschikt over een voldoende bekend gemaakte
                 klachtenprocedure en behandelt de klacht overeenkomstig deze
@@ -791,7 +791,7 @@ Artikel 3 - Toepasselijkheid</h3>
 
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 14 - Geschillen</h3>
 
-            <ol className="list-decimal">
+            <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
                 Op overeenkomsten tussen de ondernemer en de consument waarop
                 deze algemene voorwaarden betrekking hebben, is uitsluitend
