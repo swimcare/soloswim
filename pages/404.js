@@ -9,24 +9,19 @@ function Custom404() {
       <NextSeo noindex={true} />
       <main>
         <section className="bg-grey-light4">
-          <div className="px-5 max-w-3xl mx-auto text-center py-10">
-            <div className="px-20 max-w-sm mx-auto">
-              <Image
-                src="/images/bestelling-mislukt/alert.png"
-                width={512}
-                height={512}
-                alt="alert"
-              />
-            </div>
+          <div className="px-5 max-w-4xl mx-auto text-center py-10">
+              <div className="max-w-3xl mx-auto">
+              <Image src="/images/404.png" width={1024} height={512} alt="404" />
+
+              </div>
+
             <div className="my-5 sm:my-10">
               <h1 className="font-lexend my-2 text-main text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
                 Pagina niet gevonden
               </h1>
               <p className="">
-                Het lijkt erop dat de pagina er vandoor is gezwommen!
-              </p>
-              <p className="italic text-sm my-2">
-                PS: Als je een QR code hebt gescand, nog even geduld, in de loop van januari gaan de QR codes werken!
+                Het lijkt erop dat de pagina een valse start heeft gemaakt en er
+                vandoor is gezwommen.
               </p>
             </div>
 
@@ -46,6 +41,10 @@ function Custom404() {
               <Link href="/contact">
                 <a className="hover:underline">Neem contact op</a>
               </Link>
+              <p className="italic text-sm my-5 md:hidden">
+                PS: Als je een QR code hebt gescand, nog even geduld, in de loop
+                van januari gaan de QR codes werken!
+              </p>
             </div>
           </div>
         </section>
