@@ -10,7 +10,7 @@ features: [
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven zwemoefeningen",
-    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf januari 2022)",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf begin maart 2022)",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor beginners, semi-gevorderden of
     gevorderden",

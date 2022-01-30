@@ -11,7 +11,7 @@ features: [
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven (technische) zwemoefeningen",
-    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf januari 2022)",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf begin maart 2022)",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor een 25 of 50 meter bad",
   ]
