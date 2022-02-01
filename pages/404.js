@@ -43,7 +43,7 @@ function Custom404() {
               </Link>
               <p className="italic text-sm my-5 md:hidden">
                 PS: Als je een QR code hebt gescand, nog even geduld, in de loop
-                van januari gaan de QR codes werken!
+                van maart gaan de QR codes werken!
               </p>
             </div>
           </div>
