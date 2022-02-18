@@ -52,27 +52,27 @@ async function handler(req, res) {
     ],
   };
 
-  console.log(data.personalizations[0].dynamic_template_data.products);
-
   // Checking to see whether line2 value is equal to null
   if (data.personalizations[0].dynamic_template_data.line2 === "null") {
     delete data.personalizations[0].dynamic_template_data.line2;
   }
 
-  console.log(data.personalizations[0].dynamic_template_data);
-
-   mail
+  mail
     .send(data)
     .then((response) => {
       if (response[0].statusCode == "202") {
-        res.status(200).end("ok");
+        res.status(200).json({ message: "ok" });
       } else {
-        res.status(response[0].statusCode).end();
+        res
+          .status(response[0].statusCode)
+          .json({ message: "error", statusCode: response[0].statusCode });
       }
     })
     .catch((error) => {
       console.log(error);
-      res.status(response[0].statusCode).end();
+      res
+        .status(response[0].statusCode)
+        .json({ message: "error", error: error });
     });
 }
 
