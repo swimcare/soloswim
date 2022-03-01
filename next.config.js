@@ -19,17 +19,12 @@ module.exports = {
       {
         source: "/review",
         destination: "https://g.page/r/CRxat-X_lZvOEAg/review",
-        permanent: false,
-      },
-      {
-        source: "/BCK1B1",
-        destination: "https://www.google.nl",
-        permanent: false,
+        permanent: true,
       },
       {
         source: "/BCK1G1",
-        destination: "https://www.laurensvanroomen.nl",
-        permanent: false,
+        destination: "https://vimeo.com/681927971",
+        permanent: true,
       },
     ];
   },
