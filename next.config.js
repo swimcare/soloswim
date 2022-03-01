@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         source: "/BCK1G1",
-        destination: "https://vimeo.com/681927971",
+        destination: "https://vimeo.com/681927971/a4a1b7ccb0",
         permanent: true,
       },
     ];
