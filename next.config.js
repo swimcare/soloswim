@@ -124,6 +124,57 @@ module.exports = {
         destination: "https://vimeo.com/684744603/328f1deb15",
         permanent: true,
       },
+      // Borstcrawl Gevorderden Techniek Editie 1
+      {
+        source: "/BCT1G1",
+        destination: "https://vimeo.com/683946574/c2035d25b2",
+        permanent: true,
+      },
+      {
+        source: "/BCT2G1",
+        destination: "https://vimeo.com/683947157/f6b5b1ae69",
+        permanent: true,
+      },
+      {
+        source: "/BCT3G1",
+        destination: "https://vimeo.com/683947525/143e1c6fae",
+        permanent: true,
+      },
+      {
+        source: "/BCT4G1",
+        destination: "https://vimeo.com/683947897/a19ccc9cea",
+        permanent: true,
+      },
+      {
+        source: "/BCT5G1",
+        destination: "https://vimeo.com/683948400/3da329ad20",
+        permanent: true,
+      },
+      {
+        source: "/BCT6G1",
+        destination: "https://vimeo.com/683948723/ef823d87b7",
+        permanent: true,
+      },
+      {
+        source: "/BCT7G1",
+        destination: "https://vimeo.com/683949029/1e20ecf429",
+        permanent: true,
+      },
+      {
+        source: "/BCT8G1",
+        destination: "https://vimeo.com/684741209/cbe18a9ef7",
+        permanent: true,
+      },
+      {
+        source: "/BCT9G1",
+        destination: "https://vimeo.com/684925352/bb4904b506",
+        permanent: true,
+      },
+      {
+        source: "/BCT10G1",
+        destination: "https://vimeo.com/684740918/8a45a8e11f",
+        permanent: true,
+      },
     ];
   },
 };
