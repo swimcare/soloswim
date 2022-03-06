@@ -226,6 +226,57 @@ module.exports = {
         destination: "https://vimeo.com/684742612/1d21097843",
         permanent: true,
       },
+      //borstcrawl techniek semi-gevorderden
+      {
+        source: "/bct1s1",
+        destination: "https://vimeo.com/685192421/d0ce0c68af",
+        permanent: true,
+      },
+      {
+        source: "/bct1s2",
+        destination: "https://vimeo.com/685192058/651d9e807f",
+        permanent: true,
+      },
+      // {
+      //   source: "/bct1s3",
+      //   destination: "https://vimeo.com/683947525/143e1c6fae",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/bct1s4",
+      //   destination: "https://vimeo.com/683947897/a19ccc9cea",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/bct1s5",
+      //   destination: "https://vimeo.com/683948400/3da329ad20",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/bct1s6",
+      //   destination: "https://vimeo.com/683948723/ef823d87b7",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/bct1s7",
+      //   destination: "https://vimeo.com/683949029/1e20ecf429",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/bct1s8",
+      //   destination: "https://vimeo.com/684741209/cbe18a9ef7",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/bct1s9",
+      //   destination: "https://vimeo.com/684925352/bb4904b506",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/bct1s10",
+      //   destination: "https://vimeo.com/684740918/8a45a8e11f",
+      //   permanent: true,
+      // },
     ];
   },
 };
