@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
 
-
 function bestellingMislukt() {
   return (
     <Fragment>
@@ -26,7 +25,7 @@ function bestellingMislukt() {
               <p className="text-sm md:text-base">
                 De bestelling is mislukt, er heeft geen betaling plaatsgevonden.
                 Dit kan zijn doordat je zelf het bestelproces vroegtijdig hebt
-                beïndigd, of omdat er iets is fout gegaan.
+                beëindigd, of omdat er iets is fout gegaan.
               </p>
               <p className="mt-5">
                 Problemen met het plaatsen van een bestelling? Neem contact met
