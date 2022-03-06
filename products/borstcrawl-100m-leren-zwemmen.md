@@ -5,13 +5,14 @@ title: "Borstcrawl 100m leren zwemmen"
 subtitle: "Zelf borstcrawl leren"
 price: 12.99
 description: "Altijd al de borstcrawl willen leren zwemmen? Dan is dit je kans! Door middel van 10 opbouwende zwemschema’s van ieder 60 minuten kun je zelfstandig werken aan de basiselementen van de borstcrawl. Zo leer jij een 100m borstcrawl zwemmen met de juiste basistechniek. De schema's zijn volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
-features: [
+features:
+  [
     "10 zwemschema’s van ongeveer 60 min",
     "Een gestructureerd plan om zelfstandig 100m borstcrawl te leren zwemmen",
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven (technische) zwemoefeningen",
-    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf begin maart 2022)",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor een 25 of 50 meter bad",
   ]
@@ -39,17 +40,37 @@ inhoud:
           title: "Een stevige basis",
           tags: "[houding]",
           distance: "1000",
-          preview: "/images/zwemschemas/bcl100/preview.png"
+          preview: "/images/zwemschemas/bcl100/preview.png",
         },
-        { title: "Adembenemend", tags: "[houding] [ademhaling]", distance: "1000" },
+        {
+          title: "Adembenemend",
+          tags: "[houding] [ademhaling]",
+          distance: "1000",
+        },
         { title: "Loslaten", tags: "[houding] [ademhaling]", distance: "1100" },
-        { title: "Een lange adem", tags: "[houding] [ademhaling]", distance: "1200" },
+        {
+          title: "Een lange adem",
+          tags: "[houding] [ademhaling]",
+          distance: "1200",
+        },
         { title: "Legday", tags: "[benen]", distance: "1200" },
-        { title: "Zwemmen als een ballerina", tags: "[houding] [benen]", distance: "1250" },
+        {
+          title: "Zwemmen als een ballerina",
+          tags: "[houding] [benen]",
+          distance: "1250",
+        },
         { title: "Kietelen", tags: "[benen] [armen]", distance: "1200" },
         { title: "Goodbye molenwieken", tags: "[armen]", distance: "1300" },
-        { title: "Je bent er bijna!", tags: "[benen] [armen]", distance: "1400" },
-        { title: "De 100 meter borstcrawl", tags: "[houding] [ademhaling] [benen] [armen]", distance: "1500" },
+        {
+          title: "Je bent er bijna!",
+          tags: "[benen] [armen]",
+          distance: "1400",
+        },
+        {
+          title: "De 100 meter borstcrawl",
+          tags: "[houding] [ademhaling] [benen] [armen]",
+          distance: "1500",
+        },
       ],
   }
 ---

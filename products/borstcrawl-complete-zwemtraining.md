@@ -10,7 +10,7 @@ features: [
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven (technische) zwemoefeningen",
-    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf begin maart 2022)",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor beginners, semi-gevorderden of
     gevorderden",
@@ -419,7 +419,11 @@ inhoud:
               tags: "[lange afstand]",
               distance: "2900",
             },
-            { title: "Een treetje hoger", tags: "[ademhaling]", distance: "2900" },
+            {
+              title: "Een treetje hoger",
+              tags: "[ademhaling]",
+              distance: "2900",
+            },
             { title: "Benen festijn", tags: "[benen]", distance: "2800" },
             { title: "1 op X", tags: "[ademhaling] [armen]", distance: "2900" },
             { title: "Constant is key", tags: "[snelheid]", distance: "2900" },

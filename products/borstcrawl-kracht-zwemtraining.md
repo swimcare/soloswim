@@ -10,7 +10,7 @@ features: [
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven zwemoefeningen",
-    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf begin maart 2022)",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor beginners, semi-gevorderden of
     gevorderden",
@@ -39,7 +39,12 @@ inhoud:
   {
     beginners:
       [
-        { title: "Power arms", tags: "[armen] [snelheid]", distance: "1300", preview: "/images/zwemschemas/bck1/preview1.png" },
+        {
+          title: "Power arms",
+          tags: "[armen] [snelheid]",
+          distance: "1300",
+          preview: "/images/zwemschemas/bck1/preview1.png",
+        },
         {
           title: "Wrikken en kicken",
           tags: "[armen] [benen]",
@@ -64,7 +69,12 @@ inhoud:
       ],
     semigevorderden:
       [
-        { title: "Krachtpatser", tags: "[snelheid]", distance: "1900", preview: "/images/zwemschemas/bck1/preview2.png" },
+        {
+          title: "Krachtpatser",
+          tags: "[snelheid]",
+          distance: "1900",
+          preview: "/images/zwemschemas/bck1/preview2.png",
+        },
         {
           title: "4x4 aandrijving",
           tags: "[armen] [benen] [snelheid]",
@@ -89,7 +99,12 @@ inhoud:
       ],
     gevorderden:
       [
-        { title: "Kort maar krachtig", tags: "[snelheid]", distance: "2200", preview: "/images/zwemschemas/bck1/preview3.png" },
+        {
+          title: "Kort maar krachtig",
+          tags: "[snelheid]",
+          distance: "2200",
+          preview: "/images/zwemschemas/bck1/preview3.png",
+        },
         { title: "Arme armen", tags: "[armen]", distance: "2500" },
         { title: "Benen, benen, benen", tags: "[benen]", distance: "1950" },
         {

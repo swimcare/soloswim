@@ -10,7 +10,7 @@ features: [
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven technische zwemoefeningen",
-    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf begin maart 2022)",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor beginners, semi-gevorderden of
     gevorderden",
@@ -39,7 +39,12 @@ inhoud:
   {
     beginners:
       [
-        { title: "Hoog die elleboog", tags: "[armen]", distance: "1500", preview: "/images/zwemschemas/bct1/preview1.png" },
+        {
+          title: "Hoog die elleboog",
+          tags: "[armen]",
+          distance: "1500",
+          preview: "/images/zwemschemas/bct1/preview1.png",
+        },
         {
           title: "Oefening baart kunst",
           tags: "[ademhaling]",
@@ -72,7 +77,12 @@ inhoud:
       ],
     semigevorderden:
       [
-        { title: "Watergevoel", tags: "[armen]", distance: "2000", preview: "/images/zwemschemas/bct1/preview2.png" },
+        {
+          title: "Watergevoel",
+          tags: "[armen]",
+          distance: "2000",
+          preview: "/images/zwemschemas/bct1/preview2.png",
+        },
         {
           title: "Even de benen strekken",
           tags: "[benen] [houding]",
@@ -97,7 +107,12 @@ inhoud:
       ],
     gevorderden:
       [
-        { title: "Aan de slag!", tags: "[armen]", distance: "2700", preview: "/images/zwemschemas/bct1/preview3.png" },
+        {
+          title: "Aan de slag!",
+          tags: "[armen]",
+          distance: "2700",
+          preview: "/images/zwemschemas/bct1/preview3.png",
+        },
         {
           title: "Adem in, adem uit",
           tags: "[ademhaling] [houding]",

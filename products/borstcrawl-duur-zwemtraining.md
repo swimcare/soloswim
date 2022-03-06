@@ -10,7 +10,7 @@ features: [
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven zwemoefeningen",
-    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training (werkend vanaf begin maart 2022)",
+    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor beginners, semi-gevorderden of
     gevorderden",
@@ -39,33 +39,84 @@ inhoud:
   {
     beginners:
       [
-        { title: "De pyramide over", tags: "[armen] [lange afstand]", distance: "1900", preview: "/images/zwemschemas/bcd1/preview1.png" },
-        { title: "Vinger toppen eerst", tags: "[armen] [ademhaling]", distance: "1700" },
+        {
+          title: "De pyramide over",
+          tags: "[armen] [lange afstand]",
+          distance: "1900",
+          preview: "/images/zwemschemas/bcd1/preview1.png",
+        },
+        {
+          title: "Vinger toppen eerst",
+          tags: "[armen] [ademhaling]",
+          distance: "1700",
+        },
         { title: "Spartelen met die benen", tags: "[benen]", distance: "1600" },
-        { title: "Doe mij maar een longvergroting", tags: "[ademhaling] [lange afstand]", distance: "1800" },
-        { title: "Een traininkje doorhalen", tags: "[armen]", distance: "1800" },
+        {
+          title: "Doe mij maar een longvergroting",
+          tags: "[ademhaling] [lange afstand]",
+          distance: "1800",
+        },
+        {
+          title: "Een traininkje doorhalen",
+          tags: "[armen]",
+          distance: "1800",
+        },
         { title: "Verstand op nul", tags: "[armen] [benen]", distance: "1800" },
         { title: "Even aanpoten", tags: "[snelheid]", distance: "1700" },
         { title: "Beenouding", tags: "[benen] [houding]", distance: "1700" },
         { title: "Bellen blazen", tags: "[ademhaling]", distance: "1700" },
-        { title: "De 500.000 mm ", tags: "[armen] [lange afstand]", distance: "1700" },
+        {
+          title: "De 500.000 mm ",
+          tags: "[armen] [lange afstand]",
+          distance: "1700",
+        },
       ],
     semigevorderden:
       [
-        { title: "Kieuwen kweken", tags: "[ademhaling]", distance: "2250", preview: "/images/zwemschemas/bcd1/preview2.png" },
+        {
+          title: "Kieuwen kweken",
+          tags: "[ademhaling]",
+          distance: "2250",
+          preview: "/images/zwemschemas/bcd1/preview2.png",
+        },
         { title: "Hello legday", tags: "[benen]", distance: "2200" },
         { title: "Goodbye kipfilets", tags: "[armen]", distance: "2300" },
         { title: "Focus", tags: "[armen] [benen]", distance: "2200" },
-        { title: "Swimmer’s high", tags: "[ademhaling] [lange afstand]", distance: "2300" },
+        {
+          title: "Swimmer’s high",
+          tags: "[ademhaling] [lange afstand]",
+          distance: "2300",
+        },
         { title: "Klok klok klok", tags: "[snelheid]", distance: "2200" },
-        { title: "Grote longen", tags: "[ademhaling] [benen]", distance: "2200" },
-        { title: "Op een hoger pitje", tags: "[armen] [benen] [snelheid]", distance: "2200" },
-        { title: "1/3 van 1/2 Triathlon", tags: "[armen] [benen] [lange afstand]", distance: "2300" },
-        { title: "Van alles en nog wat", tags: "[armen] [benen]", distance: "2400" },
+        {
+          title: "Grote longen",
+          tags: "[ademhaling] [benen]",
+          distance: "2200",
+        },
+        {
+          title: "Op een hoger pitje",
+          tags: "[armen] [benen] [snelheid]",
+          distance: "2200",
+        },
+        {
+          title: "1/3 van 1/2 Triathlon",
+          tags: "[armen] [benen] [lange afstand]",
+          distance: "2300",
+        },
+        {
+          title: "Van alles en nog wat",
+          tags: "[armen] [benen]",
+          distance: "2400",
+        },
       ],
     gevorderden:
       [
-        { title: "Lang, hoog en krachtig", tags: "[armen]", distance: "2900", preview: "/images/zwemschemas/bcd1/preview3.png" },
+        {
+          title: "Lang, hoog en krachtig",
+          tags: "[armen]",
+          distance: "2900",
+          preview: "/images/zwemschemas/bcd1/preview3.png",
+        },
         { title: "Happen naar adem", tags: "[ademhaling]", distance: "2850" },
         { title: "Powerbenen", tags: "[ademhaling] [benen]", distance: "3000" },
         { title: "Doorhalen die handen", tags: "[armen]", distance: "2900" },
@@ -74,7 +125,11 @@ inhoud:
         { title: "Benen festijn", tags: "[benen]", distance: "2800" },
         { title: "1 op X", tags: "[ademhaling] [armen]", distance: "2900" },
         { title: "Constant is key", tags: "[snelheid]", distance: "2900" },
-        { title: "Olympic Distance", tags: "[snelheid] [lange afstand]", distance: "3100" },
+        {
+          title: "Olympic Distance",
+          tags: "[snelheid] [lange afstand]",
+          distance: "3100",
+        },
       ],
   }
 ---
