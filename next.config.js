@@ -175,6 +175,57 @@ module.exports = {
         destination: "https://vimeo.com/684740918/8a45a8e11f",
         permanent: true,
       },
+      // borstcrawl beginners duur editie 1
+      {
+        source: "/bcd1b1",
+        destination: "https://vimeo.com/684924737/5d9950a07c",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b2",
+        destination: "https://vimeo.com/684924921/8d09bd83fd",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b3",
+        destination: "https://vimeo.com/684923937/c95ff10a1e",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b4",
+        destination: "https://vimeo.com/684924164/f9d047857d",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b5",
+        destination: "https://vimeo.com/684924502/222abc0cef",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b6",
+        destination: "https://vimeo.com/684742797/62319a44f6",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b7",
+        destination: "https://vimeo.com/684741724/cdac5e0bc0",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b8",
+        destination: "https://vimeo.com/684742060/e7a7a34cc8",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b9",
+        destination: "https://vimeo.com/684742370/12ba23645d",
+        permanent: true,
+      },
+      {
+        source: "/bcd1b10",
+        destination: "https://vimeo.com/684742612/1d21097843",
+        permanent: true,
+      },
     ];
   },
 };
