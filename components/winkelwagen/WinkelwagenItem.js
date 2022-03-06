@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckIcon } from "@heroicons/react/solid";
+import { CheckIcon, ExclamationIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import NumberFormat from "react-number-format";
 import { useDispatch } from "react-redux";
@@ -112,13 +112,21 @@ function WinkelwagenItem({
           </div>
         </div>
         <div className="w-full flex flex-row justify-between md:text-sm text-xs">
-          <div>
+          <div className="mr-2">
             <p>
               <span>
                 <CheckIcon className="w-4 h-4 mr-1 text-green-500 float-left stroke-current stroke-2" />
               </span>
               Op voorraad
             </p>
+            {/* Start vertraagde levertijd bij vakantie */}
+            <p>
+              <span>
+                <ExclamationIcon className="w-4 h-4 mr-1 mt-1 text-red-500 float-left" />
+              </span>
+              Vertraagde levertijd i.v.m. vakantie (17 maart bezorgd)
+            </p>
+            {/* Einde vertraagde levertijd bij vakantie */}
           </div>
           <button
             role="button"
