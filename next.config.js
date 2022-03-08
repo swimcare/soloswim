@@ -237,46 +237,46 @@ module.exports = {
         destination: "https://vimeo.com/685192058/651d9e807f",
         permanent: true,
       },
-      // {
-      //   source: "/bct1s3",
-      //   destination: "https://vimeo.com/683947525/143e1c6fae",
-      //   permanent: true,
-      // },
-      // {
-      //   source: "/bct1s4",
-      //   destination: "https://vimeo.com/683947897/a19ccc9cea",
-      //   permanent: true,
-      // },
-      // {
-      //   source: "/bct1s5",
-      //   destination: "https://vimeo.com/683948400/3da329ad20",
-      //   permanent: true,
-      // },
-      // {
-      //   source: "/bct1s6",
-      //   destination: "https://vimeo.com/683948723/ef823d87b7",
-      //   permanent: true,
-      // },
-      // {
-      //   source: "/bct1s7",
-      //   destination: "https://vimeo.com/683949029/1e20ecf429",
-      //   permanent: true,
-      // },
-      // {
-      //   source: "/bct1s8",
-      //   destination: "https://vimeo.com/684741209/cbe18a9ef7",
-      //   permanent: true,
-      // },
-      // {
-      //   source: "/bct1s9",
-      //   destination: "https://vimeo.com/684925352/bb4904b506",
-      //   permanent: true,
-      // },
-      // {
-      //   source: "/bct1s10",
-      //   destination: "https://vimeo.com/684740918/8a45a8e11f",
-      //   permanent: true,
-      // },
+      {
+        source: "/bct1s3",
+        destination: "https://vimeo.com/685832891/ad8600a1d1",
+        permanent: true,
+      },
+      {
+        source: "/bct1s4",
+        destination: "https://vimeo.com/685836661/fc7b00465d",
+        permanent: true,
+      },
+      {
+        source: "/bct1s5",
+        destination: "https://vimeo.com/685836019/3f8a86f863",
+        permanent: true,
+      },
+      {
+        source: "/bct1s6",
+        destination: "https://vimeo.com/685835503/fad4b2d87c",
+        permanent: true,
+      },
+      {
+        source: "/bct1s7",
+        destination: "https://vimeo.com/685835010/d49100b8e9",
+        permanent: true,
+      },
+      {
+        source: "/bct1s8",
+        destination: "https://vimeo.com/685834371/faceccdb6d",
+        permanent: true,
+      },
+      {
+        source: "/bct1s9",
+        destination: "https://vimeo.com/685833924/39638d73f4",
+        permanent: true,
+      },
+      {
+        source: "/bct1s10",
+        destination: "https://vimeo.com/685833454/986e32b1ea",
+        permanent: true,
+      },
     ];
   },
 };
