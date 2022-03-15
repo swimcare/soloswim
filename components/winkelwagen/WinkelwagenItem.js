@@ -120,12 +120,12 @@ function WinkelwagenItem({
               Op voorraad
             </p>
             {/* Start vertraagde levertijd bij vakantie */}
-            <p>
+            {/* <p>
               <span>
                 <ExclamationIcon className="w-4 h-4 mr-1 mt-1 text-red-500 float-left" />
               </span>
               Vertraagde levertijd i.v.m. vakantie (17 maart bezorgd)
-            </p>
+            </p> */}
             {/* Einde vertraagde levertijd bij vakantie */}
           </div>
           <button
