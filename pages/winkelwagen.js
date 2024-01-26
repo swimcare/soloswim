@@ -129,12 +129,23 @@ function winkelwagen() {
                 </div>
                 <div className="pb-12 pt-4">
                   <button
+                    disabled
                     role="link"
                     onClick={createCheckoutSession}
                     className="text-white lg:text-lg font-bold uppercase w-full px-3 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
                   >
                     Afrekenen
                   </button>
+                  <p className="text-center text-red-500 my-4">
+                    Tijdelijk niet mogelijk om een bestelling te plaatsen. Mail
+                    naar{" "}
+                    <Link href="mailto:info@soloswim.nl">
+                      <a className="hover:underline font-bold">
+                        info@soloswim.nl
+                      </a>
+                    </Link>{" "}
+                    voor meer informatie en wordt op de hoogte gehouden!
+                  </p>
 
                   <div className="text-center py-2">
                     <Link href="/producten">
