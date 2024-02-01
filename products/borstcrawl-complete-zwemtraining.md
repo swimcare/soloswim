@@ -10,7 +10,6 @@ features: [
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
     "Duidelijk omschreven (technische) zwemoefeningen",
-    "Inclusief QR codes die linken naar een korte uitlegvideo voor iedere training",
     "Hersluitbare roestvrijstalen ring",
     "Verkrijgbaar voor beginners, semi-gevorderden of
     gevorderden",
