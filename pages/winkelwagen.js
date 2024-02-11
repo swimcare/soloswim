@@ -129,7 +129,6 @@ function winkelwagen() {
                 </div>
                 <div className="pb-12 pt-4">
                   <button
-                    disabled
                     role="link"
                     onClick={createCheckoutSession}
                     className="text-white lg:text-lg font-bold uppercase w-full px-3 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
