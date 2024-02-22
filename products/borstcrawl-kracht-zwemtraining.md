@@ -3,7 +3,7 @@ number: 4
 product_id: "BCK1"
 title: "Borstcrawl Kracht Zwemtraining"
 subtitle: "Word sterker, word sneller"
-price: 12.99
+price: 17.99
 description: "Wil je graag krachtiger en sneller borstcrawl zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 features: [
     "10 kracht zwemschema’s van 60 min",
