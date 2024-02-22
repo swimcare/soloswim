@@ -284,8 +284,7 @@ export default function Home() {
                         Verschillende thema’s
                       </h4>
                       <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                        Van techniek-, kracht- of duur trainingen tot swimfit
-                        (coming soon) voor ontspanning
+                        Van techniek-, kracht- tot duur trainingen.
                       </p>
                     </div>
                   </li>
@@ -831,13 +830,13 @@ export default function Home() {
                     </p>
                     <p className="mt-4">
                       We maken al onze bundels zelf met veel zorg; van het
-                      ontwikkelen van de trainingen tot het uitprinten en
-                      plastificeren van de bundels. Made in the Netherlands,
-                      daar zijn we trots op! Houd ons in de gaten want we zijn
-                      continu bezig met het uitbreiden van onze zwemschema’s. Zo
-                      komt er binnenkort een bundel voor recreanten (swimfit) en
-                      een bundel met verschillende slagen uit. Voor ieder wat
-                      wils, dat vinden we belangrijk!
+                      ontwikkelen van de trainingen tot het bundelen van de
+                      individuele waterdichte zwemschema's. Made in the
+                      Netherlands, daar zijn we trots op! Houd ons in de gaten
+                      want we zijn continu bezig met het uitbreiden van onze
+                      zwemschema’s. Zo komt er binnenkort een bundel voor
+                      recreanten (swimfit) en een bundel met verschillende
+                      slagen uit. Voor ieder wat wils, dat vinden we belangrijk!
                     </p>
                   </div>
                   <div className="lg:inline-block hidden my-6">

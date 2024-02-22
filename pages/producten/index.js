@@ -103,61 +103,6 @@ function index({ allProductsData }) {
                     </li>
                   )
                 )}
-                {/* COMING SOON PRODUCTEN */}
-                <li
-                  key="swimfit"
-                  className="rounded-2xl ring-4 ring-soloswim-pink py-5"
-                >
-                  <div>
-                    <div className="mb-6 py-1 text-center">
-                      <p className="text-navy-light1 font-lexend font-extrabold text-3xl">
-                        Coming soon!
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <div className="w-5/6 mx-auto">
-                        <Image
-                          src="/images/zwemschemas/sf1/1.png"
-                          width={400}
-                          height={400}
-                          alt="Swimfit voor recreanten"
-                        ></Image>
-                      </div>
-                      <div className="text-grey-dark1 px-8 mx-auto mt-8">
-                        <p className="font-bold uppercase mb-1">
-                          Swimfit voor recreanten
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  key="slagenmix"
-                  className="rounded-2xl ring-4 ring-soloswim-purple py-5"
-                >
-                  <div>
-                    <div className="mb-6 py-1 text-center">
-                      <p className="text-navy-light1 font-lexend font-extrabold text-3xl">
-                        Coming soon!
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <div className="w-5/6 mx-auto">
-                        <Image
-                          src="/images/zwemschemas/sm1/1.png"
-                          width={400}
-                          height={400}
-                          alt="Slagenmix zwemtraining"
-                        ></Image>
-                      </div>
-                      <div className="text-grey-dark1 px-8 mx-auto mt-8">
-                        <p className="font-bold uppercase mb-1">
-                          Slagenmix zwemtraining
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
