@@ -5,17 +5,17 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 function Footer() {
   return (
     <footer>
-      <div className="grid grid-cols-7 lg:grid-cols-10 w-full bg-soloswim-pink">
-        <div className="bg-soloswim-pink h-9 skew-x-25"></div>
-        <div className="bg-soloswim-orange h-9 skew-x-25"></div>
-        <div className="bg-soloswim-yellow h-9 skew-x-25"></div>
-        <div className="bg-soloswim-green h-9 skew-x-25"></div>
-        <div className="bg-soloswim-purple h-9 skew-x-25"></div>
-        <div className="bg-soloswim-blue h-9 skew-x-25"></div>
-        <div className="hidden lg:block bg-soloswim-pink h-9 skew-x-25"></div>
-        <div className="hidden lg:block bg-soloswim-orange h-9 skew-x-25"></div>
-        <div className="hidden lg:block bg-soloswim-yellow h-9 skew-x-25"></div>
-        <div className="bg-soloswim-pink h-9"></div>
+      <div className="grid grid-cols-7 lg:grid-cols-10 w-full bg-soloswim2-pink">
+        <div className="bg-soloswim2-pink h-9 skew-x-25"></div>
+        <div className="bg-soloswim2-orange h-9 skew-x-25"></div>
+        <div className="bg-soloswim2-yellow h-9 skew-x-25"></div>
+        <div className="bg-soloswim2-green h-9 skew-x-25"></div>
+        <div className="bg-soloswim2-purple h-9 skew-x-25"></div>
+        <div className="bg-soloswim2-blue h-9 skew-x-25"></div>
+        <div className="hidden lg:block bg-soloswim2-pink h-9 skew-x-25"></div>
+        <div className="hidden lg:block bg-soloswim2-orange h-9 skew-x-25"></div>
+        <div className="hidden lg:block bg-soloswim2-yellow h-9 skew-x-25"></div>
+        <div className="bg-soloswim2-pink h-9"></div>
       </div>
       <div className="bg-grey-light4">
         <div className="flex flex-col md:flex-row md:justify-between md:px-5 max-w-6xl mx-auto gap-6 py-8 lg:py-20">
@@ -101,7 +101,10 @@ function Footer() {
         </div>
         <div className="text-center mx-5">
           <p className="text-xs text-navy-light1 italic">
-            <i>Alle foto's zijn gemaakt in Zwembad Brandenburg in Bilthoven en Zwembad De Krommerijn in Utrecht</i>
+            <i>
+              Alle foto's zijn gemaakt in Zwembad Brandenburg in Bilthoven en
+              Zwembad De Krommerijn in Utrecht
+            </i>
           </p>
         </div>
         <div className="text-center py-5 mx-5">

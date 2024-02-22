@@ -35,23 +35,23 @@ function SectionCoaches({ color, isCombi }) {
         !isCombi &&
         color !== "multicolor" &&
         color !== "green-orange-yellow"
-          ? "bg-soloswim-" + color
-          : "bg-soloswim-orange"
+          ? "bg-soloswim2-" + color
+          : "bg-soloswim2-orange"
       } relative overflow-x-hidden`}
     >
       {color === "multicolor" && <MultiColorBg />}
       {color === "green-orange-yellow" && (
         <div className="grid lg:grid-cols-10 grid-cols-6 md:w-125 sm:w-140 w-200 h-full absolute lg:-translate-x-44 sm:-translate-x-32 -translate-x-44">
-          <div className="bg-soloswim-orange skew-x-20"></div>
-          <div className="bg-soloswim-yellow skew-x-20 transform -translate-x-1"></div>
-          <div className="bg-soloswim-green skew-x-20 transform -translate-x-2"></div>
-          <div className="bg-soloswim-orange skew-x-20 transform -translate-x-3"></div>
-          <div className="bg-soloswim-yellow skew-x-20 transform -translate-x-4"></div>
-          <div className="bg-soloswim-green skew-x-20 transform -translate-x-5"></div>
-          <div className="hidden lg:block bg-soloswim-orange skew-x-20 transform -translate-x-6"></div>
-          <div className="hidden lg:block bg-soloswim-yellow skew-x-20 transform -translate-x-7"></div>
-          <div className="hidden lg:block bg-soloswim-green skew-x-20 transform -translate-x-8"></div>
-          <div className="hidden lg:block bg-soloswim-orange skew-x-20 transform -translate-x-9"></div>
+          <div className="bg-soloswim2-orange skew-x-20"></div>
+          <div className="bg-soloswim2-yellow skew-x-20 transform -translate-x-1"></div>
+          <div className="bg-soloswim2-green skew-x-20 transform -translate-x-2"></div>
+          <div className="bg-soloswim2-orange skew-x-20 transform -translate-x-3"></div>
+          <div className="bg-soloswim2-yellow skew-x-20 transform -translate-x-4"></div>
+          <div className="bg-soloswim2-green skew-x-20 transform -translate-x-5"></div>
+          <div className="hidden lg:block bg-soloswim2-orange skew-x-20 transform -translate-x-6"></div>
+          <div className="hidden lg:block bg-soloswim2-yellow skew-x-20 transform -translate-x-7"></div>
+          <div className="hidden lg:block bg-soloswim2-green skew-x-20 transform -translate-x-8"></div>
+          <div className="hidden lg:block bg-soloswim2-orange skew-x-20 transform -translate-x-9"></div>
         </div>
       )}
 

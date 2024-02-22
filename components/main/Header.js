@@ -19,23 +19,22 @@ function Header() {
   const router = useRouter();
   useEffect(() => {
     setMobileMenuExtended(false);
-    return () => {
-    }
+    return () => {};
   }, [router]);
 
   return (
     <header className="sticky z-30">
-      <div className="grid grid-cols-10 w-full bg-soloswim-green">
-        <div className="bg-soloswim-pink h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-orange h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-yellow h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-green h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-purple h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-blue h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-pink h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-orange h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-yellow h-2 -skew-x-12"></div>
-        <div className="bg-soloswim-green h-2"></div>
+      <div className="grid grid-cols-10 w-full bg-soloswim2-green">
+        <div className="bg-soloswim2-pink h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-orange h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-yellow h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-green h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-purple h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-blue h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-pink h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-orange h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-yellow h-2 -skew-x-12"></div>
+        <div className="bg-soloswim2-green h-2"></div>
       </div>
       <div
         className={`h-14 w-full drop-shadow-md ${
@@ -88,7 +87,7 @@ function Header() {
                   }`}
                 />
                 {items.length > 0 && (
-                  <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
+                  <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim2-orange text-center rounded-full text-black text-sm font-semibold">
                     {items.length}
                   </span>
                 )}
@@ -99,13 +98,19 @@ function Header() {
           {/* Navigation items Desktop */}
           <ul className="hidden sm:flex flex-row space-x-8 lg:space-x-10 font-lexend font-semibold text-navy-light1 h-10">
             <li className="self-center hover:underline">
-              <Link href="/producten"><a>Zwemschema's</a></Link>
+              <Link href="/producten">
+                <a>Zwemschema's</a>
+              </Link>
             </li>
             <li className="self-center hover:underline">
-              <Link href="/over-ons"><a>Over Soloswim</a></Link>
+              <Link href="/over-ons">
+                <a>Over Soloswim</a>
+              </Link>
             </li>
             <li className="self-center hover:underline">
-              <Link href="/contact"><a>Contact</a></Link>
+              <Link href="/contact">
+                <a>Contact</a>
+              </Link>
             </li>
             <li className="hidden md:block self-center hover:underline hover:cursor-pointer">
               <Link href="/winkelwagen">
@@ -128,7 +133,7 @@ function Header() {
                 </a>
               </Link>
               {items.length > 0 && (
-                <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim-orange text-center rounded-full text-black text-sm font-semibold">
+                <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim2-orange text-center rounded-full text-black text-sm font-semibold">
                   {items.length}
                 </span>
               )}

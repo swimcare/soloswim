@@ -49,6 +49,14 @@ module.exports = {
           purple: "#D3CEE6",
           blue: "#B8D7EC",
         },
+        soloswim2: {
+          pink: "#F172AC",
+          orange: "#FDB812",
+          yellow: "#FFF200",
+          green: "#A6CE38",
+          purple: "#B289BE",
+          blue: "#00B9F2",
+        },
       },
       fontFamily: {
         sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],

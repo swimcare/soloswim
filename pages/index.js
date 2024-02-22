@@ -713,35 +713,35 @@ export default function Home() {
                   title="Borstcrawl 100m leren zwemmen"
                   img="/images/zwemschemas/bcl100/1.png"
                   price="12,99"
-                  borderColor="border-soloswim-blue"
+                  borderColor="border-soloswim2-blue"
                   href="/producten/borstcrawl-100m-leren-zwemmen"
                 />
                 <HomeProductItemCard
                   title="Borstcrawl complete zwemtraining"
                   img="/images/zwemschemas/bcc1/1.png"
                   price="29,99"
-                  borderColor="border-t-soloswim-orange border-b-soloswim-green border-l-soloswim-yellow border-r-soloswim-yellow"
+                  borderColor="border-t-soloswim2-orange border-b-soloswim2-green border-l-soloswim2-yellow border-r-soloswim2-yellow"
                   href="/producten/borstcrawl-complete-zwemtraining"
                 />
                 <HomeProductItemCard
                   title="Borstcrawl techniek zwemtraining"
                   img="/images/zwemschemas/bct1/1.png"
                   price="12,99"
-                  borderColor="border-soloswim-green"
+                  borderColor="border-soloswim2-green"
                   href="/producten/borstcrawl-techniek-zwemtraining"
                 />
                 <HomeProductItemCard
                   title="Borstcrawl kracht zwemtraining"
                   img="/images/zwemschemas/bck1/1.png"
                   price="12,99"
-                  borderColor="border-soloswim-orange"
+                  borderColor="border-soloswim2-orange"
                   href="/producten/borstcrawl-kracht-zwemtraining"
                 />
                 <HomeProductItemCard
                   title="Borstcrawl duur zwemtraining"
                   img="/images/zwemschemas/bcd1/1.png"
                   price="12,99"
-                  borderColor="border-soloswim-yellow"
+                  borderColor="border-soloswim2-yellow"
                   href="/producten/borstcrawl-duur-zwemtraining"
                 />
               </MultiCarousel>
