@@ -5,6 +5,7 @@ title: "Borstcrawl Duur Zwemtraining"
 subtitle: "Zwem makkelijker, zwem langer"
 price: 17.99
 description: "Wil je graag langere afstanden borstcrawl op een lekker tempo leren zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten werk je aan een beter uithoudingsvermogen! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+inStock: true
 features: [
     "10 duur zwemschema’s van 60 min",
     "Inhoudsopgave en begrippenlijst inbegrepen",

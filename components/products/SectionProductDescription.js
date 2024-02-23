@@ -216,24 +216,35 @@ function SectionProductDescription({
                   </a>
                 ) : (
                   <p className="text-navy-light1 text-xs">
-                    *Bestel de bundel die past bij de lengte van het zwembad waar jij
-                    in zwemt (25m of 50m). Zwem je in beide? Ga dan voor de 50m
-                    bad variant.
+                    *Bestel de bundel die past bij de lengte van het zwembad
+                    waar jij in zwemt (25m of 50m). Zwem je in beide? Ga dan
+                    voor de 50m bad variant.
                   </p>
                 )}
               </div>
             )}
 
             <div className="text-center my-6">
-              <button
-                role="button"
-                onClick={() => {
-                  addItemToBasket(productData);
-                }}
-                className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
-              >
-                Toevoegen aan winkelwagen
-              </button>
+              {productData.inStock ? (
+                <button
+                  role="button"
+                  onClick={() => {
+                    addItemToBasket(productData);
+                  }}
+                  className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+                >
+                  Toevoegen aan winkelwagen
+                </button>
+              ) : (
+                <button
+                  role="button"
+                  disabled
+                  className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+                >
+                  Momenteel niet op voorraad
+                </button>
+              )}
+
               <div className="flex flex-row items-center justify-center space-x-2 my-4 lg:my-8">
                 <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
                 <p className="text-navy-light1 text-xs pr-5">
