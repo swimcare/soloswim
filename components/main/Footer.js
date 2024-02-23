@@ -109,7 +109,7 @@ function Footer() {
         </div>
         <div className="text-center py-5 mx-5">
           <p className="text-tiny text-navy-light1">
-            © 2021 Media Modes | KVK: 75986272 | BTW: NL860468379B01
+            © 2024 Soloswim | KVK: 92524230 | BTW: NL004958428B41
           </p>
         </div>
       </div>

@@ -11,7 +11,7 @@ function algemeneVoorwaarden() {
             <h1 className="text-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-lexend font-extrabold my-5">
               Algemene voorwaarden
             </h1>
-          <p className="my-10 italic"><i>Laatst gewijzigd: 4-12-2021</i></p>
+          <p className="my-10 italic"><i>Laatst gewijzigd: 23-02-2024</i></p>
             <h2 className="text-main text-xl sm:text-2xl md:text-3xl lg:text-4xl font-lexend font-extrabold my-5">
               Inhoudsopgave
             </h2>
@@ -124,8 +124,8 @@ Artikel 2 - Identiteit van de ondernemer</h3>
               <br /> Nederland
               <br /> <br /> <strong>T</strong>&nbsp;(061) 989-9010
               <br /> <strong>E</strong>&nbsp;info@soloswim.nl
-              <br /> <strong>KVK</strong>&nbsp;75986272
-              <br /> <strong>BTW nummer</strong>&nbsp;NL860468379B01
+              <br /> <strong>KVK</strong>&nbsp;92524230
+              <br /> <strong>BTW nummer</strong>&nbsp;NL004958428B41
               <br />{" "}
             </p>
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
