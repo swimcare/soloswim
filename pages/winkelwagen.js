@@ -95,10 +95,7 @@ function winkelwagen() {
                     />
                   </div>
                   <div className="flex flex-row justify-between my-3 font-semibold font-lexend text-tiny md:text-lg">
-                    <p>
-                      Verzendkosten
-                      <span className="text-xs font-normal"> (incl. BTW)</span>
-                    </p>
+                    <p>Verzendkosten*</p>
                     <p>
                       <NumberFormat
                         value={shipping}
@@ -117,7 +114,7 @@ function winkelwagen() {
                     </p>
                     <p>
                       <NumberFormat
-                        value={total + 3.95}
+                        value={total + shipping}
                         decimalSeparator=","
                         displayType="text"
                         prefix={"€ "}
@@ -126,6 +123,10 @@ function winkelwagen() {
                       />
                     </p>
                   </div>
+                  <p className="text-xs">
+                    *Verzendkosten binnen Nederland. Definitieve verzendkosten
+                    worden berekend tijdens afrekenen.
+                  </p>
                 </div>
                 <div className="pb-12 pt-4">
                   <button

@@ -34,12 +34,53 @@ export default async (req, res) => {
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
         shipping_address_collection: {
-          allowed_countries: ["NL"],
+          allowed_countries: ["NL", "BE"],
         },
         success_url: `${process.env.HOST}/bestelling-voltooid`,
         cancel_url: `${process.env.HOST}/bestelling-mislukt`,
-        payment_method_types: ["card", "ideal"],
-        shipping_rates: [process.env.SHIPPING_RATE_BRIEVENBUS],
+        payment_method_types: ["card", "ideal", "bancontact"],
+        shipping_options: [
+          {
+            shipping_rate_data: {
+              type: "fixed_amount",
+              fixed_amount: {
+                amount: 395,
+                currency: "eur",
+              },
+              display_name: "Verzending binnen Nederland",
+              delivery_estimate: {
+                minimum: {
+                  unit: "business_day",
+                  value: 1,
+                },
+                maximum: {
+                  unit: "business_day",
+                  value: 2,
+                },
+              },
+            },
+          },
+          {
+            shipping_rate_data: {
+              type: "fixed_amount",
+              fixed_amount: {
+                amount: 995,
+                currency: "eur",
+              },
+              display_name: "Verzending naar België",
+              delivery_estimate: {
+                minimum: {
+                  unit: "business_day",
+                  value: 1,
+                },
+                maximum: {
+                  unit: "business_day",
+                  value: 2,
+                },
+              },
+            },
+          },
+        ],
         line_items: transformedItems,
         mode: "payment",
         metadata: {
