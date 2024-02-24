@@ -32,7 +32,7 @@ async function handler(req, res) {
             email: `${order.email}`,
           },
           bcc: {
-            email: "info@soloswim.nl",
+            email: "orders@soloswim.nl",
           },
           dynamic_template_data: {
             subject: `Bedankt voor je bestelling ${order.name}`,
