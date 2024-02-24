@@ -135,17 +135,6 @@ function winkelwagen() {
                   >
                     Afrekenen
                   </button>
-                  <p className="text-center text-red-500 my-4">
-                    Tijdelijk niet mogelijk om een bestelling te plaatsen. Mail
-                    naar{" "}
-                    <Link href="mailto:info@soloswim.nl">
-                      <a className="hover:underline font-bold">
-                        info@soloswim.nl
-                      </a>
-                    </Link>{" "}
-                    voor meer informatie en wordt op de hoogte gehouden!
-                  </p>
-
                   <div className="text-center py-2">
                     <Link href="/producten">
                       <a className="hover:underline">Verder winkelen</a>
