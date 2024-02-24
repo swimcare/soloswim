@@ -19,7 +19,7 @@ export default async (req, res) => {
     quantity: 1,
     price_data: {
       currency: "eur",
-      unit_amount: item.price * 100,
+      unit_amount: Math.round(item.price * 100),
       product_data: {
         name: item.title,
         images: [`${process.env.HOST}${item.images[0]}`], //deze komt nog niet helemaal goed door in stripe lijkt het, waarschijnlijk omdat het local is.
@@ -29,6 +29,7 @@ export default async (req, res) => {
   }));
 
   if (req.method === "POST") {
+    console.log("resquest method is post.");
     try {
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
@@ -59,6 +60,7 @@ export default async (req, res) => {
       res.status(200).json({ id: session.id });
       //   res.redirect(303, session.url);
     } catch (err) {
+      console.log("an error occured...");
       res.status(err.statusCode || 500).json(err.message);
     }
   } else {
