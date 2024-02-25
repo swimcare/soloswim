@@ -8,11 +8,6 @@ module.exports = {
 
     return config;
   },
-  // DATABASE URL
-  env: {
-    MONGODB_URL:
-      "mongodb+srv://dbsnerual:dblaptop14@nodejsshop.nin7l.mongodb.net/Soloswim?retryWrites=true&w=majority",
-  },
   // REDIRECT URLS FOR QR CODES ON TRAINING SCHEDULES
   async redirects() {
     return [
