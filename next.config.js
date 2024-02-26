@@ -22,6 +22,13 @@ module.exports = {
         destination: "https://g.page/r/CRxat-X_lZvOEAg/review",
         permanent: true,
       },
+      //Promotions
+      {
+        source: "/f1",
+        destination:
+          "https://www.soloswim.nl/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a5_flyer_standard",
+        permanent: true,
+      },
       // Borstcrawl Gevorderden Kracht Editie 1
       {
         source: "/bck1g1",
