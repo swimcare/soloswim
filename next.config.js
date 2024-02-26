@@ -29,6 +29,12 @@ module.exports = {
           "https://www.soloswim.nl/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a5_flyer_standard",
         permanent: true,
       },
+      {
+        source: "/f2",
+        destination:
+          "https://www.soloswim.nl/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a5_flyer_standard_english",
+        permanent: true,
+      },
       // Borstcrawl Gevorderden Kracht Editie 1
       {
         source: "/bck1g1",
