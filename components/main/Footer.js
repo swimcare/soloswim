@@ -87,17 +87,6 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="text-center">
-            <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
-              Locatie
-            </h4>
-            <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
-              <li>
-                <p>Godfried van Seijstlaan 27D1</p>
-                <p>3703 BR Zeist</p>
-              </li>
-            </ul>
-          </div>
         </div>
         <div className="text-center mx-5">
           <p className="text-xs text-navy-light1 italic">

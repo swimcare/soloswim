@@ -11,7 +11,9 @@ function algemeneVoorwaarden() {
             <h1 className="text-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-lexend font-extrabold my-5">
               Algemene voorwaarden
             </h1>
-          <p className="my-10 italic"><i>Laatst gewijzigd: 23-02-2024</i></p>
+            <p className="my-10 italic">
+              <i>Laatst gewijzigd: 23-02-2024</i>
+            </p>
             <h2 className="text-main text-xl sm:text-2xl md:text-3xl lg:text-4xl font-lexend font-extrabold my-5">
               Inhoudsopgave
             </h2>
@@ -116,20 +118,18 @@ function algemeneVoorwaarden() {
             </ol>
 
             <h3 className="text-2xl font-lexend font-extrabold pt-10 my-5 text-navy-light1">
-Artikel 2 - Identiteit van de ondernemer</h3>
+              Artikel 2 - Identiteit van de ondernemer
+            </h3>
             <p>
-              <br /> Media Modes
-              <br /> Godfried van Seijstlaan 27 D1
-              <br /> <br /> 3703BR
-              <br /> Nederland
-              <br /> <br /> <strong>T</strong>&nbsp;(061) 989-9010
+              <br /> Soloswim
               <br /> <strong>E</strong>&nbsp;info@soloswim.nl
               <br /> <strong>KVK</strong>&nbsp;92524230
               <br /> <strong>BTW nummer</strong>&nbsp;NL004958428B41
               <br />{" "}
             </p>
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
-Artikel 3 - Toepasselijkheid</h3>
+              Artikel 3 - Toepasselijkheid
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -196,7 +196,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </li>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 4 - Het aanbod</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 4 - Het aanbod
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -303,7 +305,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </ol>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 5 - De overeenkomst</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 5 - De overeenkomst
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -392,7 +396,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </li>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 6 - Herroepingsrecht</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 6 - Herroepingsrecht
+            </h3>
             <p>
               <br /> <em>Bij levering van producten:</em>
               <br />{" "}
@@ -465,7 +471,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </li>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 7 - Kosten in geval van herroeping</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 7 - Kosten in geval van herroeping
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -499,7 +507,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </li>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 8 - Uitsluiting herroepingsrecht</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 8 - Uitsluiting herroepingsrecht
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -522,11 +532,17 @@ Artikel 3 - Toepasselijkheid</h3>
                   overeenkomstig specificaties van de consument;
                 </li>
 
-                <li className="my-5">die duidelijk persoonlijk van aard zijn;</li>
+                <li className="my-5">
+                  die duidelijk persoonlijk van aard zijn;
+                </li>
 
-                <li className="my-5">die door hun aard niet kunnen worden teruggezonden;</li>
+                <li className="my-5">
+                  die door hun aard niet kunnen worden teruggezonden;
+                </li>
 
-                <li className="my-5">die snel kunnen bederven of verouderen;</li>
+                <li className="my-5">
+                  die snel kunnen bederven of verouderen;
+                </li>
 
                 <li className="my-5">
                   waarvan de prijs gebonden is aan schommelingen op de
@@ -566,12 +582,15 @@ Artikel 3 - Toepasselijkheid</h3>
                   consument is begonnen voordat de bedenktijd is verstreken;
                 </li>
 
-                <li className="my-5">betreffende weddenschappen en loterijen.</li>
+                <li className="my-5">
+                  betreffende weddenschappen en loterijen.
+                </li>
               </ol>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 9 - De prijs</h3>
-
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 9 - De prijs
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -588,7 +607,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </li>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 10 - Conformiteit en garantie</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 10 - Conformiteit en garantie
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -653,7 +674,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </ol>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 11 - Levering en uitvoering</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 11 - Levering en uitvoering
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -715,8 +738,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </li>
             </ol>
 
-
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 12 - Betaling</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 12 - Betaling
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -741,7 +765,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </li>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 13 - Klachtenregeling</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 13 - Klachtenregeling
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -772,8 +798,8 @@ Artikel 3 - Toepasselijkheid</h3>
 
               <li className="my-5">
                 Bij klachten dient een consument zich allereerst te wenden tot
-                de ondernemer. Tevens is het mogelijk om
-                klachten aan te melden via het Europees ODR platform (
+                de ondernemer. Tevens is het mogelijk om klachten aan te melden
+                via het Europees ODR platform (
                 <a href="http://ec.europa.eu/odr">http://ec.europa.eu/odr</a>).
               </li>
 
@@ -789,7 +815,9 @@ Artikel 3 - Toepasselijkheid</h3>
               </li>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 14 - Geschillen</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 14 - Geschillen
+            </h3>
 
             <ol className="list-decimal list-outside ml-5">
               <li className="my-5">
@@ -799,10 +827,14 @@ Artikel 3 - Toepasselijkheid</h3>
                 woonachtig is in het buitenland.
               </li>
 
-              <li className="my-5">Het Weens Koopverdrag is niet van toepassing.</li>
+              <li className="my-5">
+                Het Weens Koopverdrag is niet van toepassing.
+              </li>
             </ol>
 
-            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">Artikel 15 - Aanvullende of afwijkende bepalingen</h3>
+            <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">
+              Artikel 15 - Aanvullende of afwijkende bepalingen
+            </h3>
             <p>
               <br /> Aanvullende dan wel van deze algemene voorwaarden
               afwijkende bepalingen mogen niet ten nadele van de consument zijn
@@ -810,9 +842,6 @@ Artikel 3 - Toepasselijkheid</h3>
               wijze dat deze door de consument op een toegankelijke manier
               kunnen worden opgeslagen op een duurzame gegevensdrager.
             </p>
-
-
-           
           </div>
         </section>
       </main>
