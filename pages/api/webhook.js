@@ -29,8 +29,7 @@ const fulfillOrder = async (sessionData) => {
     console.log("an error occurred");
     console.log(err);
   } finally {
-    // return console.log("Fulfilling order");
-    return console.log("Fulfilling order", sessionData);
+    console.log("Fulfilling order", sessionData);
   }
 };
 
@@ -75,7 +74,7 @@ export default async (req, res) => {
       };
 
       // Fulfill the order...
-      return fulfillOrder(sessionData)
+      fulfillOrder(sessionData)
         .then(() => res.status(200).end("success"))
         .catch((err) => res.status(400).send(`Webhook Error: ${err.message}`));
     }
