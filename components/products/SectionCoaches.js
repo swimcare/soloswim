@@ -1,6 +1,6 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 import MultiColorBg from "../home/MultiColorBg";
 

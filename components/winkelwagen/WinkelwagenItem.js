@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { CheckIcon, ExclamationIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import NumberFormat from "react-number-format";

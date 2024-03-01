@@ -1,5 +1,5 @@
 import Modal from "../general/Modal";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { XIcon } from "@heroicons/react/solid";
 

@@ -2,7 +2,7 @@ import { EyeIcon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/solid";
 import { Fragment, useState } from "react";
 import Modal from "../../general/Modal";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 function ZwemschemaInhoud(props) {
   const [previewModalIsOpen, setpreviewModalIsOpen] = useState(false);

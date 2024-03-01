@@ -1,5 +1,5 @@
 import { CheckIcon } from "@heroicons/react/solid";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Fragment, useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import MultiCarousel from "react-multi-carousel";

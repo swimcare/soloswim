@@ -5,7 +5,7 @@ import {
 } from "@heroicons/react/outline";
 import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { useState } from "react";
 

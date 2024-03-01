@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectItems } from "../../slices/basketSlice";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useEffect } from "react";
 import { ShoppingCartIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";

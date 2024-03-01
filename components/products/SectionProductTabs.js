@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import SubSectionInhoudsopgave from "./inhoudsopgave/SubSectionInhoudsopgave";
 import SubSectionBenodigdhedenNiveaus from "./benodigdheden/SubSectionBenodigdhedenNiveaus";
