@@ -1,5 +1,5 @@
 import Modal from "../general/Modal";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { XIcon } from "@heroicons/react/solid";
 
@@ -35,7 +35,10 @@ function WinkelwagenModal({ productData, modalIsOpen, toggleModal }) {
               }
               width={300}
               height={300}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <div>
             <h2 className="font-semibold font-lexend md:text-lg text-base leading-5">

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
@@ -16,7 +16,10 @@ function Custom404() {
                 width={1024}
                 height={512}
                 alt="404"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
 
             <div className="my-5 sm:my-10">

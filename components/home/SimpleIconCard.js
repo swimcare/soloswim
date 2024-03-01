@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Fade from "react-reveal/Fade";
 
 function SimpleIconCard({ icon, title, text }) {
@@ -9,11 +9,13 @@ function SimpleIconCard({ icon, title, text }) {
           <div className="relative w-64 h-40 mx-auto">
             <Image
               src={icon}
-              layout="fill"
-              objectFit="contain"
-              objectPosition="bottom"
               alt={title}
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "contain",
+                objectPosition: "bottom"
+              }} />
           </div>
         </div>
         <div className="h-16">

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { Fragment } from "react";
@@ -17,7 +17,10 @@ function berichtVerzonden() {
                 width={425}
                 height={399}
                 alt="confetti"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
             <h1 className="my-5 sm:my-10 font-lexend text-main text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
               Bericht verzonden!

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 function HomeProductItemCard({ borderColor, img, title, price, href }) {
@@ -13,10 +13,12 @@ function HomeProductItemCard({ borderColor, img, title, price, href }) {
             <div className="relative h-56 flex-shrink-0">
               <Image
                 src={img}
-                layout="fill"
-                objectFit="contain"
                 alt={title}
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "contain"
+                }} />
             </div>
             <div className="my-6 text-center px-6">
               <h4 className="text-navy-light1 font-bold uppercase">

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Fragment } from "react";
 import { products } from "../../products";
 import { useDispatch } from "react-redux";
@@ -19,7 +19,10 @@ function ProductCards() {
         width={800}
         height={800}
         alt={product.title}
-      ></Image>
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }}></Image>
       <h2>{product.title}</h2>
       <button
         onClick={() => {

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Tooltip from "../../general/Tooltip";
 import Link from "next/link";
 
@@ -10,11 +10,13 @@ function Attribuut({ icon, name, tooltipText, bestelButton }) {
           <div className="text-center h-20 w-20 relative mx-auto flex-shrink-0">
             <Image
               src={icon}
-              layout="fill"
-              objectFit="contain"
-              objectPosition="center"
               alt={name}
-            ></Image>
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "contain",
+                objectPosition: "center"
+              }}></Image>
           </div>
           <div>
             <div className={`text-navy-light1 text-tiny text-center ${!bestelButton && "mb-7"}`}>

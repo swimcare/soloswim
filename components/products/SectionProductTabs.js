@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import SubSectionInhoudsopgave from "./inhoudsopgave/SubSectionInhoudsopgave";
 import SubSectionBenodigdhedenNiveaus from "./benodigdheden/SubSectionBenodigdhedenNiveaus";
@@ -93,11 +93,13 @@ function SectionProductTabs({ productData }) {
                     <Image
                       className="md:rounded-xl"
                       src={productData.tab1_image}
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="center"
                       alt={productData.title}
-                    ></Image>
+                      fill
+                      sizes="100vw"
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center"
+                      }}></Image>
                     <div className="md:hidden relative">
                       <WaveExtendedSvg fill="#fff" />
                     </div>

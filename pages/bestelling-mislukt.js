@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
@@ -16,7 +16,10 @@ function bestellingMislukt() {
                 width={512}
                 height={512}
                 alt="alert"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
             <h1 className="my-5 sm:my-10 font-lexend text-main text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
               Bestelling mislukt

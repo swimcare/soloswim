@@ -1,5 +1,5 @@
 import IconCard from "../components/home/IconCard";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
@@ -83,16 +83,21 @@ function overOns() {
                 width={1016}
                 height={645}
                 alt="Ons verhaal"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
             <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12 lg:min-h-[600px]">
               <Image
                 className="rounded-t-xl sm:rounded-none"
                 src="/images/over-ons/over-ons.png"
-                layout="fill"
-                objectFit="cover"
                 alt="Ons verhaal"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
             <div className="bg-grey-light4 mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
               <div>
@@ -188,7 +193,10 @@ function overOns() {
                     width={604}
                     height={403}
                     alt="Ontstaan soloswim"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </div>
                 <p className="hidden lg:block pt-7">
                   Sinds we niet meer bij een club zwemmen maken wij onze eigen

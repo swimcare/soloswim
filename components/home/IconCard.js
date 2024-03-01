@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Fade from "react-reveal/Fade";
 
 
@@ -16,11 +16,13 @@ function IconCard({ title, img, color, shadow }) {
           <div className="relative transform -translate-y-7 w-52 h-40 mx-auto">
             <Image
               src={img}
-              layout="fill"
-              objectFit="contain"
-              objectPosition="bottom"
               alt={title}
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "contain",
+                objectPosition: "bottom"
+              }} />
           </div>
           <h3 className="text-navy-light1 font-semibold mx-4 transform -translate-y-2">
             {title}

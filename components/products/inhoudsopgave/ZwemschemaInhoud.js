@@ -2,7 +2,7 @@ import { EyeIcon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/solid";
 import { Fragment, useState } from "react";
 import Modal from "../../general/Modal";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function ZwemschemaInhoud(props) {
   const [previewModalIsOpen, setpreviewModalIsOpen] = useState(false);
@@ -72,11 +72,13 @@ function ZwemschemaInhoud(props) {
           <div className="w-full h-full relative">
             <Image
               src={props.preview}
-              layout="fill"
-              objectFit="contain"
-              objectPosition="center"
               alt={props.title}
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "contain",
+                objectPosition: "center"
+              }} />
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-center p-3 xs:gap-5 border-t border-gray-300">

@@ -1,5 +1,5 @@
 import { CheckIcon } from "@heroicons/react/solid";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import MultiCarousel from "react-multi-carousel";
@@ -133,29 +133,35 @@ export default function Home() {
               <Image
                 src="/images/home/header-desktop.jpg"
                 alt="soloswim"
-                layout="fill"
-                objectFit="cover"
                 priority
                 quality={100}
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
             <div className="hidden sm:block xl:hidden">
               <Image
                 src="/images/home/header-tablet.jpg"
                 alt="soloswim"
-                layout="fill"
-                objectFit="cover"
                 priority
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
             <div className="sm:hidden">
               <Image
                 src="/images/home/header-small.jpg"
                 alt="soloswim"
-                layout="fill"
-                objectFit="cover"
                 priority
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
 
             <div className="grid grid-cols-6 w-full sm:w-5/6 md:w-5/6 lg:w-4/6 h-full absolute transform -translate-x-56 md:-translate-x-48 lg:-translate-x-64 xl:-translate-x-48">
@@ -226,12 +232,14 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro1.png"
-                  layout="fill"
-                  objectFit="contain"
-                  objectPosition="center"
                   alt="Soloswim zwemschema's"
                   priority
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "contain",
+                    objectPosition: "center"
+                  }} />
               </div>
               <div
                 className={`${
@@ -240,12 +248,14 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro2.png"
-                  layout="fill"
-                  objectFit="contain"
-                  objectPosition="center"
                   alt="Soloswim zwemschema's"
                   priority
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "contain",
+                    objectPosition: "center"
+                  }} />
               </div>
               <div
                 className={`${
@@ -254,12 +264,14 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro3.png"
-                  layout="fill"
-                  objectFit="contain"
-                  objectPosition="center"
                   alt="Soloswim zwemschema's"
                   priority
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "contain",
+                    objectPosition: "center"
+                  }} />
               </div>
             </div>
 
@@ -341,52 +353,62 @@ export default function Home() {
                 <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema1.png"
-                    layout="fill"
-                    objectFit="contain"
-                    objectPosition="center"
                     alt="zwemschema"
                     priority
-                  />
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "contain",
+                      objectPosition: "center"
+                    }} />
                 </div>
                 <div className={`${productSlide === 1 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema2.png"
-                    layout="fill"
-                    objectFit="contain"
-                    objectPosition="center"
                     alt="zwemschema"
                     priority
-                  />
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "contain",
+                      objectPosition: "center"
+                    }} />
                 </div>
                 <div className={`${productSlide === 2 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema3.png"
-                    layout="fill"
-                    objectFit="contain"
-                    objectPosition="center"
                     alt="zwemschema"
                     priority
-                  />
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "contain",
+                      objectPosition: "center"
+                    }} />
                 </div>
                 <div className={`${productSlide === 3 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema4.png"
-                    layout="fill"
-                    objectFit="contain"
-                    objectPosition="center"
                     alt="zwemschema"
                     priority
-                  />
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "contain",
+                      objectPosition: "center"
+                    }} />
                 </div>
                 <div className={`${productSlide === 4 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema5.png"
-                    layout="fill"
-                    objectFit="contain"
-                    objectPosition="center"
                     alt="zwemschema"
                     priority
-                  />
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "contain",
+                      objectPosition: "center"
+                    }} />
                 </div>
               </div>
               <div className="flex-grow my-auto transform sm:-translate-x-5">
@@ -400,7 +422,10 @@ export default function Home() {
                         width={350}
                         height={476}
                         alt="zwemschema"
-                      />
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
 
                     <div
@@ -411,7 +436,10 @@ export default function Home() {
                         width={350}
                         height={476}
                         alt="zwemschema"
-                      />
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                     <div
                       className={`${productSlide === 2 ? "block" : "hidden"}`}
@@ -421,7 +449,10 @@ export default function Home() {
                         width={350}
                         height={476}
                         alt="zwemschema"
-                      />
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                     <div
                       className={`${productSlide === 3 ? "block" : "hidden"}`}
@@ -431,7 +462,10 @@ export default function Home() {
                         width={350}
                         height={476}
                         alt="zwemschema"
-                      />
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                     <div
                       className={`${productSlide === 4 ? "block" : "hidden"}`}
@@ -441,7 +475,10 @@ export default function Home() {
                         width={350}
                         height={476}
                         alt="zwemschema"
-                      />
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                   </div>
 
@@ -626,11 +663,13 @@ export default function Home() {
                     <div className="relative transform -translate-y-16 w-52 h-48 mx-auto">
                       <Image
                         src="/images/home/stap1.png"
-                        layout="fill"
-                        objectFit="contain"
-                        objectPosition="bottom"
                         alt="Selecteer een trainingsbundel die bij jou past"
-                      />
+                        fill
+                        sizes="100vw"
+                        style={{
+                          objectFit: "contain",
+                          objectPosition: "bottom"
+                        }} />
                     </div>
                     <h3 className="text-navy-light1 font-semibold mx-4 transform -translate-y-10">
                       Selecteer een trainingsbundel die bij jou past
@@ -803,16 +842,21 @@ export default function Home() {
                     width={996}
                     height={772}
                     alt="Oprichters soloswim"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </div>
                 <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
                   <Image
                     className="rounded-t-xl sm:rounded-none"
                     src="/images/home/oprichters-soloswim.png"
-                    layout="fill"
-                    objectFit="cover"
                     alt="Oprichters soloswim"
-                  />
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "cover"
+                    }} />
                 </div>
                 <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
                   <div>

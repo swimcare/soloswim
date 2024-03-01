@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Tooltip from "../../general/Tooltip";
 
 function DubbelAttribuut({
@@ -18,20 +18,24 @@ function DubbelAttribuut({
             <div className="self-center h-20 w-20 ml-auto flex-shrink-0 mb-1 relative">
               <Image
                 src={icon1}
-                layout="fill"
-                objectFit="contain"
-                objectPosition="center"
                 alt={alt1}
-              ></Image>
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "center"
+                }}></Image>
             </div>
             <div className="self-center h-10 w-20 mr-auto flex-shrink-0 relative">
               <Image
                 src={icon2}
-                layout="fill"
-                objectFit="contain"
-                objectPosition="center"
                 alt={alt2}
-              ></Image>
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "center"
+                }}></Image>
             </div>
           </div>
           <div className="text-center text-navy-light1 mb-14 text-tiny">

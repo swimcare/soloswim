@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectItems } from "../../slices/basketSlice";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useEffect } from "react";
 import { ShoppingCartIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
@@ -64,7 +64,10 @@ function Header() {
                   width={500}
                   height={171}
                   priority
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               ) : (
                 <Image
                   src="/images/logo/alt-logo-white-500x171.png"
@@ -72,7 +75,10 @@ function Header() {
                   width={500}
                   height={171}
                   priority
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               )}
 
             </Link>

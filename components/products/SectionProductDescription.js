@@ -5,7 +5,7 @@ import {
 } from "@heroicons/react/outline";
 import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { useState } from "react";
 
@@ -20,10 +20,12 @@ function SectionProductDescription({
       <div className="h-96 lg:h-[calc(32rem)] relative" key={image}>
         <Image
           src={image}
-          layout="fill"
-          objectFit="contain"
           alt={productData.title}
-        ></Image>
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "contain"
+          }}></Image>
       </div>
     );
   });

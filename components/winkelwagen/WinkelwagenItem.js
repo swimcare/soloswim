@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { CheckIcon, ExclamationIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import NumberFormat from "react-number-format";
@@ -78,7 +78,10 @@ function WinkelwagenItem({
                 }
                 width={300}
                 height={300}
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
 
             </Link>
           </div>

@@ -1,6 +1,6 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 import MultiColorBg from "../home/MultiColorBg";
 
@@ -86,7 +86,10 @@ function SectionCoaches({ color, isCombi }) {
                     width={900}
                     height={900}
                     alt="coach"
-                  ></Image>
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }}></Image>
                 </div>
                 <div className="px-4">
                   <p className="text-navy-light1 text-tiny leading-7 mx-5">
@@ -111,7 +114,10 @@ function SectionCoaches({ color, isCombi }) {
                     width={900}
                     height={900}
                     alt="coach"
-                  ></Image>
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }}></Image>
                 </div>
                 <div className="px-4">
                   <p className="text-navy-light1 text-tiny leading-7 mx-5">

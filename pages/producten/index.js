@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import { getSortedProductsData } from "../../lib/products";
 import SectionFaq from "../../components/products/SectionFaq";
@@ -81,7 +81,10 @@ function index({ allProductsData }) {
                                 width={400}
                                 height={400}
                                 alt={title}
-                              ></Image>
+                                style={{
+                                  maxWidth: "100%",
+                                  height: "auto"
+                                }}></Image>
                             </div>
                             <div className="text-grey-dark1 px-8 mx-auto mt-10">
                               <p className="font-bold uppercase">{title}</p>
