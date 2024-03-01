@@ -363,12 +363,9 @@ function privacyPolicy() {
               Contactgegevens
             </h2>
             <h3 className="text-main text-lg font-lexend font-bold mt-10 mb-5">
-              Media Modes
+              Soloswim
             </h3>
-            <p className="text-navy-light1">
-              Godfried van Seijstlaan 27 D1 3703BR Zeist Nederland T 06 19 89 90
-              10 E info@soloswim.nl
-            </p>
+            <p className="text-navy-light1">info@soloswim.nl</p>
             <h3 className="text-main text-lg font-lexend font-bold mt-10 mb-5">
               Contactpersoon voor privacyzaken
             </h3>

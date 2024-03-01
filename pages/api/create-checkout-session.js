@@ -83,6 +83,7 @@ export default async (req, res) => {
         ],
         line_items: transformedItems,
         mode: "payment",
+        allow_promotion_codes: true,
         metadata: {
           products: JSON.stringify(
             items.map((item) => ({
