@@ -54,14 +54,14 @@ function WinkelwagenModal({ productData, modalIsOpen, toggleModal }) {
         >
           Verder winkelen
         </button>
-        <Link href="/winkelwagen">
-          <a
-            // add move to winkelwagen redirect here
-            onClick={toggleModal}
-            className="text-white focus:outline-none m-1.5 rounded-full px-6 py-2 bg-main hover:bg-white hover:text-main border-2 border-main"
-          >
+        <Link
+          href="/winkelwagen"
+          // add move to winkelwagen redirect here
+          onClick={toggleModal}
+          className="text-white focus:outline-none m-1.5 rounded-full px-6 py-2 bg-main hover:bg-white hover:text-main border-2 border-main">
+          
             Naar winkelwagen
-          </a>
+          
         </Link>
       </div>
     </Modal>

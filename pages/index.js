@@ -185,14 +185,14 @@ export default function Home() {
               <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
                 <Bounce left>
                   <Link href="/producten">
-                    <a>
-                      <button
-                        role="button"
-                        className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                      >
-                        Shop nu
-                      </button>
-                    </a>
+
+                    <button
+                      role="button"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                    >
+                      Shop nu
+                    </button>
+
                   </Link>
                 </Bounce>
               </div>
@@ -311,14 +311,14 @@ export default function Home() {
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32 overflow-x-hidden">
             <Bounce left>
               <Link href="/producten">
-                <a>
-                  <button
-                    role="button"
-                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                  >
-                    Bekijk ons aanbod
-                  </button>
-                </a>
+
+                <button
+                  role="button"
+                  className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                >
+                  Bekijk ons aanbod
+                </button>
+
               </Link>
             </Bounce>
           </div>
@@ -684,14 +684,14 @@ export default function Home() {
                 </h3>
                 <div className="hidden md:block my-auto flex-shrink-0">
                   <Link href="/producten">
-                    <a>
-                      <button
-                        role="button"
-                        className="text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                      >
-                        Bekijk alle producten
-                      </button>
-                    </a>
+
+                    <button
+                      role="button"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                    >
+                      Bekijk alle producten
+                    </button>
+
                   </Link>
                 </div>
               </div>
@@ -747,14 +747,14 @@ export default function Home() {
               </MultiCarousel>
             </div>
             <Link href="/producten">
-              <a>
-                <button
-                  role="button"
-                  className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                >
-                  Bekijk alle producten
-                </button>
-              </a>
+
+              <button
+                role="button"
+                className="md:hidden text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+              >
+                Bekijk alle producten
+              </button>
+
             </Link>
           </div>
         </section>
@@ -841,27 +841,27 @@ export default function Home() {
                   </div>
                   <div className="lg:inline-block hidden my-6">
                     <Link href="/over-ons">
-                      <a>
-                        <button
-                          role="button"
-                          className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                        >
-                          Meer over ons
-                        </button>
-                      </a>
+
+                      <button
+                        role="button"
+                        className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                      >
+                        Meer over ons
+                      </button>
+
                     </Link>
                   </div>
                 </div>
                 <div className="inline-block lg:hidden mx-auto my-6">
                   <Link href="/producten">
-                    <a>
-                      <button
-                        role="button"
-                        className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                      >
-                        Meer over ons
-                      </button>
-                    </a>
+
+                    <button
+                      role="button"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                    >
+                      Meer over ons
+                    </button>
+
                   </Link>
                 </div>
               </div>

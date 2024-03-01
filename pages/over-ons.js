@@ -234,11 +234,11 @@ function overOns() {
             </h3>
             <div className="my-5">
               <Link href="/contact">
-                <a>
-                  <button className="my-4 lg:my-6 text-white max-w-xs lg:text-lg font-bold uppercase w-full px-3 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main">
-                    Neem contact op
-                  </button>
-                </a>
+
+                <button className="my-4 lg:my-6 text-white max-w-xs lg:text-lg font-bold uppercase w-full px-3 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main">
+                  Neem contact op
+                </button>
+
               </Link>
             </div>
           </div>

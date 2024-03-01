@@ -30,14 +30,14 @@ function berichtVerzonden() {
 
             <div className="my-5 sm:my-10">
               <Link href="/">
-                <a>
-                  <button
-                    role="button"
-                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                  >
-                    Terug naar home
-                  </button>
-                </a>
+
+                <button
+                  role="button"
+                  className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                >
+                  Terug naar home
+                </button>
+
               </Link>
             </div>
           </div>

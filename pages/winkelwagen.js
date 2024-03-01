@@ -137,8 +137,8 @@ function winkelwagen() {
                     Afrekenen
                   </button>
                   <div className="text-center py-2">
-                    <Link href="/producten">
-                      <a className="hover:underline">Verder winkelen</a>
+                    <Link href="/producten" className="hover:underline">
+                      Verder winkelen
                     </Link>
                   </div>
                 </div>
@@ -157,14 +157,14 @@ function winkelwagen() {
                 <div className="pb-12 pt-8 max-w-lg mx-auto">
                   <Link href="/producten" passHref>
                     {/* todo: add Link element */}
-                    <a>
-                      <button
-                        role="link"
-                        className="text-white lg:text-lg font-bold uppercase w-full px-3 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
-                      >
-                        Naar producten
-                      </button>
-                    </a>
+
+                    <button
+                      role="link"
+                      className="text-white lg:text-lg font-bold uppercase w-full px-3 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+                    >
+                      Naar producten
+                    </button>
+
                   </Link>
                 </div>
               </div>

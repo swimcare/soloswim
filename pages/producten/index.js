@@ -67,38 +67,38 @@ function index({ allProductsData }) {
                       className="bg-grey-light4 rounded-2xl hover:cursor-pointer hover:ring-4 hover:ring-main py-5"
                     >
                       <Link href={`/producten/${id}`}>
-                        <a>
-                          <div>
-                            <div className="inline-block bg-white mb-6 rounded-r-md px-3 py-1">
-                              <p className="text-navy-light1 text-tiny">
-                                {card_info ? card_info : "Keuze uit 3 niveaus"}
+
+                        <div>
+                          <div className="inline-block bg-white mb-6 rounded-r-md px-3 py-1">
+                            <p className="text-navy-light1 text-tiny">
+                              {card_info ? card_info : "Keuze uit 3 niveaus"}
+                            </p>
+                          </div>
+                          <div className="text-center">
+                            <div className="w-5/6 mx-auto">
+                              <Image
+                                src={images[0]}
+                                width={400}
+                                height={400}
+                                alt={title}
+                              ></Image>
+                            </div>
+                            <div className="text-grey-dark1 px-8 mx-auto mt-10">
+                              <p className="font-bold uppercase">{title}</p>
+                              <p className="text-tiny mt-1">
+                                <NumberFormat
+                                  value={price}
+                                  decimalSeparator=","
+                                  displayType="text"
+                                  prefix={"€ "}
+                                  decimalScale={2}
+                                  fixedDecimalScale={true}
+                                />
                               </p>
                             </div>
-                            <div className="text-center">
-                              <div className="w-5/6 mx-auto">
-                                <Image
-                                  src={images[0]}
-                                  width={400}
-                                  height={400}
-                                  alt={title}
-                                ></Image>
-                              </div>
-                              <div className="text-grey-dark1 px-8 mx-auto mt-10">
-                                <p className="font-bold uppercase">{title}</p>
-                                <p className="text-tiny mt-1">
-                                  <NumberFormat
-                                    value={price}
-                                    decimalSeparator=","
-                                    displayType="text"
-                                    prefix={"€ "}
-                                    decimalScale={2}
-                                    fixedDecimalScale={true}
-                                  />
-                                </p>
-                              </div>
-                            </div>
                           </div>
-                        </a>
+                        </div>
+
                       </Link>
                     </li>
                   )

@@ -24,14 +24,14 @@ function Attribuut({ icon, name, tooltipText, bestelButton }) {
           {bestelButton && (
             <div className="my-5 mt-auto text-center">
               <Link href={bestelButton}>
-                <a>
-                  <button
-                    role="button"
-                    className="text-white disabled:opacity-50 text-xs font-semibold uppercase px-3 py-1 rounded-full bg-main tracking-wider shadow-md hover:bg-transparent hover:text-main border-2 border-main"
-                  >
-                    Bekijk
-                  </button>
-                </a>
+
+                <button
+                  role="button"
+                  className="text-white disabled:opacity-50 text-xs font-semibold uppercase px-3 py-1 rounded-full bg-main tracking-wider shadow-md hover:bg-transparent hover:text-main border-2 border-main"
+                >
+                  Bekijk
+                </button>
+
               </Link>
             </div>
           )}

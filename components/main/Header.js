@@ -56,42 +56,42 @@ function Header() {
           {/* Soloswim logo */}
           <div className="w-32 lg:w-40">
             <Link href="/">
-              <a>
-                {!mobileMenuExtended ? (
-                  <Image
-                    src="/images/logo/alt-logo-black-500x171.png"
-                    alt="Soloswim logo black"
-                    width={500}
-                    height={171}
-                    priority
-                  />
-                ) : (
-                  <Image
-                    src="/images/logo/alt-logo-white-500x171.png"
-                    alt="Soloswim logo white"
-                    width={500}
-                    height={171}
-                    priority
-                  />
-                )}
-              </a>
+
+              {!mobileMenuExtended ? (
+                <Image
+                  src="/images/logo/alt-logo-black-500x171.png"
+                  alt="Soloswim logo black"
+                  width={500}
+                  height={171}
+                  priority
+                />
+              ) : (
+                <Image
+                  src="/images/logo/alt-logo-white-500x171.png"
+                  alt="Soloswim logo white"
+                  width={500}
+                  height={171}
+                  priority
+                />
+              )}
+
             </Link>
           </div>
           {/* Mobile shopping cart icon TODO: add numbering, zie amazon */}
           <div className="sm:hidden relative self-center hover:underline hover:cursor-pointer">
             <Link href="/winkelwagen">
-              <a>
-                <ShoppingCartIcon
-                  className={`w-8 h-8 ${
-                    mobileMenuExtended ? "text-white" : "text-main"
-                  }`}
-                />
-                {items.length > 0 && (
-                  <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim2-orange text-center rounded-full text-black text-sm font-semibold">
-                    {items.length}
-                  </span>
-                )}
-              </a>
+
+              <ShoppingCartIcon
+                className={`w-8 h-8 ${
+                  mobileMenuExtended ? "text-white" : "text-main"
+                }`}
+              />
+              {items.length > 0 && (
+                <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim2-orange text-center rounded-full text-black text-sm font-semibold">
+                  {items.length}
+                </span>
+              )}
+
             </Link>
           </div>
 
@@ -99,38 +99,38 @@ function Header() {
           <ul className="hidden sm:flex flex-row space-x-8 lg:space-x-10 font-lexend font-semibold text-navy-light1 h-10">
             <li className="self-center hover:underline">
               <Link href="/producten">
-                <a>Zwemschema's</a>
+                Zwemschema's
               </Link>
             </li>
             <li className="self-center hover:underline">
               <Link href="/over-ons">
-                <a>Over Soloswim</a>
+                Over Soloswim
               </Link>
             </li>
             <li className="self-center hover:underline">
               <Link href="/contact">
-                <a>Contact</a>
+                Contact
               </Link>
             </li>
             <li className="hidden md:block self-center hover:underline hover:cursor-pointer">
               <Link href="/winkelwagen">
-                <a>
-                  <span className="inline-block mr-2 transform translate-y-1">
-                    <ShoppingCartIcon className="w-5 h-5 text-main" />
-                  </span>
-                  <span>Winkelwagen ({items.length})</span>
-                </a>
+
+                <span className="inline-block mr-2 transform translate-y-1">
+                  <ShoppingCartIcon className="w-5 h-5 text-main" />
+                </span>
+                <span>Winkelwagen ({items.length})</span>
+
               </Link>
             </li>
             <li className="md:hidden sm:relative self-center hover:underline hover:cursor-pointer">
               <Link href="/winkelwagen">
-                <a>
-                  <ShoppingCartIcon
-                    className={`w-8 h-8 ${
-                      mobileMenuExtended ? "text-white" : "text-main"
-                    }`}
-                  />
-                </a>
+
+                <ShoppingCartIcon
+                  className={`w-8 h-8 ${
+                    mobileMenuExtended ? "text-white" : "text-main"
+                  }`}
+                />
+
               </Link>
               {items.length > 0 && (
                 <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 h-5 w-5 bg-soloswim2-orange text-center rounded-full text-black text-sm font-semibold">
@@ -145,32 +145,32 @@ function Header() {
           <div className="sm:hidden bg-main text-white font-lexend font-bold text-xl pt-6 transform -translate-y-1">
             <ul>
               <Link href="/">
-                <a>
-                  <li className="py-3 border-b border-opacity-25">
-                    <span className="ml-3">Home</span>
-                  </li>
-                </a>
+
+                <li className="py-3 border-b border-opacity-25">
+                  <span className="ml-3">Home</span>
+                </li>
+
               </Link>
               <Link href="/producten">
-                <a>
-                  <li className="py-3 border-b border-opacity-25">
-                    <span className="ml-3">Zwemschema's</span>
-                  </li>
-                </a>
+
+                <li className="py-3 border-b border-opacity-25">
+                  <span className="ml-3">Zwemschema's</span>
+                </li>
+
               </Link>
               <Link href="/over-ons">
-                <a>
-                  <li className="py-3 border-b border-opacity-25">
-                    <span className="ml-3">Over Soloswim</span>
-                  </li>
-                </a>
+
+                <li className="py-3 border-b border-opacity-25">
+                  <span className="ml-3">Over Soloswim</span>
+                </li>
+
               </Link>
               <Link href="/contact">
-                <a>
-                  <li className="py-3 border-b border-opacity-25">
-                    <span className="ml-3">Contact</span>
-                  </li>
-                </a>
+
+                <li className="py-3 border-b border-opacity-25">
+                  <span className="ml-3">Contact</span>
+                </li>
+
               </Link>
             </ul>
           </div>

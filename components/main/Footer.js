@@ -25,25 +25,25 @@ function Footer() {
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
               <li>
-                <Link href="/producten/#faq">
-                  <a className="hover:underline">FAQ</a>
+                <Link href="/producten/#faq" className="hover:underline">
+                  FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy">
-                  <a className="hover:underline">Privacy Policy</a>
+                <Link href="/privacy-policy" className="hover:underline">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/algemene-voorwaarden">
-                  <a className="hover:underline">Algemene voorwaarden</a>
+                <Link href="/algemene-voorwaarden" className="hover:underline">
+                  Algemene voorwaarden
                 </Link>
               </li>
               <li>
-                <Link href="/verzending-en-retourneren">
-                  <a className="hover:underline">
+                <Link href="/verzending-en-retourneren" className="hover:underline">
+                  
                     Verzending &amp; retourneren
-                  </a>
+                  
                 </Link>
               </li>
             </ul>
@@ -54,8 +54,8 @@ function Footer() {
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
               <li>
-                <Link href="mailto:info@soloswim.nl">
-                  <a className="hover:underline">info@soloswim.nl</a>
+                <Link href="mailto:info@soloswim.nl" className="hover:underline">
+                  info@soloswim.nl
                 </Link>
               </li>
             </ul>

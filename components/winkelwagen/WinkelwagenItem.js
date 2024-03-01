@@ -57,29 +57,29 @@ function WinkelwagenItem({
         <div className="w-full">
           <h2 className="font-semibold font-lexend md:text-lg text-base leading-5">
             <Link href={`/producten/${id}`}>
-              <a>{title}</a>
+              {title}
             </Link>
           </h2>
           <h3 className="text-xs md:text-sm my-1">
             <Link href={`/producten/${id}`}>
-              <a>{type}</a>
+              {type}
             </Link>
           </h3>
         </div>
         <div className="w-52 my-2">
           <div className="hover:cursor-pointer">
             <Link href={`/producten/${id}`}>
-              <a>
-                <Image
-                  src={
-                    type && winkelwagen_images
-                      ? winkelwagen_images[typeNumber()]
-                      : images[0]
-                  }
-                  width={300}
-                  height={300}
-                />
-              </a>
+
+              <Image
+                src={
+                  type && winkelwagen_images
+                    ? winkelwagen_images[typeNumber()]
+                    : images[0]
+                }
+                width={300}
+                height={300}
+              />
+
             </Link>
           </div>
         </div>

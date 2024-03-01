@@ -36,18 +36,18 @@ function bestellingMislukt() {
             <div className="my-5 sm:my-10">
               <div className="mb-2">
                 <Link href="/producten">
-                  <a>
-                    <button
-                      role="button"
-                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                    >
-                      Terug naar ons aanbod
-                    </button>
-                  </a>
+
+                  <button
+                    role="button"
+                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                  >
+                    Terug naar ons aanbod
+                  </button>
+
                 </Link>
               </div>
-              <Link href="/contact">
-                <a className="hover:underline">Neem contact op</a>
+              <Link href="/contact" className="hover:underline">
+                Neem contact op
               </Link>
             </div>
           </div>
