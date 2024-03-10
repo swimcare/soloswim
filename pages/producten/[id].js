@@ -99,11 +99,11 @@ export default function Zwemschema({ productData }) {
 
       <main>
         {/* WINKELWAGEN MODAL */}
-        <WinkelwagenModal
+        {/* <WinkelwagenModal
           productData={productData}
           toggleModal={toggleModal}
           modalIsOpen={modalIsOpen}
-        />
+        /> */}
 
         <SectionProductDescription
           selectedOption={selectedOption}

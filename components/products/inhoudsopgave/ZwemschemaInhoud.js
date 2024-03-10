@@ -1,7 +1,6 @@
 import { EyeIcon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/solid";
 import { Fragment, useState } from "react";
-import Modal from "../../general/Modal";
 import Image from "next/image";
 
 function ZwemschemaInhoud(props) {
@@ -47,49 +46,45 @@ function ZwemschemaInhoud(props) {
           <p className="text-xs md:hidden">{props.tags}</p>
         </div>
       </div>
-      <Modal
+      {/* <div
         isOpen={previewModalIsOpen}
         toggle={toggleModal}
         fullHeight
         extraClasses="max-w-5xl h-full"
-      >
-        <div className="flex justify-between border-b border-gray-300 bg-main rounded-t-2xl">
-          <div className="p-4 text-xl font-lexend font-semibold text-white">
-            <h1>
-              Preview: {props.number} {props.name}
-            </h1>
-          </div>
-          <button
-            type="button"
-            className="self-start m-3"
-            onClick={toggleModal}
-          >
-            <XIcon className="h-6 w-6 text-white" />
-          </button>
+      > */}
+      {/* <div className="flex justify-between border-b border-gray-300 bg-main rounded-t-2xl">
+        <div className="p-4 text-xl font-lexend font-semibold text-white">
+          <h1>
+            Preview: {props.number} {props.name}
+          </h1>
         </div>
+        <button type="button" className="self-start m-3" onClick={toggleModal}>
+          <XIcon className="h-6 w-6 text-white" />
+        </button>
+      </div>
 
-        <div className="h-full p-4">
-          <div className="w-full h-full relative">
-            <Image
-              src={props.preview}
-              alt={props.title}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-                objectPosition: "center"
-              }} />
-          </div>
+      <div className="h-full p-4">
+        <div className="w-full h-full relative">
+          <Image
+            src={props.preview}
+            alt={props.title}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "contain",
+              objectPosition: "center",
+            }}
+          />
         </div>
-        <div className="flex flex-wrap items-center justify-center p-3 xs:gap-5 border-t border-gray-300">
-          <button
-            onClick={toggleModal}
-            className="text-black font-medium hover:cursor-pointer hover:underline"
-          >
-            Sluiten
-          </button>
-        </div>
-      </Modal>
+      </div> */}
+      {/* <div className="flex flex-wrap items-center justify-center p-3 xs:gap-5 border-t border-gray-300">
+        <button
+          onClick={toggleModal}
+          className="text-black font-medium hover:cursor-pointer hover:underline"
+        >
+          Sluiten
+        </button>
+      </div> */}
     </Fragment>
   );
 }
