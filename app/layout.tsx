@@ -1,5 +1,19 @@
 import { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import { Lexend } from "next/font/google";
 import GoogleAnalytics from "../components/GoogleAnalytics";
+
+// If loading a variable font, you don't need to specify the font weight
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+const lexend = Lexend({
+  subsets: ["latin"],
+  variable: "--font-lexend",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Soloswim | Waterproof zwemschema's",
@@ -29,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="nl" className={`${montserrat.variable} ${lexend.variable}`}>
       <GoogleAnalytics />
       <body>{children}</body>
     </html>

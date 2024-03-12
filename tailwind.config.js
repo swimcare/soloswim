@@ -59,9 +59,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
+        sans: ["var(--font-montserrat)", "Helvetica", "Arial", "sans-serif"],
         lexend: [
-          "Lexend",
+          "var(--font-lexend)",
           "ui-serif",
           "Georgia",
           "Cambria",
