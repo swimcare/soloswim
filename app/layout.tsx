@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Soloswim | Waterproof zwemschema's",
@@ -29,6 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
       <body>{children}</body>
     </html>
   );
