@@ -45,13 +45,6 @@ export default function Zwemschema({ productData }) {
   //   Bepalen van het niveau (alleen als type property wordt meegegeven aan de productData!)
   const [selectedOption, setSelectedOption] = useState();
 
-  // Winkelwagen modal functionality
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const toggleModal = () => {
-    setModalIsOpen(!modalIsOpen);
-  };
-
   const addToCartGA = (product) => {
     ga.event({
       action: "add_to_cart",
