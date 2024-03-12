@@ -1,35 +1,31 @@
 import Image from "next/image";
-import Fade from "react-reveal/Fade";
-
+// import Fade from "react-reveal/Fade";
 
 function IconCard({ title, img, color, shadow }) {
   return (
-    <Fade bottom>
-      <div
-        className={`${
-          color ? color : "bg-white"
-        } rounded-2xl w-full max-w-sm mx-auto h-56 ${
-          shadow && "shadow-custom3"
-        }`}
-      >
-        <div className="flex flex-col text-center">
-          <div className="relative transform -translate-y-7 w-52 h-40 mx-auto">
-            <Image
-              src={img}
-              alt={title}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-                objectPosition: "bottom"
-              }} />
-          </div>
-          <h3 className="text-navy-light1 font-semibold mx-4 transform -translate-y-2">
-            {title}
-          </h3>
+    <div
+      className={`${
+        color ? color : "bg-white"
+      } rounded-2xl w-full max-w-sm mx-auto h-56 ${shadow && "shadow-custom3"}`}
+    >
+      <div className="flex flex-col text-center">
+        <div className="relative transform -translate-y-7 w-52 h-40 mx-auto">
+          <Image
+            src={img}
+            alt={title}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "contain",
+              objectPosition: "bottom",
+            }}
+          />
         </div>
+        <h3 className="text-navy-light1 font-semibold mx-4 transform -translate-y-2">
+          {title}
+        </h3>
       </div>
-    </Fade>
+    </div>
   );
 }
 
