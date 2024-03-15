@@ -9,6 +9,8 @@ import SectionNiveauInfo from "../../components/products/SectionNiveauInfo";
 import WinkelwagenModal from "../../components/products/WinkelwagenModal";
 import * as ga from "../../lib/ga/index";
 import { NextSeo } from "next-seo";
+import CartModal from "../../components/products/CartModal";
+import Link from "next/link";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -39,7 +41,7 @@ export default function Zwemschema({ productData }) {
     // Google analytics event
     addToCartGA(product);
     // opening the winkelwagen modal
-    toggleModal();
+    // toggleModal();
   };
 
   //   Bepalen van het niveau (alleen als type property wordt meegegeven aan de productData!)
@@ -97,13 +99,27 @@ export default function Zwemschema({ productData }) {
           toggleModal={toggleModal}
           modalIsOpen={modalIsOpen}
         /> */}
-
+        <CartModal />
         <SectionProductDescription
           selectedOption={selectedOption}
           setSelectedOption={setSelectedOption}
           productData={productData}
           addItemToBasket={addItemToBasket}
         />
+
+        <div className="p-4">
+          <p>Homepage</p>
+          <Link
+            href={{
+              pathname: "/producten/[id]",
+              query: { modal: "true", id: productData.id },
+            }}
+          >
+            <button type="button" className="bg-blue-500 text-white p-2">
+              Open Modal
+            </button>
+          </Link>
+        </div>
 
         <SectionProductTabs productData={productData} />
 

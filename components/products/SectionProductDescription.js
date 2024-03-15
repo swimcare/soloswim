@@ -8,6 +8,7 @@ import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { useState } from "react";
+import AddToCartButton from "./AddToCartButton";
 
 function SectionProductDescription({
   productData,
@@ -24,8 +25,9 @@ function SectionProductDescription({
           fill
           sizes="100vw"
           style={{
-            objectFit: "contain"
-          }}></Image>
+            objectFit: "contain",
+          }}
+        ></Image>
       </div>
     );
   });
@@ -246,7 +248,7 @@ function SectionProductDescription({
                   Momenteel niet op voorraad
                 </button>
               )}
-
+              <AddToCartButton />
               <div className="flex flex-row items-center justify-center space-x-2 my-4 lg:my-8">
                 <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
                 <p className="text-navy-light1 text-xs pr-5">
