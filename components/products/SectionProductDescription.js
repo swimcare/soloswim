@@ -7,10 +7,13 @@ import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 function SectionProductDescription({ productData, addItemToBasket }) {
+  const searchParams = useSearchParams();
+
   const formattedProductImages = productData.images.map((image) => {
     return (
       <div className="h-96 lg:h-[calc(32rem)] relative" key={image}>
@@ -56,6 +59,13 @@ function SectionProductDescription({ productData, addItemToBasket }) {
   };
 
   const [niveau, setNiveau] = useState("beginners");
+
+  useEffect(() => {
+    const niveauParam = searchParams.get("niveau");
+    if (niveauParam) {
+      setNiveau(niveauParam);
+    }
+  }, [searchParams]);
 
   // useEffect(() => {
   //   // Get the current URL
@@ -130,7 +140,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                       <label
                         htmlFor="1"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          productData.type === "Beginners"
+                          niveau === "beginners"
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}
@@ -150,7 +160,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                       <label
                         htmlFor="2"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          productData.type === "Semi-gevorderden"
+                          niveau === "semi-gevorderden"
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}
@@ -170,7 +180,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                       <label
                         htmlFor="3"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          productData.type === "Gevorderden"
+                          niveau === "gevorderden"
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}
@@ -193,7 +203,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                       <label
                         htmlFor="1"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          productData.type === "25 meter zwembad"
+                          niveau === "25 meter zwembad"
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}
@@ -213,7 +223,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                       <label
                         htmlFor="2"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          productData.type === "50 meter zwembad"
+                          niveau === "50 meter zwembad"
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}

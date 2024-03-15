@@ -61,13 +61,20 @@ function index({ allProductsData }) {
             <div>
               <ul className="flex flex-col gap-5 my-10 md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-3">
                 {allProductsData.map(
-                  ({ id, title, images, price, card_info }) => (
+                  ({ id, title, images, price, card_info, type }) => (
                     <li
                       key={id}
                       className="bg-grey-light4 rounded-2xl hover:cursor-pointer hover:ring-4 hover:ring-main py-5"
                     >
-                      <Link href={`/producten/${id}`}>
-
+                      <Link
+                        href={{
+                          pathname: "/producten/[id]",
+                          query: {
+                            id: id,
+                            ...(type ? { niveau: type.toLowerCase() } : {}),
+                          },
+                        }}
+                      >
                         <div>
                           <div className="inline-block bg-white mb-6 rounded-r-md px-3 py-1">
                             <p className="text-navy-light1 text-tiny">
@@ -83,8 +90,9 @@ function index({ allProductsData }) {
                                 alt={title}
                                 style={{
                                   maxWidth: "100%",
-                                  height: "auto"
-                                }}></Image>
+                                  height: "auto",
+                                }}
+                              ></Image>
                             </div>
                             <div className="text-grey-dark1 px-8 mx-auto mt-10">
                               <p className="font-bold uppercase">{title}</p>
@@ -101,7 +109,6 @@ function index({ allProductsData }) {
                             </div>
                           </div>
                         </div>
-
                       </Link>
                     </li>
                   )
