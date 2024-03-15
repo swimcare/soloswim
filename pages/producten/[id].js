@@ -46,6 +46,7 @@ export default function Zwemschema({ productData }) {
 
   //   Bepalen van het niveau (alleen als type property wordt meegegeven aan de productData!)
   const [selectedOption, setSelectedOption] = useState();
+  console.log(selectedOption);
 
   const addToCartGA = (product) => {
     ga.event({
@@ -99,7 +100,7 @@ export default function Zwemschema({ productData }) {
           toggleModal={toggleModal}
           modalIsOpen={modalIsOpen}
         /> */}
-        <CartModal productData={productData} />
+        <CartModal productData={productData} selectedOption={selectedOption} />
         <SectionProductDescription
           selectedOption={selectedOption}
           setSelectedOption={setSelectedOption}

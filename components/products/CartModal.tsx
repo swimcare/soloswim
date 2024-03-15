@@ -4,22 +4,24 @@ import Link from "next/link";
 import Image from "next/image";
 import { XIcon } from "@heroicons/react/solid";
 
-function Modal({ productData }) {
+function Modal({ productData, selectedOption }) {
   const searchParams = useSearchParams();
   const modal = searchParams?.get("modal");
   const pathname = usePathname();
 
   const typeNumber = () => {
     if (
-      productData.type === "Beginners" ||
-      productData.type === "25 meter zwembad"
+      selectedOption === "Beginners" ||
+      selectedOption === "25 meter zwembad"
     ) {
       return 0;
     } else if (
-      productData.type === "Semi-gevorderden" ||
-      productData.type === "50 meter zwembad"
+      selectedOption === "Semi-gevorderden" ||
+      selectedOption === "50 meter zwembad"
     ) {
       return 1;
+    } else if (!selectedOption) {
+      return 0;
     } else {
       return 2;
     }
@@ -76,7 +78,7 @@ function Modal({ productData }) {
                           <p>{productData.title}</p>
                         </h2>
                         <h3 className="text-xs md:text-sm my-1">
-                          <p>{productData.type}</p>
+                          <p>{selectedOption}</p>
                         </h3>
                       </div>
                     </div>
