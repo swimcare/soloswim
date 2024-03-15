@@ -94,24 +94,6 @@ export default function Zwemschema({ productData }) {
           addItemToBasket={addItemToBasket}
         />
 
-        <div className="p-4">
-          <p>Homepage</p>
-          <Link
-            href={{
-              pathname: "/producten/[id]",
-              query: {
-                modal: "true",
-                id: productData.id,
-                type: productData.type?.toLowerCase(),
-              },
-            }}
-          >
-            <button type="button" className="bg-blue-500 text-white p-2">
-              Open Modal
-            </button>
-          </Link>
-        </div>
-
         <SectionProductTabs productData={productData} />
 
         {productData.niveaus ? (
