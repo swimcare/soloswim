@@ -108,7 +108,7 @@ export default function Zwemschema({ productData }) {
               query: {
                 modal: "true",
                 id: productData.id,
-                type: productData.type.toLowerCase(),
+                type: productData.type?.toLowerCase(),
               },
             }}
           >
