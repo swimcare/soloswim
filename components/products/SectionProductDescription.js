@@ -8,6 +8,7 @@ import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { useState } from "react";
+import Link from "next/link";
 
 function SectionProductDescription({
   productData,
@@ -229,15 +230,22 @@ function SectionProductDescription({
 
             <div className="text-center my-6">
               {productData.inStock ? (
-                <button
-                  role="button"
-                  onClick={() => {
-                    addItemToBasket(productData);
+                <Link
+                  href={{
+                    pathname: "/producten/[id]",
+                    query: { modal: "true", id: productData.id },
                   }}
-                  className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
                 >
-                  Toevoegen aan winkelwagen
-                </button>
+                  <button
+                    role="button"
+                    onClick={() => {
+                      addItemToBasket(productData);
+                    }}
+                    className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+                  >
+                    Toevoegen aan winkelwagen
+                  </button>
+                </Link>
               ) : (
                 <button
                   role="button"

@@ -40,8 +40,6 @@ export default function Zwemschema({ productData }) {
     dispatch(addToBasket(filteredProductData));
     // Google analytics event
     addToCartGA(product);
-    // opening the winkelwagen modal
-    // toggleModal();
   };
 
   //   Bepalen van het niveau (alleen als type property wordt meegegeven aan de productData!)

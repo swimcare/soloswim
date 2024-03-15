@@ -9,6 +9,8 @@ function Modal({ productData, selectedOption }) {
   const modal = searchParams?.get("modal");
   const pathname = usePathname();
 
+  console.log("selectedoption = " + selectedOption);
+
   const typeNumber = () => {
     if (
       selectedOption === "Beginners" ||
@@ -78,7 +80,7 @@ function Modal({ productData, selectedOption }) {
                           <p>{productData.title}</p>
                         </h2>
                         <h3 className="text-xs md:text-sm my-1">
-                          <p>{selectedOption}</p>
+                          <p>{productData.type}</p>
                         </h3>
                       </div>
                     </div>
