@@ -6,7 +6,6 @@ import SectionFaq from "../../components/products/SectionFaq";
 import SectionProductDescription from "../../components/products/SectionProductDescription";
 import SectionProductTabs from "../../components/products/SectionProductTabs";
 import SectionNiveauInfo from "../../components/products/SectionNiveauInfo";
-import WinkelwagenModal from "../../components/products/WinkelwagenModal";
 import * as ga from "../../lib/ga/index";
 import { NextSeo } from "next-seo";
 import CartModal from "../../components/products/CartModal";
@@ -25,7 +24,7 @@ export default function Zwemschema({ productData }) {
   const dispatch = useDispatch();
 
   const addItemToBasket = (product) => {
-    const filteredProductData = {
+    const cartObject = {
       product_id: product.product_id,
       id: product.id,
       title: product.title,
@@ -36,8 +35,9 @@ export default function Zwemschema({ productData }) {
       images: product.images,
       winkelwagen_images: product.winkelwagen_images,
     };
+    console.log(cartObject);
     // Sending the product as an action to the REDUX store... the basket slice
-    dispatch(addToBasket(filteredProductData));
+    dispatch(addToBasket(cartObject));
     // Google analytics event
     addToCartGA(product);
   };
@@ -92,13 +92,7 @@ export default function Zwemschema({ productData }) {
       />
 
       <main>
-        {/* WINKELWAGEN MODAL */}
-        {/* <WinkelwagenModal
-          productData={productData}
-          toggleModal={toggleModal}
-          modalIsOpen={modalIsOpen}
-        /> */}
-        <CartModal productData={productData} selectedOption={selectedOption} />
+        <CartModal />
         <SectionProductDescription
           selectedOption={selectedOption}
           setSelectedOption={setSelectedOption}

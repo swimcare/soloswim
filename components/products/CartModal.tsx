@@ -1,32 +1,35 @@
 // todo: dont use UseState for storing the type (e.g. beginners), maar gebruik een query param
 // bijv. ?type=beginners, en gebruik dit in de modal en ook voor het aanmaken van het cart object.
 
+//todo 2: ensure that the link 'verder winkelen' in the modal preserves the niveau query parameter.
+
 "use client";
 import { useSearchParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { XIcon } from "@heroicons/react/solid";
+import { useSelector } from "react-redux";
+import { selectItems } from "../../slices/basketSlice";
 
-function Modal({ productData, selectedOption }) {
+function Modal() {
   const searchParams = useSearchParams();
   const modal = searchParams?.get("inCart");
   const pathname = usePathname();
 
-  console.log("selectedoption = " + selectedOption);
+  const addedItem = useSelector(selectItems).slice(-1);
+  console.log(addedItem);
 
   const typeNumber = () => {
     if (
-      selectedOption === "Beginners" ||
-      selectedOption === "25 meter zwembad"
+      addedItem[0].type === "Beginners" ||
+      addedItem[0].type === "25 meter zwembad"
     ) {
       return 0;
     } else if (
-      selectedOption === "Semi-gevorderden" ||
-      selectedOption === "50 meter zwembad"
+      addedItem[0].type === "Semi-gevorderden" ||
+      addedItem[0].type === "50 meter zwembad"
     ) {
       return 1;
-    } else if (!selectedOption) {
-      return 0;
     } else {
       return 2;
     }
@@ -64,12 +67,8 @@ function Modal({ productData, selectedOption }) {
                     <div className="flex flex-row gap-5 my-5">
                       <div className="w-44">
                         <Image
-                          alt={productData.title}
-                          src={
-                            productData.type && productData.winkelwagen_images
-                              ? productData.winkelwagen_images[typeNumber()]
-                              : productData.images[0]
-                          }
+                          alt={addedItem[0].title}
+                          src={addedItem[0].winkelwagen_images[typeNumber()]}
                           width={300}
                           height={300}
                           style={{
@@ -80,10 +79,10 @@ function Modal({ productData, selectedOption }) {
                       </div>
                       <div>
                         <h2 className="font-semibold font-lexend md:text-lg text-base leading-5">
-                          <p>{productData.title}</p>
+                          <p>{addedItem[0].title}</p>
                         </h2>
                         <h3 className="text-xs md:text-sm my-1">
-                          <p>{productData.type}</p>
+                          <p>{addedItem[0].type}</p>
                         </h3>
                       </div>
                     </div>
@@ -94,7 +93,7 @@ function Modal({ productData, selectedOption }) {
                       href={
                         {
                           pathname: pathname,
-                          query: { niveau: productData.type },
+                          query: { niveau: addedItem[0].type.toLowerCase() },
                         } || ""
                       }
                     >
