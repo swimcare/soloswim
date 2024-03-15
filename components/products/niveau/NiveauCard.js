@@ -6,7 +6,6 @@ import { CheckIcon } from "@heroicons/react/solid";
 
 import Tooltip from "../../general/Tooltip";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 
 function NiveauCard({
   title,

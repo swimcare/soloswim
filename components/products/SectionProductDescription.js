@@ -7,7 +7,7 @@ import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 function SectionProductDescription({ productData, addItemToBasket }) {
