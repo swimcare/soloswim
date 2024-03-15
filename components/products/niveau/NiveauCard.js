@@ -2,9 +2,11 @@ import {
   InformationCircleIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
-import { CheckIcon } from "@heroicons/react/solid"
+import { CheckIcon } from "@heroicons/react/solid";
 
 import Tooltip from "../../general/Tooltip";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 function NiveauCard({
   title,
@@ -54,18 +56,41 @@ function NiveauCard({
           </div>
         </div>
         <div className="text-center mt-auto">
-          <button
-            onClick={() => {
-              productData.type = title;
-              addItemToBasket(productData);
-            }}
-            className="mb-4 lg:mb-6 w-52 text-white text-xs font-bold uppercase px-5 py-2 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
-          >
-            <span>
-              <ShoppingCartIcon className="w-4 h-4 float-left mt-[calc(-1px)]" />
-            </span>{" "}
-            in winkelwagen
-          </button>
+          {productData.inStock ? (
+            <Link
+              scroll={false}
+              href={{
+                pathname: "/producten/[id]",
+                query: {
+                  inCart: "true",
+                  id: productData.id,
+                  niveau: title.toLowerCase(),
+                },
+              }}
+            >
+              <button
+                role="button"
+                onClick={() => {
+                  productData.type = title;
+                  addItemToBasket(productData);
+                }}
+                className="mb-4 lg:mb-6 w-52 text-white text-xs font-bold uppercase px-5 py-2 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+              >
+                <span>
+                  <ShoppingCartIcon className="w-4 h-4 float-left mt-[calc(-1px)]" />
+                </span>{" "}
+                in winkelwagen{" "}
+              </button>
+            </Link>
+          ) : (
+            <button
+              role="button"
+              disabled
+              className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+            >
+              Momenteel niet op voorraad
+            </button>
+          )}
         </div>
       </div>
     </div>

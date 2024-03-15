@@ -10,12 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-function SectionProductDescription({
-  productData,
-  selectedOption,
-  setSelectedOption,
-  addItemToBasket,
-}) {
+function SectionProductDescription({ productData, addItemToBasket }) {
   const formattedProductImages = productData.images.map((image) => {
     return (
       <div className="h-96 lg:h-[calc(32rem)] relative" key={image}>
@@ -51,7 +46,6 @@ function SectionProductDescription({
   };
 
   const setType = (type, id) => {
-    setSelectedOption(type);
     productData.type = type;
     setSelectedPhoto(+id);
     setNiveau(type.toLowerCase());

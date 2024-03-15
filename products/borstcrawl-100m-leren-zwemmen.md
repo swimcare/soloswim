@@ -76,3 +76,5 @@ inhoud:
 ---
 
 10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt (zoals houding, ademhaling of armen) en bestaat uit een warming up, een kern en een cooling down. Wanneer je een zwemschema zonder problemen hebt voltooid binnen de aangegeven tijd ben je klaar voor het volgende schema. Zo werk jij op een **gestructureerde manier** aan je borstcrawl en kun je uiteindelijk 100m borstcrawl netjes afleggen **zonder uitgeput** te raken!
+
+<!-- Todo: Uiteindelijk met varianten werken (per niveau), en dan bepaalde attributes hier heen halen (zoals stock) -->
