@@ -7,7 +7,7 @@ import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 function SectionProductDescription({
@@ -54,11 +54,25 @@ function SectionProductDescription({
     setSelectedOption(type);
     productData.type = type;
     setSelectedPhoto(+id);
+    setNiveau(type.toLowerCase());
     // Add query parameter to URL
     const url = new URL(window.location.href);
     url.searchParams.set("niveau", type.toLowerCase());
     window.history.pushState({}, "", url);
   };
+
+  const [niveau, setNiveau] = useState("beginners");
+
+  // useEffect(() => {
+  //   // Get the current URL
+  //   const url = new URL(window.location.href);
+
+  //   // Get a specific query parameter
+  //   const niveau = url.searchParams.get("niveau");
+
+  //   // set it to state
+  //   setNiveau(niveau);
+  // }, []); // Empty dependency array ensures this effect runs only once
 
   return (
     <section className="bg-white">
@@ -241,6 +255,7 @@ function SectionProductDescription({
                     query: {
                       inCart: "true",
                       id: productData.id,
+                      niveau: niveau,
                     },
                   }}
                 >
