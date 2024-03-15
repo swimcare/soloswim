@@ -1,3 +1,6 @@
+// todo: dont use UseState for storing the type (e.g. beginners), maar gebruik een query param
+// bijv. ?type=beginners, en gebruik dit in de modal en ook voor het aanmaken van het cart object.
+
 "use client";
 import { useSearchParams, usePathname } from "next/navigation";
 import Link from "next/link";
@@ -86,7 +89,14 @@ function Modal({ productData, selectedOption }) {
                     </div>
                   </div>
                   <div className="flex flex-wrap items-center justify-center p-3 xs:gap-5 border-t border-gray-300">
-                    <Link href={pathname || ""}>
+                    <Link
+                      href={
+                        {
+                          pathname: pathname,
+                          query: { niveau: productData.type },
+                        } || ""
+                      }
+                    >
                       <button
                         type="button"
                         className="text-black font-medium hover:cursor-pointer hover:underline"

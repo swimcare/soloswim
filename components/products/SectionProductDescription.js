@@ -54,6 +54,10 @@ function SectionProductDescription({
     setSelectedOption(type);
     productData.type = type;
     setSelectedPhoto(+id);
+    // Add query parameter to URL
+    const url = new URL(window.location.href);
+    url.searchParams.set("niveau", type.toLowerCase());
+    window.history.pushState({}, "", url);
   };
 
   return (
@@ -233,7 +237,10 @@ function SectionProductDescription({
                 <Link
                   href={{
                     pathname: "/producten/[id]",
-                    query: { modal: "true", id: productData.id },
+                    query: {
+                      modal: "true",
+                      id: productData.id,
+                    },
                   }}
                 >
                   <button

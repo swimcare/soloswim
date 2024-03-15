@@ -111,7 +111,11 @@ export default function Zwemschema({ productData }) {
           <Link
             href={{
               pathname: "/producten/[id]",
-              query: { modal: "true", id: productData.id },
+              query: {
+                modal: "true",
+                id: productData.id,
+                type: productData.type.toLowerCase(),
+              },
             }}
           >
             <button type="button" className="bg-blue-500 text-white p-2">
