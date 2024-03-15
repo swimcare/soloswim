@@ -235,10 +235,11 @@ function SectionProductDescription({
             <div className="text-center my-6">
               {productData.inStock ? (
                 <Link
+                  scroll={false}
                   href={{
                     pathname: "/producten/[id]",
                     query: {
-                      modal: "true",
+                      inCart: "true",
                       id: productData.id,
                     },
                   }}

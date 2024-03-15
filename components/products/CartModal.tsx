@@ -9,7 +9,7 @@ import { XIcon } from "@heroicons/react/solid";
 
 function Modal({ productData, selectedOption }) {
   const searchParams = useSearchParams();
-  const modal = searchParams?.get("modal");
+  const modal = searchParams?.get("inCart");
   const pathname = usePathname();
 
   console.log("selectedoption = " + selectedOption);
@@ -90,6 +90,7 @@ function Modal({ productData, selectedOption }) {
                   </div>
                   <div className="flex flex-wrap items-center justify-center p-3 xs:gap-5 border-t border-gray-300">
                     <Link
+                      scroll={false}
                       href={
                         {
                           pathname: pathname,
