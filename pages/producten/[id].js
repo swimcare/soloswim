@@ -99,7 +99,7 @@ export default function Zwemschema({ productData }) {
           toggleModal={toggleModal}
           modalIsOpen={modalIsOpen}
         /> */}
-        <CartModal />
+        <CartModal productData={productData} />
         <SectionProductDescription
           selectedOption={selectedOption}
           setSelectedOption={setSelectedOption}
