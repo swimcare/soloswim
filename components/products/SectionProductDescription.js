@@ -51,32 +51,22 @@ function SectionProductDescription({ productData, addItemToBasket }) {
   const setType = (type, id) => {
     productData.type = type;
     setSelectedPhoto(+id);
-    setNiveau(type.toLowerCase());
+    setNiveau(type);
     // Add query parameter to URL
     const url = new URL(window.location.href);
     url.searchParams.set("niveau", type.toLowerCase());
     window.history.pushState({}, "", url);
   };
 
-  const [niveau, setNiveau] = useState("beginners");
+  const [niveau, setNiveau] = useState("Beginners");
 
   useEffect(() => {
     const niveauParam = searchParams.get("niveau");
     if (niveauParam) {
-      setNiveau(niveauParam);
+      setNiveau(niveauParam.charAt(0).toUpperCase() + niveauParam.slice(1));
+      console.log("useEffect triggered to set niveau state to: " + niveauParam);
     }
   }, [searchParams]);
-
-  // useEffect(() => {
-  //   // Get the current URL
-  //   const url = new URL(window.location.href);
-
-  //   // Get a specific query parameter
-  //   const niveau = url.searchParams.get("niveau");
-
-  //   // set it to state
-  //   setNiveau(niveau);
-  // }, []); // Empty dependency array ensures this effect runs only once
 
   return (
     <section className="bg-white">
@@ -140,7 +130,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                       <label
                         htmlFor="1"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === "beginners"
+                          niveau === "Beginners"
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}
@@ -160,7 +150,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                       <label
                         htmlFor="2"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === "semi-gevorderden"
+                          niveau === "Semi-gevorderden"
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}
@@ -180,7 +170,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                       <label
                         htmlFor="3"
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === "gevorderden"
+                          niveau === "Gevorderden"
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}
@@ -251,7 +241,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
             )}
 
             <div className="text-center my-6">
-              {productData.inStock ? (
+              {productData.inStock && productData.type ? (
                 <Link
                   scroll={false}
                   href={{
@@ -259,7 +249,29 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                     query: {
                       inCart: "true",
                       id: productData.id,
-                      niveau: niveau,
+                      niveau: niveau.toLowerCase(),
+                    },
+                  }}
+                >
+                  <button
+                    role="button"
+                    onClick={() => {
+                      productData.type = niveau;
+                      addItemToBasket(productData);
+                    }}
+                    className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+                  >
+                    Toevoegen aan winkelwagen
+                  </button>
+                </Link>
+              ) : productData.inStock && !productData.type ? (
+                <Link
+                  scroll={false}
+                  href={{
+                    pathname: "/producten/[id]",
+                    query: {
+                      inCart: "true",
+                      id: productData.id,
                     },
                   }}
                 >

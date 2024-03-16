@@ -1,3 +1,5 @@
+// todo, look if we can shorten this (no 2 pieces of same code for different devices)
+
 import { Fragment, useState } from "react";
 import Image from "next/image";
 import SubSectionInhoudsopgave from "./inhoudsopgave/SubSectionInhoudsopgave";

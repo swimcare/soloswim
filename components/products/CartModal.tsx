@@ -68,7 +68,14 @@ function Modal() {
                       <div className="w-44">
                         <Image
                           alt={addedItem[0].title}
-                          src={addedItem[0].winkelwagen_images[typeNumber()]}
+                          // src={addedItem[0].winkelwagen_images[typeNumber()]}
+                          src={
+                            addedItem[0].winkelwagen_images
+                              ? addedItem[0].winkelwagen_images[
+                                  typeNumber() || 0
+                                ]
+                              : addedItem[0].images[0]
+                          }
                           width={300}
                           height={300}
                           style={{
@@ -88,22 +95,41 @@ function Modal() {
                     </div>
                   </div>
                   <div className="flex flex-wrap items-center justify-center p-3 xs:gap-5 border-t border-gray-300">
-                    <Link
-                      scroll={false}
-                      href={
-                        {
-                          pathname: pathname,
-                          query: { niveau: addedItem[0].type.toLowerCase() },
-                        } || ""
-                      }
-                    >
-                      <button
-                        type="button"
-                        className="text-black font-medium hover:cursor-pointer hover:underline"
+                    {addedItem[0].type ? (
+                      <Link
+                        scroll={false}
+                        href={
+                          {
+                            pathname: pathname,
+                            query: { niveau: addedItem[0].type?.toLowerCase() },
+                          } || ""
+                        }
                       >
-                        Verder Winkelen
-                      </button>
-                    </Link>
+                        <button
+                          type="button"
+                          className="text-black font-medium hover:cursor-pointer hover:underline"
+                        >
+                          Verder Winkelen
+                        </button>
+                      </Link>
+                    ) : (
+                      <Link
+                        scroll={false}
+                        href={
+                          {
+                            pathname: pathname,
+                          } || ""
+                        }
+                      >
+                        <button
+                          type="button"
+                          className="text-black font-medium hover:cursor-pointer hover:underline"
+                        >
+                          Verder Winkelen
+                        </button>
+                      </Link>
+                    )}
+
                     <Link href={"/winkelwagen" || ""}>
                       <button
                         type="button"
