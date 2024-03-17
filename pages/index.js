@@ -224,14 +224,24 @@ export default function Home() {
         {/* SECTION 1: */}
         <section className="bg-grey-light4">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 sm:pb-10">
-            <div>
-              <h2 className="text-main font-lexend font-extrabold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                Herbruikbare zwemschema's
-              </h2>
-              <h3 className="text-navy-light1 font-lexend font-bold md:font-extrabold text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl my-2 md:my-5">
-                Voor iedere banenzwemmer
-              </h3>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: "50px" }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.2, duration: 0.5, ease: "easeOut" },
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <div>
+                <h2 className="text-main font-lexend font-extrabold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                  Herbruikbare zwemschema's
+                </h2>
+                <h3 className="text-navy-light1 font-lexend font-bold md:font-extrabold text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl my-2 md:my-5">
+                  Voor iedere banenzwemmer
+                </h3>
+              </div>
+            </motion.div>
           </div>
           <div className="mx-5 sm:mx-0 lg:w-3/4">
             <WaveSvg fill="#fff" />
