@@ -13,9 +13,7 @@ import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
 import SimpleIconCard from "../components/home/SimpleIconCard";
 import SectionReviewsMain from "../components/home/SectionReviewsMain";
 import Link from "next/link";
-// import Slide from "react-reveal/Slide";
-// import Fade from "react-reveal/Fade";
-// import Bounce from "react-reveal/Bounce";
+import { easeOut, motion } from "framer-motion";
 import { NextSeo } from "next-seo";
 
 export default function Home() {
@@ -182,23 +180,43 @@ export default function Home() {
                 </h3>
               </div>
               <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
-                <h1 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
-                  Waterproof Zwemschema's
-                </h1>
-                <h2 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] font-lexend font-bold lg:font-extrabold text-navy-light1 text-lg md:text-xl lg:text-3xl my-4">
-                  Om zelf te volgen vanuit het zwembad
-                </h2>
+                <motion.div
+                  initial={{ x: "-700px" }}
+                  animate={{ x: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: easeOut,
+                  }}
+                >
+                  <h1 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
+                    Waterproof Zwemschema's
+                  </h1>
+                  <h2 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] font-lexend font-bold lg:font-extrabold text-navy-light1 text-lg md:text-xl lg:text-3xl my-4">
+                    Om zelf te volgen vanuit het zwembad
+                  </h2>
+                </motion.div>
               </div>
-              <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
-                <Link href="/producten">
-                  <button
-                    role="button"
-                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                  >
-                    Shop nu
-                  </button>
-                </Link>
-              </div>
+              <motion.div
+                initial={{ x: "-700px" }}
+                animate={{ x: 0 }}
+                transition={{
+                  type: "spring",
+                  bounce: 0.3,
+                  duration: 0.4,
+                  delay: 0.4,
+                }}
+              >
+                <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
+                  <Link href="/producten">
+                    <button
+                      role="button"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                    >
+                      Shop nu
+                    </button>
+                  </Link>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
