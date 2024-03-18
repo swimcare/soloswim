@@ -13,8 +13,10 @@ import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
 import SimpleIconCard from "../components/home/SimpleIconCard";
 import SectionReviewsMain from "../components/home/SectionReviewsMain";
 import Link from "next/link";
-import { easeOut, motion } from "framer-motion";
 import { NextSeo } from "next-seo";
+import FadeInFromBottom from "../components/framer/FadeInFromBottom";
+import SlideInFromLeftSpring from "../components/framer/SlideInFromLeftSpring";
+import SlideInFromLeft from "../components/framer/SlideInFromLeft";
 
 export default function Home() {
   const [productSlide, setCurrentSlide] = useState(0);
@@ -180,32 +182,16 @@ export default function Home() {
                 </h3>
               </div>
               <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
-                <motion.div
-                  initial={{ x: "-700px" }}
-                  animate={{ x: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    ease: easeOut,
-                  }}
-                >
+                <SlideInFromLeft>
                   <h1 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
                     Waterproof Zwemschema's
                   </h1>
                   <h2 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] font-lexend font-bold lg:font-extrabold text-navy-light1 text-lg md:text-xl lg:text-3xl my-4">
                     Om zelf te volgen vanuit het zwembad
                   </h2>
-                </motion.div>
+                </SlideInFromLeft>
               </div>
-              <motion.div
-                initial={{ x: "-700px" }}
-                animate={{ x: 0 }}
-                transition={{
-                  type: "spring",
-                  bounce: 0.3,
-                  duration: 0.4,
-                  delay: 0.4,
-                }}
-              >
+              <SlideInFromLeftSpring>
                 <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
                   <Link href="/producten">
                     <button
@@ -216,7 +202,7 @@ export default function Home() {
                     </button>
                   </Link>
                 </div>
-              </motion.div>
+              </SlideInFromLeftSpring>
             </div>
           </div>
         </section>
@@ -224,15 +210,7 @@ export default function Home() {
         {/* SECTION 1: */}
         <section className="bg-grey-light4">
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 sm:pb-10">
-            <motion.div
-              initial={{ opacity: 0, y: "50px" }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.2, duration: 0.5, ease: "easeOut" },
-              }}
-              viewport={{ once: true, amount: 0.5 }}
-            >
+            <FadeInFromBottom>
               <div>
                 <h2 className="text-main font-lexend font-extrabold text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                   Herbruikbare zwemschema's
@@ -241,7 +219,7 @@ export default function Home() {
                   Voor iedere banenzwemmer
                 </h3>
               </div>
-            </motion.div>
+            </FadeInFromBottom>
           </div>
           <div className="mx-5 sm:mx-0 lg:w-3/4">
             <WaveSvg fill="#fff" />
@@ -342,16 +320,17 @@ export default function Home() {
           <div className="mx-5 sm:mx-0 lg:w-3/4">
             <WaveExtendedSvg fill="#fff" />
           </div>
-          {/* <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-10"> */}
 
-          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32 overflow-x-hidden">
+          <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32">
             <Link href="/producten">
-              <button
-                role="button"
-                className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-              >
-                Bekijk ons aanbod
-              </button>
+              <SlideInFromLeftSpring>
+                <button
+                  role="button"
+                  className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                >
+                  Bekijk ons aanbod
+                </button>
+              </SlideInFromLeftSpring>
             </Link>
           </div>
           <WaveSvg fill="#fff" />
