@@ -630,24 +630,25 @@ export default function Home() {
             <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
               Oké, nog een paar extra voordelen!
             </h2>
-
-            <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
-              <IconCard
-                img="/images/home/no-app-needed.png"
-                title="Geen app nodig"
-                shadow
-              />
-              <IconCard
-                img="/images/home/no-subscription.png"
-                title="Geen abonnements kosten"
-                shadow
-              />
-              <IconCard
-                img="/images/home/no-printer.png"
-                title="Geen printer nodig"
-                shadow
-              />
-            </div>
+            <FadeInFromBottom>
+              <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
+                <IconCard
+                  img="/images/home/no-app-needed.png"
+                  title="Geen app nodig"
+                  shadow
+                />
+                <IconCard
+                  img="/images/home/no-subscription.png"
+                  title="Geen abonnements kosten"
+                  shadow
+                />
+                <IconCard
+                  img="/images/home/no-printer.png"
+                  title="Geen printer nodig"
+                  shadow
+                />
+              </div>
+            </FadeInFromBottom>
           </div>
         </section>
 
@@ -666,13 +667,13 @@ export default function Home() {
         <section className="py-12 lg:py-32">
           {/* STAPPEN BESTELLEN */}
           <div className="px-5 max-w-screen-xl mx-auto">
-            <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
-              Doe mij maar zo'n schema!
-            </h2>
-
+            <FadeInFromBottom>
+              <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
+                Doe mij maar zo'n schema!
+              </h2>
+            </FadeInFromBottom>
             <div className="flex flex-col md:flex-row gap-20 md:gap-5 xl:gap-6 py-5 sm:py-10">
               {/* Custom icon card */}
-
               <div className="bg-grey-light4 rounded-2xl w-full max-w-sm mx-auto h-56">
                 <div className="flex flex-col text-center">
                   <div className="relative transform -translate-y-16 w-52 h-48 mx-auto">

@@ -15,6 +15,14 @@ function SlideInFromSide({
   return (
     <motion.div
       initial={{ x: initialX }}
+      // animate={{
+      //   x: 0,
+      //   transition: {
+      //     duration: duration,
+      //     ease: [0.3, 0.4, 0.5, 0.95],
+      //     delay: delay,
+      //   },
+      // }}
       whileInView={{
         x: 0,
         transition: {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-// import Fade from "react-reveal/Fade";
+import FadeInFromBottom from "../framer/FadeInFromBottom";
 
 function IconCard({ title, img, color, shadow }) {
   return (

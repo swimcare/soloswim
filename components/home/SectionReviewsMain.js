@@ -1,15 +1,17 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/solid";
 import { Carousel } from "react-responsive-carousel";
 import ReviewCard from "./ReviewCard";
-// import Fade from "react-reveal/Fade";
+import FadeInFromBottom from "../framer/FadeInFromBottom";
 
 function SectionReviewsMain() {
   return (
     <section className="bg-main">
       <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
-        <h2 className="-mx-2 font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl leading-normal text-center text-white">
-          Reacties van Soloswim gebruikers
-        </h2>
+        <FadeInFromBottom>
+          <h2 className="-mx-2 font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl leading-normal text-center text-white">
+            Reacties van Soloswim gebruikers
+          </h2>
+        </FadeInFromBottom>
 
         {/* MOBILE REVIEWS (TOT EN MET SM BREAKPOINT) */}
         <div className="-mx-2 my-12 md:hidden">
