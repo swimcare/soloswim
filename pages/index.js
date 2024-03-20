@@ -16,7 +16,7 @@ import Link from "next/link";
 import { NextSeo } from "next-seo";
 import FadeInFromBottom from "../components/framer/FadeInFromBottom";
 import SlideInFromLeftSpring from "../components/framer/SlideInFromLeftSpring";
-import SlideInFromLeft from "../components/framer/SlideInFromLeft";
+import SlideInFromSide from "../components/framer/SlideInFromSide";
 
 export default function Home() {
   const [productSlide, setCurrentSlide] = useState(0);
@@ -182,14 +182,14 @@ export default function Home() {
                 </h3>
               </div>
               <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
-                <SlideInFromLeft>
+                <SlideInFromSide>
                   <h1 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] max-w-md lg:max-w-2xl text-main font-lexend font-extrabold text-4xl md:text-6xl lg:text-7xl leading-tight">
                     Waterproof Zwemschema's
                   </h1>
                   <h2 className="md:ml-4 xl:ml-[calc(10%)] 2xl:ml-[calc(20%)] font-lexend font-bold lg:font-extrabold text-navy-light1 text-lg md:text-xl lg:text-3xl my-4">
                     Om zelf te volgen vanuit het zwembad
                   </h2>
-                </SlideInFromLeft>
+                </SlideInFromSide>
               </div>
               <SlideInFromLeftSpring>
                 <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
@@ -281,39 +281,45 @@ export default function Home() {
 
             <ul className=" transform -translate-y-36 sm:translate-y-0 -mb-36 sm:mb-0 sm:w-full xl:ml-[calc((((133%)-1280px)/2)+20px+1rem)]">
               <div>
-                <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
-                  <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
-                      Zorgvuldig samengestelde bundels voor alle niveau’s
-                    </h4>
-                    <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                      Bestaande uit 10 uitdagende trainingen
-                    </p>
-                  </div>
-                </li>
-                <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
-                  <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
-                      Verschillende thema’s
-                    </h4>
-                    <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                      Van techniek-, kracht- tot duur trainingen.
-                    </p>
-                  </div>
-                </li>
-                <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
-                  <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
-                      Gevarieerde oefeningen
-                    </h4>
-                    <p className="text-navy-light1 text-tiny my-2 lg:text-base">
-                      Die het zwemmen leuker maken en je vooruit helpen
-                    </p>
-                  </div>
-                </li>
+                <SlideInFromSide duration={1.3}>
+                  <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
+                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                        Zorgvuldig samengestelde bundels voor alle niveau’s
+                      </h4>
+                      <p className="text-navy-light1 text-tiny my-2 lg:text-base">
+                        Bestaande uit 10 uitdagende trainingen
+                      </p>
+                    </div>
+                  </li>
+                </SlideInFromSide>
+                <SlideInFromSide duration={1.3}>
+                  <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
+                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                        Verschillende thema’s
+                      </h4>
+                      <p className="text-navy-light1 text-tiny my-2 lg:text-base">
+                        Van techniek-, kracht- tot duur trainingen.
+                      </p>
+                    </div>
+                  </li>
+                </SlideInFromSide>
+                <SlideInFromSide duration={1.3}>
+                  <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
+                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
+                        Gevarieerde oefeningen
+                      </h4>
+                      <p className="text-navy-light1 text-tiny my-2 lg:text-base">
+                        Die het zwemmen leuker maken en je vooruit helpen
+                      </p>
+                    </div>
+                  </li>{" "}
+                </SlideInFromSide>
               </div>
             </ul>
           </div>
@@ -339,12 +345,14 @@ export default function Home() {
         {/* SECTION 2: zo ziet een zwemschema eruit */}
         <section>
           <div className="px-5 sm:px-3 max-w-screen-xl mx-auto py-20 lg:py-32">
-            <h2 className="font-lexend text-slateblue-dark1 font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mx-10">
-              Zo ziet een zwemschema eruit
-            </h2>
-            <h3 className="font-lexend my-2 text-main font-extrabold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center mx-10">
-              Lekker duidelijk
-            </h3>
+            <FadeInFromBottom>
+              <h2 className="font-lexend text-slateblue-dark1 font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mx-10">
+                Zo ziet een zwemschema eruit
+              </h2>
+              <h3 className="font-lexend my-2 text-main font-extrabold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center mx-10">
+                Lekker duidelijk
+              </h3>
+            </FadeInFromBottom>
 
             <div className="sm:flex sm:flex-row my-10 max-w-5xl mx-auto">
               <div className="hidden sm:block my-auto transform translate-x-5 z-20 w-1/2 md:w-5/12 h-[500px]">
@@ -569,46 +577,54 @@ export default function Home() {
         {/* SECTION 5: WAAROM SOLOSWIM */}
         <section className="bg-grey-light4">
           <div className="px-5 max-w-screen-xl mx-auto pt-20 pb-6 lg:pt-32">
-            <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-main">
-              Waarom Soloswim
-            </h2>
-            <h2 className="font-lexend font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-navy-light1 my-2 lg:my-5">
-              Een aantal voordelen op een rijtje
-            </h2>
+            <FadeInFromBottom>
+              <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-main">
+                Waarom Soloswim
+              </h2>
+              <h2 className="font-lexend font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-navy-light1 my-2 lg:my-5">
+                Een aantal voordelen op een rijtje
+              </h2>
+            </FadeInFromBottom>
           </div>
           <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:py-8 overflow-x-hidden">
-            <FullWidthImageCard
-              img="/images/home/waarom-soloswim-1.png"
-              number="01"
-              title="Doelgericht banenzwemmen"
-              text="Met onze gestructureerde zwemschema's hoef je niet meer zelf je zwemtraining te bedenken. Hierdoor kun jij je volledig
+            <SlideInFromSide initialX="-1400px">
+              <FullWidthImageCard
+                img="/images/home/waarom-soloswim-1.png"
+                number="01"
+                title="Doelgericht banenzwemmen"
+                text="Met onze gestructureerde zwemschema's hoef je niet meer zelf je zwemtraining te bedenken. Hierdoor kun jij je volledig
                   richten op het uitvoeren van een doelgerichte training zodat jij met een
                   voldaan gevoel het zwembad verlaat, wat je doel met zwemmen
                   ook is!"
-            />
+              />
+            </SlideInFromSide>
+            <SlideInFromSide initialX="1400px">
+              <FullWidthImageCard
+                img="/images/home/waarom-soloswim-2.png"
+                number="02"
+                title="Breed aanbod aan zwemschema’s"
+                text="Op wat voor manier je ook zwemt, met ons brede aanbod hebben wij zwemschema’s voor iedere zwemmer. Of je nu een fanatieke triatleet bent, nog helemaal geen zwemervaring hebt maar graag borstcrawl wilt leren of gewoon lekker relaxed baantjes wilt trekken, er is voor ieder wat wils!"
+                alignRight
+              />
+            </SlideInFromSide>
+            <SlideInFromSide initialX="-1400px">
+              <FullWidthImageCard
+                img="/images/home/waarom-soloswim-3.png"
+                number="03"
+                title="Waterproof en herbruikbaar"
+                text="Onze zwemschema’s zijn gemaakt van sterk materiaal en volledig waterproof. Hierdoor zijn papieren zwemschema's die snel nat worden verleden tijd. Dus kies een bundel uit, stop hem in je zwemtas en gebruik hem keer op keer!"
+              />{" "}
+            </SlideInFromSide>
 
-            <FullWidthImageCard
-              img="/images/home/waarom-soloswim-2.png"
-              number="02"
-              title="Breed aanbod aan zwemschema’s"
-              text="Op wat voor manier je ook zwemt, met ons brede aanbod hebben wij zwemschema’s voor iedere zwemmer. Of je nu een fanatieke triatleet bent, nog helemaal geen zwemervaring hebt maar graag borstcrawl wilt leren of gewoon lekker relaxed baantjes wilt trekken, er is voor ieder wat wils!"
-              alignRight
-            />
-
-            <FullWidthImageCard
-              img="/images/home/waarom-soloswim-3.png"
-              number="03"
-              title="Waterproof en herbruikbaar"
-              text="Onze zwemschema’s zijn gemaakt van sterk materiaal en volledig waterproof. Hierdoor zijn papieren zwemschema's die snel nat worden verleden tijd. Dus kies een bundel uit, stop hem in je zwemtas en gebruik hem keer op keer!"
-            />
-
-            <FullWidthImageCard
-              img="/images/home/waarom-soloswim-4.png"
-              number="04"
-              title="En misschien wel het belangrijkste: meer plezier tijdens het zwemmen!"
-              text="Elk schema bevat gevarieerde en uitdagende zwemoefeningen waardoor het banenzwemmen nooit saai wordt. Laat je verrassen want geen schema is hetzelfde! Het voltooien van een schema geeft een heerlijk gevoel, zo ervaar jij nog meer plezier tijdens het banenzwemmen."
-              alignRight
-            />
+            <SlideInFromSide initialX="1400px">
+              <FullWidthImageCard
+                img="/images/home/waarom-soloswim-4.png"
+                number="04"
+                title="En misschien wel het belangrijkste: meer plezier tijdens het zwemmen!"
+                text="Elk schema bevat gevarieerde en uitdagende zwemoefeningen waardoor het banenzwemmen nooit saai wordt. Laat je verrassen want geen schema is hetzelfde! Het voltooien van een schema geeft een heerlijk gevoel, zo ervaar jij nog meer plezier tijdens het banenzwemmen."
+                alignRight
+              />{" "}
+            </SlideInFromSide>
           </div>
           <div className="px-5 max-w-screen-xl mx-auto py-12 lg:py-32">
             <h2 className="mb-16 text-center font-lexend font-extrabold text-2xl sm:text-4xl text-navy-light1">
