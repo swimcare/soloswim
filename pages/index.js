@@ -728,7 +728,7 @@ export default function Home() {
           </div>
 
           {/* KIES JOUW BUNDEL UIT*/}
-          <div className="flex flex-col my-8">
+          <div className="flex flex-col my-8 overflow-x-hidden">
             <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-main max-w-screen-xl mx-auto px-5">
               Er is een Soloswim bundel die bij jou past
             </h2>
