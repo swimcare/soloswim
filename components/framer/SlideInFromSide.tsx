@@ -5,7 +5,7 @@ function SlideInFromSide({
   children,
   duration = 0.8,
   delay = 0,
-  initialX = "-wscreen",
+  initialX = "-300px",
 }: {
   children: React.ReactNode;
   duration: number;
@@ -14,27 +14,8 @@ function SlideInFromSide({
 }) {
   return (
     <motion.div
-      initial="initialState"
-      animate="animateState"
-      exit="exitState"
-      transition={{
-        type: "tween",
-        duration: duration,
-        ease: [0.3, 0.4, 0.5, 0.95],
-        delay: delay,
-      }}
-      variants={{
-        initialState: {
-          x: "-100vw",
-        },
-        animateState: {
-          x: 0,
-        },
-        exitState: {
-          x: "100vw",
-        },
-      }}
-      // whileInView={{
+      initial={{ x: initialX, opacity: 0 }}
+      // animate={{
       //   x: 0,
       //   transition: {
       //     duration: duration,
@@ -42,7 +23,16 @@ function SlideInFromSide({
       //     delay: delay,
       //   },
       // }}
-      // viewport={{ once: true }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+        transition: {
+          duration: duration,
+          ease: [0.3, 0.4, 0.5, 0.95],
+          delay: delay,
+        },
+      }}
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>

@@ -587,7 +587,7 @@ export default function Home() {
             </FadeInFromBottom>
           </div>
           <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:py-8 overflow-x-hidden">
-            <SlideInFromSide initialX="-1400px">
+            <SlideInFromSide initialX="-300px">
               <FullWidthImageCard
                 img="/images/home/waarom-soloswim-1.png"
                 number="01"
@@ -598,7 +598,7 @@ export default function Home() {
                   ook is!"
               />
             </SlideInFromSide>
-            <SlideInFromSide initialX="1400px">
+            <SlideInFromSide initialX="300px">
               <FullWidthImageCard
                 img="/images/home/waarom-soloswim-2.png"
                 number="02"
@@ -607,7 +607,7 @@ export default function Home() {
                 alignRight
               />
             </SlideInFromSide>
-            <SlideInFromSide initialX="-1400px">
+            <SlideInFromSide initialX="-300px">
               <FullWidthImageCard
                 img="/images/home/waarom-soloswim-3.png"
                 number="03"
@@ -616,7 +616,7 @@ export default function Home() {
               />{" "}
             </SlideInFromSide>
 
-            <SlideInFromSide initialX="1400px">
+            <SlideInFromSide initialX="300px">
               <FullWidthImageCard
                 img="/images/home/waarom-soloswim-4.png"
                 number="04"
