@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
+import FadeInFromBottom from "../components/framer/FadeInFromBottom";
+import SlideInFromSide from "../components/framer/SlideInFromSide";
 
 function overOns() {
   return (
@@ -54,76 +56,84 @@ function overOns() {
               <h2 className="text-main font-lexend font-extrabold text-2xl sm:text-3xl md:text-4xl">
                 Onze missie
               </h2>
-              <div className="flex flex-col md:flex-row gap-10 md:gap-2 lg:gap-10 my-12 lg:mt-20">
-                <IconCard
-                  title="Banenzwemmen leuker maken!"
-                  img="/images/over-ons/missie1.png"
-                  color="bg-grey-light4"
-                />
-                <IconCard
-                  title="Zwemschema's voor elk type zwemmer!"
-                  img="/images/over-ons/missie2.png"
-                  color="bg-grey-light4"
-                />
-                <IconCard
-                  title="Onze kennis over zwemmen delen!"
-                  img="/images/over-ons/missie3.png"
-                  color="bg-grey-light4"
-                />
-              </div>
+              <FadeInFromBottom>
+                <div className="flex flex-col md:flex-row gap-10 md:gap-2 lg:gap-10 my-12 lg:mt-20">
+                  <IconCard
+                    title="Banenzwemmen leuker maken!"
+                    img="/images/over-ons/missie1.png"
+                    color="bg-grey-light4"
+                  />
+
+                  <IconCard
+                    title="Zwemschema's voor elk type zwemmer!"
+                    img="/images/over-ons/missie2.png"
+                    color="bg-grey-light4"
+                  />
+
+                  <IconCard
+                    title="Onze kennis over zwemmen delen!"
+                    img="/images/over-ons/missie3.png"
+                    color="bg-grey-light4"
+                  />
+                </div>
+              </FadeInFromBottom>
             </div>
           </div>
         </section>
         <section>
-          <div className="mb-5 mt-24 lg:mt-0 mx-auto lg:mx-0 lg:mr-10 flex flex-col lg:flex-row lg:max-w-7xl 2xl:max-w-8/10">
-            <div className="lg:hidden mx-5 leading-none text-zero">
-              <Image
-                className="rounded-t-xl lg:rounded-none"
-                src="/images/over-ons/over-ons.png"
-                width={1016}
-                height={645}
-                alt="Ons verhaal"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
-            </div>
-            <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12 lg:min-h-[600px]">
-              <Image
-                className="rounded-t-xl sm:rounded-none"
-                src="/images/over-ons/over-ons.png"
-                alt="Ons verhaal"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover"
-                }} />
-            </div>
-            <div className="bg-grey-light4 mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
-              <div>
-                <h3 className="text-main font-lexend font-bold lg:font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                  Ons verhaal
-                </h3>
+          <SlideInFromSide>
+            <div className="mb-5 mt-24 lg:mt-0 mx-auto lg:mx-0 lg:mr-10 flex flex-col lg:flex-row lg:max-w-7xl 2xl:max-w-8/10">
+              <div className="lg:hidden mx-5 leading-none text-zero">
+                <Image
+                  className="rounded-t-xl lg:rounded-none"
+                  src="/images/over-ons/over-ons.png"
+                  width={1016}
+                  height={645}
+                  alt="Ons verhaal"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
+                />
               </div>
-              <div className="text-base leading-relaxed text-navy-light1 my-3 lg:leading-normal">
-                <p>
-                  Sinds de dag dat we elkaar ontmoet hebben is zwemmen een
-                  belangrijk onderdeel in ons leven. We hebben elkaar ontmoet in
-                  het zwembad (ongeveer zoals op de foto) en zijn nu getrouwd
-                  met golven gegraveerd in onze trouwringen. En dat is niet voor
-                  niets, we zijn allebei gek op zwemmen!
-                </p>
-                <p className="mt-5">
-                  Wij houden van zwemmen omdat het ons hoofd leeg maakt, een
-                  full-body workout is zonder dat we ons lichaam overbelasten en
-                  het een heerlijk gevoel is om door het water te glijden. We
-                  doen het vooral omdat we er gelukkig van worden. En dat willen
-                  we graag delen met andere banenzwemmers door middel van onze
-                  leuke en uitdagende zwemschema’s!
-                </p>
+              <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12 lg:min-h-[600px]">
+                <Image
+                  className="rounded-t-xl sm:rounded-none"
+                  src="/images/over-ons/over-ons.png"
+                  alt="Ons verhaal"
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+              <div className="bg-grey-light4 mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
+                <div>
+                  <h3 className="text-main font-lexend font-bold lg:font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                    Ons verhaal
+                  </h3>
+                </div>
+                <div className="text-base leading-relaxed text-navy-light1 my-3 lg:leading-normal">
+                  <p>
+                    Sinds de dag dat we elkaar ontmoet hebben is zwemmen een
+                    belangrijk onderdeel in ons leven. We hebben elkaar ontmoet
+                    in het zwembad (ongeveer zoals op de foto) en zijn nu
+                    getrouwd met golven gegraveerd in onze trouwringen. En dat
+                    is niet voor niets, we zijn allebei gek op zwemmen!
+                  </p>
+                  <p className="mt-5">
+                    Wij houden van zwemmen omdat het ons hoofd leeg maakt, een
+                    full-body workout is zonder dat we ons lichaam overbelasten
+                    en het een heerlijk gevoel is om door het water te glijden.
+                    We doen het vooral omdat we er gelukkig van worden. En dat
+                    willen we graag delen met andere banenzwemmers door middel
+                    van onze leuke en uitdagende zwemschema’s!
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </SlideInFromSide>
         </section>
         <div className="px-5 mx-auto max-w-5xl">
           <div className="transform -translate-y-10 translate-x-2 lg:translate-y-0 flex flex-row lg:justify-end">
@@ -162,94 +172,100 @@ function overOns() {
 
         <section>
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto -mt-5 lg:pb-32">
-            <div className="mx-5 lg:mx-10">
-              <h2 className="text-main font-lexend font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                Het ontstaan van Soloswim
-              </h2>
-              <h3 className="font-lexend font-bold sm:font-extrabold text-2xl md:text-3xl lg:text-4xl text-navy-light1 my-2 lg:my-5">
-                Een droomproject
-              </h3>
-            </div>
-            <div className="bg-grey-light4 rounded-2xl px-5 lg:px-10 text-base leading-relaxed text-navy-light1 lg:leading-normal">
-              <div className="">
-                <p className="py-5 lg:hidden">
-                  Sinds we niet meer bij een club zwemmen maken wij onze eigen
-                  zwemtrainingen om zelf te doen tijdens het banenzwemmen. We
-                  zijn een ondernemend stel en afgelopen voorjaar waren we op
-                  zoek naar een leuke nieuwe uitdaging om ons volledig op te
-                  storten. In mei 2021 gingen we een maand op pad (in onze
-                  zelfgebouwde camperbus) om de Cote d’Azur te verkennen. Het
-                  was er prachtig, we genoten van de natuur en zwommen veel in
-                  de zee. Maar we misten ook iets; een 25-meter zwembad waar we
-                  onze baantjes in konden zwemmen (ja, dat kan ook in de zee
-                  hoor ik je denken, maar ik, Emily, ben een beetje bang voor
-                  kwallen en haaien dus ik was al heel trots als ik kopje onder
-                  was geweest).
-                </p>
-                <div className="lg:float-right lg:pl-7 lg:pt-7">
-                  <Image
-                    className="shadow-custom4"
-                    src="/images/over-ons/soloswim-ontstaan.png"
-                    width={604}
-                    height={403}
-                    alt="Ontstaan soloswim"
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
-                </div>
-                <p className="hidden lg:block pt-7">
-                  Sinds we niet meer bij een club zwemmen maken wij onze eigen
-                  zwemtrainingen om zelf te doen tijdens het banenzwemmen. We
-                  zijn een ondernemend stel en afgelopen voorjaar waren we op
-                  zoek naar een leuke nieuwe uitdaging om ons volledig op te
-                  storten. In mei 2021 gingen we een maand op pad (in onze
-                  zelfgebouwde camperbus) om de Cote d’Azur te verkennen. Het
-                  was er prachtig, we genoten van de natuur en zwommen veel in
-                  de zee. Maar we misten ook iets; een 25-meter zwembad waar we
-                  onze baantjes in konden zwemmen (ja, dat kan ook in de zee
-                  hoor ik je denken, maar ik, Emily, ben een beetje bang voor
-                  kwallen en haaien dus ik was al heel trots als ik kopje onder
-                  was geweest).
-                </p>
-                <p className="py-5">
-                  Het leuke van een camper is dat je overal kunt gaan staan waar
-                  je maar wilt. Dus we zeiden de zee gedag en gingen op zoek
-                  naar een buitenzwembad, geschikt voor banenzwemmen. En die
-                  vonden we onder de voet van de Mont Ventoux (Laurens wilde die
-                  ook heel graag op fietsen dus dat kwam mooi uit). Oh wat waren
-                  we blij met dat zwembad, het voelde alsof we in het paradijs
-                  waren beland! We schreven snel onze eigen zwemschema's en
-                  sprongen direct het zwembad in toen het de volgende dag open
-                  ging. Dagen achter elkaar zwommen we wel 2 tot 3 keer per dag
-                  (en verloren dus ook aardig wat handgeschreven zwemschema's).
-                  Het is dus niet gek dat ons idee voor Soloswim is ontstaan bij
-                  het paradijsachtige zwembad onder de voet van de Mont Ventoux!
-                  Net op de valreep, want het was de allerlaatste dag van onze
-                  reis, ons geluk kon niet op! We hadden eindelijk het project
-                  gevonden waar we ons helemaal op konden storten: het werd onze
-                  missie om onze zwemschema's te digitaliseren, waterproof te
-                  maken en te delen met anderen!
-                </p>
+            <FadeInFromBottom>
+              <div className="mx-5 lg:mx-10">
+                <h2 className="text-main font-lexend font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                  Het ontstaan van Soloswim
+                </h2>
+                <h3 className="font-lexend font-bold sm:font-extrabold text-2xl md:text-3xl lg:text-4xl text-navy-light1 my-2 lg:my-5">
+                  Een droomproject
+                </h3>
               </div>
-            </div>
+            </FadeInFromBottom>
+            <FadeInFromBottom>
+              <div className="bg-grey-light4 rounded-2xl px-5 lg:px-10 text-base leading-relaxed text-navy-light1 lg:leading-normal">
+                <div className="">
+                  <p className="py-5 lg:hidden">
+                    Sinds we niet meer bij een club zwemmen maken wij onze eigen
+                    zwemtrainingen om zelf te doen tijdens het banenzwemmen. We
+                    zijn een ondernemend stel en afgelopen voorjaar waren we op
+                    zoek naar een leuke nieuwe uitdaging om ons volledig op te
+                    storten. In mei 2021 gingen we een maand op pad (in onze
+                    zelfgebouwde camperbus) om de Cote d’Azur te verkennen. Het
+                    was er prachtig, we genoten van de natuur en zwommen veel in
+                    de zee. Maar we misten ook iets; een 25-meter zwembad waar
+                    we onze baantjes in konden zwemmen (ja, dat kan ook in de
+                    zee hoor ik je denken, maar ik, Emily, ben een beetje bang
+                    voor kwallen en haaien dus ik was al heel trots als ik kopje
+                    onder was geweest).
+                  </p>
+                  <div className="lg:float-right lg:pl-7 lg:pt-7">
+                    <Image
+                      className="shadow-custom4"
+                      src="/images/over-ons/soloswim-ontstaan.png"
+                      width={604}
+                      height={403}
+                      alt="Ontstaan soloswim"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
+                    />
+                  </div>
+                  <p className="hidden lg:block pt-7">
+                    Sinds we niet meer bij een club zwemmen maken wij onze eigen
+                    zwemtrainingen om zelf te doen tijdens het banenzwemmen. We
+                    zijn een ondernemend stel en afgelopen voorjaar waren we op
+                    zoek naar een leuke nieuwe uitdaging om ons volledig op te
+                    storten. In mei 2021 gingen we een maand op pad (in onze
+                    zelfgebouwde camperbus) om de Cote d’Azur te verkennen. Het
+                    was er prachtig, we genoten van de natuur en zwommen veel in
+                    de zee. Maar we misten ook iets; een 25-meter zwembad waar
+                    we onze baantjes in konden zwemmen (ja, dat kan ook in de
+                    zee hoor ik je denken, maar ik, Emily, ben een beetje bang
+                    voor kwallen en haaien dus ik was al heel trots als ik kopje
+                    onder was geweest).
+                  </p>
+                  <p className="py-5">
+                    Het leuke van een camper is dat je overal kunt gaan staan
+                    waar je maar wilt. Dus we zeiden de zee gedag en gingen op
+                    zoek naar een buitenzwembad, geschikt voor banenzwemmen. En
+                    die vonden we onder de voet van de Mont Ventoux (Laurens
+                    wilde die ook heel graag op fietsen dus dat kwam mooi uit).
+                    Oh wat waren we blij met dat zwembad, het voelde alsof we in
+                    het paradijs waren beland! We schreven snel onze eigen
+                    zwemschema's en sprongen direct het zwembad in toen het de
+                    volgende dag open ging. Dagen achter elkaar zwommen we wel 2
+                    tot 3 keer per dag (en verloren dus ook aardig wat
+                    handgeschreven zwemschema's). Het is dus niet gek dat ons
+                    idee voor Soloswim is ontstaan bij het paradijsachtige
+                    zwembad onder de voet van de Mont Ventoux! Net op de
+                    valreep, want het was de allerlaatste dag van onze reis, ons
+                    geluk kon niet op! We hadden eindelijk het project gevonden
+                    waar we ons helemaal op konden storten: het werd onze missie
+                    om onze zwemschema's te digitaliseren, waterproof te maken
+                    en te delen met anderen!
+                  </p>
+                </div>
+              </div>
+            </FadeInFromBottom>
           </div>
         </section>
         <section>
-          <div className="px-16 sm:px-8 max-w-screen-xl mx-auto py-12 lg:pb-32 text-center">
-            <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-2xl md:text-3xl lg:text-4xl">
-              Heb je ideeën, wil je samenwerken of heb je een vraag?
-            </h3>
-            <div className="my-5">
-              <Link href="/contact">
-
-                <button className="my-4 lg:my-6 text-white max-w-xs lg:text-lg font-bold uppercase w-full px-3 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main">
-                  Neem contact op
-                </button>
-
-              </Link>
+          <FadeInFromBottom>
+            <div className="px-16 sm:px-8 max-w-screen-xl mx-auto py-12 lg:pb-32 text-center">
+              <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-2xl md:text-3xl lg:text-4xl">
+                Heb je ideeën, wil je samenwerken of heb je een vraag?
+              </h3>
+              <div className="my-5">
+                <Link href="/contact">
+                  <button className="my-4 lg:my-6 text-white max-w-xs lg:text-lg font-bold uppercase w-full px-3 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main">
+                    Neem contact op
+                  </button>
+                </Link>
+              </div>
             </div>
-          </div>
+          </FadeInFromBottom>
         </section>
       </main>
     </Fragment>

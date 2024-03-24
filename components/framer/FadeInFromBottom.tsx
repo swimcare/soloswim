@@ -10,7 +10,7 @@ function FadeInFromBottom({ children }: { children: React.ReactNode }) {
         y: 0,
         transition: { delay: 0.2, duration: 0.5, ease: "easeOut" },
       }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {children}
     </motion.div>
