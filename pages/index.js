@@ -15,7 +15,7 @@ import SectionReviewsMain from "../components/home/SectionReviewsMain";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import FadeInFromBottom from "../components/framer/FadeInFromBottom";
-import SlideInFromLeftSpring from "../components/framer/SlideInFromLeftSpring";
+import SlideInFromSideSpring from "../components/framer/SlideInFromSideSpring";
 import SlideInFromSide from "../components/framer/SlideInFromSide";
 
 export default function Home() {
@@ -191,7 +191,7 @@ export default function Home() {
                   </h2>
                 </SlideInFromSide>
               </div>
-              <SlideInFromLeftSpring>
+              <SlideInFromSideSpring>
                 <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
                   <Link href="/producten">
                     <button
@@ -202,7 +202,7 @@ export default function Home() {
                     </button>
                   </Link>
                 </div>
-              </SlideInFromLeftSpring>
+              </SlideInFromSideSpring>
             </div>
           </div>
         </section>
@@ -329,14 +329,14 @@ export default function Home() {
 
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto text-center sm:text-left mt-10 mb-20 lg:mb-32">
             <Link href="/producten">
-              <SlideInFromLeftSpring>
+              <SlideInFromSideSpring>
                 <button
                   role="button"
                   className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
                 >
                   Bekijk ons aanbod
                 </button>
-              </SlideInFromLeftSpring>
+              </SlideInFromSideSpring>
             </Link>
           </div>
           <WaveSvg fill="#fff" />
@@ -737,68 +737,72 @@ export default function Home() {
                 <h3 className="font-lexend font-extrabold text-2xl sm:text-3xl lg:text-4xl text-navy-light1 my-auto">
                   Wat jouw niveau ook is
                 </h3>
-                <div className="hidden md:block my-auto flex-shrink-0">
-                  <Link href="/producten">
-                    <button
-                      role="button"
-                      className="text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                    >
-                      Bekijk alle producten
-                    </button>
-                  </Link>
-                </div>
+                <SlideInFromSideSpring initialX="300px">
+                  <div className="hidden md:block my-auto flex-shrink-0">
+                    <Link href="/producten">
+                      <button
+                        role="button"
+                        className="text-white text-tiny lg:text-lg font-bold uppercase px-12 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                      >
+                        Bekijk alle producten
+                      </button>
+                    </Link>
+                  </div>
+                </SlideInFromSideSpring>
               </div>
             </div>
-            <div className="ml-5 xl:w-[calc(1280px+((100%-1280px)/2)-20px)] xl:ml-auto my-5 md:my-10">
-              <MultiCarousel
-                swipeable={true}
-                draggable={false}
-                showDots={false}
-                responsive={responsive}
-                // ssr={true} // means to render carousel on server-side.
-                infinite={false}
-                keyBoardControl={true}
-                partialVisible={true}
-                centerMode={false}
-              >
-                {/* todo: update href links to actual products */}
-                <HomeProductItemCard
-                  title="Borstcrawl 100m leren zwemmen"
-                  img="/images/zwemschemas/bcl100/1.png"
-                  price="17,99"
-                  borderColor="border-soloswim2-blue"
-                  href="/producten/borstcrawl-100m-leren-zwemmen"
-                />
-                <HomeProductItemCard
-                  title="Borstcrawl complete zwemtraining"
-                  img="/images/zwemschemas/bcc1/1.png"
-                  price="39,99"
-                  borderColor="border-t-soloswim2-orange border-b-soloswim2-green border-l-soloswim2-yellow border-r-soloswim2-yellow"
-                  href="/producten/borstcrawl-complete-zwemtraining"
-                />
-                <HomeProductItemCard
-                  title="Borstcrawl techniek zwemtraining"
-                  img="/images/zwemschemas/bct1/1.png"
-                  price="17,99"
-                  borderColor="border-soloswim2-green"
-                  href="/producten/borstcrawl-techniek-zwemtraining"
-                />
-                <HomeProductItemCard
-                  title="Borstcrawl kracht zwemtraining"
-                  img="/images/zwemschemas/bck1/1.png"
-                  price="17,99"
-                  borderColor="border-soloswim2-orange"
-                  href="/producten/borstcrawl-kracht-zwemtraining"
-                />
-                <HomeProductItemCard
-                  title="Borstcrawl duur zwemtraining"
-                  img="/images/zwemschemas/bcd1/1.png"
-                  price="17,99"
-                  borderColor="border-soloswim2-yellow"
-                  href="/producten/borstcrawl-duur-zwemtraining"
-                />
-              </MultiCarousel>
-            </div>
+            <SlideInFromSide initialX="300px">
+              <div className="ml-5 xl:w-[calc(1280px+((100%-1280px)/2)-20px)] xl:ml-auto my-5 md:my-10">
+                <MultiCarousel
+                  swipeable={true}
+                  draggable={false}
+                  showDots={false}
+                  responsive={responsive}
+                  // ssr={true} // means to render carousel on server-side.
+                  infinite={false}
+                  keyBoardControl={true}
+                  partialVisible={true}
+                  centerMode={false}
+                >
+                  {/* todo: update href links to actual products */}
+                  <HomeProductItemCard
+                    title="Borstcrawl 100m leren zwemmen"
+                    img="/images/zwemschemas/bcl100/1.png"
+                    price="17,99"
+                    borderColor="border-soloswim2-blue"
+                    href="/producten/borstcrawl-100m-leren-zwemmen"
+                  />
+                  <HomeProductItemCard
+                    title="Borstcrawl complete zwemtraining"
+                    img="/images/zwemschemas/bcc1/1.png"
+                    price="39,99"
+                    borderColor="border-t-soloswim2-orange border-b-soloswim2-green border-l-soloswim2-yellow border-r-soloswim2-yellow"
+                    href="/producten/borstcrawl-complete-zwemtraining"
+                  />
+                  <HomeProductItemCard
+                    title="Borstcrawl techniek zwemtraining"
+                    img="/images/zwemschemas/bct1/1.png"
+                    price="17,99"
+                    borderColor="border-soloswim2-green"
+                    href="/producten/borstcrawl-techniek-zwemtraining"
+                  />
+                  <HomeProductItemCard
+                    title="Borstcrawl kracht zwemtraining"
+                    img="/images/zwemschemas/bck1/1.png"
+                    price="17,99"
+                    borderColor="border-soloswim2-orange"
+                    href="/producten/borstcrawl-kracht-zwemtraining"
+                  />
+                  <HomeProductItemCard
+                    title="Borstcrawl duur zwemtraining"
+                    img="/images/zwemschemas/bcd1/1.png"
+                    price="17,99"
+                    borderColor="border-soloswim2-yellow"
+                    href="/producten/borstcrawl-duur-zwemtraining"
+                  />
+                </MultiCarousel>
+              </div>
+            </SlideInFromSide>
             <Link href="/producten">
               <button
                 role="button"
@@ -816,104 +820,110 @@ export default function Home() {
           <div className="relative h-full flex flex-col justify-between">
             <WaveExtendedSvg fill="#fff" />
             <div className="px-5 max-w-screen-xl mx-auto pt-20 lg:pt-32">
-              <h2 className="font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold">
-                Cijfers waar we trots op zijn!
-              </h2>
-
+              <FadeInFromBottom>
+                <h2 className="font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold">
+                  Cijfers waar we trots op zijn!
+                </h2>
+              </FadeInFromBottom>
               <div className="my-5 md:my-10 lg:my-20 flex flex-col gap-4 md:flex-row md:justify-evenly md:text-center">
-                <div>
-                  <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
-                    100
-                  </p>
-                  <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
-                    Unieke zwemschema's
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
-                    &gt;250 km
-                  </p>
-                  <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
-                    aan zwemkilometers
-                  </p>
-                </div>
+                <FadeInFromBottom>
+                  <div>
+                    <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
+                      100
+                    </p>
+                    <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
+                      Unieke zwemschema's
+                    </p>
+                  </div>
+                </FadeInFromBottom>
+                <FadeInFromBottom>
+                  <div>
+                    <p className="font-lexend mb-2 md:mb-0 font-extrabold text-5xl md:text-6xl lg:text-7xl text-navy-light1">
+                      &gt;250 km
+                    </p>
+                    <p className="font-lexend font-extrabold text-xl md:text-2xl text-navy-light1">
+                      aan zwemkilometers
+                    </p>
+                  </div>
+                </FadeInFromBottom>
               </div>
             </div>
             {/* Over ons card */}
-
-            <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
-              <div className="lg:hidden mx-5 leading-none text-zero">
-                <Image
-                  className="rounded-t-xl lg:rounded-none"
-                  src="/images/home/oprichters-soloswim.png"
-                  width={996}
-                  height={772}
-                  alt="Oprichters soloswim"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                />
-              </div>
-              <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
-                <Image
-                  className="rounded-t-xl sm:rounded-none"
-                  src="/images/home/oprichters-soloswim.png"
-                  alt="Oprichters soloswim"
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              </div>
-              <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
-                <div>
-                  <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
-                    Handgemaakt in Nederland door zwemmers
-                  </h3>
+            <SlideInFromSide>
+              <div className="my-5 mx-auto lg:mx-0 lg:mr-10 pb-20 lg:pb-32 flex flex-col lg:flex-row max-w-4xl lg:max-w-7xl 2xl:max-w-7xl">
+                <div className="lg:hidden mx-5 leading-none text-zero">
+                  <Image
+                    className="rounded-t-xl lg:rounded-none"
+                    src="/images/home/oprichters-soloswim.png"
+                    width={996}
+                    height={772}
+                    alt="Oprichters soloswim"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
+                  />
                 </div>
-                <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
-                  <p className="">
-                    Papier en water gaan niet zo goed samen, niet gek dat onze
-                    handgeschreven zwemtrainingen in de prullenbak terecht
-                    kwamen. Zonde vonden we! Met een duidelijke missie gingen we
-                    aan de slag en ruim een halfjaar later was Soloswim geboren!
-                  </p>
-                  <p className="mt-4">
-                    We maken al onze bundels zelf met veel zorg; van het
-                    ontwikkelen van de trainingen tot het bundelen van de
-                    individuele waterdichte zwemschema's. Made in the
-                    Netherlands, daar zijn we trots op! Houd ons in de gaten
-                    want we zijn continu bezig met het uitbreiden van onze
-                    zwemschema’s. Zo komt er binnenkort een bundel voor
-                    recreanten (swimfit) en een bundel met verschillende slagen
-                    uit. Voor ieder wat wils, dat vinden we belangrijk!
-                  </p>
+                <div className="hidden lg:flex relative leading-none flex-none items-stretch w-5/12 xl:w-7/12">
+                  <Image
+                    className="rounded-t-xl sm:rounded-none"
+                    src="/images/home/oprichters-soloswim.png"
+                    alt="Oprichters soloswim"
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "cover",
+                    }}
+                  />
                 </div>
-                <div className="lg:inline-block hidden my-6">
-                  <Link href="/over-ons">
+                <div className="bg-white mx-5 lg:mx-0 shadow-custom3 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-6 sm:px-7 lg:p-9 flex flex-col gap-2">
+                  <div>
+                    <h3 className="text-navy-light1 font-lexend font-bold lg:font-extrabold text-lg md:text-2xl leading-tight">
+                      Handgemaakt in Nederland door zwemmers
+                    </h3>
+                  </div>
+                  <div className="text-base leading-relaxed text-navy-light1 my-1 lg:leading-normal">
+                    <p className="">
+                      Papier en water gaan niet zo goed samen, niet gek dat onze
+                      handgeschreven zwemtrainingen in de prullenbak terecht
+                      kwamen. Zonde vonden we! Met een duidelijke missie gingen
+                      we aan de slag en ruim een halfjaar later was Soloswim
+                      geboren!
+                    </p>
+                    <p className="mt-4">
+                      We maken al onze bundels zelf met veel zorg; van het
+                      ontwikkelen van de trainingen tot het bundelen van de
+                      individuele waterdichte zwemschema's. Made in the
+                      Netherlands, daar zijn we trots op! Houd ons in de gaten
+                      want we zijn continu bezig met het uitbreiden van onze
+                      zwemschema’s. Zo komt er binnenkort een bundel voor
+                      recreanten (swimfit) en een bundel met verschillende
+                      slagen uit. Voor ieder wat wils, dat vinden we belangrijk!
+                    </p>
+                  </div>
+                  <div className="lg:inline-block hidden my-6">
+                    <Link href="/over-ons">
+                      <button
+                        role="button"
+                        className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                      >
+                        Meer over ons
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="inline-block lg:hidden mx-auto my-6">
+                  <Link href="/producten">
                     <button
                       role="button"
-                      className="text-white text-tiny font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
+                      className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
                     >
                       Meer over ons
                     </button>
                   </Link>
                 </div>
               </div>
-              <div className="inline-block lg:hidden mx-auto my-6">
-                <Link href="/producten">
-                  <button
-                    role="button"
-                    className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
-                  >
-                    Meer over ons
-                  </button>
-                </Link>
-              </div>
-            </div>
+            </SlideInFromSide>
 
             {/* Einde over on card */}
             <div className="transform rotate-180">
@@ -924,41 +934,54 @@ export default function Home() {
 
         <section>
           <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
-            <h2 className="mx-auto max-w-5xl font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold text-center">
-              Waarom wij zo van zwemmen houden!
-            </h2>
-
+            <FadeInFromBottom>
+              <h2 className="mx-auto max-w-5xl font-lexend text-3xl md:text-5xl lg:text-6xl text-main font-extrabold text-center">
+                Waarom wij zo van zwemmen houden!
+              </h2>
+            </FadeInFromBottom>
             <div className="my-5 md:my-10 lg:my-20 flex flex-row flex-wrap justify-around gap-5 lg:gap-10 text-slateblue-dark1 text-center">
-              <SimpleIconCard
-                icon="/images/home/waarom-zwemmen1.png"
-                title="Blessurevrij sporten"
-                text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
-              />
-              <SimpleIconCard
-                icon="/images/home/waarom-zwemmen2.png"
-                title="Voor alle leeftijden"
-                text="Je ziet het meteen als je het zwembad inloopt: zwemmen is voor jong en oud! Je bepaalt zelf namelijk hoe zwaar (of licht) je het maakt."
-              />
-              <SimpleIconCard
-                icon="/images/home/waarom-zwemmen3.png"
-                title="Goed voor je lichaam"
-                text='Longproblemen, hart- en vaatziekten of revalideren? "Ga zwemmen." Is wat artsen met goede reden zeggen!'
-              />
-              <SimpleIconCard
-                icon="/images/home/waarom-zwemmen4.png"
-                title="Toegankelijk"
-                text="Iedereen heeft badkleding in de kast liggen en zwembaden zijn er in overvloed, dus niets houdt je tegen om een duik te nemen!"
-              />
-              <SimpleIconCard
-                icon="/images/home/waarom-zwemmen5.png"
-                title="Full body workout"
-                text="Bij zwemmen worden vrijwel alle spieren aan het werk gezet! Tegelijkertijd is het ook nog eens één van de beste manieren om je conditie te verbeteren."
-              />
-              <SimpleIconCard
-                icon="/images/home/waarom-zwemmen6.png"
-                title="Goed voor je geest"
-                text="Rustig zwemmen is ontspannend en stressverlagend. Lever je meer inspanning dan wordt zwemmen meditatief omdat er geen ruimte is voor overbodige gedachten."
-              />
+              <FadeInFromBottom>
+                <SimpleIconCard
+                  icon="/images/home/waarom-zwemmen1.png"
+                  title="Blessurevrij sporten"
+                  text="In het water weeg je 90% minder dan op het land, je lichaam overbelasten wordt vrijwel onmogelijk. Zo is de kans op een blessure veel kleiner!"
+                />
+              </FadeInFromBottom>
+              <FadeInFromBottom>
+                <SimpleIconCard
+                  icon="/images/home/waarom-zwemmen2.png"
+                  title="Voor alle leeftijden"
+                  text="Je ziet het meteen als je het zwembad inloopt: zwemmen is voor jong en oud! Je bepaalt zelf namelijk hoe zwaar (of licht) je het maakt."
+                />
+              </FadeInFromBottom>
+              <FadeInFromBottom>
+                <SimpleIconCard
+                  icon="/images/home/waarom-zwemmen3.png"
+                  title="Goed voor je lichaam"
+                  text='Longproblemen, hart- en vaatziekten of revalideren? "Ga zwemmen." Is wat artsen met goede reden zeggen!'
+                />
+              </FadeInFromBottom>
+              <FadeInFromBottom>
+                <SimpleIconCard
+                  icon="/images/home/waarom-zwemmen4.png"
+                  title="Toegankelijk"
+                  text="Iedereen heeft badkleding in de kast liggen en zwembaden zijn er in overvloed, dus niets houdt je tegen om een duik te nemen!"
+                />
+              </FadeInFromBottom>
+              <FadeInFromBottom>
+                <SimpleIconCard
+                  icon="/images/home/waarom-zwemmen5.png"
+                  title="Full body workout"
+                  text="Bij zwemmen worden vrijwel alle spieren aan het werk gezet! Tegelijkertijd is het ook nog eens één van de beste manieren om je conditie te verbeteren."
+                />
+              </FadeInFromBottom>
+              <FadeInFromBottom>
+                <SimpleIconCard
+                  icon="/images/home/waarom-zwemmen6.png"
+                  title="Goed voor je geest"
+                  text="Rustig zwemmen is ontspannend en stressverlagend. Lever je meer inspanning dan wordt zwemmen meditatief omdat er geen ruimte is voor overbodige gedachten."
+                />{" "}
+              </FadeInFromBottom>
             </div>
           </div>
         </section>

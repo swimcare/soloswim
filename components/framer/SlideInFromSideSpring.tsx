@@ -1,10 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function SlideInFromLeftSpring({ children }: { children: React.ReactNode }) {
+function SlideInFromSideSpring({
+  children,
+  initialX = "-300px",
+}: {
+  children: React.ReactNode;
+  initialX?: string;
+}) {
   return (
     <motion.div
-      initial={{ x: "-300px", opacity: 0 }}
+      initial={{ x: initialX, opacity: 0 }}
       whileInView={{
         x: 0,
         opacity: 1,
@@ -22,4 +28,4 @@ function SlideInFromLeftSpring({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default SlideInFromLeftSpring;
+export default SlideInFromSideSpring;
