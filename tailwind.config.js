@@ -59,9 +59,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-montserrat)", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"], // change to var(--font-montserrat) when using app router
         lexend: [
-          "var(--font-lexend)",
+          "Lexend", // change to var(--font-lexend) when using app router
           "ui-serif",
           "Georgia",
           "Cambria",
