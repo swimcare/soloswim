@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { Lexend } from "next/font/google";
 import GoogleAnalytics from "../components/GoogleAnalytics";
+import "../styles/globals.css";
 
 // If loading a variable font, you don't need to specify the font weight
 const montserrat = Montserrat({
