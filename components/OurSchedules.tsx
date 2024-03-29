@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import FadeInFromBottom from "../components/framer/FadeInFromBottom";
-import WaveSvg from "../components/svg/WaveSvg";
-import SlideInFromSide from "../components/framer/SlideInFromSide";
+import FadeInFromBottom from "components/framer/FadeInFromBottom";
+import WaveSvg from "components/svg/WaveSvg";
+import SlideInFromSide from "components/framer/SlideInFromSide";
 import { CheckIcon } from "@heroicons/react/solid";
-import SlideInFromSideSpring from "../components/framer/SlideInFromSideSpring";
+import SlideInFromSideSpring from "components/framer/SlideInFromSideSpring";
 import Link from "next/link";
-import WaveExtendedSvg from "../components/svg/WaveExtendedSvg";
+import WaveExtendedSvg from "./svg/WaveExtendedSvg";
 import { useEffect, useState } from "react";
 
 export default function OurSchedules() {

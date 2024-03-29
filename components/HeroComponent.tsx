@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import SlideInFromSide from "../../components/framer/SlideInFromSide";
-import SlideInFromSideSpring from "../../components/framer/SlideInFromSideSpring";
+import SlideInFromSide from "../components2/framer/SlideInFromSide";
+import SlideInFromSideSpring from "../components2/framer/SlideInFromSideSpring";
 import Link from "next/link";
 
 export default function HeroComponent() {

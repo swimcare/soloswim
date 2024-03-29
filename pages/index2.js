@@ -4,20 +4,20 @@ import { Fragment, useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import FullWidthImageCard from "../components/home/FullWidthImageCard";
-import HomeProductItemCard from "../components/home/HomeProductItemCard";
-import IconCard from "../components/home/IconCard";
-import WaveSvg from "../components/main/WaveSvg";
-import MultiColorBg from "../components/home/MultiColorBg";
-import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
-import SimpleIconCard from "../components/home/SimpleIconCard";
-import SectionReviewsMain from "../components/home/SectionReviewsMain";
+import FullWidthImageCard from "../components2/home/FullWidthImageCard";
+import HomeProductItemCard from "../components2/home/HomeProductItemCard";
+import IconCard from "../components2/home/IconCard";
+import WaveSvg from "../components2/main/WaveSvg";
+import MultiColorBg from "../components2/home/MultiColorBg";
+import WaveExtendedSvg from "../components2/main/WaveExtendedSvg";
+import SimpleIconCard from "../components2/home/SimpleIconCard";
+import SectionReviewsMain from "../components2/home/SectionReviewsMain";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import FadeInFromBottom from "../components/framer/FadeInFromBottom";
-import SlideInFromSideSpring from "../components/framer/SlideInFromSideSpring";
-import SlideInFromSide from "../components/framer/SlideInFromSide";
-import HeroComponent from "../app/components/HeroComponent";
+import FadeInFromBottom from "../components2/framer/FadeInFromBottom";
+import SlideInFromSideSpring from "../components2/framer/SlideInFromSideSpring";
+import SlideInFromSide from "../components2/framer/SlideInFromSide";
+import HeroComponent from "../components/HeroComponent";
 
 export default function Home() {
   const [productSlide, setCurrentSlide] = useState(0);
