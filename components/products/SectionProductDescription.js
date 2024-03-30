@@ -91,16 +91,30 @@ function SectionProductDescription({ productData, addItemToBasket }) {
               <h1 className="font-lexend font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
                 {productData.title}
               </h1>
-              <p className="font-bold text-navy-light1 text-lg lg:text-2xl my-2 lg:my-5">
-                <NumberFormat
-                  value={productData.price}
-                  decimalSeparator=","
-                  displayType="text"
-                  prefix={"€ "}
-                  decimalScale={2}
-                  fixedDecimalScale={true}
-                />
-              </p>
+              <div className="flex space-x-2">
+                <p className="font-bold text-navy-light1 text-lg lg:text-2xl my-2 lg:my-5">
+                  <NumberFormat
+                    value={productData.price}
+                    decimalSeparator=","
+                    displayType="text"
+                    prefix={"€ "}
+                    decimalScale={2}
+                    fixedDecimalScale={true}
+                  />
+                </p>
+                {productData.oldPrice && (
+                  <p className="text-red-500 text-lg lg:text-2xl my-2 lg:my-5 line-through">
+                    <NumberFormat
+                      value={productData.oldPrice}
+                      decimalSeparator=","
+                      displayType="text"
+                      prefix={"€ "}
+                      decimalScale={2}
+                      fixedDecimalScale={true}
+                    />
+                  </p>
+                )}
+              </div>
               <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-tiny">
                 {productData.description}{" "}
                 <a
@@ -296,9 +310,16 @@ function SectionProductDescription({ productData, addItemToBasket }) {
               )}
               <div className="flex flex-row items-center justify-center space-x-2 my-4 lg:my-8">
                 <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
-                <p className="text-navy-light1 text-xs pr-5">
-                  1 - 2 werkdagen levertijd
-                </p>
+                {productData.preorder ? (
+                  <p className="text-navy-light1 text-xs pr-5">
+                    {productData.preorder + " in huis"}
+                  </p>
+                ) : (
+                  <p className="text-navy-light1 text-xs pr-5">
+                    1 - 2 werkdagen levertijd
+                  </p>
+                )}
+
                 <CreditCardIcon className="hidden sm:block h-8 w-8 text-slateblue-dark1" />
                 <p className="hidden sm:block text-navy-light1 text-xs pr-5">
                   Veilig online betalen
