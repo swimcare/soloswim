@@ -71,14 +71,13 @@ function SubSectionBenodigdhedenNiveaus({ color }) {
             name="Pullbuoy"
             tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
           />
-          {color === "green" ||
-            (color === "green-orange-yellow" && (
-              <Attribuut
-                icon="/images/zwemschemas/benodigdheden/zoomers.png"
-                name="Zoomers (optioneel)"
-                tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
-              />
-            ))}
+          {(color === "green" || color === "green-orange-yellow") && (
+            <Attribuut
+              icon="/images/zwemschemas/benodigdheden/zoomers.png"
+              name="Zoomers (optioneel)"
+              tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
+            />
+          )}
         </div>
       </AccordionPanel>
       <AccordionItem
