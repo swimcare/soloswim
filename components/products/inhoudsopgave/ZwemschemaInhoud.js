@@ -2,6 +2,8 @@ import { EyeIcon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/solid";
 import { Fragment, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams, usePathname } from "next/navigation";
 
 function ZwemschemaInhoud(props) {
   const [previewModalIsOpen, setpreviewModalIsOpen] = useState(false);
@@ -10,6 +12,12 @@ function ZwemschemaInhoud(props) {
     setpreviewModalIsOpen(!previewModalIsOpen);
   };
 
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const niveau = searchParams.get("niveau");
+
+  // console.log(pathname);
   return (
     <Fragment>
       <div className="flex flex-row gap-4 py-2">
@@ -24,15 +32,48 @@ function ZwemschemaInhoud(props) {
             </span>
             {props.preview ? (
               <span className=" float-right text-xs font-normal">
-                <button
-                  onClick={toggleModal}
-                  className="text-main transform translate-y-0.5 hover:underline"
-                >
-                  Preview
-                  <span className="float-left mr-1">
-                    <EyeIcon className="h-4 w-4 text-main" />
-                  </span>{" "}
-                </button>
+                {niveau ? (
+                  <Link
+                    scroll={false}
+                    href={{
+                      pathname: pathname,
+                      query: {
+                        niveau: niveau,
+                        preview: "true",
+                      },
+                    }}
+                  >
+                    <button
+                      onClick={toggleModal}
+                      className="text-main transform translate-y-0.5 hover:underline"
+                    >
+                      Preview
+                      <span className="float-left mr-1">
+                        <EyeIcon className="h-4 w-4 text-main" />
+                      </span>{" "}
+                    </button>
+                  </Link>
+                ) : (
+                  <Link
+                    scroll={false}
+                    href={{
+                      pathname: pathname,
+                      query: {
+                        preview: "true",
+                      },
+                    }}
+                  >
+                    <button
+                      onClick={toggleModal}
+                      className="text-main transform translate-y-0.5 hover:underline"
+                    >
+                      Preview
+                      <span className="float-left mr-1">
+                        <EyeIcon className="h-4 w-4 text-main" />
+                      </span>{" "}
+                    </button>
+                  </Link>
+                )}
                 <span className="ml-4 text-xs transform translate-y-0.5 float-right text-navy-light1">
                   {props.distance} m
                 </span>
