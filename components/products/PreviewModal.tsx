@@ -8,6 +8,7 @@ function Modal() {
   const searchParams = useSearchParams();
   const modal = searchParams?.get("preview");
   const pathname = usePathname();
+  const niveau = searchParams?.get("niveau");
 
   return (
     <>
@@ -31,17 +32,31 @@ function Modal() {
                     <div className="p-4 text-xl font-lexend font-semibold text-white">
                       <h1>Preview: props.number props.name</h1>
                     </div>
-                    <Link href={pathname || ""}>
-                      <button type="button" className="self-start m-3">
-                        <XIcon className="h-6 w-6 text-white" />
-                      </button>
-                    </Link>
+                    {niveau ? (
+                      <Link
+                        scroll={false}
+                        href={{
+                          pathname: pathname,
+                          query: { niveau: niveau },
+                        }}
+                      >
+                        <button type="button" className="self-start m-3">
+                          <XIcon className="h-6 w-6 text-white" />
+                        </button>
+                      </Link>
+                    ) : (
+                      <Link href={pathname || ""}>
+                        <button type="button" className="self-start m-3">
+                          <XIcon className="h-6 w-6 text-white" />
+                        </button>
+                      </Link>
+                    )}
                   </div>
 
-                  <div className="h-full p-4">
+                  <div className="h-60 p-4">
                     <div className="w-full h-full relative">
                       <Image
-                        src={""}
+                        src={"/images/zwemschemas/bcl100/preview.png"}
                         alt={"props.title"}
                         fill
                         sizes="100vw"
@@ -53,18 +68,25 @@ function Modal() {
                     </div>
                   </div>
                   <div className="flex flex-wrap items-center justify-center p-3 xs:gap-5 border-t border-gray-300">
-                    <Link
-                      scroll={false}
-                      href={
-                        {
+                    {niveau ? (
+                      <Link
+                        scroll={false}
+                        href={{
                           pathname: pathname,
-                        } || ""
-                      }
-                    >
-                      <button className="text-black font-medium hover:cursor-pointer hover:underline">
-                        Sluiten
-                      </button>
-                    </Link>
+                          query: { niveau: niveau },
+                        }}
+                      >
+                        <button className="text-black font-medium hover:cursor-pointer hover:underline">
+                          Sluiten
+                        </button>
+                      </Link>
+                    ) : (
+                      <Link href={pathname || ""}>
+                        <button className="text-black font-medium hover:cursor-pointer hover:underline">
+                          Sluiten
+                        </button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
