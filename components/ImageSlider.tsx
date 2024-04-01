@@ -16,7 +16,11 @@ const ImageSlider = () => {
     };
   }, [introSlide]);
 
-  const nextSlide = (slides, target, targetSetter) => {
+  const nextSlide = (
+    slides: number,
+    target: number,
+    targetSetter: React.Dispatch<React.SetStateAction<number>>
+  ): void => {
     if (target < slides - 1) {
       targetSetter(target + 1);
     } else {

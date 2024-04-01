@@ -15,17 +15,22 @@ const SchemaFeaturesSlider = () => {
     };
   }, [productSlide]);
 
-  const changeSlide = (index) => {
+  const changeSlide = (index: number): void => {
     setCurrentSlide(index);
   };
 
-  const nextSlide = (slides, target, targetSetter) => {
+  const nextSlide = (
+    slides: number,
+    target: number,
+    targetSetter: React.Dispatch<React.SetStateAction<number>>
+  ): void => {
     if (target < slides - 1) {
       targetSetter(target + 1);
     } else {
       targetSetter(0);
     }
   };
+
   return (
     <div className="sm:flex sm:flex-row my-10 max-w-5xl mx-auto">
       <div className="hidden sm:block my-auto transform translate-x-5 z-20 w-1/2 md:w-5/12 h-[500px]">
