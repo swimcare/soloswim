@@ -125,10 +125,14 @@ function winkelwagen() {
                   </div>
                   <p className="text-xs">
                     *Verzendkosten binnen Nederland. Definitieve verzendkosten
-                    worden berekend tijdens afrekenen.
+                    worden berekend tijdens afrekenen in de volgende stap.
                   </p>
                 </div>
                 <div className="pb-12 pt-4">
+                  <p className="text-xs text-center my-1">
+                    Heb je een <b>kortingscode</b> of <b>cadeaubon</b>?
+                    Verzilver deze in de volgende stap!
+                  </p>
                   <button
                     role="link"
                     onClick={createCheckoutSession}
@@ -164,7 +168,6 @@ function winkelwagen() {
                     >
                       Naar producten
                     </button>
-
                   </Link>
                 </div>
               </div>
