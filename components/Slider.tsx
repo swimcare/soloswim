@@ -6,7 +6,10 @@ interface SliderProps {
   totalSlides: number;
   initialSlide: number;
   slideDuration: number;
-  children: (currentSlide: number) => React.ReactNode;
+  children: (
+    currentSlide: number,
+    changeSlide: (index: number) => void
+  ) => React.ReactNode;
 }
 
 const Slider: React.FC<SliderProps> = ({
@@ -26,7 +29,11 @@ const Slider: React.FC<SliderProps> = ({
     };
   }, [currentSlide, totalSlides, slideDuration]);
 
-  return <>{children(currentSlide)}</>;
+  const changeSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  return <>{children(currentSlide, changeSlide)}</>;
 };
 
 export default Slider;
