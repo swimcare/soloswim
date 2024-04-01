@@ -1,36 +1,13 @@
-"use client";
-
-import Image from "next/image";
 import FadeInFromBottom from "components/framer/FadeInFromBottom";
 import WaveSvg from "components/svg/WaveSvg";
-import SlideInFromSide from "components/framer/SlideInFromSide";
-import { CheckIcon } from "@heroicons/react/solid";
 import SlideInFromSideSpring from "components/framer/SlideInFromSideSpring";
 import Link from "next/link";
 import WaveExtendedSvg from "./svg/WaveExtendedSvg";
-import { useEffect, useState } from "react";
+import ImageSlider from "./ImageSlider";
+import { CheckIcon } from "@heroicons/react/solid";
+import SlideInFromSide from "./framer/SlideInFromSide";
 
 export default function OurSchedules() {
-  const [introSlide, setIntroSlide] = useState(0);
-
-  useEffect(() => {
-    const slideID = setTimeout(
-      () => nextSlide(3, introSlide, setIntroSlide),
-      4000
-    );
-    return () => {
-      clearTimeout(slideID);
-    };
-  }, [introSlide]);
-
-  const nextSlide = (slides, target, targetSetter) => {
-    if (target < slides - 1) {
-      targetSetter(target + 1);
-    } else {
-      targetSetter(0);
-    }
-  };
-
   return (
     <section className="bg-grey-light4">
       <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 sm:pb-10">
@@ -48,63 +25,8 @@ export default function OurSchedules() {
       <div className="mx-5 sm:mx-0 lg:w-3/4">
         <WaveSvg fill="#fff" />
       </div>
-
-      {/* client component */}
       <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row lg:w-3/4 relative">
-        <div className="transform -translate-y-40 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 lg:translate-x-1/2 sm:w-52 md:w-72 md:mr-10 lg:mr-0 lg:w-auto">
-          <div
-            className={`${
-              introSlide === 0 ? "block" : "hidden"
-            } h-[30rem] max-w-screen-xs md:max-w-none lg:w-96`}
-          >
-            <Image
-              src="/images/home/intro1.png"
-              alt="Soloswim zwemschema's"
-              priority
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-                objectPosition: "center",
-              }}
-            />
-          </div>
-          <div
-            className={`${
-              introSlide === 1 ? "block" : "hidden"
-            } h-[30rem] max-w-screen-xs md:max-w-none lg:w-96`}
-          >
-            <Image
-              src="/images/home/intro2.png"
-              alt="Soloswim zwemschema's"
-              priority
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-                objectPosition: "center",
-              }}
-            />
-          </div>
-          <div
-            className={`${
-              introSlide === 2 ? "block" : "hidden"
-            } h-[30rem] max-w-screen-xs md:max-w-none lg:w-96`}
-          >
-            <Image
-              src="/images/home/intro3.png"
-              alt="Soloswim zwemschema's"
-              priority
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-                objectPosition: "center",
-              }}
-            />
-          </div>
-        </div>
-
+        <ImageSlider />
         <ul className=" transform -translate-y-36 sm:translate-y-0 -mb-36 sm:mb-0 sm:w-full xl:ml-[calc((((133%)-1280px)/2)+20px+1rem)]">
           <div>
             <SlideInFromSide duration={1.3}>
@@ -144,12 +66,11 @@ export default function OurSchedules() {
                     Die het zwemmen leuker maken en je vooruit helpen
                   </p>
                 </div>
-              </li>{" "}
+              </li>
             </SlideInFromSide>
           </div>
         </ul>
       </div>
-      {/* end client component */}
 
       <div className="mx-5 sm:mx-0 lg:w-3/4">
         <WaveExtendedSvg fill="#fff" />
