@@ -12,7 +12,6 @@ import { useEffect, useState } from "react";
 
 export default function OurSchedules() {
   const [introSlide, setIntroSlide] = useState(0);
-  const [productSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const slideID = setTimeout(
@@ -49,6 +48,8 @@ export default function OurSchedules() {
       <div className="mx-5 sm:mx-0 lg:w-3/4">
         <WaveSvg fill="#fff" />
       </div>
+
+      {/* client component */}
       <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row lg:w-3/4 relative">
         <div className="transform -translate-y-40 w-full sm:order-2 sm:absolute sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:right-0 lg:translate-x-1/2 sm:w-52 md:w-72 md:mr-10 lg:mr-0 lg:w-auto">
           <div
@@ -148,6 +149,8 @@ export default function OurSchedules() {
           </div>
         </ul>
       </div>
+      {/* end client component */}
+
       <div className="mx-5 sm:mx-0 lg:w-3/4">
         <WaveExtendedSvg fill="#fff" />
       </div>

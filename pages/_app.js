@@ -1,14 +1,14 @@
 import "tailwindcss/tailwind.css";
 import { Provider } from "react-redux";
 import { store } from "../app/store";
-import Header from "../components2/main/Header";
-import Footer from "../components2/main/Footer";
+import Header from "../components/main/Header";
+import Footer from "../components/main/Footer";
 import "../styles/globals.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import * as ga from "../lib/ga";
 import { DefaultSeo } from "next-seo";
-import ScrollToTop from "../components2/general/ScrollToTop";
+import ScrollToTop from "../components/general/ScrollToTop";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
