@@ -21,7 +21,7 @@ features:
 color: "blue"
 images:
   [
-    "/images/zwemschemas/bcl100/1.png",
+    "/images/zwemschemas/sf1/1.png",
     "/images/zwemschemas/bcl100/2.png",
     "/images/zwemschemas/bcl100/3.png",
     "/images/zwemschemas/bcl100/4.png",
