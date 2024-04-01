@@ -30,20 +30,27 @@ function SubSectionInhoudsopgave({ productData }) {
               <Inhoudsopgave
                 inhoud={productData.inhoud.beginners}
                 editie={productData.editie}
+                niveau="beginners"
               />
             ) : (
               <Fragment>
                 <Inhoudsopgave
                   inhoud={productData.inhoud.beginners.techniek}
                   editie={productData.editie}
+                  niveau="beginners"
+                  type="techniek"
                 />
                 <Inhoudsopgave
                   inhoud={productData.inhoud.beginners.kracht}
                   editie={productData.editie}
+                  niveau="beginners"
+                  type="kracht"
                 />
                 <Inhoudsopgave
                   inhoud={productData.inhoud.beginners.duur}
                   editie={productData.editie}
+                  niveau="beginners"
+                  type="duur"
                 />
               </Fragment>
             )}
@@ -63,20 +70,24 @@ function SubSectionInhoudsopgave({ productData }) {
               <Inhoudsopgave
                 inhoud={productData.inhoud.semigevorderden}
                 editie={productData.editie}
+                niveau="semigevorderden"
               />
             ) : (
               <Fragment>
                 <Inhoudsopgave
                   inhoud={productData.inhoud.semigevorderden.techniek}
                   editie={productData.editie}
+                  niveau="semigevorderden"
                 />
                 <Inhoudsopgave
                   inhoud={productData.inhoud.semigevorderden.kracht}
                   editie={productData.editie}
+                  niveau="semigevorderden"
                 />
                 <Inhoudsopgave
                   inhoud={productData.inhoud.semigevorderden.duur}
                   editie={productData.editie}
+                  niveau="semigevorderden"
                 />
               </Fragment>
             )}
@@ -96,27 +107,35 @@ function SubSectionInhoudsopgave({ productData }) {
               <Inhoudsopgave
                 inhoud={productData.inhoud.gevorderden}
                 editie={productData.editie}
+                niveau="gevorderden"
               />
             ) : (
               <Fragment>
                 <Inhoudsopgave
                   inhoud={productData.inhoud.gevorderden.techniek}
                   editie={productData.editie}
+                  niveau="gevorderden"
                 />
                 <Inhoudsopgave
                   inhoud={productData.inhoud.gevorderden.kracht}
                   editie={productData.editie}
+                  niveau="gevorderden"
                 />
                 <Inhoudsopgave
                   inhoud={productData.inhoud.gevorderden.duur}
                   editie={productData.editie}
+                  niveau="gevorderden"
                 />
               </Fragment>
             )}
           </AccordionPanel>
         </Accordion>
       ) : (
-        <Inhoudsopgave inhoud={productData.inhoud.beginners} />
+        <Inhoudsopgave
+          inhoud={productData.inhoud.beginners}
+          editie={productData.editie}
+          niveau="beginners"
+        />
       )}
     </div>
   );

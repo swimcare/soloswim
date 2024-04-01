@@ -6,6 +6,7 @@ subtitle: "Zelf borstcrawl leren"
 price: 17.99
 description: "Altijd al de borstcrawl willen leren zwemmen? Dan is dit je kans! Door middel van 10 opbouwende zwemschema’s van ieder 60 minuten kun je zelfstandig werken aan de basiselementen van de borstcrawl. Zo leer jij een 100m borstcrawl zwemmen met de juiste basistechniek. De schema's zijn volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 inStock: true
+editie: 1
 features:
   [
     "10 zwemschema’s van ongeveer 60 min",

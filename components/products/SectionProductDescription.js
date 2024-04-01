@@ -241,7 +241,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
             )}
 
             <div className="text-center my-6">
-              {productData.inStock && productData.type ? (
+              {productData.inStock ? (
                 <Link
                   scroll={false}
                   href={{
@@ -249,35 +249,16 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                     query: {
                       inCart: "true",
                       id: productData.id,
-                      niveau: niveau.toLowerCase(),
+                      niveau: productData.type
+                        ? niveau.toLowerCase()
+                        : undefined,
                     },
                   }}
                 >
                   <button
                     role="button"
                     onClick={() => {
-                      productData.type = niveau;
-                      addItemToBasket(productData);
-                    }}
-                    className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
-                  >
-                    Toevoegen aan winkelwagen
-                  </button>
-                </Link>
-              ) : productData.inStock && !productData.type ? (
-                <Link
-                  scroll={false}
-                  href={{
-                    pathname: "/producten/[id]",
-                    query: {
-                      inCart: "true",
-                      id: productData.id,
-                    },
-                  }}
-                >
-                  <button
-                    role="button"
-                    onClick={() => {
+                      if (!productData.type) productData.type = niveau;
                       addItemToBasket(productData);
                     }}
                     className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
@@ -294,6 +275,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                   Momenteel niet op voorraad
                 </button>
               )}
+
               <div className="flex flex-row items-center justify-center space-x-2 my-4 lg:my-8">
                 <ClockIcon className="h-8 w-8 text-slateblue-dark1" />
                 <p className="text-navy-light1 text-xs pr-5">
