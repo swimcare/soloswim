@@ -17,7 +17,7 @@ import { NextSeo } from "next-seo";
 import FadeInFromBottom from "../components/framer/FadeInFromBottom";
 import SlideInFromSideSpring from "../components/framer/SlideInFromSideSpring";
 import SlideInFromSide from "../components/framer/SlideInFromSide";
-import HeroComponent from "../components/HeroComponent";
+import HeroComponent from "../components/SectionHero/SectionHero";
 
 export default function Home() {
   const [productSlide, setCurrentSlide] = useState(0);

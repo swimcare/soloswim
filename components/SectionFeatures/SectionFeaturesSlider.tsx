@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Slider from "./Slider";
+import Slider from "../Slider";
 
-const ImageSlider = () => {
+const SectionFeaturesSlider = () => {
   return (
     <Slider totalSlides={3} initialSlide={0} slideDuration={4000}>
       {(currentSlide) => (
@@ -65,4 +65,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default SectionFeaturesSlider;

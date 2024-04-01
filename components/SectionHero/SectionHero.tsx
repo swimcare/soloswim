@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import SlideInFromSide from "../components/framer/SlideInFromSide";
-import SlideInFromSideSpring from "../components/framer/SlideInFromSideSpring";
+import SlideInFromSide from "../framer/SlideInFromSide";
+import SlideInFromSideSpring from "../framer/SlideInFromSideSpring";
 import Link from "next/link";
 
-export default function HeroComponent() {
+export default function SectionHero() {
   return (
     <section className="h-screen-navbar transform translate-y-0">
       <div className="relative h-full overflow-hidden">

@@ -2,12 +2,12 @@ import FadeInFromBottom from "components/framer/FadeInFromBottom";
 import WaveSvg from "components/svg/WaveSvg";
 import SlideInFromSideSpring from "components/framer/SlideInFromSideSpring";
 import Link from "next/link";
-import WaveExtendedSvg from "./svg/WaveExtendedSvg";
-import ImageSlider from "./ImageSlider";
+import WaveExtendedSvg from "../svg/WaveExtendedSvg";
+import ImageSlider from "./SectionFeaturesSlider";
 import { CheckIcon } from "@heroicons/react/solid";
-import SlideInFromSide from "./framer/SlideInFromSide";
+import SlideInFromSide from "../framer/SlideInFromSide";
 
-const OurSchedules = () => {
+const SectionFeatures = () => {
   return (
     <section className="bg-grey-light4">
       <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 sm:pb-10">
@@ -93,4 +93,4 @@ const OurSchedules = () => {
   );
 };
 
-export default OurSchedules;
+export default SectionFeatures;

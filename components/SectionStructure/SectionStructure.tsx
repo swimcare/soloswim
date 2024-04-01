@@ -1,9 +1,9 @@
-import SchemaFeaturesSlider from "./SchemaFeaturesSlider";
-import FadeInFromBottom from "./framer/FadeInFromBottom";
+import SchemaFeaturesSlider from "./SectionStructureSlider";
+import FadeInFromBottom from "../framer/FadeInFromBottom";
 
 type Props = {};
 
-const HowItLooksLike = (props: Props) => {
+const SectionStructure = (props: Props) => {
   return (
     <section>
       <div className="px-5 sm:px-3 max-w-screen-xl mx-auto py-20 lg:py-32">
@@ -21,4 +21,4 @@ const HowItLooksLike = (props: Props) => {
   );
 };
 
-export default HowItLooksLike;
+export default SectionStructure;
