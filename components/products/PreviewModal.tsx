@@ -17,12 +17,12 @@ function Modal() {
           {/* <div className="fixed top-0 left-0 z-30 w-screen h-screen bg-black opacity-50" /> */}
           <dialog className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
             <div
-              className={`fixed top-0 overflow-y-auto mx-auto inset-x-0 z-40 w-full px-5 py-5 h-screen"
+              className={`fixed top-0 overflow-y-auto mx-auto inset-x-0 z-40 w-full px-5 h-screen"
           }`}
             >
               <div
                 aria-modal={true}
-                className={`py-7 m-auto focus:outline-none`}
+                className={`py-10 m-auto focus:outline-none h-screen`}
                 // ref={ref}
                 role="dialogue"
                 tabIndex={-1}
@@ -41,19 +41,19 @@ function Modal() {
                         }}
                       >
                         <button type="button" className="self-start m-3">
-                          <XIcon className="h-6 w-6 text-white" />
+                          <XIcon className="h-8 w-8 text-white" />
                         </button>
                       </Link>
                     ) : (
-                      <Link href={pathname || ""}>
+                      <Link href={pathname || ""} scroll={false}>
                         <button type="button" className="self-start m-3">
-                          <XIcon className="h-6 w-6 text-white" />
+                          <XIcon className="h-8 w-8 text-white" />
                         </button>
                       </Link>
                     )}
                   </div>
 
-                  <div className="h-60 p-4">
+                  <div className="h-4/5 p-4">
                     <div className="w-full h-full relative">
                       <Image
                         src={"/images/zwemschemas/bcl100/preview.png"}
@@ -81,7 +81,7 @@ function Modal() {
                         </button>
                       </Link>
                     ) : (
-                      <Link href={pathname || ""}>
+                      <Link href={pathname!} scroll={false}>
                         <button className="text-black font-medium hover:cursor-pointer hover:underline">
                           Sluiten
                         </button>
