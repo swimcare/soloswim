@@ -3,9 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-type Props = {};
-
-function ImageSlider({}: Props) {
+const ImageSlider = () => {
   const [introSlide, setIntroSlide] = useState(0);
 
   useEffect(() => {
@@ -81,6 +79,6 @@ function ImageSlider({}: Props) {
       </div>
     </div>
   );
-}
+};
 
 export default ImageSlider;

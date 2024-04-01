@@ -7,7 +7,7 @@ import ImageSlider from "./ImageSlider";
 import { CheckIcon } from "@heroicons/react/solid";
 import SlideInFromSide from "./framer/SlideInFromSide";
 
-export default function OurSchedules() {
+const OurSchedules = () => {
   return (
     <section className="bg-grey-light4">
       <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-20 lg:pt-32 pb-32 sm:pb-10">
@@ -91,4 +91,6 @@ export default function OurSchedules() {
       <WaveSvg fill="#fff" />
     </section>
   );
-}
+};
+
+export default OurSchedules;
