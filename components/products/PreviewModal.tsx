@@ -14,9 +14,6 @@ function Modal(inhoud) {
 
   const data = inhoud.inhoud;
 
-  //   console.log(data[previewQuery!][0].title);
-  console.log(data);
-
   return (
     <>
       {previewQuery && (
@@ -29,7 +26,6 @@ function Modal(inhoud) {
               <div
                 aria-modal={true}
                 className={`py-10 m-auto focus:outline-none h-screen`}
-                // ref={ref}
                 role="dialogue"
                 tabIndex={-1}
               >
@@ -64,7 +60,11 @@ function Modal(inhoud) {
                             ? data[previewQuery!][typeQuery!][0]?.preview
                             : data[previewQuery!][0]?.preview
                         }
-                        alt={"props.title"}
+                        alt={
+                          data[previewQuery!][typeQuery!]
+                            ? data[previewQuery!][typeQuery!][0]?.title
+                            : data[previewQuery!][0]?.title
+                        }
                         fill
                         sizes="100vw"
                         style={{
