@@ -2,13 +2,14 @@ import { EyeIcon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/solid";
 import { Fragment, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams, usePathname } from "next/navigation";
 
 function ZwemschemaInhoud(props) {
-  const [previewModalIsOpen, setpreviewModalIsOpen] = useState(false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  const toggleModal = () => {
-    setpreviewModalIsOpen(!previewModalIsOpen);
-  };
+  const niveauQuery = searchParams.get("niveau");
 
   return (
     <Fragment>
@@ -24,15 +25,24 @@ function ZwemschemaInhoud(props) {
             </span>
             {props.preview ? (
               <span className=" float-right text-xs font-normal">
-                <button
-                  onClick={toggleModal}
-                  className="text-main transform translate-y-0.5 hover:underline"
+                <Link
+                  scroll={false}
+                  href={{
+                    pathname: pathname,
+                    query: {
+                      ...(niveauQuery && { niveau: niveauQuery }),
+                      preview: props.niveau || "",
+                      ...(props.type && { type: props.type }),
+                    },
+                  }}
                 >
-                  Preview
-                  <span className="float-left mr-1">
-                    <EyeIcon className="h-4 w-4 text-main" />
-                  </span>{" "}
-                </button>
+                  <button className="text-main transform translate-y-0.5 hover:underline">
+                    Preview
+                    <span className="float-left mr-1">
+                      <EyeIcon className="h-4 w-4 text-main" />
+                    </span>
+                  </button>
+                </Link>
                 <span className="ml-4 text-xs transform translate-y-0.5 float-right text-navy-light1">
                   {props.distance} m
                 </span>

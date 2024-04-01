@@ -9,7 +9,7 @@ import SectionNiveauInfo from "../../components/products/SectionNiveauInfo";
 import * as ga from "../../lib/ga/index";
 import { NextSeo } from "next-seo";
 import CartModal from "../../components/products/CartModal";
-import Link from "next/link";
+import PreviewModal from "../../components/products/PreviewModal";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -89,6 +89,7 @@ export default function Zwemschema({ productData }) {
 
       <main>
         <CartModal />
+        <PreviewModal inhoud={productData.inhoud} />
         <SectionProductDescription
           productData={productData}
           addItemToBasket={addItemToBasket}
