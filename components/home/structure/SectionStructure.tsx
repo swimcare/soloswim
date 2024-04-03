@@ -1,5 +1,5 @@
-import SchemaFeaturesSlider from "./SectionStructureSlider";
-import FadeInFromBottom from "../framer/FadeInFromBottom";
+import StructureSlider from "./StructureSlider";
+import FadeInFromBottom from "../../framer/FadeInFromBottom";
 
 type Props = {};
 
@@ -15,7 +15,7 @@ const SectionStructure = (props: Props) => {
             Lekker duidelijk
           </h3>
         </FadeInFromBottom>
-        <SchemaFeaturesSlider />
+        <StructureSlider />
       </div>
     </section>
   );

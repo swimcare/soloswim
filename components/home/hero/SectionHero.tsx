@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import SlideInFromSide from "../framer/SlideInFromSide";
-import SlideInFromSideSpring from "../framer/SlideInFromSideSpring";
+import SlideInFromSide from "../../framer/SlideInFromSide";
+import SlideInFromSideSpring from "../../framer/SlideInFromSideSpring";
 import Link from "next/link";
 
 export default function SectionHero() {

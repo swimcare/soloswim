@@ -1,6 +1,6 @@
-import SectionStructure from "components/SectionStructure/SectionStructure";
-import HeroComponent from "../components/SectionHero/SectionHero";
-import SectionFeatures from "../components/SectionFeatures/SectionFeatures";
+import SectionStructure from "components/home/structure/SectionStructure";
+import HeroComponent from "../components/home/hero/SectionHero";
+import SectionFeatures from "../components/home/features/SectionFeatures";
 
 export default async function Page() {
   return (

@@ -2,10 +2,10 @@ import FadeInFromBottom from "components/framer/FadeInFromBottom";
 import WaveSvg from "components/svg/WaveSvg";
 import SlideInFromSideSpring from "components/framer/SlideInFromSideSpring";
 import Link from "next/link";
-import WaveExtendedSvg from "../svg/WaveExtendedSvg";
-import ImageSlider from "./SectionFeaturesSlider";
+import WaveExtendedSvg from "../../svg/WaveExtendedSvg";
+import FeaturesSlider from "./FeaturesSlider";
 import { CheckIcon } from "@heroicons/react/solid";
-import SlideInFromSide from "../framer/SlideInFromSide";
+import SlideInFromSide from "../../framer/SlideInFromSide";
 
 const SectionFeatures = () => {
   return (
@@ -26,7 +26,7 @@ const SectionFeatures = () => {
         <WaveSvg fill="#fff" />
       </div>
       <div className="mx-5 sm:mx-0 bg-white p-5 flex flex-col sm:flex-row lg:w-3/4 relative">
-        <ImageSlider />
+        <FeaturesSlider />
         <ul className=" transform -translate-y-36 sm:translate-y-0 -mb-36 sm:mb-0 sm:w-full xl:ml-[calc((((133%)-1280px)/2)+20px+1rem)]">
           <div>
             <SlideInFromSide duration={1.3}>
