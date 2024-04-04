@@ -19,14 +19,8 @@ features:
     "Verkrijgbaar voor een 25 of 50 meter bad",
   ]
 color: "blue"
-images:
-  [
-    "/images/zwemschemas/sf1/1.png",
-    "/images/zwemschemas/bcl100/2.png",
-    "/images/zwemschemas/bcl100/3.png",
-    "/images/zwemschemas/bcl100/4.png",
-  ]
-tab1_image: "/images/zwemschemas/bcl100/5.png"
+images: ["/images/zwemschemas/sf1/1.png", "/images/zwemschemas/sf1/2.png"]
+tab1_image: "/images/zwemschemas/sf1/2.png"
 winkelwagen_images: ["/images/zwemschemas/sf1/cart/1.png"]
 card_info: "Voor de rustige banenzwemmer"
 ---
