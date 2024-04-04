@@ -147,7 +147,7 @@ function SectionProductTabs({ productData }) {
                 {productData.niveaus ? (
                   <SubSectionBenodigdhedenNiveaus color={productData.color} />
                 ) : (
-                  <SubSectionBenodigdheden />
+                  <SubSectionBenodigdheden id={productData.id} />
                 )}
               </div>
             )}
@@ -222,7 +222,7 @@ function SectionProductTabs({ productData }) {
                 {productData.niveaus ? (
                   <SubSectionBenodigdhedenNiveaus color={productData.color} />
                 ) : (
-                  <SubSectionBenodigdheden />
+                  <SubSectionBenodigdheden id={productData.id} />
                 )}
               </div>
             )}
