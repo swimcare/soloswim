@@ -58,7 +58,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
     window.history.pushState({}, "", url);
   };
 
-  const [niveau, setNiveau] = useState("Beginners");
+  const [niveau, setNiveau] = useState();
 
   useEffect(() => {
     const niveauParam = searchParams.get("niveau");
@@ -263,9 +263,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                     query: {
                       inCart: "true",
                       id: productData.id,
-                      niveau: productData.type
-                        ? niveau.toLowerCase()
-                        : undefined,
+                      ...(niveau && { niveau: niveau.toLowerCase() }),
                     },
                   }}
                 >

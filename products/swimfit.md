@@ -27,11 +27,7 @@ images:
     "/images/zwemschemas/bcl100/4.png",
   ]
 tab1_image: "/images/zwemschemas/bcl100/5.png"
-winkelwagen_images:
-  [
-    "/images/zwemschemas/bcl100/cart/1.png",
-    "/images/zwemschemas/bcl100/cart/2.png",
-  ]
+winkelwagen_images: ["/images/zwemschemas/sf1/cart/1.png"]
 card_info: "Voor de rustige banenzwemmer"
 ---
 

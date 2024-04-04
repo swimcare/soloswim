@@ -18,6 +18,9 @@ function Modal() {
   console.log(addedItem);
 
   const typeNumber = () => {
+    if (!addedItem[0].type) {
+      return 0;
+    }
     if (
       addedItem[0].type === "Beginners" ||
       addedItem[0].type === "25 meter zwembad"
