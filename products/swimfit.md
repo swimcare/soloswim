@@ -5,26 +5,25 @@ title: "Swimfit (pre-order)"
 subtitle: "Leuke oefeningen voor tijdens het banenzwemmen"
 price: 12.99
 oldPrice: 17.99
-description: "Altijd al de borstcrawl willen leren zwemmen? Dan is dit je kans! Door middel van 10 opbouwende zwemschema’s van ieder 60 minuten kun je zelfstandig werken aan de basiselementen van de borstcrawl. Zo leer jij een 100m borstcrawl zwemmen met de juiste basistechniek. De schema's zijn volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
+description: "Vind je het banenzwemmen een beetje saai met maar weinig variatie? Of zou je liever meer uit je zwemuurtje halen? Dan is deze Swimfit bundel iets voor jou! Deze 10 gevarieerde zwemworkouts zijn voor iedereen toegankelijk en helpen jouw algehele fitness te verbeteren, ongeacht je niveau. Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen. Het enige wat je moet kunnen is de schoolslag die je als kind hebt geleerd, je hoeft je hoofd dan ook niet onder water te houden of andere slagen zoals borstcrawl te zwemmen."
 inStock: true
 preorder: "mei 2024"
 features:
   [
     "10 zwemschema’s van ongeveer 60 min",
-    "Een gestructureerd plan om zelfstandig 100m borstcrawl te leren zwemmen",
     "Inhoudsopgave en begrippenlijst inbegrepen",
     "Volledig waterproof en van sterke kwaliteit",
-    "Duidelijk omschreven (technische) zwemoefeningen",
+    "Duidelijk omschreven zwemoefeningen",
     "Hersluitbare roestvrijstalen ring",
-    "Verkrijgbaar voor een 25 of 50 meter bad",
+    "Geschikt voor een 25- en 50 meter bad",
   ]
 color: "blue"
 images: ["/images/zwemschemas/sf1/1.png", "/images/zwemschemas/sf1/2.png"]
 tab1_image: "/images/zwemschemas/sf1/2.png"
 winkelwagen_images: ["/images/zwemschemas/sf1/cart/1.png"]
-card_info: "Voor de rustige banenzwemmer"
+card_info: "Voor de rustige schoolslag zwemmer"
 ---
 
-10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt (zoals houding, ademhaling of armen) en bestaat uit een warming up, een kern en een cooling down. Wanneer je een zwemschema zonder problemen hebt voltooid binnen de aangegeven tijd ben je klaar voor het volgende schema. Zo werk jij op een **gestructureerde manier** aan je borstcrawl en kun je uiteindelijk 100m borstcrawl netjes afleggen **zonder uitgeput** te raken!
+10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt (zoals conditie, techniek of benen ) en bestaat uit een warming up, een kern en een cooling down. Zo werk jij op een **gestructureerde manier** aan je conditie en heb je **meer plezier** tijdens het banenzwemmen!
 
 <!-- Todo: Uiteindelijk met varianten werken (per niveau), en dan bepaalde attributes hier heen halen (zoals stock) -->
