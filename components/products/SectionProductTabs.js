@@ -41,7 +41,7 @@ function SectionProductTabs({ productData }) {
               >
                 Wat krijg je
               </li>
-              {!productData.isAccessoire && (
+              {productData.inhoud && (
                 <li
                   onClick={() => setActiveTab(2)}
                   className={`${
@@ -131,7 +131,7 @@ function SectionProductTabs({ productData }) {
               </div>
             )}
             {/* TAB 2: INHOUDSOPGAVE */}
-            {activeTab === 2 && !productData.isAccessoire && (
+            {activeTab === 2 && productData.inhoud && (
               <div className="hidden md:block">
                 <SubSectionInhoudsopgave productData={productData} />
               </div>
@@ -147,7 +147,7 @@ function SectionProductTabs({ productData }) {
                 {productData.niveaus ? (
                   <SubSectionBenodigdhedenNiveaus color={productData.color} />
                 ) : (
-                  <SubSectionBenodigdheden />
+                  <SubSectionBenodigdheden id={productData.id} />
                 )}
               </div>
             )}
@@ -206,7 +206,7 @@ function SectionProductTabs({ productData }) {
               </div>
             </div>
             {/* TAB 2: INHOUDSOPGAVE */}
-            {!productData.isAccessoire && (
+            {productData.inhoud && (
               <div className="md:hidden">
                 <SubSectionInhoudsopgave productData={productData} />
               </div>
@@ -222,7 +222,7 @@ function SectionProductTabs({ productData }) {
                 {productData.niveaus ? (
                   <SubSectionBenodigdhedenNiveaus color={productData.color} />
                 ) : (
-                  <SubSectionBenodigdheden />
+                  <SubSectionBenodigdheden id={productData.id} />
                 )}
               </div>
             )}

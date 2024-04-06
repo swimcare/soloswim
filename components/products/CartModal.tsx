@@ -1,8 +1,6 @@
 // todo: dont use UseState for storing the type (e.g. beginners), maar gebruik een query param
 // bijv. ?type=beginners, en gebruik dit in de modal en ook voor het aanmaken van het cart object.
 
-//todo 2: ensure that the link 'verder winkelen' in the modal preserves the niveau query parameter.
-
 "use client";
 import { useSearchParams, usePathname } from "next/navigation";
 import Link from "next/link";
@@ -20,6 +18,9 @@ function Modal() {
   console.log(addedItem);
 
   const typeNumber = () => {
+    if (!addedItem[0].type) {
+      return 0;
+    }
     if (
       addedItem[0].type === "Beginners" ||
       addedItem[0].type === "25 meter zwembad"

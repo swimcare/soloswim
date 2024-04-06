@@ -1,6 +1,6 @@
 import ZwemschemaInhoud from "./ZwemschemaInhoud";
 
-function Inhoudsopgave({ inhoud, editie }) {
+function Inhoudsopgave({ inhoud, editie, niveau, type }) {
   const mappedInhoud = inhoud.map((training, index) => (
     <ZwemschemaInhoud
       key={index}
@@ -10,6 +10,8 @@ function Inhoudsopgave({ inhoud, editie }) {
       distance={training.distance}
       previewItem={index + 1}
       preview={training.preview}
+      niveau={niveau}
+      type={type}
     />
   ));
 

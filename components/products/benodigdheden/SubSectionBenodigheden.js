@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Attribuut from "./Attribuut";
 import DubbelAttribuut from "./DubbelAttribuut";
 
-function SubSectionBenodigdheden() {
+function SubSectionBenodigdheden({ id }) {
   return (
     <Fragment>
       <div className="my-2">
@@ -24,17 +24,21 @@ function SubSectionBenodigdheden() {
             name="Sportieve zwemkleding"
             tooltipText="Draag zwemkleding geschikt voor banenzwemmen."
           />
-          <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zwembril.png"
-            name="Zwembril"
-            tooltipText="Voorkom water in je ogen tijdens het zwemmen."
-          />
-          <Attribuut
-            icon="/images/zwemschemas/benodigdheden/badmuts.png"
-            name="Badmuts"
-            tooltipText="Praktisch voor als je lang haar hebt."
-            bestelButton="/producten/soloswim-badmuts"
-          />
+          {id !== "swimfit" && (
+            <Attribuut
+              icon="/images/zwemschemas/benodigdheden/zwembril.png"
+              name="Zwembril"
+              tooltipText="Voorkom water in je ogen tijdens het zwemmen."
+            />
+          )}
+          {id !== "swimfit" && (
+            <Attribuut
+              icon="/images/zwemschemas/benodigdheden/badmuts.png"
+              name="Badmuts"
+              tooltipText="Praktisch voor als je lang haar hebt."
+              bestelButton="/producten/soloswim-badmuts"
+            />
+          )}
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/plankje.png"
             name="Zwemplankje"
@@ -45,11 +49,13 @@ function SubSectionBenodigdheden() {
             name="Pullbuoy"
             tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
           />
-          <Attribuut
-            icon="/images/zwemschemas/benodigdheden/zoomers.png"
-            name="Zoomers (optioneel)"
-            tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
+          {id !== "swimfit" && (
+            <Attribuut
+              icon="/images/zwemschemas/benodigdheden/zoomers.png"
+              name="Zoomers (optioneel)"
+              tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
             />
+          )}
         </div>
       </div>
     </Fragment>
