@@ -117,12 +117,13 @@ function SectionProductDescription({ productData, addItemToBasket }) {
               </div>
               <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-tiny">
                 {productData.description}{" "}
-                <a
+                <Link
                   className="uppercase font-bold hover:underline text-tiny"
                   href="#wat-krijg-je"
+                  smooth
                 >
                   Meer lezen
-                </a>
+                </Link>
               </p>
             </div>
             {productData.type && (

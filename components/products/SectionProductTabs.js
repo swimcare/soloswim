@@ -27,7 +27,10 @@ function SectionProductTabs({ productData }) {
       </div>
 
       <section className="bg-grey-light4">
-        <div className="px-5 sm:px-8 max-w-screen-xl mx-auto md:py-5 lg:py-20">
+        <div
+          id="wat-krijg-je"
+          className="px-5 sm:px-8 max-w-screen-xl mx-auto md:py-5 lg:py-20"
+        >
           {/* Desktop tab systeem */}
           <div className="hidden md:block w-full border-b border-grey-warm border-opacity-25">
             <ul className="flex flex-row transform translate-y-0.5">
@@ -80,10 +83,7 @@ function SectionProductTabs({ productData }) {
           <div>
             {/* Tab 1: Wat krijg je */}
             {(activeTab === 1 || productData.isAccessoire) && (
-              <div
-                id="wat-krijg-je"
-                className="md:my-14 flex-col md:flex-row md:space-x-14 gap-5 md:gap-0 hidden md:flex"
-              >
+              <div className="md:my-14 flex-col md:flex-row md:space-x-14 gap-5 md:gap-0 hidden md:flex">
                 <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg md:min-h-[600px] w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
                   <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-full relative mx-auto">
                     <Image
@@ -156,10 +156,7 @@ function SectionProductTabs({ productData }) {
           </div>
           <div>
             {/* Tab 1: Wat krijg je */}
-            <div
-              id="wat-krijg-je"
-              className="md:my-14 flex-col md:flex-row md:space-x-14 gap-5 md:gap-0 flex md:hidden"
-            >
+            <div className="md:my-14 flex-col md:flex-row md:space-x-14 gap-5 md:gap-0 flex md:hidden">
               <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg md:min-h-[600px] w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
                 <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-full relative mx-auto">
                   <Image
