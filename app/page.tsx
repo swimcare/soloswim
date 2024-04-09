@@ -1,6 +1,7 @@
 import SectionStructure from "components/home/structure/SectionStructure";
 import HeroComponent from "../components/home/hero/SectionHero";
 import SectionFeatures from "../components/home/features/SectionFeatures";
+import SectionTargets from "components/home/targets/sectionTargets";
 
 export default async function Page() {
   return (
@@ -8,6 +9,7 @@ export default async function Page() {
       <HeroComponent />
       <SectionFeatures />
       <SectionStructure />
+      <SectionTargets />
     </>
   );
 }
