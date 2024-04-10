@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   title: "Soloswim | Waterproof zwemschema's",
   description:
     "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
+  metadataBase: new URL("https://www.soloswim.nl"),
   openGraph: {
     url: "https://www.soloswim.nl",
     title: "Soloswim | Waterproof zwemschema's",
