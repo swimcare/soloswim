@@ -167,18 +167,18 @@ export default function Home() {
               />
             </div>
 
-            <div className="grid grid-cols-6 w-full sm:w-5/6 md:w-5/6 lg:w-4/6 h-full absolute transform -translate-x-56 md:-translate-x-48 lg:-translate-x-64 xl:-translate-x-48">
+            {/* <div className="grid grid-cols-6 w-full sm:w-5/6 md:w-5/6 lg:w-4/6 h-full absolute transform -translate-x-56 md:-translate-x-48 lg:-translate-x-64 xl:-translate-x-48">
               <div className="bg-soloswim-orange skew-x-20"></div>
               <div className="bg-soloswim-yellow skew-x-20 transform -translate-x-1"></div>
               <div className="bg-soloswim-green skew-x-20 transform -translate-x-2"></div>
               <div className="bg-soloswim-purple skew-x-20 transform -translate-x-3"></div>
               <div className="bg-soloswim-blue skew-x-20 transform -translate-x-4"></div>
               <div className="bg-soloswim-pink skew-x-20 transform -translate-x-5"></div>
-            </div>
+            </div> */}
             <div className="absolute w-full px-3 pt-16 sm:pt-32 md:top-[calc(40%)] md:pt-0 md:px-0 sm:w-9/12 md:w-8/12 lg:w-7/12 xl:top-1/2 md:transform md:-translate-y-1/2">
               <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
-                <h3 className="font-lexend font-bold lg:font-extrabold text-2xl md:text-4xl xl:text-5xl text-navy-light1">
-                  Soloswim introduceert:
+                <h3 className="font-lexend font-bold lg:font-extrabold text-2xl md:text-4xl xl:text-5xl text-black xl:text-white">
+                  Soloswim presenteert:
                 </h3>
               </div>
               <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
