@@ -120,7 +120,6 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                 <Link
                   className="uppercase font-bold hover:underline text-tiny"
                   href="#wat-krijg-je"
-                  smooth
                 >
                   Meer lezen
                 </Link>
