@@ -44,11 +44,13 @@ function SubSectionBenodigdheden({ id }) {
             name="Zwemplankje"
             tooltipText="Geeft je extra drijfvermogen om specifiek je benen te trainen."
           />
-          <Attribuut
-            icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
-            name="Pullbuoy"
-            tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
-          />
+          {id !== "swimfit" && (
+            <Attribuut
+              icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
+              name="Pullbuoy"
+              tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
+            />
+          )}
           {id !== "swimfit" && (
             <Attribuut
               icon="/images/zwemschemas/benodigdheden/zoomers.png"
