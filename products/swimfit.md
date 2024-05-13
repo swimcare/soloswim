@@ -1,13 +1,11 @@
 ---
 number: 0
 product_id: "SF1"
-title: "Swimfit (pre-order)"
+title: "Swimfit"
 subtitle: "Gevarieerde oefeningen voor tijdens het banenzwemmen"
-price: 12.99
-oldPrice: 17.99
+price: 17.99
 description: "Vind je het banenzwemmen maar saai? Of zou je graag fitter willen worden en je conditie verbeteren? Volg dan de zwemschema’s uit deze Swimfit bundel en zoef met meer plezier door het water! Voor iedereen toegankelijk, ongeacht je niveau. De schoolslag die je als kind hebt geleerd vormt de basis, je hoeft dan ook niet je hoofd onder water te houden als je dat niet fijn vindt (of ingewikkelde slagen zoals de borstcrawl te zwemmen). De bundel is volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 inStock: true
-preorder: "mei 2024"
 features:
   [
     "10 zwemschema’s van ongeveer 60 min",
