@@ -20,6 +20,22 @@ images: ["/images/zwemschemas/sf1/1.png", "/images/zwemschemas/sf1/2.png"]
 tab1_image: "/images/zwemschemas/sf1/2.png"
 winkelwagen_images: ["/images/zwemschemas/sf1/cart/1.png"]
 card_info: "Voor de rustige schoolslag zwemmer"
+inhoud:
+  {
+    beginners:
+      [
+        { title: "Kennismaken", distance: "1100" },
+        { title: "Leg's go!", distance: "1100" },
+        { title: "De vaart erin", distance: "+/- 1000" },
+        { title: "Even iets anders", distance: "1100" },
+        { title: "Versnellen en vertragen", distance: "1200" },
+        { title: "Handige harry", distance: "1200" },
+        { title: "Op dreef", distance: "1100" },
+        { title: "De slag om de piramide", distance: "1200" },
+        { title: "Watertrappelen", distance: "1100" },
+        { title: "Hocus pocus focus", distance: "1100" },
+      ],
+  }
 ---
 
 10 waterproof zwemschema’s samen gebundeld met een hersluitbare roestvrijstalen ring. Elk zwemschema heeft een focuspunt (zoals conditie, techniek of benen ) en bestaat uit een warming up, een kern en een cooling down. Zo werk jij op een **gestructureerde manier** aan je conditie en haal je **meer plezier** uit het banenzwemmen!
