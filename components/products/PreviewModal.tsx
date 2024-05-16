@@ -13,6 +13,7 @@ function Modal(inhoud) {
   const typeQuery = searchParams?.get("type");
 
   const data = inhoud.inhoud;
+  console.log(data);
 
   return (
     <>
@@ -54,24 +55,45 @@ function Modal(inhoud) {
 
                   <div className="h-4/5 p-4">
                     <div className="w-full h-full relative">
-                      <Image
-                        src={
-                          data[previewQuery!][typeQuery!]
-                            ? data[previewQuery!][typeQuery!][0]?.preview
-                            : data[previewQuery!][0]?.preview
-                        }
-                        alt={
-                          data[previewQuery!][typeQuery!]
-                            ? data[previewQuery!][typeQuery!][0]?.title
-                            : data[previewQuery!][0]?.title
-                        }
-                        fill
-                        sizes="100vw"
-                        style={{
-                          objectFit: "contain",
-                          objectPosition: "center",
-                        }}
-                      />
+                      {data[previewQuery!][5]?.preview ? (
+                        <Image
+                          src={
+                            data[previewQuery!][typeQuery!]
+                              ? data[previewQuery!][typeQuery!][5]?.preview
+                              : data[previewQuery!][5]?.preview
+                          }
+                          alt={
+                            data[previewQuery!][typeQuery!]
+                              ? data[previewQuery!][typeQuery!][5]?.title
+                              : data[previewQuery!][5]?.title
+                          }
+                          fill
+                          sizes="100vw"
+                          style={{
+                            objectFit: "contain",
+                            objectPosition: "center",
+                          }}
+                        />
+                      ) : (
+                        <Image
+                          src={
+                            data[previewQuery!][typeQuery!]
+                              ? data[previewQuery!][typeQuery!][0]?.preview
+                              : data[previewQuery!][0]?.preview
+                          }
+                          alt={
+                            data[previewQuery!][typeQuery!]
+                              ? data[previewQuery!][typeQuery!][0]?.title
+                              : data[previewQuery!][0]?.title
+                          }
+                          fill
+                          sizes="100vw"
+                          style={{
+                            objectFit: "contain",
+                            objectPosition: "center",
+                          }}
+                        />
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-wrap items-center justify-center p-3 xs:gap-5 border-t border-gray-300">

@@ -29,7 +29,11 @@ inhoud:
         { title: "De vaart erin", distance: "+/- 1000" },
         { title: "Even iets anders", distance: "1100" },
         { title: "Versnellen en vertragen", distance: "1200" },
-        { title: "Handige harry", distance: "1200" },
+        {
+          title: "Handige harry",
+          distance: "1200",
+          preview: "/images/zwemschemas/sf1/preview1.png",
+        },
         { title: "Op dreef", distance: "1100" },
         { title: "De slag om de piramide", distance: "1200" },
         { title: "Watertrappelen", distance: "1100" },
