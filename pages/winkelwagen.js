@@ -135,20 +135,15 @@ function winkelwagen() {
                   </p>
                   <button
                     role="link"
-                    disabled
                     onClick={createCheckoutSession}
                     className="text-white lg:text-lg font-bold uppercase w-full px-3 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
                   >
-                    Afrekenen*
+                    Afrekenen
                   </button>
                   <div className="text-center py-2">
-                    <p className="text-xs text-red-500">
-                      *Vanwege andere projecten staat Soloswim even op pauze,
-                      bestellen is voorlopig niet mogelijk.
-                    </p>
-                    {/* <Link href="/producten" className="hover:underline">
+                    <Link href="/producten" className="hover:underline">
                       Verder winkelen
-                    </Link> */}
+                    </Link>
                   </div>
                 </div>
               </div>
