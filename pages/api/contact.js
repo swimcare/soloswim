@@ -14,8 +14,8 @@ async function handler(req, res) {
   `;
 
   const data = {
-    to: "info@soloswim.nl",
-    from: "noreply@soloswim.nl",
+    to: "kristof@soloswim.be",
+    from: "kristof@soloswim.be",
     subject: `${body.onderwerp}`,
     text: message,
     html: message.replace(/\r\n/g, "<br />"),
@@ -32,8 +32,7 @@ async function handler(req, res) {
     })
     .catch((error) => {
       console.log(error);
-      res.status(response[0].statusCode).json({ status: "NOT OK" });
-      return resolve();
+      res.status(500).json({ status: "NOT OK", error: error.message });
     });
 }
 

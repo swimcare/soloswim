@@ -15,12 +15,12 @@ export default async (req, res) => {
   const { items } = req.body;
 
   const transformedItems = items.map((item) => ({
-    description: item.description,
     quantity: 1,
     price_data: {
       currency: "eur",
       unit_amount: Math.round(item.price * 100),
       product_data: {
+        description: item.description,
         name: item.title,
         images: [`${process.env.HOST}${item.images[0]}`], //deze komt nog niet helemaal goed door in stripe lijkt het, waarschijnlijk omdat het local is.
       },
@@ -34,20 +34,20 @@ export default async (req, res) => {
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
         shipping_address_collection: {
-          allowed_countries: ["NL", "BE"],
+          allowed_countries: ["BE", "NL"],
         },
         success_url: `${process.env.HOST}/bestelling-voltooid`,
         cancel_url: `${process.env.HOST}/bestelling-mislukt`,
-        payment_method_types: ["card", "ideal", "bancontact"],
+        payment_method_types: ["card", "bancontact", "paypal", "klarna", "link", "ideal"],
         shipping_options: [
           {
             shipping_rate_data: {
               type: "fixed_amount",
               fixed_amount: {
-                amount: 395,
+                amount: 799,
                 currency: "eur",
               },
-              display_name: "Verzending binnen Nederland",
+              display_name: "Verzending naar Nederland",
               delivery_estimate: {
                 minimum: {
                   unit: "business_day",
@@ -64,7 +64,7 @@ export default async (req, res) => {
             shipping_rate_data: {
               type: "fixed_amount",
               fixed_amount: {
-                amount: 995,
+                amount: 599,
                 currency: "eur",
               },
               display_name: "Verzending naar België",
@@ -102,8 +102,8 @@ export default async (req, res) => {
       res.status(200).json({ id: session.id });
       //   res.redirect(303, session.url);
     } catch (err) {
-      console.log("an error occured...");
-      res.status(err.statusCode || 500).json(err.message);
+      console.error("Stripe checkout error:", err);
+      res.status(err.statusCode || 500).json({ error: err.message, type: err.type, code: err.code });
     }
   } else {
     res.setHeader("Allow", "POST");
