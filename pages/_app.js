@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <DefaultSeo
-         title="Soloswim | Waterproof zwemschema's"
+         title="SoloSwim | Waterproof zwemschema's"
          description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
          additionalLinkTags={[
            {
@@ -45,18 +45,18 @@ function MyApp({ Component, pageProps }) {
          ]}
          openGraph={{
           type: "website",
-          url: "https://www.soloswim.nl",
-          title: "Soloswim | Waterproof zwemschema's",
+          url: "https://www.soloswim.be",
+          title: "SoloSwim | Waterproof zwemschema's",
           description:
             "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_NL",
-          site_name: "Soloswim | Waterproof zwemschema's",
+          locale: "nl_BE",
+          site_name: "SoloSwim | Waterproof zwemschema's",
           images: [
             {
               url: "/images/home/header-OG.jpg",
               width: 1200,
               height: 630,
-              alt: "Soloswim",
+              alt: "SoloSwim",
             },
           ],
         }}

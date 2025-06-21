@@ -54,8 +54,8 @@ function Footer() {
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
               <li>
-                <Link href="mailto:info@soloswim.nl" className="hover:underline">
-                  info@soloswim.nl
+                <Link href="mailto:info@soloswim.be" className="hover:underline">
+                  info@soloswim.be
                 </Link>
               </li>
             </ul>
@@ -79,7 +79,7 @@ function Footer() {
                 <a
                   className="text-navy-light1 text-xl hover:text-main"
                   target="_blank"
-                  href="https://www.facebook.com/soloswim.nl"
+                  href="https://www.facebook.com/soloswim.be"
                   rel="noopener noreferrer"
                 >
                   <FaFacebook />
@@ -98,7 +98,7 @@ function Footer() {
         </div>
         <div className="text-center py-5 mx-5">
           <p className="text-tiny text-navy-light1">
-            © 2024 Soloswim | KVK: 92524230 | BTW: NL004958428B41
+            © 2025 SoloSwim | <a href="https://www.swimcare.be" target="_blank">SwimCare</a> | <a href="mailto:info@solosim.be">info@soloswim.be</a> | BTW: BE0827906183
           </p>
         </div>
       </div>

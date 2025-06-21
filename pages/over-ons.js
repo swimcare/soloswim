@@ -10,8 +10,8 @@ function overOns() {
   return (
     <Fragment>
       <NextSeo
-        title="Soloswim | Over ons"
-        description="Over Soloswim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
+        title="SoloSwim | Over ons"
+        description="Over SoloSwim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
         additionalLinkTags={[
           {
             rel: "icon",
@@ -24,18 +24,18 @@ function overOns() {
         ]}
         openGraph={{
           type: "website",
-          url: "https://www.soloswim.nl",
-          title: "Soloswim | Over ons",
+          url: "https://www.soloswim.be",
+          title: "SoloSwim | Over ons",
           description:
-            "Over Soloswim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_NL",
-          site_name: "Soloswim | Waterproof zwemschema's",
+            "Over SoloSwim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
+          locale: "nl_BE",
+          site_name: "SoloSwim | Waterproof zwemschema's",
           images: [
             {
               url: "/images/home/header-OG.jpg",
               width: 1200,
               height: 630,
-              alt: "Soloswim",
+              alt: "SoloSwim",
             },
           ],
         }}
@@ -45,11 +45,11 @@ function overOns() {
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto pt-12 lg:py-20">
             <div>
               <h1 className="text-navy-light1 font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                Over Soloswim
+                Over SoloSwim
               </h1>
               <p className="text-navy-light1 font-lexend font-semibold text-lg lg:text-2xl my-1 md:my-3 italic">
                 Lees hier over onze missie, ons verhaal en het onstaan van
-                Soloswim.
+                SoloSwim.
               </p>
             </div>
             <div className="my-5 lg:mt-10">
@@ -175,7 +175,7 @@ function overOns() {
             <FadeInFromBottom>
               <div className="mx-5 lg:mx-10">
                 <h2 className="text-main font-lexend font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                  Het ontstaan van Soloswim
+                  Het ontstaan van SoloSwim
                 </h2>
                 <h3 className="font-lexend font-bold sm:font-extrabold text-2xl md:text-3xl lg:text-4xl text-navy-light1 my-2 lg:my-5">
                   Een droomproject
@@ -205,7 +205,7 @@ function overOns() {
                       src="/images/over-ons/soloswim-ontstaan.png"
                       width={604}
                       height={403}
-                      alt="Ontstaan soloswim"
+                      alt="Ontstaan SoloSwim"
                       style={{
                         maxWidth: "100%",
                         height: "auto",
@@ -238,7 +238,7 @@ function overOns() {
                     volgende dag open ging. Dagen achter elkaar zwommen we wel 2
                     tot 3 keer per dag (en verloren dus ook aardig wat
                     handgeschreven zwemschema's). Het is dus niet gek dat ons
-                    idee voor Soloswim is ontstaan bij het paradijsachtige
+                    idee voor SoloSwim is ontstaan bij het paradijsachtige
                     zwembad onder de voet van de Mont Ventoux! Net op de
                     valreep, want het was de allerlaatste dag van onze reis, ons
                     geluk kon niet op! We hadden eindelijk het project gevonden

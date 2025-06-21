@@ -363,13 +363,13 @@ function privacyPolicy() {
               Contactgegevens
             </h2>
             <h3 className="text-main text-lg font-lexend font-bold mt-10 mb-5">
-              Soloswim
+              SoloSwim
             </h3>
-            <p className="text-navy-light1">info@soloswim.nl</p>
+            <p className="text-navy-light1">info@soloswim.be</p>
             <h3 className="text-main text-lg font-lexend font-bold mt-10 mb-5">
               Contactpersoon voor privacyzaken
             </h3>
-            <p className="text-navy-light1">Laurens van Roomen</p>
+            <p className="text-navy-light1">Ryheul Kristof</p>
           </div>
         </section>
       </main>

@@ -23,7 +23,7 @@ async function handler(req, res) {
     };
 
     const data = {
-      from: "noreply@soloswim.nl",
+      from: "kristof@soloswim.be",
       templateId: "d-924d5ca262a4459493df9909ebe332d9",
       personalizations: [
         {
@@ -32,7 +32,7 @@ async function handler(req, res) {
             email: `${order.email}`,
           },
           bcc: {
-            email: "orders@soloswim.nl",
+            email: "kristof@soloswim.be",
           },
           dynamic_template_data: {
             subject: `Bedankt voor je bestelling ${order.name}`,

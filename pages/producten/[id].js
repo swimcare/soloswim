@@ -57,7 +57,7 @@ export default function Zwemschema({ productData }) {
   return (
     <Fragment>
       <NextSeo
-        title={`Soloswim | ${productData.title}`}
+        title={`SoloSwim | ${productData.title}`}
         description={productData.description}
         additionalLinkTags={[
           {
@@ -71,17 +71,17 @@ export default function Zwemschema({ productData }) {
         ]}
         openGraph={{
           type: "website",
-          url: "https://www.soloswim.nl",
-          title: "Soloswim | " + productData.title,
+          url: "https://www.soloswim.be",
+          title: "SoloSwim | " + productData.title,
           description: productData.description,
-          locale: "nl_NL",
-          site_name: "Soloswim | Waterproof zwemschema's",
+          locale: "nl_BE",
+          site_name: "SoloSwim | Waterproof zwemschema's",
           images: [
             {
               url: "/images/home/header-OG.jpg",
               width: 1200,
               height: 630,
-              alt: "Soloswim",
+              alt: "SoloSwim",
             },
           ],
         }}

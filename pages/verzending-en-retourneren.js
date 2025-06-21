@@ -28,14 +28,14 @@ function verzendingEnRetourneren() {
               opgave van reden te annuleren. U heeft na annulering nogmaals 14
               dagen om uw product retour te sturen. U krijgt dan het volledige
               orderbedrag inclusief verzendkosten gecrediteerd. Enkel de kosten
-              voor retour van u thuis naar Soloswim zijn voor eigen
+              voor retour van u thuis naar SoloSwim zijn voor eigen
               rekening. Deze kosten bedragen circa 4 euro per brievenbuszending,
               raadpleeg voor de exacte tarieven de website van uw vervoerder.
               Indien u gebruik maakt van uw herroepingsrecht, zal het product
               met alle geleverde toebehoren en – indien redelijkerwijze mogelijk
-              – in de originele staat en verpakking aan Soloswim geretourneerd
+              – in de originele staat en verpakking aan SoloSwim geretourneerd
               worden. Om gebruik te maken van dit recht kunt u contact met ons
-              opnemen via <a href="mailto:info@soloswim.nl" className="hover:text-main underline"> info@soloswim.nl</a>. Vermeld hierbij uw ordernummer (deze kunt u terug vinden in de orderbevestiging welke u per mail heeft ontvangen). Wij zullen vervolgens het
+              opnemen via <a href="mailto:info@soloswim.be" className="hover:text-main underline">info@soloswim.be</a>. Vermeld hierbij uw ordernummer (deze kunt u terug vinden in de orderbevestiging welke u per mail heeft ontvangen). Wij zullen vervolgens het
               verschuldigde orderbedrag binnen 14 dagen na aanmelding van uw
               retour terugstorten mits het product reeds in goede orde retour
               ontvangen is.

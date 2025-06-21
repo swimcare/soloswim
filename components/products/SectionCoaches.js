@@ -94,7 +94,7 @@ function SectionCoaches({ color, isCombi }) {
                 <div className="px-4">
                   <p className="text-navy-light1 text-tiny leading-7 mx-5">
                     "Wij zijn continu bezig met nieuwe bundels maken en huidige
-                    verbeteren. Help ons product verbeteren en wordt Soloswim
+                    verbeteren. Help ons product verbeteren en wordt SoloSwim
                     testers"
                   </p>
                   <p className="text-main font-semibold text-tiny mt-4">

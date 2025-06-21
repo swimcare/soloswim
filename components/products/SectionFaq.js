@@ -138,7 +138,7 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    Ja, dat kan! Vandaar de naam Soloswim. Onze bundels zijn zo
+                    Ja, dat kan! Vandaar de naam SoloSwim. Onze bundels zijn zo
                     gemaakt dat je zelfstandig een zwemschema kunt volgen zonder
                     dat je een trainer op kant nodig hebt. Zwem je graag met een
                     vriend of vriendin? Je kunt natuurlijk altijd samen een
@@ -195,7 +195,7 @@ function SectionFaq() {
                 >
                   <p className="mb-3 text-tiny">
                     Ja dit is mogelijk. Neem contact met ons op via
-                    info@soloswim.nl voor het plaatsen van een grote bestelling.
+                    info@soloswim.be voor het plaatsen van een grote bestelling.
                   </p>
                 </AccordionPanel>
                 <AccordionItem
@@ -211,7 +211,7 @@ function SectionFaq() {
                 >
                   <p className="mb-3 text-tiny">
                     Betalen kan met iDeal of credit card. Liever een andere
-                    betaalmethode? Neem contact met ons op via info@soloswim.nl
+                    betaalmethode? Neem contact met ons op via info@soloswim.be
                     voor het plaatsen van een bestelling.
                   </p>
                 </AccordionPanel>

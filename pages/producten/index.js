@@ -11,7 +11,7 @@ function index({ allProductsData }) {
   return (
     <Fragment>
       <NextSeo
-        title="Soloswim | Waterproof zwemschema's"
+        title="SoloSwim | Waterproof zwemschema's"
         description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
         additionalLinkTags={[
           {
@@ -25,18 +25,18 @@ function index({ allProductsData }) {
         ]}
         openGraph={{
           type: "website",
-          url: "https://www.soloswim.nl",
-          title: "Soloswim | Waterproof zwemschema's",
+          url: "https://www.soloswim.be",
+          title: "SoloSwim | Waterproof zwemschema's",
           description:
             "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_NL",
-          site_name: "Soloswim | Waterproof zwemschema's",
+          locale: "nl_BE",
+          site_name: "SoloSwim | Waterproof zwemschema's",
           images: [
             {
               url: "/images/home/header-OG.jpg",
               width: 1200,
               height: 630,
-              alt: "Soloswim",
+              alt: "SoloSwim",
             },
           ],
         }}
@@ -46,13 +46,13 @@ function index({ allProductsData }) {
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-8 lg:pt-20">
             <div>
               <h1 className="text-main font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl my-2 lg:my-6">
-                De zwemschema's van Soloswim
+                De zwemschema's van SoloSwim
               </h1>
               <h2 className="text-navy-light1 font-lexend font-extrabold text-xl lg:text-4xl my-2 lg:my-4">
                 Boost jouw zwemmoment
               </h2>
               <p className="text-navy-light1 text-tiny leading-6">
-                Bij Soloswim vind je zwemtrainingen waarmee jij nog meer uit je
+                Bij SoloSwim vind je zwemtrainingen waarmee jij nog meer uit je
                 zwemmoment kunt halen. Zwem je graag lange afstanden, hou je
                 meer van explosiviteit of ben je nog maar net begonnen? Bekijk
                 ons diverse aanbod en ga snel aan de slag met jouw eigen bundel!

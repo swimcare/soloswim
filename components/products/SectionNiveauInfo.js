@@ -85,7 +85,7 @@ function SectionNiveauInfo({ title, addItemToBasket, productData }) {
             niveau, je bent dan iets langer of korter bezig met een schema dan
             de aangegeven tijd. Kom je er niet helemaal uit met kiezen? We
             helpen je graag met het vaststellen van jouw niveau, neem contact
-            met ons op en we helpen je snel aan een Soloswim bundel die bij je
+            met ons op en we helpen je snel aan een SoloSwim bundel die bij je
             past!
           </p>
           <Link href="/contact">

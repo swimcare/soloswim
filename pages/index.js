@@ -95,7 +95,7 @@ export default function Home() {
   return (
     <Fragment>
       <NextSeo
-        title="Soloswim | Waterproof zwemschema's"
+        title="SoloSwim | Waterproof zwemschema's"
         description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
         additionalLinkTags={[
           {
@@ -109,18 +109,18 @@ export default function Home() {
         ]}
         openGraph={{
           type: "website",
-          url: "https://www.soloswim.nl",
-          title: "Soloswim | Waterproof zwemschema's",
+          url: "https://www.soloswim.be",
+          title: "SoloSwim | Waterproof zwemschema's",
           description:
             "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_NL",
-          site_name: "Soloswim | Waterproof zwemschema's",
+          locale: "nl_BE",
+          site_name: "SoloSwim | Waterproof zwemschema's",
           images: [
             {
               url: "/images/home/header-OG.jpg",
               width: 1200,
               height: 630,
-              alt: "Soloswim",
+              alt: "SoloSwim",
             },
           ],
         }}
@@ -132,7 +132,7 @@ export default function Home() {
             <div className="hidden xl:block">
               <Image
                 src="/images/home/header-desktop.jpg"
-                alt="soloswim"
+                alt="SoloSwim"
                 priority
                 quality={100}
                 fill
@@ -145,7 +145,7 @@ export default function Home() {
             <div className="hidden sm:block xl:hidden">
               <Image
                 src="/images/home/header-tablet.jpg"
-                alt="soloswim"
+                alt="SoloSwim"
                 priority
                 fill
                 sizes="100vw"
@@ -157,7 +157,7 @@ export default function Home() {
             <div className="sm:hidden">
               <Image
                 src="/images/home/header-small.jpg"
-                alt="soloswim"
+                alt="SoloSwim"
                 priority
                 fill
                 sizes="100vw"
@@ -178,7 +178,7 @@ export default function Home() {
             <div className="absolute w-full px-3 pt-16 sm:pt-32 md:top-[calc(40%)] md:pt-0 md:px-0 sm:w-9/12 md:w-8/12 lg:w-7/12 xl:top-1/2 md:transform md:-translate-y-1/2">
               <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
                 <h3 className="font-lexend font-bold lg:font-extrabold text-2xl md:text-4xl xl:text-5xl text-black xl:text-white">
-                  Soloswim presenteert:
+                  SoloSwim presenteert:
                 </h3>
               </div>
               <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
@@ -233,7 +233,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro1.png"
-                  alt="Soloswim zwemschema's"
+                  alt="SoloSwim zwemschema's"
                   priority
                   fill
                   sizes="100vw"
@@ -250,7 +250,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro2.png"
-                  alt="Soloswim zwemschema's"
+                  alt="SoloSwim zwemschema's"
                   priority
                   fill
                   sizes="100vw"
@@ -267,7 +267,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro3.png"
-                  alt="Soloswim zwemschema's"
+                  alt="SoloSwim zwemschema's"
                   priority
                   fill
                   sizes="100vw"
@@ -579,7 +579,7 @@ export default function Home() {
           <div className="px-5 max-w-screen-xl mx-auto pt-20 pb-6 lg:pt-32">
             <FadeInFromBottom>
               <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-main">
-                Waarom Soloswim
+                Waarom SoloSwim
               </h2>
               <h2 className="font-lexend font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-navy-light1 my-2 lg:my-5">
                 Een aantal voordelen op een rijtje
@@ -730,7 +730,7 @@ export default function Home() {
           {/* KIES JOUW BUNDEL UIT*/}
           <div className="flex flex-col my-8 overflow-x-hidden">
             <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-main max-w-screen-xl mx-auto px-5">
-              Er is een Soloswim bundel die bij jou past
+              Er is een SoloSwim bundel die bij jou past
             </h2>
             <div className="max-w-screen-xl w-full px-5 mx-auto">
               <div className="flex flex-row justify-between my-4">
@@ -857,7 +857,7 @@ export default function Home() {
                     src="/images/home/oprichters-soloswim.png"
                     width={996}
                     height={772}
-                    alt="Oprichters soloswim"
+                    alt="Oprichters SoloSwim"
                     style={{
                       maxWidth: "100%",
                       height: "auto",
@@ -868,7 +868,7 @@ export default function Home() {
                   <Image
                     className="rounded-t-xl sm:rounded-none"
                     src="/images/home/oprichters-soloswim.png"
-                    alt="Oprichters soloswim"
+                    alt="Oprichters SoloSwim"
                     fill
                     sizes="100vw"
                     style={{
@@ -887,7 +887,7 @@ export default function Home() {
                       Papier en water gaan niet zo goed samen, niet gek dat onze
                       handgeschreven zwemtrainingen in de prullenbak terecht
                       kwamen. Zonde vonden we! Met een duidelijke missie gingen
-                      we aan de slag en ruim een halfjaar later was Soloswim
+                      we aan de slag en ruim een halfjaar later was SoloSwim
                       geboren!
                     </p>
                     <p className="mt-4">

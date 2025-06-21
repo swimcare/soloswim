@@ -121,10 +121,10 @@ function algemeneVoorwaarden() {
               Artikel 2 - Identiteit van de ondernemer
             </h3>
             <p>
-              <br /> Soloswim
-              <br /> <strong>E</strong>&nbsp;info@soloswim.nl
-              <br /> <strong>KVK</strong>&nbsp;92524230
-              <br /> <strong>BTW nummer</strong>&nbsp;NL004958428B41
+              <br /> SoloSwim
+              <br /> <strong>E</strong>&nbsp;<a href="mailto:info@soloswim.be">info@soloswim.be</a>
+              <br /> <strong>E</strong>&nbsp;<a href="https://www.swimcare.be" target="_blank">SwimCare</a>
+              <br /> <strong>BTW nummer</strong>&nbsp;BE0827906183
               <br />{" "}
             </p>
             <h3 className="text-2xl font-lexend font-extrabold my-5 pt-10 text-navy-light1">

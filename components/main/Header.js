@@ -53,14 +53,14 @@ function Header() {
               <MenuIcon className="w-8 h-8 text-main" />
             )}
           </div>
-          {/* Soloswim logo */}
+          {/* SoloSwim logo */}
           <div className="w-32 lg:w-40">
             <Link href="/">
 
               {!mobileMenuExtended ? (
                 <Image
                   src="/images/logo/alt-logo-black-500x171.png"
-                  alt="Soloswim logo black"
+                  alt="SoloSwim logo black"
                   width={500}
                   height={171}
                   priority
@@ -71,7 +71,7 @@ function Header() {
               ) : (
                 <Image
                   src="/images/logo/alt-logo-white-500x171.png"
-                  alt="Soloswim logo white"
+                  alt="SoloSwim logo white"
                   width={500}
                   height={171}
                   priority
@@ -109,8 +109,18 @@ function Header() {
               </Link>
             </li>
             <li className="self-center hover:underline">
+              <Link href="https://shop.swimcare.be" target="_blank">
+                Zwemmateriaal
+              </Link>
+            </li>
+            <li className="self-center hover:underline">
+              <Link href="https://les.swimcare.be" target="_blank">
+                Zwemlessen
+              </Link>
+            </li>
+            <li className="self-center hover:underline">
               <Link href="/over-ons">
-                Over Soloswim
+                Over SoloSwim
               </Link>
             </li>
             <li className="self-center hover:underline">
@@ -164,10 +174,24 @@ function Header() {
                 </li>
 
               </Link>
+              <Link href="https://shop.swimcare.be">
+
+                <li className="py-3 border-b border-opacity-25">
+                  <span className="ml-3">Zwemmateriaal</span>
+                </li>
+
+              </Link>
+              <Link href="https://les.swimcare.be">
+
+                <li className="py-3 border-b border-opacity-25">
+                  <span className="ml-3">Zwemlessen</span>
+                </li>
+
+              </Link>
               <Link href="/over-ons">
 
                 <li className="py-3 border-b border-opacity-25">
-                  <span className="ml-3">Over Soloswim</span>
+                  <span className="ml-3">Over SoloSwim</span>
                 </li>
 
               </Link>

@@ -21,25 +21,25 @@ module.exports = {
       {
         source: "/f1",
         destination:
-          "https://www.soloswim.nl/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a5_flyer_standard",
+          "https://www.soloswim.be/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a5_flyer_standard",
         permanent: true,
       },
       {
         source: "/f2",
         destination:
-          "https://www.soloswim.nl/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a5_flyer_standard_english",
+          "https://www.soloswim.be/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a5_flyer_standard_english",
         permanent: true,
       },
       {
         source: "/f3",
         destination:
-          "https://www.soloswim.nl/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a4_flyer_standard",
+          "https://www.soloswim.be/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a4_flyer_standard",
         permanent: true,
       },
       {
         source: "/f4",
         destination:
-          "https://www.soloswim.nl/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a4_flyer_standard_english",
+          "https://www.soloswim.be/producten?utm_source=flyer_promotion&utm_medium=print&utm_campaign=a4_flyer_standard_english",
         permanent: true,
       },
       // Borstcrawl Gevorderden Kracht Editie 1

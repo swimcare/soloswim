@@ -66,7 +66,7 @@ function contact() {
   return (
     <Fragment>
     <NextSeo
-        title="Soloswim | Contact"
+        title="SoloSwim | Contact"
         description="Neem contact op met Soloswim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
         additionalLinkTags={[
           {
@@ -80,17 +80,17 @@ function contact() {
         ]}
         openGraph={{
           type: "website",
-          url: "https://www.soloswim.nl",
-          title: "Soloswim | Waterproof zwemschema's",
-          description: "Neem contact op met Soloswim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_NL",
-          site_name: "Soloswim | Contact",
+          url: "https://www.soloswim.be",
+          title: "SoloSwim | Waterproof zwemschema's",
+          description: "Neem contact op met SoloSwim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
+          locale: "nl_BE",
+          site_name: "SoloSwim | Contact",
           images: [
             {
               url: "/images/home/header-OG.jpg",
               width: 1200,
               height: 630,
-              alt: "Soloswim",
+              alt: "SoloSwim",
             },
           ],
         }}
@@ -106,9 +106,9 @@ function contact() {
             bereiken via onderstaand contactformulier of per mail!
           </p>
           <div className="inline-block hover:underline">
-            <a href="mailto:info@soloswim.nl" className="text-tiny">
+            <a href="mailto:info@soloswim.be" className="text-tiny">
               <MailIcon className="h-5 w-5 text-main float-left mr-2 mt-[2px]" />
-              info@soloswim.nl
+              info@soloswim.be
             </a>
           </div>
           <form ref={myFormRef} onSubmit={handleSubmit}>
@@ -166,10 +166,10 @@ function contact() {
                 <p className="my-5 text-red-600">
                   Oeps, er gaat iets mis! Neem anders even contact op via mail:{" "}
                   <a
-                    href="mailto:info@soloswim.nl"
+                    href="mailto:info@soloswim.be"
                     className="hover:underline text-charcoal"
                   >
-                    info@soloswim.nl
+                    info@soloswim.be
                   </a>
                 </p>
               )}

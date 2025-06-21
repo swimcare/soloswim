@@ -9,7 +9,7 @@ function SectionReviewsMain() {
       <div className="px-5 max-w-screen-xl mx-auto py-20 lg:py-32">
         <FadeInFromBottom>
           <h2 className="-mx-2 font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl leading-normal text-center text-white">
-            Reacties van Soloswim gebruikers
+            Reacties van SoloSwim gebruikers
           </h2>
         </FadeInFromBottom>
 
@@ -48,28 +48,28 @@ function SectionReviewsMain() {
             <div className="h-full">
               <ReviewCard
                 title="Ideaal om zelf mee te trainen!"
-                text="Afgelopen weekend voor het eerst gebruik gemaakt van een gevorderden training van Soloswim. Trainingen hebben inhoudelijk een goede structuur en zijn ideaal om zelf mee te trainen!"
+                text="Afgelopen weekend voor het eerst gebruik gemaakt van een gevorderden training van SoloSwim. Trainingen hebben inhoudelijk een goede structuur en zijn ideaal om zelf mee te trainen!"
                 name="Marek Spit"
               />
             </div>
             <div className="h-full">
               <ReviewCard
                 title="Ik ben fan!"
-                text="Als ervaren solo zwemmer is het altijd weer een gedoe om een leuke training te bedenken; je hebt alles al wel eens gehad. De trainingen van Soloswim zijn dan ook een uitkomst! Een uitdagend trainings pakket, afgestemd op je wensen. De trainingen zijn afwisselend en uitdagend. Er is veel keus, denk aan techniek, kracht en uithoudingsvermogen. Verschillende niveaus. Je kunt de trainingen ook combineren. Ik heb een pakket van 10 kracht traingen, semi gevorderd en zwem deze in 45 min (meeste staat uur voor). Het team is daarnaast mega toegankelijk en staat open voor vragen of input. Ik ben fan!"
+                text="Als ervaren solo zwemmer is het altijd weer een gedoe om een leuke training te bedenken; je hebt alles al wel eens gehad. De trainingen van SoloSwim zijn dan ook een uitkomst! Een uitdagend trainings pakket, afgestemd op je wensen. De trainingen zijn afwisselend en uitdagend. Er is veel keus, denk aan techniek, kracht en uithoudingsvermogen. Verschillende niveaus. Je kunt de trainingen ook combineren. Ik heb een pakket van 10 kracht traingen, semi gevorderd en zwem deze in 45 min (meeste staat uur voor). Het team is daarnaast mega toegankelijk en staat open voor vragen of input. Ik ben fan!"
                 name="Anouk Bosma"
               />
             </div>
             <div className="h-full">
               <ReviewCard
                 title="Goed te volgen voor een beginner."
-                text="De soloswim trainingen zijn goed opgebouwd en ook voor een beginner goed te volgen. Ik merk dat het elke zwemtraining beter gaat! Zeker een aanrader!"
+                text="De SoloSwim trainingen zijn goed opgebouwd en ook voor een beginner goed te volgen. Ik merk dat het elke zwemtraining beter gaat! Zeker een aanrader!"
                 name="Loes"
               />
             </div>
             <div className="h-full">
               <ReviewCard
                 title="Meer uitdaging tijdens het zwemmen."
-                text="Mijn ervaringen met Soloswim zijn heel positief! Met zwemmen had ik vaak dat ik niet goed wist wat ik kon doen, anders dan banen zwemmen. En als ik dan toch een borstcrawl deed stopte ik sneller want daar werd je 'toch een beetje moe' van. Met deze trainingsschema's werk je ergens naar toe en word je meer uitgedaagd. Het is ook echt leuk!"
+                text="Mijn ervaringen met SoloSwim zijn heel positief! Met zwemmen had ik vaak dat ik niet goed wist wat ik kon doen, anders dan banen zwemmen. En als ik dan toch een borstcrawl deed stopte ik sneller want daar werd je 'toch een beetje moe' van. Met deze trainingsschema's werk je ergens naar toe en word je meer uitgedaagd. Het is ook echt leuk!"
                 name="Gaëlla van Walraven"
               />
             </div>
@@ -111,17 +111,17 @@ function SectionReviewsMain() {
             <div className="flex flex-row gap-4 lg:gap-8 items-stretch mx-12 lg:mx-16">
               <ReviewCard
                 title="Ideaal om zelf mee te trainen!"
-                text="Afgelopen weekend voor het eerst gebruik gemaakt van een gevorderden training van Soloswim. Trainingen hebben inhoudelijk een goede structuur en zijn ideaal om zelf mee te trainen!"
+                text="Afgelopen weekend voor het eerst gebruik gemaakt van een gevorderden training van SoloSwim. Trainingen hebben inhoudelijk een goede structuur en zijn ideaal om zelf mee te trainen!"
                 name="Marek Spit"
               />
               <ReviewCard
                 title="Ik ben fan!"
-                text="Als ervaren solo zwemmer is het altijd weer een gedoe om een leuke training te bedenken; je hebt alles al wel eens gehad. De trainingen van Soloswim zijn dan ook een uitkomst! Een uitdagend trainingspakket, afgestemd op je wensen. De trainingen zijn afwisselend en uitdagend. Er is veel keus, denk aan techniek, kracht en uithoudingsvermogen. Verschillende niveaus. Je kunt de trainingen ook combineren. Ik heb een pakket van 10 kracht traingen, semi gevorderd en zwem deze in 45 min (meeste staat uur voor). Het team is daarnaast mega toegankelijk en staat open voor vragen of input. Ik ben fan!"
+                text="Als ervaren solo zwemmer is het altijd weer een gedoe om een leuke training te bedenken; je hebt alles al wel eens gehad. De trainingen van SoloSwim zijn dan ook een uitkomst! Een uitdagend trainingspakket, afgestemd op je wensen. De trainingen zijn afwisselend en uitdagend. Er is veel keus, denk aan techniek, kracht en uithoudingsvermogen. Verschillende niveaus. Je kunt de trainingen ook combineren. Ik heb een pakket van 10 kracht traingen, semi gevorderd en zwem deze in 45 min (meeste staat uur voor). Het team is daarnaast mega toegankelijk en staat open voor vragen of input. Ik ben fan!"
                 name="Anouk Bosma"
               />
               <ReviewCard
                 title="Goed te volgen voor een beginner."
-                text="De soloswim trainingen zijn goed opgebouwd en ook voor een beginner goed te volgen. Ik merk dat het elke zwemtraining beter gaat! Zeker een aanrader!"
+                text="De SoloSwim trainingen zijn goed opgebouwd en ook voor een beginner goed te volgen. Ik merk dat het elke zwemtraining beter gaat! Zeker een aanrader!"
                 name="Loes"
               />
             </div>
