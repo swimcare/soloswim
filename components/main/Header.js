@@ -119,6 +119,11 @@ function Header() {
               </Link>
             </li>
             <li className="self-center hover:underline">
+              <Link href="https://blog.swimcare.be" target="_blank">
+                Blog
+              </Link>
+            </li>
+            <li className="self-center hover:underline">
               <Link href="/over-ons">
                 Over SoloSwim
               </Link>
@@ -185,6 +190,13 @@ function Header() {
 
                 <li className="py-3 border-b border-opacity-25">
                   <span className="ml-3">Zwemlessen</span>
+                </li>
+
+              </Link>
+              <Link href="https://blog.swimcare.be">
+
+                <li className="py-3 border-b border-opacity-25">
+                  <span className="ml-3">Blog</span>
                 </li>
 
               </Link>
