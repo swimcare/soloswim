@@ -125,133 +125,165 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                 </Link>
               </p>
             </div>
-            {productData.type && (
+            {productData.sizes ? (
               <div className="my-8 lg:my-10">
                 <p className="font-bold text-navy-light1 uppercase text-tiny">
-                  {productData.niveaus ? "Niveau" : "Variant*"}
+                  Maat
                 </p>
-                {productData.niveaus ? (
-                  <div className="my-2 text-xs font-bold flex flex-row flex-wrap gap-2 md:gap-3 lg:gap-4">
-                    <div>
+                <div className="my-2 text-xs font-bold flex flex-row flex-wrap gap-2 md:gap-3 lg:gap-4">
+                  {productData.sizes.map((size, idx) => (
+                    <div key={size}>
                       <input
                         className="appearance-none fixed"
                         type="radio"
-                        value="Beginners"
-                        id="1"
+                        value={size}
+                        id={String(idx)}
                         name="type"
                         onChange={(e) => setType(e.target.value, e.target.id)}
                       />
                       <label
-                        htmlFor="1"
+                        htmlFor={String(idx)}
                         className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === "Beginners"
+                          niveau === size
                             ? "border-main"
                             : "border-gray-200 hover:border-gray-500"
                         }`}
                       >
-                        Beginners
+                        {size}
                       </label>
                     </div>
-                    <div>
-                      <input
-                        className="appearance-none fixed"
-                        type="radio"
-                        value="Semi-gevorderden"
-                        id="2"
-                        name="type"
-                        onChange={(e) => setType(e.target.value, e.target.id)}
-                      />
-                      <label
-                        htmlFor="2"
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === "Semi-gevorderden"
-                            ? "border-main"
-                            : "border-gray-200 hover:border-gray-500"
-                        }`}
-                      >
-                        Semi-gevorderden
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        className="appearance-none fixed"
-                        type="radio"
-                        value="Gevorderden"
-                        id="3"
-                        name="type"
-                        onChange={(e) => setType(e.target.value, e.target.id)}
-                      />
-                      <label
-                        htmlFor="3"
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === "Gevorderden"
-                            ? "border-main"
-                            : "border-gray-200 hover:border-gray-500"
-                        }`}
-                      >
-                        Gevorderden
-                      </label>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="my-2 text-xs font-bold flex flex-row gap-2 md:gap-4">
-                    <div>
-                      <input
-                        className="appearance-none fixed"
-                        type="radio"
-                        value="25 meter zwembad"
-                        id="1"
-                        name="type"
-                        onChange={(e) => setType(e.target.value, e.target.id)}
-                      />
-                      <label
-                        htmlFor="1"
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === "25 meter zwembad"
-                            ? "border-main"
-                            : "border-gray-200 hover:border-gray-500"
-                        }`}
-                      >
-                        25 meter bad
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        className="appearance-none fixed"
-                        type="radio"
-                        value="50 meter zwembad"
-                        id="2"
-                        name="type"
-                        onChange={(e) => setType(e.target.value, e.target.id)}
-                      />
-                      <label
-                        htmlFor="2"
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === "50 meter zwembad"
-                            ? "border-main"
-                            : "border-gray-200 hover:border-gray-500"
-                        }`}
-                      >
-                        50 meter bad
-                      </label>
-                    </div>
-                  </div>
-                )}
-                {productData.niveaus ? (
-                  <a
-                    className="underline text-navy-light1 text-xs"
-                    href="#welk-niveau-past-bij-mij"
-                  >
-                    Welk niveau past bij mij?
-                  </a>
-                ) : (
-                  <p className="text-navy-light1 text-xs">
-                    *Bestel de bundel die past bij de lengte van het zwembad
-                    waar jij in zwemt (25m of 50m). Zwem je in beide? Ga dan
-                    voor de 50m bad variant.
-                  </p>
-                )}
+                  ))}
+                </div>
               </div>
+            ) : (
+              productData.type && (
+                <div className="my-8 lg:my-10">
+                  <p className="font-bold text-navy-light1 uppercase text-tiny">
+                    {productData.niveaus ? "Niveau" : "Variant*"}
+                  </p>
+                  {productData.niveaus ? (
+                    <div className="my-2 text-xs font-bold flex flex-row flex-wrap gap-2 md:gap-3 lg:gap-4">
+                      <div>
+                        <input
+                          className="appearance-none fixed"
+                          type="radio"
+                          value="Beginners"
+                          id="1"
+                          name="type"
+                          onChange={(e) => setType(e.target.value, e.target.id)}
+                        />
+                        <label
+                          htmlFor="1"
+                          className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                            niveau === "Beginners"
+                              ? "border-main"
+                              : "border-gray-200 hover:border-gray-500"
+                          }`}
+                        >
+                          Beginners
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          className="appearance-none fixed"
+                          type="radio"
+                          value="Semi-gevorderden"
+                          id="2"
+                          name="type"
+                          onChange={(e) => setType(e.target.value, e.target.id)}
+                        />
+                        <label
+                          htmlFor="2"
+                          className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                            niveau === "Semi-gevorderden"
+                              ? "border-main"
+                              : "border-gray-200 hover:border-gray-500"
+                          }`}
+                        >
+                          Semi-gevorderden
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          className="appearance-none fixed"
+                          type="radio"
+                          value="Gevorderden"
+                          id="3"
+                          name="type"
+                          onChange={(e) => setType(e.target.value, e.target.id)}
+                        />
+                        <label
+                          htmlFor="3"
+                          className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                            niveau === "Gevorderden"
+                              ? "border-main"
+                              : "border-gray-200 hover:border-gray-500"
+                          }`}
+                        >
+                          Gevorderden
+                        </label>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="my-2 text-xs font-bold flex flex-row gap-2 md:gap-4">
+                      <div>
+                        <input
+                          className="appearance-none fixed"
+                          type="radio"
+                          value="25 meter zwembad"
+                          id="1"
+                          name="type"
+                          onChange={(e) => setType(e.target.value, e.target.id)}
+                        />
+                        <label
+                          htmlFor="1"
+                          className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                            niveau === "25 meter zwembad"
+                              ? "border-main"
+                              : "border-gray-200 hover:border-gray-500"
+                          }`}
+                        >
+                          25 meter bad
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          className="appearance-none fixed"
+                          type="radio"
+                          value="50 meter zwembad"
+                          id="2"
+                          name="type"
+                          onChange={(e) => setType(e.target.value, e.target.id)}
+                        />
+                        <label
+                          htmlFor="2"
+                          className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                            niveau === "50 meter zwembad"
+                              ? "border-main"
+                              : "border-gray-200 hover:border-gray-500"
+                          }`}
+                        >
+                          50 meter bad
+                        </label>
+                      </div>
+                    </div>
+                  )}
+                  {productData.niveaus ? (
+                    <a
+                      className="underline text-navy-light1 text-xs"
+                      href="#welk-niveau-past-bij-mij"
+                    >
+                      Welk niveau past bij mij?
+                    </a>
+                  ) : (
+                    <p className="text-navy-light1 text-xs">
+                      *Bestel de bundel die past bij de lengte van het zwembad
+                      waar jij in zwemt (25m of 50m). Zwem je in beide? Ga dan
+                      voor de 50m bad variant.
+                    </p>
+                  )}
+                </div>
+              )
             )}
 
             <div className="text-center my-6">

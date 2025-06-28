@@ -14,6 +14,7 @@ features:
     "Drijvend Materiaal: Ideaal voor leer-om-te-zwemmen-programma's en openwaterzwemmen, want de peddels blijven drijven.",
     "Veelzijdige Trainingshulpmiddel: Ondersteunt de juiste slagtechniek voor alle vier de zwemslagen.",
   ]
+sizes: ["XSmall", "Small", "Medium", "Large"]
 isAccessoire: true
 images: ["/images/zwemmateriaal/agility/xsmall.png"]
 tab1_image: "/images/zwemmateriaal/agility/xsmall.png"
