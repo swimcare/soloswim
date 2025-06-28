@@ -106,7 +106,8 @@ export default function Zwemschema({ productData }) {
         ) : (
           <div className="lg:h-20 bg-grey-light4 lg:bg-white"></div>
         )}
-        <SectionFaq />
+        {/* FAQ SECTION */}
+        {!productData.hideFaq && <SectionFaq />}
 
         {/* SectionCoaches when ready */}
         {/* <SectionCoaches

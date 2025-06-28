@@ -9,6 +9,33 @@
 
 @tailwind utilities;
 
+/* Markdown content spacing */
+.markdown-content p {
+  margin-bottom: 1rem;
+}
+
+.markdown-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.markdown-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.markdown-content h2:first-child {
+  margin-top: 0;
+}
+
+.markdown-content h3:first-child {
+  margin-top: 0;
+}
+
 /* customizations for react-responsive carousel */
 
 .carousel.carousel-slider {
@@ -39,7 +66,7 @@
 
 .carousel .control-next.control-arrow:before {
   content: "" !important;
-  border: solid #2528D5 !important;
+  border: solid #2528d5 !important;
   border-width: 0 3px 3px 0 !important;
   display: inline-block !important;
   padding: 3px !important;
@@ -49,7 +76,7 @@
 
 .carousel .control-prev.control-arrow:before {
   content: "" !important;
-  border: solid #2528D5 !important;
+  border: solid #2528d5 !important;
   border-width: 0 3px 3px 0 !important;
   display: inline-block !important;
   padding: 3px !important;
@@ -59,11 +86,11 @@
 
 /* thumbnails carousel */
 
-.carousel .thumb{
+.carousel .thumb {
   padding: 0px !important;
   border-radius: 5px !important;
 }
 
-.carousel .thumbs-wrapper{
+.carousel .thumbs-wrapper {
   text-align: center !important;
 }

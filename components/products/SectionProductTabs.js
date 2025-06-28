@@ -84,24 +84,31 @@ function SectionProductTabs({ productData }) {
             {/* Tab 1: Wat krijg je */}
             {(activeTab === 1 || productData.isAccessoire) && (
               <div className="md:my-14 flex-col md:flex-row md:space-x-14 gap-5 md:gap-0 hidden md:flex">
-                <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg md:min-h-[600px] w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
-                  <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-full relative mx-auto">
-                    <Image
-                      className="md:rounded-xl"
-                      src={productData.tab1_image}
-                      alt={productData.title}
-                      fill
-                      sizes="100vw"
-                      style={{
-                        objectFit: "cover",
-                        objectPosition: "center",
-                      }}
-                    ></Image>
-                    <div className="md:hidden relative">
-                      <WaveExtendedSvg fill="#fff" />
+                {productData.tab1_image && (
+                  <div
+                    className="md:mx-0 mx-auto flex-shrink-0 flex items-start justify-center"
+                    style={{ maxWidth: "420px" }}
+                  >
+                    <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-auto relative">
+                      <Image
+                        className="md:rounded-xl"
+                        src={productData.tab1_image}
+                        alt={productData.title}
+                        width={400}
+                        height={400}
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxWidth: "400px",
+                          display: "block",
+                        }}
+                      />
+                      <div className="md:hidden relative">
+                        <WaveExtendedSvg fill="#fff" />
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
                 <div className="w-full">
                   <h2 className="hidden md:block text-main text-2xl font-lexend font-extrabold">
                     {productData.title}
@@ -115,7 +122,7 @@ function SectionProductTabs({ productData }) {
                     {productData.subtitle ? productData.subtitle : ""}
                   </h2>
                   <div
-                    className="text-navy-light1 text-tiny leading-6 my-3 md:my-5"
+                    className="text-navy-light1 text-tiny leading-6 my-3 md:my-5 markdown-content"
                     dangerouslySetInnerHTML={{
                       __html: productData.contentHtml,
                     }}
@@ -157,17 +164,18 @@ function SectionProductTabs({ productData }) {
           <div>
             {/* Tab 1: Wat krijg je */}
             <div className="md:my-14 flex-col md:flex-row md:space-x-14 gap-5 md:gap-0 flex md:hidden">
-              <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg md:min-h-[600px] w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
-                <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-full relative mx-auto">
+              <div className="-mx-5 sm:-mx-8 md:mx-auto lg:mx-auto md:max-w-lg md:h-auto w-screen h-96 lg:h-auto md:w-8/12 lg:w-full">
+                <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-auto relative mx-auto">
                   <Image
                     className="md:rounded-xl"
                     src={productData.tab1_image}
                     alt={productData.title}
-                    fill
-                    sizes="100vw"
+                    width={400}
+                    height={400}
                     style={{
-                      objectFit: "cover",
-                      objectPosition: "center",
+                      width: "100%",
+                      height: "auto",
+                      maxWidth: "400px",
                     }}
                   ></Image>
                   <div className="md:hidden relative">
@@ -188,7 +196,7 @@ function SectionProductTabs({ productData }) {
                   {productData.subtitle ? productData.subtitle : ""}
                 </h2>
                 <div
-                  className="text-navy-light1 text-tiny leading-6 my-3 md:my-5"
+                  className="text-navy-light1 text-tiny leading-6 my-3 md:my-5 markdown-content"
                   dangerouslySetInnerHTML={{
                     __html: productData.contentHtml,
                   }}
