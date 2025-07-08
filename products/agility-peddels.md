@@ -38,7 +38,7 @@ sizeVariants:
     winkelwagen_images: ["/images/zwemmateriaal/agility/medium.png"]
     tab1_image: "/images/zwemmateriaal/agility/medium.png"
   Large:
-    price: 38.80
+    price: 28.80
     images: ["/images/zwemmateriaal/agility/large.png"]
     winkelwagen_images: ["/images/zwemmateriaal/agility/large.png"]
     tab1_image: "/images/zwemmateriaal/agility/large.png"
