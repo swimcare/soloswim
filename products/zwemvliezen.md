@@ -6,7 +6,8 @@ subtitle: "FINIS Z2 Gold Zoomers"
 price: 52.80
 description: "De FINIS Z2 Gold Zoomers® Fins stimuleren korte, snelle kicks en bieden optimale voortstuwing. Het comfortabele ontwerp van natuurlijk rubber zorgt voor een veilige pasvorm, terwijl de techniekgerichte eigenschappen zoals de flex box en fluid separator spierkracht en efficiëntie verhogen."
 inStock: true
-features: [
+features:
+  [
     "Techniekverbetering: Geeft directe feedback op je slag en helpt je gelijkmatige druk te behouden.",
     "Bandloos Ontwerp: Geen last van oncomfortabele banden; past zich natuurlijk aan de hand aan.",
     "Lage Impact: Ventilatiegaten laten water door, wat helpt om een natuurlijk watergevoel te behouden.",
@@ -15,18 +16,13 @@ features: [
   ]
 niveaus: true
 isCombi: true
+isAccessoire: true
 type: "Plankje"
 editie: 1
 color: "yellow"
-images:
-  [
-    "/images/zwemmateriaal/zwemvliezen/z2gold.png",
-  ]
+images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
 tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
-winkelwagen_images:
-  [
-    "/images/zwemmateriaal/zwemvliezen/z2gold.png",
-  ]
+winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
 ---
 
 De FINIS Z2 Gold Zoomers® Fins zijn de perfecte keuze voor zwemmers die hun kick-techniek en kracht willen optimaliseren. Met een kort blad bevorderen deze vinnen korte, snelle kicks, wat zorgt voor extra voortstuwing en snelheid. De Z2 Gold Zoomers® zijn ontworpen met techniekkanalen die de flexibiliteit van de vinnen beheersen en moeiteloze voortstuwing bieden, terwijl de unieke fluid separator op de bovenkant van de vin vermoeidheid op de down kick en de quadriceps vermindert.
@@ -53,6 +49,5 @@ Verzorgingsinstructies
 
 Spoel af met koel, niet-gechloreerd water na elk gebruik.
 Laat drogen op een handdoek en vermijd langdurige blootstelling aan direct zonlicht.
-
 
 Letop: Deze zwemvliezen zitten heel ruim waardoor je best een maatje kleiner neemt dan je schoenmaat. Als je bijvoorbeeld maat 44 hebt neem je beter maatje 41-43 om een goede pasvorm te hebben.

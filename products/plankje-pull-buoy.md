@@ -6,7 +6,8 @@ subtitle: "FINIS Foam Pull Buoy"
 price: 24
 description: "Werk aan je bovenlichaam en core met de FINIS Foam Pull Buoy. Deze pull buoy immobiliseert de benen, waardoor je focus volledig op de armen en schouders ligt en je techniek en heuprotatie verbetert. Verkrijgbaar in maten voor zowel volwassenen als kinderen."
 inStock: true
-features: [
+features:
+  [
     "Techniekverbetering: Geeft directe feedback op je slag en helpt je gelijkmatige druk te behouden.",
     "Bandloos Ontwerp: Geen last van oncomfortabele banden; past zich natuurlijk aan de hand aan.",
     "Lage Impact: Ventilatiegaten laten water door, wat helpt om een natuurlijk watergevoel te behouden.",
@@ -15,18 +16,13 @@ features: [
   ]
 niveaus: true
 isCombi: true
+isAccessoire: true
 type: "Plankje"
 editie: 1
 color: "yellow"
-images:
-  [
-    "/images/zwemmateriaal/plankje/pullbuoy.png",
-  ]
+images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
 tab1_image: "/images/zwemmateriaal/plankje/pullbuoy.png"
-winkelwagen_images:
-  [
-    "/images/zwemmateriaal/plankje/pullbuoy.png",
-  ]
+winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
 ---
 
 De FINIS Foam Pull Buoy is speciaal ontworpen om zwemmers te helpen bij het versterken van hun bovenlichaam en het verbeteren van hun zwemtechniek. Door de benen te immobiliseren, dwingt de pull buoy de zwemmer om de armen, schouders en romp te gebruiken, wat essentieel is voor een krachtige slag. Het zachte EVA-schuim is comfortabel en irriteert de huid niet, zelfs niet tijdens langdurige trainingen.

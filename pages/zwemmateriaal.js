@@ -1,18 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { getSwimmingSchemasData } from "../../lib/products";
-import SectionFaq from "../../components/products/SectionFaq";
+import { getSwimmingEquipmentData } from "../lib/products";
 import NumberFormat from "react-number-format";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
 
-function index({ swimmingSchemasData }) {
+function Zwemmateriaal({ swimmingEquipmentData }) {
   return (
     <Fragment>
       <NextSeo
-        title="SoloSwim | Waterproof zwemschema's"
-        description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
+        title="SoloSwim | Zwemmateriaal"
+        description="Professioneel zwemmateriaal voor elke zwemmer. ✓ Zwembrillen ✓ Zwemvliezen ✓ Peddels ✓ Plankjes ✓ Snorkels ✓ Snelle levering"
         additionalLinkTags={[
           {
             rel: "icon",
@@ -25,18 +24,18 @@ function index({ swimmingSchemasData }) {
         ]}
         openGraph={{
           type: "website",
-          url: "https://www.soloswim.be",
-          title: "SoloSwim | Waterproof zwemschema's",
+          url: "https://www.soloswim.be/zwemmateriaal",
+          title: "SoloSwim | Zwemmateriaal",
           description:
-            "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
+            "Professioneel zwemmateriaal voor elke zwemmer. ✓ Zwembrillen ✓ Zwemvliezen ✓ Peddels ✓ Plankjes ✓ Snorkels ✓ Snelle levering",
           locale: "nl_BE",
-          site_name: "SoloSwim | Waterproof zwemschema's",
+          site_name: "SoloSwim | Zwemmateriaal",
           images: [
             {
               url: "/images/home/header-OG.jpg",
               width: 1200,
               height: 630,
-              alt: "SoloSwim",
+              alt: "SoloSwim Zwemmateriaal",
             },
           ],
         }}
@@ -46,22 +45,22 @@ function index({ swimmingSchemasData }) {
           <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-8 lg:pt-20">
             <div>
               <h1 className="text-main font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl my-2 lg:my-6">
-                De zwemschema's van SoloSwim
+                Zwemmateriaal van SoloSwim
               </h1>
               <h2 className="text-navy-light1 font-lexend font-extrabold text-xl lg:text-4xl my-2 lg:my-4">
-                Boost jouw zwemmoment
+                Professioneel materiaal voor elke zwemmer
               </h2>
               <p className="text-navy-light1 text-tiny leading-6">
-                Bij SoloSwim vind je zwemtrainingen waarmee jij nog meer uit je
-                zwemmoment kunt halen. Zwem je graag lange afstanden, hou je
-                meer van explosiviteit of ben je nog maar net begonnen? Bekijk
-                ons diverse aanbod en ga snel aan de slag met jouw eigen bundel!
+                Ontdek ons uitgebreide assortiment aan professioneel
+                zwemmateriaal. Van zwembrillen en zwemvliezen tot peddels en
+                plankjes - wij hebben alles wat je nodig hebt om je zwemtechniek
+                te verbeteren en meer uit je training te halen.
               </p>
             </div>
             <div>
               <ul className="flex flex-col gap-5 my-10 md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-3">
-                {swimmingSchemasData.map(
-                  ({ id, title, images, price, card_info, type, oldPrice }) => (
+                {swimmingEquipmentData.map(
+                  ({ id, title, images, price, card_info, oldPrice }) => (
                     <li
                       key={id}
                       className="bg-grey-light4 rounded-2xl hover:cursor-pointer hover:ring-4 hover:ring-main py-5"
@@ -71,14 +70,13 @@ function index({ swimmingSchemasData }) {
                           pathname: "/producten/[id]",
                           query: {
                             id: id,
-                            ...(type ? { niveau: type.toLowerCase() } : {}),
                           },
                         }}
                       >
                         <div>
                           <div className="inline-block bg-white mb-6 rounded-r-md px-3 py-1">
                             <p className="text-navy-light1 text-tiny">
-                              {card_info ? card_info : "Keuze uit 3 niveaus"}
+                              {card_info ? card_info : "Zwemmateriaal"}
                             </p>
                           </div>
                           <div className="text-center">
@@ -131,21 +129,18 @@ function index({ swimmingSchemasData }) {
             </div>
           </div>
         </section>
-
-        {/* FAQ SECTION */}
-        <SectionFaq />
       </main>
     </Fragment>
   );
 }
 
-export default index;
+export default Zwemmateriaal;
 
 export async function getStaticProps() {
-  const swimmingSchemasData = getSwimmingSchemasData();
+  const swimmingEquipmentData = getSwimmingEquipmentData();
   return {
     props: {
-      swimmingSchemasData,
+      swimmingEquipmentData,
     },
   };
 }

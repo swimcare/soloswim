@@ -6,7 +6,8 @@ subtitle: "FINIS Stability Snorkel Speed"
 price: 44.40
 description: "De FINIS Stability Snorkel biedt ultiem comfort en stabiliteit voor zwemmers dankzij het bracketloze ontwerp en een zachte rustplaats op het voorhoofd. Ideaal voor lange trainingen, deze snorkel elimineert de noodzaak om het hoofd te draaien voor ademhaling, zodat je je volledig kunt richten op je techniek en lichaamshouding."
 inStock: true
-features: [
+features:
+  [
     "Techniekverbetering: Geeft directe feedback op je slag en helpt je gelijkmatige druk te behouden.",
     "Bandloos Ontwerp: Geen last van oncomfortabele banden; past zich natuurlijk aan de hand aan.",
     "Lage Impact: Ventilatiegaten laten water door, wat helpt om een natuurlijk watergevoel te behouden.",
@@ -15,18 +16,13 @@ features: [
   ]
 niveaus: true
 isCombi: true
+isAccessoire: true
 type: "Snorkel"
 editie: 1
 color: "black"
-images:
-  [
-    "/images/zwemmateriaal/snorkel/snorkel.png",
-  ]
+images: ["/images/zwemmateriaal/snorkel/snorkel.png"]
 tab1_image: "/images/zwemmateriaal/snorkel/snorkel.png"
-winkelwagen_images:
-  [
-    "/images/zwemmateriaal/snorkel/snorkel.png",
-  ]
+winkelwagen_images: ["/images/zwemmateriaal/snorkel/snorkel.png"]
 ---
 
 De FINIS Stability Snorkel is een innovatieve snorkel die speciaal is ontworpen voor langdurig gebruik zonder ongemak. Door het verwijderen van de gebruikelijke hoofdband en de toevoeging van een zachte rustplaats, past deze snorkel zich aan de natuurlijke ronding van het voorhoofd aan voor een ongeëvenaard draagcomfort. Het slanke, lage weerstandontwerp maakt het eenvoudig om water uit de buis te verwijderen en biedt stabiliteit, zelfs bij hoge snelheden.

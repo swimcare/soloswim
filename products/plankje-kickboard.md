@@ -6,7 +6,8 @@ subtitle: "FINIS Foam kickboard"
 price: 26.40
 description: "Werk aan je beenspieren en kicking techniek met de FINIS Foam Kickboard. Beschikbaar in Sr. en Jr. maten, is dit kickboard gemaakt van zacht EVA-schuim dat duurzaam is en comfortabel aanvoelt, zonder irritatie aan de huid."
 inStock: true
-features: [
+features:
+  [
     "Techniekverbetering: Geeft directe feedback op je slag en helpt je gelijkmatige druk te behouden.",
     "Bandloos Ontwerp: Geen last van oncomfortabele banden; past zich natuurlijk aan de hand aan.",
     "Lage Impact: Ventilatiegaten laten water door, wat helpt om een natuurlijk watergevoel te behouden.",
@@ -15,18 +16,13 @@ features: [
   ]
 niveaus: true
 isCombi: true
+isAccessoire: true
 type: "Plankje"
 editie: 1
 color: "yellow"
-images:
-  [
-    "/images/zwemmateriaal/plankje/kickboard.png",
-  ]
+images: ["/images/zwemmateriaal/plankje/kickboard.png"]
 tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
-winkelwagen_images:
-  [
-    "/images/zwemmateriaal/plankje/kickboard.png",
-  ]
+winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
 ---
 
 De FINIS Foam Kickboard is ontworpen om zwemmers te helpen hun beenslag te versterken door de armen te immobiliseren, zodat alle focus op de benen ligt. Het duurzame EVA-schuim is zacht en irriteert de huid niet, wat langdurig comfortabel gebruik mogelijk maakt. Verkrijgbaar in zowel Senior- als Junior-maten, waarbij de Junior-versie speciaal is ontworpen om de belasting op de schouders te verminderen, ideaal voor jongere en kleinere zwemmers.
