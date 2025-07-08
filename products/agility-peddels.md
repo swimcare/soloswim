@@ -21,6 +21,27 @@ tab1_image: "/images/zwemmateriaal/agility/xsmall.png"
 winkelwagen_images: ["/images/zwemmateriaal/agility/xsmall.png"]
 card_info: "Handig trainingshulpmiddel"
 hideFaq: true
+sizeVariants:
+  XSmall:
+    price: 28.80
+    images: ["/images/zwemmateriaal/agility/xsmall.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/agility/xsmall.png"]
+    tab1_image: "/images/zwemmateriaal/agility/xsmall.png"
+  Small:
+    price: 28.80
+    images: ["/images/zwemmateriaal/agility/small.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/agility/small.png"]
+    tab1_image: "/images/zwemmateriaal/agility/small.png"
+  Medium:
+    price: 28.80
+    images: ["/images/zwemmateriaal/agility/medium.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/agility/medium.png"]
+    tab1_image: "/images/zwemmateriaal/agility/medium.png"
+  Large:
+    price: 38.80
+    images: ["/images/zwemmateriaal/agility/large.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/agility/large.png"]
+    tab1_image: "/images/zwemmateriaal/agility/large.png"
 ---
 
 De FINIS Agility Paddles zijn speciaal ontworpen om zwemmers onmiddellijk inzicht te geven in hun techniek, zelfs na slechts één baan. Deze peddels zijn gemaakt van een licht, drijvend materiaal dat geschikt is voor iedereen, van beginners tot gevorderde zwemmers. Het unieke, bandloze ontwerp sluit perfect aan bij de natuurlijke vorm van je hand en moedigt je aan om positieve druk uit te oefenen gedurende de hele slag. Als je geen juiste slag maakt, zullen de peddels verschuiven of afvallen, waardoor je meteen voelt waar je techniek verbeterd kan worden.

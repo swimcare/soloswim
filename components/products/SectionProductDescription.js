@@ -52,6 +52,16 @@ function SectionProductDescription({ productData, addItemToBasket }) {
     productData.type = type;
     setSelectedPhoto(+id);
     setNiveau(type);
+
+    // Update product data based on size variant if available
+    if (productData.sizeVariants && productData.sizeVariants[type]) {
+      const variant = productData.sizeVariants[type];
+      productData.price = variant.price;
+      productData.images = variant.images;
+      productData.winkelwagen_images = variant.winkelwagen_images;
+      productData.tab1_image = variant.tab1_image;
+    }
+
     // Add query parameter to URL
     const url = new URL(window.location.href);
     url.searchParams.set("niveau", type.toLowerCase());
@@ -63,10 +73,23 @@ function SectionProductDescription({ productData, addItemToBasket }) {
   useEffect(() => {
     const niveauParam = searchParams.get("niveau");
     if (niveauParam) {
-      setNiveau(niveauParam.charAt(0).toUpperCase() + niveauParam.slice(1));
+      const niveauValue =
+        niveauParam.charAt(0).toUpperCase() + niveauParam.slice(1);
+      setNiveau(niveauValue);
+
+      // Update product data based on size variant if available
+      if (productData.sizeVariants && productData.sizeVariants[niveauValue]) {
+        const variant = productData.sizeVariants[niveauValue];
+        productData.price = variant.price;
+        productData.images = variant.images;
+        productData.winkelwagen_images = variant.winkelwagen_images;
+        productData.tab1_image = variant.tab1_image;
+        productData.type = niveauValue;
+      }
+
       console.log("useEffect triggered to set niveau state to: " + niveauParam);
     }
-  }, [searchParams]);
+  }, [searchParams, productData]);
 
   return (
     <section className="bg-white">

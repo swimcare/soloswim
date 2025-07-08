@@ -31,8 +31,18 @@ function Modal() {
       addedItem[0].type === "50 meter zwembad"
     ) {
       return 1;
-    } else {
+    } else if (addedItem[0].type === "Gevorderden") {
       return 2;
+    } else if (addedItem[0].type === "XSmall") {
+      return 0;
+    } else if (addedItem[0].type === "Small") {
+      return 1;
+    } else if (addedItem[0].type === "Medium") {
+      return 2;
+    } else if (addedItem[0].type === "Large") {
+      return 3;
+    } else {
+      return 0;
     }
   };
 
@@ -58,7 +68,7 @@ function Modal() {
                     <div className="p-4 text-xl font-lexend font-semibold text-white">
                       <h1>Het product is toegevoegd aan je winkelwagen</h1>
                     </div>
-                    <Link href={pathname || ""}>
+                    <Link href={pathname || "/"}>
                       <button type="button" className="self-start m-3">
                         <XIcon className="h-6 w-6 text-white" />
                       </button>
@@ -99,12 +109,10 @@ function Modal() {
                     {addedItem[0].type ? (
                       <Link
                         scroll={false}
-                        href={
-                          {
-                            pathname: pathname,
-                            query: { niveau: addedItem[0].type?.toLowerCase() },
-                          } || ""
-                        }
+                        href={{
+                          pathname: pathname || "/",
+                          query: { niveau: addedItem[0].type?.toLowerCase() },
+                        }}
                       >
                         <button
                           type="button"
@@ -116,11 +124,9 @@ function Modal() {
                     ) : (
                       <Link
                         scroll={false}
-                        href={
-                          {
-                            pathname: pathname,
-                          } || ""
-                        }
+                        href={{
+                          pathname: pathname || "/",
+                        }}
                       >
                         <button
                           type="button"
@@ -131,7 +137,7 @@ function Modal() {
                       </Link>
                     )}
 
-                    <Link href={"/winkelwagen" || ""}>
+                    <Link href="/winkelwagen">
                       <button
                         type="button"
                         className="text-white focus:outline-none m-1.5 rounded-full px-6 py-2 bg-main hover:bg-white hover:text-main border-2 border-main"

@@ -46,8 +46,18 @@ function WinkelwagenItem({
       return 0;
     } else if (type === "Semi-gevorderden" || type === "50 meter zwembad") {
       return 1;
-    } else {
+    } else if (type === "Gevorderden") {
       return 2;
+    } else if (type === "XSmall") {
+      return 0;
+    } else if (type === "Small") {
+      return 1;
+    } else if (type === "Medium") {
+      return 2;
+    } else if (type === "Large") {
+      return 3;
+    } else {
+      return 0;
     }
   };
 
@@ -56,20 +66,15 @@ function WinkelwagenItem({
       <div className="flex flex-row flex-wrap justify-between mx-4">
         <div className="w-full">
           <h2 className="font-semibold font-lexend md:text-lg text-base leading-5">
-            <Link href={`/producten/${id}`}>
-              {title}
-            </Link>
+            <Link href={`/producten/${id}`}>{title}</Link>
           </h2>
           <h3 className="text-xs md:text-sm my-1">
-            <Link href={`/producten/${id}`}>
-              {type}
-            </Link>
+            <Link href={`/producten/${id}`}>{type}</Link>
           </h3>
         </div>
         <div className="w-52 my-2">
           <div className="hover:cursor-pointer">
             <Link href={`/producten/${id}`}>
-
               <Image
                 src={
                   type && winkelwagen_images
@@ -80,9 +85,9 @@ function WinkelwagenItem({
                 height={300}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
-
+                  height: "auto",
+                }}
+              />
             </Link>
           </div>
         </div>
