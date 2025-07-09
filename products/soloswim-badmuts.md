@@ -12,6 +12,7 @@ features:
     "Geschikt voor zowel kort als lang haar",
   ]
 isAccessoire: true
+hideFaq: true
 images:
   [
     "/images/zwemschemas/bm1/1.png",

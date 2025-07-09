@@ -17,6 +17,7 @@ features:
 isCombi: true
 isAccessoire: true
 type: "Plankje"
+hideFaq: true
 editie: 1
 color: "yellow"
 sizes:

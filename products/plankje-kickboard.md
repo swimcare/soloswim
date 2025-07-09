@@ -17,6 +17,7 @@ features:
 isCombi: true
 isAccessoire: true
 type: "Plankje"
+hideFaq: true
 sizes: ["Junior", "Senior"]
 sizeVariants:
   Junior:

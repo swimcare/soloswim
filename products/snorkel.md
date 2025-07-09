@@ -17,6 +17,7 @@ features:
 isCombi: true
 isAccessoire: true
 type: "Snorkel"
+hideFaq: true
 editie: 1
 color: "black"
 images: ["/images/zwemmateriaal/snorkel/snorkel.png"]
