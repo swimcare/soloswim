@@ -14,7 +14,6 @@ features:
     "Drijvend Materiaal: Ideaal voor leer-om-te-zwemmen-programma’s en openwaterzwemmen, want de peddels blijven drijven.",
     "Veelzijdige Trainingshulpmiddel: Ondersteunt de juiste slagtechniek voor alle vier de zwemslagen.",
   ]
-niveaus: true
 isCombi: true
 isAccessoire: true
 type: "Plankje"

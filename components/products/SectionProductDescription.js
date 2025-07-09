@@ -179,7 +179,8 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                 </div>
               </div>
             ) : (
-              productData.type && (
+              productData.type &&
+              !productData.isAccessoire && (
                 <div className="my-8 lg:my-10">
                   <p className="font-bold text-navy-light1 uppercase text-tiny">
                     {productData.niveaus ? "Niveau" : "Variant*"}
