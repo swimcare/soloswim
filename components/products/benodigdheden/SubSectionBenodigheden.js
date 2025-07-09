@@ -29,6 +29,7 @@ function SubSectionBenodigdheden({ id }) {
               icon="/images/zwemschemas/benodigdheden/zwembril.png"
               name="Zwembril"
               tooltipText="Voorkom water in je ogen tijdens het zwemmen."
+              bestelButton="/producten/zwembril"
             />
           )}
           {id !== "swimfit" && (
@@ -43,12 +44,14 @@ function SubSectionBenodigdheden({ id }) {
             icon="/images/zwemschemas/benodigdheden/plankje.png"
             name="Zwemplankje"
             tooltipText="Geeft je extra drijfvermogen om specifiek je benen te trainen."
+            bestelButton="/producten/plankje-kickboard"
           />
           {id !== "swimfit" && (
             <Attribuut
               icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
               name="Pullbuoy"
               tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
+              bestelButton="/producten/plankje-pull-buoy"
             />
           )}
           {id !== "swimfit" && (
@@ -56,6 +59,7 @@ function SubSectionBenodigdheden({ id }) {
               icon="/images/zwemschemas/benodigdheden/zoomers.png"
               name="Zoomers (optioneel)"
               tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
+              bestelButton="/producten/zwemvliezen"
             />
           )}
         </div>

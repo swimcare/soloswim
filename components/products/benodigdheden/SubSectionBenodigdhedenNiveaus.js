@@ -34,6 +34,7 @@ function SubSectionBenodigdhedenNiveaus({ color }) {
             icon="/images/zwemschemas/benodigdheden/zwembril.png"
             name="Zwembril"
             tooltipText="Voorkom water in je ogen tijdens het zwemmen."
+            bestelButton="/producten/zwembril"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/badmuts.png"
@@ -65,17 +66,20 @@ function SubSectionBenodigdhedenNiveaus({ color }) {
             icon="/images/zwemschemas/benodigdheden/plankje.png"
             name="Zwemplankje"
             tooltipText="Geeft je extra drijfvermogen om specifiek je benen te trainen."
+            bestelButton="/producten/plankje-kickboard"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             name="Pullbuoy"
             tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
+            bestelButton="/producten/plankje-pull-buoy"
           />
           {(color === "green" || color === "green-orange-yellow") && (
             <Attribuut
               icon="/images/zwemschemas/benodigdheden/zoomers.png"
               name="Zoomers (optioneel)"
               tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
+              bestelButton="/producten/zwemvliezen"
             />
           )}
         </div>
@@ -102,26 +106,31 @@ function SubSectionBenodigdhedenNiveaus({ color }) {
             icon="/images/zwemschemas/benodigdheden/plankje.png"
             name="Zwemplankje"
             tooltipText="Geeft je extra drijfvermogen om specifiek je benen te trainen."
+            bestelButton="/producten/plankje-kickboard"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
             name="Pullbuoy"
             tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
+            bestelButton="/producten/plankje-pull-buoy"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/handpeddels.png"
             name="Handpeddels"
             tooltipText="Helpt je sneller te zwemmen door opbouwen van kracht en ondersteunen van de techniek."
+            bestelButton="/producten/agility-peddels"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/zoomers.png"
             name="Zoomers"
             tooltipText="Helpt je met de beenslag techniek en geeft je extra snelheid waardoor het zwemmen makkelijker wordt."
+            bestelButton="/producten/zwemvliezen"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/snorkel.png"
             name="Frontale snorkel (optioneel)"
             tooltipText="Houd je niet bezig met de ademhaling, maar focus je 100% op de rest van de techniek."
+            bestelButton="/producten/snorkel"
           />
         </div>
       </AccordionPanel>
