@@ -17,6 +17,18 @@ features:
 isCombi: true
 isAccessoire: true
 type: "Plankje"
+sizes: ["Junior", "Senior"]
+sizeVariants:
+  Junior:
+    price: 26.40
+    images: ["/images/zwemmateriaal/plankje/kickboard.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
+    tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
+  Senior:
+    price: 26.40
+    images: ["/images/zwemmateriaal/plankje/kickboard.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
+    tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
 editie: 1
 color: "yellow"
 images: ["/images/zwemmateriaal/plankje/kickboard.png"]

@@ -17,6 +17,18 @@ features:
 isCombi: true
 isAccessoire: true
 type: "Plankje"
+sizes: ["Junior", "Senior"]
+sizeVariants:
+  Junior:
+    price: 24
+    images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
+    tab1_image: "/images/zwemmateriaal/plankje/pullbuoy.png"
+  Senior:
+    price: 24
+    images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
+    tab1_image: "/images/zwemmateriaal/plankje/pullbuoy.png"
 editie: 1
 color: "yellow"
 images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]

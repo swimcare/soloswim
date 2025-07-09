@@ -14,12 +14,75 @@ features:
     "Drijvend Materiaal: Ideaal voor leer-om-te-zwemmen-programma’s en openwaterzwemmen, want de peddels blijven drijven.",
     "Veelzijdige Trainingshulpmiddel: Ondersteunt de juiste slagtechniek voor alle vier de zwemslagen.",
   ]
-niveaus: true
 isCombi: true
 isAccessoire: true
 type: "Plankje"
 editie: 1
 color: "yellow"
+sizes:
+  [
+    "30-32",
+    "33-34",
+    "35-36",
+    "36-37",
+    "38-39",
+    "40-41",
+    "41-43",
+    "44-45",
+    "45-46",
+    "46-48",
+  ]
+sizeVariants:
+  "30-32":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "33-34":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "35-36":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "36-37":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "38-39":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "40-41":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "41-43":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "44-45":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "45-46":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
+  "46-48":
+    price: 52.80
+    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
 images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
 tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
 winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]

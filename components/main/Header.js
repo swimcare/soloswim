@@ -44,7 +44,7 @@ function Header() {
         <div className="flex flex-row justify-between max-w-screen-xl mx-auto h-full items-center px-3 sm:px-8">
           {/* Mobile hamburger menu icon */}
           <div
-            className="sm:hidden self-center hover:underline hover:cursor-pointer"
+            className="lg:hidden self-center hover:underline hover:cursor-pointer"
             onClick={() => toggleMobileMenu()}
           >
             {mobileMenuExtended ? (
@@ -84,7 +84,7 @@ function Header() {
             </Link>
           </div>
           {/* Mobile shopping cart icon TODO: add numbering, zie amazon */}
-          <div className="sm:hidden relative self-center hover:underline hover:cursor-pointer">
+          <div className="lg:hidden relative self-center hover:underline hover:cursor-pointer">
             <Link href="/winkelwagen">
               <ShoppingCartIcon
                 className={`w-8 h-8 ${
@@ -100,7 +100,7 @@ function Header() {
           </div>
 
           {/* Navigation items Desktop */}
-          <ul className="hidden sm:flex flex-row space-x-8 lg:space-x-10 font-lexend font-semibold text-navy-light1 h-10">
+          <ul className="hidden lg:flex flex-row space-x-6 xl:space-x-10 font-lexend font-semibold text-navy-light1 h-10 text-sm xl:text-base">
             <li className="self-center hover:underline">
               <Link href="/producten">Zwemschema's</Link>
             </li>
@@ -149,7 +149,7 @@ function Header() {
         </div>
         {/* Mobile navigation menu extended */}
         {mobileMenuExtended && (
-          <div className="sm:hidden bg-main text-white font-lexend font-bold text-xl pt-6 transform -translate-y-1">
+          <div className="lg:hidden bg-main text-white font-lexend font-bold text-xl pt-6 transform -translate-y-1">
             <ul>
               <Link href="/">
                 <li className="py-3 border-b border-opacity-25">

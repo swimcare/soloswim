@@ -153,30 +153,47 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                 <p className="font-bold text-navy-light1 uppercase text-tiny">
                   Maat
                 </p>
-                <div className="my-2 text-xs font-bold flex flex-row flex-wrap gap-2 md:gap-3 lg:gap-4">
-                  {productData.sizes.map((size, idx) => (
-                    <div key={size}>
-                      <input
-                        className="appearance-none fixed"
-                        type="radio"
-                        value={size}
-                        id={String(idx)}
-                        name="type"
-                        onChange={(e) => setType(e.target.value, e.target.id)}
-                      />
-                      <label
-                        htmlFor={String(idx)}
-                        className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
-                          niveau === size
-                            ? "border-main"
-                            : "border-gray-200 hover:border-gray-500"
-                        }`}
-                      >
-                        {size}
-                      </label>
-                    </div>
-                  ))}
-                </div>
+                {productData.sizes.length > 5 ? (
+                  <div className="my-2">
+                    <select
+                      value={niveau || ""}
+                      onChange={(e) => setType(e.target.value, "0")}
+                      className="w-full md:w-64 border-2 border-gray-200 rounded-xl p-3 text-xs font-bold focus:border-main focus:outline-none"
+                    >
+                      <option value="">Selecteer een maat</option>
+                      {productData.sizes.map((size) => (
+                        <option key={size} value={size}>
+                          {size}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                ) : (
+                  <div className="my-2 text-xs font-bold flex flex-row flex-wrap gap-2 md:gap-3 lg:gap-4">
+                    {productData.sizes.map((size, idx) => (
+                      <div key={size}>
+                        <input
+                          className="appearance-none fixed"
+                          type="radio"
+                          value={size}
+                          id={String(idx)}
+                          name="type"
+                          onChange={(e) => setType(e.target.value, e.target.id)}
+                        />
+                        <label
+                          htmlFor={String(idx)}
+                          className={`border-2 rounded-xl items-center hover:cursor-pointer inline-block p-3 ${
+                            niveau === size
+                              ? "border-main"
+                              : "border-gray-200 hover:border-gray-500"
+                          }`}
+                        >
+                          {size}
+                        </label>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ) : (
               productData.type &&
