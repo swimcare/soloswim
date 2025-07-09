@@ -88,6 +88,11 @@ function SectionProductDescription({ productData, addItemToBasket }) {
       }
 
       console.log("useEffect triggered to set niveau state to: " + niveauParam);
+    } else if (productData.sizes && productData.sizes.length > 0) {
+      // Pre-select the first size option for products with sizes
+      const firstSize = productData.sizes[0];
+      setNiveau(firstSize);
+      setType(firstSize, "0");
     }
   }, [searchParams, productData]);
 
@@ -342,13 +347,20 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                 >
                   <button
                     role="button"
+                    disabled={productData.sizes && !niveau}
                     onClick={() => {
                       if (!productData.type) productData.type = niveau;
                       addItemToBasket(productData);
                     }}
-                    className="text-white text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"
+                    className={`text-tiny lg:text-lg font-bold uppercase w-full px-3 py-5 rounded-full tracking-wider shadow-xl border-4 ${
+                      productData.sizes && !niveau
+                        ? "bg-gray-400 text-gray-600 border-gray-400 cursor-not-allowed"
+                        : "bg-main text-white hover:bg-white hover:text-main border-main"
+                    }`}
                   >
-                    Toevoegen aan winkelwagen
+                    {productData.sizes && !niveau
+                      ? "Selecteer eerst een maat"
+                      : "Toevoegen aan winkelwagen"}
                   </button>
                 </Link>
               ) : (
