@@ -40,10 +40,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/verzending-en-retourneren" className="hover:underline">
-                  
-                    Verzending &amp; retourneren
-                  
+                <Link
+                  href="/verzending-en-retourneren"
+                  className="hover:underline"
+                >
+                  Verzending &amp; retourneren
                 </Link>
               </li>
             </ul>
@@ -54,7 +55,10 @@ function Footer() {
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
               <li>
-                <Link href="mailto:info@soloswim.be" className="hover:underline">
+                <Link
+                  href="mailto:info@soloswim.be"
+                  className="hover:underline"
+                >
                   info@soloswim.be
                 </Link>
               </li>
@@ -88,6 +92,41 @@ function Footer() {
             </ul>
           </div>
         </div>
+        <div className="w-full flex flex-col items-center mb-8">
+          <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
+            Onze partners
+          </h4>
+          <div className="flex flex-col gap-6 items-center sm:flex-row sm:justify-center sm:gap-10">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/partners/partner1.png"
+                alt="Partner 1"
+                style={{ height: 48, width: "auto", objectFit: "contain" }}
+              />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/partners/partner2.png"
+                alt="Partner 2"
+                style={{ height: 48, width: "auto", objectFit: "contain" }}
+              />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/partners/partner3.png"
+                alt="Partner 3"
+                style={{ height: 48, width: "auto", objectFit: "contain" }}
+              />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/partners/partner4.png"
+                alt="Partner 4"
+                style={{ height: 48, width: "auto", objectFit: "contain" }}
+              />
+            </a>
+          </div>
+        </div>
         <div className="text-center mx-5">
           <p className="text-xs text-navy-light1 italic">
             <i>
@@ -98,7 +137,12 @@ function Footer() {
         </div>
         <div className="text-center py-5 mx-5">
           <p className="text-tiny text-navy-light1">
-            © 2025 SoloSwim | <a href="https://www.swimcare.be" target="_blank">SwimCare</a> | <a href="mailto:info@solosim.be">info@soloswim.be</a> | BTW: BE0827906183
+            © 2025 SoloSwim |{" "}
+            <a href="https://www.swimcare.be" target="_blank">
+              SwimCare
+            </a>{" "}
+            | <a href="mailto:info@solosim.be">info@soloswim.be</a> | BTW:
+            BE0827906183
           </p>
         </div>
       </div>
