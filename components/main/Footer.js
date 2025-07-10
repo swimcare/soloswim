@@ -97,32 +97,39 @@ function Footer() {
             Onze partners
           </h4>
           <div className="flex flex-col gap-6 items-center sm:flex-row sm:justify-center sm:gap-10">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.swimcare.be" target="_blank" rel="noopener noreferrer">
               <img
-                src="/images/partners/partner1.png"
+                src="/images/partners/swimcare.png"
                 alt="Partner 1"
-                style={{ height: 48, width: "auto", objectFit: "contain" }}
+                style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://shop.swimcare.be/product-categorie/finis" target="_blank" rel="noopener noreferrer">
               <img
-                src="/images/partners/partner2.png"
+                src="/images/partners/finis.png"
                 alt="Partner 2"
-                style={{ height: 48, width: "auto", objectFit: "contain" }}
+                style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://shop.swimcare.be/product-categorie/trihard" target="_blank" rel="noopener noreferrer">
               <img
-                src="/images/partners/partner3.png"
+                src="/images/partners/trihard.png"
                 alt="Partner 3"
-                style={{ height: 48, width: "auto", objectFit: "contain" }}
+                style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://shop.swimcare.be/peaks" target="_blank" rel="noopener noreferrer">
               <img
-                src="/images/partners/partner4.png"
+                src="/images/partners/peaks.png"
                 alt="Partner 4"
-                style={{ height: 48, width: "auto", objectFit: "contain" }}
+                style={{ height: 65, width: "auto", objectFit: "contain" }}
+              />
+            </a>
+			<a href="https://shop.swimcare.be/product-categorie/etixx/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/partners/etixx.png"
+                alt="Partner 4"
+                style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
           </div>
