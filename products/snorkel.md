@@ -1,6 +1,6 @@
 ---
 number: 8
-product_id: "AG1"
+product_id: "SS1"
 title: "Stability snorkel"
 subtitle: "FINIS Stability Snorkel Speed"
 price: 44.40
@@ -23,6 +23,7 @@ color: "black"
 images: ["/images/zwemmateriaal/snorkel/snorkel.png"]
 tab1_image: "/images/zwemmateriaal/snorkel/snorkel.png"
 winkelwagen_images: ["/images/zwemmateriaal/snorkel/snorkel.png"]
+card_info: "Snorkel"
 ---
 
 De FINIS Stability Snorkel is een innovatieve snorkel die speciaal is ontworpen voor langdurig gebruik zonder ongemak. Door het verwijderen van de gebruikelijke hoofdband en de toevoeging van een zachte rustplaats, past deze snorkel zich aan de natuurlijke ronding van het voorhoofd aan voor een ongeëvenaard draagcomfort. Het slanke, lage weerstandontwerp maakt het eenvoudig om water uit de buis te verwijderen en biedt stabiliteit, zelfs bij hoge snelheden.

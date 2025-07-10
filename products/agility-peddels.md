@@ -16,10 +16,10 @@ features:
   ]
 sizes: ["XSmall", "Small", "Medium", "Large"]
 isAccessoire: true
-images: ["/images/zwemmateriaal/agility/xsmall.png"]
-tab1_image: "/images/zwemmateriaal/agility/xsmall.png"
-winkelwagen_images: ["/images/zwemmateriaal/agility/xsmall.png"]
-card_info: "Handig trainingshulpmiddel"
+images: ["/images/zwemmateriaal/agility/medium.png"]
+tab1_image: "/images/zwemmateriaal/agility/medium.png"
+winkelwagen_images: ["/images/zwemmateriaal/agility/medium.png"]
+card_info: "Handpeddels"
 hideFaq: true
 sizeVariants:
   XSmall:

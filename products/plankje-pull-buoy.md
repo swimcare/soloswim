@@ -1,6 +1,6 @@
 ---
 number: 11
-product_id: "AG1"
+product_id: "FPB1"
 title: "Foam pull buoy"
 subtitle: "FINIS Foam Pull Buoy"
 price: 24
@@ -21,7 +21,7 @@ hideFaq: true
 sizes: ["Junior", "Senior"]
 sizeVariants:
   Junior:
-    price: 24
+    price: 21.60
     images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     tab1_image: "/images/zwemmateriaal/plankje/pullbuoy.png"
@@ -35,6 +35,7 @@ color: "yellow"
 images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
 tab1_image: "/images/zwemmateriaal/plankje/pullbuoy.png"
 winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
+card_info: "Pull Buoy"
 ---
 
 De FINIS Foam Pull Buoy is speciaal ontworpen om zwemmers te helpen bij het versterken van hun bovenlichaam en het verbeteren van hun zwemtechniek. Door de benen te immobiliseren, dwingt de pull buoy de zwemmer om de armen, schouders en romp te gebruiken, wat essentieel is voor een krachtige slag. Het zachte EVA-schuim is comfortabel en irriteert de huid niet, zelfs niet tijdens langdurige trainingen.

@@ -1,6 +1,6 @@
 ---
 number: 10
-product_id: "AG1"
+product_id: "FK1"
 title: "Foam kickboard"
 subtitle: "FINIS Foam kickboard"
 price: 26.40
@@ -21,7 +21,7 @@ hideFaq: true
 sizes: ["Junior", "Senior"]
 sizeVariants:
   Junior:
-    price: 26.40
+    price: 24.00
     images: ["/images/zwemmateriaal/plankje/kickboard.png"]
     winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
     tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
@@ -35,6 +35,7 @@ color: "yellow"
 images: ["/images/zwemmateriaal/plankje/kickboard.png"]
 tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
 winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
+card_info: "Plankje"
 ---
 
 De FINIS Foam Kickboard is ontworpen om zwemmers te helpen hun beenslag te versterken door de armen te immobiliseren, zodat alle focus op de benen ligt. Het duurzame EVA-schuim is zacht en irriteert de huid niet, wat langdurig comfortabel gebruik mogelijk maakt. Verkrijgbaar in zowel Senior- als Junior-maten, waarbij de Junior-versie speciaal is ontworpen om de belasting op de schouders te verminderen, ideaal voor jongere en kleinere zwemmers.

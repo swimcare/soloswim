@@ -1,6 +1,6 @@
 ---
 number: 9
-product_id: "AG1"
+product_id: "MRG1"
 title: "Mach 1 Racing Goggle"
 subtitle: "FINIS Mach 1 Racing Goggle"
 price: 72
@@ -16,13 +16,14 @@ features:
   ]
 isCombi: true
 isAccessoire: true
-type: "Snorkel"
+type: "Zwembril"
 hideFaq: true
 editie: 1
 color: "blauw"
 images: ["/images/zwemmateriaal/zwembril/mach1.png"]
 tab1_image: "/images/zwemmateriaal/zwembril/mach1.png"
 winkelwagen_images: ["/images/zwemmateriaal/zwembril/mach1.png"]
+card_info: "Race zwembril"
 ---
 
 Ontworpen voor zowel mannelijke als vrouwelijke elitezwemmers, zijn de Mach 1 Racing Goggles voorzien van een ultralaag profiel dat de hydrodynamica optimaliseert om de weerstand in het water te minimaliseren. De gebogen, spiegelende lenzen bieden een panoramisch zicht en verminderen schittering, terwijl de anti-fog behandeling en volledige UVA/UVB-bescherming ervoor zorgen dat je altijd helder kunt zien. De geïntegreerde dubbele siliconenbanden verdelen de druk gelijkmatig en voorkomen lekken, wat zorgt voor optimaal comfort en stabiliteit.

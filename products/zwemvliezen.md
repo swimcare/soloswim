@@ -16,7 +16,7 @@ features:
   ]
 isCombi: true
 isAccessoire: true
-type: "Plankje"
+type: "Zwemvliezen"
 hideFaq: true
 editie: 1
 color: "yellow"
@@ -35,37 +35,37 @@ sizes:
   ]
 sizeVariants:
   "30-32":
-    price: 52.80
+    price: 38.40
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "33-34":
-    price: 52.80
+    price: 40.80
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "35-36":
-    price: 52.80
+    price: 43.20
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "36-37":
-    price: 52.80
+    price: 48.00
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "38-39":
-    price: 52.80
+    price: 48.00
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "40-41":
-    price: 52.80
+    price: 48.00
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "41-43":
-    price: 52.80
+    price: 48.00
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
@@ -87,6 +87,7 @@ sizeVariants:
 images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
 tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
 winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
+card_info: "Zoomers"
 ---
 
 De FINIS Z2 Gold Zoomers® Fins zijn de perfecte keuze voor zwemmers die hun kick-techniek en kracht willen optimaliseren. Met een kort blad bevorderen deze vinnen korte, snelle kicks, wat zorgt voor extra voortstuwing en snelheid. De Z2 Gold Zoomers® zijn ontworpen met techniekkanalen die de flexibiliteit van de vinnen beheersen en moeiteloze voortstuwing bieden, terwijl de unieke fluid separator op de bovenkant van de vin vermoeidheid op de down kick en de quadriceps vermindert.
