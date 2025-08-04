@@ -15,7 +15,7 @@ function verzendingEnRetourneren() {
               Verzending
             </h3>
             <p className="my-5">
-              Verzendkosten: <strong>3,95 euro</strong>.
+              Verzendkosten: <strong>5,99 euro</strong>.
             </p>
             <p className="my-5">
               Standaard levertijd (tenzij anders aangegeven): <strong>1-2 werkdagen</strong>.

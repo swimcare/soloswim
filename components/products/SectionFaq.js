@@ -243,7 +243,7 @@ function SectionFaq() {
                   panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
                 >
                   <p className="mb-3 text-tiny">
-                    Wij rekenen € 3,95 verzendkosten voor elke bestelling (ook
+                    Wij rekenen € 5,99 verzendkosten voor elke bestelling binnen België (ook
                     bij grotere bestellingen die als pakket verstuurd moeten
                     worden).
                   </p>

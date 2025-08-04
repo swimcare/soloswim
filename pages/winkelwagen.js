@@ -124,7 +124,7 @@ function winkelwagen() {
                     </p>
                   </div>
                   <p className="text-xs">
-                    *Verzendkosten binnen Nederland. Definitieve verzendkosten
+                    *Verzendkosten binnen België. Definitieve verzendkosten
                     worden berekend tijdens afrekenen in de volgende stap.
                   </p>
                 </div>
