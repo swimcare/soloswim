@@ -18,7 +18,7 @@ const stripePromise = loadStripe(
 function winkelwagen() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
-  const shipping = 3.95;
+  const shipping = 5.99;
 
   // Google analytics event
   const checkoutGA = () => {
