@@ -21,7 +21,7 @@ export default async (req, res) => {
       unit_amount: Math.round(item.price * 100),
       product_data: {
         description: item.description,
-        name: item.title,
+        name: item.title + " - " + item.type,
         images: [`${process.env.HOST}${item.images[0]}`], //deze komt nog niet helemaal goed door in stripe lijkt het, waarschijnlijk omdat het local is.
       },
       tax_behavior: "inclusive",
