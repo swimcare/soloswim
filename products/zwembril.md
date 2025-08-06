@@ -3,7 +3,7 @@ number: 9
 product_id: "MRG1"
 title: "Mach 1 Racing Goggle"
 subtitle: "FINIS Mach 1 Racing Goggle"
-price: 72
+price: 74.40
 description: "De Mach 1 Racing Goggles bieden een ongeëvenaarde visuele ervaring voor elitezwemmers. Met een ultralaag profiel en premium siliconen oogafdichtingen verminderen deze racebrillen de weerstand en zorgen ze voor een comfortabele, lekvrije pasvorm, zelfs tijdens explosieve starts en krachtige keerpunten."
 inStock: true
 features:

@@ -3,7 +3,7 @@ number: 8
 product_id: "SS1"
 title: "Stability snorkel"
 subtitle: "FINIS Stability Snorkel Speed"
-price: 44.40
+price: 54.00
 description: "De FINIS Stability Snorkel biedt ultiem comfort en stabiliteit voor zwemmers dankzij het bracketloze ontwerp en een zachte rustplaats op het voorhoofd. Ideaal voor lange trainingen, deze snorkel elimineert de noodzaak om het hoofd te draaien voor ademhaling, zodat je je volledig kunt richten op je techniek en lichaamshouding."
 inStock: true
 features:

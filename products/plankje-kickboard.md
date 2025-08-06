@@ -3,7 +3,7 @@ number: 10
 product_id: "FK1"
 title: "Foam kickboard"
 subtitle: "FINIS Foam kickboard"
-price: 26.40
+price: 28.80
 description: "Werk aan je beenspieren en kicking techniek met de FINIS Foam Kickboard. Beschikbaar in Sr. en Jr. maten, is dit kickboard gemaakt van zacht EVA-schuim dat duurzaam is en comfortabel aanvoelt, zonder irritatie aan de huid."
 inStock: true
 features:
@@ -21,12 +21,12 @@ hideFaq: true
 sizes: ["Junior", "Senior"]
 sizeVariants:
   Junior:
-    price: 24.00
+    price: 28.80
     images: ["/images/zwemmateriaal/plankje/kickboard.png"]
     winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
     tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
   Senior:
-    price: 26.40
+    price: 32.40
     images: ["/images/zwemmateriaal/plankje/kickboard.png"]
     winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
     tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"

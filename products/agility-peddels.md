@@ -3,7 +3,7 @@ number: 7
 product_id: "AG1"
 title: "Agility peddels"
 subtitle: "FINIS Agility Paddles"
-price: 28.80
+price: 30.00
 description: "De FINIS Agility Paddles geven je directe feedback op je slagtechniek en helpen je kracht en watergevoel te verbeteren. Het bandloze ontwerp past zich aan de natuurlijke vorm van je hand aan en stimuleert een juiste slagtechniek. Ideaal voor alle zwemniveaus, van beginners tot triatleten."
 inStock: true
 features:
@@ -23,22 +23,22 @@ card_info: "Handpeddels"
 hideFaq: true
 sizeVariants:
   XSmall:
-    price: 28.80
+    price: 30.00
     images: ["/images/zwemmateriaal/agility/xsmall.png"]
     winkelwagen_images: ["/images/zwemmateriaal/agility/xsmall.png"]
     tab1_image: "/images/zwemmateriaal/agility/xsmall.png"
   Small:
-    price: 28.80
+    price: 30.00
     images: ["/images/zwemmateriaal/agility/small.png"]
     winkelwagen_images: ["/images/zwemmateriaal/agility/small.png"]
     tab1_image: "/images/zwemmateriaal/agility/small.png"
   Medium:
-    price: 28.80
+    price: 30.00
     images: ["/images/zwemmateriaal/agility/medium.png"]
     winkelwagen_images: ["/images/zwemmateriaal/agility/medium.png"]
     tab1_image: "/images/zwemmateriaal/agility/medium.png"
   Large:
-    price: 28.80
+    price: 30.00
     images: ["/images/zwemmateriaal/agility/large.png"]
     winkelwagen_images: ["/images/zwemmateriaal/agility/large.png"]
     tab1_image: "/images/zwemmateriaal/agility/large.png"

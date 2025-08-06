@@ -3,7 +3,7 @@ number: 12
 product_id: "AG1"
 title: "Z2 gold zoomers"
 subtitle: "FINIS Z2 Gold Zoomers"
-price: 52.80
+price: 38.40
 description: "De FINIS Z2 Gold Zoomers® Fins stimuleren korte, snelle kicks en bieden optimale voortstuwing. Het comfortabele ontwerp van natuurlijk rubber zorgt voor een veilige pasvorm, terwijl de techniekgerichte eigenschappen zoals de flex box en fluid separator spierkracht en efficiëntie verhogen."
 inStock: true
 features:
@@ -50,32 +50,32 @@ sizeVariants:
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "36-37":
-    price: 48.00
+    price: 49.20
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "38-39":
-    price: 48.00
+    price: 49.20
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "40-41":
-    price: 48.00
+    price: 49.20
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "41-43":
-    price: 48.00
+    price: 51.60
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "44-45":
-    price: 52.80
+    price: 51.60
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "45-46":
-    price: 52.80
+    price: 54.00
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"

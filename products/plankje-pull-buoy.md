@@ -3,7 +3,7 @@ number: 11
 product_id: "FPB1"
 title: "Foam pull buoy"
 subtitle: "FINIS Foam Pull Buoy"
-price: 24
+price: 22.80
 description: "Werk aan je bovenlichaam en core met de FINIS Foam Pull Buoy. Deze pull buoy immobiliseert de benen, waardoor je focus volledig op de armen en schouders ligt en je techniek en heuprotatie verbetert. Verkrijgbaar in maten voor zowel volwassenen als kinderen."
 inStock: true
 features:
@@ -21,12 +21,12 @@ hideFaq: true
 sizes: ["Junior", "Senior"]
 sizeVariants:
   Junior:
-    price: 21.60
+    price: 22.80
     images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     tab1_image: "/images/zwemmateriaal/plankje/pullbuoy.png"
   Senior:
-    price: 24
+    price: 25.20
     images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     tab1_image: "/images/zwemmateriaal/plankje/pullbuoy.png"
