@@ -80,7 +80,7 @@ sizeVariants:
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "46-48":
-    price: 52.80
+    price: 54.00
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
