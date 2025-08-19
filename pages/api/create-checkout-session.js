@@ -14,6 +14,8 @@ export default async (req, res) => {
 
   const { items } = req.body;
 
+  console.log("Checkout: received items:", items);
+
   const transformedItems = items.map((item) => ({
     quantity: 1,
     price_data: {
@@ -28,8 +30,10 @@ export default async (req, res) => {
     },
   }));
 
+  console.log("Checkout: transformed items:", transformedItems);
+
   if (req.method === "POST") {
-    console.log("resquest method is post.");
+    console.log("Checkout: request method is POST");
     try {
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
@@ -38,7 +42,14 @@ export default async (req, res) => {
         },
         success_url: `${process.env.HOST}/bestelling-voltooid`,
         cancel_url: `${process.env.HOST}/bestelling-mislukt`,
-        payment_method_types: ["card", "bancontact", "paypal", "klarna", "link", "ideal"],
+        payment_method_types: [
+          "card",
+          "bancontact",
+          "paypal",
+          "klarna",
+          "link",
+          "ideal",
+        ],
         shipping_options: [
           {
             shipping_rate_data: {
@@ -99,13 +110,22 @@ export default async (req, res) => {
         },
       });
 
+      console.log("Checkout: session created successfully:", {
+        id: session.id,
+        order_number: id,
+        order_date: today,
+      });
+
       res.status(200).json({ id: session.id });
       //   res.redirect(303, session.url);
     } catch (err) {
-      console.error("Stripe checkout error:", err);
-      res.status(err.statusCode || 500).json({ error: err.message, type: err.type, code: err.code });
+      console.error("Checkout: Stripe checkout error:", err);
+      res
+        .status(err.statusCode || 500)
+        .json({ error: err.message, type: err.type, code: err.code });
     }
   } else {
+    console.log("Checkout: method not allowed:", req.method);
     res.setHeader("Allow", "POST");
     res.status(405).end("Method Not Allowed");
   }
