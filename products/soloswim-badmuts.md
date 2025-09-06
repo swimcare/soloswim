@@ -4,14 +4,14 @@ product_id: "BM1"
 title: "De SoloSwim badmuts"
 price: 9.99
 description: "Spread the word met de officiële SoloSwim badmuts! Gemaakt van sterk, flexibel en fijn siliconen materiaal wat zorgt voor een comfortabele pasvorm. Het dragen van een badmuts helpt lang haar uit het gezicht te houden, zo kun jij je beter focussen op het zwemmen."
-inStock: false
+inStock: true
 features:
   [
     "Het SoloSwim logo is aanwezig op allebei de zijkanten",
     "Gemaakt van sterk, flexibel en fijn silicone materiaal",
     "Geschikt voor zowel kort als lang haar",
   ]
-isAccessoire: false
+isAccessoire: true
 hideFaq: true
 images:
   [
