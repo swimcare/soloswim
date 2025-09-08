@@ -1,5 +1,5 @@
 ---
-number: 11
+number: 25
 product_id: "FPB1"
 title: "Foam pull buoy"
 subtitle: "FINIS Foam Pull Buoy"

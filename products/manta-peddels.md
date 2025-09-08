@@ -1,5 +1,5 @@
 ---
-number: 13
+number: 21
 product_id: "MA1"
 title: "Manta peddels"
 subtitle: "FINIS Manta Paddles"
@@ -19,7 +19,7 @@ isAccessoire: true
 images: ["/images/zwemmateriaal/peddels/manta.png"]
 tab1_image: "/images/zwemmateriaal/peddels/manta.png"
 winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
-card_info: "Handpeddels"
+card_info: "Kracht peddels"
 hideFaq: true
 sizeVariants:
   Small:

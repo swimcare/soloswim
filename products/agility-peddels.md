@@ -1,5 +1,5 @@
 ---
-number: 7
+number: 20
 product_id: "AG1"
 title: "Agility peddels"
 subtitle: "FINIS Agility Paddles"
@@ -19,7 +19,7 @@ isAccessoire: true
 images: ["/images/zwemmateriaal/agility/medium.png"]
 tab1_image: "/images/zwemmateriaal/agility/medium.png"
 winkelwagen_images: ["/images/zwemmateriaal/agility/medium.png"]
-card_info: "Handpeddels"
+card_info: "Techniek peddels"
 hideFaq: true
 sizeVariants:
   XSmall:

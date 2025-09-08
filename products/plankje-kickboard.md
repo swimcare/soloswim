@@ -1,5 +1,5 @@
 ---
-number: 10
+number: 24
 product_id: "FK1"
 title: "Foam kickboard"
 subtitle: "FINIS Foam kickboard"
