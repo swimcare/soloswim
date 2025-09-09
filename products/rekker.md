@@ -3,7 +3,7 @@ number: 29
 product_id: "PAS1"
 title: "Rekker"
 subtitle: "FINIS Pulling Ankle Strap"
-price: 38.40
+price: 13.20
 description: "De FINIS Pulling Ankle Strap elimineert kicking volledig, waardoor je de focus kunt leggen op bovenlichaamstraining en krachtopbouw. Combineer met de Foam Pull Buoy voor een nog intensievere workout en meer stabiliteit."
 inStock: true
 features:
@@ -23,7 +23,7 @@ color: "yellow"
 images: ["/images/zwemmateriaal/accessoires/ankle_strap.png"]
 tab1_image: "/images/zwemmateriaal/accessoires/ankle_strap.png"
 winkelwagen_images: ["/images/zwemmateriaal/accessoires/ankle_strap.png"]
-card_info: "Rekker"
+card_info: "Core stabiliteit & evenwicht"
 ---
 
 De FINIS Pulling Ankle Strap is ontworpen om zwemmers te helpen hun bovenlichaam te versterken door de benen te immobiliseren en het kicking-vermogen te elimineren. Door de enkels stevig bij elkaar te houden, zorgt deze rubberen strap ervoor dat de focus van de training volledig verschuift naar armen, schouders en core. Dit maakt het een ideaal hulpmiddel voor pulling sets en het verbeteren van je slagkracht en stabiliteit. Gemaakt van duurzaam rubber, biedt de strap een comfortabele en veilige pasvorm die vrijwel elke zwemmer past.
