@@ -16,9 +16,9 @@ features:
   ]
 isAccessoire: true
 isCombi: true
-images: ["/images/zwemmateriaal/plankje/alignment-kickboard.png"]
-tab1_image: "/images/zwemmateriaal/plankje/alignment-kickboard.png"
-winkelwagen_images: ["/images/zwemmateriaal/plankje/alignment-kickboard.png"]
+images: ["/images/zwemmateriaal/plankje/alignment_kickboard.png"]
+tab1_image: "/images/zwemmateriaal/plankje/alignment_kickboard.png"
+winkelwagen_images: ["/images/zwemmateriaal/plankje/alignment_kickboard.png"]
 card_info: "Plankje met riem"
 hideFaq: true
 ---
