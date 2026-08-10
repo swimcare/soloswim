@@ -1,6 +1,13 @@
 import { StarIcon } from "@heroicons/react/solid";
 import { useEffect, useRef, useState } from "react";
-import lodash from "lodash";
+
+function debounce(fn, wait) {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn(...args), wait);
+  };
+}
 
 function ReviewCard({ text, title, name }) {
   const [clamped, setClamped] = useState(true);
@@ -29,7 +36,7 @@ function ReviewCard({ text, title, name }) {
       }
     };
 
-    const debouncedCheck = lodash.debounce(checkButtonAvailability, 50);
+    const debouncedCheck = debounce(checkButtonAvailability, 50);
 
     checkButtonAvailability();
     window.addEventListener("resize", debouncedCheck);
