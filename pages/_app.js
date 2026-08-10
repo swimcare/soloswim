@@ -1,6 +1,6 @@
 import "tailwindcss/tailwind.css";
 import { Provider } from "react-redux";
-import { store } from "../app/store";
+import { store } from "../store/store";
 import Header from "../components/main/Header";
 import Footer from "../components/main/Footer";
 import "../styles/globals.css";
