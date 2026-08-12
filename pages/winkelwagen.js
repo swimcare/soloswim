@@ -1,19 +1,12 @@
 import { selectItems, selectTotal } from "../slices/basketSlice";
 import { useSelector } from "react-redux";
 import WinkelwagenItem from "../components/winkelwagen/WinkelwagenItem";
-import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Link from "next/link";
 import NumberFormat from "react-number-format";
 import * as ga from "../lib/ga/index";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
-
-// Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-);
 
 function winkelwagen() {
   const items = useSelector(selectItems);
@@ -33,20 +26,26 @@ function winkelwagen() {
 
   const createCheckoutSession = async () => {
     checkoutGA();
-    const stripe = await stripePromise;
 
-    // Call the backend to create a checkout session...
-    const checkoutSession = await axios.post("/api/create-checkout-session", {
-      items,
-    });
+    try {
+      // Backend creates the Stripe session using STRIPE_SECRET_KEY from runtime env
+      const checkoutSession = await axios.post("/api/create-checkout-session", {
+        items,
+      });
 
-    // Redirect user to stripe checkout
-    const result = await stripe.redirectToCheckout({
-      sessionId: checkoutSession.data.id,
-    });
+      if (!checkoutSession.data?.url) {
+        alert("Kon geen Stripe betaalsessie starten. Probeer opnieuw.");
+        return;
+      }
 
-    if (result.error) {
-      alert(result.error.message);
+      // Redirect to hosted Checkout; no client publishable key required
+      window.location.href = checkoutSession.data.url;
+    } catch (err) {
+      console.error("Checkout error:", err);
+      alert(
+        err?.response?.data?.error ||
+          "Er ging iets mis bij het starten van de betaling."
+      );
     }
   };
 

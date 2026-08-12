@@ -10,14 +10,12 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Public build-time values only. Secrets must come from runtime env / compose.
-ARG HOST=https://www.soloswim.be
+# Public build-time values only (inlined into the client bundle).
+# Stripe secrets (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, SENDGRID_*, MONGODB_URL)
+# must come from runtime env via docker-compose env_file / .env — never bake them here.
 ARG NEXT_PUBLIC_GOOGLE_ANALYTICS=
-ARG NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
 
-ENV HOST=$HOST
 ENV NEXT_PUBLIC_GOOGLE_ANALYTICS=$NEXT_PUBLIC_GOOGLE_ANALYTICS
-ENV NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 
 RUN npm run build
 
