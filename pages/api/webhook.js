@@ -55,35 +55,26 @@ function buildSessionData(session) {
   const subtotal = (session.amount_subtotal || 0) / 100;
   const total = (session.amount_total || 0) / 100;
 
+  // Newer Stripe API versions put shipping under collected_information
+  const shipping =
+    session.collected_information?.shipping_details ||
+    session.shipping_details ||
+    session.shipping ||
+    null;
+
   return {
     order_number: session.metadata.order_number,
     order_date: session.metadata.order_date,
     name:
-      session.shipping_details?.name ||
-      session.shipping?.name ||
+      shipping?.name ||
       session.customer_details?.name ||
       "Unknown",
     email: session.customer_details?.email || "unknown@email.com",
-    line1:
-      session.shipping_details?.address?.line1 ||
-      session.shipping?.address?.line1 ||
-      "No address",
-    line2:
-      session.shipping_details?.address?.line2 ||
-      session.shipping?.address?.line2 ||
-      null,
-    postal_code:
-      session.shipping_details?.address?.postal_code ||
-      session.shipping?.address?.postal_code ||
-      "No postal code",
-    city:
-      session.shipping_details?.address?.city ||
-      session.shipping?.address?.city ||
-      "No city",
-    country:
-      session.shipping_details?.address?.country ||
-      session.shipping?.address?.country ||
-      "No country",
+    line1: shipping?.address?.line1 || "No address",
+    line2: shipping?.address?.line2 || null,
+    postal_code: shipping?.address?.postal_code || "No postal code",
+    city: shipping?.address?.city || "No city",
+    country: shipping?.address?.country || "No country",
     products: JSON.parse(session.metadata.products),
     subtotal,
     total,
