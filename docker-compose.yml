@@ -1,0 +1,41 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: soloswim-mongo
+    restart: always
+    volumes:
+      - soloswim_mongo_data:/data/db
+    # Not published to the internet. Only reachable on the Docker network.
+    # Optional local admin access from the server itself:
+    # ports:
+    #   - "127.0.0.1:27017:27017"
+    networks:
+      - proxy
+
+  soloswim:
+    image: swimcare/soloswim:latest
+    container_name: soloswim
+    env_file: ".env"
+    restart: always
+    depends_on:
+      - mongo
+    expose:
+      - "3000"
+    ports:
+      - "2379:3000"
+    networks:
+      - proxy
+    environment:
+      # Prefer the local Docker Mongo service over Atlas
+      MONGODB_URL: mongodb://mongo:27017/soloswim
+      url: https://www.soloswim.be
+      VIRTUAL_HOST: soloswim.be,www.soloswim.be
+      LETSENCRYPT_HOST: soloswim.be,www.soloswim.be
+      LETSENCRYPT_EMAIL: kristof@soloswim.be
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  soloswim_mongo_data:
