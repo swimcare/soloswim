@@ -2,8 +2,7 @@ import { buffer } from "micro";
 import { createOrder } from "../../lib/createOrder";
 import { sendOrderConfirmationEmail } from "../../lib/sendOrderConfirmationEmail";
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
+const Stripe = require("stripe");
 
 const fulfillOrder = async (sessionData) => {
   console.log(
@@ -65,10 +64,7 @@ function buildSessionData(session) {
   return {
     order_number: session.metadata.order_number,
     order_date: session.metadata.order_date,
-    name:
-      shipping?.name ||
-      session.customer_details?.name ||
-      "Unknown",
+    name: shipping?.name || session.customer_details?.name || "Unknown",
     email: session.customer_details?.email || "unknown@email.com",
     line1: shipping?.address?.line1 || "No address",
     line2: shipping?.address?.line2 || null,
@@ -87,11 +83,24 @@ export default async (req, res) => {
     return res.status(405).json({ success: false, error: "Method not allowed" });
   }
 
-  if (!endpointSecret) {
-    console.error("Webhook: STRIPE_WEBHOOK_SECRET is not configured");
+  // Read at request time (runtime Docker .env), not at module load
+  const stripeSecretKey = process.env.STRIPE_SECRET_KEY?.trim();
+  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET?.trim();
+
+  if (!stripeSecretKey) {
+    console.error("Webhook: STRIPE_SECRET_KEY is not configured");
     return res.status(500).json({ error: "Webhook not configured" });
   }
 
+  if (!endpointSecret) {
+    console.error("Webhook: STRIPE_WEBHOOK_SECRET is not configured");
+    return res.status(500).json({
+      error: "Webhook not configured",
+      detail: "Missing STRIPE_WEBHOOK_SECRET in runtime environment",
+    });
+  }
+
+  const stripe = new Stripe(stripeSecretKey);
   const requestBuffer = await buffer(req);
   const payload = requestBuffer.toString();
   const sig = req.headers["stripe-signature"];
