@@ -11,6 +11,17 @@ const fulfillOrder = async (sessionData) => {
     sessionData.order_number
   );
 
+  const errors = [];
+
+  // Persist first so a mail failure does not block order storage.
+  try {
+    const order = await createOrder(sessionData);
+    console.log("Webhook: order stored successfully:", order?.order_number);
+  } catch (err) {
+    console.error("Webhook: database error occurred:", err.message);
+    errors.push(`database: ${err.message}`);
+  }
+
   try {
     const emailResult = await sendOrderConfirmationEmail(sessionData);
     console.log(
@@ -19,15 +30,11 @@ const fulfillOrder = async (sessionData) => {
     );
   } catch (err) {
     console.error("Webhook: email error occurred:", err.message);
-    throw err;
+    errors.push(`email: ${err.message}`);
   }
 
-  try {
-    const order = await createOrder(sessionData);
-    console.log("Webhook: order stored successfully:", order?.order_number);
-  } catch (err) {
-    console.error("Webhook: database error occurred:", err.message);
-    throw err;
+  if (errors.length) {
+    throw new Error(errors.join(" | "));
   }
 
   console.log(
@@ -35,6 +42,53 @@ const fulfillOrder = async (sessionData) => {
     sessionData.order_number
   );
 };
+
+function buildSessionData(session) {
+  if (!session?.metadata?.products) {
+    throw new Error("checkout session metadata.products is missing");
+  }
+
+  if (!session?.metadata?.order_number) {
+    throw new Error("checkout session metadata.order_number is missing");
+  }
+
+  const subtotal = (session.amount_subtotal || 0) / 100;
+  const total = (session.amount_total || 0) / 100;
+
+  return {
+    order_number: session.metadata.order_number,
+    order_date: session.metadata.order_date,
+    name:
+      session.shipping_details?.name ||
+      session.shipping?.name ||
+      session.customer_details?.name ||
+      "Unknown",
+    email: session.customer_details?.email || "unknown@email.com",
+    line1:
+      session.shipping_details?.address?.line1 ||
+      session.shipping?.address?.line1 ||
+      "No address",
+    line2:
+      session.shipping_details?.address?.line2 ||
+      session.shipping?.address?.line2 ||
+      null,
+    postal_code:
+      session.shipping_details?.address?.postal_code ||
+      session.shipping?.address?.postal_code ||
+      "No postal code",
+    city:
+      session.shipping_details?.address?.city ||
+      session.shipping?.address?.city ||
+      "No city",
+    country:
+      session.shipping_details?.address?.country ||
+      session.shipping?.address?.country ||
+      "No country",
+    products: JSON.parse(session.metadata.products),
+    subtotal,
+    total,
+  };
+}
 
 export default async (req, res) => {
   if (req.method !== "POST") {
@@ -62,45 +116,18 @@ export default async (req, res) => {
     });
   }
 
+  console.log("Webhook: received event:", event.type, event.id);
+
   if (event.type === "checkout.session.completed") {
     const session = event.data.object;
 
-    const subtotal = session.amount_subtotal / 100;
-    const total = session.amount_total / 100;
-
-    const sessionData = {
-      order_number: session.metadata.order_number,
-      order_date: session.metadata.order_date,
-      name:
-        session.shipping_details?.name ||
-        session.shipping?.name ||
-        session.customer_details?.name ||
-        "Unknown",
-      email: session.customer_details?.email || "unknown@email.com",
-      line1:
-        session.shipping_details?.address?.line1 ||
-        session.shipping?.address?.line1 ||
-        "No address",
-      line2:
-        session.shipping_details?.address?.line2 ||
-        session.shipping?.address?.line2 ||
-        null,
-      postal_code:
-        session.shipping_details?.address?.postal_code ||
-        session.shipping?.address?.postal_code ||
-        "No postal code",
-      city:
-        session.shipping_details?.address?.city ||
-        session.shipping?.address?.city ||
-        "No city",
-      country:
-        session.shipping_details?.address?.country ||
-        session.shipping?.address?.country ||
-        "No country",
-      products: JSON.parse(session.metadata.products),
-      subtotal,
-      total,
-    };
+    let sessionData;
+    try {
+      sessionData = buildSessionData(session);
+    } catch (err) {
+      console.error("Webhook: invalid session payload:", err.message);
+      return res.status(400).send(`Webhook Error: ${err.message}`);
+    }
 
     try {
       await fulfillOrder(sessionData);
