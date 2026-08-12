@@ -31,10 +31,17 @@ export const basketSlice = createSlice({
       }
       state.items = newBasket;
     },
+    hydrateBasket: (state, action) => {
+      state.items = Array.isArray(action.payload) ? action.payload : [];
+    },
+    clearBasket: (state) => {
+      state.items = [];
+    },
   },
 });
 
-export const { addToBasket, removeFromBasket } = basketSlice.actions;
+export const { addToBasket, removeFromBasket, hydrateBasket, clearBasket } =
+  basketSlice.actions;
 
 // Selectors - This is how we pull information from the Global store slice
 export const selectItems = (state) => state.basket.items;

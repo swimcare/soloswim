@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { store } from "../store/store";
 import Header from "../components/main/Header";
 import Footer from "../components/main/Footer";
+import BasketPersistence from "../components/BasketPersistence";
 import "../styles/globals.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -31,6 +32,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
+      <BasketPersistence />
       <Head>
         <script
           dangerouslySetInnerHTML={{

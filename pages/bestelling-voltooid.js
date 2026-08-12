@@ -1,10 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import { Fragment } from "react";
-
+import { Fragment, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { clearBasket } from "../slices/basketSlice";
 
 function bestellingVoltooid() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Clear cart after a successful Stripe redirect
+    dispatch(clearBasket());
+  }, [dispatch]);
+
   return (
     <Fragment>
       <NextSeo noindex={true} />
@@ -19,8 +27,9 @@ function bestellingVoltooid() {
                 alt="confetti"
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
             </div>
             <h1 className="my-5 sm:my-10 font-lexend text-main text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
               Bedankt voor je bestelling!
@@ -34,14 +43,12 @@ function bestellingVoltooid() {
 
             <div className="my-5 sm:my-10">
               <Link href="/">
-
                 <button
                   role="button"
                   className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"
                 >
                   Terug naar home
                 </button>
-
               </Link>
             </div>
           </div>
