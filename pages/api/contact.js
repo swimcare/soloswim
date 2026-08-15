@@ -53,10 +53,14 @@ Message: ${body.message || ""}
     };
     console.error("Contact email error:", details);
 
-    // Mailgun "Unauthorized" almost always means wrong API key or wrong API URL (EU vs US)
+    const isUnauthorized =
+      /unauthorized/i.test(error?.message || "") || error?.status === 401;
+
     return res.status(500).json({
       status: "NOT OK",
-      error: error?.message || "Mailgun error",
+      error: isUnauthorized
+        ? "Mailgun Unauthorized — check MAILGUN_API_KEY and MAILGUN_API_URL on the server"
+        : error?.message || "Mailgun error",
     });
   }
 }
