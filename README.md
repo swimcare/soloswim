@@ -67,15 +67,88 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `NEXT_PUBLIC_GOOGLE_ANALYTICS` | Optioneel; bij image-build als build-arg meegeven |
 | `INTERNAL_API_SECRET` | Optioneel; beschermt handmatige POST naar interne order/mail API’s |
 
-### Mailgun templatevariabelen
+### Mailgun orderbevestiging
 
-Orderbevestiging (`MAILGUN_ORDER_TEMPLATE`) krijgt o.a.:
+- Templatenaam: `MAILGUN_ORDER_TEMPLATE` (exact zoals in Mailgun)
+- BCC naar SoloSwim: via `MAILGUN_ORDER_BCC` (standaard `kristof@soloswim.be`) — **niet** in de template zetten, dat doet de API al
 
-- `{{name}}`, `{{voornaam}}`, `{{familienaam}}`
-- `{{order_number}}`, `{{order_date}}`
-- `{{line1}}`, `{{line2}}`, `{{postal_code}}`, `{{city}}`, `{{country}}`
-- `{{subtotal}}`, `{{shipping}}`, `{{total}}`
-- `{{#each products}}` → `{{id}}`, `{{name}}`, `{{price}}`, `{{type}}`, `{{editie}}`
+#### Templatevariabelen (Handlebars)
+
+**Klant**
+
+| Parameter | Voorbeeld | Tip |
+|---|---|---|
+| `{{voornaam}}` | Kristof | Aanhef: `Beste {{voornaam}},` |
+| `{{familienaam}}` | Ryheul | Optioneel |
+| `{{name}}` | Kristof Ryheul | Volledige naam |
+
+**Order**
+
+| Parameter | Voorbeeld |
+|---|---|
+| `{{order_number}}` | 6483-949220-4478 |
+| `{{order_date}}` | 15/08/2026 |
+| `{{subject}}` | Bedankt voor je bestelling Kristof Ryheul |
+
+**Bedragen** (string met 2 decimalen; euroteken zelf in de template zetten)
+
+| Parameter | Voorbeeld |
+|---|---|
+| `{{subtotal}}` | 17.99 |
+| `{{shipping}}` | 5.99 |
+| `{{total}}` | 23.98 |
+
+**Verzendadres**
+
+| Parameter | Voorbeeld |
+|---|---|
+| `{{line1}}` | Watersnipstraat 29 |
+| `{{line2}}` | (vaak leeg) |
+| `{{postal_code}}` | 8020 |
+| `{{city}}` | Oostkamp |
+| `{{country}}` | BE |
+
+**Producten**
+
+```handlebars
+{{#each products}}
+• {{name}}{{#if type}} – {{type}}{{/if}}{{#if editie}} (editie {{editie}}){{/if}} — €{{price}}
+{{/each}}
+```
+
+Per product: `{{id}}`, `{{name}}`, `{{price}}`, `{{type}}`, `{{editie}}`
+
+#### Voorbeeldtemplate
+
+```handlebars
+Beste {{voornaam}},
+
+Bedankt voor je bestelling bij SoloSwim.
+
+Ordernummer: {{order_number}}
+Datum: {{order_date}}
+
+Je bestelling:
+{{#each products}}
+• {{name}}{{#if type}} – {{type}}{{/if}} — €{{price}}
+{{/each}}
+
+Subtotaal: €{{subtotal}}
+Verzending: €{{shipping}}
+Totaal: €{{total}}
+
+Verzenden naar:
+{{name}}
+{{line1}}
+{{#if line2}}{{line2}}
+{{/if}}{{postal_code}} {{city}}
+{{country}}
+
+We verwerken je bestelling zo snel mogelijk.
+Vragen? Mail ons via info@soloswim.be.
+
+Team SoloSwim
+```
 
 ---
 
