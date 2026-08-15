@@ -14,6 +14,13 @@ async function handler(req, res) {
     const body =
       typeof req.body === "string" ? JSON.parse(req.body) : req.body || {};
 
+    if (!body.name || !body.email || !body.onderwerp || !body.message) {
+      return res.status(400).json({
+        status: "NOT OK",
+        error: "Missing required fields",
+      });
+    }
+
     const message = `
 Naam: ${body.name || ""}
 Email: ${body.email || ""}
@@ -38,10 +45,19 @@ Message: ${body.message || ""}
 
     return res.status(200).json({ status: "OK" });
   } catch (error) {
-    console.error("Contact email error:", error?.message || error);
-    return res
-      .status(500)
-      .json({ status: "NOT OK", error: error.message || "Mailgun error" });
+    const details = {
+      message: error?.message,
+      status: error?.status,
+      details: error?.details,
+      type: error?.type,
+    };
+    console.error("Contact email error:", details);
+
+    // Mailgun "Unauthorized" almost always means wrong API key or wrong API URL (EU vs US)
+    return res.status(500).json({
+      status: "NOT OK",
+      error: error?.message || "Mailgun error",
+    });
   }
 }
 

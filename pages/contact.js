@@ -41,12 +41,15 @@ function contact() {
     };
     contactGA(data);
     fetch("/api/contact", {
-      method: "post",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     })
       .then((res) => {
         clearForm();
-        if (res.status == "200") {
+        if (res.status === 200) {
           router.push("/bericht-verzonden");
         } else {
           console.log(res);
