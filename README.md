@@ -49,9 +49,10 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `STRIPE_SECRET_KEY` | Server-side Stripe key |
 | `STRIPE_WEBHOOK_SECRET` | Signing secret van endpoint `/api/webhook` |
 | `MAILGUN_API_KEY` | Mailgun API key |
-| `MAILGUN_DOMAIN` | Verified domain, bv. `soloswim.be` |
+| `MAILGUN_DOMAIN` | Verified Mailgun domain, bv. `mg.swimcare.be` |
 | `MAILGUN_API_URL` | EU: `https://api.eu.mailgun.net` |
-| `MAILGUN_ORDER_TEMPLATE` | Exacte templatenaam in Mailgun |
+| `MAILGUN_FROM` | Afzender, bv. `SoloSwim <postmaster@mg.swimcare.be>` |
+| `MAILGUN_ORDER_TEMPLATE` | Exacte templatenaam, bv. `soloswim bedankt voor je bestelling` |
 | `MAILGUN_ORDER_BCC` | Kopie ordermail (SoloSwim) |
 | `MAILGUN_CONTACT_TO` | Ontvanger contactformulier |
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
