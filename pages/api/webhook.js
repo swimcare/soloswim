@@ -4,43 +4,40 @@ import { sendOrderConfirmationEmail } from "../../lib/sendOrderConfirmationEmail
 
 const Stripe = require("stripe");
 
-const fulfillOrder = async (sessionData) => {
+/**
+ * Persist the order (required for Stripe retry safety), then send email
+ * without blocking the webhook HTTP response.
+ */
+async function persistOrder(sessionData) {
   console.log(
-    "Webhook: fulfillOrder started for order:",
+    "Webhook: persistOrder started for order:",
     sessionData.order_number
   );
 
-  const errors = [];
+  const order = await createOrder(sessionData);
+  console.log("Webhook: order stored successfully:", order?.order_number);
+  return order;
+}
 
-  // Persist first so a mail failure does not block order storage.
-  try {
-    const order = await createOrder(sessionData);
-    console.log("Webhook: order stored successfully:", order?.order_number);
-  } catch (err) {
-    console.error("Webhook: database error occurred:", err.message);
-    errors.push(`database: ${err.message}`);
-  }
-
-  try {
-    const emailResult = await sendOrderConfirmationEmail(sessionData);
-    console.log(
-      "Webhook: email sent successfully, status:",
-      emailResult.statusCode
-    );
-  } catch (err) {
-    console.error("Webhook: email error occurred:", err.message);
-    errors.push(`email: ${err.message}`);
-  }
-
-  if (errors.length) {
-    throw new Error(errors.join(" | "));
-  }
-
-  console.log(
-    "Webhook: fulfillOrder completed for order:",
-    sessionData.order_number
-  );
-};
+function sendConfirmationEmailInBackground(sessionData) {
+  // Fire-and-forget: Stripe only waits ~20s; Mailgun must not block the response.
+  sendOrderConfirmationEmail(sessionData)
+    .then((emailResult) => {
+      console.log(
+        "Webhook: email sent successfully, status:",
+        emailResult.statusCode,
+        "order:",
+        sessionData.order_number
+      );
+    })
+    .catch((err) => {
+      console.error(
+        "Webhook: email error occurred for order",
+        sessionData.order_number,
+        err.message
+      );
+    });
+}
 
 function buildSessionData(session) {
   if (!session?.metadata?.products) {
@@ -130,10 +127,13 @@ export default async (req, res) => {
     }
 
     try {
-      await fulfillOrder(sessionData);
-      return res.status(200).end("success");
+      // Only block on Mongo so Stripe gets a fast 200 and retries if DB fails.
+      await persistOrder(sessionData);
+      res.status(200).end("success");
+      sendConfirmationEmailInBackground(sessionData);
+      return;
     } catch (err) {
-      console.error("Webhook: order fulfillment failed:", err.message);
+      console.error("Webhook: order persistence failed:", err.message);
       // Return 500 so Stripe retries the webhook
       return res.status(500).send(`Webhook Error: ${err.message}`);
     }

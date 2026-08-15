@@ -309,8 +309,9 @@ Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **im
 | Symptoom | Check |
 |---|---|
 | `Webhook not configured` | `STRIPE_WEBHOOK_SECRET` in container: `docker exec soloswim printenv STRIPE_WEBHOOK_SECRET` |
+| Stripe webhook **timeout** | Webhook antwoordt na Mongo-save; mail gaat async. Check of Mongo snel reageert (`docker compose logs mongo`) en Mailgun-logs op de app |
 | Checkout start niet | `STRIPE_SECRET_KEY` + `HOST` in `.env`; app-logs |
-| Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` |
+| Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` / `Webhook: email` |
 | Order niet in DB | Mongo draait? `docker compose ps`; webhook-logs op `order stored` |
 | Winkelwagen leeg na refresh | Cart zit in `localStorage` (`soloswim-basket`); na succesvolle betaling wordt die geleegd |
 
