@@ -11,8 +11,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Public build-time values only (inlined into the client bundle).
-# Stripe secrets (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, SENDGRID_*, MONGODB_URL)
-# must come from runtime env via docker-compose env_file / .env — never bake them here.
+# Runtime secrets (STRIPE_*, MAILGUN_*, MONGODB_URL, …) must come from
+# docker-compose env_file / .env — never bake them into the image.
 ARG NEXT_PUBLIC_GOOGLE_ANALYTICS=
 
 ENV NEXT_PUBLIC_GOOGLE_ANALYTICS=$NEXT_PUBLIC_GOOGLE_ANALYTICS

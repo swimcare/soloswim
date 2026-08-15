@@ -15,7 +15,7 @@ services:
   soloswim:
     image: swimcare/soloswim:latest
     container_name: soloswim
-    # Runtime secrets/config: HOST, STRIPE_*, SENDGRID_*, etc.
+    # Runtime secrets/config: HOST, STRIPE_*, MAILGUN_*, etc.
     env_file: ".env"
     restart: always
     depends_on:
