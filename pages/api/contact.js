@@ -1,39 +1,48 @@
-const mail = require("@sendgrid/mail");
-
-mail.setApiKey(process.env.SENDGRID_CONTACT_API_KEY);
+import {
+  getMailgunClient,
+  getMailgunDomain,
+  getMailgunFrom,
+} from "../../lib/mailgunClient";
 
 async function handler(req, res) {
-  const body = JSON.parse(req.body);
+  if (req.method !== "POST") {
+    res.setHeader("Allow", ["POST"]);
+    return res.status(405).json({ status: "NOT OK", error: "Method not allowed" });
+  }
 
-  const message = `
-    Naam: ${body.name}\r\n
-    Email: ${body.email}\r\n
-    Tel: ${body.tel}\r\n
-    Onderwerp: ${body.onderwerp}\r\n
-    Message: ${body.message}
-  `;
+  try {
+    const body =
+      typeof req.body === "string" ? JSON.parse(req.body) : req.body || {};
 
-  const data = {
-    to: "kristof@soloswim.be",
-    from: "kristof@soloswim.be",
-    subject: `${body.onderwerp}`,
-    text: message,
-    html: message.replace(/\r\n/g, "<br />"),
-  };
+    const message = `
+Naam: ${body.name || ""}
+Email: ${body.email || ""}
+Tel: ${body.tel || ""}
+Onderwerp: ${body.onderwerp || ""}
+Message: ${body.message || ""}
+    `.trim();
 
-  mail
-    .send(data)
-    .then((response) => {
-      if (response[0].statusCode == "202") {
-        res.status(200).json({ status: "OK" });
-      } else {
-        res.status(response[0].statusCode).json({ status: "NOT OK" });
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      res.status(500).json({ status: "NOT OK", error: error.message });
+    const mg = getMailgunClient();
+    const domain = getMailgunDomain();
+    const to =
+      process.env.MAILGUN_CONTACT_TO?.trim() || "kristof@soloswim.be";
+
+    await mg.messages.create(domain, {
+      from: getMailgunFrom(),
+      to: [to],
+      "h:Reply-To": body.email || to,
+      subject: body.onderwerp || "Contactformulier SoloSwim",
+      text: message,
+      html: message.replace(/\n/g, "<br />"),
     });
+
+    return res.status(200).json({ status: "OK" });
+  } catch (error) {
+    console.error("Contact email error:", error?.message || error);
+    return res
+      .status(500)
+      .json({ status: "NOT OK", error: error.message || "Mailgun error" });
+  }
 }
 
 export default handler;

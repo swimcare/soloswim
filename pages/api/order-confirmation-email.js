@@ -23,12 +23,12 @@ async function handler(req, res) {
   try {
     const result = await sendOrderConfirmationEmail(req.body.sessionData);
 
-    if (result.statusCode === 202) {
-      return res.status(200).json({ message: "ok" });
+    if (result.statusCode >= 200 && result.statusCode < 300) {
+      return res.status(200).json({ message: "ok", id: result.id });
     }
 
     return res
-      .status(result.statusCode)
+      .status(result.statusCode || 500)
       .json({ message: "error", statusCode: result.statusCode });
   } catch (error) {
     console.error("Email API error:", error.message);
