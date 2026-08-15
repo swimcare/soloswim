@@ -41,6 +41,14 @@ Gebruik dan de `whsec_...` die de Stripe CLI toont als `STRIPE_WEBHOOK_SECRET`.
 
 Secrets horen **alleen** in `.env` op de server (of lokaal). Nooit in de Dockerfile bakken.
 
+Waarden **zonder spaties** mogen zonder quotes (`HOST=https://www.soloswim.be`).  
+Waarden **met spaties of `< >`** wél tussen dubbele quotes zetten, anders knipt Docker/Compose ze af:
+
+```bash
+MAILGUN_FROM="SoloSwim <postmaster@mg.swimcare.be>"
+MAILGUN_ORDER_TEMPLATE="soloswim bedankt voor je bestelling"
+```
+
 Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 
 | Variabele | Waarvoor |
