@@ -9,6 +9,12 @@ services:
     # Optional local admin access from the server itself:
     # ports:
     #   - "127.0.0.1:27017:27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
     networks:
       - proxy
 
@@ -19,7 +25,8 @@ services:
     env_file: ".env"
     restart: always
     depends_on:
-      - mongo
+      mongo:
+        condition: service_healthy
     expose:
       - "3000"
     ports:

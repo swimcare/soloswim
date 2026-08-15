@@ -312,7 +312,8 @@ Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **im
 | Stripe webhook **timeout** | Webhook antwoordt na Mongo-save; mail gaat async. Check of Mongo snel reageert (`docker compose logs mongo`) en Mailgun-logs op de app |
 | Checkout start niet | `STRIPE_SECRET_KEY` + `HOST` in `.env`; app-logs |
 | Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` / `Webhook: email` |
-| Contactformulier fout / Mailgun `Unauthorized` | Check `MAILGUN_API_KEY` (private key) en `MAILGUN_API_URL` (`https://api.eu.mailgun.net` voor EU). Controleren: `docker exec soloswim printenv MAILGUN_API_URL` |
+| Contactformulier fout / Mailgun `Unauthorized` / `401 Forbidden` | Verkeerde of lege private API key, of verkeerde regio-URL. Zie hieronder “Mailgun 401”. |
+| `getaddrinfo EAI_AGAIN mongo` / order persistence failed | App kan hostname `mongo` niet resolven. Zie hieronder “Mongo DNS”. |
 | Order niet in DB | Mongo draait? `docker compose ps`; webhook-logs op `order stored` |
 | Winkelwagen leeg na refresh | Cart zit in `localStorage` (`soloswim-basket`); na succesvolle betaling wordt die geleegd |
 
@@ -323,3 +324,42 @@ docker exec soloswim printenv HOST
 docker exec soloswim printenv MAILGUN_DOMAIN
 docker exec soloswim printenv MONGODB_URL
 ```
+
+### Mailgun 401 (`Unauthorized` / `Forbidden`)
+
+Dit is **geen** frontendfout. Mailgun weigert de API-key.
+
+```bash
+# In ~/docker/soloswim — check of vars in de container zitten (key niet plakken in chats)
+docker exec soloswim printenv MAILGUN_API_URL
+docker exec soloswim printenv MAILGUN_DOMAIN
+docker exec soloswim sh -c 'echo "key length: ${#MAILGUN_API_KEY}"'
+
+# Snelle auth-test vanuit de container (vervang KEY niet in chat-output)
+docker exec soloswim sh -c 'curl -sS -u "api:${MAILGUN_API_KEY}" \
+  "${MAILGUN_API_URL}/v3/domains/${MAILGUN_DOMAIN}" | head -c 400; echo'
+```
+
+- `key length: 0` → `MAILGUN_API_KEY` ontbreekt in `.env` of container niet herstart na edit  
+- JSON met `"message": "Unauthorized"` / Forbidden → verkeerde key of verkeerde `MAILGUN_API_URL` (EU vs US)  
+- Geldige domain-JSON → key OK; daarna contactformulier opnieuw proberen  
+
+Private key ophalen in Mailgun → Settings → API Keys. Voor `mg.swimcare.be` (EU): `MAILGUN_API_URL=https://api.eu.mailgun.net`. Na `.env` wijzigen: `docker compose up -d --force-recreate soloswim`.
+
+### Mongo DNS (`getaddrinfo EAI_AGAIN mongo`)
+
+```bash
+cd ~/docker/soloswim
+docker compose ps
+docker exec soloswim getent hosts mongo || docker exec soloswim nslookup mongo
+docker exec soloswim-mongo mongosh --quiet --eval "db.adminCommand('ping')"
+```
+
+Als `mongo` niet resolved of `soloswim-mongo` niet `Up` is:
+
+```bash
+docker compose up -d
+docker compose ps
+```
+
+Beide services moeten op hetzelfde netwerk staan (`proxy`) en `MONGODB_URL` moet `mongodb://mongo:27017/soloswim` zijn.
