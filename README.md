@@ -62,8 +62,8 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILGUN_FROM` | Afzender, bv. `SoloSwim <postmaster@mg.swimcare.be>` (moet op Mailgun-domein blijven i.v.m. SPF) |
 | `MAILGUN_REPLY_TO` | Antwoordadres voor klantmails, bv. `info@soloswim.be` |
 | `MAILGUN_ORDER_TEMPLATE` | Exacte templatenaam, bv. `soloswim bedankt voor je bestelling` |
-| `MAILGUN_ORDER_BCC` | Kopie ordermail; bij voorkeur `@swimcare.be` (zie M365-blokkade hieronder) |
-| `MAILGUN_CONTACT_TO` | Ontvanger(s) contactformulier; bij voorkeur `@swimcare.be` |
+| `MAILGUN_ORDER_BCC` | Kopie ordermail (SoloSwim), bv. `kristof@soloswim.be` |
+| `MAILGUN_CONTACT_TO` | Ontvanger(s) contactformulier (komma-gescheiden), bv. `info@soloswim.be,kristof@soloswim.be` |
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
 | `NEXT_PUBLIC_GOOGLE_ANALYTICS` | Optioneel; bij image-build als build-arg meegeven |
 | `INTERNAL_API_SECRET` | Optioneel; beschermt handmatige POST naar interne order/mail API’s |
@@ -313,7 +313,7 @@ Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **im
 | Stripe webhook **timeout** | Webhook antwoordt na Mongo-save; mail gaat async. Check of Mongo snel reageert (`docker compose logs mongo`) en Mailgun-logs op de app |
 | Checkout start niet | `STRIPE_SECRET_KEY` + `HOST` in `.env`; app-logs |
 | Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` / `Webhook: email` |
-| Contactformulier “verzonden” maar geen mail | Check `MAILGUN_CONTACT_TO`. Logs: `Contact notify accepted`. Mailgun → Sending → Logs: `delivered` vs `failed`. Bij `550 5.7.511 banned sender` → Microsoft blokkeert Mailgun-IP naar `soloswim.be`; gebruik `@swimcare.be` of delist via Microsoft. |
+| Contactformulier “verzonden” maar geen mail | Check `MAILGUN_CONTACT_TO` + Mailgun Logs (`delivered` vs `failed`). Bij `550 5.7.511 banned sender` → Microsoft blokkeert het Mailgun-IP; zie “M365 banned sender” hieronder. |
 | `getaddrinfo EAI_AGAIN mongo` / order persistence failed | App kan hostname `mongo` niet resolven. Zie hieronder “Mongo DNS”. |
 | Order niet in DB | Mongo draait? `docker compose ps`; webhook-logs op `order stored` |
 | Winkelwagen leeg na refresh | Cart zit in `localStorage` (`soloswim-basket`); na succesvolle betaling wordt die geleegd |
