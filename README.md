@@ -62,7 +62,7 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILGUN_FROM` | Afzender, bv. `SoloSwim <postmaster@mg.swimcare.be>` |
 | `MAILGUN_ORDER_TEMPLATE` | Exacte templatenaam, bv. `soloswim bedankt voor je bestelling` |
 | `MAILGUN_ORDER_BCC` | Kopie ordermail (SoloSwim) |
-| `MAILGUN_CONTACT_TO` | Ontvanger contactformulier |
+| `MAILGUN_CONTACT_TO` | Ontvanger(s) contactformulier (komma-gescheiden), bv. `info@soloswim.be,kristof@soloswim.be` |
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
 | `NEXT_PUBLIC_GOOGLE_ANALYTICS` | Optioneel; bij image-build als build-arg meegeven |
 | `INTERNAL_API_SECRET` | Optioneel; beschermt handmatige POST naar interne order/mail API’s |

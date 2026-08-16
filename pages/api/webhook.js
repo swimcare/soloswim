@@ -58,10 +58,16 @@ function buildSessionData(session) {
     session.shipping ||
     null;
 
+  // Prefer customer/billing name for greeting (usually "Voornaam Familienaam").
+  // Shipping name is still used as fallback and for the address block.
+  const customerName = session.customer_details?.name || "";
+  const shippingName = shipping?.name || "";
+  const displayName = customerName || shippingName || "Unknown";
+
   return {
     order_number: session.metadata.order_number,
     order_date: session.metadata.order_date,
-    name: shipping?.name || session.customer_details?.name || "Unknown",
+    name: displayName,
     email: session.customer_details?.email || "unknown@email.com",
     line1: shipping?.address?.line1 || "No address",
     line2: shipping?.address?.line2 || null,

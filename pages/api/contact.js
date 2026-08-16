@@ -4,6 +4,23 @@ import {
   getMailgunFrom,
 } from "../../lib/mailgunClient";
 
+function envList(name, fallback) {
+  const raw = process.env[name]?.trim().replace(/^["']|["']$/g, "");
+  const value = raw || fallback;
+  return value
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", ["POST"]);
@@ -21,27 +38,90 @@ async function handler(req, res) {
       });
     }
 
-    const message = `
-Naam: ${body.name || ""}
-Email: ${body.email || ""}
-Tel: ${body.tel || ""}
-Onderwerp: ${body.onderwerp || ""}
-Message: ${body.message || ""}
+    const name = String(body.name).trim();
+    const email = String(body.email).trim();
+    const tel = String(body.tel || "").trim();
+    const onderwerp = String(body.onderwerp).trim();
+    const userMessage = String(body.message).trim();
+
+    const internalText = `
+Naam: ${name}
+Email: ${email}
+Tel: ${tel}
+Onderwerp: ${onderwerp}
+Message: ${userMessage}
+    `.trim();
+
+    const confirmationText = `
+Beste ${name},
+
+Bedankt voor je bericht via het contactformulier van SoloSwim.
+
+We hebben het goed ontvangen en nemen zo snel mogelijk contact met je op.
+
+Samenvatting:
+Onderwerp: ${onderwerp}
+Bericht:
+${userMessage}
+
+Met sportieve groet,
+SoloSwim
+info@soloswim.be
+    `.trim();
+
+    const confirmationHtml = `
+<p>Beste ${escapeHtml(name)},</p>
+<p>Bedankt voor je bericht via het contactformulier van SoloSwim.</p>
+<p>We hebben het goed ontvangen en nemen zo snel mogelijk contact met je op.</p>
+<p><strong>Samenvatting</strong><br/>
+Onderwerp: ${escapeHtml(onderwerp)}<br/>
+Bericht:<br/>
+${escapeHtml(userMessage).replace(/\n/g, "<br />")}
+</p>
+<p>Met sportieve groet,<br/>SoloSwim<br/>
+<a href="mailto:info@soloswim.be">info@soloswim.be</a></p>
     `.trim();
 
     const mg = getMailgunClient();
     const domain = getMailgunDomain();
-    const to =
-      process.env.MAILGUN_CONTACT_TO?.trim() || "kristof@soloswim.be";
+    const from = getMailgunFrom();
+    const internalTo = envList("MAILGUN_CONTACT_TO", "info@soloswim.be");
 
-    await mg.messages.create(domain, {
-      from: getMailgunFrom(),
-      to: [to],
-      "h:Reply-To": body.email || to,
-      subject: body.onderwerp || "Contactformulier SoloSwim",
-      text: message,
-      html: message.replace(/\n/g, "<br />"),
+    const internal = await mg.messages.create(domain, {
+      from,
+      to: internalTo,
+      "h:Reply-To": email,
+      subject: `[Contact] ${onderwerp}`,
+      text: internalText,
+      html: internalText.replace(/\n/g, "<br />"),
     });
+
+    console.log("Contact notify accepted:", {
+      id: internal?.id,
+      to: internalTo,
+    });
+
+    try {
+      const confirmation = await mg.messages.create(domain, {
+        from,
+        to: [`${name} <${email}>`],
+        subject: "We hebben je bericht ontvangen — SoloSwim",
+        text: confirmationText,
+        html: confirmationHtml,
+      });
+
+      console.log("Contact confirmation accepted:", {
+        id: confirmation?.id,
+        to: email,
+      });
+    } catch (confirmError) {
+      // SoloSwim already received the message; don't fail the form for the auto-reply.
+      console.error("Contact confirmation failed:", {
+        message: confirmError?.message,
+        status: confirmError?.status,
+        details: confirmError?.details,
+      });
+    }
 
     return res.status(200).json({ status: "OK" });
   } catch (error) {
