@@ -59,7 +59,8 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILGUN_API_KEY` | Mailgun API key |
 | `MAILGUN_DOMAIN` | Verified Mailgun domain, bv. `mg.swimcare.be` |
 | `MAILGUN_API_URL` | EU: `https://api.eu.mailgun.net` |
-| `MAILGUN_FROM` | Afzender, bv. `SoloSwim <postmaster@mg.swimcare.be>` |
+| `MAILGUN_FROM` | Afzender, bv. `SoloSwim <postmaster@mg.swimcare.be>` (moet op Mailgun-domein blijven i.v.m. SPF) |
+| `MAILGUN_REPLY_TO` | Antwoordadres voor klantmails, bv. `info@soloswim.be` |
 | `MAILGUN_ORDER_TEMPLATE` | Exacte templatenaam, bv. `soloswim bedankt voor je bestelling` |
 | `MAILGUN_ORDER_BCC` | Kopie ordermail (SoloSwim) |
 | `MAILGUN_CONTACT_TO` | Ontvanger(s) contactformulier (komma-gescheiden), bv. `info@soloswim.be,kristof@soloswim.be` |
@@ -312,7 +313,7 @@ Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **im
 | Stripe webhook **timeout** | Webhook antwoordt na Mongo-save; mail gaat async. Check of Mongo snel reageert (`docker compose logs mongo`) en Mailgun-logs op de app |
 | Checkout start niet | `STRIPE_SECRET_KEY` + `HOST` in `.env`; app-logs |
 | Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` / `Webhook: email` |
-| Contactformulier fout / Mailgun `Unauthorized` / `401 Forbidden` | Verkeerde of lege private API key, of verkeerde regio-URL. Zie hieronder “Mailgun 401”. |
+| Contactformulier “verzonden” maar geen mail | Check `MAILGUN_CONTACT_TO` (default `info@soloswim.be`). Logs: `Contact notify accepted`. Bevestiging naar de bezoeker: `Contact confirmation accepted`. In Mailgun → Sending → Logs. |
 | `getaddrinfo EAI_AGAIN mongo` / order persistence failed | App kan hostname `mongo` niet resolven. Zie hieronder “Mongo DNS”. |
 | Order niet in DB | Mongo draait? `docker compose ps`; webhook-logs op `order stored` |
 | Winkelwagen leeg na refresh | Cart zit in `localStorage` (`soloswim-basket`); na succesvolle betaling wordt die geleegd |

@@ -1,17 +1,10 @@
 import {
   getMailgunClient,
+  getMailgunContactTo,
   getMailgunDomain,
   getMailgunFrom,
+  getMailgunReplyTo,
 } from "../../lib/mailgunClient";
-
-function envList(name, fallback) {
-  const raw = process.env[name]?.trim().replace(/^["']|["']$/g, "");
-  const value = raw || fallback;
-  return value
-    .split(",")
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
 
 function escapeHtml(value) {
   return String(value || "")
@@ -44,12 +37,22 @@ async function handler(req, res) {
     const onderwerp = String(body.onderwerp).trim();
     const userMessage = String(body.message).trim();
 
+    const replyTo = getMailgunReplyTo();
+    const internalTo = getMailgunContactTo();
+
     const internalText = `
+Nieuw bericht via het SoloSwim-contactformulier
+
 Naam: ${name}
 Email: ${email}
-Tel: ${tel}
+Tel: ${tel || "-"}
 Onderwerp: ${onderwerp}
-Message: ${userMessage}
+
+Bericht:
+${userMessage}
+
+—
+Antwoord rechtstreeks op deze mail om te reageren naar ${email}.
     `.trim();
 
     const confirmationText = `
@@ -66,7 +69,7 @@ ${userMessage}
 
 Met sportieve groet,
 SoloSwim
-info@soloswim.be
+${replyTo}
     `.trim();
 
     const confirmationHtml = `
@@ -79,19 +82,19 @@ Bericht:<br/>
 ${escapeHtml(userMessage).replace(/\n/g, "<br />")}
 </p>
 <p>Met sportieve groet,<br/>SoloSwim<br/>
-<a href="mailto:info@soloswim.be">info@soloswim.be</a></p>
+<a href="mailto:${escapeHtml(replyTo)}">${escapeHtml(replyTo)}</a></p>
     `.trim();
 
     const mg = getMailgunClient();
     const domain = getMailgunDomain();
+    // From must stay on the Mailgun sending domain (SPF/DKIM). Replies use Reply-To.
     const from = getMailgunFrom();
-    const internalTo = envList("MAILGUN_CONTACT_TO", "info@soloswim.be");
 
     const internal = await mg.messages.create(domain, {
       from,
       to: internalTo,
       "h:Reply-To": email,
-      subject: `[Contact] ${onderwerp}`,
+      subject: `Contactformulier SoloSwim: ${onderwerp}`,
       text: internalText,
       html: internalText.replace(/\n/g, "<br />"),
     });
@@ -99,12 +102,14 @@ ${escapeHtml(userMessage).replace(/\n/g, "<br />")}
     console.log("Contact notify accepted:", {
       id: internal?.id,
       to: internalTo,
+      message: internal?.message,
     });
 
     try {
       const confirmation = await mg.messages.create(domain, {
         from,
         to: [`${name} <${email}>`],
+        "h:Reply-To": replyTo,
         subject: "We hebben je bericht ontvangen — SoloSwim",
         text: confirmationText,
         html: confirmationHtml,
@@ -113,9 +118,10 @@ ${escapeHtml(userMessage).replace(/\n/g, "<br />")}
       console.log("Contact confirmation accepted:", {
         id: confirmation?.id,
         to: email,
+        replyTo,
       });
     } catch (confirmError) {
-      // SoloSwim already received the message; don't fail the form for the auto-reply.
+      // SoloSwim notify already accepted; don't fail the form for the auto-reply.
       console.error("Contact confirmation failed:", {
         message: confirmError?.message,
         status: confirmError?.status,
