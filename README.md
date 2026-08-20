@@ -305,6 +305,72 @@ Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **im
 
 ---
 
+## Redirects (QR-codes, flyers, video’s)
+
+Alle korte URLs staan in `next.config.js` onder `redirects()`. Ze zijn **niet** zichtbaar op de webshop-pagina’s: de site stuurt de bezoeker meteen door naar de echte bestemming (HTTP redirect, `permanent: true`).
+
+Doel: op **gedrukte zwemschema’s**, flyers of stickers een korte, stabiele link gebruiken (`soloswim.be/…`). De video- of campagne-URL achter die link kun je later wijzigen zonder nieuwe QR-codes te printen.
+
+### Soorten redirects
+
+| Type | Voorbeeld | Bestemming |
+|---|---|---|
+| Google review | `/review` | Google Business review-link |
+| Flyer-campagnes | `/f1` … `/f4` | Productenpagina met UTM-parameters |
+| Trainingsvideo’s | `/bck1g1`, `/bct1s3`, … | Extern videoplatform (nu Vimeo) |
+
+Er zijn geen Vimeo-/YouTube-embeds in de UI. Alleen doorverwijzingen.
+
+### Naming trainingsvideo’s
+
+Korte code = **product + editie + niveau + trainingnummer**.
+
+| Deel | Waarde | Betekenis |
+|---|---|---|
+| Product | `bck` / `bcd` / `bct` | Borstcrawl **kracht** / **duur** / **techniek** |
+| Editie | `1` | Editie 1 |
+| Niveau | `g` / `b` / `s` | **G**evorderden / **B**eginners / **S**emi-gevorderden |
+| Nummer | `1` … `10` | Training 1 t/m 10 op het schema |
+
+Voorbeelden:
+
+- `https://www.soloswim.be/bck1g1` → kracht, editie 1, gevorderden, training 1  
+- `https://www.soloswim.be/bcd1b5` → duur, editie 1, beginners, training 5  
+- `https://www.soloswim.be/bct1s3` → techniek, editie 1, semi-gevorderden, training 3  
+
+Huidige sets in de config:
+
+| Prefix | Set |
+|---|---|
+| `/bck1g1` … `/bck1g10` | Kracht — gevorderden |
+| `/bcd1g1` … `/bcd1g10` | Duur — gevorderden |
+| `/bcd1b1` … `/bcd1b10` | Duur — beginners |
+| `/bct1g1` … `/bct1g10` | Techniek — gevorderden |
+| `/bct1s1` … `/bct1s10` | Techniek — semi-gevorderden |
+
+### Videoplatform wijzigen (bv. Vimeo → YouTube)
+
+1. Upload de video’s (bij voorkeur **unlisted** / niet-openbaar, zoals de huidige Vimeo-privacylinks).  
+2. Pas in `next.config.js` alleen de `destination`-URL’s aan; laat `source` (`/bck1g1`, …) ongewijzigd zodat bestaande QR-codes blijven werken.  
+3. Image opnieuw bouwen en deployen.
+
+Let op: `permanent: true` (HTTP 308) wordt door browsers lang gecached. Na een platformwissel testen in een private/incognito-venster. Bij hardnekkige oude Vimeo-cache tijdelijk `permanent: false` zetten, deployen, daarna weer `true`.
+
+### Nieuwe redirect toevoegen
+
+```js
+// next.config.js → redirects()
+{
+  source: "/nieuwecode",
+  destination: "https://www.youtube.com/watch?v=…",
+  permanent: true,
+},
+```
+
+Daarna opnieuw **build + deploy**. Lokaal: `npm run build && npm run start` en `http://localhost:3000/nieuwecode` openen.
+
+---
+
 ## Troubleshooting
 
 | Symptoom | Check |
@@ -347,6 +413,14 @@ docker exec soloswim sh -c 'curl -sS -u "api:${MAILGUN_API_KEY}" \
 
 Private key ophalen in Mailgun → Settings → API Keys. Voor `mg.swimcare.be` (EU): `MAILGUN_API_URL=https://api.eu.mailgun.net`. Na `.env` wijzigen: `docker compose up -d --force-recreate soloswim`.
 
+### M365 `550 5.7.511 banned sender` (mail naar @soloswim.be faalt)
+
+Mailgun accepteert het bericht, maar **Microsoft 365 weigert** het Mailgun-verzend-IP (bv. `141.193.32.11`) voor jouw `soloswim.be`-tenant. Het MX `soloswim-be.mail.protection.outlook.com` is normaal en correct.
+
+1. **Eerst Microsoft (ontvanger-kant):** stuur de bounce / vraag delisting via [Microsoft’s delist-proces](https://go.microsoft.com/fwlink/?LinkId=526653) of `delist@microsoft.com`, met het geblokkeerde IP uit de Mailgun-log. In Microsoft 365 Admin / Defender kun je ook anti-spam / connection filtering / allow lists voor dat IP of voor `mg.swimcare.be` controleren.
+2. **Daarna eventueel Mailgun:** vraag of dat shared IP een slechte reputatie heeft en of dedicated IP / IP-pool-wissel mogelijk is — lost de Microsoft-blokkade niet altijd zelf op.
+
+Tot delisting rond is, blijven mails naar `@soloswim.be` vanaf dat IP falen; klantmails naar Gmail/andere providers kunnen wél aankomen.
 ### Mongo DNS (`getaddrinfo EAI_AGAIN mongo`)
 
 ```bash
