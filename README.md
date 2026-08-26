@@ -389,6 +389,7 @@ Daarna opnieuw **build + deploy**. Lokaal: `npm run build && npm run start` en `
 | Checkout start niet | `STRIPE_SECRET_KEY` + `HOST` in `.env`; app-logs |
 | Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` / `Webhook: email` |
 | Contactformulier “verzonden” maar geen mail | Check `MAILGUN_CONTACT_TO` + Mailgun Logs (`delivered` vs `failed`). Bij `550 5.7.511 banned sender` → Microsoft blokkeert het Mailgun-IP; zie “M365 banned sender” hieronder. |
+| Geen Google Analytics hits | `NEXT_PUBLIC_GOOGLE_ANALYTICS` ontbreekt bij **image build**. Live HTML toont dan `gtag/js?id=` leeg. Zet ID in `.env`, opnieuw `docker compose build` + deploy. Runtime `.env` alleen volstaat niet. |
 | `getaddrinfo EAI_AGAIN mongo` / order persistence failed | App kan hostname `mongo` niet resolven. Zie hieronder “Mongo DNS”. |
 | Order niet in DB | Mongo draait? `docker compose ps`; webhook-logs op `order stored` |
 | Winkelwagen leeg na refresh | Cart zit in `localStorage` (`soloswim-basket`); na succesvolle betaling wordt die geleegd |

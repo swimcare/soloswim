@@ -2,6 +2,8 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
+    const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS?.trim();
+
     return (
       <Html lang="nl">
         <Head>
@@ -13,23 +15,27 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap"
             rel="stylesheet"
           />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+          {/* GA is inlined at build time (NEXT_PUBLIC_*). Empty = scripts omitted. */}
+          {gaId ? (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            gtag('config', '${gaId}', {
               page_path: window.location.pathname,
             });
           `,
-            }}
-          />
+                }}
+              />
+            </>
+          ) : null}
         </Head>
         <body>
           <Main />
