@@ -31,6 +31,8 @@ export default function Zwemschema({ productData }) {
       type: product.type,
       editie: product.editie,
       price: product.price,
+      listPrice: product.listPrice ?? product.oldPrice ?? product.price,
+      discountPercent: product.discountPercent || 0,
       description: product.description,
       images: product.images,
       winkelwagen_images: product.winkelwagen_images,

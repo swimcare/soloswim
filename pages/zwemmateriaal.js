@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { getSwimmingEquipmentData } from "../lib/products";
-import NumberFormat from "react-number-format";
+import PriceDisplay from "../components/general/PriceDisplay";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
 
@@ -60,7 +60,15 @@ function Zwemmateriaal({ swimmingEquipmentData }) {
             <div>
               <ul className="flex flex-col gap-5 my-10 md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-3">
                 {swimmingEquipmentData.map(
-                  ({ id, title, images, price, card_info, oldPrice }) => (
+                  ({
+                    id,
+                    title,
+                    images,
+                    price,
+                    oldPrice,
+                    discountPercent,
+                    card_info,
+                  }) => (
                     <li
                       key={id}
                       className="bg-grey-light4 rounded-2xl hover:cursor-pointer hover:ring-4 hover:ring-main py-5"
@@ -94,29 +102,13 @@ function Zwemmateriaal({ swimmingEquipmentData }) {
                             </div>
                             <div className="text-grey-dark1 px-8 mx-auto mt-10">
                               <p className="font-bold uppercase">{title}</p>
-                              <div className="flex mx-auto space-x-2 justify-center">
-                                <p className="text-tiny mt-1">
-                                  <NumberFormat
-                                    value={price}
-                                    decimalSeparator=","
-                                    displayType="text"
-                                    prefix={"€ "}
-                                    decimalScale={2}
-                                    fixedDecimalScale={true}
-                                  />
-                                </p>
-                                {oldPrice && (
-                                  <p className="text-tiny mt-1 line-through text-red-500">
-                                    <NumberFormat
-                                      value={oldPrice}
-                                      decimalSeparator=","
-                                      displayType="text"
-                                      prefix={"€ "}
-                                      decimalScale={2}
-                                      fixedDecimalScale={true}
-                                    />
-                                  </p>
-                                )}
+                              <div className="flex mx-auto justify-center mt-1">
+                                <PriceDisplay
+                                  size="sm"
+                                  price={price}
+                                  oldPrice={oldPrice}
+                                  discountPercent={discountPercent}
+                                />
                               </div>
                             </div>
                           </div>

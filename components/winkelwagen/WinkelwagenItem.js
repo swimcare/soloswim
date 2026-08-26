@@ -1,15 +1,16 @@
 import Image from "next/image";
-import { CheckIcon, ExclamationIcon } from "@heroicons/react/solid";
 import Link from "next/link";
-import NumberFormat from "react-number-format";
 import { useDispatch } from "react-redux";
 import { addToBasket, removeFromBasket } from "../../slices/basketSlice";
+import PriceDisplay from "../general/PriceDisplay";
 
 function WinkelwagenItem({
   i,
   id,
   title,
   price,
+  listPrice,
+  discountPercent,
   editie,
   type,
   description,
@@ -20,7 +21,6 @@ function WinkelwagenItem({
   const dispatch = useDispatch();
 
   const removeItemFromBasket = () => {
-    // remove the item from redux
     dispatch(removeFromBasket({ id, type }));
   };
 
@@ -32,12 +32,13 @@ function WinkelwagenItem({
       type,
       editie,
       price,
+      listPrice: listPrice ?? price,
+      discountPercent: discountPercent || 0,
       description,
       images,
       winkelwagen_images,
     };
 
-    //push item into redux
     dispatch(addToBasket(product));
   };
 
@@ -92,16 +93,15 @@ function WinkelwagenItem({
           </div>
         </div>
         <div className="my-2">
-          <p className="font-lexend text-tiny md:text-lg font-semibold">
-            <NumberFormat
-              value={price}
-              decimalSeparator=","
-              displayType="text"
-              prefix={"€ "}
-              decimalScale={2}
-              fixedDecimalScale={true}
-            />
-          </p>
+          <PriceDisplay
+            price={price}
+            oldPrice={
+              listPrice != null && Number(listPrice) > Number(price)
+                ? listPrice
+                : null
+            }
+            discountPercent={discountPercent}
+          />
           <div className="flex flex-row justify-between text-2xl">
             <button
               role="button"
@@ -120,14 +120,6 @@ function WinkelwagenItem({
           </div>
         </div>
         <div className="w-full flex flex-row justify-between md:text-sm text-xs">
-          {/* <div className="mr-2">
-            <p>
-              <span>
-                <ExclamationIcon className="w-4 h-4 mr-1 mt-1 text-red-500 float-left" />
-              </span>
-              Vertraagde levertijd i.v.m. vakantie (17 maart bezorgd)
-            </p>
-          </div> */}
           <button
             role="button"
             onClick={removeItemFromBasket}

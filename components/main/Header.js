@@ -6,10 +6,16 @@ import { ShoppingCartIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/dist/client/router";
+import pricing from "../../lib/pricing";
 
 function Header() {
   const items = useSelector(selectItems);
   const [mobileMenuExtended, setMobileMenuExtended] = useState(false);
+  const saleConfig = pricing.saleConfig || pricing;
+  const showSaleBanner =
+    typeof pricing.isSaleActive === "function" &&
+    pricing.isSaleActive() &&
+    Boolean(saleConfig.label?.trim());
 
   const toggleMobileMenu = () => {
     setMobileMenuExtended(!mobileMenuExtended);
@@ -24,6 +30,11 @@ function Header() {
 
   return (
     <header className="sticky z-30">
+      {showSaleBanner && (
+        <div className="bg-main text-white text-center text-xs sm:text-sm font-semibold px-3 py-2">
+          {saleConfig.label}
+        </div>
+      )}
       <div className="grid grid-cols-10 w-full bg-soloswim2-green">
         <div className="bg-soloswim2-pink h-2 -skew-x-12"></div>
         <div className="bg-soloswim2-orange h-2 -skew-x-12"></div>

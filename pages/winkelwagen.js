@@ -73,6 +73,8 @@ function winkelwagen() {
                       images={item.images}
                       winkelwagen_images={item.winkelwagen_images}
                       price={item.price}
+                      listPrice={item.listPrice}
+                      discountPercent={item.discountPercent}
                       type={item.type}
                       description={item.description}
                     />

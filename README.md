@@ -314,6 +314,40 @@ Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **im
 
 ---
 
+## Kortingen & acties
+
+SoloSwim ondersteunt **twee** kortingslagen (ze werken naast elkaar):
+
+1. **Stripe promotion codes** — klant vult een code in bij Checkout (`allow_promotion_codes`). Beheer in Stripe → Coupons / Promotion codes.  
+2. **Website-sale** — zichtbare %-korting op productpagina’s, overzichten en winkelwagen. Config in `config/sale.js`.
+
+### Website-sale (`config/sale.js`)
+
+```js
+module.exports = {
+  enabled: true,
+  label: "Lente-actie: tot 20% korting op zwemschema’s", // banner; leeg = geen banner
+  sitewidePercent: 10,          // % op alle artikelen (0 = uit)
+  productPercents: {
+    BCK1: 20,                   // product_id uit /products/*.md
+    BCT1: 15,
+  },
+};
+```
+
+**Regels**
+
+- Per artikel geldt de **hoogste** van `sitewidePercent` en de product-% — **geen stacking**.  
+  Voorbeeld: sitewide 10% + BCK1 20% → BCK1 krijgt 20%; een ander product zonder eigen % krijgt 10%.  
+- Prijzen in Markdown blijven de catalogusprijs; de sale zet de actieprijs + doorgestreepte oude prijs.  
+- Checkout herberekent prijzen **server-side** (clientprijs wordt niet vertrouwd).  
+- Stripe-codes blijven beschikbaar bovenop de actieprijs.  
+- Na wijziging van `config/sale.js`: **opnieuw image bouwen en deployen**.
+
+Product-IDs vind je in de frontmatter van elk bestand in `/products` (`product_id: "BCK1"`).
+
+---
+
 ## Redirects (QR-codes, flyers, video’s)
 
 Alle korte URLs staan in `next.config.js` onder `redirects()`. Ze zijn **niet** zichtbaar op de webshop-pagina’s: de site stuurt de bezoeker meteen door naar de echte bestemming (HTTP redirect, `permanent: true`).

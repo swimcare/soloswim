@@ -1,4 +1,5 @@
 const Stripe = require("stripe");
+const { resolveCheckoutLinePrice } = require("../../lib/resolveCheckoutPrice");
 
 export default async (req, res) => {
   if (req.method !== "POST") {
@@ -37,7 +38,30 @@ export default async (req, res) => {
 
   console.log("Checkout: received items:", items);
 
-  const transformedItems = items.map((item) => ({
+  let pricedItems;
+  try {
+    // Never trust client prices — resolve from markdown + sale config
+    pricedItems = items.map((item) => {
+      const resolved = resolveCheckoutLinePrice(item);
+      return {
+        ...item,
+        price: resolved.price,
+        listPrice: resolved.listPrice,
+        discountPercent: resolved.discountPercent,
+        title: item.title || resolved.product.title,
+        product_id: item.product_id || resolved.product.product_id,
+        description: item.description || resolved.product.description,
+        images: item.images?.length
+          ? item.images
+          : resolved.product.images || [],
+      };
+    });
+  } catch (err) {
+    console.error("Checkout: price resolution failed:", err.message);
+    return res.status(400).json({ error: err.message });
+  }
+
+  const transformedItems = pricedItems.map((item) => ({
     quantity: 1,
     price_data: {
       currency: "eur",
@@ -45,7 +69,9 @@ export default async (req, res) => {
       product_data: {
         description: item.description,
         name: item.title + " - " + item.type,
-        images: [`${process.env.HOST}${item.images[0]}`],
+        images: item.images?.[0]
+          ? [`${process.env.HOST}${item.images[0]}`]
+          : [],
       },
       tax_behavior: "inclusive",
     },
@@ -113,10 +139,12 @@ export default async (req, res) => {
       allow_promotion_codes: true,
       metadata: {
         products: JSON.stringify(
-          items.map((item) => ({
+          pricedItems.map((item) => ({
             id: item.product_id,
             name: item.title,
             price: item.price,
+            listPrice: item.listPrice,
+            discountPercent: item.discountPercent,
             type: item.type,
             editie: item.editie,
           }))

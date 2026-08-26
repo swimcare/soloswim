@@ -3,13 +3,13 @@ import {
   ClockIcon,
   CreditCardIcon,
 } from "@heroicons/react/outline";
-import NumberFormat from "react-number-format";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import PriceDisplay from "../general/PriceDisplay";
 
 function SectionProductDescription({ productData, addItemToBasket }) {
   const searchParams = useSearchParams();
@@ -53,10 +53,13 @@ function SectionProductDescription({ productData, addItemToBasket }) {
     setSelectedPhoto(+id);
     setNiveau(type);
 
-    // Update product data based on size variant if available
+    // Update product data based on size variant if available (prices already include sale)
     if (productData.sizeVariants && productData.sizeVariants[type]) {
       const variant = productData.sizeVariants[type];
       productData.price = variant.price;
+      productData.oldPrice = variant.oldPrice ?? null;
+      productData.listPrice = variant.listPrice ?? variant.price;
+      productData.discountPercent = variant.discountPercent ?? 0;
       productData.images = variant.images;
       productData.winkelwagen_images = variant.winkelwagen_images;
       productData.tab1_image = variant.tab1_image;
@@ -77,10 +80,13 @@ function SectionProductDescription({ productData, addItemToBasket }) {
         niveauParam.charAt(0).toUpperCase() + niveauParam.slice(1);
       setNiveau(niveauValue);
 
-      // Update product data based on size variant if available
+      // Update product data based on size variant if available (prices already include sale)
       if (productData.sizeVariants && productData.sizeVariants[niveauValue]) {
         const variant = productData.sizeVariants[niveauValue];
         productData.price = variant.price;
+        productData.oldPrice = variant.oldPrice ?? null;
+        productData.listPrice = variant.listPrice ?? variant.price;
+        productData.discountPercent = variant.discountPercent ?? 0;
         productData.images = variant.images;
         productData.winkelwagen_images = variant.winkelwagen_images;
         productData.tab1_image = variant.tab1_image;
@@ -119,29 +125,13 @@ function SectionProductDescription({ productData, addItemToBasket }) {
               <h1 className="font-lexend font-extrabold text-navy-light1 text-3xl lg:text-5xl my-2 lg:leading-13">
                 {productData.title}
               </h1>
-              <div className="flex space-x-2">
-                <p className="font-bold text-navy-light1 text-lg lg:text-2xl my-2 lg:my-5">
-                  <NumberFormat
-                    value={productData.price}
-                    decimalSeparator=","
-                    displayType="text"
-                    prefix={"€ "}
-                    decimalScale={2}
-                    fixedDecimalScale={true}
-                  />
-                </p>
-                {productData.oldPrice && (
-                  <p className="text-red-500 text-lg lg:text-2xl my-2 lg:my-5 line-through">
-                    <NumberFormat
-                      value={productData.oldPrice}
-                      decimalSeparator=","
-                      displayType="text"
-                      prefix={"€ "}
-                      decimalScale={2}
-                      fixedDecimalScale={true}
-                    />
-                  </p>
-                )}
+              <div className="my-2 lg:my-5">
+                <PriceDisplay
+                  size="lg"
+                  price={productData.price}
+                  oldPrice={productData.oldPrice}
+                  discountPercent={productData.discountPercent}
+                />
               </div>
               <p className="text-navy-light1 leading-6 my-2 lg:my-5 text-tiny">
                 {productData.description}{" "}
