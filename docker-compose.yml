@@ -20,6 +20,12 @@ services:
 
   soloswim:
     image: swimcare/soloswim:latest
+    build:
+      context: .
+      args:
+        # NEXT_PUBLIC_* must be present at image build (inlined into JS/HTML).
+        # Runtime .env alone is not enough for Google Analytics.
+        NEXT_PUBLIC_GOOGLE_ANALYTICS: ${NEXT_PUBLIC_GOOGLE_ANALYTICS:-}
     container_name: soloswim
     # Runtime secrets/config: HOST, STRIPE_*, MAILGUN_*, etc.
     env_file: ".env"

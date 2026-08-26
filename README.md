@@ -65,7 +65,7 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILGUN_ORDER_BCC` | Kopie ordermail (SoloSwim), bv. `kristof@soloswim.be` |
 | `MAILGUN_CONTACT_TO` | Ontvanger(s) contactformulier (komma-gescheiden), bv. `info@soloswim.be,kristof@soloswim.be` |
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
-| `NEXT_PUBLIC_GOOGLE_ANALYTICS` | Optioneel; bij image-build als build-arg meegeven |
+| `NEXT_PUBLIC_GOOGLE_ANALYTICS` | GA4 measurement ID (`G-…`). **Build-time** (zoals oude Stripe publishable key): moet mee bij `docker build` / `compose build`, niet alleen runtime `.env` |
 | `INTERNAL_API_SECRET` | Optioneel; beschermt handmatige POST naar interne order/mail API’s |
 
 ### Mailgun orderbevestiging
@@ -158,11 +158,19 @@ Team SoloSwim
 Op de build-machine / CI / server:
 
 ```bash
-# Optioneel: GA mee in de client bundle
+# GA measurement ID MEEGEVEN bij build (anders blijft Analytics leeg op de live site)
 docker build \
   --build-arg NEXT_PUBLIC_GOOGLE_ANALYTICS=G-XXXXXXXX \
   -t swimcare/soloswim:latest \
   .
+```
+
+Of via Compose (leest `NEXT_PUBLIC_GOOGLE_ANALYTICS` uit `.env`):
+
+```bash
+# In .env: NEXT_PUBLIC_GOOGLE_ANALYTICS=G-XXXXXXXX
+docker compose build soloswim
+docker compose up -d soloswim
 ```
 
 Image pushen (als je een registry gebruikt):
@@ -171,7 +179,8 @@ Image pushen (als je een registry gebruikt):
 docker push swimcare/soloswim:latest
 ```
 
-> Stripe-, Mailgun- en Mongo-secrets zitten **niet** in de image. Die komen via `env_file: .env` bij het starten.
+> Stripe-, Mailgun- en Mongo-secrets zitten **niet** in de image. Die komen via `env_file: .env` bij het starten.  
+> **Uitzondering:** `NEXT_PUBLIC_*` (o.a. Google Analytics) wordt bij `next build` in de HTML/JS gezet. Runtime `.env` alleen helpt daarvoor niet — opnieuw **image bouwen** met de juiste build-arg.
 
 ---
 
