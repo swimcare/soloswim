@@ -175,7 +175,7 @@ docker push swimcare/soloswim:latest
 ```
 
 > Stripe-, Mailgun-, Mongo- en Google Analytics-waarden zitten **niet** hard in de image. Die komen via `env_file: .env` bij het starten.  
-> `NEXT_PUBLIC_GOOGLE_ANALYTICS` wordt door `_document` op de server gelezen (runtime), dus na toevoegen in `.env` volstaat meestal: `docker compose up -d --force-recreate soloswim`.
+> Analytics: de browser haalt `NEXT_PUBLIC_GOOGLE_ANALYTICS` op via `/api/public-config` (runtime). Na `.env`-wijziging: `docker compose up -d --force-recreate soloswim`. Controleer met `curl -s https://www.soloswim.be/api/public-config` → `{"gaId":"G-…"}`.
 
 ---
 
@@ -418,7 +418,7 @@ Daarna opnieuw **build + deploy**. Lokaal: `npm run build && npm run start` en `
 | Checkout start niet | `STRIPE_SECRET_KEY` + `HOST` in `.env`; app-logs |
 | Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` / `Webhook: email` |
 | Contactformulier “verzonden” maar geen mail | Check `MAILGUN_CONTACT_TO` + Mailgun Logs (`delivered` vs `failed`). Bij `550 5.7.511 banned sender` → Microsoft blokkeert het Mailgun-IP; zie “M365 banned sender” hieronder. |
-| Geen Google Analytics hits | Check `NEXT_PUBLIC_GOOGLE_ANALYTICS` in de container: `docker exec soloswim printenv NEXT_PUBLIC_GOOGLE_ANALYTICS`. Live HTML moet `gtag/js?id=G-…` tonen. Na `.env`-wijziging: `docker compose up -d --force-recreate soloswim` (en deploy van de runtime-GA fix). |
+| Geen Google Analytics hits | `curl -s https://www.soloswim.be/api/public-config` moet `{"gaId":"G-…"}` tonen. Container: `docker exec soloswim printenv NEXT_PUBLIC_GOOGLE_ANALYTICS`. In DevTools → Network: `gtag/js?id=G-…`. Na `.env`-wijziging: recreate container + **nieuwe image** met de runtime-GA loader deployen. |
 | `getaddrinfo EAI_AGAIN mongo` / order persistence failed | App kan hostname `mongo` niet resolven. Zie hieronder “Mongo DNS”. |
 | Order niet in DB | Mongo draait? `docker compose ps`; webhook-logs op `order stored` |
 | Winkelwagen leeg na refresh | Cart zit in `localStorage` (`soloswim-basket`); na succesvolle betaling wordt die geleegd |

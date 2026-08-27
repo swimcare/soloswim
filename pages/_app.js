@@ -4,6 +4,7 @@ import { store } from "../store/store";
 import Header from "../components/main/Header";
 import Footer from "../components/main/Footer";
 import BasketPersistence from "../components/BasketPersistence";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 import "../styles/globals.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
+      <GoogleAnalytics />
       <BasketPersistence />
       <Head>
         <script
