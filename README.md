@@ -65,7 +65,7 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILGUN_ORDER_BCC` | Kopie ordermail (SoloSwim), bv. `kristof@soloswim.be` |
 | `MAILGUN_CONTACT_TO` | Ontvanger(s) contactformulier (komma-gescheiden), bv. `info@soloswim.be,kristof@soloswim.be` |
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
-| `NEXT_PUBLIC_GOOGLE_ANALYTICS` | GA4 measurement ID (`G-…`). **Build-time** (zoals oude Stripe publishable key): moet mee bij `docker build` / `compose build`, niet alleen runtime `.env` |
+| `NEXT_PUBLIC_GOOGLE_ANALYTICS` | GA4 measurement ID (`G-…`). Staat in runtime `.env`; de site leest hem bij elke request (geen rebuild nodig alleen voor GA). |
 | `INTERNAL_API_SECRET` | Optioneel; beschermt handmatige POST naar interne order/mail API’s |
 
 ### Mailgun orderbevestiging
@@ -158,17 +158,12 @@ Team SoloSwim
 Op de build-machine / CI / server:
 
 ```bash
-# GA measurement ID MEEGEVEN bij build (anders blijft Analytics leeg op de live site)
-docker build \
-  --build-arg NEXT_PUBLIC_GOOGLE_ANALYTICS=G-XXXXXXXX \
-  -t swimcare/soloswim:latest \
-  .
+docker build -t swimcare/soloswim:latest .
 ```
 
-Of via Compose (leest `NEXT_PUBLIC_GOOGLE_ANALYTICS` uit `.env`):
+Of via Compose:
 
 ```bash
-# In .env: NEXT_PUBLIC_GOOGLE_ANALYTICS=G-XXXXXXXX
 docker compose build soloswim
 docker compose up -d soloswim
 ```
@@ -179,8 +174,8 @@ Image pushen (als je een registry gebruikt):
 docker push swimcare/soloswim:latest
 ```
 
-> Stripe-, Mailgun- en Mongo-secrets zitten **niet** in de image. Die komen via `env_file: .env` bij het starten.  
-> **Uitzondering:** `NEXT_PUBLIC_*` (o.a. Google Analytics) wordt bij `next build` in de HTML/JS gezet. Runtime `.env` alleen helpt daarvoor niet — opnieuw **image bouwen** met de juiste build-arg.
+> Stripe-, Mailgun-, Mongo- en Google Analytics-waarden zitten **niet** hard in de image. Die komen via `env_file: .env` bij het starten.  
+> `NEXT_PUBLIC_GOOGLE_ANALYTICS` wordt door `_document` op de server gelezen (runtime), dus na toevoegen in `.env` volstaat meestal: `docker compose up -d --force-recreate soloswim`.
 
 ---
 
@@ -423,7 +418,7 @@ Daarna opnieuw **build + deploy**. Lokaal: `npm run build && npm run start` en `
 | Checkout start niet | `STRIPE_SECRET_KEY` + `HOST` in `.env`; app-logs |
 | Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` / `Webhook: email` |
 | Contactformulier “verzonden” maar geen mail | Check `MAILGUN_CONTACT_TO` + Mailgun Logs (`delivered` vs `failed`). Bij `550 5.7.511 banned sender` → Microsoft blokkeert het Mailgun-IP; zie “M365 banned sender” hieronder. |
-| Geen Google Analytics hits | `NEXT_PUBLIC_GOOGLE_ANALYTICS` ontbreekt bij **image build**. Live HTML toont dan `gtag/js?id=` leeg. Zet ID in `.env`, opnieuw `docker compose build` + deploy. Runtime `.env` alleen volstaat niet. |
+| Geen Google Analytics hits | Check `NEXT_PUBLIC_GOOGLE_ANALYTICS` in de container: `docker exec soloswim printenv NEXT_PUBLIC_GOOGLE_ANALYTICS`. Live HTML moet `gtag/js?id=G-…` tonen. Na `.env`-wijziging: `docker compose up -d --force-recreate soloswim` (en deploy van de runtime-GA fix). |
 | `getaddrinfo EAI_AGAIN mongo` / order persistence failed | App kan hostname `mongo` niet resolven. Zie hieronder “Mongo DNS”. |
 | Order niet in DB | Mongo draait? `docker compose ps`; webhook-logs op `order stored` |
 | Winkelwagen leeg na refresh | Cart zit in `localStorage` (`soloswim-basket`); na succesvolle betaling wordt die geleegd |
