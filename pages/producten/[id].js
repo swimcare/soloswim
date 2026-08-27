@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { getAllProductIds, getproductData } from "../../lib/products";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../../slices/basketSlice";
@@ -10,6 +10,13 @@ import * as ga from "../../lib/ga/index";
 import { NextSeo } from "next-seo";
 import CartModal from "../../components/products/CartModal";
 import PreviewModal from "../../components/products/PreviewModal";
+import JsonLd from "../../components/seo/JsonLd";
+import { pageSeo } from "../../lib/site";
+import {
+  breadcrumbJsonLd,
+  faqPageJsonLd,
+  productJsonLd,
+} from "../../lib/seo";
 
 export async function getStaticProps({ params }) {
   const productData = await getproductData(params.id);
@@ -22,6 +29,11 @@ export async function getStaticProps({ params }) {
 
 export default function Zwemschema({ productData }) {
   const dispatch = useDispatch();
+  const productPath = `/producten/${productData.id}`;
+  const productImage =
+    Array.isArray(productData.images) && productData.images[0]
+      ? productData.images[0]
+      : undefined;
 
   const addItemToBasket = (product) => {
     const cartObject = {
@@ -56,38 +68,34 @@ export default function Zwemschema({ productData }) {
     });
   };
 
+  const jsonLd = [
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      {
+        name: productData.isAccessoire ? "Zwemmateriaal" : "Zwemschema's",
+        path: productData.isAccessoire ? "/zwemmateriaal" : "/producten",
+      },
+      { name: productData.title, path: productPath },
+    ]),
+    productJsonLd(productData),
+  ];
+
+  if (!productData.hideFaq) {
+    jsonLd.push(faqPageJsonLd());
+  }
+
   return (
     <Fragment>
       <NextSeo
-        title={`SoloSwim | ${productData.title}`}
-        description={productData.description}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/images/favicons/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "/images/favicons/apple-touch-icon.png",
-          },
-        ]}
-        openGraph={{
-          type: "website",
-          url: "https://www.soloswim.be",
-          title: "SoloSwim | " + productData.title,
+        {...pageSeo({
+          title: `SoloSwim | ${productData.title}`,
           description: productData.description,
-          locale: "nl_BE",
-          site_name: "SoloSwim | Waterproof zwemschema's",
-          images: [
-            {
-              url: "/images/home/header-OG.jpg",
-              width: 1200,
-              height: 630,
-              alt: "SoloSwim",
-            },
-          ],
-        }}
+          path: productPath,
+          image: productImage,
+          type: "product",
+        })}
       />
+      <JsonLd data={jsonLd} />
 
       <main>
         <CartModal />

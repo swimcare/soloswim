@@ -17,6 +17,7 @@ import { NextSeo } from "next-seo";
 import FadeInFromBottom from "../components/framer/FadeInFromBottom";
 import SlideInFromSideSpring from "../components/framer/SlideInFromSideSpring";
 import SlideInFromSide from "../components/framer/SlideInFromSide";
+import { pageSeo } from "../lib/site";
 
 export default function Home() {
   const [productSlide, setCurrentSlide] = useState(0);
@@ -94,37 +95,7 @@ export default function Home() {
 
   return (
     <Fragment>
-      <NextSeo
-        title="SoloSwim | Waterproof zwemschema's"
-        description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/images/favicons/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "/images/favicons/apple-touch-icon.png",
-          },
-        ]}
-        openGraph={{
-          type: "website",
-          url: "https://www.soloswim.be",
-          title: "SoloSwim | Waterproof zwemschema's",
-          description:
-            "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_BE",
-          site_name: "SoloSwim | Waterproof zwemschema's",
-          images: [
-            {
-              url: "/images/home/header-OG.jpg",
-              width: 1200,
-              height: 630,
-              alt: "SoloSwim",
-            },
-          ],
-        }}
-      />
+      <NextSeo {...pageSeo({ path: "/" })} />
       <main>
         {/* HERO */}
         <section className="h-screen-navbar transform translate-y-0">

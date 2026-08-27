@@ -3,6 +3,9 @@ import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { useState, useRef, Fragment } from "react";
 import * as ga from "../lib/ga/index";
+import JsonLd from "../components/seo/JsonLd";
+import { pageSeo } from "../lib/site";
+import { breadcrumbJsonLd } from "../lib/seo";
 
 function contact() {
   const [name, setName] = useState("");
@@ -68,37 +71,21 @@ function contact() {
 
   return (
     <Fragment>
-    <NextSeo
-        title="SoloSwim | Contact"
-        description="Neem contact op met Soloswim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/images/favicons/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "/images/favicons/apple-touch-icon.png",
-          },
-        ]}
-        openGraph={{
-          type: "website",
-          url: "https://www.soloswim.be",
-          title: "SoloSwim | Waterproof zwemschema's",
-          description: "Neem contact op met SoloSwim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_BE",
-          site_name: "SoloSwim | Contact",
-          images: [
-            {
-              url: "/images/home/header-OG.jpg",
-              width: 1200,
-              height: 630,
-              alt: "SoloSwim",
-            },
-          ],
-        }}
+      <NextSeo
+        {...pageSeo({
+          title: "SoloSwim | Contact",
+          description:
+            "Neem contact op met SoloSwim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
+          path: "/contact",
+        })}
       />
-    <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
+      />
+      <main>
       <section className="bg-grey-light4">
         <div className="px-5 sm:px-8 mx-auto max-w-3xl py-20 lg:py-32 text-center">
           <h1 className="text-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-lexend font-extrabold">

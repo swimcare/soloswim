@@ -4,42 +4,31 @@ import Image from "next/image";
 import { getSwimmingSchemasData } from "../../lib/products";
 import SectionFaq from "../../components/products/SectionFaq";
 import PriceDisplay from "../../components/general/PriceDisplay";
+import JsonLd from "../../components/seo/JsonLd";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
+import { pageSeo } from "../../lib/site";
+import { breadcrumbJsonLd, faqPageJsonLd } from "../../lib/seo";
 
 function index({ swimmingSchemasData }) {
   return (
     <Fragment>
       <NextSeo
-        title="SoloSwim | Waterproof zwemschema's"
-        description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/images/favicons/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "/images/favicons/apple-touch-icon.png",
-          },
-        ]}
-        openGraph={{
-          type: "website",
-          url: "https://www.soloswim.be",
-          title: "SoloSwim | Waterproof zwemschema's",
+        {...pageSeo({
+          title: "SoloSwim | Zwemschema's",
           description:
-            "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_BE",
-          site_name: "SoloSwim | Waterproof zwemschema's",
-          images: [
-            {
-              url: "/images/home/header-OG.jpg",
-              width: 1200,
-              height: 630,
-              alt: "SoloSwim",
-            },
-          ],
-        }}
+            "Bekijk alle waterproof SoloSwim zwemschema's. ✓ Borstcrawl ✓ Techniek, kracht en duur ✓ Alle niveaus ✓ Snelle levering",
+          path: "/producten",
+        })}
+      />
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Zwemschema's", path: "/producten" },
+          ]),
+          faqPageJsonLd(),
+        ]}
       />
       <main>
         <section>

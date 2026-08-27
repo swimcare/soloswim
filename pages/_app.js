@@ -5,6 +5,7 @@ import Header from "../components/main/Header";
 import Footer from "../components/main/Footer";
 import BasketPersistence from "../components/BasketPersistence";
 import GoogleAnalytics from "../components/GoogleAnalytics";
+import JsonLd from "../components/seo/JsonLd";
 import "../styles/globals.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -12,9 +13,12 @@ import * as ga from "../lib/ga";
 import { DefaultSeo } from "next-seo";
 import ScrollToTop from "../components/general/ScrollToTop";
 import Head from "next/head";
+import { pageSeo } from "../lib/site";
+import { organizationJsonLd, websiteJsonLd } from "../lib/seo";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const defaultSeo = pageSeo({ path: "/" });
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -35,6 +39,7 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <GoogleAnalytics />
       <BasketPersistence />
+      <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
       <Head>
         <script
           dangerouslySetInnerHTML={{
@@ -57,37 +62,7 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       </Head>
-      <DefaultSeo
-        title="SoloSwim | Waterproof zwemschema's"
-        description="Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/images/favicons/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "/images/favicons/apple-touch-icon.png",
-          },
-        ]}
-        openGraph={{
-          type: "website",
-          url: "https://www.soloswim.be",
-          title: "SoloSwim | Waterproof zwemschema's",
-          description:
-            "Waterproof zwemschema's om zelf te volgen vanuit het zwembad. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_BE",
-          site_name: "SoloSwim | Waterproof zwemschema's",
-          images: [
-            {
-              url: "/images/home/header-OG.jpg",
-              width: 1200,
-              height: 630,
-              alt: "SoloSwim",
-            },
-          ],
-        }}
-      />
+      <DefaultSeo {...defaultSeo} />
       <Header />
       <Component {...pageProps} />
       <ScrollToTop />

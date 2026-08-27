@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Transactional / private flows
+Disallow: /winkelwagen
+Disallow: /bestelling-voltooid
+Disallow: /bestelling-mislukt
+Disallow: /bericht-verzonden
+Disallow: /api/
+
+Sitemap: https://www.soloswim.be/sitemap.xml

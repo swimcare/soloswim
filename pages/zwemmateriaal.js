@@ -3,42 +3,28 @@ import Image from "next/image";
 
 import { getSwimmingEquipmentData } from "../lib/products";
 import PriceDisplay from "../components/general/PriceDisplay";
+import JsonLd from "../components/seo/JsonLd";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
+import { pageSeo } from "../lib/site";
+import { breadcrumbJsonLd } from "../lib/seo";
 
 function Zwemmateriaal({ swimmingEquipmentData }) {
   return (
     <Fragment>
       <NextSeo
-        title="SoloSwim | Zwemmateriaal"
-        description="Professioneel zwemmateriaal voor elke zwemmer. ✓ Zwembrillen ✓ Zwemvliezen ✓ Peddels ✓ Plankjes ✓ Snorkels ✓ Snelle levering"
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/images/favicons/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "/images/favicons/apple-touch-icon.png",
-          },
-        ]}
-        openGraph={{
-          type: "website",
-          url: "https://www.soloswim.be/zwemmateriaal",
+        {...pageSeo({
           title: "SoloSwim | Zwemmateriaal",
           description:
             "Professioneel zwemmateriaal voor elke zwemmer. ✓ Zwembrillen ✓ Zwemvliezen ✓ Peddels ✓ Plankjes ✓ Snorkels ✓ Snelle levering",
-          locale: "nl_BE",
-          site_name: "SoloSwim | Zwemmateriaal",
-          images: [
-            {
-              url: "/images/home/header-OG.jpg",
-              width: 1200,
-              height: 630,
-              alt: "SoloSwim Zwemmateriaal",
-            },
-          ],
-        }}
+          path: "/zwemmateriaal",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Zwemmateriaal", path: "/zwemmateriaal" },
+        ])}
       />
       <main>
         <section>

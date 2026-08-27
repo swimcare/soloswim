@@ -176,7 +176,7 @@ docker push swimcare/soloswim:latest
 ```
 
 > Stripe-, Mailgun-, Mongo- en Google Analytics-waarden zitten **niet** hard in de image. Die komen via `env_file: .env` bij het starten.  
-> Analytics: de browser haalt `NEXT_PUBLIC_GOOGLE_ANALYTICS` op via `/api/public-config` (runtime). Na `.env`-wijziging: `docker compose up -d --force-recreate soloswim`. Controleer met `curl -s https://www.soloswim.be/api/public-config` → `{"gaId":"G-…"}`.
+> Analytics: browser haalt de ID op via `/api/public-config`. Zet bij voorkeur `GOOGLE_ANALYTICS_ID=G-…` in `.env` (Next.js inline’t `NEXT_PUBLIC_*` soms leeg bij build). Check: `curl -s https://www.soloswim.be/api/public-config`.
 
 ---
 
@@ -307,6 +307,24 @@ Data blijft bewaard in Docker volume `soloswim_mongo_data`.
 ## Producten beheren
 
 Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **image bouwen en deployen** (statische generatie bij `next build`).
+
+---
+
+## SEO (fase 1)
+
+| Onderdeel | Locatie |
+|---|---|
+| `robots.txt` | `public/robots.txt` |
+| Sitemap | `https://www.soloswim.be/sitemap.xml` (`pages/sitemap.xml.js`) |
+| Canonical + OG | `lib/site.js` → `pageSeo()` op publieke pagina’s |
+| JSON-LD | Organization + WebSite in `_app`; Product/FAQ/Breadcrumb op product- en listingpagina’s |
+| FAQ-bron | `data/faq.js` (UI + FAQPage-schema) |
+
+Na deploy:
+
+1. Check `https://www.soloswim.be/robots.txt` en `/sitemap.xml`
+2. In Google Search Console: sitemap indienen
+3. Rich Results Test / Schema Validator op een productpagina
 
 ---
 

@@ -5,40 +5,26 @@ import { Fragment } from "react";
 import { NextSeo } from "next-seo";
 import FadeInFromBottom from "../components/framer/FadeInFromBottom";
 import SlideInFromSide from "../components/framer/SlideInFromSide";
+import JsonLd from "../components/seo/JsonLd";
+import { pageSeo } from "../lib/site";
+import { breadcrumbJsonLd } from "../lib/seo";
 
 function overOns() {
   return (
     <Fragment>
       <NextSeo
-        title="SoloSwim | Over ons"
-        description="Over SoloSwim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering"
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/images/favicons/favicon.ico",
-          },
-          {
-            rel: "apple-touch-icon",
-            href: "/images/favicons/apple-touch-icon.png",
-          },
-        ]}
-        openGraph={{
-          type: "website",
-          url: "https://www.soloswim.be",
+        {...pageSeo({
           title: "SoloSwim | Over ons",
           description:
             "Over SoloSwim. ✓ Borstcrawl zwemschema's ✓ Techniek-, kracht- en duurtrainingen ✓ Alle niveau's ✓ Snelle levering",
-          locale: "nl_BE",
-          site_name: "SoloSwim | Waterproof zwemschema's",
-          images: [
-            {
-              url: "/images/home/header-OG.jpg",
-              width: 1200,
-              height: 630,
-              alt: "SoloSwim",
-            },
-          ],
-        }}
+          path: "/over-ons",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Over ons", path: "/over-ons" },
+        ])}
       />
       <main>
         <section>
