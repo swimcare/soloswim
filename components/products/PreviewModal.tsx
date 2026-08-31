@@ -33,12 +33,12 @@ function Modal(inhoud) {
                 <div className="animate-modal relative flex flex-col bg-white pointer-events-auto rounded-2xl h-full max-w-2xl mx-auto">
                   <div className="flex justify-between border-b border-gray-300 bg-main rounded-t-2xl">
                     <div className="p-4 text-xl font-lexend font-semibold text-white">
-                      <h1>
+                      <h2 className="text-xl font-lexend font-semibold text-white">
                         Preview:{" "}
                         {data[previewQuery!][typeQuery!]
                           ? data[previewQuery!][typeQuery!][0]?.title
                           : data[previewQuery!][0]?.title}
-                      </h1>
+                      </h2>
                     </div>
                     <Link
                       scroll={false}

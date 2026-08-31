@@ -25,6 +25,21 @@ function Footer() {
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
               <li>
+                <Link href="/producten" className="hover:underline">
+                  Zwemschema&apos;s
+                </Link>
+              </li>
+              <li>
+                <Link href="/zwemmateriaal" className="hover:underline">
+                  Zwemmateriaal
+                </Link>
+              </li>
+              <li>
+                <Link href="/over-ons" className="hover:underline">
+                  Over ons
+                </Link>
+              </li>
+              <li>
                 <Link href="/producten/#faq" className="hover:underline">
                   FAQ
                 </Link>
@@ -54,6 +69,11 @@ function Footer() {
               Contact
             </h4>
             <ul className="text-tiny text-navy-light1 flex flex-col gap-1">
+              <li>
+                <Link href="/contact" className="hover:underline">
+                  Contactformulier
+                </Link>
+              </li>
               <li>
                 <Link
                   href="mailto:info@soloswim.be"
@@ -100,35 +120,28 @@ function Footer() {
             <a href="https://www.swimcare.be" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/partners/swimcare.png"
-                alt="Partner 1"
+                alt="SwimCare zwemschool en partner van SoloSwim"
                 style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
             <a href="https://shop.swimcare.be/product-categorie/finis" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/partners/finis.png"
-                alt="Partner 2"
+                alt="FINIS zwemmateriaal partner"
                 style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
             <a href="https://shop.swimcare.be/product-categorie/trihard" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/partners/trihard.png"
-                alt="Partner 3"
+                alt="Trihard sportvoeding partner"
                 style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
             <a href="https://shop.swimcare.be/peaks" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/partners/peaks.png"
-                alt="Partner 4"
-                style={{ height: 65, width: "auto", objectFit: "contain" }}
-              />
-            </a>
-			<a href="https://shop.swimcare.be/product-categorie/etixx/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="/images/partners/etixx.png"
-                alt="Partner 4"
+                alt="Peaks sportvoeding partner"
                 style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>

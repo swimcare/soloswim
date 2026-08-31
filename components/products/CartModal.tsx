@@ -66,7 +66,9 @@ function Modal() {
                 <div className="animate-modal relative flex flex-col bg-white pointer-events-auto rounded-2xl h-full max-w-2xl mx-auto">
                   <div className="flex justify-between border-b border-gray-300 bg-main rounded-t-2xl">
                     <div className="p-4 text-xl font-lexend font-semibold text-white">
-                      <h1>Het product is toegevoegd aan je winkelwagen</h1>
+                      <h2 className="text-xl font-lexend font-semibold text-white">
+                        Het product is toegevoegd aan je winkelwagen
+                      </h2>
                     </div>
                     <Link href={pathname || "/"}>
                       <button type="button" className="self-start m-3">

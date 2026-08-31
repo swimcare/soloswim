@@ -103,7 +103,7 @@ export default function Home() {
             <div className="hidden xl:block">
               <Image
                 src="/images/home/header-desktop.jpg"
-                alt="SoloSwim"
+                alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
                 priority
                 quality={100}
                 fill
@@ -116,7 +116,7 @@ export default function Home() {
             <div className="hidden sm:block xl:hidden">
               <Image
                 src="/images/home/header-tablet.jpg"
-                alt="SoloSwim"
+                alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
                 priority
                 fill
                 sizes="100vw"
@@ -128,7 +128,7 @@ export default function Home() {
             <div className="sm:hidden">
               <Image
                 src="/images/home/header-small.jpg"
-                alt="SoloSwim"
+                alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
                 priority
                 fill
                 sizes="100vw"
@@ -148,9 +148,9 @@ export default function Home() {
             </div> */}
             <div className="absolute w-full px-3 pt-16 sm:pt-32 md:top-[calc(40%)] md:pt-0 md:px-0 sm:w-9/12 md:w-8/12 lg:w-7/12 xl:top-1/2 md:transform md:-translate-y-1/2">
               <div className="md:ml-7 xl:ml-[calc((10%)+1rem)] 2xl:ml-[calc((20%)+1rem)]">
-                <h3 className="font-lexend font-bold lg:font-extrabold text-2xl md:text-4xl xl:text-5xl text-black xl:text-white">
+                <p className="font-lexend font-bold lg:font-extrabold text-2xl md:text-4xl xl:text-5xl text-black xl:text-white">
                   SoloSwim presenteert:
-                </h3>
+                </p>
               </div>
               <div className="bg-white shadow-custom3 px-4 py-6 lg:py-10 my-6 lg:my-10 rounded-3xl md:rounded-r-3xl md:rounded-l-none">
                 <SlideInFromSide>
@@ -204,7 +204,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro1.png"
-                  alt="SoloSwim zwemschema's"
+                  alt="SoloSwim zwemschema bundel met 10 zorgvuldig samengestelde trainingen"
                   priority
                   fill
                   sizes="100vw"
@@ -221,7 +221,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro2.png"
-                  alt="SoloSwim zwemschema's"
+                  alt="Waterdichte SoloSwim zwemschema's voor gebruik in het zwembad"
                   priority
                   fill
                   sizes="100vw"
@@ -238,7 +238,7 @@ export default function Home() {
               >
                 <Image
                   src="/images/home/intro3.png"
-                  alt="SoloSwim zwemschema's"
+                  alt="Herbruikbare SoloSwim zwemtrainingen voor alle niveaus"
                   priority
                   fill
                   sizes="100vw"
@@ -330,7 +330,7 @@ export default function Home() {
                 <div className={`${productSlide === 0 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema1.png"
-                    alt="zwemschema"
+                    alt="Voorbeeld SoloSwim zwemschema - training info"
                     priority
                     fill
                     sizes="100vw"
@@ -343,7 +343,7 @@ export default function Home() {
                 <div className={`${productSlide === 1 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema2.png"
-                    alt="zwemschema"
+                    alt="Voorbeeld SoloSwim zwemschema - titel en focuspunten"
                     priority
                     fill
                     sizes="100vw"
@@ -356,7 +356,7 @@ export default function Home() {
                 <div className={`${productSlide === 2 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema3.png"
-                    alt="zwemschema"
+                    alt="Voorbeeld SoloSwim zwemschema - inzwemmen warming-up"
                     priority
                     fill
                     sizes="100vw"
@@ -369,7 +369,7 @@ export default function Home() {
                 <div className={`${productSlide === 3 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema4.png"
-                    alt="zwemschema"
+                    alt="Voorbeeld SoloSwim zwemschema - kern met opdrachten"
                     priority
                     fill
                     sizes="100vw"
@@ -382,7 +382,7 @@ export default function Home() {
                 <div className={`${productSlide === 4 ? "block" : "hidden"}`}>
                   <Image
                     src="/images/home/schema5.png"
-                    alt="zwemschema"
+                    alt="Voorbeeld SoloSwim zwemschema - uitzwemmen cooling-down"
                     priority
                     fill
                     sizes="100vw"
@@ -403,7 +403,7 @@ export default function Home() {
                         src="/images/home/schema1.png"
                         width={350}
                         height={476}
-                        alt="zwemschema"
+                        alt="Voorbeeld SoloSwim zwemschema - training info"
                         style={{
                           maxWidth: "100%",
                           height: "auto",
@@ -418,7 +418,7 @@ export default function Home() {
                         src="/images/home/schema2.png"
                         width={350}
                         height={476}
-                        alt="zwemschema"
+                        alt="Voorbeeld SoloSwim zwemschema - titel en focuspunten"
                         style={{
                           maxWidth: "100%",
                           height: "auto",
@@ -432,7 +432,7 @@ export default function Home() {
                         src="/images/home/schema3.png"
                         width={350}
                         height={476}
-                        alt="zwemschema"
+                        alt="Voorbeeld SoloSwim zwemschema - inzwemmen warming-up"
                         style={{
                           maxWidth: "100%",
                           height: "auto",
@@ -446,7 +446,7 @@ export default function Home() {
                         src="/images/home/schema4.png"
                         width={350}
                         height={476}
-                        alt="zwemschema"
+                        alt="Voorbeeld SoloSwim zwemschema - kern met opdrachten"
                         style={{
                           maxWidth: "100%",
                           height: "auto",
@@ -460,7 +460,7 @@ export default function Home() {
                         src="/images/home/schema5.png"
                         width={350}
                         height={476}
-                        alt="zwemschema"
+                        alt="Voorbeeld SoloSwim zwemschema - uitzwemmen cooling-down"
                         style={{
                           maxWidth: "100%",
                           height: "auto",
@@ -552,9 +552,9 @@ export default function Home() {
               <h2 className="font-lexend font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-main">
                 Waarom SoloSwim
               </h2>
-              <h2 className="font-lexend font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-navy-light1 my-2 lg:my-5">
+              <h3 className="font-lexend font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-navy-light1 my-2 lg:my-5">
                 Een aantal voordelen op een rijtje
-              </h2>
+              </h3>
             </FadeInFromBottom>
           </div>
           <div className="flex flex-col px-5 sm:px-0 gap-7 sm:gap-10 lg:gap-14 lg:py-8 overflow-x-hidden">
@@ -828,7 +828,7 @@ export default function Home() {
                     src="/images/home/oprichters-soloswim.png"
                     width={996}
                     height={772}
-                    alt="Oprichters SoloSwim"
+                    alt="SoloSwim oprichters Julie en Kristof"
                     style={{
                       maxWidth: "100%",
                       height: "auto",
@@ -839,7 +839,7 @@ export default function Home() {
                   <Image
                     className="rounded-t-xl sm:rounded-none"
                     src="/images/home/oprichters-soloswim.png"
-                    alt="Oprichters SoloSwim"
+                    alt="SoloSwim oprichters Julie en Kristof"
                     fill
                     sizes="100vw"
                     style={{
@@ -884,7 +884,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="inline-block lg:hidden mx-auto my-6">
-                  <Link href="/producten">
+                  <Link href="/over-ons">
                     <button
                       role="button"
                       className="text-white text-tiny lg:text-lg font-bold uppercase px-10 py-3 rounded-full bg-main tracking-wider shadow-xl hover:bg-transparent hover:text-main border-4 border-main"

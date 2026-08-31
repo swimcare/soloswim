@@ -7,9 +7,9 @@ function SectionNiveauInfo({ title, addItemToBasket, productData }) {
     <section id="welk-niveau-past-bij-mij">
       <div className="px-5 sm:px-8 max-w-screen-xl mx-auto py-5 pt-16 lg:pt-20 pb-24 lg:pb-0">
         <div className="text-center lg:text-left text-navy-light1">
-          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-lexend font-extrabold py-3 lg:py-6">
+          <h2 className="text-2xl sm:text-4xl lg:text-6xl font-lexend font-extrabold py-3 lg:py-6">
             Welk <span className="text-main">niveau</span> past bij mij?
-          </h1>
+          </h2>
           <p className="text-tiny leading-6">
             Voor de bundel "{title}" kun je kiezen uit onderstaande niveaus. We
             hebben een aantal richtlijnen per niveau opgesteld zodat jij het
