@@ -21,7 +21,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
           src={image}
           alt={productData.title}
           fill
-          sizes="100vw"
+          sizes="(max-width: 1024px) 100vw, 50vw"
           style={{
             objectFit: "contain",
           }}

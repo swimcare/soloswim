@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {} from "@heroicons/react/solid";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
@@ -117,32 +118,56 @@ function Footer() {
             Onze partners
           </h4>
           <div className="flex flex-col gap-6 items-center sm:flex-row sm:justify-center sm:gap-10">
-            <a href="https://www.swimcare.be" target="_blank" rel="noopener noreferrer">
-              <img
+            <a
+              href="https://www.swimcare.be"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
                 src="/images/partners/swimcare.png"
                 alt="SwimCare zwemlessen partner van SoloSwim"
-                style={{ height: 65, width: "auto", objectFit: "contain" }}
+                width={180}
+                height={65}
+                style={{ height: 65, width: "auto" }}
               />
             </a>
-            <a href="https://shop.swimcare.be/product-categorie/finis" target="_blank" rel="noopener noreferrer">
-              <img
+            <a
+              href="https://shop.swimcare.be/product-categorie/finis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
                 src="/images/partners/finis.png"
                 alt="FINIS zwemmateriaal partner"
-                style={{ height: 65, width: "auto", objectFit: "contain" }}
+                width={180}
+                height={65}
+                style={{ height: 65, width: "auto" }}
               />
             </a>
-            <a href="https://shop.swimcare.be/product-categorie/trihard" target="_blank" rel="noopener noreferrer">
-              <img
+            <a
+              href="https://shop.swimcare.be/product-categorie/trihard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
                 src="/images/partners/trihard.png"
                 alt="Trihard haar- en huidverzorging voor zwemmers"
-                style={{ height: 65, width: "auto", objectFit: "contain" }}
+                width={180}
+                height={65}
+                style={{ height: 65, width: "auto" }}
               />
             </a>
-            <a href="https://shop.swimcare.be/peaks" target="_blank" rel="noopener noreferrer">
-              <img
+            <a
+              href="https://shop.swimcare.be/peaks"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
                 src="/images/partners/peaks.png"
                 alt="Peaks open water zwemmateriaal partner"
-                style={{ height: 65, width: "auto", objectFit: "contain" }}
+                width={180}
+                height={65}
+                style={{ height: 65, width: "auto" }}
               />
             </a>
           </div>

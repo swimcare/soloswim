@@ -105,7 +105,7 @@ export default function Home() {
                 src="/images/home/header-desktop.jpg"
                 alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
                 priority
-                quality={100}
+                quality={80}
                 fill
                 sizes="100vw"
                 style={{
@@ -118,6 +118,7 @@ export default function Home() {
                 src="/images/home/header-tablet.jpg"
                 alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
                 priority
+                quality={80}
                 fill
                 sizes="100vw"
                 style={{
@@ -130,6 +131,7 @@ export default function Home() {
                 src="/images/home/header-small.jpg"
                 alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
                 priority
+                quality={80}
                 fill
                 sizes="100vw"
                 style={{
@@ -205,9 +207,8 @@ export default function Home() {
                 <Image
                   src="/images/home/intro1.png"
                   alt="SoloSwim zwemschema bundel met 10 zorgvuldig samengestelde trainingen"
-                  priority
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 640px) 100vw, 384px"
                   style={{
                     objectFit: "contain",
                     objectPosition: "center",
@@ -222,9 +223,8 @@ export default function Home() {
                 <Image
                   src="/images/home/intro2.png"
                   alt="Waterdichte SoloSwim zwemschema's voor gebruik in het zwembad"
-                  priority
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 640px) 100vw, 384px"
                   style={{
                     objectFit: "contain",
                     objectPosition: "center",
@@ -239,9 +239,8 @@ export default function Home() {
                 <Image
                   src="/images/home/intro3.png"
                   alt="Herbruikbare SoloSwim zwemtrainingen voor alle niveaus"
-                  priority
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 640px) 100vw, 384px"
                   style={{
                     objectFit: "contain",
                     objectPosition: "center",
@@ -331,9 +330,8 @@ export default function Home() {
                   <Image
                     src="/images/home/schema1.png"
                     alt="Voorbeeld SoloSwim zwemschema - training info"
-                    priority
                     fill
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 0px, 45vw"
                     style={{
                       objectFit: "contain",
                       objectPosition: "center",
@@ -344,9 +342,8 @@ export default function Home() {
                   <Image
                     src="/images/home/schema2.png"
                     alt="Voorbeeld SoloSwim zwemschema - titel en focuspunten"
-                    priority
                     fill
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 0px, 45vw"
                     style={{
                       objectFit: "contain",
                       objectPosition: "center",
@@ -357,9 +354,8 @@ export default function Home() {
                   <Image
                     src="/images/home/schema3.png"
                     alt="Voorbeeld SoloSwim zwemschema - inzwemmen warming-up"
-                    priority
                     fill
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 0px, 45vw"
                     style={{
                       objectFit: "contain",
                       objectPosition: "center",
@@ -370,9 +366,8 @@ export default function Home() {
                   <Image
                     src="/images/home/schema4.png"
                     alt="Voorbeeld SoloSwim zwemschema - kern met opdrachten"
-                    priority
                     fill
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 0px, 45vw"
                     style={{
                       objectFit: "contain",
                       objectPosition: "center",
@@ -383,9 +378,8 @@ export default function Home() {
                   <Image
                     src="/images/home/schema5.png"
                     alt="Voorbeeld SoloSwim zwemschema - uitzwemmen cooling-down"
-                    priority
                     fill
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 0px, 45vw"
                     style={{
                       objectFit: "contain",
                       objectPosition: "center",
@@ -841,7 +835,7 @@ export default function Home() {
                     src="/images/home/oprichters-soloswim.png"
                     alt="SoloSwim team bij het zwembad"
                     fill
-                    sizes="100vw"
+                    sizes="(max-width: 1024px) 0px, 50vw"
                     style={{
                       objectFit: "cover",
                     }}

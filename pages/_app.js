@@ -1,10 +1,12 @@
 import "tailwindcss/tailwind.css";
 import { Provider } from "react-redux";
+import { Lexend, Montserrat } from "next/font/google";
 import { store } from "../store/store";
 import Header from "../components/main/Header";
 import Footer from "../components/main/Footer";
 import BasketPersistence from "../components/BasketPersistence";
 import GoogleAnalytics from "../components/GoogleAnalytics";
+import Chatwoot from "../components/Chatwoot";
 import JsonLd from "../components/seo/JsonLd";
 import "../styles/globals.css";
 import { useEffect } from "react";
@@ -12,9 +14,23 @@ import { useRouter } from "next/router";
 import * as ga from "../lib/ga";
 import { DefaultSeo } from "next-seo";
 import ScrollToTop from "../components/general/ScrollToTop";
-import Head from "next/head";
 import { pageSeo } from "../lib/site";
 import { organizationJsonLd, websiteJsonLd } from "../lib/seo";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+const lexend = Lexend({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-lexend",
+  display: "swap",
+});
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -37,36 +53,19 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
-      <GoogleAnalytics />
-      <BasketPersistence />
-      <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
-      <Head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(d,t) {
-                var BASE_URL="https://chat.swimcare.be";
-                var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                g.src=BASE_URL+"/packs/js/sdk.js";
-                g.defer = true;
-                g.async = true;
-                s.parentNode.insertBefore(g,s);
-                g.onload=function(){
-                  window.chatwootSDK.run({
-                    websiteToken: 'WWg5SwD9hCS2z34iBYGzziwv',
-                    baseUrl: BASE_URL
-                  })
-                }
-              })(document,"script");
-            `,
-          }}
-        />
-      </Head>
-      <DefaultSeo {...defaultSeo} />
-      <Header />
-      <Component {...pageProps} />
-      <ScrollToTop />
-      <Footer />
+      <div
+        className={`${montserrat.variable} ${lexend.variable} font-sans`}
+      >
+        <GoogleAnalytics />
+        <Chatwoot />
+        <BasketPersistence />
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
+        <DefaultSeo {...defaultSeo} />
+        <Header />
+        <Component {...pageProps} />
+        <ScrollToTop />
+        <Footer />
+      </div>
     </Provider>
   );
 }

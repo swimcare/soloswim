@@ -310,7 +310,7 @@ Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **im
 
 ---
 
-## SEO (fase 1)
+## SEO (fase 1 + 3 + 5)
 
 | Onderdeel | Locatie |
 |---|---|
@@ -319,12 +319,15 @@ Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **im
 | Canonical + OG | `lib/site.js` → `pageSeo()` op publieke pagina’s |
 | JSON-LD | Organization + WebSite in `_app`; Product/FAQ/Breadcrumb op product- en listingpagina’s |
 | FAQ-bron | `data/faq.js` (UI + FAQPage-schema) |
+| On-page | Eén H1 per pagina, beschrijvende alt-teksten, interne footerlinks |
+| Performance | Self-hosted fonts (`next/font`), deferred Chatwoot, AVIF/WebP, image `sizes`/`priority` voor LCP |
 
 Na deploy:
 
 1. Check `https://www.soloswim.be/robots.txt` en `/sitemap.xml`
 2. In Google Search Console: sitemap indienen
 3. Rich Results Test / Schema Validator op een productpagina
+4. Optioneel: PageSpeed Insights / CrUX op homepage en een productpagina
 
 ---
 

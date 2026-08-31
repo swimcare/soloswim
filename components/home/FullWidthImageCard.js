@@ -9,7 +9,7 @@ function FullWidthImageCard({ img, number, title, text, alignRight }) {
           src={img}
           alt={title}
           fill
-          sizes="100vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 40vw"
           style={{
             objectFit: "cover"
           }} />

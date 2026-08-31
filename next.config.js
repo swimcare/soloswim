@@ -8,6 +8,33 @@ module.exports = {
 
     return config;
   },
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
+  async headers() {
+    return [
+      {
+        source: "/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+        ],
+      },
+    ];
+  },
   // REDIRECT URLS FOR QR CODES ON TRAINING SCHEDULES
   async redirects() {
     return [
