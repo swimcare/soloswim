@@ -828,7 +828,7 @@ export default function Home() {
                     src="/images/home/oprichters-soloswim.png"
                     width={996}
                     height={772}
-                    alt="SoloSwim oprichters Julie en Kristof"
+                    alt="SoloSwim team bij het zwembad"
                     style={{
                       maxWidth: "100%",
                       height: "auto",
@@ -839,7 +839,7 @@ export default function Home() {
                   <Image
                     className="rounded-t-xl sm:rounded-none"
                     src="/images/home/oprichters-soloswim.png"
-                    alt="SoloSwim oprichters Julie en Kristof"
+                    alt="SoloSwim team bij het zwembad"
                     fill
                     sizes="100vw"
                     style={{

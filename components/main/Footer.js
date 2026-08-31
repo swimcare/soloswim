@@ -120,7 +120,7 @@ function Footer() {
             <a href="https://www.swimcare.be" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/partners/swimcare.png"
-                alt="SwimCare zwemschool en partner van SoloSwim"
+                alt="SwimCare zwemlessen partner van SoloSwim"
                 style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
@@ -134,14 +134,14 @@ function Footer() {
             <a href="https://shop.swimcare.be/product-categorie/trihard" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/partners/trihard.png"
-                alt="Trihard sportvoeding partner"
+                alt="Trihard haar- en huidverzorging voor zwemmers"
                 style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
             <a href="https://shop.swimcare.be/peaks" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/partners/peaks.png"
-                alt="Peaks sportvoeding partner"
+                alt="Peaks open water zwemmateriaal partner"
                 style={{ height: 65, width: "auto", objectFit: "contain" }}
               />
             </a>
