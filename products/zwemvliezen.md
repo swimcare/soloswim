@@ -31,7 +31,6 @@ sizes:
     "41-43",
     "44-45",
     "45-46",
-    "46-48",
   ]
 sizeVariants:
   "30-32":
@@ -75,11 +74,6 @@ sizeVariants:
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "45-46":
-    price: 54.00
-    images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
-    tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
-  "46-48":
     price: 54.00
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
