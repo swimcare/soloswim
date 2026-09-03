@@ -1,6 +1,7 @@
 ---
 number: 21
 product_id: "MA1"
+ean: ""
 title: "Manta peddels"
 subtitle: "FINIS Manta Paddles"
 price: 30.00

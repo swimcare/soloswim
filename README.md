@@ -308,6 +308,15 @@ Data blijft bewaard in Docker volume `soloswim_mongo_data`.
 
 Producten staan als Markdown in `/products`. Na toevoegen/wijzigen: opnieuw **image bouwen en deployen** (statische generatie bij `next build`).
 
+Handige frontmatter-velden:
+
+| Veld | Gebruik |
+|---|---|
+| `product_id` | Interne artikelcode (zichtbaar als Art.nr.) |
+| `ean` | EAN/GTIN (zichtbaar klein op de productpagina + Product JSON-LD). Leeg = niet tonen |
+| `sizeVariants.*.ean` | Optioneel EAN per maat (overschrijft product-`ean` bij die maat) |
+| `number` | Sorteervolgorde op overzichtspagina’s |
+
 ---
 
 ## SEO (fase 1 + 3 + 5)

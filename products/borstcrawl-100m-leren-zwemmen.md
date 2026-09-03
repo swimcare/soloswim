@@ -1,6 +1,7 @@
 ---
 number: 1
 product_id: "BCL100"
+ean: ""
 title: "Borstcrawl 100m leren zwemmen"
 subtitle: "Zelf borstcrawl leren"
 price: 17.99

@@ -1,6 +1,7 @@
 ---
 number: 27
 product_id: "MRG1"
+ean: ""
 title: "Mach 1 Racing Goggle"
 subtitle: "FINIS Mach 1 Racing Goggle"
 price: 74.40

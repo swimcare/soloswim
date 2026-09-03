@@ -1,6 +1,7 @@
 ---
 number: 5
 product_id: "BCD1"
+ean: ""
 title: "Borstcrawl Duur Zwemtraining"
 subtitle: "Zwem makkelijker, zwem langer"
 price: 17.99

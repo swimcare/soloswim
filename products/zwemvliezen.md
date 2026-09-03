@@ -1,6 +1,7 @@
 ---
 number: 28
 product_id: "ZG1"
+ean: ""
 title: "Z2 gold zoomers"
 subtitle: "FINIS Z2 Gold Zoomers"
 price: 38.40

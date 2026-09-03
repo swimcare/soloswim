@@ -1,6 +1,7 @@
 ---
 number: 30
 product_id: "PAS1"
+ean: ""
 title: "Rekker"
 subtitle: "FINIS Pulling Ankle Strap"
 price: 13.20

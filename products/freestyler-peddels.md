@@ -1,6 +1,7 @@
 ---
 number: 22
 product_id: "FP1"
+ean: ""
 title: "Freestyler peddels"
 subtitle: "FINIS Freestyler Paddles"
 price: 30.00

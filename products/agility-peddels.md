@@ -1,6 +1,7 @@
 ---
 number: 20
 product_id: "AG1"
+ean: ""
 title: "Agility peddels"
 subtitle: "FINIS Agility Paddles"
 price: 30.00

@@ -1,6 +1,7 @@
 ---
 number: 25
 product_id: "FPB1"
+ean: ""
 title: "Foam pull buoy"
 subtitle: "FINIS Foam Pull Buoy"
 price: 22.80

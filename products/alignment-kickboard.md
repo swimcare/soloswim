@@ -1,6 +1,7 @@
 ---
 number: 23
 product_id: "AK1"
+ean: ""
 title: "Plankje met riem"
 subtitle: "FINIS Alignment Kickboard"
 price: 37.20

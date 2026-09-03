@@ -1,6 +1,7 @@
 ---
 number: 2
 product_id: "BCC1"
+ean: ""
 title: "Borstcrawl Complete Zwemtraining"
 subtitle: "Het beste van 3 werelden"
 price: 39.99

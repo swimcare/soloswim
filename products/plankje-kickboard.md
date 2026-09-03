@@ -1,6 +1,7 @@
 ---
 number: 24
 product_id: "FK1"
+ean: ""
 title: "Foam kickboard"
 subtitle: "FINIS Foam kickboard"
 price: 28.80

@@ -1,6 +1,7 @@
 ---
 number: 4
 product_id: "BCK1"
+ean: ""
 title: "Borstcrawl Kracht Zwemtraining"
 subtitle: "Word sterker, word sneller"
 price: 17.99

@@ -1,6 +1,7 @@
 ---
 number: 31
 product_id: "PARA1"
+ean: ""
 title: "Swim Parachute"
 subtitle: "FINIS Swim Parachute"
 price: 57.60

@@ -73,6 +73,12 @@ function SectionProductDescription({ productData, addItemToBasket }) {
 
   const [niveau, setNiveau] = useState();
 
+  const activeEan = String(
+    (niveau && productData.sizeVariants?.[niveau]?.ean) ||
+      productData.ean ||
+      ""
+  ).trim();
+
   useEffect(() => {
     const niveauParam = searchParams.get("niveau");
     if (niveauParam) {
@@ -384,6 +390,20 @@ function SectionProductDescription({ productData, addItemToBasket }) {
                   14 dagen bedenktijd
                 </p>
               </div>
+
+              {(productData.product_id || activeEan) && (
+                <p className="mt-2 text-center text-[10px] sm:text-[11px] leading-relaxed text-navy-light1/45 tracking-wide">
+                  {productData.product_id && (
+                    <span>
+                      Art.nr. {productData.product_id}
+                    </span>
+                  )}
+                  {productData.product_id && activeEan && (
+                    <span aria-hidden="true"> · </span>
+                  )}
+                  {activeEan && <span>EAN {activeEan}</span>}
+                </p>
+              )}
             </div>
           </div>
         </div>
