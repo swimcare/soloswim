@@ -182,7 +182,7 @@ function Footer() {
         </div>
         <div className="text-center py-5 mx-5">
           <p className="text-tiny text-navy-light1">
-            © 2025 SoloSwim |{" "}
+            © {new Date().getFullYear()} SoloSwim |{" "}
             <a href="https://www.swimcare.be" target="_blank">
               SwimCare
             </a>{" "}
