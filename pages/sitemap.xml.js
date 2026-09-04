@@ -5,6 +5,7 @@ const STATIC_PATHS = [
   "/",
   "/producten",
   "/zwemmateriaal",
+  "/zwemverzorging",
   "/over-ons",
   "/contact",
 ];

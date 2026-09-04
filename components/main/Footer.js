@@ -36,6 +36,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/zwemverzorging" className="hover:underline">
+                  Zwemverzorging
+                </Link>
+              </li>
+              <li>
                 <Link href="/over-ons" className="hover:underline">
                   Over ons
                 </Link>
@@ -144,11 +149,7 @@ function Footer() {
                 style={{ height: 65, width: "auto" }}
               />
             </a>
-            <a
-              href="https://shop.swimcare.be/product-categorie/trihard"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/zwemverzorging">
               <Image
                 src="/images/partners/trihard.png"
                 alt="Trihard haar- en huidverzorging voor zwemmers"

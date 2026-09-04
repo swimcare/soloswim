@@ -72,8 +72,16 @@ export default function Zwemschema({ productData }) {
     breadcrumbJsonLd([
       { name: "Home", path: "/" },
       {
-        name: productData.isAccessoire ? "Zwemmateriaal" : "Zwemschema's",
-        path: productData.isAccessoire ? "/zwemmateriaal" : "/producten",
+        name: productData.isVerzorging
+          ? "Zwemverzorging"
+          : productData.isAccessoire
+            ? "Zwemmateriaal"
+            : "Zwemschema's",
+        path: productData.isVerzorging
+          ? "/zwemverzorging"
+          : productData.isAccessoire
+            ? "/zwemmateriaal"
+            : "/producten",
       },
       { name: productData.title, path: productPath },
     ]),

@@ -316,6 +316,9 @@ Handige frontmatter-velden:
 | `ean` | EAN/GTIN (zichtbaar klein op de productpagina + Product JSON-LD). Leeg = niet tonen |
 | `sizeVariants.*.ean` | Optioneel EAN per maat (overschrijft product-`ean` bij die maat) |
 | `number` | Sorteervolgorde op overzichtspagina’s |
+| `isAccessoire` | `true` = zwemmateriaal of verzorging (niet bij zwemschema’s) |
+| `isVerzorging` | `true` = zichtbaar op `/zwemverzorging` (niet op `/zwemmateriaal`) |
+| `brand` | Merknaam voor JSON-LD (bv. `TRIHARD`) |
 
 ---
 

@@ -119,6 +119,9 @@ function Header() {
               <Link href="/zwemmateriaal">Zwemmateriaal</Link>
             </li>
             <li className="self-center hover:underline">
+              <Link href="/zwemverzorging">Zwemverzorging</Link>
+            </li>
+            <li className="self-center hover:underline">
               <Link href="https://les.swimcare.be" target="_blank">
                 Zwemlessen
               </Link>
@@ -175,6 +178,11 @@ function Header() {
               <Link href="/zwemmateriaal">
                 <li className="py-3 border-b border-opacity-25">
                   <span className="ml-3">Zwemmateriaal</span>
+                </li>
+              </Link>
+              <Link href="/zwemverzorging">
+                <li className="py-3 border-b border-opacity-25">
+                  <span className="ml-3">Zwemverzorging</span>
                 </li>
               </Link>
               <Link href="https://les.swimcare.be">
