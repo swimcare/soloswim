@@ -73,7 +73,7 @@ export const FAQ_ITEMS = [
     id: "faq12",
     question: "Wat zijn de verzendkosten?",
     answer:
-      "Wij rekenen € 5,99 verzendkosten voor elke bestelling binnen België (ook bij grotere bestellingen die als pakket verstuurd moeten worden).",
+      "Verzendkosten: € 5,99 binnen België en € 7,99 naar Nederland. Vanaf € 100 bestelbedrag is verzending gratis (BE & NL).",
   },
   {
     id: "faq13",

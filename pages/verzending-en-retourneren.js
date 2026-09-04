@@ -15,10 +15,16 @@ function verzendingEnRetourneren() {
               Verzending
             </h3>
             <p className="my-5">
-              Verzendkosten: <strong>5,99 euro</strong>.
+              Verzendkosten België: <strong>5,99 euro</strong>. Nederland:{" "}
+              <strong>7,99 euro</strong>.
             </p>
             <p className="my-5">
-              Standaard levertijd (tenzij anders aangegeven): <strong>1-2 werkdagen</strong>.
+              <strong>Gratis verzending</strong> vanaf een bestelbedrag van{" "}
+              <strong>€ 100</strong> (België en Nederland).
+            </p>
+            <p className="my-5">
+              Standaard levertijd (tenzij anders aangegeven):{" "}
+              <strong>1-2 werkdagen</strong>.
             </p>
             <h3 className="text-main text-lg font-lexend font-bold">
               Retourneren
