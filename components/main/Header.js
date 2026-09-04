@@ -113,17 +113,17 @@ function Header() {
           {/* Navigation items Desktop */}
           <ul className="hidden lg:flex flex-row space-x-6 xl:space-x-10 font-lexend font-semibold text-navy-light1 h-10 text-sm xl:text-base">
             <li className="self-center hover:underline">
-              <Link href="/producten">Zwemschema's</Link>
+              <Link href="/producten">Schema&apos;s</Link>
             </li>
             <li className="self-center hover:underline">
-              <Link href="/zwemmateriaal">Zwemmateriaal</Link>
+              <Link href="/zwemmateriaal">Materiaal</Link>
             </li>
             <li className="self-center hover:underline">
-              <Link href="/zwemverzorging">Zwemverzorging</Link>
+              <Link href="/zwemverzorging">Verzorging</Link>
             </li>
             <li className="self-center hover:underline">
               <Link href="https://les.swimcare.be" target="_blank">
-                Zwemlessen
+                Lessen
               </Link>
             </li>
             <li className="self-center hover:underline">
@@ -172,22 +172,22 @@ function Header() {
               </Link>
               <Link href="/producten">
                 <li className="py-3 border-b border-opacity-25">
-                  <span className="ml-3">Zwemschema's</span>
+                  <span className="ml-3">Schema&apos;s</span>
                 </li>
               </Link>
               <Link href="/zwemmateriaal">
                 <li className="py-3 border-b border-opacity-25">
-                  <span className="ml-3">Zwemmateriaal</span>
+                  <span className="ml-3">Materiaal</span>
                 </li>
               </Link>
               <Link href="/zwemverzorging">
                 <li className="py-3 border-b border-opacity-25">
-                  <span className="ml-3">Zwemverzorging</span>
+                  <span className="ml-3">Verzorging</span>
                 </li>
               </Link>
               <Link href="https://les.swimcare.be">
                 <li className="py-3 border-b border-opacity-25">
-                  <span className="ml-3">Zwemlessen</span>
+                  <span className="ml-3">Lessen</span>
                 </li>
               </Link>
               <Link href="https://blog.swimcare.be">
