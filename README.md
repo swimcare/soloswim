@@ -63,6 +63,7 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILGUN_REPLY_TO` | Antwoordadres voor klantmails, bv. `info@soloswim.be` |
 | `MAILGUN_ORDER_TEMPLATE` | Exacte templatenaam, bv. `soloswim bedankt voor je bestelling` |
 | `MAILGUN_ORDER_BCC` | Kopie ordermail (SoloSwim), bv. `kristof@soloswim.be` |
+| `TRUSTPILOT_AFS_BCC` | Uniek Trustpilot AFS-adres (BCC op ordermail → automatische reviewuitnodiging) |
 | `MAILGUN_CONTACT_TO` | Ontvanger(s) contactformulier (komma-gescheiden), bv. `info@soloswim.be,kristof@soloswim.be` |
 | `MAILCHIMP_API_KEY` | Mailchimp API key (SwimCare-account) |
 | `MAILCHIMP_AUDIENCE_ID` | Audience/list-ID van de SwimCare-mailinglijst |
@@ -98,6 +99,17 @@ Score + reviews via officiële TrustBox op de homepage (reviews-sectie) en revie
 4. Image opnieuw bouwen/deployen (NEXT_PUBLIC_ wordt bij build meegenomen)
 
 Zonder Business Unit ID tonen we nog steeds een link + “Schrijf een review”-knop; de live score-widget verschijnt pas mét ID.
+
+#### Automatic Feedback Service (AFS)
+
+Trustpilot kan na elke aankoop automatisch een reviewuitnodiging sturen als je hun unieke **BCC-adres** meestuurt op de orderbevestiging.
+
+1. Trustpilot Business → Get reviews → **Automatic Feedback Service**
+2. Kopieer het unieke BCC-adres (vaak `…@clients.trustpilot.com` of vergelijkbaar)
+3. Zet in `.env`: `TRUSTPILOT_AFS_BCC=dat-adres@…`
+4. Container herstarten (`docker compose up -d --force-recreate soloswim`) — runtime env, geen rebuild nodig
+
+De ordermail gaat dan BCC naar zowel `MAILGUN_ORDER_BCC` als `TRUSTPILOT_AFS_BCC`. De klant ziet het AFS-adres niet.
 
 #### Orderbevestiging (Mailgun-template)
 
