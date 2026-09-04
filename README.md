@@ -64,10 +64,27 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILGUN_ORDER_TEMPLATE` | Exacte templatenaam, bv. `soloswim bedankt voor je bestelling` |
 | `MAILGUN_ORDER_BCC` | Kopie ordermail (SoloSwim), bv. `kristof@soloswim.be` |
 | `MAILGUN_CONTACT_TO` | Ontvanger(s) contactformulier (komma-gescheiden), bv. `info@soloswim.be,kristof@soloswim.be` |
+| `MAILCHIMP_API_KEY` | Mailchimp API key (SwimCare-account) |
+| `MAILCHIMP_AUDIENCE_ID` | Audience/list-ID van de SwimCare-mailinglijst |
+| `MAILCHIMP_SERVER_PREFIX` | Optioneel, bv. `us21` (anders uit API-key-suffix) |
+| `MAILCHIMP_TAG` | Tag op nieuwe inschrijvingen (standaard `SoloSwim`) |
+| `MAILCHIMP_STATUS_IF_NEW` | `pending` (double opt-in, default) of `subscribed` |
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
 | `GOOGLE_ANALYTICS_ID` | GA4 measurement ID (`G-…`). **Aanbevolen** — runtime via `/api/public-config` (niet geïnlined bij build). |
 | `NEXT_PUBLIC_GOOGLE_ANALYTICS` | Optionele fallback (zelfde ID). Next kan `NEXT_PUBLIC_*` bij build leeg inlinen; gebruik bij voorkeur `GOOGLE_ANALYTICS_ID`. |
 | `INTERNAL_API_SECRET` | Optioneel; beschermt handmatige POST naar interne order/mail API’s |
+
+### Mailchimp nieuwsbrief (footer)
+
+Bezoekers schrijven zich via de footer in op de **bestaande SwimCare-audience**. Elke inschrijving krijgt de tag `SoloSwim` (of `MAILCHIMP_TAG`).
+
+1. Mailchimp → Audience → Settings → **Audience ID** kopiëren → `MAILCHIMP_AUDIENCE_ID`
+2. Account → Extras → **API keys** → `MAILCHIMP_API_KEY`
+3. Zorg dat de tag **SoloSwim** bestaat (of laat de API hem aanmaken bij de eerste signup)
+4. Default is double opt-in (`MAILCHIMP_STATUS_IF_NEW=pending`) — past bij EU/GDPR
+5. Na `.env` wijzigen: `docker compose up -d --force-recreate soloswim`
+
+Test: footerformulier invullen → in Mailchimp bij Contacts de tag SoloSwim zien (na bevestiging bij pending).
 
 ### Mailgun orderbevestiging
 

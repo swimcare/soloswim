@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {} from "@heroicons/react/solid";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import NewsletterSignup from "./NewsletterSignup";
 
 function Footer() {
   return (
@@ -19,7 +20,10 @@ function Footer() {
         <div className="bg-soloswim2-pink h-9"></div>
       </div>
       <div className="bg-grey-light4">
-        <div className="flex flex-col md:flex-row md:justify-between md:px-5 max-w-6xl mx-auto gap-6 py-8 lg:py-20">
+        <div className="px-5 pt-10 pb-2 md:pt-14">
+          <NewsletterSignup variant="footer" />
+        </div>
+        <div className="flex flex-col md:flex-row md:justify-between md:px-5 max-w-6xl mx-auto gap-6 py-8 lg:py-16">
           <div className="text-center">
             <h4 className="text-main font-semibold font-lexend text-xl mb-3 md:mb-5">
               Info
