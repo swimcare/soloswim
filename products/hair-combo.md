@@ -4,7 +4,7 @@ product_id: "THHC1"
 ean: "7290112166661"
 title: "Hair Combo"
 subtitle: "TRIHARD Hair Combo Kit"
-price: 38.99
+price: 40.99
 description: "De Hair Combo Kit biedt de perfecte oplossing voor zwemmers om hun haar te beschermen en herstellen na blootstelling aan zwembadchemicaliën en zoutwater. Deze combinatie zorgt voor gehydrateerd, gezond en verfrist haar."
 inStock: true
 brand: "TRIHARD"

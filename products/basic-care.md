@@ -4,7 +4,7 @@ product_id: "THBC1"
 ean: "7290112168405"
 title: "Basic Care"
 subtitle: "TRIHARD Basic Care Kit"
-price: 68.99
+price: 72.99
 description: "De Basic Care Kit biedt essentiële verzorging voor zwemmers, gericht op het beschermen en herstellen van haar en huid na het zwemmen. Deze kit is perfect voor dagelijkse basisverzorging en houdt je huid en haar gezond en gehydrateerd."
 inStock: true
 brand: "TRIHARD"
