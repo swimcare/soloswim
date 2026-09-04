@@ -1,6 +1,7 @@
 import "tailwindcss/tailwind.css";
 import { Provider } from "react-redux";
 import { Lexend, Montserrat } from "next/font/google";
+import Script from "next/script";
 import { store } from "../store/store";
 import Header from "../components/main/Header";
 import Footer from "../components/main/Footer";
@@ -56,6 +57,10 @@ function MyApp({ Component, pageProps }) {
       <div
         className={`${montserrat.variable} ${lexend.variable} font-sans`}
       >
+        <Script
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          strategy="lazyOnload"
+        />
         <GoogleAnalytics />
         <Chatwoot />
         <BasketPersistence />

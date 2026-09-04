@@ -44,6 +44,12 @@ module.exports = {
         destination: "https://g.page/r/CRxat-X_lZvOEAg/review",
         permanent: true,
       },
+      // Trustpilot reviews
+      {
+        source: "/trustpilot",
+        destination: "https://nl-be.trustpilot.com/review/soloswim.be",
+        permanent: true,
+      },
       //Promotions
       {
         source: "/f1",

@@ -69,6 +69,8 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILCHIMP_SERVER_PREFIX` | Optioneel, bv. `us21` (anders uit API-key-suffix) |
 | `MAILCHIMP_TAG` | Tag op nieuwe inschrijvingen (standaard `SoloSwim`) |
 | `MAILCHIMP_STATUS_IF_NEW` | `pending` (double opt-in, default) of `subscribed` |
+| `NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID` | Trustpilot Business Unit ID (voor TrustBox score/reviews) |
+| `NEXT_PUBLIC_TRUSTPILOT_URL` | Optioneel; default `https://nl-be.trustpilot.com/review/soloswim.be` |
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
 | `GOOGLE_ANALYTICS_ID` | GA4 measurement ID (`G-…`). **Aanbevolen** — runtime via `/api/public-config` (niet geïnlined bij build). |
 | `NEXT_PUBLIC_GOOGLE_ANALYTICS` | Optionele fallback (zelfde ID). Next kan `NEXT_PUBLIC_*` bij build leeg inlinen; gebruik bij voorkeur `GOOGLE_ANALYTICS_ID`. |
@@ -85,6 +87,33 @@ Bezoekers schrijven zich via de footer in op de **bestaande SwimCare-audience**.
 5. Na `.env` wijzigen: `docker compose up -d --force-recreate soloswim`
 
 Test: footerformulier invullen → in Mailchimp bij Contacts de tag SoloSwim zien (na bevestiging bij pending).
+
+### Trustpilot
+
+Score + reviews via officiële TrustBox op de homepage (reviews-sectie) en review-CTA op `/bestelling-voltooid`. Korte link: `https://www.soloswim.be/trustpilot`.
+
+1. Log in op [Trustpilot Business](https://businessapp.b2b.trustpilot.com/)
+2. Integrations → **TrustBox** → kopieer **Business Unit ID**
+3. Zet in `.env`: `NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID=...`
+4. Image opnieuw bouwen/deployen (NEXT_PUBLIC_ wordt bij build meegenomen)
+
+Zonder Business Unit ID tonen we nog steeds een link + “Schrijf een review”-knop; de live score-widget verschijnt pas mét ID.
+
+#### Orderbevestiging (Mailgun-template)
+
+De API stuurt mee:
+
+| Parameter | Waarde |
+|---|---|
+| `{{trustpilot_url}}` | https://nl-be.trustpilot.com/review/soloswim.be |
+| `{{trustpilot_review_url}}` | zelfde URL (review schrijven) |
+
+Voeg in Mailgun (Sending → Templates → orderbevestiging) bv. toe:
+
+```html
+<p>Tevreden over SoloSwim? Laat een review achter op Trustpilot:<br/>
+<a href="{{trustpilot_review_url}}">{{trustpilot_review_url}}</a></p>
+```
 
 ### Mailgun orderbevestiging
 
@@ -108,6 +137,13 @@ Test: footerformulier invullen → in Mailchimp bij Contacts de tag SoloSwim zie
 | `{{order_number}}` | 6483-949220-4478 |
 | `{{order_date}}` | 15/08/2026 |
 | `{{subject}}` | Bedankt voor je bestelling Kristof Ryheul |
+
+**Reviews**
+
+| Parameter | Voorbeeld |
+|---|---|
+| `{{trustpilot_url}}` | https://nl-be.trustpilot.com/review/soloswim.be |
+| `{{trustpilot_review_url}}` | zelfde URL |
 
 **Bedragen** (string met 2 decimalen; euroteken zelf in de template zetten)
 

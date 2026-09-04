@@ -2,6 +2,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/solid";
 import { Carousel } from "react-responsive-carousel";
 import ReviewCard from "./ReviewCard";
 import FadeInFromBottom from "../framer/FadeInFromBottom";
+import TrustpilotSection from "../trustpilot/TrustpilotSection";
 
 function SectionReviewsMain() {
   return (
@@ -11,6 +12,12 @@ function SectionReviewsMain() {
           <h2 className="-mx-2 font-lexend font-extrabold text-3xl md:text-4xl lg:text-6xl leading-normal text-center text-white">
             Reacties van SoloSwim gebruikers
           </h2>
+        </FadeInFromBottom>
+
+        <FadeInFromBottom>
+          <div className="mt-10 mb-4 max-w-xl mx-auto">
+            <TrustpilotSection theme="dark" />
+          </div>
         </FadeInFromBottom>
 
         {/* MOBILE REVIEWS (TOT EN MET SM BREAKPOINT) */}

@@ -120,6 +120,16 @@ function Footer() {
                 </a>
               </li>
             </ul>
+            <p className="mt-4">
+              <a
+                href="https://nl-be.trustpilot.com/review/soloswim.be"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-tiny text-navy-light1 hover:underline hover:text-main"
+              >
+                Reviews op Trustpilot
+              </a>
+            </p>
           </div>
         </div>
         <div className="w-full flex flex-col items-center mb-8">
