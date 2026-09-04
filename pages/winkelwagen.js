@@ -7,11 +7,17 @@ import NumberFormat from "react-number-format";
 import * as ga from "../lib/ga/index";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
+import shippingConfig from "../config/shipping";
 
 function winkelwagen() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
-  const shipping = 5.99;
+  const freeShipping = total >= shippingConfig.freeShippingThreshold;
+  const shipping = freeShipping ? 0 : shippingConfig.belgium;
+  const amountToFreeShipping = Math.max(
+    0,
+    shippingConfig.freeShippingThreshold - total
+  );
 
   // Google analytics event
   const checkoutGA = () => {
@@ -98,14 +104,18 @@ function winkelwagen() {
                   <div className="flex flex-row justify-between my-3 font-semibold font-lexend text-tiny md:text-lg">
                     <p>Verzendkosten*</p>
                     <p>
-                      <NumberFormat
-                        value={shipping}
-                        decimalSeparator=","
-                        displayType="text"
-                        prefix={"€ "}
-                        decimalScale={2}
-                        fixedDecimalScale={true}
-                      />
+                      {freeShipping ? (
+                        <span className="text-main">Gratis</span>
+                      ) : (
+                        <NumberFormat
+                          value={shipping}
+                          decimalSeparator=","
+                          displayType="text"
+                          prefix={"€ "}
+                          decimalScale={2}
+                          fixedDecimalScale={true}
+                        />
+                      )}
                     </p>
                   </div>
                   <div className="flex flex-row justify-between my-3 font-semibold font-lexend text-tiny md:text-lg">
@@ -125,8 +135,38 @@ function winkelwagen() {
                     </p>
                   </div>
                   <p className="text-xs">
-                    *Verzendkosten binnen België. Definitieve verzendkosten
-                    worden berekend tijdens afrekenen in de volgende stap.
+                    {freeShipping ? (
+                      <>
+                        *Gratis verzending vanaf €{" "}
+                        {shippingConfig.freeShippingThreshold} (BE &amp; NL).
+                        Definitieve verzendkosten worden bevestigd tijdens
+                        afrekenen.
+                      </>
+                    ) : (
+                      <>
+                        *Verzendkosten binnen België (€{" "}
+                        {shippingConfig.belgium.toFixed(2).replace(".", ",")}
+                        ). Gratis verzending vanaf €{" "}
+                        {shippingConfig.freeShippingThreshold}
+                        {amountToFreeShipping > 0 && (
+                          <>
+                            {" "}
+                            — nog{" "}
+                            <NumberFormat
+                              value={amountToFreeShipping}
+                              decimalSeparator=","
+                              displayType="text"
+                              prefix={"€ "}
+                              decimalScale={2}
+                              fixedDecimalScale={true}
+                            />{" "}
+                            te gaan
+                          </>
+                        )}
+                        . Definitieve verzendkosten worden berekend tijdens
+                        afrekenen in de volgende stap.
+                      </>
+                    )}
                   </p>
                 </div>
                 <div className="pb-12 pt-4">
@@ -161,8 +201,6 @@ function winkelwagen() {
                 </div>
                 <div className="pb-12 pt-8 max-w-lg mx-auto">
                   <Link href="/producten" passHref>
-                    {/* todo: add Link element */}
-
                     <button
                       role="link"
                       className="text-white lg:text-lg font-bold uppercase w-full px-3 py-4 rounded-full bg-main tracking-wider shadow-xl hover:bg-white hover:text-main border-4 border-main"

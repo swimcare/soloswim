@@ -1,5 +1,6 @@
 const Stripe = require("stripe");
 const { resolveCheckoutLinePrice } = require("../../lib/resolveCheckoutPrice");
+const shippingConfig = require("../../config/shipping");
 
 export default async (req, res) => {
   if (req.method !== "POST") {
@@ -61,6 +62,19 @@ export default async (req, res) => {
     return res.status(400).json({ error: err.message });
   }
 
+  const subtotalCents = pricedItems.reduce(
+    (sum, item) => sum + Math.round(Number(item.price) * 100),
+    0
+  );
+  const freeShipping =
+    subtotalCents >= Math.round(shippingConfig.freeShippingThreshold * 100);
+  const beAmount = freeShipping
+    ? 0
+    : Math.round(shippingConfig.belgium * 100);
+  const nlAmount = freeShipping
+    ? 0
+    : Math.round(shippingConfig.netherlands * 100);
+
   const transformedItems = pricedItems.map((item) => ({
     quantity: 1,
     price_data: {
@@ -97,10 +111,12 @@ export default async (req, res) => {
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: {
-              amount: 799,
+              amount: nlAmount,
               currency: "eur",
             },
-            display_name: "Verzending naar Nederland",
+            display_name: freeShipping
+              ? "Gratis verzending naar Nederland"
+              : "Verzending naar Nederland",
             delivery_estimate: {
               minimum: {
                 unit: "business_day",
@@ -117,10 +133,12 @@ export default async (req, res) => {
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: {
-              amount: 599,
+              amount: beAmount,
               currency: "eur",
             },
-            display_name: "Verzending naar België",
+            display_name: freeShipping
+              ? "Gratis verzending naar België"
+              : "Verzending naar België",
             delivery_estimate: {
               minimum: {
                 unit: "business_day",
@@ -151,6 +169,7 @@ export default async (req, res) => {
         ),
         order_number: id,
         order_date: today,
+        free_shipping: freeShipping ? "1" : "0",
       },
     });
 
@@ -158,6 +177,8 @@ export default async (req, res) => {
       id: session.id,
       order_number: id,
       order_date: today,
+      free_shipping: freeShipping,
+      subtotal_cents: subtotalCents,
     });
 
     // Prefer session.url so the browser does not need NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
