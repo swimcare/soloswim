@@ -1,13 +1,13 @@
 # syntax=docker/dockerfile:1
 
-# Pin to a Node release that includes the Brotli fix (CVE-2026-111497).
-# Do not use floating node:22 — rebuild after security releases.
-FROM node:22.23.4-bookworm-slim AS deps
+# Pin to Node 26 Active LTS (includes Brotli fix CVE-2026-111497).
+# Do not use floating node:26 — rebuild after security releases.
+FROM node:26.13.1-bookworm-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 
-FROM node:22.23.4-bookworm-slim AS builder
+FROM node:26.13.1-bookworm-slim AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -21,7 +21,7 @@ ENV NEXT_PUBLIC_GOOGLE_ANALYTICS=$NEXT_PUBLIC_GOOGLE_ANALYTICS
 
 RUN npm run build
 
-FROM node:22.23.4-bookworm-slim AS runner
+FROM node:26.13.1-bookworm-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 
