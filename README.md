@@ -70,6 +70,8 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MAILCHIMP_SERVER_PREFIX` | Optioneel, bv. `us21` (anders uit API-key-suffix) |
 | `MAILCHIMP_TAG` | Tag op nieuwe inschrijvingen (standaard `SoloSwim`) |
 | `MAILCHIMP_STATUS_IF_NEW` | `pending` (double opt-in, default) of `subscribed` |
+| `MAILCHIMP_CONNECTED_SITE_URL` | Optioneel; volledige mcjs-URL van Connected Sites (`https://chimpstatic.com/mcjs-connected/js/users/…/….js`) |
+| `NEXT_PUBLIC_MAILCHIMP_CONNECTED_SITE_URL` | Optionele fallback (zelfde URL) |
 | `NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID` | Trustpilot Business Unit ID (voor TrustBox score/reviews) |
 | `NEXT_PUBLIC_TRUSTPILOT_URL` | Optioneel; default `https://nl-be.trustpilot.com/review/soloswim.be` |
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
@@ -90,6 +92,18 @@ Bezoekers schrijven zich via de footer in op de **bestaande SwimCare-audience**.
 5. Na `.env` wijzigen: `docker compose up -d --force-recreate soloswim`
 
 Test: footerformulier invullen → in Mailchimp bij Contacts de tag SoloSwim zien (na bevestiging bij pending).
+
+#### Connected Sites (mcjs)
+
+Optioneel, naast de API-nieuwsbrief. Nodig voor Mailchimp website-features (pop-ups, connected-site status, retargeting).
+
+1. Mailchimp → **Integrations** → **Connected sites** → site voor `soloswim.be` toevoegen/openen
+2. **Install code** → kopieer alleen de URL uit het snippet, bv.  
+   `https://chimpstatic.com/mcjs-connected/js/users/<user-hash>/<site-hash>.js`
+3. Zet in `.env`: `MAILCHIMP_CONNECTED_SITE_URL=https://chimpstatic.com/mcjs-connected/js/users/…/….js`
+4. `docker compose up -d --force-recreate soloswim` (geen image rebuild)
+5. Check: `curl -s https://www.soloswim.be/api/public-config` → `mailchimpConnectedSiteUrl` + `configured.mailchimpConnectedSite: true`  
+   DevTools → Network: request naar `chimpstatic.com/mcjs-connected/…`
 
 ### Trustpilot
 

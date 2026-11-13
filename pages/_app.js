@@ -7,6 +7,7 @@ import Footer from "../components/main/Footer";
 import BasketPersistence from "../components/BasketPersistence";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 import MicrosoftClarity from "../components/MicrosoftClarity";
+import MailchimpConnectedSite from "../components/MailchimpConnectedSite";
 import Chatwoot from "../components/Chatwoot";
 import JsonLd from "../components/seo/JsonLd";
 import "../styles/globals.css";
@@ -64,6 +65,7 @@ function MyApp({ Component, pageProps }) {
         />
         <GoogleAnalytics />
         <MicrosoftClarity />
+        <MailchimpConnectedSite />
         <Chatwoot />
         <BasketPersistence />
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
