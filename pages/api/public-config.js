@@ -18,11 +18,17 @@ export default function handler(req, res) {
 
   const gaId =
     env("GOOGLE_ANALYTICS_ID") || env("NEXT_PUBLIC_GOOGLE_ANALYTICS");
+  const clarityId =
+    env("CLARITY_PROJECT_ID") || env("NEXT_PUBLIC_CLARITY_PROJECT_ID");
 
   res.setHeader("Cache-Control", "no-store");
   return res.status(200).json({
     gaId,
+    clarityId,
     // Helps verify deploy without exposing secrets
-    configured: Boolean(gaId),
+    configured: {
+      analytics: Boolean(gaId),
+      clarity: Boolean(clarityId),
+    },
   });
 }

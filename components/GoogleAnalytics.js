@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Script from "next/script";
+import { fetchPublicConfig } from "../lib/publicConfigClient";
 
 /**
  * Loads GA4 using the measurement ID from runtime container env
@@ -12,18 +13,13 @@ function GoogleAnalytics() {
   useEffect(() => {
     let cancelled = false;
 
-    fetch("/api/public-config")
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (cancelled) return;
-        const id = String(data?.gaId || "").trim();
-        if (!id) return;
-        window.__SOLOSWIM_GA_ID__ = id;
-        setGaId(id);
-      })
-      .catch((err) => {
-        console.error("Google Analytics config error:", err);
-      });
+    fetchPublicConfig().then((data) => {
+      if (cancelled) return;
+      const id = String(data?.gaId || "").trim();
+      if (!id) return;
+      window.__SOLOSWIM_GA_ID__ = id;
+      setGaId(id);
+    });
 
     return () => {
       cancelled = true;

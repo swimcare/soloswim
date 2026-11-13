@@ -75,6 +75,8 @@ Zie `.env.example` voor het volledige overzicht. Belangrijkste:
 | `MONGODB_URL` | Wordt in Compose overschreven naar `mongodb://mongo:27017/soloswim` |
 | `GOOGLE_ANALYTICS_ID` | GA4 measurement ID (`G-…`). **Aanbevolen** — runtime via `/api/public-config` (niet geïnlined bij build). |
 | `NEXT_PUBLIC_GOOGLE_ANALYTICS` | Optionele fallback (zelfde ID). Next kan `NEXT_PUBLIC_*` bij build leeg inlinen; gebruik bij voorkeur `GOOGLE_ANALYTICS_ID`. |
+| `CLARITY_PROJECT_ID` | Microsoft Clarity project-ID. **Aanbevolen** — runtime via `/api/public-config`. |
+| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Optionele fallback (zelfde ID). |
 | `INTERNAL_API_SECRET` | Optioneel; beschermt handmatige POST naar interne order/mail API’s |
 
 ### Mailchimp nieuwsbrief (footer)
@@ -240,8 +242,34 @@ Image pushen (als je een registry gebruikt):
 docker push swimcare/soloswim:latest
 ```
 
-> Stripe-, Mailgun-, Mongo- en Google Analytics-waarden zitten **niet** hard in de image. Die komen via `env_file: .env` bij het starten.  
-> Analytics: browser haalt de ID op via `/api/public-config`. Zet bij voorkeur `GOOGLE_ANALYTICS_ID=G-…` in `.env` (Next.js inline’t `NEXT_PUBLIC_*` soms leeg bij build). Check: `curl -s https://www.soloswim.be/api/public-config`.
+> Stripe-, Mailgun-, Mongo-, Google Analytics- en Clarity-waarden zitten **niet** hard in de image. Die komen via `env_file: .env` bij het starten.  
+> Analytics + Clarity: browser haalt IDs op via `/api/public-config`. Zet bij voorkeur `GOOGLE_ANALYTICS_ID` en `CLARITY_PROJECT_ID` in `.env` (Next.js inline’t `NEXT_PUBLIC_*` soms leeg bij build). Check: `curl -s https://www.soloswim.be/api/public-config`.
+
+### Microsoft Clarity
+
+1. Project aanmaken op [clarity.microsoft.com](https://clarity.microsoft.com/)
+2. Settings → Setup → kopieer **Project ID**
+3. Zet in `.env`: `CLARITY_PROJECT_ID=…`
+4. `docker compose up -d --force-recreate soloswim` (geen image rebuild nodig)
+5. Check: `curl -s https://www.soloswim.be/api/public-config` → `"clarityId":"…","configured":{"clarity":true,…}`
+
+### Google Merchant Center (productfeed)
+
+Feed-URL (live gegenereerd uit `/products/*.md`):
+
+`https://www.soloswim.be/merchant-feed.xml`
+
+In Merchant Center:
+
+1. Products → Feeds → **Add primary feed** (of Complementary)
+2. Land: België (en eventueel NL), taal: Nederlands
+3. Input method: **Scheduled fetch**
+4. File URL: `https://www.soloswim.be/merchant-feed.xml`
+5. Frequentie: dagelijks (feed is 1u gecached)
+
+De feed bevat id, titel, beschrijving, link, image, availability, condition, price/sale_price, brand, mpn, identifier_exists, product_type, shipping (BE/NL), en sizeVariants als aparte items met `item_group_id`. Producten zonder EAN/GTIN krijgen `identifier_exists=no` (eigen SoloSwim-artikelen). Optioneel later GTINs toevoegen in frontmatter (`ean:`) voor betere matching.
+
+Website claimen in Merchant Center via Search Console (soloswim.be is al geverifieerd met `public/google2ec4464d3f4ef639.html`).
 
 ---
 
@@ -393,18 +421,20 @@ Handige frontmatter-velden:
 |---|---|
 | `robots.txt` | `public/robots.txt` |
 | Sitemap | `https://www.soloswim.be/sitemap.xml` (`pages/sitemap.xml.js`) |
+| Merchant feed | `https://www.soloswim.be/merchant-feed.xml` (`pages/merchant-feed.xml.js`) |
 | Canonical + OG | `lib/site.js` → `pageSeo()` op publieke pagina’s |
 | JSON-LD | Organization + WebSite in `_app`; Product/FAQ/Breadcrumb op product- en listingpagina’s |
 | FAQ-bron | `data/faq.js` (UI + FAQPage-schema) |
 | On-page | Eén H1 per pagina, beschrijvende alt-teksten, interne footerlinks |
-| Performance | Self-hosted fonts (`next/font`), deferred Chatwoot, AVIF/WebP, image `sizes`/`priority` voor LCP |
+| Performance | Self-hosted fonts (`next/font`), deferred Chatwoot/Clarity/GA, AVIF/WebP, image `sizes`/`priority` voor LCP |
 
 Na deploy:
 
-1. Check `https://www.soloswim.be/robots.txt` en `/sitemap.xml`
+1. Check `https://www.soloswim.be/robots.txt`, `/sitemap.xml` en `/merchant-feed.xml`
 2. In Google Search Console: sitemap indienen
-3. Rich Results Test / Schema Validator op een productpagina
-4. Optioneel: PageSpeed Insights / CrUX op homepage en een productpagina
+3. In Merchant Center: feed URL als scheduled fetch toevoegen
+4. Rich Results Test / Schema Validator op een productpagina
+5. Optioneel: PageSpeed Insights / CrUX op homepage en een productpagina
 
 ---
 
@@ -517,7 +547,9 @@ Daarna opnieuw **build + deploy**. Lokaal: `npm run build && npm run start` en `
 | Checkout start niet | `STRIPE_SECRET_KEY` + `HOST` in `.env`; app-logs |
 | Geen ordermail | Mailgun env + templatenaam; logs op `Mailgun order confirmation` / `Webhook: email` |
 | Contactformulier “verzonden” maar geen mail | Check `MAILGUN_CONTACT_TO` + Mailgun Logs (`delivered` vs `failed`). Bij `550 5.7.511 banned sender` → Microsoft blokkeert het Mailgun-IP; zie “M365 banned sender” hieronder. |
-| Geen Google Analytics hits | `curl -s https://www.soloswim.be/api/public-config` moet `{"gaId":"G-…","configured":true}` tonen. Zet bij voorkeur `GOOGLE_ANALYTICS_ID=G-…` in `.env` (niet alleen `NEXT_PUBLIC_…`). Daarna recreate + nieuwe image. DevTools → Network: `gtag/js?id=G-…`. |
+| Geen Google Analytics hits | `curl -s …/api/public-config` → `gaId` + `configured.analytics: true`. Zet `GOOGLE_ANALYTICS_ID=G-…` in `.env`, dan recreate. DevTools → Network: `gtag/js?id=G-…`. |
+| Geen Clarity sessies | Zelfde endpoint → `clarityId` + `configured.clarity: true`. Zet `CLARITY_PROJECT_ID` in `.env`, recreate. Network: `clarity.ms/tag/…`. |
+| Merchant feed leeg / fout | Open `/merchant-feed.xml`; moet RSS met `<g:id>` items tonen. Check product markdown + build. |
 | `getaddrinfo EAI_AGAIN mongo` / order persistence failed | App kan hostname `mongo` niet resolven. Zie hieronder “Mongo DNS”. |
 | Order niet in DB | Mongo draait? `docker compose ps`; webhook-logs op `order stored` |
 | Winkelwagen leeg na refresh | Cart zit in `localStorage` (`soloswim-basket`); na succesvolle betaling wordt die geleegd |
