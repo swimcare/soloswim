@@ -13,7 +13,6 @@ function Modal(inhoud) {
   const typeQuery = searchParams?.get("type");
 
   const data = inhoud.inhoud;
-  console.log(data);
 
   return (
     <>

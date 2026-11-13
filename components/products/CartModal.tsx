@@ -15,7 +15,6 @@ function Modal() {
   const pathname = usePathname();
 
   const addedItem = useSelector(selectItems).slice(-1);
-  console.log(addedItem);
 
   const typeNumber = () => {
     if (!addedItem[0].type) {

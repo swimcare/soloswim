@@ -49,7 +49,6 @@ export default function Zwemschema({ productData }) {
       images: product.images,
       winkelwagen_images: product.winkelwagen_images,
     };
-    console.log(cartObject);
     // Sending the product as an action to the REDUX store... the basket slice
     dispatch(addToBasket(cartObject));
     // Google analytics event

@@ -37,8 +37,6 @@ export default async (req, res) => {
     return res.status(400).json({ error: "No items provided" });
   }
 
-  console.log("Checkout: received items:", items);
-
   let pricedItems;
   try {
     // Never trust client prices — resolve from markdown + sale config
@@ -171,14 +169,6 @@ export default async (req, res) => {
         order_date: today,
         free_shipping: freeShipping ? "1" : "0",
       },
-    });
-
-    console.log("Checkout: session created successfully:", {
-      id: session.id,
-      order_number: id,
-      order_date: today,
-      free_shipping: freeShipping,
-      subtotal_cents: subtotalCents,
     });
 
     // Prefer session.url so the browser does not need NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY

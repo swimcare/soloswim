@@ -55,12 +55,10 @@ function contact() {
         if (res.status === 200) {
           router.push("/bericht-verzonden");
         } else {
-          console.log(res);
           setError(true);
         }
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
         setError(true);
       });
   };

@@ -90,7 +90,7 @@ ${escapeHtml(userMessage).replace(/\n/g, "<br />")}
     // From must stay on the Mailgun sending domain (SPF/DKIM). Replies use Reply-To.
     const from = getMailgunFrom();
 
-    const internal = await mg.messages.create(domain, {
+    await mg.messages.create(domain, {
       from,
       to: internalTo,
       "h:Reply-To": email,
@@ -99,26 +99,14 @@ ${escapeHtml(userMessage).replace(/\n/g, "<br />")}
       html: internalText.replace(/\n/g, "<br />"),
     });
 
-    console.log("Contact notify accepted:", {
-      id: internal?.id,
-      to: internalTo,
-      message: internal?.message,
-    });
-
     try {
-      const confirmation = await mg.messages.create(domain, {
+      await mg.messages.create(domain, {
         from,
         to: [`${name} <${email}>`],
         "h:Reply-To": replyTo,
         subject: "We hebben je bericht ontvangen — SoloSwim",
         text: confirmationText,
         html: confirmationHtml,
-      });
-
-      console.log("Contact confirmation accepted:", {
-        id: confirmation?.id,
-        to: email,
-        replyTo,
       });
     } catch (confirmError) {
       // SoloSwim notify already accepted; don't fail the form for the auto-reply.

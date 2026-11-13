@@ -101,7 +101,6 @@ function SectionProductDescription({ productData, addItemToBasket }) {
         productData.type = niveauValue;
       }
 
-      console.log("useEffect triggered to set niveau state to: " + niveauParam);
     } else if (productData.sizes && productData.sizes.length > 0) {
       // Pre-select the first size option for products with sizes
       const firstSize = productData.sizes[0];

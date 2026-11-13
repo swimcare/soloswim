@@ -8,34 +8,18 @@ import { sendOrderConfirmationEmail } from "../../lib/sendOrderConfirmationEmail
  * without blocking the webhook HTTP response.
  */
 async function persistOrder(sessionData) {
-  console.log(
-    "Webhook: persistOrder started for order:",
-    sessionData.order_number
-  );
-
-  const order = await createOrder(sessionData);
-  console.log("Webhook: order stored successfully:", order?.order_number);
-  return order;
+  return createOrder(sessionData);
 }
 
 function sendConfirmationEmailInBackground(sessionData) {
   // Fire-and-forget: Stripe only waits ~20s; Mailgun must not block the response.
-  sendOrderConfirmationEmail(sessionData)
-    .then((emailResult) => {
-      console.log(
-        "Webhook: email sent successfully, status:",
-        emailResult.statusCode,
-        "order:",
-        sessionData.order_number
-      );
-    })
-    .catch((err) => {
-      console.error(
-        "Webhook: email error occurred for order",
-        sessionData.order_number,
-        err.message
-      );
-    });
+  sendOrderConfirmationEmail(sessionData).catch((err) => {
+    console.error(
+      "Webhook: email error occurred for order",
+      sessionData.order_number,
+      err.message
+    );
+  });
 }
 
 function buildSessionData(session) {
@@ -117,8 +101,6 @@ export default async (req, res) => {
       error: "Webhook signature verification failed",
     });
   }
-
-  console.log("Webhook: received event:", event.type, event.id);
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object;
