@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import WinkelwagenItem from "../components/winkelwagen/WinkelwagenItem";
 import axios from "axios";
 import Link from "next/link";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 import * as ga from "../lib/ga/index";
 import { Fragment } from "react";
 import { NextSeo } from "next-seo";
@@ -92,7 +92,7 @@ function winkelwagen() {
                       Subtotaal
                       <span className="text-xs font-normal"> (incl. BTW)</span>
                     </p>
-                    <NumberFormat
+                    <NumericFormat
                       value={total}
                       decimalSeparator=","
                       displayType="text"
@@ -107,7 +107,7 @@ function winkelwagen() {
                       {freeShipping ? (
                         <span className="text-main">Gratis</span>
                       ) : (
-                        <NumberFormat
+                        <NumericFormat
                           value={shipping}
                           decimalSeparator=","
                           displayType="text"
@@ -124,7 +124,7 @@ function winkelwagen() {
                       <span className="text-xs font-normal"> (incl. BTW)</span>
                     </p>
                     <p>
-                      <NumberFormat
+                      <NumericFormat
                         value={total + shipping}
                         decimalSeparator=","
                         displayType="text"
@@ -152,7 +152,7 @@ function winkelwagen() {
                           <>
                             {" "}
                             — nog{" "}
-                            <NumberFormat
+                            <NumericFormat
                               value={amountToFreeShipping}
                               decimalSeparator=","
                               displayType="text"

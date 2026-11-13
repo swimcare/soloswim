@@ -21,4 +21,4 @@ const CompletedOrderSchema = new mongoose.Schema({
   total: Number,
 }, {strict: false})
 
-module.exports = mongoose.models.Completed_Order || mongoose.model('Completed_Order', CompletedOrderSchema)
+export default mongoose.models.Completed_Order || mongoose.model('Completed_Order', CompletedOrderSchema)

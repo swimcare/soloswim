@@ -1,6 +1,6 @@
-const Stripe = require("stripe");
-const { resolveCheckoutLinePrice } = require("../../lib/resolveCheckoutPrice");
-const shippingConfig = require("../../config/shipping");
+import Stripe from "stripe";
+import { resolveCheckoutLinePrice } from "../../lib/resolveCheckoutPrice";
+import shippingConfig from "../../config/shipping";
 
 export default async (req, res) => {
   if (req.method !== "POST") {

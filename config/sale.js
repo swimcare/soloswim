@@ -23,4 +23,4 @@ const saleConfig = {
   },
 };
 
-module.exports = saleConfig;
+export default saleConfig;

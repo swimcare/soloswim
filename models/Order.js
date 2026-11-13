@@ -23,4 +23,4 @@ const OrderSchema = new mongoose.Schema({
   total: Number,
 }, {strict: false})
 
-module.exports = mongoose.models.Order || mongoose.model('Order', OrderSchema)
+export default mongoose.models.Order || mongoose.model('Order', OrderSchema)

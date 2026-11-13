@@ -1,4 +1,4 @@
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 
 /**
  * Shows current price; if on sale, also shows struck-through list price + % badge.
@@ -24,7 +24,7 @@ function PriceDisplay({
   return (
     <div className={`flex flex-wrap items-baseline gap-x-2 gap-y-1 ${className}`}>
       <p className={priceClass}>
-        <NumberFormat
+        <NumericFormat
           value={price}
           decimalSeparator=","
           displayType="text"
@@ -36,7 +36,7 @@ function PriceDisplay({
       {showSale && (
         <>
           <p className={`${size === "lg" ? "text-lg lg:text-2xl" : "text-tiny md:text-base"} ${oldPriceClassName}`}>
-            <NumberFormat
+            <NumericFormat
               value={oldPrice}
               decimalSeparator=","
               displayType="text"
