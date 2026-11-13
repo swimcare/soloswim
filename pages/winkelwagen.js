@@ -6,7 +6,7 @@ import Link from "next/link";
 import { NumericFormat } from "react-number-format";
 import * as ga from "../lib/ga/index";
 import { Fragment } from "react";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../components/seo/Seo";
 import shippingConfig from "../config/shipping";
 
 function winkelwagen() {

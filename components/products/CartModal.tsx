@@ -51,7 +51,7 @@ function Modal() {
       {modal && (
         <>
           {/* <div className="fixed top-0 left-0 z-30 w-screen h-screen bg-black opacity-50" /> */}
-          <dialog className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
+          <dialog className="fixed left-0 top-0 w-full h-full bg-black/50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
             <div
               className={`fixed top-0 overflow-y-auto mx-auto inset-x-0 z-40 w-full px-5 py-5 h-screen"
           }`}
@@ -76,7 +76,7 @@ function Modal() {
                       </button>
                     </Link>
                   </div>
-                  <div className="flex-shrink flex-grow p-4">
+                  <div className="shrink grow p-4">
                     <div className="flex flex-row gap-5 my-5">
                       <div className="w-44">
                         <Image
@@ -154,7 +154,7 @@ function Modal() {
           </dialog>
         </>
 
-        // <dialog className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
+        // <dialog className="fixed left-0 top-0 w-full h-full bg-black/50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
         //   <div className="bg-white m-auto p-8">
         //     <div className="flex flex-col items-center">
         //       <p>Modal content</p>

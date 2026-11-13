@@ -7,7 +7,7 @@ import SectionProductDescription from "../../components/products/SectionProductD
 import SectionProductTabs from "../../components/products/SectionProductTabs";
 import SectionNiveauInfo from "../../components/products/SectionNiveauInfo";
 import * as ga from "../../lib/ga/index";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../../components/seo/Seo";
 import CartModal from "../../components/products/CartModal";
 import PreviewModal from "../../components/products/PreviewModal";
 import JsonLd from "../../components/seo/JsonLd";

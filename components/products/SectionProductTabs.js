@@ -32,7 +32,7 @@ function SectionProductTabs({ productData }) {
           className="px-5 sm:px-8 max-w-screen-xl mx-auto md:py-5 lg:py-20"
         >
           {/* Desktop tab systeem */}
-          <div className="hidden md:block w-full border-b border-grey-warm border-opacity-25">
+          <div className="hidden md:block w-full border-b border-grey-warm/25">
             <ul className="flex flex-row transform translate-y-0.5">
               <li
                 onClick={() => setActiveTab(1)}
@@ -86,7 +86,7 @@ function SectionProductTabs({ productData }) {
               <div className="md:my-14 flex-col md:flex-row md:space-x-14 gap-5 md:gap-0 hidden md:flex">
                 {productData.tab1_image && (
                   <div
-                    className="md:mx-0 mx-auto flex-shrink-0 flex items-start justify-center"
+                    className="md:mx-0 mx-auto shrink-0 flex items-start justify-center"
                     style={{ maxWidth: "420px" }}
                   >
                     <div className="md:shadow-custom4 md:rounded-xl md:text-zero w-full h-auto relative">
@@ -113,7 +113,7 @@ function SectionProductTabs({ productData }) {
                   <h2 className="hidden md:block text-main text-2xl font-lexend font-extrabold">
                     {productData.title}
                   </h2>
-                  <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
+                  <div className="md:hidden my-4 border-b-3 border-grey-warm/25">
                     <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
                       Wat krijg je
                     </h2>
@@ -146,7 +146,7 @@ function SectionProductTabs({ productData }) {
             {/* TAB 3: BENODIGDHEDEN */}
             {activeTab === 3 && !productData.isAccessoire && (
               <div className="py-14 lg:py-10 hidden md:block">
-                <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
+                <div className="md:hidden my-4 border-b-3 border-grey-warm/25">
                   <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
                     Wat heb je nodig
                   </h2>
@@ -187,7 +187,7 @@ function SectionProductTabs({ productData }) {
                 <h2 className="hidden md:block text-main text-2xl font-lexend font-extrabold">
                   {productData.title}
                 </h2>
-                <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
+                <div className="md:hidden my-4 border-b-3 border-grey-warm/25">
                   <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
                     Wat krijg je
                   </h2>
@@ -219,7 +219,7 @@ function SectionProductTabs({ productData }) {
             {/* TAB 3: BENODIGDHEDEN */}
             {!productData.isAccessoire && (
               <div className="py-14 lg:py-10 md:hidden">
-                <div className="md:hidden my-4 border-b-3 border-grey-warm border-opacity-25">
+                <div className="md:hidden my-4 border-b-3 border-grey-warm/25">
                   <h2 className="my-1 text-main text-2xl font-lexend font-extrabold">
                     Wat heb je nodig
                   </h2>

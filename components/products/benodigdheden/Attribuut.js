@@ -7,7 +7,7 @@ function Attribuut({ icon, name, tooltipText, bestelButton }) {
     return (
       <div className="bg-white rounded-xl shadow-custom1 pt-8 h-full">
         <div className="flex flex-col gap-3 items-stretch">
-          <div className="text-center h-20 w-20 relative mx-auto flex-shrink-0">
+          <div className="text-center h-20 w-20 relative mx-auto shrink-0">
             <Image
               src={icon}
               alt={name}

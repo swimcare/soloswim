@@ -1,4 +1,3 @@
-import "tailwindcss/tailwind.css";
 import { Provider } from "react-redux";
 import { Lexend, Montserrat } from "next/font/google";
 import Script from "next/script";
@@ -13,7 +12,7 @@ import "../styles/globals.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import * as ga from "../lib/ga";
-import { DefaultSeo } from "next-seo";
+import { DefaultSeo } from "../components/seo/Seo";
 import ScrollToTop from "../components/general/ScrollToTop";
 import { pageSeo } from "../lib/site";
 import { organizationJsonLd, websiteJsonLd } from "../lib/seo";

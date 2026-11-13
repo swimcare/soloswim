@@ -1,20 +1,17 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     screens: {
       xs: "475px",
       sm: "640px",
-      // => @media (min-width: 640px) { ... }
       md: "768px",
-      // => @media (min-width: 768px) { ... }
       lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
       xl: "1280px",
-      // => @media (min-width: 1280px) { ... }
       "2xl": "1536px",
-      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       fontSize: {
@@ -92,18 +89,18 @@ module.exports = {
       },
       lineHeight: {
         "extra-loose": "2.5",
-        11: "3rem", //48px
-        12: "3.5rem", //56px
-        13: "4rem", //64px
-        14: "4.5rem", //72px
-        15: "5rem", //80px
+        11: "3rem",
+        12: "3.5rem",
+        13: "4rem",
+        14: "4.5rem",
+        15: "5rem",
       },
       borderWidth: {
         3: "3px",
         5: "5px",
       },
       translate: {
-        0.5: "0.125rem", //2px
+        0.5: "0.125rem",
       },
       boxShadow: {
         custom1: "0 3px 20px rgba(0, 0, 0, 0.07)",
@@ -117,11 +114,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: { backgroundColor: ["checked"], borderColor: ["checked"] },
-  },
-  plugins: [
-    // ...
-    require("@tailwindcss/line-clamp"),
-  ],
+  plugins: [],
 };

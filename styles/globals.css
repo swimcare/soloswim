@@ -1,13 +1,5 @@
-@tailwind base;
-@tailwind components;
-
-@layer base {
-}
-
-@layer components {
-}
-
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 /* Markdown content spacing */
 .markdown-content p {
@@ -45,13 +37,11 @@
 .carousel .control-next.control-arrow,
 .carousel .control-next.control-arrow:hover {
   background-color: transparent !important;
-  /* right: -146px !important; */
 }
 
 .carousel .control-prev.control-arrow,
 .carousel .control-prev.control-arrow:hover {
   background-color: transparent !important;
-  /* left: -146px!important; */
 }
 
 .carousel .control-arrow,

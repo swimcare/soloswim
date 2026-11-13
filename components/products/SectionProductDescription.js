@@ -114,7 +114,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
     <section className="bg-white">
       <div className="md:px-8 max-w-screen-xl mx-auto pb-10 md:py-10">
         <div className="flex flex-row flex-wrap md:flex-nowrap justify-between gap-10">
-          <div className="w-full md:max-w-sm lg:max-w-md xl:max-w-xl md:flex-grow md:w-32 md:mt-4 lg:-mt-6 xl:mt-6 hover:cursor-pointer">
+          <div className="w-full md:max-w-sm lg:max-w-md xl:max-w-xl md:grow md:w-32 md:mt-4 lg:-mt-6 xl:mt-6 hover:cursor-pointer">
             <Carousel
               showStatus={false}
               showIndicators={false}

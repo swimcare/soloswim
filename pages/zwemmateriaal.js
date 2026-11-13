@@ -5,7 +5,7 @@ import { getSwimmingEquipmentData } from "../lib/products";
 import PriceDisplay from "../components/general/PriceDisplay";
 import JsonLd from "../components/seo/JsonLd";
 import { Fragment } from "react";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../components/seo/Seo";
 import { pageSeo } from "../lib/site";
 import { breadcrumbJsonLd } from "../lib/seo";
 

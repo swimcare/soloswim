@@ -13,7 +13,7 @@ import WaveExtendedSvg from "../components/main/WaveExtendedSvg";
 import SimpleIconCard from "../components/home/SimpleIconCard";
 import SectionReviewsMain from "../components/home/SectionReviewsMain";
 import Link from "next/link";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../components/seo/Seo";
 import FadeInFromBottom from "../components/framer/FadeInFromBottom";
 import SlideInFromSideSpring from "../components/framer/SlideInFromSideSpring";
 import SlideInFromSide from "../components/framer/SlideInFromSide";
@@ -255,7 +255,7 @@ export default function Home() {
               <div>
                 <SlideInFromSide duration={1.3}>
                   <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
-                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 shrink-0" />
                     <div>
                       <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                         Zorgvuldig samengestelde bundels voor alle niveau’s
@@ -268,7 +268,7 @@ export default function Home() {
                 </SlideInFromSide>
                 <SlideInFromSide duration={1.3}>
                   <li className="py-4 flex flex-row gap-4 sm:max-w-sm lg:max-w-lg">
-                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 shrink-0" />
                     <div>
                       <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                         Verschillende thema’s
@@ -281,7 +281,7 @@ export default function Home() {
                 </SlideInFromSide>
                 <SlideInFromSide duration={1.3}>
                   <li className="py-4 flex flex-row gap-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
-                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 flex-shrink-0" />
+                    <CheckIcon className="w-8 h-8 text-main stroke-current stroke-1 shrink-0" />
                     <div>
                       <h4 className="font-bold font-lexend text-navy-light1 tracking-wide md:text-lg lg:text-xl">
                         Gevarieerde oefeningen
@@ -389,7 +389,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex-grow my-auto transform sm:-translate-x-5">
+              <div className="grow my-auto transform sm:-translate-x-5">
                 <div className="bg-grey-light4 rounded-2xl sm:rounded-l-none p-7 sm:py-2 lg:pr-24 flex flex-col">
                   <div className="text-center sm:hidden w-full max-w-xs">
                     <div
@@ -705,7 +705,7 @@ export default function Home() {
                   Wat jouw niveau ook is
                 </h3>
                 <SlideInFromSideSpring initialX="300px">
-                  <div className="hidden md:block my-auto flex-shrink-0">
+                  <div className="hidden md:block my-auto shrink-0">
                     <Link href="/producten">
                       <button
                         role="button"

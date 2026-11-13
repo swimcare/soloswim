@@ -1,5 +1,5 @@
 import { MailIcon } from "@heroicons/react/solid";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../components/seo/Seo";
 import { useRouter } from "next/router";
 import { useState, useRef, Fragment } from "react";
 import * as ga from "../lib/ga/index";
@@ -104,7 +104,7 @@ function contact() {
           <form ref={myFormRef} onSubmit={handleSubmit}>
             <div className="grid lg:grid-cols-2 gap-2 lg:gap-10 my-10 max-w-xl mx-auto">
               <input
-                className="rounded-sm p-2 px-4 placeholder-charcoal placeholder-opacity-90 shadow-sm outline-none"
+                className="rounded-sm p-2 px-4 placeholder-charcoal placeholder:opacity-90 shadow-sm outline-none"
                 id="name"
                 type="text"
                 placeholder="Naam*"
@@ -112,7 +112,7 @@ function contact() {
                 required
               />
               <input
-                className="rounded-sm p-2 px-4 placeholder-charcoal placeholder-opacity-90 shadow-sm outline-none"
+                className="rounded-sm p-2 px-4 placeholder-charcoal placeholder:opacity-90 shadow-sm outline-none"
                 id="email"
                 type="email"
                 placeholder="Email*"
@@ -120,14 +120,14 @@ function contact() {
                 required
               />
               <input
-                className="rounded-sm p-2 px-4 placeholder-charcoal placeholder-opacity-90 shadow-sm outline-none"
+                className="rounded-sm p-2 px-4 placeholder-charcoal placeholder:opacity-90 shadow-sm outline-none"
                 id="tel"
                 type="tel"
                 placeholder="Telefoonnummer"
                 onChange={(e) => setTel(e.target.value)}
               />
               <input
-                className="rounded-sm p-2 px-4 placeholder-charcoal placeholder-opacity-90 shadow-sm outline-none"
+                className="rounded-sm p-2 px-4 placeholder-charcoal placeholder:opacity-90 shadow-sm outline-none"
                 id="onderwerp"
                 type="text"
                 placeholder="Onderwerp*"
@@ -135,7 +135,7 @@ function contact() {
                 required
               />
               <textarea
-                className="col-span-full rounded-sm p-2 px-4 placeholder-charcoal placeholder-opacity-90 shadow-sm outline-none"
+                className="col-span-full rounded-sm p-2 px-4 placeholder-charcoal placeholder:opacity-90 shadow-sm outline-none"
                 id="message"
                 type="text"
                 placeholder="Type hier je bericht..."

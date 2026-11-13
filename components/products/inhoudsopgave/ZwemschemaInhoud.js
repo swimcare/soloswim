@@ -17,7 +17,7 @@ function ZwemschemaInhoud(props) {
         <div className="flex-none w-3 md:w-5">
           <p className="font-semibold text-tiny">{props.number}</p>
         </div>
-        <div className="flex-grow text-tiny md:border-b-2 md:mb-2">
+        <div className="grow text-tiny md:border-b-2 md:mb-2">
           <p className="font-semibold mb-1">
             {props.name}
             <span className="hidden md:inline-block ml-2 font-normal text-xs">

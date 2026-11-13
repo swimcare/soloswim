@@ -113,7 +113,7 @@ function NewsletterSignup({ variant = "footer" }) {
               checked={consent}
               onChange={(e) => setConsent(e.target.checked)}
               required
-              className="mt-0.5 flex-shrink-0"
+              className="mt-0.5 shrink-0"
             />
             <span>
               Ik wil updates van SoloSwim ontvangen via de SwimCare-mailinglijst.

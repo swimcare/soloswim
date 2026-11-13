@@ -1,8 +1,7 @@
 import { buffer } from "micro";
+import Stripe from "stripe";
 import { createOrder } from "../../lib/createOrder";
 import { sendOrderConfirmationEmail } from "../../lib/sendOrderConfirmationEmail";
-
-const Stripe = require("stripe");
 
 /**
  * Persist the order (required for Stripe retry safety), then send email

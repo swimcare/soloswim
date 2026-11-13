@@ -167,42 +167,42 @@ function Header() {
           <div className="lg:hidden bg-main text-white font-lexend font-bold text-xl pt-6 transform -translate-y-1">
             <ul>
               <Link href="/">
-                <li className="py-3 border-b border-opacity-25">
+                <li className="py-3 border-b border-white/25">
                   <span className="ml-3">Home</span>
                 </li>
               </Link>
               <Link href="/producten">
-                <li className="py-3 border-b border-opacity-25">
+                <li className="py-3 border-b border-white/25">
                   <span className="ml-3">Schema&apos;s</span>
                 </li>
               </Link>
               <Link href="/zwemmateriaal">
-                <li className="py-3 border-b border-opacity-25">
+                <li className="py-3 border-b border-white/25">
                   <span className="ml-3">Materiaal</span>
                 </li>
               </Link>
               <Link href="/zwemverzorging">
-                <li className="py-3 border-b border-opacity-25">
+                <li className="py-3 border-b border-white/25">
                   <span className="ml-3">Verzorging</span>
                 </li>
               </Link>
               <Link href="https://les.swimcare.be">
-                <li className="py-3 border-b border-opacity-25">
+                <li className="py-3 border-b border-white/25">
                   <span className="ml-3">Lessen</span>
                 </li>
               </Link>
               <Link href="https://blog.swimcare.be">
-                <li className="py-3 border-b border-opacity-25">
+                <li className="py-3 border-b border-white/25">
                   <span className="ml-3">Blog</span>
                 </li>
               </Link>
               <Link href="/over-ons">
-                <li className="py-3 border-b border-opacity-25">
+                <li className="py-3 border-b border-white/25">
                   <span className="ml-3">Over SoloSwim</span>
                 </li>
               </Link>
               <Link href="/contact">
-                <li className="py-3 border-b border-opacity-25">
+                <li className="py-3 border-b border-white/25">
                   <span className="ml-3">Contact</span>
                 </li>
               </Link>

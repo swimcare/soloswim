@@ -19,7 +19,7 @@ function SectionFaq() {
         </AccordionItem>
         <AccordionPanel
           id={item.id}
-          panelClass="border-b border-opacity-40 overflow-hidden lg:pr-10 text-white text-opacity-90 md:overflow-x-hidden transition-height ease duration-300"
+          panelClass="border-b border-white/40 overflow-hidden lg:pr-10 text-white/90 md:overflow-x-hidden transition-height ease duration-300"
         >
           <p className="mb-3 text-tiny">{item.answer}</p>
         </AccordionPanel>
@@ -33,7 +33,7 @@ function SectionFaq() {
     >
       <div className="px-8 max-w-screen-xl mx-auto py-5">
         <div className="lg:bg-main lg:rounded-2xl lg:p-10">
-          <div className="text-white border-b border-opacity-40 pt-2 lg:pt-0 pb-6">
+          <div className="text-white border-b border-white/40 pt-2 lg:pt-0 pb-6">
             <h2 className="w-40 font-lexend text-2xl font-extrabold lg:w-full lg:text-4xl">
               Veelgestelde vragen
             </h2>

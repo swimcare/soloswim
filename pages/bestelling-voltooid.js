@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../components/seo/Seo";
 import { Fragment, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { clearBasket } from "../slices/basketSlice";

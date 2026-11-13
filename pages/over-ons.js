@@ -2,7 +2,7 @@ import IconCard from "../components/home/IconCard";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../components/seo/Seo";
 import FadeInFromBottom from "../components/framer/FadeInFromBottom";
 import SlideInFromSide from "../components/framer/SlideInFromSide";
 import JsonLd from "../components/seo/JsonLd";

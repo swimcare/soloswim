@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../components/seo/Seo";
 
 function Custom404() {
   return (

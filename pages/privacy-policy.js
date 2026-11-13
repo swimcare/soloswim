@@ -1,4 +1,4 @@
-import { NextSeo } from "next-seo";
+import { NextSeo } from "../components/seo/Seo";
 import { Fragment } from "react";
 
 function privacyPolicy() {
