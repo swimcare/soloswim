@@ -100,14 +100,16 @@ export default function Home() {
         {/* HERO */}
         <section className="h-screen-navbar transform translate-y-0">
           <div className="relative h-full overflow-hidden">
+            {/* Art-directed hero: fetchPriority (not preload) so only the
+                visible breakpoint image competes for LCP bandwidth. */}
             <div className="hidden xl:block">
               <Image
                 src="/images/home/header-desktop.jpg"
                 alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
-                priority
+                fetchPriority="high"
                 quality={80}
                 fill
-                sizes="100vw"
+                sizes="(min-width: 1280px) 100vw, 1px"
                 style={{
                   objectFit: "cover",
                 }}
@@ -117,10 +119,10 @@ export default function Home() {
               <Image
                 src="/images/home/header-tablet.jpg"
                 alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
-                priority
+                fetchPriority="high"
                 quality={80}
                 fill
-                sizes="100vw"
+                sizes="(min-width: 640px) and (max-width: 1279px) 100vw, 1px"
                 style={{
                   objectFit: "cover",
                 }}
@@ -130,10 +132,10 @@ export default function Home() {
               <Image
                 src="/images/home/header-small.jpg"
                 alt="Zwemmer met SoloSwim waterproof zwemschema in het zwembad"
-                priority
+                fetchPriority="high"
                 quality={80}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 639px) 100vw, 1px"
                 style={{
                   objectFit: "cover",
                 }}

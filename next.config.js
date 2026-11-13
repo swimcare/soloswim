@@ -1,6 +1,8 @@
 module.exports = {
   images: {
-    formats: ["image/avif", "image/webp"],
+    // WebP-only: faster first encode than AVIF (better LCP on cold cache).
+    formats: ["image/webp"],
+    qualities: [75, 80],
   },
   async headers() {
     return [

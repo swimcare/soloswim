@@ -73,7 +73,8 @@ function Header() {
                   alt="SoloSwim logo black"
                   width={500}
                   height={171}
-                  priority
+                  preload
+                  sizes="160px"
                   style={{
                     maxWidth: "100%",
                     height: "auto",
@@ -85,7 +86,7 @@ function Header() {
                   alt="SoloSwim logo white"
                   width={500}
                   height={171}
-                  priority
+                  sizes="160px"
                   style={{
                     maxWidth: "100%",
                     height: "auto",

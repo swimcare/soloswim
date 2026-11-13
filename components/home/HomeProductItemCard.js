@@ -15,7 +15,7 @@ function HomeProductItemCard({ borderColor, img, title, price, href }) {
                 src={img}
                 alt={title}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 640px) 80vw, 280px"
                 style={{
                   objectFit: "contain"
                 }} />

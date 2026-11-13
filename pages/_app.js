@@ -58,7 +58,8 @@ function MyApp({ Component, pageProps }) {
         className={`${montserrat.variable} ${lexend.variable} font-sans`}
       >
         <Script
-          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          id="trustpilot-bootstrap"
+          src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
           strategy="lazyOnload"
         />
         <GoogleAnalytics />

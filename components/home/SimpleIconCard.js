@@ -10,7 +10,7 @@ function SimpleIconCard({ icon, title, text }) {
             src={icon}
             alt={title}
             fill
-            sizes="100vw"
+            sizes="80px"
             style={{
               objectFit: "contain",
               objectPosition: "bottom",

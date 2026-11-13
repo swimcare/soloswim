@@ -13,7 +13,7 @@ function IconCard({ title, img, color, shadow }) {
             src={img}
             alt={title}
             fill
-            sizes="100vw"
+            sizes="96px"
             style={{
               objectFit: "contain",
               objectPosition: "bottom",

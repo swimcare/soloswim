@@ -1,54 +1,37 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Script from "next/script";
 
 const BASE_URL = "https://chat.swimcare.be";
 const WEBSITE_TOKEN = "WWg5SwD9hCS2z34iBYGzziwv";
-
-function injectChatwoot() {
-  if (typeof window === "undefined" || window.__SOLOSWIM_CHATWOOT_LOADED__) {
-    return;
-  }
-  window.__SOLOSWIM_CHATWOOT_LOADED__ = true;
-
-  (function (d, t) {
-    var g = d.createElement(t);
-    var s = d.getElementsByTagName(t)[0];
-    g.src = BASE_URL + "/packs/js/sdk.js";
-    g.defer = true;
-    g.async = true;
-    s.parentNode.insertBefore(g, s);
-    g.onload = function () {
-      window.chatwootSDK.run({
-        websiteToken: WEBSITE_TOKEN,
-        baseUrl: BASE_URL,
-      });
-    };
-  })(document, "script");
-}
 
 /**
  * Loads Chatwoot after first user interaction or a short idle delay,
  * so the chat widget does not compete with LCP / main-thread work.
  */
 function Chatwoot() {
-  useEffect(() => {
-    let loaded = false;
+  const [shouldLoad, setShouldLoad] = useState(false);
 
-    const load = () => {
-      if (loaded) return;
-      loaded = true;
-      injectChatwoot();
+  useEffect(() => {
+    if (shouldLoad) return undefined;
+
+    let armed = false;
+
+    const arm = () => {
+      if (armed) return;
+      armed = true;
+      setShouldLoad(true);
       cleanup();
     };
 
     const events = ["pointerdown", "keydown", "touchstart", "scroll"];
     events.forEach((event) => {
-      window.addEventListener(event, load, { once: true, passive: true });
+      window.addEventListener(event, arm, { once: true, passive: true });
     });
 
-    const timeoutId = window.setTimeout(load, 4500);
+    const timeoutId = window.setTimeout(arm, 4500);
     const idleId =
       typeof window.requestIdleCallback === "function"
-        ? window.requestIdleCallback(load, { timeout: 7000 })
+        ? window.requestIdleCallback(arm, { timeout: 7000 })
         : null;
 
     function cleanup() {
@@ -60,14 +43,31 @@ function Chatwoot() {
         window.cancelIdleCallback(idleId);
       }
       events.forEach((event) => {
-        window.removeEventListener(event, load);
+        window.removeEventListener(event, arm);
       });
     }
 
     return cleanup;
-  }, []);
+  }, [shouldLoad]);
 
-  return null;
+  if (!shouldLoad) return null;
+
+  return (
+    <Script
+      id="chatwoot-sdk"
+      src={`${BASE_URL}/packs/js/sdk.js`}
+      strategy="lazyOnload"
+      onLoad={() => {
+        if (typeof window === "undefined" || !window.chatwootSDK) return;
+        if (window.__SOLOSWIM_CHATWOOT_LOADED__) return;
+        window.__SOLOSWIM_CHATWOOT_LOADED__ = true;
+        window.chatwootSDK.run({
+          websiteToken: WEBSITE_TOKEN,
+          baseUrl: BASE_URL,
+        });
+      }}
+    />
+  );
 }
 
 export default Chatwoot;

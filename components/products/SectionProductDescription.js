@@ -14,7 +14,7 @@ import PriceDisplay from "../general/PriceDisplay";
 function SectionProductDescription({ productData, addItemToBasket }) {
   const searchParams = useSearchParams();
 
-  const formattedProductImages = productData.images.map((image) => {
+  const formattedProductImages = productData.images.map((image, index) => {
     return (
       <div className="h-96 lg:h-[calc(32rem)] relative" key={image}>
         <Image
@@ -22,6 +22,8 @@ function SectionProductDescription({ productData, addItemToBasket }) {
           alt={productData.title}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
+          fetchPriority={index === 0 ? "high" : "auto"}
+          loading={index === 0 ? "eager" : "lazy"}
           style={{
             objectFit: "contain",
           }}

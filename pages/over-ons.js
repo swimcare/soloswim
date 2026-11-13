@@ -88,7 +88,7 @@ function overOns() {
                   src="/images/over-ons/over-ons.png"
                   alt="Ons verhaal"
                   fill
-                  sizes="100vw"
+                  sizes="(min-width: 1024px) 58vw, 100vw"
                   style={{
                     objectFit: "cover",
                   }}

@@ -4,6 +4,7 @@ import Script from "next/script";
 /**
  * Loads GA4 using the measurement ID from runtime container env
  * (/api/public-config), so SSG pages still get Analytics without a rebuild.
+ * lazyOnload keeps gtag off the critical path for LCP.
  */
 function GoogleAnalytics() {
   const [gaId, setGaId] = useState("");
@@ -34,12 +35,12 @@ function GoogleAnalytics() {
   return (
     <>
       <Script
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
       />
       <Script
         id="gtag-init"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             window.__SOLOSWIM_GA_ID__ = '${gaId}';
