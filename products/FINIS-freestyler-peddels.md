@@ -4,6 +4,7 @@ product_id: "FP1"
 ean: ""
 title: "Freestyler peddels"
 subtitle: "FINIS Freestyler Paddles"
+brand: "FINIS"
 price: 30.00
 description: "De FINIS Freestyler Hand Paddles verbeteren de handpositie en helpen je bij het verlengen van je slag en het verhogen van je efficiëntie in het water. Het unieke surfboard-ontwerp helpt je hand naar voren te sturen en vermindert schouderbelasting."
 inStock: true

@@ -29,7 +29,7 @@ function SubSectionBenodigdheden({ id }) {
               icon="/images/zwemschemas/benodigdheden/zwembril.png"
               name="Zwembril"
               tooltipText="Voorkom water in je ogen tijdens het zwemmen."
-              bestelButton="/producten/mach-1-racing-goggle"
+              bestelButton="/producten/FINIS-mach-1-racing-goggle"
             />
           )}
           {id !== "swimfit" && (
@@ -37,21 +37,21 @@ function SubSectionBenodigdheden({ id }) {
               icon="/images/zwemschemas/benodigdheden/badmuts.png"
               name="Badmuts"
               tooltipText="Praktisch voor als je lang haar hebt."
-              bestelButton="/producten/soloswim-badmuts"
+              bestelButton="/producten/SOLOSWIM-badmuts"
             />
           )}
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/plankje.png"
             name="Zwemplankje"
             tooltipText="Geeft je extra drijfvermogen om specifiek je benen te trainen."
-            bestelButton="/producten/plankje-kickboard"
+            bestelButton="/producten/FINIS-foam-kickboard"
           />
           {id !== "swimfit" && (
             <Attribuut
               icon="/images/zwemschemas/benodigdheden/pullbuoy.png"
               name="Pullbuoy"
               tooltipText="Geeft je extra drijfvermogen om specifiek je armen te trainen."
-              bestelButton="/producten/plankje-pull-buoy"
+              bestelButton="/producten/FINIS-foam-pull-buoy"
             />
           )}
           {id !== "swimfit" && (
@@ -59,7 +59,7 @@ function SubSectionBenodigdheden({ id }) {
               icon="/images/zwemschemas/benodigdheden/zoomers.png"
               name="Zoomers (optioneel)"
               tooltipText="Optioneel hulpmiddel om minder snel uitgeput te raken."
-              bestelButton="/producten/zwemvliezen"
+              bestelButton="/producten/FINIS-z2-gold-zoomers"
             />
           )}
         </div>

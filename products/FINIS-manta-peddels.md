@@ -4,6 +4,7 @@ product_id: "MA1"
 ean: ""
 title: "Manta peddels"
 subtitle: "FINIS Manta Paddles"
+brand: "FINIS"
 price: 30.00
 description: "De FINIS Manta Paddles helpen zwemmers om hun kracht, slag efficiëntie en afstand per slag te verbeteren. Dankzij het bandloze ontwerp en het lichte, drijvende materiaal, bieden deze peddels comfort en stabiliteit tijdens elke zwemtraining."
 inStock: true

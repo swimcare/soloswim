@@ -4,6 +4,7 @@ product_id: "PAS1"
 ean: "0616323297760"
 title: "Rekker"
 subtitle: "FINIS Pulling Ankle Strap"
+brand: "FINIS"
 price: 13.20
 description: "De FINIS Pulling Ankle Strap elimineert kicking volledig, waardoor je de focus kunt leggen op bovenlichaamstraining en krachtopbouw. Combineer met de Foam Pull Buoy voor een nog intensievere workout en meer stabiliteit."
 inStock: true

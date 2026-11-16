@@ -4,6 +4,7 @@ product_id: "BCC1"
 ean: ""
 title: "Borstcrawl Complete Zwemtraining"
 subtitle: "Het beste van 3 werelden"
+brand: "SoloSwim"
 price: 39.99
 description: "Houd je van afwisselende trainingen en wil je graag een betere borstcrawlzwemmer worden? Met deze 30 gevarieerde zwemschema’s van 60 minuten werk je aan je techniek, kracht en duurvermogen! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 inStock: true

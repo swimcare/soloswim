@@ -4,6 +4,7 @@ product_id: "ZG1"
 ean: ""
 title: "Z2 gold zoomers"
 subtitle: "FINIS Z2 Gold Zoomers"
+brand: "FINIS"
 price: 38.40
 description: "De FINIS Z2 Gold Zoomers® Fins stimuleren korte, snelle kicks en bieden optimale voortstuwing. Het comfortabele ontwerp van natuurlijk rubber zorgt voor een veilige pasvorm, terwijl de techniekgerichte eigenschappen zoals de flex box en fluid separator spierkracht en efficiëntie verhogen."
 inStock: true

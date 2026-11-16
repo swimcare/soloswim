@@ -1,9 +1,10 @@
 ---
 number: 23
 product_id: "AK1"
-ean: ""
+ean: "0616323202269"
 title: "Plankje met riem"
 subtitle: "FINIS Alignment Kickboard"
+brand: "FINIS"
 price: 37.20
 description: "Werk aan een gestroomlijnde houding en verbeter je techniek met de FINIS Alignment Kickboard. Dit kickboard, ontworpen voor minimale belasting op de schouders, bevordert een ideale uitlijning van het lichaam van vingertoppen tot tenen."
 inStock: true

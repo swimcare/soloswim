@@ -4,6 +4,7 @@ product_id: "FPB1"
 ean: ""
 title: "Foam pull buoy"
 subtitle: "FINIS Foam Pull Buoy"
+brand: "FINIS"
 price: 22.80
 description: "Werk aan je bovenlichaam en core met de FINIS Foam Pull Buoy. Deze pull buoy immobiliseert de benen, waardoor je focus volledig op de armen en schouders ligt en je techniek en heuprotatie verbetert. Verkrijgbaar in maten voor zowel volwassenen als kinderen."
 inStock: true

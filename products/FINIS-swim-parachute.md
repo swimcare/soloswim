@@ -4,6 +4,7 @@ product_id: "PARA1"
 ean: ""
 title: "Swim Parachute"
 subtitle: "FINIS Swim Parachute"
+brand: "FINIS"
 price: 57.60
 description: "Verbeter je prestaties met de FINIS Swim Parachute. Deze parachute biedt extra weerstand tijdens je trainingen en helpt je kracht, uithoudingsvermogen en snelheid op te bouwen. Verkrijgbaar in twee maten voor variabele weerstand."
 inStock: true

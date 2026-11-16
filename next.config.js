@@ -31,6 +31,147 @@ module.exports = {
   // REDIRECT URLS FOR QR CODES ON TRAINING SCHEDULES
   async redirects() {
     return [
+      // Product slug renames (brand prefixes)
+      {
+        source: "/producten/borstcrawl-100m-leren-zwemmen",
+        destination: "/producten/SOLOSWIM-borstcrawl-100m-leren-zwemmen",
+        permanent: true,
+      },
+      {
+        source: "/producten/borstcrawl-complete-zwemtraining",
+        destination: "/producten/SOLOSWIM-borstcrawl-complete-zwemtraining",
+        permanent: true,
+      },
+      {
+        source: "/producten/borstcrawl-duur-zwemtraining",
+        destination: "/producten/SOLOSWIM-borstcrawl-duur-zwemtraining",
+        permanent: true,
+      },
+      {
+        source: "/producten/borstcrawl-kracht-zwemtraining",
+        destination: "/producten/SOLOSWIM-borstcrawl-kracht-zwemtraining",
+        permanent: true,
+      },
+      {
+        source: "/producten/borstcrawl-techniek-zwemtraining",
+        destination: "/producten/SOLOSWIM-borstcrawl-techniek-zwemtraining",
+        permanent: true,
+      },
+      {
+        source: "/producten/swimfit",
+        destination: "/producten/SOLOSWIM-swimfit",
+        permanent: true,
+      },
+      {
+        source: "/producten/soloswim-badmuts",
+        destination: "/producten/SOLOSWIM-badmuts",
+        permanent: true,
+      },
+      {
+        source: "/producten/agility-peddels",
+        destination: "/producten/FINIS-agility-peddels",
+        permanent: true,
+      },
+      {
+        source: "/producten/alignment-kickboard",
+        destination: "/producten/FINIS-alignment-kickboard",
+        permanent: true,
+      },
+      {
+        source: "/producten/freestyler-peddels",
+        destination: "/producten/FINIS-freestyler-peddels",
+        permanent: true,
+      },
+      {
+        source: "/producten/manta-peddels",
+        destination: "/producten/FINIS-manta-peddels",
+        permanent: true,
+      },
+      {
+        source: "/producten/plankje-kickboard",
+        destination: "/producten/FINIS-foam-kickboard",
+        permanent: true,
+      },
+      {
+        source: "/producten/plankje-pull-buoy",
+        destination: "/producten/FINIS-foam-pull-buoy",
+        permanent: true,
+      },
+      {
+        source: "/producten/parachute",
+        destination: "/producten/FINIS-swim-parachute",
+        permanent: true,
+      },
+      {
+        source: "/producten/rekker",
+        destination: "/producten/FINIS-pulling-ankle-strap",
+        permanent: true,
+      },
+      {
+        source: "/producten/snorkel",
+        destination: "/producten/FINIS-stability-snorkel",
+        permanent: true,
+      },
+      {
+        source: "/producten/mach-1-racing-goggle",
+        destination: "/producten/FINIS-mach-1-racing-goggle",
+        permanent: true,
+      },
+      {
+        source: "/producten/tempo-trainer-pro",
+        destination: "/producten/FINIS-tempo-trainer-pro",
+        permanent: true,
+      },
+      {
+        source: "/producten/zwemvliezen",
+        destination: "/producten/FINIS-z2-gold-zoomers",
+        permanent: true,
+      },
+      {
+        source: "/producten/after-swim-body-wash",
+        destination: "/producten/TRIHARD-after-swim-body-wash",
+        permanent: true,
+      },
+      {
+        source: "/producten/basic-care",
+        destination: "/producten/TRIHARD-basic-care",
+        permanent: true,
+      },
+      {
+        source: "/producten/hair-combo",
+        destination: "/producten/TRIHARD-hair-combo",
+        permanent: true,
+      },
+      {
+        source: "/producten/kids-swim-care",
+        destination: "/producten/TRIHARD-kids-swim-care",
+        permanent: true,
+      },
+      {
+        source: "/producten/pre-post-swim-body-lotion",
+        destination: "/producten/TRIHARD-pre-post-swim-body-lotion",
+        permanent: true,
+      },
+      {
+        source: "/producten/pre-post-swim-eye-gel",
+        destination: "/producten/TRIHARD-pre-post-swim-eye-gel",
+        permanent: true,
+      },
+      {
+        source: "/producten/striim-one",
+        destination: "/producten/STRIIM-one",
+        permanent: true,
+      },
+      {
+        source: "/producten/buddyswim-ozean",
+        destination: "/producten/BUDDYSWIM-ozean",
+        permanent: true,
+      },
+      {
+        source: "/producten/mach-1-racing-goggle",
+        destination: "/producten/FINIS-mach-1-racing-goggle",
+        permanent: true,
+      },
       //Review link Google
       {
         source: "/review",

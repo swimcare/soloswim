@@ -4,6 +4,7 @@ product_id: "BCT1"
 ean: ""
 title: "Borstcrawl Techniek Zwemtraining"
 subtitle: "Zwem mooier, zwem makkelijker"
+brand: "SoloSwim"
 price: 17.99
 description: "Wil je graag makkelijker en technisch beter borstcrawl leren zwemmen? Deze 10 gevarieerde zwemschema’s van 60 minuten bevatten technische zwemoefeningen die je helpen je slag te verbeteren! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 inStock: true

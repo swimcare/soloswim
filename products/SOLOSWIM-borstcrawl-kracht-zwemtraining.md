@@ -4,6 +4,7 @@ product_id: "BCK1"
 ean: ""
 title: "Borstcrawl Kracht Zwemtraining"
 subtitle: "Word sterker, word sneller"
+brand: "SoloSwim"
 price: 17.99
 description: "Wil je graag krachtiger en sneller borstcrawl zwemmen? Met deze 10 gevarieerde zwemschema’s van 60 minuten zet jij je spieren aan het werk! Volledig waterproof zodat jij er onbeperkt mee kunt zwemmen."
 inStock: true

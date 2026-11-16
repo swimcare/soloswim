@@ -737,35 +737,35 @@ export default function Home() {
                     img="/images/zwemschemas/bcl100/1.png"
                     price="17,99"
                     borderColor="border-soloswim2-blue"
-                    href="/producten/borstcrawl-100m-leren-zwemmen"
+                    href="/producten/SOLOSWIM-borstcrawl-100m-leren-zwemmen"
                   />
                   <HomeProductItemCard
                     title="Borstcrawl complete zwemtraining"
                     img="/images/zwemschemas/bcc1/1.png"
                     price="39,99"
                     borderColor="border-t-soloswim2-orange border-b-soloswim2-green border-l-soloswim2-yellow border-r-soloswim2-yellow"
-                    href="/producten/borstcrawl-complete-zwemtraining"
+                    href="/producten/SOLOSWIM-borstcrawl-complete-zwemtraining"
                   />
                   <HomeProductItemCard
                     title="Borstcrawl techniek zwemtraining"
                     img="/images/zwemschemas/bct1/1.png"
                     price="17,99"
                     borderColor="border-soloswim2-green"
-                    href="/producten/borstcrawl-techniek-zwemtraining"
+                    href="/producten/SOLOSWIM-borstcrawl-techniek-zwemtraining"
                   />
                   <HomeProductItemCard
                     title="Borstcrawl kracht zwemtraining"
                     img="/images/zwemschemas/bck1/1.png"
                     price="17,99"
                     borderColor="border-soloswim2-orange"
-                    href="/producten/borstcrawl-kracht-zwemtraining"
+                    href="/producten/SOLOSWIM-borstcrawl-kracht-zwemtraining"
                   />
                   <HomeProductItemCard
                     title="Borstcrawl duur zwemtraining"
                     img="/images/zwemschemas/bcd1/1.png"
                     price="17,99"
                     borderColor="border-soloswim2-yellow"
-                    href="/producten/borstcrawl-duur-zwemtraining"
+                    href="/producten/SOLOSWIM-borstcrawl-duur-zwemtraining"
                   />
                 </MultiCarousel>
               </div>
