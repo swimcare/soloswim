@@ -84,7 +84,15 @@ function SectionProductDescription({ productData, addItemToBasket }) {
   useEffect(() => {
     const niveauParam = searchParams.get("niveau");
     if (niveauParam) {
+      const normalized = niveauParam.toLowerCase();
       const niveauValue =
+        (productData.sizes || []).find(
+          (size) => String(size).toLowerCase() === normalized
+        ) ||
+        (productData.sizeVariants &&
+          Object.keys(productData.sizeVariants).find(
+            (key) => key.toLowerCase() === normalized
+          )) ||
         niveauParam.charAt(0).toUpperCase() + niveauParam.slice(1);
       setNiveau(niveauValue);
 
@@ -153,7 +161,7 @@ function SectionProductDescription({ productData, addItemToBasket }) {
             {productData.sizes ? (
               <div className="my-8 lg:my-10">
                 <p className="font-bold text-navy-light1 uppercase text-tiny">
-                  Maat
+                  {productData.isAccessoire ? "Variant" : "Maat"}
                 </p>
                 {productData.sizes.length > 5 ? (
                   <div className="my-2">
