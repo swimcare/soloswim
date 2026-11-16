@@ -25,22 +25,10 @@ images: ["/images/zwemmateriaal/zwembril/mach1.png"]
 tab1_image: "/images/zwemmateriaal/zwembril/mach1.png"
 winkelwagen_images: ["/images/zwemmateriaal/zwembril/mach1.png"]
 sizes: ["Blauw", "Roze", "Titanium"]
-sizeVariants:
-  Blauw:
-    ean: "0616323104082"
-    images: ["/images/zwemmateriaal/zwembril/mach1.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/zwembril/mach1.png"]
-    tab1_image: "/images/zwemmateriaal/zwembril/mach1.png"
-  Roze:
-    ean: "0616323104075"
-    images: ["/images/zwemmateriaal/zwembril/mach1.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/zwembril/mach1.png"]
-    tab1_image: "/images/zwemmateriaal/zwembril/mach1.png"
-  Titanium:
-    ean: "0616323541184"
-    images: ["/images/zwemmateriaal/zwembril/mach1.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/zwembril/mach1.png"]
-    tab1_image: "/images/zwemmateriaal/zwembril/mach1.png"
+eans:
+  Blauw: "0616323104082"
+  Roze: "0616323104075"
+  Titanium: "0616323541184"
 card_info: "Race zwembril"
 ---
 

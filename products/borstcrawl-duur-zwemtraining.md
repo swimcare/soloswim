@@ -18,14 +18,11 @@ features: [
     "Geschikt voor zowel een 25 als 50 meter bad",
   ]
 niveaus: true
+eans:
+  Beginners: "05430005411092"
+  "Semi-gevorderden": "05430005411108"
+  Gevorderden: "05430005411115"
 
-sizeVariants:
-  Beginners:
-    ean: "05430005411092"
-  Semi-gevorderden:
-    ean: "05430005411108"
-  Gevorderden:
-    ean: "05430005411115"
 type: "Beginners"
 editie: 1
 color: "yellow"

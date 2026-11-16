@@ -11,28 +11,6 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import PriceDisplay from "../general/PriceDisplay";
 
-/** Apply only defined sizeVariant fields so EAN-only variants keep parent media/price. */
-function applySizeVariant(productData, type) {
-  const variant = productData.sizeVariants?.[type];
-  if (!variant) return false;
-  if (variant.price != null) productData.price = variant.price;
-  if ("oldPrice" in variant) productData.oldPrice = variant.oldPrice ?? null;
-  if (variant.listPrice != null) {
-    productData.listPrice = variant.listPrice;
-  } else if (variant.price != null) {
-    productData.listPrice = variant.price;
-  }
-  if (variant.discountPercent != null) {
-    productData.discountPercent = variant.discountPercent;
-  }
-  if (variant.images) productData.images = variant.images;
-  if (variant.winkelwagen_images) {
-    productData.winkelwagen_images = variant.winkelwagen_images;
-  }
-  if (variant.tab1_image) productData.tab1_image = variant.tab1_image;
-  return true;
-}
-
 function SectionProductDescription({ productData, addItemToBasket }) {
   const searchParams = useSearchParams();
 
@@ -78,7 +56,16 @@ function SectionProductDescription({ productData, addItemToBasket }) {
     setNiveau(type);
 
     // Update product data based on size variant if available (prices already include sale)
-    applySizeVariant(productData, type);
+    if (productData.sizeVariants && productData.sizeVariants[type]) {
+      const variant = productData.sizeVariants[type];
+      productData.price = variant.price;
+      productData.oldPrice = variant.oldPrice ?? null;
+      productData.listPrice = variant.listPrice ?? variant.price;
+      productData.discountPercent = variant.discountPercent ?? 0;
+      productData.images = variant.images;
+      productData.winkelwagen_images = variant.winkelwagen_images;
+      productData.tab1_image = variant.tab1_image;
+    }
 
     // Add query parameter to URL
     const url = new URL(window.location.href);
@@ -88,8 +75,11 @@ function SectionProductDescription({ productData, addItemToBasket }) {
 
   const [niveau, setNiveau] = useState();
 
+  const activeVariantKey = niveau || productData.type;
   const activeEan = String(
-    (niveau && productData.sizeVariants?.[niveau]?.ean) ||
+    (activeVariantKey &&
+      (productData.sizeVariants?.[activeVariantKey]?.ean ||
+        productData.eans?.[activeVariantKey])) ||
       productData.ean ||
       ""
   ).trim();
@@ -110,7 +100,15 @@ function SectionProductDescription({ productData, addItemToBasket }) {
       setNiveau(niveauValue);
 
       // Update product data based on size variant if available (prices already include sale)
-      if (applySizeVariant(productData, niveauValue)) {
+      if (productData.sizeVariants && productData.sizeVariants[niveauValue]) {
+        const variant = productData.sizeVariants[niveauValue];
+        productData.price = variant.price;
+        productData.oldPrice = variant.oldPrice ?? null;
+        productData.listPrice = variant.listPrice ?? variant.price;
+        productData.discountPercent = variant.discountPercent ?? 0;
+        productData.images = variant.images;
+        productData.winkelwagen_images = variant.winkelwagen_images;
+        productData.tab1_image = variant.tab1_image;
         productData.type = niveauValue;
       }
 
@@ -119,13 +117,6 @@ function SectionProductDescription({ productData, addItemToBasket }) {
       const firstSize = productData.sizes[0];
       setNiveau(firstSize);
       setType(firstSize, "0");
-    } else if (
-      productData.type &&
-      productData.sizeVariants?.[productData.type]
-    ) {
-      // Schema niveau / pool-length default from frontmatter type
-      setNiveau(productData.type);
-      applySizeVariant(productData, productData.type);
     }
   }, [searchParams, productData]);
 

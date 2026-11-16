@@ -19,12 +19,10 @@ features:
     "Verkrijgbaar voor een 25 of 50 meter bad",
   ]
 type: "25 meter zwembad"
+eans:
+  "25 meter zwembad": "05430005411139"
+  "50 meter zwembad": "05430005411146"
 
-sizeVariants:
-  "25 meter zwembad":
-    ean: "05430005411139"
-  "50 meter zwembad":
-    ean: "05430005411146"
 color: "blue"
 images:
   [
