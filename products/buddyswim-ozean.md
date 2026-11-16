@@ -45,76 +45,91 @@ winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-zwart-iridescent-hero.j
 card_info: "Openwater zwembril"
 sizeVariants:
   "Ozean Zwart Grijs":
+    ean: "0601968841973"
     price: 39.99
     images: ["/images/zwemmateriaal/ozean/ozean-zwart-grijs.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozean-zwart-grijs.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozean-zwart-grijs.jpg"
   "Ozean Wit Grijs":
+    ean: "0601968841980"
     price: 39.99
     images: ["/images/zwemmateriaal/ozean/ozean-wit-grijs.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozean-wit-grijs.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozean-wit-grijs.jpg"
   "Ozean Blauw Grijs":
+    ean: "0601968842741"
     price: 39.99
     images: ["/images/zwemmateriaal/ozean/ozean-blauw-grijs.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozean-blauw-grijs.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozean-blauw-grijs.jpg"
   "Ozean Blauw Blauw":
+    ean: "0601968842758"
     price: 39.99
     images: ["/images/zwemmateriaal/ozean/ozean-blauw-blauw.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozean-blauw-blauw.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozean-blauw-blauw.jpg"
   "Ozean Roze Grijs":
+    ean: "0601968842772"
     price: 39.99
     images: ["/images/zwemmateriaal/ozean/ozean-roze-grijs.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozean-roze-grijs.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozean-roze-grijs.jpg"
   "OzeanX Zwart Oranje":
+    ean: "0601968842765"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-zwart-oranje.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-zwart-oranje.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-zwart-oranje.jpg"
   "OzeanX Zwart Iridescent":
+    ean: "0601968842017"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-zwart-iridescent.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-zwart-iridescent.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-zwart-iridescent.jpg"
   "OzeanX Zwart Zilver":
+    ean: "0601968842024"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-zwart-zilver.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-zwart-zilver.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-zwart-zilver.jpg"
   "OzeanX Wit Oranje":
+    ean: "0601968842031"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-wit-oranje.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-wit-oranje.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-wit-oranje.jpg"
   "OzeanX Wit Blauw":
+    ean: "0601968842048"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-wit-blauw.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-wit-blauw.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-wit-blauw.jpg"
   "OzeanX Wit Iridescent":
+    ean: "0601968842055"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-wit-iridescent.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-wit-iridescent.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-wit-iridescent.jpg"
   "OzeanX Wit Zilver":
+    ean: "0601968842062"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-wit-zilver.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-wit-zilver.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-wit-zilver.jpg"
   "OzeanX Roze Iridescent":
+    ean: "0601968842802"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-roze-iridescent.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-roze-iridescent.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-roze-iridescent.jpg"
   "OzeanX Rood Blauw":
+    ean: "0601968842789"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-rood-blauw.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-rood-blauw.jpg"]
     tab1_image: "/images/zwemmateriaal/ozean/ozeanx-rood-blauw.jpg"
   "OzeanX Rood Oranje":
+    ean: "0601968842796"
     price: 48.99
     images: ["/images/zwemmateriaal/ozean/ozeanx-rood-oranje.jpg"]
     winkelwagen_images: ["/images/zwemmateriaal/ozean/ozeanx-rood-oranje.jpg"]
