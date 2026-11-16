@@ -24,21 +24,25 @@ card_info: "Kracht peddels"
 hideFaq: true
 sizeVariants:
   Small:
+    ean: "0616323203389"
     price: 30.00
     images: ["/images/zwemmateriaal/peddels/manta.png"]
     winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
     tab1_image: "/images/zwemmateriaal/peddels/manta.png"
   Medium:
+    ean: "0616323203396"
     price: 30.00
     images: ["/images/zwemmateriaal/peddels/manta.png"]
     winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
     tab1_image: "/images/zwemmateriaal/peddels/manta.png"
   Large:
+    ean: "0616323203402"
     price: 30.00
     images: ["/images/zwemmateriaal/peddels/manta.png"]
     winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
     tab1_image: "/images/zwemmateriaal/peddels/manta.png"
   XLarge:
+    ean: "0616323203419"
     price: 30.00
     images: ["/images/zwemmateriaal/peddels/manta.png"]
     winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]

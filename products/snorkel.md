@@ -1,7 +1,7 @@
 ---
 number: 26
 product_id: "SS1"
-ean: ""
+ean: "0616323203204"
 title: "Stability snorkel"
 subtitle: "FINIS Stability Snorkel Speed"
 price: 54.00

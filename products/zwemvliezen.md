@@ -35,46 +35,55 @@ sizes:
   ]
 sizeVariants:
   "30-32":
+    ean: "0616323201606"
     price: 38.40
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "33-34":
+    ean: "0616323201613"
     price: 40.80
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "35-36":
+    ean: "0616323201620"
     price: 43.20
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "36-37":
+    ean: "0616323201637"
     price: 49.20
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "38-39":
+    ean: "0616323201644"
     price: 49.20
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "40-41":
+    ean: "0616323201651"
     price: 49.20
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "41-43":
+    ean: "0616323201668"
     price: 51.60
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "44-45":
+    ean: "0616323201675"
     price: 51.60
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     tab1_image: "/images/zwemmateriaal/zwemvliezen/z2gold.png"
   "45-46":
+    ean: "0616323201682"
     price: 54.00
     images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]
     winkelwagen_images: ["/images/zwemmateriaal/zwemvliezen/z2gold.png"]

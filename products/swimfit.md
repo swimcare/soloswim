@@ -1,7 +1,7 @@
 ---
 number: 0
 product_id: "SF1"
-ean: ""
+ean: "05430005411122"
 title: "Swimfit"
 subtitle: "10 gevarieerde schoolslag trainingen voor tijdens het banenzwemmen"
 price: 17.99

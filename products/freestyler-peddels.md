@@ -24,11 +24,13 @@ card_info: "Crawl peddels"
 hideFaq: true
 sizeVariants:
   Junior:
+    ean: "0616323246614"
     price: 30.00
     images: ["/images/zwemmateriaal/peddels/freestyler-junior.png"]
     winkelwagen_images: ["/images/zwemmateriaal/peddels/freestyler-junior.png"]
     tab1_image: "/images/zwemmateriaal/peddels/freestyler-junior.png"
   Senior:
+    ean: "0616323245617"
     price: 30.00
     images: ["/images/zwemmateriaal/peddels/freestyler-senior.png"]
     winkelwagen_images: ["/images/zwemmateriaal/peddels/freestyler-senior.png"]

@@ -22,11 +22,13 @@ hideFaq: true
 sizes: ["Junior", "Senior"]
 sizeVariants:
   Junior:
+    ean: "0616323200753"
     price: 22.80
     images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     tab1_image: "/images/zwemmateriaal/plankje/pullbuoy.png"
   Senior:
+    ean: "0616323200760"
     price: 25.20
     images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
     winkelwagen_images: ["/images/zwemmateriaal/plankje/pullbuoy.png"]
