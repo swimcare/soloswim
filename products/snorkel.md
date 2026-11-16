@@ -1,7 +1,7 @@
 ---
 number: 26
 product_id: "SS1"
-ean: "0616323203204"
+ean: ""
 title: "Stability snorkel"
 subtitle: "FINIS Stability Snorkel Speed"
 price: 54.00
@@ -16,14 +16,28 @@ features:
     "Veelzijdige Trainingshulpmiddel: Ondersteunt de juiste slagtechniek voor alle vier de zwemslagen.",
   ]
 isCombi: true
+sizes: ["Zwart", "Wit"]
+sizeVariants:
+  Zwart:
+    ean: "0616323203204"
+    price: 54.00
+    images: ["/images/zwemmateriaal/snorkel/snorkel-zwart.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/snorkel/snorkel-zwart.jpg"]
+    tab1_image: "/images/zwemmateriaal/snorkel/snorkel-zwart.jpg"
+  Wit:
+    ean: "0616323203198"
+    price: 54.00
+    images: ["/images/zwemmateriaal/snorkel/snorkel-wit.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/snorkel/snorkel-wit.jpg"]
+    tab1_image: "/images/zwemmateriaal/snorkel/snorkel-wit.jpg"
 isAccessoire: true
 type: "Snorkel"
 hideFaq: true
 editie: 1
 color: "black"
-images: ["/images/zwemmateriaal/snorkel/snorkel.png"]
-tab1_image: "/images/zwemmateriaal/snorkel/snorkel.png"
-winkelwagen_images: ["/images/zwemmateriaal/snorkel/snorkel.png"]
+images: ["/images/zwemmateriaal/snorkel/snorkel-zwart.jpg"]
+tab1_image: "/images/zwemmateriaal/snorkel/snorkel-zwart.jpg"
+winkelwagen_images: ["/images/zwemmateriaal/snorkel/snorkel-zwart.jpg"]
 card_info: "Snorkel"
 ---
 

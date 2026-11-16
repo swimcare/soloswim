@@ -18,10 +18,25 @@ features: [
     "Geschikt voor zowel een 25 als 50 meter bad",
   ]
 niveaus: true
-eans:
-  Beginners: "05430005411092"
-  "Semi-gevorderden": "05430005411108"
-  Gevorderden: "05430005411115"
+sizeVariants:
+  Beginners:
+    ean: "05430005411092"
+    price: 17.99
+    images: ["/images/zwemschemas/bcd1/beginners.png", "/images/zwemschemas/bcd1/1.png", "/images/zwemschemas/bcd1/2.png", "/images/zwemschemas/bcd1/3.png", "/images/zwemschemas/bcd1/4.png", "/images/zwemschemas/bcd1/5.png"]
+    winkelwagen_images: ["/images/zwemschemas/bcd1/cart/1.png", "/images/zwemschemas/bcd1/cart/2.png", "/images/zwemschemas/bcd1/cart/3.png"]
+    tab1_image: "/images/zwemschemas/bcd1/6.png"
+  "Semi-gevorderden":
+    ean: "05430005411108"
+    price: 17.99
+    images: ["/images/zwemschemas/bcd1/semi-gevorderden.png", "/images/zwemschemas/bcd1/1.png", "/images/zwemschemas/bcd1/2.png", "/images/zwemschemas/bcd1/3.png", "/images/zwemschemas/bcd1/4.png", "/images/zwemschemas/bcd1/5.png"]
+    winkelwagen_images: ["/images/zwemschemas/bcd1/cart/1.png", "/images/zwemschemas/bcd1/cart/2.png", "/images/zwemschemas/bcd1/cart/3.png"]
+    tab1_image: "/images/zwemschemas/bcd1/6.png"
+  Gevorderden:
+    ean: "05430005411115"
+    price: 17.99
+    images: ["/images/zwemschemas/bcd1/gevorderden.png", "/images/zwemschemas/bcd1/1.png", "/images/zwemschemas/bcd1/2.png", "/images/zwemschemas/bcd1/3.png", "/images/zwemschemas/bcd1/4.png", "/images/zwemschemas/bcd1/5.png"]
+    winkelwagen_images: ["/images/zwemschemas/bcd1/cart/1.png", "/images/zwemschemas/bcd1/cart/2.png", "/images/zwemschemas/bcd1/cart/3.png"]
+    tab1_image: "/images/zwemschemas/bcd1/6.png"
 
 type: "Beginners"
 editie: 1

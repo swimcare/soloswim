@@ -24,20 +24,20 @@ sizeVariants:
   Junior:
     ean: "0616323200739"
     price: 28.80
-    images: ["/images/zwemmateriaal/plankje/kickboard.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
-    tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
+    images: ["/images/zwemmateriaal/plankje/kickboard.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.jpg"]
+    tab1_image: "/images/zwemmateriaal/plankje/kickboard.jpg"
   Senior:
     ean: "0616323200746"
     price: 32.40
-    images: ["/images/zwemmateriaal/plankje/kickboard.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
-    tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
+    images: ["/images/zwemmateriaal/plankje/kickboard.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.jpg"]
+    tab1_image: "/images/zwemmateriaal/plankje/kickboard.jpg"
 editie: 1
 color: "yellow"
-images: ["/images/zwemmateriaal/plankje/kickboard.png"]
-tab1_image: "/images/zwemmateriaal/plankje/kickboard.png"
-winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.png"]
+images: ["/images/zwemmateriaal/plankje/kickboard.jpg"]
+tab1_image: "/images/zwemmateriaal/plankje/kickboard.jpg"
+winkelwagen_images: ["/images/zwemmateriaal/plankje/kickboard.jpg"]
 card_info: "Plankje"
 ---
 

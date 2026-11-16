@@ -34,7 +34,7 @@ function SubSectionBenodigdhedenNiveaus({ color }) {
             icon="/images/zwemschemas/benodigdheden/zwembril.png"
             name="Zwembril"
             tooltipText="Voorkom water in je ogen tijdens het zwemmen."
-            bestelButton="/producten/zwembril"
+            bestelButton="/producten/mach-1-racing-goggle"
           />
           <Attribuut
             icon="/images/zwemschemas/benodigdheden/badmuts.png"

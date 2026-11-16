@@ -17,24 +17,24 @@ features:
   ]
 sizes: ["Junior", "Senior"]
 isAccessoire: true
-images: ["/images/zwemmateriaal/peddels/freestyler-senior.png"]
-tab1_image: "/images/zwemmateriaal/peddels/freestyler-senior.png"
-winkelwagen_images: ["/images/zwemmateriaal/peddels/freestyler-senior.png"]
+images: ["/images/zwemmateriaal/peddels/freestyler-senior.jpg"]
+tab1_image: "/images/zwemmateriaal/peddels/freestyler-senior.jpg"
+winkelwagen_images: ["/images/zwemmateriaal/peddels/freestyler-senior.jpg"]
 card_info: "Crawl peddels"
 hideFaq: true
 sizeVariants:
   Junior:
     ean: "0616323246614"
     price: 30.00
-    images: ["/images/zwemmateriaal/peddels/freestyler-junior.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/peddels/freestyler-junior.png"]
-    tab1_image: "/images/zwemmateriaal/peddels/freestyler-junior.png"
+    images: ["/images/zwemmateriaal/peddels/freestyler-junior.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/peddels/freestyler-junior.jpg"]
+    tab1_image: "/images/zwemmateriaal/peddels/freestyler-junior.jpg"
   Senior:
     ean: "0616323245617"
     price: 30.00
-    images: ["/images/zwemmateriaal/peddels/freestyler-senior.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/peddels/freestyler-senior.png"]
-    tab1_image: "/images/zwemmateriaal/peddels/freestyler-senior.png"
+    images: ["/images/zwemmateriaal/peddels/freestyler-senior.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/peddels/freestyler-senior.jpg"]
+    tab1_image: "/images/zwemmateriaal/peddels/freestyler-senior.jpg"
 ---
 
 De FINIS Freestyler Paddles zijn specifiek ontworpen om de techniek en efficiëntie van de freestyle-slag te verbeteren. Met hun lange vinvorm en gepatenteerd skeg-ontwerp, leiden deze peddels de hand vooruit door het water, wat zorgt voor een grotere afstand per slag en een betere heuprotatie. De smalle oppervlakte voorkomt schouderbelasting en zorgt voor een gestroomlijnde handinvoer, waardoor het risico op een crossover-beweging die schouderletsel kan veroorzaken, wordt verminderd.

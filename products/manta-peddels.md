@@ -17,36 +17,36 @@ features:
   ]
 sizes: ["Small", "Medium", "Large", "XLarge"]
 isAccessoire: true
-images: ["/images/zwemmateriaal/peddels/manta.png"]
-tab1_image: "/images/zwemmateriaal/peddels/manta.png"
-winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
+images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+tab1_image: "/images/zwemmateriaal/peddels/manta.jpg"
+winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.jpg"]
 card_info: "Kracht peddels"
 hideFaq: true
 sizeVariants:
   Small:
     ean: "0616323203389"
     price: 30.00
-    images: ["/images/zwemmateriaal/peddels/manta.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
-    tab1_image: "/images/zwemmateriaal/peddels/manta.png"
+    images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+    tab1_image: "/images/zwemmateriaal/peddels/manta.jpg"
   Medium:
     ean: "0616323203396"
     price: 30.00
-    images: ["/images/zwemmateriaal/peddels/manta.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
-    tab1_image: "/images/zwemmateriaal/peddels/manta.png"
+    images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+    tab1_image: "/images/zwemmateriaal/peddels/manta.jpg"
   Large:
     ean: "0616323203402"
     price: 30.00
-    images: ["/images/zwemmateriaal/peddels/manta.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
-    tab1_image: "/images/zwemmateriaal/peddels/manta.png"
+    images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+    tab1_image: "/images/zwemmateriaal/peddels/manta.jpg"
   XLarge:
     ean: "0616323203419"
     price: 30.00
-    images: ["/images/zwemmateriaal/peddels/manta.png"]
-    winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.png"]
-    tab1_image: "/images/zwemmateriaal/peddels/manta.png"
+    images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+    winkelwagen_images: ["/images/zwemmateriaal/peddels/manta.jpg"]
+    tab1_image: "/images/zwemmateriaal/peddels/manta.jpg"
 ---
 
 De FINIS Manta Paddles zijn ontworpen om zwemmers te helpen hun slagkracht, efficiëntie en afstand per slag te vergroten. Gemaakt van hetzelfde duurzame, drijvende materiaal als de Agility Paddles, blijven de Manta Paddles op het wateroppervlak en gaan niet verloren. Het ergonomische, bandloze ontwerp volgt de natuurlijke contour van de hand en leert zwemmers om gelijkmatige druk toe te passen tijdens elke slag, wat helpt bij het ontwikkelen van een effectieve en gecontroleerde pull.

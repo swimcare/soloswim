@@ -21,9 +21,9 @@ type: "Rekker"
 hideFaq: true
 editie: 1
 color: "yellow"
-images: ["/images/zwemmateriaal/accessoires/ankle_strap.png"]
-tab1_image: "/images/zwemmateriaal/accessoires/ankle_strap.png"
-winkelwagen_images: ["/images/zwemmateriaal/accessoires/ankle_strap.png"]
+images: ["/images/zwemmateriaal/accessoires/ankle_strap.jpg"]
+tab1_image: "/images/zwemmateriaal/accessoires/ankle_strap.jpg"
+winkelwagen_images: ["/images/zwemmateriaal/accessoires/ankle_strap.jpg"]
 card_info: "Core stabiliteit & evenwicht"
 ---
 

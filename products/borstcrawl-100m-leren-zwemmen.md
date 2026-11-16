@@ -19,9 +19,19 @@ features:
     "Verkrijgbaar voor een 25 of 50 meter bad",
   ]
 type: "25 meter zwembad"
-eans:
-  "25 meter zwembad": "05430005411139"
-  "50 meter zwembad": "05430005411146"
+sizeVariants:
+  "25 meter zwembad":
+    ean: "05430005411139"
+    price: 17.99
+    images: ["/images/zwemschemas/bcl100/1.png", "/images/zwemschemas/bcl100/2.png", "/images/zwemschemas/bcl100/3.png", "/images/zwemschemas/bcl100/4.png"]
+    winkelwagen_images: ["/images/zwemschemas/bcl100/cart/1.png", "/images/zwemschemas/bcl100/cart/2.png"]
+    tab1_image: "/images/zwemschemas/bcl100/5.png"
+  "50 meter zwembad":
+    ean: "05430005411146"
+    price: 17.99
+    images: ["/images/zwemschemas/bcl100/1.png", "/images/zwemschemas/bcl100/2.png", "/images/zwemschemas/bcl100/3.png", "/images/zwemschemas/bcl100/4.png"]
+    winkelwagen_images: ["/images/zwemschemas/bcl100/cart/1.png", "/images/zwemschemas/bcl100/cart/2.png"]
+    tab1_image: "/images/zwemschemas/bcl100/5.png"
 
 color: "blue"
 images:

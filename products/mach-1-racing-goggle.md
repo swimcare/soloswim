@@ -21,14 +21,29 @@ type: "Zwembril"
 hideFaq: true
 editie: 1
 color: "blauw"
-images: ["/images/zwemmateriaal/zwembril/mach1.png"]
-tab1_image: "/images/zwemmateriaal/zwembril/mach1.png"
-winkelwagen_images: ["/images/zwemmateriaal/zwembril/mach1.png"]
+images: ["/images/zwemmateriaal/mach1/blauw.png", "/images/zwemmateriaal/mach1/blauw-usage.png"]
+tab1_image: "/images/zwemmateriaal/mach1/blauw.png"
+winkelwagen_images: ["/images/zwemmateriaal/mach1/blauw.png"]
 sizes: ["Blauw", "Roze", "Titanium"]
-eans:
-  Blauw: "0616323104082"
-  Roze: "0616323104075"
-  Titanium: "0616323541184"
+sizeVariants:
+  Blauw:
+    ean: "0616323104082"
+    price: 74.40
+    images: ["/images/zwemmateriaal/mach1/blauw.png", "/images/zwemmateriaal/mach1/blauw-usage.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/mach1/blauw.png"]
+    tab1_image: "/images/zwemmateriaal/mach1/blauw.png"
+  Roze:
+    ean: "0616323104075"
+    price: 74.40
+    images: ["/images/zwemmateriaal/mach1/roze.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/mach1/roze.png"]
+    tab1_image: "/images/zwemmateriaal/mach1/roze.png"
+  Titanium:
+    ean: "0616323541184"
+    price: 74.40
+    images: ["/images/zwemmateriaal/mach1/titanium.png"]
+    winkelwagen_images: ["/images/zwemmateriaal/mach1/titanium.png"]
+    tab1_image: "/images/zwemmateriaal/mach1/titanium.png"
 card_info: "Race zwembril"
 ---
 
